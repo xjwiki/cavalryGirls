@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-06-28T22:52:14UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-06-28T22:52:14UTC+8"></script>
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<!-- ↑ Public | Private ↓ -->
+
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-06-28T22:52:14UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-06-28T22:52:14UTC+8"></script> -->
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<title>主角小队</title>
+</head>
+<body>
+
+
+
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', document.documentElement.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() });
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>主角小队</span><small>(王牌机师)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 角色列表</h2>
+
+<p>
+	01. 以下是角色的详情列表, 由于属性比较多且复杂, 这里不好展开解释, 因此 XJ 在表格的后面做了详细的描述, 请查阅 <a href="#heading03"># 属性解析</a>; <br />
+	02. 数据超过 <code>25</code> 项, 因此表格被拆成了二部分, 可点击表格右上角按钮或用键盘的左右或 AD 按键翻页, 数字键 1/2 也能实现定位; <br />
+	03. 角色共有 <code>10</code> 位, 可细分为人类和 AI 两类, AI 也没什么可看, 就是作战指令有些区别而已, 你也没法操控它们, 只能设置指令; <br />
+	04. 五位少女机师的性格和喜好都不同, 这也导致了她们的能力和作战方式都各有特色, 对此 XJ 也做了剖析, 详情请查阅 <a href="#heading04"># 额外拓展</a>; <br />
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 96px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色名称<i class="icon fa fa-sort" style="margin-left:00;"></i>
+			</span>
+				<div id="turnPart">
+					<button id="nextPart" type="button" title="Next Part"><i class="fas fa-arrow-right"></i></button>
+					<span id="textPart">P01</span>
+					<button id="prevPart" type="button" title="Prev Part"><i class="fas fa-arrow-left "></i></button>
+				</div>
+			</th>
+			
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">射击散射<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">射击间隔<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装弹时间<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">武器维护<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">移动速度<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奔跑速度<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">登场年龄<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始技能<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">毕业院校<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">驾驶机体<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">战斗风格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">第二指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">第三指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">挑战指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">喜好物品<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">讨厌物品<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最爱礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">嫌弃礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">接受礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 作战指令</h2>
+<p>
+	01. 以下是可以选择下达的作战指令既行为逻辑列表, 不同的指令会让 AI 在战场上的行为倾向有差异, 也就是机体会偏向于防守/攻击; <br />
+	02. 作战单元必定会服从命令, 但人类机师由于个性迥异, 作战风格也不同, 如果没有足够的忠诚度/好感, 有些指令她们不一定会接受; <br />
+	03. 根据旧数据的记录, 过去还存在着第 7 种指令, 被称为"游击", 但现在已经被取消了, 可能是代码层面有 BUG, 所以最终没被采用; <br />
+	04. 战场的情况瞬息万变, 这些 AI 的行为逻辑也是非常复杂, 此处无法展开讲解, 更多细节可查阅后面的 <a href="#heading03"># 属性解析</a> 和 <a href="#heading04"># 额外拓展</a>; <br />
+</p>
+
+<table originalSort="1" id="powerTable02" class="powerTable table-xs table-hover"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">近战范围<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">防御时间<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">闪避时长<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">收缩临界<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">索敌权重<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading03">03. 属性解析</h2>
+
+<p>由于排版和理解等因素, 所以上面列表中的各项属性与游戏内部描述并不完全一致, 而下面的这些内容, 就是关于这些属性的具体解析;</p>
+
+<p>————</p>
+
+<p class="p-unset">01. 射击散射: 此项能力最高值为 <code>-20%</code>, 每 1 个技能点能够 <code>-2%</code>, 可减少最大散射角度, 对散弹来讲, 越小就意味着子弹越集中;</p>
+<p class="p-unset">02. 射击间隔: 此项能力最高值为 <code>-20%</code>, 每 1 个技能点能够 <code>-2%</code>, 可降低射击间隔的时间百分比, 越小意味着开火间隔时间越短;</p>
+<p class="p-usual">03. 装弹时间: 此项能力最高值为 <code>-10%</code>, 每 1 个技能点能够 <code>-1%</code>, 可降低装弹时间的耗时百分比, 越小意味着换弹的时候就越快;</p>
+
+<p class="p-unset">04. 武器维护: 此项能力最高值为 <code>+30%</code>, 每 1 个技能点能够 <code>+2%</code>, 可同时降低换弹老化和开火老化概率, 能节约维修和弹药费用;</p>
+<p class="p-unset">05. 移动速度: 此项能力最高值为 <code>+10%</code>, 每 1 个技能点能够 <code>+1%</code>, 可提升机体的速度, 蹲据/行走/奔跑三种行动的速度都会提高;</p>
+<p class="p-usual">06. 奔跑速度: 此项能力最高值为 <code>+20%</code>, 每 1 个技能点能够 <code>+1%</code>, 可提升机体的奔跑速度, 但是对蹲据和行走的速度并没有影响;</p>
+
+<p class="p-unset">07. 登场年龄: 这只是设定, 当前对游戏并无实质影响, 传闻在最初的设定里有未成年, 但被审核认为有炼铜嫌疑, 因此最后都调高了;</p>
+<p class="p-unset">08. 初始技能: 初始自带的技能, 在战场使用的快捷键为 Z, 但会加脑压值, 不能乱用, 关于技能更多信息, 可以查阅 <a href="javascript:void(0)"><s>战场技能.html</s></a>;</p>
+<p class="p-unset">09. 毕业院校: 这只是设定, 当前对游戏并无实质影响, 值得一提的是, 桑其实是肄业状态, 而库罗库非科班出身所以这部分信息不详;</p>
+<p class="p-usual">10. 驾驶机体: 当前的机体和机师是绑定的, 我们无法替换他们, 这也可以理解, 毕竟机体有差异, 换驾驶员未必能完全发挥战机性能;</p>
+
+<p>————</p>
+
+<p class="p-unset">11. 初始指令: 剧情模式下这些机师默认采用的作战指令, 当角色的忠诚度/好感度 <code>> 80</code>, 大约 11 颗心, 才能让她们接受所有指令;</p>
+<p class="p-unset">12. 第二指令: 当角色的忠诚度 <code>> 20</code>, 也就是大约 4 颗心, 可以让她采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受命令;</p>
+<p class="p-unset">13. 第三指令: 当角色的忠诚度 <code>> 50</code>, 也就是大约 8 颗心, 可以让她采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受命令;</p>
+<p class="p-usual">14. 挑战指令: 挑战模式下机师默认采用的作战指令, 尽管挑战模式下不能更改作战指令, 但可在战场按 Tab, 启用战略界面下达命令;</p>
+
+<p class="p-unset">15. 最爱礼物: 赠送最爱礼物可额外 <code>+3</code> 忠诚度, 所有角色都喜欢可乐和英雄勋章, 但没必要给队长送可乐, 因为队长没忠诚度概念;</p>
+<p class="p-unset">16. 嫌弃礼物: 赠送嫌弃礼物会额外 <code>-1</code> 忠诚度, 所有角色都嫌弃香烟和营养膏, 香烟会降低能力而绝不可用, 但营养膏可喂给队长;</p>
+<p class="p-usual">17. 接受礼物: 赠送接受礼物会额外 <code>+1</code> 忠诚度, 所有角色都接受咖啡/标准勋章/便当, 但咖啡和便当不要送给队长, 原因如上所示;</p>
+
+<p>————</p>
+
+<p class="p-unset">18. 近战范围: 敌人在这个范围内, 机体会冲上去与敌人近战, 值得一提的是, 其实 AI 并没有切换武器的概念, 远近武器可同时使用;</p>
+<p class="p-unset">19. 防御时间: 受到过量伤害后保持收缩状态的时间(单位 S), 过量伤害既单次伤害超过 <code>500</code>, 收缩状态既机体会尝试退回到大门前;</p>
+<p class="p-unset">20. 闪避时长: 冲刺状态下武器不能用时保持收缩状态的时间(单位 S), 冲刺状态既尝试与敌人近战的阶段, 若无法出手则先回退防御;</p>
+<p class="p-unset">21. 收缩临界: 当机体血量小于这个比例的时候会进入收缩状态, 也就是基本不会主动出击了, 而是呆在大门前尝试进行被动防御而已;</p>
+<p class="p-usual">22. 索敌权重: 机体以自身为圆心, 以该属性的四个范围值生成四个同心圆, 圆被分为前后左右四部分, 优先对付正前方范围内的敌人;</p>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading04">04. 额外拓展</h2>
+
+未完待续…
+
+<!--◇
+<p>个人能力: 除了玛丽之外, 另外四位机师的初始技能都优劣差异, 但你无需在意这些, 因为从技能点的角度来讲, 她们擅长的和不擅长的技能, 最后几乎都会相互抵消, 也就是说她们擅长的技能, 其实是用不擅长的技能;</p>
+
+会议室
+02. 召开作战总结 - 随机某个角色增加随机 2? 属性
+这个增加的属性也会增加属性上限, 是游戏中唯一可以突破技能上限的操作, 因此剧情模式下, 几乎是每天必定召开一次
+不同角色的不同能力, 最大上限相同, 思潮里的XX可以提升上限, 技能点的获取
+召开作战总结会议
+尽管上限相同, 但你需要根据角色的机体和使用的武器优先提升某项能力, 例如使用易损的电弧类武器时, 可以先加武器维护的能力, 避免战斗中武器频繁老化, 例如需要克莱尔去出外勤, 就得先提升移动和奔跑能力, 因为她的圣骑士号速度实在过于迟缓
+好像所有角色的能力, 最后总和都是0?
+
+
+<p>送礼机制: 什么东西决不能送, 什么东西可以送给队长, 什么东西不要送给队长, 尽管嫌弃的礼物会降低好感度, 但依然可以降低脑压值</p>
+
+// 初始策略: 既该角色在战场上的初始采用作战模式, 例如防御/歼敌/跟随等
+// 第二策略: 既该角色忠诚度(好感度) <code>> 20</code> 后可让它采用的作战模式(♥×4), 如果忠诚度不足则无法让他使用这种策略
+// 最终策略: 既该角色忠诚度(好感度) <code>> 50</code> 后可让它采用的作战模式(♥×8), 如果忠诚度不足则无法让他使用这种策略
+// 挑战策略: 既该角色于挑战模式下在战场上的初始采用作战模式
+// 当角色的忠诚度小于 20(♥×4) 的时候无法改变角色的策略, 当角色的忠诚度大于 20(♥×4) 的时候可以命令角色采用 SecondaryAi 的策略, 当角色的忠诚度大于 50(♥×8) 的时候可以命令角色采用 LastAi 的策略, 当角色的忠诚度大于 80(♥×11) 的时候可以命令角色采用所有策略
+
+// 协同单元可以随意更改作战策略, 它们并不会 Say No, 机枪炮塔由于并不能移动(主机靠近可以推动), 所以它们的默认策略都是防御, 并且也不能被修改
+// 数据由 items + TankType 两张表的内容合并而来, TankType 关于机体信息的那部分数据已经在 mecha_list 页面了, 所以这里就不再展示
+
+当角色的忠诚度大于 80(♥×11) 的时候可以命令角色采用所有策略
+// 初始策略: 既该角色在战场上的初始采用作战模式, 例如防御/歼敌/跟随等
+// 第二策略: 既该角色忠诚度(好感度) <code>> 20</code> 后可让它采用的作战模式(♥×4), 如果忠诚度不足则无法让他使用这种策略
+// 最终策略: 既该角色忠诚度(好感度) <code>> 50</code> 后可让它采用的作战模式(♥×8), 如果忠诚度不足则无法让他使用这种策略
+// 挑战策略: 既该角色于挑战模式下在战场上的初始采用作战模式
+// 当角色的忠诚度小于 20(♥×4) 的时候无法改变角色的策略, 当角色的忠诚度大于 20(♥×4) 的时候可以命令角色采用 SecondaryAi 的策略, 当角色的忠诚度大于 50(♥×8) 的时候可以命令角色采用 LastAi 的策略, 当角色的忠诚度大于 80(♥×11) 的时候可以命令角色采用所有策略
+◇-->
+
+<!-- 
+
+可以指派作战单元去出外勤任务, 但是我们并不能操控它们, 因此进入战场后是全自动的
+在挑战模式下给队友下命令, 因为挑战模式没有忠诚度的概念, 所以对方不会抗命, 
+
+——————
+
+DashRange // 敌人在冲刺距离则冲刺
+OverHarmToShrinkTime // 受到过量伤害后保持收缩状态的时间
+DashToShrinkTime // 冲刺状态下近战武器不能使用后保持收缩状态时间
+ShrinkHpThresholdRatio // 血量低于这个比例进入收缩状态
+FindEnemyRange // 冲锋和歼敌的最大视野要广一点, 不然在地图边就搜寻不到另一边的敌人
+
+防御时如果Ai防御的区域被玩家挤占, 经过一段时间后Ai换一个区域防守, 这样是为了避免机体扎堆而被敌人的范围伤害打中
+如果有队友在防御圈内, 则忽略身后目标(将后背交给战友)
+
+01. 冲刺是指在这个距离内就切换成近战武器进行近战?
+02. 过量伤害是多少?
+03. 收缩状态又是什么概念?
+04. FindEnemyRange 的四个数据分别代表什么状态下的索敌范围?
+05. "紧随在防御状态和收缩状态的行为没有区别, 只是收缩状态不能转到冲刺状态", 这句也无法理解…
+
+06. 机枪炮塔和大门是否一直都处于蹲据模式?
+07. 投掷物可以丢过铁墙或战车这类会阻挡子弹的障碍物吗?
+08. 有时非常靠近铁墙进行射击, 子弹可以穿过铁墙到另一边, 这是在模拟掩护下的阵地战, 还是说这种穿透只是计算范围的 BUG?
+09. 挑战模式下让 AI 防守地点, 它们会靠在沙袋后面进行射击, 此时距离沙袋很近, 子弹会直接穿过沙袋, 不会触发穿透的行为, 这是因为沙袋在武器的最小射程之内, 所以会忽略掉沙袋? 所以铁墙的穿透也是这个原理?
+
+1. 对，但是不用切换，AI可以同时使用近战和远程武器
+2. 单次受伤超过500
+3. 冲锋、防御、收缩是并列的，防御的位置在沙袋的位置，收缩则在大门前
+4. 不是状态，而是方向。以防御举例，当敌人在8范围内时，敌人的距离权重为2；在8以外，16以内时，前方270度以内的敌人权重为2，后面90度为1；在16以外28以内，前方90度敌人的距离权重为2，侧面180度权重为1，后面90度权重0.5；28以外40以内，正面90度权重1，后面270度权重0.5；40以外权重为0。
+
+5. 紧随的防御状态不会像其他AI一样蹲在沙袋防御某一方向的敌人，而是会在跟随目标的旁边，相应的，紧随AI在收缩状态时也不会跑到大门前。另外所有AI的冲刺状态只能由防御状态转化而来。
+6. 否
+7. 可以
+8. bug
+9. 沙袋只会防御正面子弹，背面不会进行能否穿透的判定，铁墙是bug（特性）
+
+01. 上面 04 说的那个方向, 是指索敌的权重吗? 就是说AI会优先考虑对付权重高的敌人? 
+1. 对的，这是关于敌人位置的权重，当然也有别的权重，比如使用射线武器，对带盾敌人的权重就会下降。
+2. 没什么问题，但是冲刺状态，不是说只近战，也是会远程攻击的，只是进入冲刺状态会向敌人靠近以使用近战武器
+-->
+
+<hr />
+</section>
+
+
+
+<style>/* 表格样式 */
+
+#powerTable01 .hideTr{display:none;}
+
+#powerTable01.showPart01 tr > *:nth-child(n+17):nth-child(-n+26){display:none;}
+#powerTable01.showPart02 tr > *:nth-child(n+ 4):nth-child(-n+16){display:none;}
+
+#turnPart{position:absolute;top:-1px;bottom:1px;right:-767px;display:flex;flex-direction:column;}
+#textPart{flex:0 0 auto;height:20px;border:1px solid #ccc;border-top:0;border-bottom:0;text-align:center;line-height:20px;cursor:default;}
+
+#nextPart{flex:1 1 auto;}
+#prevPart{flex:1 1 auto;}
+
+#powerTable01 .letterK:after{content:"k";}
+
+/* 标签样式 */
+
+#powerTable01 td:nth-of-type(15){position:relative;cursor:default;}
+
+#powerTable01 td:nth-of-type(15)::before{position:absolute;top:50%;right:100%;visibility:hidden;min-width:96px;padding:8px;border-radius:4px;background-color:rgba(0,0,0,0.75);color:#fff;
+content:attr(alt);text-align:center;white-space:pre;transform:translate(-8px, -50%);pointer-events:none;}
+#powerTable01 td:nth-of-type(15):hover::before{visibility:visible;}
+
+#powerTable01 td:nth-of-type(15)::after{position:absolute;top:50%;right:100%;visibility:hidden;width:0;height:0;border:8px solid transparent;border-right:0;
+border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);pointer-events:none;}
+#powerTable01 td:nth-of-type(15):hover::after{visibility:visible;}
+
+/* 标签样式*/
+
+#powerTable01 td:nth-child(n+24):nth-child(-n+26) span{position:relative;display:inline-block;vertical-align:top;cursor:default;}
+
+#powerTable01 td:nth-child(n+24):nth-child(-n+26) span::before{position:absolute;top:50%;right:100%;visibility:hidden;min-width:96px;padding:8px;border-radius:4px;background-color:rgba(0,0,0,0.75);color:#fff;
+content:attr(alt);text-align:center;white-space:pre;transform:translate(-8px, -50%);pointer-events:none;}
+#powerTable01 td:nth-child(n+24):nth-child(-n+26) span:hover::before{visibility:visible;}
+
+#powerTable01 td:nth-child(n+24):nth-child(-n+26) span::after{position:absolute;top:50%;right:100%;visibility:hidden;width:0;height:0;border:8px solid transparent;border-right:0;
+border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);pointer-events:none;}
+#powerTable01 td:nth-child(n+24):nth-child(-n+26) span:hover::after{visibility:visible;}
+</style>
+
+
+
+<script>/* 数据注解
+
+Tag = '', / Func = '', / Company = '', / Syns = '', / NeedWeapon = '', / ColorPlus = '', / Cluster = '',
+CargoPiles = 0 / CargoPilesMax = 0 / CargoPilesFusion = 0 / CargoPilesFusionMax = 0
+Type = Player / Price = -1 / MaxPile / Level = 1 / Day = 999,
+
+PlayerDescription 既驾驶员的描述, 我们将其拆分成了: 文本描述 / 登场年龄 / 战斗风格 / 喜好礼物 / 讨厌礼物
+最初驾驶员的登场年龄为: 15/15/19/17/25, 但因为被 Steam 认为是炼铜, 最后被迫妥协成: 21/20/23/20/27
+
+*/
+
+// 主角数据
+let tbodyArray01 = [
+	
+	// 高亮,	角色图片,	角色序号,	角色名称,			|	项目代码,	默认排序,	射击散射,	射击间隔,	装弹时间,	武器维护,	移动速度,	奔跑速度,	登场年龄,	初始技能,	毕业院校,	驾驶机体,	文本描述,		|	战斗风格,	初始指令,	第二指令,		第三指令,	挑战指令,		喜好物品,	讨厌物品,	最爱礼物,			嫌弃礼物,			接受礼物,											],		
+	//Active,	Image,		Number,		Name,				|	Items,		ResolveID,	Angle,		ShotRate,	Reload,		Maintain,	MovePlus,	RunRate,	Age,		Skill,		School,		Mecha,		Description,	|	Style,		InitAI,		SecondaryAi,	LastAi,		InitAI_Chan,	Like,		Hate,		PlayerPerfect,		PlayerHate,			PlayerLike,											],		//01		
+	[1,			'02_00',	'01',		'玛　丽',				100,		885,		'- 0',		'- 0',		'- 0',		'- 0',		'+ 0',		'+ 0',		21,			400,		100,		'01_00',	'-',				100,		'1',		'3',			'2|5',		'1',			100,		100,		'18|14|13|-1',		'5|16|-1|-1',		'7|12|17|1|2|3|4|8|9|10|11|-1|-1|-1|-1|-1',			],		
+	[1,			'02_01',	'02',		'库罗库',				101,		886,		'- 0',		'- 0',		'- 0',		'- 5',		'+ 0',		'+10',		20,			401,		101,		'01_01',	'-',				101,		'6',		'3',			'2|5',		'3',			101,		101,		'18|14|1|2',		'5|16|3|4',			'7|13|17|8|9|10|11|-1|-1|-1|-1|-1|-1|-1|-1|-1',		],		
+	[1,			'02_02',	'03',		'桑/San',				102,		887,		'- 0',		'- 6',		'+ 3',		'-20',		'+ 5',		'+ 5',		23,			402,		102,		'01_02',	'-',				102,		'5',		'2',			'1|4',		'2',			102,		102,		'18|14|8|9',		'5|16|10|11',		'7|13|17|1|2|3|4|-1|-1|-1|-1|-1|-1|-1|-1|-1',		],		
+	[1,			'02_03',	'04',		'赭石色',				103,		888,		'-10',		'- 0',		'+ 5',		'+10',		'+ 0',		'- 5',		20,			403,		103,		'01_03',	'-',				103,		'4',		'1',			'2|5',		'4',			103,		103,		'18|14|3|4',		'5|16|8|9',			'7|13|17|1|2|10|11|-1|-1|-1|-1|-1|-1|-1|-1|-1',		],		
+	[1,			'02_04',	'05',		'克莱尔',				104,		889,		'- 4',		'- 4',		'- 2',		'+10',		'-10',		'+ 0',		27,			404,		104,		'01_04',	'-',				104,		'4',		'1',			'2|5',		'4',			104,		104,		'18|14|10|11',		'5|16|1|2',			'7|13|17|3|4|8|9|-1|-1|-1|-1|-1|-1|-1|-1|-1',		],		//01		
+	[0,			'02_05',	'06',		'标准作战单元A',		301,		891,		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'01_05',	'-',				'-',		'1',		'-',			'-',		'1',			'-',		'-',		'-',				'-',				'-',												],		
+	[0,			'02_06',	'07',		'标准作战单元B',		302,		892,		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'01_06',	'-',				'-',		'1',		'-',			'-',		'1',			'-',		'-',		'-',				'-',				'-',												],		
+	[0,			'02_07',	'08',		'高速·作战单元',		303,		893,		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'01_07',	'-',				'-',		'3',		'-',			'-',		'3',			'-',		'-',		'-',				'-',				'-',												],		
+	[0,			'02_08',	'09',		'火力·作战单元',		304,		894,		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'01_08',	'-',				'-',		'4',		'-',			'-',		'4',			'-',		'-',		'-',				'-',				'-',												],		
+	[0,			'02_09',	'10',		'重型·作战单元',		305,		895,		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'-',		'01_09',	'-',				'-',		'4',		'-',			'-',		'4',			'-',		'-',		'-',				'-',				'-',												],		//01		
+	
+];
+
+// 指令数据
+let tbodyArray02 = [
+	
+	//高亮,			指令序号,		指令名称,		指令代码,		近战范围,		防御时间,					闪避时长,				收缩临界,					索敌权重,				文本描述,		],		
+	//Active,		Number,			Name,			AILogic,		DashRange,		OverHarmToShrinkTime,		DashToShrinkTime,		ShrinkHpThresholdRatio,		FindEnemyRange,			Description,	],		//02		
+	
+	[1,				'01',			'防御',			1,				4,				5,							2,						'0.15',						'8|16|28|40',			'-',			],		
+	[0,				'02',			'歼敌',			2,				5,				5,							2,						'0.20',						'8|16|40|160',			'-',			],		
+	[1,				'03',			'跟随',			3,				5,				5,							2,						'0.15',						'8|16|28|40',			'-',			],		
+	[0,				'04',			'死守',			4,				3,				1,							2,						'0.30',						'8|16|28|40',			'-',			],		
+	[1,				'05',			'冲锋',			5,				10,				3,							1,						'0.20',						'8|16|40|160',			'-',			],		
+	[0,				'06',			'紧随',			6,				4,				1,							1,						'0.10',						'8|16|28|40',			'-',			],		//02		
+	
+];
+
+// 文本描述
+let DescriptionList = {
+	
+	100 : [/*'玛　丽',			*/'成绩优异的军校毕业生, 与人相处时融洽温和, 但是在涉及原则的问题上毫不妥协',					'成績優異的軍校畢業生, 與人相處時融洽溫和, 但在原則問題上毫不妥協',		'A top student who graduated with honors, Amiable and gentle in social interactions, yet unyielding on matters of principle',		'成績優秀な軍学校卒業生, 他人に接するときは機転が利いて穏やかだが, 基本的に決して妥協しない',		],		
+	101 : [/*'库罗库',			*/'充满服从性的训练兵, 温和软弱待人友善',														'充滿服從性的訓練兵, 溫和軟弱, 待人友善',								'An obedient soldier, gentle and kind in interpersonal relationships',																'とても従順な訓練兵, 温和で弱気, 親しみやすい',														],		
+	102 : [/*'桑/San',			*/'大无畏的机甲驾驶员, 热情大方, 行事冲动(她尚未完成军校课程, 处于肄业状态)',					'大無畏的機甲駕駛員, 熱情大方, 行事有些衝動(肄业)',						'A fearless mecha pilot, enthusiastic and generous, acting a little impulsively(Dropout)',											'恐れ知らずのパイロット, 情熱的で大らかだが少々衝動的(中退)',										],		
+	103 : [/*'赭石色',			*/'循规蹈矩的士兵, 性格理性冷静不爱说话',														'循規蹈矩的士兵, 理性冷靜, 不愛說話',									'A well-behaved soldier, rational and calm, not talkative',																			'規律に忠実な兵士, 冷静沈着で口数が少ない',															],		
+	104 : [/*'克莱尔',			*/'饱经战斗的士兵, 成熟而稳重, 却又喜欢开玩笑, 在战场上的时候是值得依靠的人',					'飽經戰鬥的士兵, 成熟而穩重, 卻又喜歡開玩笑',							'A battle-hardened soldier, mature, and stable, but likes to joke',																	'戦闘慣れした兵士, 大人びていて穏やかだが, 冗談が好きな一面もある',									],		//03		
+	
+	301 : [/*'标准作战单元A',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
+	302 : [/*'标准作战单元B',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
+	303 : [/*'高速·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
+	304 : [/*'火力·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
+	305 : [/*'重型·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		//03		
+	
+	1 :   [/*'防御',			*/'较为保守的指令, 也会尝试寻敌发动攻击, 但敌人要靠的较近的时候才会选择近战',					'-',																	'-',																																'-',																								],		
+	2 :   [/*'歼敌',			*/'相对主动的指令, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高 ',					'-',																	'-',																																'-',																								],		
+	3 :   [/*'跟随',			*/'如果跟随的目标进行防守或收缩, 则自己也进行防守或收缩, 与防御指令类似 ',						'-',																	'-',																																'-',																								],		
+	4 :   [/*'死守',			*/'只有当敌人靠得很近才会选择近战, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',		'-',																	'-',																																'-',																								],		
+	5 :   [/*'冲锋',			*/'会非常积极的与敌人进行肉搏战, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高',		'-',																	'-',																																'-',																								],		
+	6 :   [/*'紧随',			*/'与跟随的对象防守同一个方向, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',			'-',																	'-',																																'-',																								],		//03		
+	
+};
+
+// 项目名称
+let ItemsNameList = {
+	
+	// 角色名称
+	'100_Name' :	['玛　丽',					'瑪麗',						'Mary',										'メアリー',						],
+	'101_Name' :	['库罗库',					'庫羅庫',					'Kuroku',									'クロック',						],
+	'102_Name' :	['桑/San',					'桑',						'San',										'サン',							],
+	'103_Name' :	['赭石色',					'赭石色',					'Ocher',									'オーカー',						],
+	'104_Name' :	['克莱尔',					'克萊爾',					'Claire',									'クレア',						],
+	'301_Name' :	['标准作战单元A',			'標準作戰單元A',			'Standard CSU A',							'制式戦闘ユニットA',			],
+	'302_Name' :	['标准作战单元B',			'標準作戰單元B',			'Standard CSU B',							'制式戦闘ユニットB',			],
+	'303_Name' :	['高速·作战单元',			'高速作戰單元',				'Fast CSU',									'高速戦闘ユニット',				],
+	'304_Name' :	['火力·作战单元',			'火力作戰單元',				'Firepower CSU',							'火力戦闘ユニット',				],
+	'305_Name' :	['重型·作战单元',			'重型作戰單元',				'Heavy CSU',								'重装甲戦闘ユニット',			],
+	
+	// 驾驶机体
+	'100_Mecha' :	['游骑兵号',				'遊騎兵號',					'Ranger',									'レンジャー号',					],
+	'101_Mecha' :	['骠骑兵号',				'驃騎兵號',					'Hussar',									'ユサール号',					],
+	'102_Mecha' :	['龙骑士号',				'龍騎士號',					'Dragoon',									'ドラグーン号',					],
+	'103_Mecha' :	['弓骑兵号',				'弓騎兵號',					'Horse Archer',								'弓騎兵号',						],
+	'104_Mecha' :	['圣骑士号',				'聖騎士號',					'Paladin',									'聖騎士号',						],
+	'301_Mecha' :	['标准作战单元A',			'標準作戰單元A',			'Standard CSU A',							'制式戦闘ユニットA',			],
+	'302_Mecha' :	['标准作战单元B',			'標準作戰單元B',			'Standard CSU B',							'制式戦闘ユニットB',			],
+	'303_Mecha' :	['高速·作战单元',			'高速作戰單元',				'Fast CSU',									'高速戦闘ユニット',				],
+	'304_Mecha' :	['火力·作战单元',			'火力作戰單元',				'Firepower CSU',							'火力戦闘ユニット',				],
+	'305_Mecha' :	['重型·作战单元',			'重型作戰單元',				'Heavy CSU',								'重装甲戦闘ユニット',			],
+	
+	// 初始技能
+	400 :			['专注透支',				'專注透支',					'Concentration overdraft',					'集中力過消耗',					],
+	401 :			['护盾过载',				'護盾超載',					'Shield overload',							'シールド過負荷',				],
+	402 :			['动力过载',				'動力超載',					'Power overload',							'動力過負荷',					],
+	403 :			['心灵震爆',				'心靈震爆',					'Soul Shock',								'マインドショック',				],
+	404 :			['护盾透支',				'護盾透支',					'Shield overdraft',							'シールド過消耗',				],
+	
+	// 作战指令
+	1 :				['防御',					'防禦',						'Defense',									'防御',							],
+	2 :				['歼敌',					'殲敵',						'Annihilate',								'殲滅',							],
+	3 :				['跟随',					'跟隨',						'Follow',									'追従',							],
+	4 :				['死守',					'死守',						'Hold the line',							'死守',							],
+	5 :				['冲锋',					'衝鋒',						'Assault',									'突撃',							],
+	6 :				['紧随',					'緊隨',						'Stick with',								'密着',							],
+	7 :				['游击',					'遊擊',						'Guerrilla',								'遊撃',							],
+	
+	// 毕业院校
+	'100_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
+	'101_School' :	['Ｘ�?Ｘ�?Ｘ�?',			'？？？？？？',				'???????????????????????',					'????????????,'					],
+	'102_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
+	'103_School' :	['皇家猎兵学院',			'皇家猎兵学院',				'Royal Hunter\'s College',					'王立猟兵学院',					],
+	'104_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
+	
+	// 战斗风格
+	'100_Style' :	['跟随',					'跟隨',						'Follower',									'追従',							],
+	'101_Style' :	['跟屁虫',					'跟屁蟲',					'Follower',									'密着',							],
+	'102_Style' :	['冲锋',					'衝鋒',						'Charger',									'突撃',							],
+	'103_Style' :	['狙击手',					'狙擊手',					'Sniper',									'狙撃手',						],
+	'104_Style' :	['保守',					'保守',						'Conservative',								'保守的',						],
+	
+	// 喜好物品
+	'100_Like' :	['奖章咖啡',				'獎章和咖啡',				'Medals and coffee',						'メダルとコーヒー',				],
+	'101_Like' :	['玩具甜食',				'玩具和甜食',				'Toys and sweets',							'おもちゃと甘い物',				],
+	'102_Like' :	['时尚物品',				'時尚的東西',				'Fashionable items',						'ファッショナブルなもの',		],
+	'103_Like' :	['各式书籍',				'讀書',						'Books',									'読書',							],
+	'104_Like' :	['收藏物品',				'收藏品',					'Collectibles',								'収集品',						],
+	
+	// 讨厌物品
+	'100_Hate' :	['任意香烟',				'煙',						'Cigarettes',								'タバコ',						],
+	'101_Hate' :	['各种书籍',				'讀書',						'Books',									'読書',							],
+	'102_Hate' :	['老气玩意',				'老氣的東西',				'Old-fashioned items',						'古臭いもの',					],
+	'103_Hate' :	['轻浮事物',				'輕浮的事物',				'Frivolous things',							'軽薄なもの',					],
+	'104_Hate' :	['幼稚东西',				'幼稚的東西',				'Childish items',							'幼稚なもの',					],
+	
+	// 礼物列表
+	'0_Gift' :		['口粮包',					'口糧包',					'Ration Pack',								'配給パック',					],
+	'1_Gift' :		['玩偶',					'玩偶',						'Doll',										'人形',							],
+	'2_Gift' :		['甜品',					'甜品',						'Dessert',									'デザート',						],
+	'3_Gift' :		['废旧报纸',				'廢舊報紙',					'Old Newspaper',							'古い新聞紙',					],
+	'4_Gift' :		['书本',					'書本',						'Book',										'本',							],
+	'5_Gift' :		['香烟',					'香菸',						'Cigarette',								'シガレット',					],
+	'6_Gift' :		['酒',						'酒',						'Liquor',									'酒',							],
+	'7_Gift' :		['咖啡',					'咖啡',						'Coffee',									'コーヒー',						],
+	'8_Gift' :		['时尚杂志',				'時尚雜誌',					'Fashion Magazine',							'ファッション誌',				],
+	'9_Gift' :		['漂亮衣服',				'漂亮衣服',					'Pretty Clothes',							'綺麗なお洋服',					],
+	'10_Gift' :		['弹壳',					'彈殼',						'Bullet Shell',								'薬莢',							],
+	'11_Gift' :		['唱片',					'唱片',						'Vinyl',									'レコード',						],
+	'12_Gift' :		['量产勋章',				'量產勳章',					'Mass-Produced Medal',						'量産メダル',					],
+	'13_Gift' :		['标准勋章',				'標準勳章',					'Standard Medal',							'制式メダル',					],
+	'14_Gift' :		['英雄勋章',				'英雄勳章',					'Hero Medal',								'英雄メダル',					],
+	'15_Gift' :		['干粮',					'乾糧',						'Field Rations',							'携行食',						],
+	'16_Gift' :		['营养膏',					'營養膏',					'Nutrition Paste',							'栄養クリーム',					],
+	'17_Gift' :		['便当',					'便當',						'Bento',									'お弁当',						],
+	'18_Gift' :		['可乐',					'可樂',						'Coke',										'コーラ',						],
+	'19_Gift' :		['罐头',					'罐頭',						'Canned food',								'缶詰',							],
+	'20_Gift' :		['压缩饼干',				'壓縮餅乾',					'Hardtack',									'圧縮ビスケット',				],
+	'30_Gift' :		['自制咖啡',				'自製咖啡',					'Homemade Coffee',							'自家製コーヒー',				],
+	'31_Gift' :		['手作饼干',				'手作餅乾',					'Homemade Biscuit',							'手作りビスケット',				],
+	'32_Gift' :		['首饰',					'首飾',						'Jewelry',									'装身具',						],
+	'33_Gift' :		['小说草稿',				'小說草稿',					'Novel Draft',								'小説の下書き',					],
+	'34_Gift' :		['旧奖章',					'舊獎章',					'Old Medal',								'古いメダル',					],
+	'35_Gift' :		['红茶',					'紅茶',						'Black Tea',								'紅茶',							],
+	'36_Gift' :		['香水',					'香水',						'Perfume',									'香水',							],
+	'37_Gift' :		['哲学巨著',				'哲學巨著',					'Philosophical masterpiece',				'哲学傑作',						],
+	'38_Gift' :		['子弹花',					'子彈花',					'Flowers of bullets',						'弾丸の花',						],
+	'-1_Gift' :		['占位符',					'佔位符',					'Placeholder',								'プレースホルダー',				],
+	
+};
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 角色图片
+		if(index ===  1){ powerTable_tbody_node01 
+		+= '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] + 
+		'" src="../static/image/04_mecha_list/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		
+		// 角色名称
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]+'_Name'][0]) +'</td>' }else 
+		
+		// ————————
+		
+		// 文本描述
+		if(index === 16){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4]][0] +'</td>' }else 
+		
+		// 初始技能 
+		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (item[13] === '-' ? '-' : ItemsNameList[item[13]][0]) +'</td>' }else 
+		
+		// 毕业院校
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (item[14] === '-' ? '-' : ItemsNameList[item[14]+'_School'][0]) +'</td>' }else 
+		
+		// 驾驶机体
+		if(index === 15){ powerTable_tbody_node01 
+		+= '<td style="padding:2px;" alt="'+ (ItemsNameList[item[4]+'_Mecha'][0]) +'">'
+		+ '<img loading="lazy" alt="'+ item[15] +'" src="../static/image/04_mecha_list/'+ item[15] +'.png" style="width:48px;height:48px;" /></td>' }else 
+		
+		// ————————
+		
+		// 战斗风格
+		if(index === 17){ powerTable_tbody_node01 += '<td>'+ (item[17] === '-' ? '-' : ItemsNameList[item[17]+'_Style'][0]) +'</td>' }else 
+		
+		// 喜好物品
+		if(index === 22){ powerTable_tbody_node01 += '<td>'+ (item[22] === '-' ? '-' : ItemsNameList[item[22]+'_Like' ][0]) +'</td>' }else 
+		
+		// 讨厌物品
+		if(index === 23){ powerTable_tbody_node01 += '<td>'+ (item[23] === '-' ? '-' : ItemsNameList[item[23]+'_Hate' ][0]) +'</td>' }else 
+		
+		// 作战指令
+		if(index === 18 || index === 19 || index === 20 || index === 21){ powerTable_tbody_node01 
+		+= '<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return ItemsNameList[ele][0] }).join('<br />')) +'</td>' }else 
+		
+		// 最爱礼物 / 嫌弃礼物 / 接受礼物
+		if(index === 24 || index === 25 || index === 26){ powerTable_tbody_node01 += 
+		'<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return '<span alt="'+ ItemsNameList[ele+'_Gift'][0] +'">'+
+		'<img loading="lazy" alt="'+ ItemsNameList[ele+'_Gift'][0] +'" src="../static/image/11_role_gift/'+ ele +'.png" style="width:28px;height:28px;" /></span>' }).join('')) +'</td>' }else 
+		
+		// ————————
+		
+		// 常规数据
+		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable02 = $('#powerTable02'), powerTable_tbody_node02 = '';
+
+// 生成表格
+tbodyArray02.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node02 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		if(index === 9){ powerTable_tbody_node02 += '<td>'+ DescriptionList[item[3]][0] +'</td>' }else 
+		if(index !== 0){ powerTable_tbody_node02 += '<td style="padding:12px 4px;">'+ data +'</td>' };
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node02 += '</tr>';
+	
+});
+$('#powerTable02 tbody').html(powerTable_tbody_node02);
+buildPowerTable('powerTable02');
+
+// ---------------------------------------------
+
+// 当前所在
+let jqi_textPart = $('#textPart');
+
+// 向后翻页
+let nextPartAction = function(){
+	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') }else 
+	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart01'), jqi_textPart.text('P01') };
+};
+
+// 向前翻页
+let prevPartAction = function(){
+	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') }else 
+	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart01'), jqi_textPart.text('P01') };
+};
+
+// 阻止排序
+$('#turnPart').on('click', function(event){ event.stopPropagation() });
+
+// 翻页事件
+$('#nextPart').on('click', function(e){ nextPartAction() });
+$('#prevPart').on('click', function(e){ prevPartAction() });
+
+// 键盘翻页
+$(window).on('keyup', function(event){
+	let activeElement = document.activeElement;
+	if(activeElement !== $('#pub_headFormText')[0]
+	&& document.documentElement.clientWidth >= 1280){
+		if(event.keyCode === 37 || event.keyCode === 65){ prevPartAction() }else	// 右或者 D
+		if(event.keyCode === 39 || event.keyCode === 68){ nextPartAction() }else	// 左或者 A
+		if(event.key === '1'){ jqi_powerTable01.removeClass('showPart02').addClass('showPart01'), jqi_textPart.text('P01') }else	// 1 / 小键盘或数字键盘都行
+		if(event.key === '2'){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') };		// 2 / 小键盘或数字键盘都行
+	};
+});
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.0</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 角色列表</a>
+			<a href="#heading02">02. 作战指令</a>
+			<a href="#heading03">03. 属性解析</a>
+			<a href="#heading04">04. 额外拓展</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+

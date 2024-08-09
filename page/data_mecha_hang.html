@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-06-28T22:52:14UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-06-28T22:52:14UTC+8"></script>
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<!-- ↑ Public | Private ↓ -->
+
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-06-28T22:52:14UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-06-28T22:52:14UTC+8"></script> -->
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<title>机身挂件</title>
+</head>
+<body>
+
+
+
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', document.documentElement.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() });
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>机身挂件</span><small>(方向增益)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 基本信息</h2>
+
+<p>
+	01. 机身挂件装备能够重复安装, 但有些装备仅在安装那面生效, 数量则取决于 <code>机身挂件装备槽位上限</code>, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
+	02. 以下是机身挂件的装备列表, 共 <code>32</code> 种 / 分 <code>16</code> 类, 这些装备的功能多种多样, 但它们大多有耐久概念, 被破坏就无法生效了; <br />
+	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 备注内容</a>; <br />
+	04. 你可以借助筛选工具进行精确查找, 值得一提的是, 如果机体装备肩扛武器, AI 操控机体也会用它们, 但能否用好就是另一回事了; <br />
+</p>
+
+<p style="display:flex;justify-content:space-between;align-items:center;">
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">配件等级: </span><select id="attrSelect01" class="select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">物品类型: </span><select id="attrSelect02" class="select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">归属种类: </span><select id="attrSelect03" class="select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">原形研发: </span><select id="attrSelect04" class="select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+</p>
+
+<p style="display:flex;justify-content:space-between;align-items:center;">
+	
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;width:80px">名称描述: </span>
+		<input id="nameInput01" class="input-unset" type="text" style="flex:1 1 auto;width:116px;" placeholder="空" />
+		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;"><i class="fas fa-magnifying-glass"></i></button>
+	</label>
+	
+	<span style="display:inline-flex;flex:0 0 auto;width:472px;color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
+	
+	<span style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;color:#999;">│</span>
+		<button style="flex:0 0 auto;width:74px;margin-left:auto;order:1;" 
+		id="resetButton" class="button-unset" type="button" xj-focus="{ontabAlways:true}">清空</button>
+	</span>
+	
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
+			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #646464 0%, #646464 75%, #646464 75%, #646464 75%, #afafaf 75%, #afafaf 100%);"></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 备注内容</h2>
+
+<p>挂件槽位: 只有主力机体和作战单元存在挂件槽位, 挂件槽位还可以细分为普通挂件槽位和肩部挂件槽位, 主力机体和作战单元都有 <code>8</code> 个普通挂件槽位, 但主力机体有 <code>2</code> 个肩部挂架槽位而作战单元仅有 <code>1</code> 个, 普通挂件装备可以安装在任意挂件槽位里, 而肩扛武器装备只能安装在肩部挂件槽位里, 也就是说, 普通挂件有很大选择的余地, 但肩扛大炮你最多同时也只能配置两门(毕竟也只有两个肩膀);</p>
+
+<p>方向限定: 绝大多数挂件都是有方向概念的, 游戏将机体周围 <code>360°</code> 分为八个部分, 每部分 <code>45°</code> 分别对应八个普通挂件槽位, 例如外挂照明灯和外挂探射灯就只在安装的那个方向亮起, 当机体被敌人击中时, 也会计算是哪个方向受到伤害, 并判断那个方向的挂件是否生效或受损, 因此, 我们一般都是将装甲放在正面而易损的辅助挂件放在背面, 毕竟在正对敌人的时候, 一般也是正面受损的情况居多;</p>
+
+<p>不可依赖: 跟其他的装备不同, 不少的挂件都有耐久度设定, 也就是说它们在战场中随时有可能被摧毁, 这也许会非常致命, 例如说你安装了外挂液压机, 它可以提升你的机体速度, 但当它在战斗中被摧毁, 就可能导致机体速度断崖式下降, 甚至可能变得完全无法移动, 此时就会陷入死局, 连撤退都没法做到, 因此在安装这类挂件的时候, 千万不能将它们的增益当作是恒定的, 要时刻考虑被摧毁后的情况;</p>
+
+<p>————</p>
+
+<p>护甲以及装甲: 它们仅在子弹击中了安装的方向时才会生效, 例如护甲装在身前, 但子弹打中后背, 此时没有任何效果, 此外, 它们提供的抵抗跟机体自身抵抗是分开算的, 例如被击中的方位装备了护甲, 如果抵抗失败, 则会计算机体自身抵抗, 再失败才会造成全额伤害;</p>
+
+<p>外挂弹夹舱: 在众多挂件中, 仅有三种外挂弹夹舱的效果是不可叠加的, 也就是说尽管你能重复安装, 但是没效果, 如果装了多个外挂弹夹舱, 将以减少最多装弹时间的那个挂件装备为主, 但同时存在时, 这些装备带来的减益却是会累加的, 因此, 务必只安装一个就够了;</p>
+
+<p>肩扛武器: 这些武器在战场中需要按 Tab 键后在战略面板点击机体详情启用, 或者是用快捷键 E/T 进行发射, 在一场战斗中它们可以使用多次, 只是冷却时间稍长, 无法连续使用而已, 但它们并非免费的, 在战后会从战略武器费中扣除, 具体细节可查阅 <a href="javascript:void(0)"><s>费用计算.html</s></a>;
+
+<p>————</p>
+
+<p>获取限制: 肩扛武器大多是队员的忠诚到达一定程度后解锁的(她们会送一台, 并且之后商店里才有概率会刷出来), 在剧情模式下, 跟队员打好关系, 你就能免费获得其中的一些, 但肩扛航炮是个例外, 因为它是玛丽忠诚度到达 <code>5</code> 心时送的礼物, 在剧情模式下由于玛丽是队长, 同时也是玩家扮演的角色, 因此她是没有忠诚度的, 这也就导致了你无法获得肩扛航炮, 甚至可能连重型肩扛航炮也无法解锁;</p>
+
+<p>拆卸代价: 挂件装备的安装是免费的, 但是当挂件装备的价格 <code>>=30</code>, 拆卸就需要支付一定费用, 这被称为拆卸损耗, 甚至挪移装备在槽位中的位置都要计费, 费用为挂件装备价值的 <code>1/10</code>, 向下取整, 如重型肩扛电磁脉冲炮价格为 <code>75</code>, 则耗费为 <code>Floor(75/10)=7</code>;</p>
+
+<p>自动修复: 普通的挂载如果在战场中被摧毁, 那么在下场战斗开始之前将会自动修复, 这个行为无需手操, 并且不需要消耗任何的费用;</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 表格样式 */
+#powerTable01 .hideTr{display:none;}
+</style>
+
+
+
+<script>/* 数据注解
+
+CargoPiles=0, 
+CargoPilesMax=0, 
+CargoPilesFusion=0, 
+CargoPilesFusionMax=0, 
+ColorPlus='-', 
+Cluster='-', 
+MaxPile=1,
+
+*/
+
+// 融合数据
+let tbodyArray01 = [
+	
+	// 高亮,	装备图片,	装备序号,	装备名称,				项目代码,	参考价格,	配件等级,	默认排序,		解锁天数,	物品类型,			归属种类,			原型研发,					合成材料,											出现条件,						文本描述,		],		
+	// Active,	Image,		Number,		Name,					Items,		Price,		Level,		ResolveID,		Day,		Type,				Tag,				Company,					Syns,												NeedWeapon,						Description,	],		//01		
+	
+	[1,			1200,		'01',		'轻型护甲',				1200,		10,			1,			191,			6,			'Hang',				'Hang',				'Main2_1',					'40024_5|40005_2',									'-',							'-',			],		
+	[1,			1201,		'02',		'中型护甲',				1201,		20,			2,			192,			8,			'Hang',				'Hang',				'Main2_1',					'-',												'1200',							'-',			],		
+	[1,			1202,		'03',		'重型护甲',				1202,		40,			-1,			193,			20,			'Hang',				'Hang',				'Main2_1',					'-',												'1200',							'-',			],		//01		
+	
+	[0,			1203,		'04',		'轻型装甲',				1203,		10,			1,			194,			9,			'Hang',				'Hang',				'Main2_1',					'40024_5|40005_2',									'-',							'-',			],		
+	[0,			1204,		'05',		'中型装甲',				1204,		20,			2,			195,			15,			'Hang',				'Hang',				'Main2_1',					'-',												'1203',							'-',			],		
+	[0,			1205,		'06',		'重型装甲',				1205,		40,			-1,			196,			30,			'Hang',				'Hang',				'Main2_1',					'-',												'1203',							'-',			],		//01		
+	
+	[1,			1206,		'07',		'复合装甲(轻型)',		1206,		30,			1,			197,			22,			'Hang',				'Hang',				'Main2_1',					'40025_3|40005_2',									'-',							'-',			],		
+	[1,			1207,		'08',		'复合装甲(中型)',		1207,		60,			2,			198,			44,			'Hang',				'Hang',				'Main_2',					'-',												'1206',							'-',			],		
+	[1,			1208,		'09',		'复合装甲(重型)',		1208,		100,		-1,			199,			66,			'Hang',				'Hang',				'Main_1',					'-',												'1206',							'-',			],		//01		
+	
+	[0,			1210,		'10',		'外挂弹夹舱',			1210,		32,			-2,			201,			15,			'Hang',				'Hang',				'Main2_3',					'-',												'2017',							'-',			],		
+	[0,			1211,		'11',		'高级外挂弹夹舱',		1211,		60,			-2,			202,			30,			'Hang',				'Hang',				'Main2_3',					'40001_2|40002_2|40006_2|40007_2|40022_5',			'2017',							'-',			],		
+	[0,			1212,		'12',		'坚固外挂弹夹舱',		1212,		50,			-2,			203,			50,			'Hang',				'Hang',				'Main2_3',					'-',												'2017',							'-',			],		//01		
+	
+	[1,			1213,		'13',		'外挂液压机',			1213,		30,			-2,			204,			15,			'Hang',				'Hang',				'Main2_4',					'-',												'2050',							'-',			],		
+	[1,			1214,		'14',		'高级外挂液压机',		1214,		60,			-2,			205,			30,			'Hang',				'Hang',				'Main2_4',					'40001_2|40002_2|40006_2|40007_2|40021_5',			'2050',							'-',			],		
+	[1,			1215,		'15',		'坚固外挂液压机',		1215,		60,			-2,			206,			50,			'Hang',				'Hang',				'Main2_4',					'-',												'2050',							'-',			],		//01		
+	
+	[0,			1216,		'16',		'外挂传动器',			1216,		30,			-2,			207,			15,			'Hang',				'Hang',				'Main2_2',					'-',												'2054',							'-',			],		
+	[0,			1217,		'17',		'高级外挂传动器',		1217,		60,			-2,			208,			30,			'Hang',				'Hang',				'Main2_2',					'40001_2|40002_2|40006_2|40007_2|40021_5',			'2054',							'-',			],		
+	[0,			1218,		'18',		'坚固外挂传动器',		1218,		60,			-2,			209,			50,			'Hang',				'Hang',				'Main2_2',					'-',												'2054',							'-',			],		//01		
+	
+	[1,			1209,		'19',		'链锯',					1209,		32,			-2,			200,			6,			'Hang',				'Hang',				'Main2_3',					'40029_8|40005_2',									'-',							'-',			],		//01		
+	
+	[0,			1221,		'20',		'外挂照明灯',			1221,		20,			-2,			212,			65,			'Hang',				'Hang',				'Main2_3',					'40013_1|40014_1|40007_2|40008_2',					'-',							'-',			],		
+	[0,			1222,		'21',		'外挂探射灯',			1222,		20,			-2,			213,			65,			'Hang',				'Hang',				'Main2_3',					'40013_1|40014_1|40007_2|40008_2',					'-',							'-',			],		//01		
+	
+	[1,			1223,		'22',		'外挂能量罐',			1223,		40,			-2,			214,			10,			'Hang',				'Hang',				'Main2_3',					'40002_5|40006_3|40022_3|40023_5',					'-',							'-',			],
+	[1,			1220,		'23',		'外挂发烟筒',			1220,		20,			-2,			211,			18,			'Hang',				'Hang',				'Main2_3',					'40001_1|40002_1|40006_3|40007_3|40005_1',			'-',							'-',			],		
+	[1,			1219,		'24',		'外挂燃料桶',			1219,		45,			-2,			210,			10,			'Hang',				'Hang',				'Main2_3',					'40001_2|40002_2|40006_5|40007_5|40005_2',			'10010|10011|10036|10037',		'-',			],		//01		
+	
+	[0,			1252,		'25',		'肩扛火炮',				1252,		60,			-2,			218,			35,			'HangShoulder',		'HangShoulder',		'TankType_PlayerName_2',	'-',												'-',							'-',			],		
+	[0,			1253,		'26',		'重型肩扛火炮',			1253,		100,		-2,			219,			50,			'HangShoulder',		'HangShoulder',		'TankType_PlayerName_3',	'-',												'1252',							'-',			],		//01		
+	
+	[1,			1254,		'27',		'肩扛航炮',				1254,		45,			-2,			220,			35,			'HangShoulder',		'HangShoulder',		'Main2_3',					'-',												'-',							'-',			],		
+	[1,			1255,		'28',		'重型肩扛航炮',			1255,		80,			-2,			221,			44,			'HangShoulder',		'HangShoulder',		'Main2_3',					'-',												'1254',							'-',			],		//01		
+	
+	[0,			1250,		'29',		'肩扛火箭炮',			1250,		70,			-2,			216,			35,			'HangShoulder',		'HangShoulder',		'Main_2',					'-',												'-',							'-',			],		
+	[0,			1251,		'30',		'重型肩扛火箭炮',		1251,		120,		-2,			217,			39,			'HangShoulder',		'HangShoulder',		'TankType_PlayerName_2',	'-',												'1250',							'-',			],		//01		
+	
+	[1,			1256,		'31',		'肩扛电磁脉冲炮',		1256,		30,			-2,			222,			50,			'HangShoulder',		'HangShoulder',		'TankType_PlayerName_4',	'-',												'-',							'-',			],		
+	[1,			1257,		'32',		'重型肩扛电磁脉冲炮',	1257,		75,			-2,			223,			70,			'HangShoulder',		'HangShoulder',		'TankType_PlayerName_4',	'-',												'1256',							'-',			],		//01		
+	
+];
+
+// 配件名称
+let ItemsNameList = {
+	1200 : ['轻型护甲',				'輕型護甲',				'Light Vest',									'軽アーマー',							],
+	1201 : ['中型护甲',				'中型護甲',				'Medium Vest',									'中アーマー',							],
+	1202 : ['重型护甲',				'重型護甲',				'Heavy Vest',									'重アーマー',							],
+	1203 : ['轻型装甲',				'輕型裝甲',				'Light Armor',									'軽装甲',								],
+	1204 : ['中型装甲',				'中型裝甲',				'Medium Armor',									'中装甲',								],
+	1205 : ['重型装甲',				'重型裝甲',				'Heavy Armor',									'重装甲',								],
+	1206 : ['复合装甲(轻型)',		'複合裝甲',				'Composite Armor',								'複合装甲',								],
+	1207 : ['复合装甲(中型)',		'複合裝甲(重型)',		'Composite Armor (Heavy)',						'複合装甲(重装)',						],
+	1208 : ['复合装甲(重型)',		'複合裝甲(超重型)',		'Composite Armor (Super Heavy)',				'複合装甲(超重装)',						],
+	1209 : ['链锯',					'鏈鋸',					'Chain Saw',									'チェーンソー',							],
+	1210 : ['外挂弹夹舱',			'外掛彈艙',				'External Bomb Bay',							'外付け弾倉',							],
+	1211 : ['高级外挂弹夹舱',		'高級外掛彈艙',			'Advanced External Bomb Bay',					'上級外付け弾倉',						],
+	1212 : ['坚固外挂弹夹舱',		'堅固外掛彈艙',			'Solid External Bomb Bay',						'頑丈な外付け弾倉',						],
+	1213 : ['外挂液压机',			'外掛液壓機',			'External Hydraulic Press',						'外付け油圧プレス',						],
+	1214 : ['高级外挂液压机',		'高級外掛液壓機',		'Advanced External Hydraulic Press',			'上級外付け油圧プレス',					],
+	1215 : ['坚固外挂液压机',		'堅固外掛液壓機',		'Solid External Hydraulic Press',				'頑丈な外付け油圧プレス',				],
+	1216 : ['外挂传动器',			'外掛傳動器',			'External Drive',								'外付け伝動装置',						],
+	1217 : ['高级外挂传动器',		'高級外掛傳動器',		'Advanced External Drive',						'上級外付け伝動装置',					],
+	1218 : ['坚固外挂传动器',		'堅固外掛傳動器',		'Solid External Drive',							'頑丈な外付け伝動装置',					],
+	1219 : ['外挂燃料桶',			'外掛燃料桶',			'External Fuel Tank',							'外付け燃料タンク',						],
+	1220 : ['外挂发烟筒',			'外掛發煙筒',			'External Smoke Barrel',						'外付け発煙筒',							],
+	1221 : ['外挂照明灯',			'外掛照明燈',			'External Light',								'外付け照明ランプ',						],
+	1222 : ['外挂探射灯',			'外掛射燈',				'External Spotlight',							'外付けポットライト',					],
+	1223 : ['外挂能量罐',			'外掛能量罐',			'External Energy Tank',							'外付けエネルギータンク',				],
+	1250 : ['肩扛火箭炮',			'肩扛火箭炮',			'Shoulder-mounted Rocket Launcher',				'肩発射式ロケットランチャー',			],
+	1251 : ['重型肩扛火箭炮',		'重型肩扛火箭炮',		'Heavy Shoulder-mounted Rocket Launcher',		'重装肩発射式ロケットランチャー',		],
+	1252 : ['肩扛火炮',				'肩扛火炮',				'Shoulder-mounted Cannon',						'肩発射式火砲',							],
+	1253 : ['重型肩扛火炮',			'重型肩扛火炮',			'Heavy Shoulder-mounted Cannon',				'肩発射式重火砲',						],
+	1254 : ['肩扛航炮',				'肩扛航炮',				'Shoulder-mounted Aircraft Artillery',			'肩発射式航空機関砲',					],
+	1255 : ['重型肩扛航炮',			'重型肩扛航炮',			'Shoulder-mounted Phalanx',						'肩発射式ファランクス',					],
+	1256 : ['肩扛电磁脉冲炮',		'肩扛電磁脈衝炮',		'Shoulder-mounted EMP',							'肩発射式EMPパルス',					],
+	1257 : ['重型肩扛电磁脉冲炮',	'重型肩扛電磁脈衝炮',	'Heavy Shoulder-mounted EMP',					'肩発射式重装EMPパルス',				],
+	
+	2017 : ['换弹模块',				'換彈模組',				'Reloading Module',								'リロードモジュール',					],
+	
+	2050 : ['速度模块',				'速度模組',				'Speed Module',									'速度モジュール',						],
+	2054 : ['转轴模块',				'轉軸模組',				'Rotating Shaft Module',						'回転軸モジュール',						],
+	
+	10010 : ['喷火器',				'噴火器',				'Flame Thrower',								'火炎放射器',							],
+	10011 : ['寒冰喷雾',			'寒冰噴霧',				'Frost Spray',									'氷放射器',								],
+	10036 : ['喷油枪',				'噴油槍',				'Oil Spray Gun',								'オイルスプレーガン',					],
+	10037 : ['喷水枪',				'噴水槍',				'Water Spray Gun',								'ウォータースプレーガン',				],
+};
+
+// 物品类型
+let TypeList = {
+	Hang :			['机身挂件',		'機身掛件',		'Mounted object',		'アタッチメント',			],
+	HangShoulder :	['肩部挂件',		'肩部掛件',		'Shoulder mount',		'肩部アタッチメント',		],
+};
+
+// 归属种类
+let TagList = {
+	Hang :			['挂件',			'掛件',			'Mounted object',		'アタッチメント',			],
+	HangShoulder :	['肩件',			'肩件',			'Shoulder mount',		'肩部アタッチメント',		],
+};
+
+// 原型研发
+let CompanyList = {
+	TankType_PlayerName_0 :	['玛丽',					'瑪麗',					'Mary',										'メアリー',					],
+	TankType_PlayerName_1 :	['库罗库',					'庫羅庫',				'Kuroku',									'クロック',					],
+	TankType_PlayerName_2 :	['桑',						'桑',					'San',										'サン',						],
+	TankType_PlayerName_3 :	['赭石色',					'赭石色',				'Ocher',									'オーカー',					],
+	TankType_PlayerName_4 :	['克莱尔',					'克萊爾',				'Claire',									'クレア',					],
+	Main_1 :				['帝国重工',				'帝國重工',				'Imperial Heavy Industries',				'帝国重工',					],
+	Main_2 :				['帝国武器制造总局',		'帝國武器製造總局',		'Imperial Weapon Manufacturing Bureau',		'帝国兵器製造局',			],
+	Main_3 :				['依热夫兵工厂',			'依熱夫兵工廠',			'Irev Arsenal',								'Irevアーセナル',			],
+	Main_4 :				['帝国兵器集团',			'帝國兵器集團',			'Imperial Weapon Group',					'帝国兵器集団',				],
+	Main_5 :				['皇家军械公司',			'皇家軍械公司',			'Royal Ordnance Company',					'王立武器会社',				],
+	Main_6 :				['帝国铁骑制造总局',		'帝國鐵騎製造總局',		'mperial Cavalry Manufacturing Bureau',		'帝国鉄騎製造総局',			],
+	Main2_1 :				['船舶集团有限公司',		'船舶集團有限公司',		'Shipbuilding Group Co., Ltd',				'船舶重工グループ株式会社',	],
+	Main2_2 :				['航空集团有限公司',		'航空集團有限公司',		'Aviation Group Co., Ltd',					'航空グループ株式会社',		],
+	Main2_3 :				['总装备制造局',			'總裝備製造局',			'General Equipment Manufacturing Bureau',	'汎用設備製造局',			],
+	Main2_4 :				['苏尔发动机制造局',		'蘇爾發動機製造局',		'Sul Engine Manufacturing Bureau',			'スールエンジン製造局',		],
+	Main2_5 :				['风神公司',				'風神公司',				'Hermes Company',							'風神公司',					],
+	Main2_6 :				['布尔发动机公司',			'布爾發動機公司',		'Boolean Engine Company',					'ブールエンジン株式会社',	],
+	Main2_7 :				['蓝天电子公司',			'藍天電子公司',			'Blue Sky Electronics Company',				'青空電子株式会社',			],
+	Main2_8 :				['首都兵工厂',				'首都兵工廠',			'Capital Arsenal',							'首都兵器工場',				],
+	Main2_9 :				['帝国火炮集团',			'帝國火炮集團',			'Imperial Artillery Group',					'帝国火砲集団',				],
+	Main2_10 :				['格罗姆钢管厂',			'格羅姆鋼管廠',			'Grom Steel Pipe Factory',					'グロム鋼管工場',			],
+	Main2_11 :				['弹头总装部',				'彈頭總裝部',			'Bullet Assembly Department',				'弾頭総装填部',				],
+	Main2_12 :				['帝国仪器厂',				'帝國儀器廠',			'Imperial Instrument Factory',				'帝国計器工場',				],
+};
+
+// 合成材料
+let ScrapList = {
+	40001 :	['废铁',			'廢鐵',			'Scrap Iron',					'スクラップアイロン',		],
+	40002 :	['废料',			'廢料',			'Waste Material',				'スクラップ',				],
+	40003 :	['弹壳',			'彈殼',			'Bullet Shell',					'薬莢',						],
+	40004 :	['弹头',			'彈頭',			'Warhead',						'弾頭',						],
+	40005 :	['接合物件',		'接合物件',		'Joining Component',			'接続オブジェクト',			],
+	40006 :	['齿轮',			'齒輪',			'Gear',							'ギア',						],
+	40007 :	['框架',			'框架',			'Frame',						'フレーム',					],
+	40008 :	['铁管',			'鐵管',			'Iron Pipe',					'鉄パイプ',					],
+	40009 :	['扳机',			'扳機',			'Trigger',						'トリガー',					],
+	40010 :	['雷管',			'雷管',			'Detonator',					'起爆装置',					],
+	40011 :	['工业塑料',		'工業塑膠',		'Industrial Plastic',			'工業用プラスチック',		],
+	40012 :	['弹链',			'彈鏈',			'Ammunition Belt',				'弾帯',						],
+	40013 :	['棱镜',			'稜鏡',			'Prism',						'プリズム',					],
+	40014 :	['透镜',			'透鏡',			'Lens',							'レンズ',					],
+	40015 :	['点火器',			'點火器',		'Igniter',						'イグナイター',				],
+	40016 :	['冷凝管',			'冷凝管',		'Condenser',					'復水管',					],
+	40017 :	['线圈',			'線圈',			'Coil',							'コイル',					],
+	40018 :	['电容',			'電容',			'Capacitor',					'コンデンサ',				],
+	40019 :	['电感',			'電感',			'Inductor',						'インダクター',				],
+	40020 :	['三极管',			'三極管',		'Transistor',					'三極管',					],
+	40021 :	['润滑油',			'潤滑油',		'Lubricating Oil',				'潤滑油',					],
+	40022 :	['火花塞',			'火花塞',		'Spark Plug',					'スパークプラグ',			],
+	40023 :	['冷冻剂',			'冷凍劑',		'Refrigerant',					'冷媒',						],
+	40024 :	['装甲',			'裝甲',			'Armor',						'装甲',						],
+	40025 :	['厚装甲',			'厚裝甲',		'Heavy Armor',					'厚い装甲',					],
+	40026 :	['力场管',			'力場管',		'Force Field Generator',		'力場パイプ',				],
+	40027 :	['力场膜',			'力場膜',		'Force Field Membrane',			'力場膜',					],
+	40028 :	['共振器',			'共振器',		'Resonator',					'共振器',					],
+	40029 :	['刀片',			'刀片',			'Blade',						'ブレード',					],
+	40030 :	['振荡器',			'振盪器',		'Oscillator',					'発振回路',					],
+	40031 :	['涂层',			'塗層',			'Coating',						'コーティング',				],
+	40032 :	['核心',			'核心',			'Core',							'コア',						],
+};
+
+// 文本描述
+let DescriptionList = {
+	
+	1200 : [/*'轻型护甲',			Armor:PlayerArmorA0|AddSpeed:-1|AddRotSpeed:-1,							*/'在挂载处安装抵抗为 20 的护甲, 护甲不会损坏, 但抵抗失败会导致被击穿, 机体速度 - 1%, 转向速度 - 1%',										'在掛載處安裝一道抵抗為20的護甲, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',													'Installs a piece of 20 resistance vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',														'マウント部に抵抗20のアーマーを搭載する, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',																		],		
+	1201 : [/*'中型护甲',			Armor:PlayerArmorA1|AddSpeed:-2|AddRotSpeed:-2,							*/'在挂载处安装抵抗为 35 的护甲, 护甲不会损坏, 但抵抗失败会导致被击穿, 机体速度 - 2%, 转向速度 - 2%',										'在掛載處安裝一道抵抗為35的護甲, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',													'Installs a piece of 35 resistance vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',														'マウント部に抵抗35のアーマーを搭載する, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',																		],		
+	1202 : [/*'重型护甲',			Armor:PlayerArmorA2|AddSpeed:-3|AddRotSpeed:-3,							*/'在挂载处安装抵抗为 50 的护甲, 护甲不会损坏, 但抵抗失败会导致被击穿, 机体速度 - 3%, 转向速度 - 3%',										'在掛載處安裝一道抵抗為50的護甲, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',													'Installs a piece of 50 resistance vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',														'マウント部に抵抗50のアーマーを搭載する, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',																		],		//02		
+	
+	1203 : [/*'轻型装甲',			Armor:PlayerArmorB0|AddSpeed:-1|AddRotSpeed:-1,							*/'在挂载处安装耐久为 2500 的装甲, 不会被击穿, 但生命值清空后损坏, 下次战斗修复, 机速 -1%, 转速 -1%',										'在掛載處安裝一道耐久為2500的裝甲, 裝甲不會被擊穿, 但是生命值歸0後會損壞(下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a piece of armor with 2500 durability on where it\'s mounted, which cannot be penetrated and will be damaged when HP reaches 0 (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',									'マウント部に耐久度が2500の装甲を搭載する, 装甲は貫通されないが、HPが0になった後に壊れる(次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',													],		
+	1204 : [/*'中型装甲',			Armor:PlayerArmorB1|AddSpeed:-2|AddRotSpeed:-2,							*/'在挂载处安装耐久为 4500 的装甲, 不会被击穿, 但生命值清空后损坏, 下次战斗修复, 机速 -2%, 转速 -2%',										'在掛載處安裝一道耐久為4500的裝甲, 裝甲不會被擊穿, 但是生命值歸0後會損壞(下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a piece of armor with 4500 durability on where it\'s mounted, which cannot be penetrated and will be damaged when HP reaches 0 (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',									'マウント部に耐久度が4500の装甲を搭載する, 装甲は貫通されないが、HPが0になった後に壊れる(次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',													],		
+	1205 : [/*'重型装甲',			Armor:PlayerArmorB2|AddSpeed:-4|AddRotSpeed:-4,							*/'在挂载处安装耐久为 8000 的装甲, 不会被击穿, 但生命值清空后损坏, 下次战斗修复, 机速 -4%, 转速 -4%',										'在掛載處安裝一道耐久為8000的裝甲, 裝甲不會被擊穿, 但是生命值歸0後會損壞(下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a piece of armor with 8000 durability on where it\'s mounted, which cannot be penetrated and will be damaged when HP reaches 0 (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',									'マウント部に耐久度が8000の装甲を搭載する, 装甲は貫通されないが、HPが0になった後に壊れる(次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',													],		//02		
+	
+	1206 : [/*'复合装甲(轻型)',		Armor:PlayerArmorC0|AddSpeed:-10|AddRotSpeed:-10,						*/'在挂载处安装抵抗为 75 的护甲, 非常重, 护甲不会损坏, 但抵抗失败会导致被击穿, 机速 -10%, 转速 -10%',										'在掛載處安裝一道抵抗為75的護甲, 非常重, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',											'Installs a piece of 75 resistance heavy vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',													'マウント部に抵抗が75のアーマーを搭載する、非常に重い, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',															],		
+	1207 : [/*'复合装甲(中型)',		Armor:PlayerArmorC1|AddSpeed:-15|AddRotSpeed:-15,						*/'在挂载处安装抵抗为100 的护甲, 非常重, 护甲不会损坏, 但抵抗失败会导致被击穿, 机速 -15%, 转速 -15%',										'在掛載處安裝一道抵抗為100的護甲, 非常重, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a piece of 100 resistance heavy vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',												'マウント部に抵抗が100のアーマーを搭載する、非常に重い, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',														],		
+	1208 : [/*'复合装甲(重型)',		Armor:PlayerArmorC2|AddSpeed:-20|AddRotSpeed:-20,						*/'在挂载处安装抵抗为150 的护甲, 非常重, 护甲不会损坏, 但抵抗失败会导致被击穿, 机速 -20%, 转速 -20%',										'在掛載處安裝一道抵抗為150的護甲, 非常重, 護甲不會損壞, 但是抵抗失敗會導致被擊穿\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a piece of 150 resistance heavy vest on where it\'s mounted. The piece of armor does not break, but resistance failure leads to penetration.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',												'マウント部に抵抗が150のアーマーを搭載する、非常に重い, アーマーは壊れないが、抵抗が失敗すると貫通される\n機体速度<Description:1>%、旋回速度<Description:2>%\n',														],		//02		
+	
+	1210 : [/*'外挂弹夹舱',			Armor:ArmorReload0_MechaReloadSpeed=-10|AddSpeed:-2|AddRotSpeed:-1,		*/'换弹时间 -10% 的挂件, 耐久 1000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -2%, 转向速度 -1%',										'在掛載處安裝一臺換彈時間-10%的掛件(注：該效果不可疊加), 耐久1000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',					'Installs a mounted object that reduces Reload Speed by 10% (the effect does not stack) with a durability of 1, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',						'マウント部にリロード時間-10%のアタッチメントを搭載する(注意:この効果は重ねることができない), 耐久度1000、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',		],		
+	1211 : [/*'高级外挂弹夹舱',		Armor:ArmorReload1_MechaReloadSpeed=-15|AddSpeed:-1|AddRotSpeed:-1,		*/'换弹时间 -15% 的挂件, 耐久　500, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -1%, 转向速度 -1%',										'在掛載處安裝一臺換彈時間-15%的掛件(注：該效果不可疊加), 耐久500, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',					'Installs a mounted object that reduces Reload Speed by 15% (the effect does not stack) with a durability of 500 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',							'マウント部にリロード時間-15%のアタッチメントを搭載する(注意:この効果は重ねることができない), 耐久度500、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',		],		
+	1212 : [/*'坚固外挂弹夹舱',		Armor:ArmorReload2_MechaReloadSpeed=-7|AddSpeed:-5|AddRotSpeed:-5,		*/'换弹时间 - 7% 的挂件, 耐久 3000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -5%, 转向速度 -5%',										'在掛載處安裝一臺換彈時間-7%的掛件(注：該效果不可疊加), 耐久3000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',					'Installs a mounted object that reduces Reload Speed by 7% (the effect does not stack) with a durability of 3, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',						'マウント部にリロード時間-7%のアタッチメントを搭載する(注意:この効果は重ねることができない), 耐久度3000、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',		],		//02		
+	
+	1213 : [/*'外挂液压机',			Armor:ArmorSpeed0_AddSpeedLimit=30|AddSpeed:-0|AddRotSpeed:-5,			*/'机体速度 +30% 的挂件, 耐久 1000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -0%, 转向速度 -5%',										'在掛載處安裝一臺移動速度+30%的掛件, 耐久1000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a mounted object that increases movement speed by 30% with a durability of 1, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n',												'マウント部に移動速度+30%のアタッチメントを搭載する, 耐久1000、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',													],		
+	1214 : [/*'高级外挂液压机',		Armor:ArmorSpeed1_AddSpeedLimit=45|AddSpeed:-0|AddRotSpeed:-5,			*/'机体速度 +45% 的挂件, 耐久　500, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -0%, 转向速度 -5%',										'在掛載處安裝一臺移動速度+45%的掛件, 耐久500, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a mounted object that increases movement speed by 45% with a durability of 500 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n',													'マウント部に移動速度+45%のアタッチメントを搭載する, 耐久度500、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',												],		
+	1215 : [/*'坚固外挂液压机',		Armor:ArmorSpeed2_AddSpeedLimit=25|AddSpeed:-0|AddRotSpeed:-8,			*/'机体速度 +25% 的挂件, 耐久 3000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -0%, 转向速度 -8%',										'在掛載處安裝一臺移動速度+25%的掛件, 耐久3000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a mounted object that increases movement speed by 25% with a durability of 3, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n',												'マウント部に移動速度+25%のアタッチメントを装着する, 耐久度3000、破壊されると効果が消える,  (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',												],		//02		
+	
+	1216 : [/*'外挂传动器',			Armor:ArmorRot0_AddRotSpeedLimit=30|AddSpeed:-5|AddRotSpeed:-0,			*/'转向速度 +30% 的挂件, 耐久 1000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -5%, 转向速度 -0%',										'在掛載處安裝一臺炮塔旋轉速度+30%的掛件, 耐久1000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a mounted object that increases turret rotational speed by 30% with a durability of 1, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',										'マウント部に砲塔旋回速度+30%のアタッチメントを搭載する, 耐久度1000、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',											],		
+	1217 : [/*'高级外挂传动器',		Armor:ArmorRot1_AddRotSpeedLimit=45|AddSpeed:-5|AddRotSpeed:-0,			*/'转向速度 +45% 的挂件, 耐久　500, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -5%, 转向速度 -0%',										'在掛載處安裝一臺炮塔旋轉速度+45%的掛件, 耐久500, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a mounted object that increases turret rotational speed by 45% with a durability of 500 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',										'マウント部に砲塔旋回速度+45%のアタッチメントを搭載する, 耐久度500、破壊されると効果が消える, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',											],		
+	1218 : [/*'坚固外挂传动器',		Armor:ArmorRot2_AddRotSpeedLimit=25|AddSpeed:-8|AddRotSpeed:-0,			*/'转向速度 +25% 的挂件, 耐久 3000, 被摧毁后效果会消失, 下次战斗自动修复, 机体速度 -8%, 转向速度 -0%',										'在掛載處安裝一臺炮塔旋轉速度+25%的掛件, 耐久3000, 被摧毀後效果會消失, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',									'Installs a mounted object that increases turret Rotational speed by 25% with a durability of 3, 000 that disappears upon destruction (restored the next battle).\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n',										'マウント部に砲塔旋回速度+25%のアタッチメントを装着する, 耐久度3000、破壊されると効果が消える,  (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',											],		//02		
+	
+	1209 : [/*'链锯',				Armor:PlayerSaw|AddSpeed:-5|AddRotSpeed:-5,								*/'持续切割临近敌人的链锯, 每秒 200 伤害, 机体速度 -5%, 转向速度 -5%',																		'在掛載處安裝一臺可以持續對敵人進行切割的鏈鋸\n重量適中, 機體速度<Description:1>%, 轉向速度<Description:2>%\n',																	'Installs a chain saw that keeps slicing enemies on where it\'s mounted.\nMedium weight; movement speed: <Description:1>%; rotational speed: <Description:2>%\n',																												'マウント部に敵を連続的に切り裂くことができるチェーンソーを搭載する\n重量中等、機体速度<Description:1>%、旋回速度<Description:2>%\n',																					],		//02		
+	
+	1221 : [/*'外挂照明灯',			Armor:ArmorLightWide|AddSpeed:-1|AddRotSpeed:-1,						*/'在挂载处安装一个照亮周围的灯, 夜间作战自动开启, 照明角度大但是距离短, 机体速度 -1%, 转向速度 -1%',										'在掛載處安裝一個照亮周圍的燈, 照明角度大但是距離短\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',																		'Installs a lamp that lights up the surroundings with a large lighting angle and short range.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',																											'マウント部に周囲を照らすランプを搭載する, 照明の角度は大きいが距離は短い\n機体速度<Description:1>%、旋回速度<Description:2>%\n',																						],		
+	1222 : [/*'外挂探射灯',			Armor:ArmorLightLong|AddSpeed:-1|AddRotSpeed:-1,						*/'在挂载处安装一个照亮周围的灯, 夜间作战自动开启, 照明角度小但是距离远, 机体速度 -1%, 转向速度 -1%',										'在掛載處安裝一個照亮周圍的燈, 照明角度小但是距離遠\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',																		'Installs a lamp that lights up the surroundings with a small lighting angle and long range.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',																											'マウント部に周囲を照らすランプを搭載する, 照明の角度は小さいが距離は長い\n機体速度<Description:1>%、旋回速度<Description:2>%\n',																						],		//02		
+	
+	1223 : [/*'外挂能量罐',			Armor:ArmorStrength_MechaSrength=30|AddSpeed:-1|AddRotSpeed:-10,		*/'可让机体的奔跑能量 + 30%, 耐久 500, 被摧毁后将会发生严重爆炸, 伤害 900, 主机眩晕, 下次战斗自动修复, 机体速度 - 1%, 转向速度 -10%',		'在掛載處安裝一臺使奔跑能量+30%的掛件, 耐久500, 被摧毀後效果會發生嚴重爆炸, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',								'Installs a mounted object that increases sprint energy by 30% with a durability of 500 that explodes upon destruction. (restored the next battle)\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',													'マウント部に走行エネルギー+30%のアタッチメントを搭載する, 耐久度500、効果は破壊後大爆発を引き起こす, (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',									],		
+	1220 : [/*'外挂发烟筒',			Armor:ArmorSmoke|AddSpeed:-1|AddRotSpeed:-1,							*/'发烟筒, 耐久 500, 被打爆后会散发出大量烟雾隐蔽机体, 敌人无法发现你, 持续时长 20 秒, 下次战斗自动修复, 机体速度 -1%, 转向速度 -1%',		'在掛載處安裝一個耐久為500的發煙筒, 生命值歸0後會損壞(下次戰鬥修復)並散發大量煙霧\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',										'Installs a smoke barrel with a durability of 500 that will become damaged after HP reaches 0 (restored the next battle) and generates a large amount of smoke.\nMovement speed: <Description:1>%; rotational speed: <Description:2>%\n',										'マウント部に耐久度500の発煙筒を搭載する, HPが0になると壊れて(次の戦いに修復される)、大量の煙幕を噴出する\n機体速度<Description:1>%、旋回速度<Description:2>%\n',														],		
+	1219 : [/*'外挂燃料桶',			Armor:ArmorSpilt_MechaSpiltRange=35|AddSpeed:-15|AddRotSpeed:-15,		*/'喷射武器射程 + 35%, 无人机不受影响, 耐久 500, 被摧毁后会爆炸, 伤害 900, 主机眩晕, 下次战斗自动修复, 机体速度 -15%, 转向速度 -15%',		'在掛載處安裝一臺使【噴射武器】射程增加35%的掛件(無人機除外), 耐久500, 被摧毀後效果會發生嚴重爆炸, (下次戰鬥修復)\n機體速度<Description:1>%, 轉向速度<Description:2>%\n',		'Install a mounted object that increases the range of [Spraying Weapon] (excluding drones) by 35%. Durability: 500. It will cause a severe explosion upon destruction. (restored the next battle)\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n',		'マウント部に【噴射兵器】射程を35%上げるのアタッチメントを装着する, (ドローンを除く), 耐久度500、効果は破壊後大爆発を引き起こす,  (次の戦いに修復される)\n機体速度<Description:1>%、旋回速度<Description:2>%\n',		],		//02		
+	
+	1252 : [/*'肩扛火炮',			ArmorStrategy:ShoulderCannon=20|Time:20|AddSpeed:-8|AddRotSpeed:-8,		*/'可发射常规集束炸弹, 既多颗爆炸弹, 单颗爆炸伤害 600, 冷却时间: 20秒, 机体速度 - 8%, 转向速度 - 8%',										'在肩部掛載一臺火炮, 可以發射集束炸彈, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',										'Mounts a rocket launcher on the shoulder that shoots cluster bombs. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																				'肩部に集束爆弾を発射できる大砲を搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',															],		
+	1253 : [/*'重型肩扛火炮',		ArmorStrategy:ShoulderCannon2=40|Time:40|AddSpeed:-15|AddRotSpeed:-15,	*/'可发射大型集束炸弹, 既单颗大型炸弹, 高达 6000 伤害, 冷却时间: 40秒, 机体速度 -15%, 转向速度 -15%',										'在肩部掛載一臺重型火炮, 可以發射集束炸彈, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',									'Mounts a heavy rocket launcher on the shoulder that shoots cluster bombs. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																		'肩部に集束爆弾を発射できる重装大砲を搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',														],		//02		
+	
+	1254 : [/*'肩扛航炮',			ArmorStrategy:ShoulderGun=30|Time:30|AddSpeed:-5|AddRotSpeed:-5,		*/'发射多发航炮, 伤害: 540, 冷却 30秒, 机体速度 - 5%, 转向速度 - 5%',																		'在肩部掛載一臺航炮, 可以發射機炮, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',											'Mounts aircraft artillery on the shoulder that shoots machine guns. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																				'肩部に機関砲を発射できる航空機関砲を搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',														],		
+	1255 : [/*'重型肩扛航炮',		ArmorStrategy:ShoulderGun2=45|Time:45|AddSpeed:-12|AddRotSpeed:-12,		*/'发射多发航炮, 伤害: 700, 冷却 45秒, 机体速度 -12%, 转向速度 -12%',																		'在肩部掛載一臺密集陣, 可以發射機炮, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',										'Mounts a cluster array on the shoulder that shoots machine guns. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																				'肩部に機関砲を発射できるファランクスを搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',														],		//02		
+	
+	1250 : [/*'肩扛火箭炮',			ArmorStrategy:ShoulderRocket3=40|Time:40|AddSpeed:-10|AddRotSpeed:-10,	*/'发射数颗火箭弹, 每颗伤害 900, 适合用来压制远处集群, 冷却时间: 40秒, 机体速度 -10%, 转向速度 -10%',										'在肩部掛載一臺火箭炮, 可以發射火箭彈, 適合用來壓制遠處集群, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',				'Mounts a rocket launcher on the shoulder that shoots rockets, effective against large groups far away. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',											'肩部にロケットを発射できるロケットランチャーを搭載する、遠くの敵の群れの制圧に適している、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',			],		
+	1251 : [/*'重型肩扛火箭炮',		ArmorStrategy:ShoulderRocket4=55|Time:55|AddSpeed:-18|AddRotSpeed:-18,	*/'发射多颗火箭弹, 每颗伤害 900, 适合用来压制远处集群, 冷却时间: 55秒, 机体速度 -18%, 转向速度 -18%',										'在肩部掛載一臺重型火箭炮, 可以發射火箭彈, 適合用來壓制遠處集群, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',			'Mounts a heavy rocket launcher on the shoulder that shoots rockets, effective against large groups far away. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',									'肩部にロケットを発射できる重装ロケットランチャーを搭載する、遠くの敵の群れの制圧に適している、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',		],		//02		
+	
+	1256 : [/*'肩扛电磁脉冲炮',		ArmorStrategy:ShoulderEMP=90|Time:90|AddSpeed:-15|AddRotSpeed:-15,		*/'可瘫痪小范围的敌军, 冷却时间　90秒, 机体速度 -15%, 转向速度 -15%',																		'在肩部掛載一臺EMP, 可以癱瘓一定範圍內敵軍, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',								'Mounts an EMP on the shoulder that paralyzes enemies in a small radius. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																			'肩部に一定範囲内の敵軍を無力化できるEMP装置を搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',												],		
+	1257 : [/*'重型肩扛电磁脉冲炮',	ArmorStrategy:ShoulderEMP2=110|Time:110|AddSpeed:-25|AddRotSpeed:-25,	*/'可瘫痪大范围的敌军, 冷却时间 110秒, 机体速度 -25%, 转向速度 -25%',																		'在肩部掛載一臺EMP, 可以癱瘓大範圍內敵軍, 冷卻時間:<Description:1>秒\n(在戰略面板啟用)\n機體速度<Description:2>%, 轉向速度<Description:3>%\n',									'Mounts an EMP on the shoulder that paralyzes enemies in a large radius. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n',																			'肩部に広範囲内の敵軍を無力化できるEMP装置を搭載する、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n',												],		//02		
+	
+};
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 武器图片
+		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
+		+'" src="../static/image/07_mecha_hang/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		
+		// 武器名称
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
+		
+		// 物品类型
+		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][0]) +'</td>' }else 
+		
+		// 归属种类
+		if(index === 10){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : 
+		data.split('|').map(function(e){ return TagList[e][0] }).join('<br />')) +'</td>' }else 
+		
+		// 原型研发
+		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (CompanyList[data][0]) +'</td>' }else 
+		
+		// 合成材料
+		if(index === 12){ powerTable_tbody_node01 += '<td>'+ (
+			data === '-' ? '-' : 
+				data.split('|').map(function(material){
+					let [name, count, ] = material.split('_');
+					return (count + ScrapList[name][0])
+				}).join(' + ')
+		) +'</td>' }else 
+		
+		// 出现条件
+		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (
+			data === '-' ? 'Unlock' : data.split('|').map(function
+			(string){ return ItemsNameList[string][0] }).join(' | ')
+		) +'</td>' }else 
+		
+		// 文本描述
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		
+		// 常规数据
+		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+
+// ---------------------------------------------
+
+// 配件等级
+let attrSelect01Option = [
+	{text: 'Level +1',					value: '1',			},
+	{text: 'Level +2',					value: '2',			},
+	{text: 'Level -1(满级)',			value: '-1',		},
+	{text: 'Level -2(不可升级)',		value: '-2',		},
+	{text: 'Level -3(-1 + -2 = -3)',	value: '-3',		},
+];
+
+// 物品类型
+let attrSelect02Option = [
+	{text: '机身挂件 / Mounted object',		value: 'Hang',				},
+	{text: '肩部挂件 / Shoulder mount',		value: 'HangShoulder',		},
+];
+
+// 归属种类
+let attrSelect03Option = [
+	{text: '挂件 / Mounted object',			value: 'Hang',				},
+	{text: '肩件 / Shoulder mount',			value: 'HangShoulder',		},
+];
+
+// 原型研发
+let attrSelect04Option = [
+	{text: '玛丽 / Mary',												value: 'TankType_PlayerName_0',		},
+	{text: '库罗库 / Kuroku',											value: 'TankType_PlayerName_1',		},
+	{text: '桑 / San',													value: 'TankType_PlayerName_2',		},
+	{text: '赭石色 / Ocher',											value: 'TankType_PlayerName_3',		},
+	{text: '克莱尔 / Claire',											value: 'TankType_PlayerName_4',		},
+	{text: '船舶集团有限公司 / Shipbuilding Group Co., Ltd',			value: 'Main2_1',					},
+	{text: '航空集团有限公司 / Aviation Group Co., Ltd',				value: 'Main2_2',					},
+	{text: '总装备制造局 / General Equipment Manufacturing Bureau',		value: 'Main2_3',					},
+	{text: '苏尔发动机制造局 / Sul Engine Manufacturing Bureau',		value: 'Main2_4',					},
+	{text: '风神公司 / Hermes Company',									value: 'Main2_5',					},
+	{text: '布尔发动机公司 / Boolean Engine Company',					value: 'Main2_6',					},
+	{text: '蓝天电子公司 / Blue Sky Electronics Company',				value: 'Main2_7',					},
+	{text: '首都兵工厂 / Capital Arsenal',								value: 'Main2_8',					},
+	{text: '帝国火炮集团 / Imperial Artillery Group',					value: 'Main2_9',					},
+	{text: '格罗姆钢管厂 / Grom Steel Pipe Factory',					value: 'Main2_10',					},
+	{text: '弹头总装部 / Bullet Assembly Department',					value: 'Main2_11',					},
+	{text: '帝国仪器厂 / Imperial Instrument Factory',					value: 'Main2_12',					},
+];
+
+// 创建空值
+let attrSelect01Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
+let attrSelect02Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
+let attrSelect03Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
+let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
+
+// 生成结构
+attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+
+// 创建元素
+let jqi_attrSelect01 = $('#attrSelect01').html(attrSelect01Html);
+let jqi_attrSelect02 = $('#attrSelect02').html(attrSelect02Html);
+let jqi_attrSelect03 = $('#attrSelect03').html(attrSelect03Html);
+let jqi_attrSelect04 = $('#attrSelect04').html(attrSelect04Html);
+
+// 其余元素
+let jqi_nameInput01 = $('#nameInput01');
+let jqi_nameCheck01 = $('#nameCheck01');
+let jqi_resetButton = $('#resetButton');
+
+// ---------------------------------------------
+
+// 获取 tbody 和 tr
+let jqi_table01_tbody = $('#powerTable01 tbody'), jqi_table01_tbody_tr = jqi_table01_tbody.find('tr');
+
+// 创建无结果 tr 行
+let jqi_empty_result_tr = $(/*html*/`
+<tr class="emptyTr tr-active" style="position:relative;"><td colSpan="99" style="text-align:center;height:64px;"><span>没有任何匹配的结果
+<br />There Are No Matching Results</span><span style="position:absolute;top:0;bottom:1px;left:0;width:5px;background-image:linear-gradient(180deg, #646464 0%, #646464 75%, #646464 75%, #646464 75%, #afafaf 75%, #afafaf 100%);"></span></td></tr>`);
+
+// 创建总筛选的函数
+let filterFunction = function(event){
+	
+	// 要显示的 tr 列表
+	let trShowIndexArray = [];
+	
+	// 下拉菜单当前的值
+	let jqi_attrSelect01_value = jqi_attrSelect01.val();
+	let jqi_attrSelect02_value = jqi_attrSelect02.val();
+	let jqi_attrSelect03_value = jqi_attrSelect03.val();
+	let jqi_attrSelect04_value = jqi_attrSelect04.val();
+	
+	// 没筛选则直接返回
+	if(jqi_nameInput01.val() === ''
+	&& jqi_attrSelect01_value === 'empty'
+	&& jqi_attrSelect02_value === 'empty'
+	&& jqi_attrSelect03_value === 'empty'
+	&& jqi_attrSelect04_value === 'empty'){
+		jqi_table01_tbody_tr.removeClass('hideTr');
+		jqi_empty_result_tr.remove();
+		return undefined;
+	};
+	
+	// 获取匹配项的索引
+	jqi_nameInput01.val().trim().split(/ {1,}/)
+	.forEach(function(text, index01){
+		tbodyArray01.forEach(function(item, index02){
+			if(item[3].indexOf(text) >= 0 
+			|| DescriptionList[item[1]][0].indexOf(text) >= 0){
+				
+				// if(jqi_attrSelect01_value !== 'empty' 
+				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
+				if(jqi_attrSelect01_value !== 'empty'){
+					if(jqi_attrSelect01_value !== '-3' 
+					&& jqi_attrSelect01_value !== String(item[6])){ return }else 
+					if(jqi_attrSelect01_value === '-3' && String(item[6]) !== '-1' && String(item[6]) !== '-2'){ return };
+				};
+				
+				// 物品类型
+				if(jqi_attrSelect02_value !== 'empty' 
+				&& jqi_attrSelect02_value !== item[ 9]){ return };
+				
+				// 归属种类
+				if(jqi_attrSelect03_value !== 'empty' 
+				&& item[10].indexOf(jqi_attrSelect03_value) === -1){ return };
+				
+				// 原形研发
+				if(jqi_attrSelect04_value !== 'empty' 
+				&& jqi_attrSelect04_value !== item[11]){ return };
+				
+				// 符合条件
+				trShowIndexArray.push(index02);
+				
+			};
+		});
+	});
+	
+	// 根据结果显示隐藏
+	if(trShowIndexArray.length === 0){
+		jqi_table01_tbody_tr.addClass('hideTr');
+		jqi_table01_tbody.append(jqi_empty_result_tr);
+	}else{
+		jqi_empty_result_tr.remove();
+		jqi_table01_tbody_tr.addClass('hideTr');
+		trShowIndexArray.forEach(function(value){ 
+		jqi_table01_tbody_tr.eq(value).removeClass('hideTr') });
+	};
+	
+};
+
+// 绑定表单控件操作
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(jqi){ jqi.on('change', function(event){ filterFunction(event) }) });
+jqi_nameInput01.on('keyup', function(event){ if(event.keyCode === 13){ filterFunction(event) } });
+jqi_nameInput01.on('blur' , function(event){ filterFunction(event) });
+jqi_nameCheck01.on('click', function(event){ filterFunction(event) });
+jqi_resetButton.on('click', function(){
+	jqi_nameInput01.val('');
+	[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04,].
+	forEach(function(jqi){ jqi.find('option:first').prop('selected', true) });
+	jqi_table01_tbody_tr.removeClass('hideTr');
+	jqi_empty_result_tr.remove();
+});
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.0</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 基本信息</a>
+			<a href="#heading02">02. 备注内容</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+
