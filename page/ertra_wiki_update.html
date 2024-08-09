@@ -45,15 +45,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-06-28T22:52:14UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-06-28T22:52:14UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-09T21:07:46UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-08-09T21:07:46UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-06-28T22:52:14UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-06-28T22:52:14UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-09T21:07:46UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-08-09T21:07:46UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
@@ -65,6 +65,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
 <div id="pub_pack">
 
 
@@ -85,8 +86,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 		</div>
 	</div>
 	<script>
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', document.documentElement.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() });
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
 	setDirMinHeight();
 	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
 	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };

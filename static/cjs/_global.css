@@ -95,6 +95,12 @@ padding:0;color:#999;}
 
 
 
+/* 全局宽高尺寸 */
+#pub_size{position:fixed;top:0;right:0;bottom:0;left:0;
+z-index:-1;background-color:#ccc;box-shadow:0 0 0 10px #f00 inset;font-size:36px;opacity:0;pointer-events:none;}
+
+
+
 /*--------------------------------------------------------------------------------------------*/
 
 /* 在 xj.theme 的基础上为 table 增加 sm 和 xs 尺寸 */

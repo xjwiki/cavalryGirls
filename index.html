@@ -45,15 +45,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="./static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="./static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="./static/cjs/_global.css?time=2024-06-28T22:52:14UTC+8" />
-<script src="./static/cjs/_global.js?time=2024-06-28T22:52:14UTC+8"></script>
+<link rel="stylesheet" href="./static/cjs/_global.css?time=2024-08-09T21:07:46UTC+8" />
+<script src="./static/cjs/_global.js?time=2024-08-09T21:07:46UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="./static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="./static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="./static/cjs/index.css?time=2024-06-28T22:52:14UTC+8" /> -->
-<!-- <script src="./static/cjs/index.js?time=2024-06-28T22:52:14UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="./static/cjs/index.css?time=2024-08-09T21:07:46UTC+8" /> -->
+<!-- <script src="./static/cjs/index.js?time=2024-08-09T21:07:46UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="./static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="./static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
@@ -65,6 +65,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
 <div id="pub_pack">
 
 
@@ -169,8 +170,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 		</div>
 	</div>
 	<script>
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', document.documentElement.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() });
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
 	setDirMinHeight();
 	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
 	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
@@ -219,7 +222,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 		<audio id="mainPosterBgmAudio" class="mainPosterBgmAudio audio-responsive" 
 		preload="metadata" loop="loop" controls="controls" type="audio/mpeg" src="./static/media/01.Title.mp3"></audio>
 	</div>
-	<select class="mainPosterBgmShift select-unset" id="mainPosterBgmShift" autocomplete="off">
+	<select class="mainPosterBgmShift needsclick select-unset" id="mainPosterBgmShift" autocomplete="off">
 		<option value="01.Title.mp3" selected="selected">01.Title.mp3</option>
 		<option value="02.TimeToRise.mp3">02.TimeToRise.mp3</option>
 		<option value="03.BossBase.mp3">03.BossBase.mp3</option>
@@ -258,9 +261,9 @@ $('#mainPosterBgmShift').on('change', function(){
 })();
 </script>
 
-<p><a target="_blank" href="https://store.steampowered.com/app/2055050/"><i class="fa-brands fa-steam" style="width:16px;"></i> 铁骑少女</a> 是一款披着 <code>二次元美少女</code> 外皮的 <code>硬核机战</code> 游戏, 也许有的人对二次元美少女并不感兴趣, 但实际上如果把她们换成兜甲儿或阿姆罗, 你将发现其实也没太大区别, 当然如果你本来就喜好这口, Than Even Better, 英姿飒爽的角色, 类别众多的武器, 瞬息万变的战场, 残酷可怕的敌人, 种种元素的叠加, 产生了令人欲罢不能的魔力, 总想再坚守一天就睡了, 结果转眼窗外就迎来了黎明. </p>
+<p><a target="_blank" href="https://store.steampowered.com/app/2055050/"><i class="fa-brands fa-steam" style="width:16px;"></i> 铁骑少女</a> 是一款披着 <code>二次元美少女</code> 外皮的 <code>硬核机战</code> 游戏, 也许有的人对二次元美少女并不感兴趣, 但实际上如果把她们换成兜甲儿或流龙马, 你将发现其实也没太大区别, 当然如果你本来就喜好这口, Than Even Better, 英姿飒爽的角色, 类别丰富的装备, 瞬息万变的战场, 残酷可怕的敌人, 种种元素的叠加, 产生了令人欲罢不能的魔力, 总想再坚守一天就睡了, 结果转眼窗外就迎来了黎明. </p>
 
-<p>在机缘巧合之下, XJ 接触到了这款游戏, 从最初的不屑, 到事后的沉迷(逍遥津战神附体: 没有机甲能够越过我大炮的范围, 因年轻而犯下的错: 夏亚亲临也敢教你什么叫王牌机师), 足见它确实具有独到之处, 起初这个项目源于 XJ 想整理一份武器列表, 但出于对游戏的喜爱和支持, 最终决定实现更多功能, 将数据整合成百科网站, 方便其他玩家查询信息, 并且传递游戏能给大家带来的那份欢乐(＾_＾). </p>
+<p>在机缘巧合之下, XJ 接触到了这款游戏, 从最初的不屑, 到事后的沉迷(逍遥津战神附体: 没有敌人能够越过我大炮的范围, 因年轻而犯下的错: 敢教夏亚和阿姆罗什么叫王牌机师), 足见它确实具有独到之处, 一开始这个项目源于 XJ 想整理一份武器列表, 但出于对游戏的喜爱和支持, 最终决定实现更多功能, 将数据整合成百科网站, 方便其他玩家查询信息, 并传递游戏能给大家带来的那份欢乐(＾_＾). </p>
 
 <p>
 	本站内容基于游戏<code>V1.1.X</code>, 对游戏有意见或看法, 可加群讨论或者去官方文档反馈. <br />
