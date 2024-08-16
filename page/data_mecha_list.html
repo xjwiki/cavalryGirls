@@ -45,15 +45,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-09T21:07:46UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-08-09T21:07:46UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-17T01:59:54UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-08-17T01:59:54UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-09T21:07:46UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-08-09T21:07:46UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-17T01:59:54UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-08-17T01:59:54UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
@@ -200,12 +200,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	</thead>
 	<tbody></tbody>
 </table>
+
 <hr />
 </section>
 
 
 
 <section><h2 id="heading02">02. 无人战机</h2>
+
 <p>
 	01. 以下是无人战机的属性详情列表, 剧情模式下到得第 7 天才会解锁无人机, 并且只有主力机体才能搭载无人机, 其余的机体都不行; <br />
 	02. 在没有增益的情况下无人机的作用相当有限, 因为它们的射程(Range)衰减严重, 即使给它们配备了好武器, 它们也很少有出手机会; <br />
@@ -617,7 +619,7 @@ tbodyArray02.forEach(function(item){
 	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
 	
 	// 遍历出td
-	item.forEach(function(data, index){ if(index !== 0){ powerTable_tbody_node02 += '<td style="padding:12px 4px;">'+ data +'</td>' } });
+	item.forEach(function(data, index){ if(index !== 0){ powerTable_tbody_node02 += '<td style="height:40px;">'+ data +'</td>' } });
 	
 	// 闭合掉tr
 	powerTable_tbody_node02 += '</tr>';

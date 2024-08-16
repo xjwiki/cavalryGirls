@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-17T01:59:54UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-08-17T01:59:54UTC+8"></script>
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<!-- ↑ Public | Private ↓ -->
+
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-17T01:59:54UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-08-17T01:59:54UTC+8"></script> -->
+<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
+<!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+
+<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<title>思潮影响</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>思潮影响</span><small>(三观倾向)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 书籍电视</h2>
+
+<p>
+	01. 共有 <code>30</code> 本书籍和 <code>06</code> 个电视节目, 可在整备阶段耗费 <code>1</code> 行动点观看, 由于主要作用都是改变思潮倾向, 因此就放一起展示; <br />
+	02. 书籍可在会议室购买, 有些事件也会赠送, 不过有些是违禁物品, 如果被搜出而你又没烟酒贿赂, 将会受到惩罚, 书籍也会被没收; <br />
+	03. 电视节目无需购买, 可直接观看, 每天随机刷两个节目, 尽管不知为何看电视也能得到钱, 但是考虑到负面思潮, 这也许并不划算; <br />
+	04. 如果点了选项但最后选择:"还是不看了", 尽管这不会耗费行动点, 但当天就无法再执行读书或看电视的操作了, 所以取消也要慎重; <br />
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
+			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #b9454d 0%, #b9454d 84%, #b9454d 84%, #b9454d 84%, #b9454d 84%, #b9454d 100%);"></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大堆叠<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">叛逆顺从<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">理智偏激<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">激进保守<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">博爱自私<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合计影响<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出品公司<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 增益效果</h2>
+
+<p>
+	01. 每个思潮的初始值都是 <code>0</code>, 范围介于 <code>-25</code> ~ <code>+30</code> 之间, 达到思潮需求即可获得增益, 读书看电视和聊天等操作都会改变它们; <br />
+	02. 剧情模式下的玛丽和无尽模式下被选为队长的人, 她没忠诚概念, 也就没忠诚奖励, 取而代之的便是思潮机制, 提供了另一套增益; <br />
+	03. 思潮共有四对八种: 叛逆对顺从, 理智对偏激, 激进对保守, 博爱对自私, 这些方向你都只能二选一, 例如偏向叛逆就会远离顺从; <br />
+	04. 每种思潮都有自己的好处, 只是单从收益来讲, 叛逆/理智/激进/博爱更具性价比, 剧情模式下也需要叛逆 >= Lv3 才能走叛逃路线; <br />
+</p>
+
+<table originalSort="0" id="powerTable02" class="powerTable table-xs table-hover"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">需求<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">反面<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading03">03. 额外拓展</h2>
+
+<p>书籍违禁: 目前游戏中的违禁物品都是书籍, 有时会出现搜查违禁物品的事件, 如果书籍被搜了出来, 你可以尝试用烟酒对搜查员进行贿赂, 如果没有烟酒而被揭发, 则违禁物品会被全部没收, 而且队长还会被拉去思想教育, -2 顺从 / -1 偏激 / -1 保守 / +2 博爱, 这其实和偷税被抓是相同的下场, 因此, 建议时刻都要留些烟酒以应付突发情况, 尽管烟酒并不适合作为礼物送给队友(会降低角色能力);</p>
+
+<p>电视奖励: 有些玩家会选择让队长总是看电视, 因为这样每天可多赚些资金, 至于说看电视导致脑压值上涨的问题, 只要你有足够人手, 能允许队长不出战, 那么脑压值降不下来也无所谓, 但看电视会导致思潮更加右倾(保守), 而很明显的思潮左倾(激进)收益更具性价比, 再加上每天的行动点都有限, 所以将行动点用于其他方面, 例如说召开战后总结会议以提升角色的能力和能力最大值, 可能会更加划算;</p>
+
+<p>聊天细节: 除了读书和看电视, 其实在整备阶段的娱乐室/休息室/会议室/档案室, 遇到队友跟她们聊天(需忠诚度 <code>>= 3</code>), 也可以改变思潮偏向, 你甚至可以把他们约过来聊天, 但这需要额外耗费 1 点行动力, 与库罗库聊天是 +1 博爱, 与桑聊天是 +1 激进, 与赭石色聊天是 +1 理智, 与克莱尔聊天是 +1 叛逆, 无限模式下如果不是选择玛丽作为队长, 则玛丽也可以聊天, 结果是四个思潮方向随机 +1;</p>
+
+<p>————</p>
+
+<p>尝试偷税: 叛逆要 <code>>= 0</code> 才能执行偷税, 如果队长偏向顺从则无法进行这种操作, 初期这可能用处不大, 因为成功率不高且收益较低, 但后期各种税费累加, 一次成功的偷税可省下上百元的资金, 就比较值得了, 但一定要备好烟酒, 以便操作失败可贿赂工作人员, 否则一旦被抓, 税率就会被加得更高, 而且队长还会被拉去思想教育, 结果就是 -2 顺从 / -1 偏激 / -1 保守 / +2 博爱(自己承担了一切);</p>
+
+<p>换防成本: 如果出现了你无法处理的外围任务, 例如难度太高或没有足够的人手, 此时就可以选择换防, 既使用资金去掉这个任务(可以理解为让其他的友军部队去对付), 而顺从的三个增益就是降低这笔费用, 但 XJ 还是建议尽量争取自己去解决这些外围任务, 收益更高;</p>
+
+<p>必须出战: 保守的第三个增益要求队长必须出战, 否则无法开始下一天的战斗, 此时如果队长处于出外勤的状态, 就需要在整备机体界面让队长加速归队, 默认情况下加速归队都需要额外耗费 100 资金, 但如果有了队长必须出战的词条, 则队长加速回归仅需耗费 10 资金;</p>
+
+<p>看书降压: 理智的首个增益, 既看书按当前理智值额外降脑负荷, 意思就是队长当前有 N 的理智, 则每看一本书就可以额外 -N 脑压值;</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 表格样式 */
+#powerTable01 .hideTr{display:none;}
+</style>
+
+
+
+<script>/* 数据注解
+
+CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax:0
+Syns = NeedWeapon = ColorPlus = Cluster = '-',
+Day:-1, Level:1,
+
+————
+
+效果函数,						文本描述							
+Func,							Decription,							
+'NoOperating',					'#可以偷税',						
+'StealSuccess:2',				'#偷税成功率增加',					
+'NoOperating',					'#对现有体制产生怀疑',				
+'StealExposure:2',				'#偷税暴露率降低',					
+'ExchangeMissionFee:-0.3',		'#外围换防成本-30%,'				
+'ExchangeMissionFee:-0.3',		'#外围换防成本再-30%,'				
+'ExchangeMissionFee:-0.3',		'#外围换防成本再-30%,'				
+'NoOperating',					'#看书可以按理智额外降低压力值',	
+'ActionPoint:1',				'#行动点+1',						
+'MaxPointValuePlus:0.2',		'#角色属性可升级上限提升20%,'		
+'MaxPointValuePlus:0.3',		'#角色属性可升级上限提升30%,'		
+'TVReward:0.4',					'#看电视奖励+40%,'					
+'TVReward:0.6',					'#看电视奖励再+60%,'				
+'TVNoPressure:0',				'#看电视不再增加脑负荷',			
+'GlobalPressureDown:1',			'#全局压力增长降低1',				
+'OutMissionMech:1',				'#外围出战作战单元+1',				
+'DayMecha:1',					'#防守出战作战单元+1',				
+'ActionPoint:1',				'#行动点+1',						
+'BattlePressureType:1',			'#自己不再因战损增加额外脑负荷',	
+'BattlePressureType:2',			'#战损不增加额外脑负荷',			
+'DefendPlusPeople:1',			'#防守出战队员+1',					
+'NoOperating',					'#可能收到好感高的队友的礼物',		
+'GlobalPressureDown:2',			'#全局压力增长降低2',				
+'ActionPoint:1',				'#行动点+1',						
+'GlobalPressureDown:6',			'#全局压力增长降低6',				
+'SelfPresentEffect:0.2',		'#给自己送礼物效果+20%,'			
+'SelfPresentEffect:0.35',		'#给自己送礼物效果再+35%,'			
+'SelfPresentEffect:0.45',		'#给自己送礼物效果再+45%,'			
+
+*/
+
+// 表01数据
+let tbodyArray01 = [
+	
+	//高亮,		项目图片,	项目序号,	项目名称,				|	项目代码,	参考价格,	默认排序,	项目类型,	归属种类,	最大堆叠,	|	叛逆顺从,	理智偏激,	激进保守,	博爱自私,	合计影响	|	出品公司,		文本描述,		],		
+	//Active,	Image,		Number,		Name,					|	Items,		Price,		ResolveID,	Type,		Tag,		MaxPile,	|	Rebellion,	Reason,		Radical,	Altruistic,	Summary,	|	Company,		Description,	],		//01		
+	
+	[1,			60,			'01',		'帝国公务员手册',			60,			12,			854,		'Book',		'Legal',	99,				'-1',		'-1',		'-1',		'+2',		'-1',			'Book_1',		'-',			],		
+	[1,			59,			'02',		'帝国屈辱史',				59,			12,			853,		'Book',		'Legal',	99,				'+0',		'-2',		'+2',		'+1',		'+1',			'Book_1',		'-',			],		
+	[1,			54,			'03',		'神皇在上',					54,			12,			848,		'Book',		'Legal',	99,				'-1',		'+0',		'-1',		'+0',		'-2',			'Book_1',		'-',			],		
+	[1,			64,			'04',		'格言',						64,			12,			858,		'Book',		'Legal',	99,				'-1',		'-1',		'-1',		'+2',		'-1',			'Book_1',		'-',			],		//01		
+	
+	[0,			51,			'05',		'帝国全史(第十六版)',		51,			12,			845,		'Book',		'Legal',	99,				'-1',		'+1',		'-2',		'+0',		'-2',			'Book_1',		'-',			],		
+	[0,			52,			'06',		'近代物理学(第二版)',		52,			12,			846,		'Book',		'Legal',	99,				'+0',		'+2',		'-1',		'+0',		'+1',			'Book_1',		'-',			],		
+	[0,			53,			'07',		'现代艺术集(第二版)',		53,			12,			847,		'Book',		'Legal',	99,				'+0',		'+1',		'-2',		'+0',		'-1',			'Book_1',		'-',			],		
+	[0,			62,			'08',		'帝国民法典(第五版)',		62,			12,			856,		'Book',		'Legal',	99,				'-1',		'+2',		'-1',		'+0',		'+0',			'Book_1',		'-',			],		//01		
+	
+	[1,			55,			'09',		'经济纲要(第二版)',			55,			12,			849,		'Book',		'Legal',	99,				'-1',		'+2',		'-1',		'+0',		'+0',			'Book_1',		'-',			],		
+	[1,			56,			'10',		'机甲指南(第三版)',			56,			12,			850,		'Book',		'Legal',	99,				'+0',		'+1',		'-1',		'+0',		'+0',			'Book_1',		'-',			],		
+	[1,			58,			'11',		'如何立足职场',				58,			12,			852,		'Book',		'Legal',	99,				'+1',		'+1',		'+0',		'-2',		'+0',			'Book_1',		'-',			],		
+	[1,			63,			'12',		'高等代数入门',				63,			12,			857,		'Book',		'Legal',	99,				'+0',		'+1',		'+0',		'+0',		'+1',			'Book_1',		'-',			],		
+	[1,			57,			'13',		'爱的奉献',					57,			12,			851,		'Book',		'Legal',	99,				'-1',		'-1',		'-1',		'+2',		'-1',			'Book_1',		'-',			],		
+	[1,			61,			'14',		'帝国宪法',					61,			12,			855,		'Book',		'Legal',	99,				'-1',		'+2',		'-1',		'+0',		'+0',			'Book_1',		'-',			],		//01		
+	
+	[0,			72,			'15',		'桃金娘',					72,			12,			866,		'Book',		'Danger',	99,				'+1',		'+0',		'+2',		'-2',		'+1',			'Book_3',		'-',			],		
+	[0,			74,			'16',		'王子复仇记',				74,			12,			868,		'Book',		'Danger',	99,				'+1',		'+0',		'+0',		'-1',		'+0',			'Book_3',		'-',			],		
+	[0,			73,			'17',		'现代艺术集初版',			73,			12,			867,		'Book',		'Danger',	99,				'+2',		'+0',		'+2',		'+0',		'+4',			'Book_3',		'-',			],		
+	[0,			77,			'18',		'帝国全史(第十五版)',		77,			12,			871,		'Book',		'Danger',	99,				'+1',		'+2',		'+1',		'+0',		'+4',			'Book_2',		'-',			],		//01		
+	
+	[1,			66,			'19',		'所见所闻',					66,			12,			860,		'Book',		'Danger',	99,				'+1',		'+1',		'+2',		'+1',		'+5',			'Book_3',		'-',			],		
+	[1,			67,			'20',		'娱乐至死',					67,			12,			861,		'Book',		'Danger',	99,				'+1',		'+2',		'+1',		'+0',		'+4',			'Book_3',		'-',			],		
+	[1,			65,			'21',		'最终审判日',				65,			12,			859,		'Book',		'Danger',	99,				'+1',		'-2',		'+2',		'+0',		'+1',			'Book_3',		'-',			],		
+	[1,			71,			'22',		'批判性思维',				71,			12,			865,		'Book',		'Danger',	99,				'+2',		'+2',		'+0',		'+0',		'+4',			'Book_3',		'-',			],		
+	[1,			68,			'23',		'帝国终将灭亡',				68,			12,			862,		'Book',		'Danger',	99,				'+3',		'-2',		'+1',		'+0',		'+2',			'Book_3',		'-',			],		
+	[1,			69,			'24',		'我们无需领袖',				69,			12,			863,		'Book',		'Danger',	99,				'+1',		'-2',		'+3',		'+0',		'+2',			'Book_3',		'-',			],		//01		
+	
+	[0,			70,			'25',		'神爱你们',					70,			12,			864,		'Book',		'Danger',	99,				'+2',		'-2',		'+0',		'+2',		'+2',			'Book_3',		'-',			],		
+	[0,			79,			'26',		'共和国度',					79,			12,			873,		'Book',		'Danger',	99,				'+2',		'+2',		'+2',		'+2',		'+8',			'Book_2',		'-',			],		
+	[0,			80,			'27',		'天赋人权',					80,			12,			874,		'Book',		'Danger',	99,				'+3',		'+2',		'+0',		'-2',		'+3',			'Book_2',		'-',			],		
+	[0,			75,			'28',		'四海皆兄弟',				75,			12,			869,		'Book',		'Danger',	99,				'+2',		'-1',		'+1',		'+1',		'+3',			'Book_3',		'-',			],		
+	[0,			76,			'29',		'近代物理学',				76,			12,			870,		'Book',		'Danger',	99,				'+1',		'+3',		'+1',		'+0',		'+5',			'Book_2',		'-',			],		
+	[0,			78,			'30',		'社会契约论',				78,			12,			872,		'Book',		'Danger',	99,				'+2',		'+2',		'+2',		'+2',		'+8',			'Book_2',		'-',			],		//01		
+	
+	// [1,		88,			'00',		'不看了',					88,			0,			875,		'Book',		'-',		99,				'+0',		'+0',		'+0',		'+0',		'+0',			'-',			'-',			],		//01		
+	
+	[1,			81,			'31',		'娱乐频道',					81,			0,			877,		'Video',	'-',		99,				'+0',		'+0',		'+0',		'+0',		'+0',			'-',			'-',			],		
+	[1,			82,			'32',		'新闻频道',					82,			0,			878,		'Video',	'-',		99,				'-1',		'-1',		'-1',		'+0',		'-3',			'-',			'-',			],		
+	[1,			83,			'33',		'科教频道',					83,			0,			879,		'Video',	'-',		99,				'-2',		'+0',		'-2',		'+2',		'-2',			'-',			'-',			],		
+	[1,			84,			'34',		'养生频道',					84,			0,			880,		'Video',	'-',		99,				'+0',		'-2',		'+0',		'+0',		'-2',			'-',			'-',			],		//01		
+	
+	[0,			86,			'35',		'综艺频道',					86,			0,			882,		'Video',	'-',		99,				'+0',		'-2',		'+0',		'+0',		'-2',			'-',			'-',			],		
+	[0,			85,			'36',		'神秘频道',					85,			0,			881,		'Video',	'-',		99,				'+1',		'+0',		'+1',		'+0',		'+2',			'-',			'-',			],		//01		
+	
+	// [0,		89,			'00',		'不看了',					89,			0,			883,		'Video',	'-',		99,				'+0',		'+0',		'+0',		'+0',		'+0',			'-',			'-'				],		//01		
+	
+];
+
+// 表02数据
+let tbodyArray02 = [
+	
+	//高亮,		序号,		名称,			代码,					需求,			等级,			反面,					描述,			],		
+	//Active,	Number,		Name,			ThoughtEffective,		required		Level,			reverse,				Decription,		],		//02		
+	
+	[1,			'01',		'叛逆 Lv1',		'Rebellion_0',			'0',			'4',			'Obedient',				'-',			],		
+	[1,			'02',		'叛逆 Lv2',		'Rebellion_7',			'7',			'5',			'Obedient',				'-',			],		
+	[1,			'03',		'叛逆 Lv3',		'Rebellion_14',			'14',			'6',			'Obedient',				'-',			],		
+	[1,			'04',		'叛逆 Lv4',		'Rebellion_24',			'24',			'7',			'Obedient',				'-',			],		//02		
+	
+	[0,			'05',		'顺从 Lv1',		'Rebellion_-4',			'-4',			'3',			'Revolt',				'-',			],		
+	[0,			'06',		'顺从 Lv2',		'Rebellion_-8',			'-8',			'2',			'Revolt',				'-',			],		
+	[0,			'07',		'顺从 Lv3',		'Rebellion_-18',		'-18',			'1',			'Revolt',				'-',			],		//02		
+	
+	[1,			'08',		'理智 Lv1',		'Reason_0',				'0',			'4',			'Fanatic',				'-',			],		
+	[1,			'09',		'理智 Lv2',		'Reason_6',				'6',			'5',			'Fanatic',				'-',			],		
+	[1,			'10',		'理智 Lv3',		'Reason_15',			'15',			'6',			'Fanatic',				'-',			],		
+	[1,			'11',		'理智 Lv4',		'Reason_25',			'25',			'7',			'Fanatic',				'-',			],		//02		
+	
+	[0,			'12',		'偏激 Lv1',		'Reason_-5',			'-5',			'3',			'Reason',				'-',			],		
+	[0,			'13',		'偏激 Lv2',		'Reason_-10',			'-10',			'2',			'Reason',				'-',			],		
+	[0,			'14',		'偏激 Lv3',		'Reason_-20',			'-20',			'1',			'Reason',				'-',			],		//02		
+	
+	[1,			'15',		'激进 Lv1',		'Radical_0',			'0',			'4',			'Conservative',			'-',			],		
+	[1,			'16',		'激进 Lv2',		'Radical_8',			'8',			'5',			'Conservative',			'-',			],		
+	[1,			'17',		'激进 Lv3',		'Radical_15',			'15',			'6',			'Conservative',			'-',			],		
+	[1,			'18',		'激进 Lv4',		'Radical_24',			'24',			'7',			'Conservative',			'-',			],		//02		
+	
+	[0,			'19',		'保守 Lv1',		'Radical_-5',			'-5',			'3',			'Radical',				'-',			],		
+	[0,			'20',		'保守 Lv2',		'Radical_-10',			'-10',			'2',			'Radical',				'-',			],		
+	[0,			'21',		'保守 Lv3',		'Radical_-20',			'-20',			'1',			'Radical',				'-',			],		//02		
+	
+	[1,			'22',		'博爱 Lv1',		'Altruistic_0',			'0',			'4',			'Selfish',				'-',			],		
+	[1,			'23',		'博爱 Lv2',		'Altruistic_9',			'9',			'5',			'Selfish',				'-',			],		
+	[1,			'24',		'博爱 Lv3',		'Altruistic_18',		'18',			'6',			'Selfish',				'-',			],		
+	[1,			'25',		'博爱 Lv4',		'Altruistic_27',		'27',			'7',			'Selfish',				'-',			],		//02		
+	
+	[0,			'26',		'自私 Lv1',		'Altruistic_-4',		'-4',			'3',			'Philanthropy',			'-',			],		
+	[0,			'27',		'自私 Lv2',		'Altruistic_-8',		'-8',			'2',			'Philanthropy',			'-',			],		
+	[0,			'28',		'自私 Lv3',		'Altruistic_-18',		'-18',			'1',			'Philanthropy',			'-',			],		//02		
+	
+];
+
+// 项目名称
+let ItemsNameList = {
+	
+	60 : ['帝国公务员手册',			'帝國公務員手冊',			'Empire Civil Servant Handbook',			'帝国公務員ハンドブック',			],
+	59 : ['帝国屈辱史',				'帝國屈辱史',				'History of Empire Humiliation',			'帝国の屈辱の歴史',					],
+	54 : ['神皇在上',				'神皇在上',					'Holy Imperial Power',						'神なる皇帝様',						],
+	64 : ['格言',					'格言',						'Motto',									'格言',								],
+	
+	51 : ['帝国全史(第十六版)',		'帝國全史(第16版)',			'Empire History(16th Edition)',				'帝国全史(第16版)',					],
+	52 : ['近代物理学(第二版)',		'近代物理學(第2版)',		'Modern Physics(2nd Edition)',				'近代物理学(第2版)',				],
+	53 : ['现代艺术集(第二版)',		'現代藝術集(第2版)',		'Modern Art Collection(2nd Edition)',		'現代美術コレクション(第2版)',		],
+	62 : ['帝国民法典(第五版)',		'帝國民法典(第5版)',		'Empire Civil Code(5th Edition)',			'帝国民法典(第5版)',				],
+	
+	55 : ['经济纲要(第二版)',		'經濟綱要(第2版)',			'Economic Essentials(2nd Edition)',			'経済大要(第2版)',					],
+	56 : ['机甲指南(第三版)',		'機甲指南(第3版)',			'Mecha Guidebook(3rd Edition)',				'機体ガイド(第3版)',				],
+	58 : ['如何立足职场',			'如何在職場立足',			'How to Succeed in the Workplace',			'職場で足場を築く方法',				],
+	63 : ['高等代数入门',			'高等代數入門',				'Introduction to Advanced Algebra',			'上級代数入門',						],
+	57 : ['爱的奉献',				'愛的奉獻',					'Devotion of Love',							'愛の献身',							],
+	61 : ['帝国宪法',				'帝國憲法',					'Empire Constitution',						'帝国憲法',							],
+	
+	72 : ['桃金娘',					'桃金娘',					'Momoko',									'テンニンカ',						],
+	74 : ['王子复仇记',				'王子復仇記',				'The Prince\'s Revenge',					'王子の復讐',						],
+	73 : ['现代艺术集初版',			'現代藝術集(初版)',			'Modern Art Collection(First Edition)',		'現代美術コレクション(初版)',		],
+	77 : ['帝国全史(第十五版)',		'帝國全史(第15版)',			'Empire History(15th Edition)',				'帝国全史(第15版)',					],
+	
+	66 : ['所见所闻',				'所見所聞',					'What One Sees and Hears',					'見聞きするもの',					],
+	67 : ['娱乐至死',				'娛樂至死',					'Amusing Ourselves to Death',				'死ぬまで楽しむ',					],
+	65 : ['最终审判日',				'最終審判日',				'Judgment Day',								'最後の審判の日',					],
+	71 : ['批判性思维',				'批判性思維',				'Critical Thinking',						'批判的思考',						],
+	68 : ['帝国终将灭亡',			'帝國終將滅亡',				'The Empire Will Eventually Fall',			'帝国はいずれ滅び去る',				],
+	69 : ['我们无需领袖',			'我們無需領袖',				'We Don\'t Need Leaders',					'我々にリーダーはいらない',			],
+	
+	70 : ['神爱你们',				'神愛你們',					'God Loves You',							'神はあなたを愛しておられます',		],
+	79 : ['共和国度',				'共和國度',					'Republic',									'共和国',							],
+	80 : ['天赋人权',				'天賦人權',					'Natural Rights',							'天賦人権',							],
+	75 : ['四海皆兄弟',				'四海皆兄弟',				'Brothers All Over the World',				'四海兄弟',							],
+	76 : ['近代物理学',				'近代物理學',				'Modern Physics',							'近代物理学',						],
+	78 : ['社会契约论',				'社會契約論',				'The Social Contract',						'社会契約論',						],
+	
+	88 : ['不看了',					'不看了',					'Stop watching',							'もう見ない',						],
+	
+	81 : ['娱乐频道',				'娛樂頻道',					'Entertainment Channel',					'エンターテイメントチャンネル',		],
+	82 : ['新闻频道',				'新聞頻道',					'News Channel',								'ニュースチャンネル',				],
+	83 : ['科教频道',				'科教頻道',					'Science and Education Channel',			'科学と教育チャンネル',				],
+	84 : ['养生频道',				'養生頻道',					'Health and Wellness Channel',				'ヘルスチャンネル',					],
+	
+	86 : ['综艺频道',				'綜藝頻道',					'Variety Show Channel',						'バラエティチャンネル',				],
+	85 : ['神秘频道',				'神秘頻道',					'Mystery Channel',							'ミステリーチャンネル',				],
+	
+	89 : ['不看了',					'不看了',					'Stop watching',							'もう見ない',						],
+	
+	Book_1 :	['帝国出版总局',		'帝國出版總局',			'Imperial Publishing Bureau',		'帝国出版会社',		],
+	Book_2 :	['共和国出版社',		'共和國出版社',			'Republic Publishing House',		'共和国出版社',		],
+	Book_3 :	['自由军出版社',		'自由軍出版社',			'Free Army Press',					'自由軍出版社',		],
+	
+	Revolt : 			['叛逆',		'叛逆',			'Revolt',			'反逆',		],
+	Obedient :			['顺从',		'順從',			'Obedient',			'従順',		],
+	
+	Reason : 			['理智',		'理智',			'Reason',			'理性',		],
+	Fanatic : 			['偏激',		'偏激',			'Fanatic',			'偏執',		],
+	
+	Radical : 			['激进',		'激進',			'Radical',			'過激',		],
+	Conservative : 		['保守',		'保守',			'Conservative',		'保守',		],
+	
+	Philanthropy : 		['博爱',		'博愛',			'Philanthropy',		'博愛',		],
+	Selfish :			['自私',		'自私',			'Selfish',			'利己',		],
+	
+	Book :		['书籍',	'書籍',		'Books',		'書籍',		],
+	Video :		['电视',	'電視',		'TV Show',		'番組',		],
+	
+	Legal :		['合规',	'合規',		'Compliance',	'正当',		],
+	Danger :	['违禁',	'違禁',		'Contraband',	'禁制',		],
+	
+	'Rebellion_0' :		['叛逆 Lv1',		'叛逆 Lv1',		'Revolt Lv1',			'反逆 Lv1',		],
+	'Rebellion_7' :		['叛逆 Lv2',		'叛逆 Lv2',		'Revolt Lv2',			'反逆 Lv2',		],
+	'Rebellion_14' :	['叛逆 Lv3',		'叛逆 Lv3',		'Revolt Lv3',			'反逆 Lv3',		],
+	'Rebellion_24' :	['叛逆 Lv4',		'叛逆 Lv4',		'Revolt Lv4',			'反逆 Lv4',		],
+	'Rebellion_-4' :	['顺从 Lv1',		'順從 Lv1',		'Obedient Lv1',			'従順 Lv1',		],
+	'Rebellion_-8' :	['顺从 Lv2',		'順從 Lv2',		'Obedient Lv2',			'従順 Lv2',		],
+	'Rebellion_-18' :	['顺从 Lv3',		'順從 Lv3',		'Obedient Lv3',			'従順 Lv3',		],
+	
+	'Reason_0' :		['理智 Lv1',		'理智 Lv1',		'Reason Lv1',			'理性 Lv1',		],
+	'Reason_6' :		['理智 Lv2',		'理智 Lv2',		'Reason Lv2',			'理性 Lv2',		],
+	'Reason_15' :		['理智 Lv3',		'理智 Lv3',		'Reason Lv3',			'理性 Lv3',		],
+	'Reason_25' :		['理智 Lv4',		'理智 Lv4',		'Reason Lv4',			'理性 Lv4',		],
+	'Reason_-5' :		['偏激 Lv1',		'偏激 Lv1',		'Fanatic Lv1',			'偏執 Lv1',		],
+	'Reason_-10' :		['偏激 Lv2',		'偏激 Lv2',		'Fanatic Lv2',			'偏執 Lv2',		],
+	'Reason_-20' :		['偏激 Lv3',		'偏激 Lv3',		'Fanatic Lv3',			'偏執 Lv3',		],
+	
+	'Radical_0' :		['激进 Lv1',		'激進 Lv1',		'Radical Lv1',			'過激 Lv1',		],
+	'Radical_8' :		['激进 Lv2',		'激進 Lv2',		'Radical Lv2',			'過激 Lv2',		],
+	'Radical_15' :		['激进 Lv3',		'激進 Lv3',		'Radical Lv3',			'過激 Lv3',		],
+	'Radical_24' :		['激进 Lv4',		'激進 Lv4',		'Radical Lv4',			'過激 Lv4',		],
+	'Radical_-5' :		['保守 Lv1',		'保守 Lv1',		'Conservative Lv1',		'保守 Lv1',		],
+	'Radical_-10' :		['保守 Lv2',		'保守 Lv2',		'Conservative Lv2',		'保守 Lv2',		],
+	'Radical_-20' :		['保守 Lv3',		'保守 Lv3',		'Conservative Lv3',		'保守 Lv3',		],
+	
+	'Altruistic_0' :	['博爱 Lv1',		'博愛 Lv1',		'Philanthropy Lv1',		'博愛 Lv1',		],
+	'Altruistic_9' :	['博爱 Lv2',		'博愛 Lv2',		'Philanthropy Lv2',		'博愛 Lv2',		],
+	'Altruistic_18' :	['博爱 Lv3',		'博愛 Lv3',		'Philanthropy Lv3',		'博愛 Lv3',		],
+	'Altruistic_27' :	['博爱 Lv4',		'博愛 Lv4',		'Philanthropy Lv4',		'博愛 Lv4',		],
+	'Altruistic_-4' :	['自私 Lv1',		'自私 Lv1',		'Selfish Lv1',			'利己 Lv1',		],
+	'Altruistic_-8' :	['自私 Lv2',		'自私 Lv2',		'Selfish Lv2',			'利己 Lv2',		],
+	'Altruistic_-18' :	['自私 Lv3',		'自私 Lv3',		'Selfish Lv3',			'利己 Lv3',		],
+	
+};
+
+// 文本描述
+let DescriptionList = {
+	
+	'Rebellion_0' :		[/*'叛逆 Lv1',	*/'可以偷税(在战后结算页面进行操作)',		'可以進行偷稅',							'Tax evasion is possible',														'脱税が可能になる',														],		
+	'Rebellion_7' :		[/*'叛逆 Lv2',	*/'偷税成功率增加(当前的成功率翻倍)',		'偷稅成功率增加',						'Success rate of tax evasion increased',										'脱税成功率上昇',														],		
+	'Rebellion_14' :	[/*'叛逆 Lv3',	*/'对现有体制产生怀疑(可走叛逃结局)',		'對現有體制產生懷疑',					'Suspicions about the existing system arise',									'既存の制度に対する懐疑を抱き始める',									],		
+	'Rebellion_24' :	[/*'叛逆 Lv4',	*/'偷税暴露率降低(当前的失败率减半)',		'偷稅暴露率降低',						'Exposure rate of tax evasion reduced',											'脱税発覚率低下',														],
+	
+	'Rebellion_-4' :	[/*'顺从 Lv1',	*/'外围换防的成本 -30%(费用 -30%)',			'週邊換防成本-30%',						'Cost for changing perimeter defense mission -30%',								'外周防衛任務変更コスト-30%',											],		
+	'Rebellion_-8' :	[/*'顺从 Lv2',	*/'外围换防的成本 -30%(费用 -60%)',			'週邊換防成本再-30%',					'Cost for changing perimeter defense mission -30% additionally',				'外周防衛任務変更コスト更に-30%',										],		
+	'Rebellion_-18' :	[/*'顺从 Lv3',	*/'外围换防的成本 -30%(费用 -90%)',			'週邊換防成本再-30%',					'Cost for changing perimeter defense mission -30% additionally',				'外周防衛任務変更コスト更に-30%',										],
+	
+	'Reason_0' :		[/*'理智 Lv1',	*/'看书按当前理智值额外降脑负荷',			'閱讀書籍可額外降低腦負荷',				'Reading books can further reduce brainload',									'本を読むと、理性に基づき、脳への負荷を追加軽減できる',					],		
+	'Reason_6' :		[/*'理智 Lv2',	*/'在整备阶段的休息室行动点 +1',			'行動點數+1',							'Action Point +1',																'アクションポイント+1',													],		
+	'Reason_15' :		[/*'理智 Lv3',	*/'角色各项能力属性上限 + 20%',				'角色屬性可升級上限提升20%',			'Maximum level cap for character stats increased by 20%',						'キャラクターステータスのレベルアップ上限が20%上昇',					],		
+	'Reason_25' :		[/*'理智 Lv4',	*/'角色各项能力属性上限再 + 30%',			'角色屬性可升級上限提升30%',			'Maximum level cap for character stats increased by 30%',						'キャラクターステータスのレベルアップ上限が30%上昇',					],
+	
+	'Reason_-5' :		[/*'偏激 Lv1',	*/'看电视奖励 +40%',						'看電視獎勵+40%',						'Rewards for watching TV +40%',													'テレビ視聴報酬+40%',													],		
+	'Reason_-10' :		[/*'偏激 Lv2',	*/'看电视奖励 +60%(100%)',					'看電視獎勵再+60%',						'Rewards for watching TV +60%',													'テレビ視聴報酬更に+60%',												],		
+	'Reason_-20' :		[/*'偏激 Lv3',	*/'看电视不再会再增加任何脑负荷',			'看電視不再增加腦負荷',					'Watching TV no longer increases brainload',									'テレビ視聴で脳への負荷が増えなくなる',									],
+	
+	'Radical_0' :		[/*'激进 Lv1',	*/'全局脑压值增长额外 -1',					'全局壓力增長降低1',					'Overall Pressure Increment reduced by 1',										'グローバルストレス増加量を1減らす',									],		
+	'Radical_8' :		[/*'激进 Lv2',	*/'外围出战的作战单元 +1',					'週邊出戰作戰單元+1',					'Perimeter Combat Support Unit +1',												'外周戦闘ユニット+1',													],		
+	'Radical_15' :		[/*'激进 Lv3',	*/'防守出战的作战单元 +1',					'防守出戰作戰單元+1',					'Defense Combat Support Unit +1',												'防衛戦戦闘ユニット+1',													],		
+	'Radical_24' :		[/*'激进 Lv4',	*/'在整备阶段的行动点 +1',					'行動點數+1',							'Action Point +1',																'アクションポイント+1',													],
+	
+	'Radical_-5' :		[/*'保守 Lv1',	*/'自己不再因战斗受伤增加额外脑负荷',		'自己在戰鬥中受傷不增加額外腦負荷',		'No additional brainload is incurred when yourself get injured in battle',		'自身だけ、戦闘中の負傷により、余分な脳への負荷がかからなくなる',		],		
+	'Radical_-10' :		[/*'保守 Lv2',	*/'全队战斗中受伤不增加额外脑负荷',			'戰鬥中受傷不增加額外腦負荷',			'No longer increases additional brainload when injured during battle',			'戦闘中の負傷により、余分な脳への負荷がかからなくなる',					],		
+	'Radical_-20' :		[/*'保守 Lv3',	*/'防守出战队员+1, 但你必须出战',			'防守出戰隊員+1, 但是你必須出戰',		'Defense battle member +1, but you have to fight in defence',					'防衛戦出撃隊員数+1、でもあなたは戦わなければなりません',				],
+	
+	'Altruistic_0' :	[/*'博爱 Lv1',	*/'忠诚度❤高的队友会送礼物',				'可能收到好感高的隊友的禮物',			'May receive gifts from teammates with high Affinity',							'確率で好感度の高い隊員からプレゼントを贈られるようになる',				],		
+	'Altruistic_9' :	[/*'博爱 Lv2',	*/'全局脑压值增长额外 -2',					'全局壓力增長降低2',					'Overall Pressure Increment reduced by 2',										'グローバルストレス増加量を2減らす',									],		
+	'Altruistic_18' :	[/*'博爱 Lv3',	*/'整备阶段的行动点再 +1',					'行動點數+1',							'Action Point +1',																'アクションポイント+1',													],		
+	'Altruistic_27' :	[/*'博爱 Lv4',	*/'全局脑压值增长再 -6',					'全局壓力增長降低6',					'Overall Pressure Increment reduced by 6',										'グローバルストレス増加量を6減らす',									],
+	
+	'Altruistic_-4' :	[/*'自私 Lv1',	*/'给自己送礼物效果 +20%',					'給予自己禮物效果+20%',					'Gift effect to oneself +20%',													'自分へのプレゼントの効果+20%',											],		
+	'Altruistic_-8' :	[/*'自私 Lv2',	*/'给自己送礼物效果 +35%(55%)',				'給予自己禮物效果再+35%',				'Gift effect to oneself +35%',													'自分へのプレゼントの効果更に+35%',										],		
+	'Altruistic_-18' :	[/*'自私 Lv3',	*/'给自己送礼物效果 +45%(+55%=100%)',		'給予自己禮物效果再+45%',				'Gift effect to oneself +45%',													'自分へのプレゼントの効果更に+45%',										],
+	
+	60 : [/*'帝国公务员手册',		'ChangePressureByReason',						*/'帝国公务员手册, 里面宣扬着些什么无私的奉献, 以及对帝国的爱这些内容',																'帝國公務員手冊, 宣揚無私的奉獻, 對帝國的愛',																				'The Empire Civil Servant Handbook,  advocating selfless dedication and deep love for the empire.',																																					'帝国への無私の献身と愛を説く、帝国公務員のためのハンドブック',																										],		
+	59 : [/*'帝国屈辱史',			'ChangePressureByReason',						*/'一本描写近代史的书籍, 用很激烈的言辞描写了帝国如何在近年饱受欺压',																'一本描寫近代史的書籍, 用很激烈的言辭描寫了帝國如何在近年飽受欺壓',															'A book that depicts modern history and passionately describes how the empire has been subjected to oppression in recent years.',																													'近代の歴史を記述した本、帝国が近年いかに虐げられてきたかが非常に強い言葉で書かれている',																			],		
+	54 : [/*'神皇在上',				'ChangePressureByReason',						*/'现任皇帝的个人传记, 描写了他如何登上皇位励精图治, 书的文笔很好',																	'現任皇帝的個人傳記, 描寫了他如何登上皇位勵精圖治, 書的文筆很好',															'Personal biography of the current emperor,  depicting his ascent to the throne and diligent governance. Overall,  it is a well-written book.',																										'現皇帝の個人的な伝記で、どのように皇位に就いて国を治めたかを記述したもの, 本の文章はとても良い',																	],		
+	64 : [/*'格言',					'ChangePressureByReason',						*/'一本古代诗集, 内容大抵是做人要有孝心, 还要对皇帝有忠心, 等等',																	'一本古代詩集, 內容大抵是要有孝心, 要對皇帝忠心, 等等',																		'A collection of ancient poetry,  with themes revolving around filial piety,  loyalty to the emperor,  and so on.',																																	'主に孝行、皇帝への忠誠などを勧める古代の詩集',																														],		
+	
+	51 : [/*'帝国全史(第十六版)',	'ChangePressureByReason',						*/'描写帝国过去辉煌历史的书籍, 不过到底有多少是真的, 就不知道了',																	'描寫帝國輝煌歷史的書籍, 不過裏面有多少是真的就不知道了',																	'Books depicting the glorious history of the empire,  but the authenticity of the content is uncertain.',																																			'帝国の輝かしい歴史を描いた本だが、どれだけ真実なのか分からない',																									],		
+	52 : [/*'近代物理学(第二版)',	'ChangePressureByReason',						*/'描写近代物理学的书籍, 但夹杂了很多私活, 以你的学识不好判断出来',																	'描寫近代物理學的書籍, 但是被夾雜了很多私活, 以你的學識不好判斷出來',														'Books describing modern physics,  but mixed with personal matters,  making it difficult for you to judge with your knowledge.',																													'近代の物理学について書かれた本だが、個人的な見解が多く含まれているため、自分の知識だけでは判断できない',															],		
+	53 : [/*'现代艺术集(第二版)',	'ChangePressureByReason',						*/'艺术画集, 不过只有传统美术, 新潮抽象艺术被认为是颓废, 已经被删除',																'藝術畫集, 不過只有傳統美術, 新潮抽象藝術被認為是“頹廢的”已經被禁止了',														'Art picture collection,  but limited to traditional fine art,  new-wave abstract art considered "decadent" has been prohibited.',																													'芸術画のコレクションだが、伝統的な芸術のみで、新しい潮流である抽象芸術は「退廃的」とみなされ、禁止されている',														],		
+	62 : [/*'帝国民法典(第五版)',	'ChangePressureByReason',						*/'帝国民法典大全, 里面的内容姑且不论是否正确, 但法治精神是有的(大概)',																'帝國民法典大全, 裏面的內容姑且不論是否正確, 但是法治精神是有的（大概）',													'The Complete Empire Civil Code,  regardless of whether the contents are correct,  it embodies the spirit of the rule of law (probably).',																											'帝国民法典全集、それの内容が正しいかどうかにかかわらず、法治の精神がある（おそらく）',																				],		
+	
+	55 : [/*'经济纲要(第二版)',		'ChangePressureByReason',						*/'一本讲述帝国经济改革经验的书, 尽管改革不成功, 但不得不说其中也有很多有价值的内容',												'一本講述帝國經濟改革經驗的書, 不得不說其中也有很多有價值的內容',															'A book that discusses the experiences of economic reform in the empire,  and it must be said that there is also a lot of valuable content in it.',																									'帝国の経済改革の経験についての本だが、他にも貴重な内容が多いと言わざるを得ない',																					],		
+	56 : [/*'机甲指南(第三版)',		'ChangePressureByReason',						*/'机甲操作的书籍, 附带了机甲的使用原理, 当然了, 也有对帝国机甲开发部长篇累牍的赞美',												'機甲操作的書籍, 附帶了機甲使用原理, 當然了, 也有對帝國機甲開發部長篇累牘的讚美',											'A book on the operation of mechas,  including the principles of mecha usage,  and of course,  it also includes lengthy praises for the Empire\'s mecha development department.',																	'機体操作に関する本と、それに付随する機体の使用原理、もちろん帝国機体開発部に対する長い賛辞も',																		],		
+	58 : [/*'如何立足职场',			'ChangePressureByReason',						*/'一本成功学及厚黑学书籍, 教导人们如何在职场击败他人',																				'一本成功學及厚黑學書籍, 教導人們如何在職場擊敗他人',																		'A book on success and the art of manipulation,  teaching people how to defeat others in the workplace.',																																			'職場で他者を打ち負かす方法を教える、腹黒学に関する本',																												],		
+	63 : [/*'高等代数入门',			'ChangePressureByReason',						*/'一本数学书籍, 没有任何数学以外的内容, 非常干净的书籍',																			'一本數學書籍, 沒有任何數學以外的內容, 非常乾淨的書籍',																		'A mathematics book with no content other than mathematics,  a very clean book.',																																									'数学以外の何もない数学の本、とてもきれいな本',																														],		
+	57 : [/*'爱的奉献',				'ChangePressureByReason',						*/'描写帝国基层官员如何在在贫困重病的情况下坚守岗位的书籍',																			'一本描寫帝國基層官員, 是如何在在貧困重病的情況下堅守崗位的書籍',															'A book that depicts how grassroots officials in the empire remain steadfast in their positions despite poverty and illness.',																														'帝国の下級役人たちが、貧困や病にもかかわらず、どのようにそのポストにしがみついていたかを描いた本',																	],		
+	61 : [/*'帝国宪法',				'ChangePressureByReason',						*/'帝国宪法, 不过如你所知, 宪法是不能作为判例的, 看看就好了',																		'帝國憲法, 不過如你所知, 憲法這種東西是不能作為判例的, 看看就好',															'The Empire Constitution,  but as you know,  the constitution cannot be used as a precedent,  just take a look.',																																	'帝国憲法だが、ご存知のように、憲法そのものは判例として使えないので、価値はない',																					],		
+	
+	72 : [/*'桃金娘',				'ChangePressureByReason',						*/'一本诗集, 大多取自古代诗人的作品, 主旨几乎都是宣扬家庭责任而轻视社会责任, 这与帝国当前主流思想背道而驰【警告: 这是禁书】',		'一本詩集, 大多取自古代的詩人, 大多主旨為宣揚家庭責任而輕視社會責任, 與帝國主流思想背道而馳【警告: 禁書】',					'A collection of poems mostly by ancient poets,  with a focus on promoting family responsibilities while disregarding social responsibilities,  going against the mainstream ideology of the empire. [Warning: Banned Book]',						'主に古代の詩人から引用された詩集で、そのほとんどは、帝国の一般的な考え方に反して、社会的責任を軽視し、家族の責任をテーマとしている【警告: 禁書】',					],		
+	74 : [/*'王子复仇记',			'ChangePressureByReason',						*/'一本古典小说, 因为其中的主角被认为没有奉献精神, 因此被列为禁书【警告: 这是禁书】',												'一本古典小說, 因為其中的主角“不夠奉獻精神”因此被列為了禁書【警告: 禁書】',													'A classical novel that has been banned because its protagonist "lacks the spirit of dedication". [Warning: Banned Book]',																															'主人公が「十分に献身していない」ため禁書に分類された古典小説【警告: 禁書】',																						],		
+	73 : [/*'现代艺术集初版',		'ChangePressureByReason',						*/'艺术画集, 充满了大量新潮抽象的艺术, 很多东西你感觉是完全看不懂【警告: 这是禁书】',												'藝術畫集, 充滿了大量新潮抽象藝術, 很多東西你感覺完全看不懂【警告: 禁書】',													'An art collection filled with a lot of new-wave abstract art,  many of which you feel completely unable to comprehend. [Warning: Banned Book]',																									'芸術集、トレンディな抽象芸術がいっぱい、完全に理解不能なものがたくさんある【警告: 禁書】',																			],		
+	77 : [/*'帝国全史(第十五版)',	'ChangePressureByReason',						*/'历史书籍, 描写帝国过去的辉煌, 但里面有疑似先代王篡位的内容, 因此被列为禁书, 说真的谁当皇帝和你有关系吗【警告: 这是禁书】',		'描寫帝國輝煌歷史的書籍, 不過裏面有疑似先代王篡位的內容因此被列為了禁書, 說真的, 誰當皇帝和你有關系嗎【警告: 禁書】',		'A book describing the glorious history of the empire,  but it contains content suggesting the usurpation of the previous king,  hence being banned. Honestly,  who becomes the emperor has nothing to do with you. [Warning: Banned Book]',		'帝国の栄光の歴史を記した書物だが、前王の簒奪に関するらしい内容があるため、禁書に分類されている, まったく、誰が皇帝だろうと君には関係ないだろう【警告: 禁書】',		],		
+	
+	66 : [/*'所见所闻',				'ChangePressureByReason',						*/'这是记者的传记, 讲述了记者的所见闻, 关于帝国偏远地区的艰苦生活【警告: 这是禁书】',												'一位記者的傳記, 講述了記者所見聞的帝國偏遠地區的艱苦生活【警告: 禁書】',													'A biography of a journalist,  depicting the hardships of life in the remote regions of the empire as witnessed by the journalist. [Warning: Banned Book]',																							'ある記者の伝記、記者が見聞きした帝国の僻地での過酷な生活を描いたもの【警告: 禁書】',																				],		
+	67 : [/*'娱乐至死',				'ChangePressureByReason',						*/'描述享乐主义如何毁掉一个人, 娱乐至死主义如何毁掉一个时代的书籍【警告: 这是禁书】',												'一本描述了享樂主義是如何毀掉一個人, 娛樂至死主義是如何毀掉一個時代的書籍【警告: 禁書】',									'A book that describes how hedonism destroys an individual and how entertainment-driven culture leads to the downfall of an era. [Warning: Banned Book]',																							'快楽主義がいかに人を滅ぼし、娯楽主義がいかに一つの時代を滅ぼすかを描いた本【警告: 禁書】',																			],		
+	65 : [/*'最终审判日',			'ChangePressureByReason',						*/'宣扬末世到来的书, 危言耸听, 但其中描写的很多现象都是真实存在的【警告: 这是禁书】',												'一本宣揚末世到來的書, 非常危言聳聽, 雖然其中描寫的很多現象都是真實存在的【警告: 禁書】',									'A book that propagates the arrival of the end times,  with exaggerated warnings,  even though many of the described phenomena are based on real occurrences. [Warning: Banned Book]',																'世界の終りの到来を宣伝する本、そこに描かれている現象の多くが現実のものであるにもかかわらず、非常に扇動的【警告: 禁書】',											],		
+	71 : [/*'批判性思维',			'ChangePressureByReason',						*/'一本关于哲学的书籍, 宣扬了批判主义的精神, 鼓励人们去怀疑去思考【警告: 这是禁书】',												'一本哲學書籍, 宣揚批判精神, 鼓勵人們去懷疑去思考【警告: 禁書】',															'A philosophical book that promotes the spirit of criticism and encourages people to doubt and think. [Warning: Banned Book]',																														'批判の精神を宣伝し、人々に疑問や考えを促す哲学書【警告: 禁書】',																									],		
+	68 : [/*'帝国终将灭亡',			'ChangePressureByReason',						*/'一本宣传叛军极端思想的书籍, 但是内容相当露骨, 文字都透露着危险【警告: 这是禁书】',												'一本宣傳叛軍極端思想的書籍, 但是內容相當露骨, 文字都透露著危險【警告: 禁書】',												'A book promoting extremist ideas of rebellion,  but the content is quite explicit,  and the words convey a sense of danger. [Warning: Banned Book]',																								'反乱軍の過激派イデオロギーを宣伝する本、内容がかなり露骨で、文章はとても危険【警告: 禁書】',																		],		
+	69 : [/*'我们无需领袖',			'ChangePressureByReason',						*/'一本宣扬叛军无政府主义的书籍, 崇尚混乱的思想, 让你觉得很不舒服【警告: 这是禁书】',												'一本宣揚叛軍無政府主義的書籍, 崇尚混亂的思想讓你覺得很不舒服【警告: 禁書】',												'A book promoting anarchist ideas of rebellion,  advocating chaos,  which makes you feel very uncomfortable. [Warning: Banned Book]',																												'反乱軍のアナキズム説く本、混沌を崇める思想はあなたを不快にさせる【警告: 禁書】',																					],		
+	
+	70 : [/*'神爱你们',				'ChangePressureByReason',						*/'一本新型宗教宣传手册, 宣扬奉献精神, 同时也有很多反智观点, 以及对帝国的批判【警告: 这是禁书】',									'一本新型宗教宣傳手冊, 宣揚奉獻精神, 同時也有很多反智觀點, 以及對帝國的批判【警告: 禁書】',									'A handbook promoting a new religious movement,  advocating the spirit of devotion,  but also containing many anti-intellectual views and criticisms of the empire. [Warning: Banned Book]',														'献身を宣伝る新興宗教のプロパガンダパンフレット、帝国に対する反知的な見解や批判もたくさんある【警告: 禁書】',														],		
+	79 : [/*'共和国度',				'ChangePressureByReason',						*/'十年前被剿灭的共和军遗留的印刷物, 主张建立起共和国, 宣传的内容都非常危险【警告: 这是禁书】',										'十年前被剿滅的共和軍遺留的印刷物, 主張建立共和國, 宣傳的內容非常危險【警告: 禁書】',										'Printed materials left behind by the Republic Army that was eradicated ten years ago,  advocating the establishment of a republic with highly dangerous propaganda. [Warning: Banned Book]',														'10年前に殲滅された共和軍が残した共和国の樹立を主張する印刷物、そのプロパガンダの内容は非常に危険である【警告: 禁書】',												],		
+	80 : [/*'天赋人权',				'ChangePressureByReason',						*/'十年前被剿灭的共和军遗留的印刷物, 主张人权与生俱来, 而不是由皇帝赋予的【警告: 这是禁书】',										'十年前被剿滅的共和軍遺留的印刷物, 主張人權與生俱來, 而不由皇帝賦予【警告: 禁書】',											'Printed materials left behind by the Republic Army that was eradicated ten years ago,  advocating inherent human rights that are not granted by the emperor. [Warning: Banned Book]',																'10年前に殲滅された共和軍が残した印刷物、人権は皇帝から与えられたものではなく、生来のものでありと主張している【警告: 禁書】',										],		
+	75 : [/*'四海皆兄弟',			'ChangePressureByReason',						*/'这是古典小说, 因为其中的主角在进行所谓的"造反"活动, 因此也被列为了禁书【警告: 这是禁书】',										'一本古典小說, 因為其中的主角在進行“造反”因此被列為了禁書【警告: 禁書】',													'A classical novel that has been banned because its protagonist engages in "rebellion". [Warning: Banned Book]',																																	'主人公が「反乱行為」を行ったため、禁書に分類される古典小説【警告: 禁書】',																							],		
+	76 : [/*'近代物理学',			'ChangePressureByReason',						*/'这是描写近代物理学的书籍, 但其中的内容被专家认为"传达给民众不必要的知识"【警告: 这是禁书】',										'一本描寫近代物理學的書籍, 但其中的內容被專家認為“傳達給民眾不必要的知識”【警告: 禁書】',									'A book describing modern physics,  but its content is considered by experts as "conveying unnecessary knowledge to the public". [Warning: Banned Book]',																							'近代物理学に関する本だが、専門家はその内容を「公衆には不要な知識」と考えている【警告: 禁書】',																		],		
+	78 : [/*'社会契约论',			'ChangePressureByReason',						*/'一本主张国家属于人民, 要求建立共和国的禁书, 尽管被帝国严厉打击但不断的再版【警告: 这是禁书】',									'主張國家屬於人民, 主張建立共和國, 是帝國嚴厲打擊的禁書, 儘管不斷被再版【警告: 禁書】',										'A banned book advocating that the country belongs to the people and promoting the establishment of a republic,  which is fiercely suppressed by the empire despite constant reprints. [Warning: Banned Book]',										'国が人民のものであると主張し、共和国の樹立を提唱する、帝国が厳しく取り締まる禁書である、何度も再版されているけど【警告: 禁書】',									],		
+	
+	88 : [/*'不看了',				'',												*/'还是不看书了',																													'還是不看書了',																												'Not gonna read now',																																																								'本を読むのをやめる',																																				],
+	
+	81 : [/*'娱乐频道',				'AddMoneyTV: 75|ChangePressureTVDialog:50',		*/'都是一些合家欢的相声, 真的是非常无聊(脑压值+75), 但是看这个节目能获得　75 补助',													'都是一些闔家歡的相聲, 真的巨無聊, 但是看這個節目能獲得補助: <Description:1>',												'They are all family-friendly cross talk performances,  really boring. But watching this show can get a subsidy of <Description:1>.',																												'一家団欒をテーマとした漫才ばかりで、本当につまらない, しかし、この番組を視聴すると手当が出る: <Description:1>',													],		
+	82 : [/*'新闻频道',				'AddMoneyTV:100|ChangePressureTVDialog:10',		*/'你从这能了解到的只有他们想让你了解的(脑压值+10), 但是看这个节目能获得 100 补助',													'你從這能瞭解到的只有他想讓你瞭解的, 但是看這個節目能獲得補助: <Description:1>',											'You can only learn what they want you to learn from this. But watching this show can get a subsidy of <Description:1>.',																															'ここから学べるのは、相手が知ってほしいと思っていることだけ, しかし、この番組を視聴すると手当が出る: <Description:1>',												],		
+	83 : [/*'科教频道',				'AddMoneyTV:100|ChangePressureTVDialog:10',		*/'看这个节目只能让你更加热爱皇帝和帝国(脑压值+10), 但是看这个节目能获得 100 补助',													'看這個節目只能讓你更加愛皇帝和帝國, 但是看這個節目能獲得補助: <Description:1>',											'Watching that show can only make you love the emperor and the empire even more. But watching this show can get a subsidy of <Description:1>.',																										'この番組を観ても、皇帝と帝国をもっと愛するようになるだけだ, しかし、この番組を視聴すると手当が出る: <Description:1>',												],		
+	84 : [/*'养生频道',				'AddMoneyTV:100|ChangePressureTVDialog:10',		*/'毫无疑问, 这节目里都是一些骗人的东西(脑压值+10), 但是看这个节目能获得 100 补助',													'都是一些騙人的東西, 但是看這個節目能獲得補助: <Description:1>',															'They are all deceiving things. But watching this show can get a subsidy of <Description:1>.',																																						'全部詐欺みたいなものだ, しかし、この番組を視聴すると手当が出る: <Description:1>',																					],		
+	
+	86 : [/*'综艺频道',				'ChangePressureDialog:-60',						*/'娱乐节目, 不需要带着脑子看, 真的是很解压(脑压值 -60)',																			'完全的娛樂節目, 不需要帶著腦子看, 但是真的很解壓',																			'It\'s purely an entertainment show,  no need to think while watching,  but it\'s really relaxing.',																																				'完全なエンターテイメント番組で、頭を使って観る必要はないが、ストレス解消にはもってこいだ',																			],		
+	85 : [/*'神秘频道',				'',												*/'显然这个频道被人入侵了, 播出了一些不可能让播出的东西',																			'顯然這個頻道被人入侵了, 播出一些不可能讓播出的東西, ',																		'Obviously,  this channel has been hacked and broadcasting things that should not be broadcast.',																																					'どうやらこのチャンネルは何者かにハッキングされ、審査に通るはずはない内容を放送しているようだ, ',																	],		
+	
+	89 : [/*'不看了',				'',												*/'还是不看TV了',																													'還是不看電視了',																											'Not gonna watch TV now',																																																							'テレビを見るのをやめる',																																			],
+	
+};
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 项目图片
+		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
+		+'" src="../static/image/10_role_thought/'+item[1]+'.png" style="width:64px;height:64px;" /></td>' }else 
+		
+		// 项目名称
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
+		
+		// 项目类型
+		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 7]][0]) +'</td>' }else 
+		
+		// 归属种类
+		if(index ===  8){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 8]][0]) +'</td>' }else 
+		
+		// 出品公司
+		if(index === 15){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[15]][0]) +'</td>' }else 
+		
+		// 文本描述
+		if(index === 16){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		
+		// 常规数据
+		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable02 = $('#powerTable02'), powerTable_tbody_node02 = '';
+
+// 生成表格
+tbodyArray02.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node02 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 名称
+		if(index === 2){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[  item[3]][0] +'</td>' }else 
+		
+		// 反面
+		if(index === 6){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[  item[6]][0] +'</td>' }else 
+		
+		// 描述
+		if(index === 7){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionList[item[3]][0] +'</td>' }else 
+		
+		// 常规
+		if(index !== 0){ powerTable_tbody_node02 += '<td style="height:40px;">'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node02 += '</tr>';
+	
+});
+$('#powerTable02 tbody').html(powerTable_tbody_node02);
+buildPowerTable('powerTable02');
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.0</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 书籍电视</a>
+			<a href="#heading02">02. 增益效果</a>
+			<a href="#heading03">03. 额外拓展</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+
