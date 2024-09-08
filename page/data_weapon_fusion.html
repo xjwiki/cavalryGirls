@@ -58,7 +58,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
 <title>武器融合</title>
 </head>
 <body>
@@ -169,7 +169,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<thead>
 		<tr>
 			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
-			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #30d7a6 0%, #30d7a6 85%, #30d7a6 85%, #30d7a6 95%, #30d7a6 95%, #30d7a6 100%);"></span></th>
+			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #30d7a6 0%, #30d7a6 75%, #30d7a6 75%, #30d7a6 75%, #30d7a6 75%, #30d7a6 100%);"></span></th>
 			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
@@ -253,8 +253,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解
-
+<script>/* 数据注解 */
+/*
 // Func 是函数, 已经和 description 结合起来, 这部分的数据没意义, 就删掉了
 // MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1, 并没有意义, 所以删掉了
 // ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
@@ -263,7 +263,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 // Day 是解锁天数, 融合配件的解锁天数都是 999, 这等于没有意义
 // Syns 是合成材料, 由于融合配件都是有 NeedWeapon 既出现条件控制, 该值为空, 因此废弃了
-// Company 是原形研发机构, 所有融合组件的这个值都是空, 也就是没有开发机构, 因此就不放这列属性了
+// Company 是原型研发机构, 所有融合组件的这个值都是空, 也就是没有开发机构, 因此就不放这列属性了
 // Tag 是归属种类, 由于融合配件都是由 NeedWeapon 既出现条件控制, 现在拆成融合材料和底基种类, 而它也没有值, 所以就废弃这列属性了
 
 // Level, 默认都是 1, 现在的等级都是重新编排的, 方便筛选
@@ -820,7 +820,7 @@ let TagList = {
 };
 
 // 文本描述
-let DescriptionList = {
+let DescriptionsList = {
 	2501 : [/*'动能速度核心1',			*/'子弹速度 + 25%',																	'彈速+<Description>%',																				'Speed +<Description>%',																																					'弾速+<Description>%',																											],		
 	2502 : [/*'动能速度核心2',			*/'子弹速度 + 50%',																	'彈速+<Description>%',																				'Speed +<Description>%',																																					'弾速+<Description>%',																											],		
 	2503 : [/*'动能速度核心3',			*/'子弹速度 + 75%',																	'彈速+<Description>%',																				'Speed +<Description>%',																																					'弾速+<Description>%',																											],		//02		
@@ -1146,7 +1146,7 @@ tbodyArray01.forEach(function(item){
 		data.split('|').map(function(e){ return TagList[e][0] }).join('<br />')) +'</td>' }else 
 		
 		// 文本描述
-		if(index === 12){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		if(index === 12){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -1253,7 +1253,7 @@ let jqi_table01_tbody = $('#powerTable01 tbody'), jqi_table01_tbody_tr = jqi_tab
 // 创建无结果 tr 行
 let jqi_empty_result_tr = $(/*html*/`
 <tr class="emptyTr tr-active" style="position:relative;"><td colSpan="99" style="text-align:center;height:64px;"><span>没有任何匹配的结果
-<br />There Are No Matching Results</span><span style="position:absolute;top:0;bottom:1px;left:0;width:5px;background-image:linear-gradient(180deg, #30d7a6 0%, #30d7a6 85%, #30d7a6 85%, #30d7a6 95%, #30d7a6 95%, #30d7a6 100%);"></span></td></tr>`);
+<br />There Are No Matching Results</span><span style="position:absolute;top:0;bottom:1px;left:0;width:5px;background-image:linear-gradient(180deg, #30d7a6 0%, #30d7a6 75%, #30d7a6 75%, #30d7a6 75%, #30d7a6 75%, #30d7a6 100%);"></span></td></tr>`);
 
 // 创建总筛选的函数
 let filterFunction = function(event){
@@ -1283,7 +1283,7 @@ let filterFunction = function(event){
 	.forEach(function(text, index01){
 		tbodyArray01.forEach(function(item, index02){
 			if(item[3].indexOf(text) >= 0 
-			|| DescriptionList[item[1]][0].indexOf(text) >= 0){
+			|| DescriptionsList[item[1]][0].indexOf(text) >= 0){
 				
 				// if(jqi_attrSelect01_value !== 'empty' 
 				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
@@ -1347,7 +1347,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
 </div>
 </div>
 </div>

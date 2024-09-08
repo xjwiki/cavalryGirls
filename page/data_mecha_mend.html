@@ -45,20 +45,20 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-17T01:59:54UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-08-17T01:59:54UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-09-08T00:04:50UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-09-08T00:04:50UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-17T01:59:54UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-08-17T01:59:54UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-09-08T00:04:50UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-09-08T00:04:50UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
 <title>机体改造</title>
 </head>
 <body>
@@ -144,7 +144,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">配件等级: </span><select id="attrSelect01" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">物品类型: </span><select id="attrSelect02" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">归属种类: </span><select id="attrSelect03" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
-	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">原形研发: </span><select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">原型研发: </span><select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
@@ -222,8 +222,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解
-
+<script>/* 数据注解 */
+/*
 CargoPiles=0, 
 CargoPilesMax=0, 
 CargoPilesFusion=0, 
@@ -401,7 +401,7 @@ let ScrapList = {
 };
 
 // 文本描述
-let DescriptionList = {
+let DescriptionsList = {
 	
 	200 : [/*'弹力足',				AddMechaEffect:0,					*/'奔跑时可越过障碍物而不受影响, 玛丽的游骑兵号出场就自带了这个装备',										'奔跑時可以越過障礙物不受影響',											'You can jump over obstacles without being affected while sprinting.',																					'走行時、影響を受けずに障害物を乗り越えることができる',														],		
 	201 : [/*'轮滑',				AddMechaEffect:1,					*/'奔跑时使用轮滑, 速度快但续航弱, 库罗库的骠骑兵号出场自带这个装备',										'奔跑時為使用輪滑, 不過續航較弱',										'Equip to use roller skates when sprinting. It has a short duration.',																					'走行時にローラースケートを使用する、長持ちしない',															],		
@@ -499,7 +499,7 @@ tbodyArray01.forEach(function(item){
 		) +'</td>' }else 
 		
 		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -618,7 +618,7 @@ let filterFunction = function(event){
 	.forEach(function(text, index01){
 		tbodyArray01.forEach(function(item, index02){
 			if(item[3].indexOf(text) >= 0 
-			|| DescriptionList[item[1]][0].indexOf(text) >= 0){
+			|| DescriptionsList[item[1]][0].indexOf(text) >= 0){
 				
 				// if(jqi_attrSelect01_value !== 'empty' 
 				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
@@ -636,7 +636,7 @@ let filterFunction = function(event){
 				if(jqi_attrSelect03_value !== 'empty' 
 				&& item[10].indexOf(jqi_attrSelect03_value) === -1){ return };
 				
-				// 原形研发
+				// 原型研发
 				if(jqi_attrSelect04_value !== 'empty' 
 				&& jqi_attrSelect04_value !== item[11]){ return };
 				
@@ -682,7 +682,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
 </div>
 </div>
 </div>

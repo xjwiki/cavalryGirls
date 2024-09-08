@@ -199,26 +199,31 @@ let dirRepeatAnchor = $(/*html*/`
 			<li><a href="./data_mecha_frag.html">			<i class="xjDir-icon fas fa-bomb"></i>					<i class="xjDir-text"><span>投掷物品</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li                       ><a href="./data_role_list.html">				<i class="xjDir-icon fas fa-people-group"></i>			<i class="xjDir-text"><span>主角小队</span></i></a></li>
-			<li                       ><a href="./data_role_level.html">			<i class="xjDir-icon fas fa-medal"></i>					<i class="xjDir-text"><span>军衔等级</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_role_skills.html">			<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
-			<li                       ><a href="./data_role_thought.html">			<i class="xjDir-icon fas fa-book-open-reader"></i>		<i class="xjDir-text"><span>思潮影响</span></i></a></li>
-			<li                       ><a href="./data_role_loyalty.html">			<i class="xjDir-icon fas fa-heart"></i>					<i class="xjDir-text"><span>忠诚好感</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_role_jewelry.html">			<i class="xjDir-icon fas fa-gem"></i>					<i class="xjDir-text"><span>饰品装备</span></i></a></li>
+			<li><a href="./data_role_intro.html">			<i class="xjDir-icon fas fa-people-group"></i>			<i class="xjDir-text"><span>主角小队</span></i></a></li>
+			<li><a href="./data_role_think.html">			<i class="xjDir-icon fas fa-book-open-reader"></i>		<i class="xjDir-text"><span>思潮影响</span></i></a></li>
+			<li><a href="./data_role_loyal.html">			<i class="xjDir-icon fas fa-heart"></i>					<i class="xjDir-text"><span>忠诚好感</span></i></a></li>
+			<li><a href="./data_role_skill.html">			<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
+			<li><a href="./data_role_jewel.html">			<i class="xjDir-icon fas fa-gem"></i>					<i class="xjDir-text"><span>饰品装备</span></i></a></li>
+			<li><a href="./data_role_level.html">			<i class="xjDir-icon fas fa-medal"></i>					<i class="xjDir-text"><span>军衔等级</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>敌军情报</span></i></a></li><!-- 包括敌人组合 -->
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>外围任务</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>歼灭委托</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>城防体系</span></i></a></li>
+			<li                       ><a href="./data_enemy_info.html">			<i class="xjDir-icon fas fa-skull"></i>					<i class="xjDir-text"><span>敌军情报</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_enemy_spawn.html">			<i class="xjDir-icon fas fa-users-line"></i>			<i class="xjDir-text"><span>敌军组合</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_enemy_normal.html">			<i class="xjDir-icon fas fa-list-ol"></i>				<i class="xjDir-text"><span>剧情敌人</span></i></a></li><!--◇ 剧情模式的四种难度下 的敌军构成 ◇-->
+			<li class="xjDir-disabled"><a href="./data_enemy_special.html">			<i class="xjDir-icon fas fa-list-check"></i>			<i class="xjDir-text"><span>挑战敌人</span></i></a></li><!--◇ 挑战模式/幸存模式/无限模式/潜入模式 的敌军构成 ◇-->
+			<li class="xjDir-disabled"><a href="./data_enemy_mission.html">			<i class="xjDir-icon far fa-paste"></i>					<i class="xjDir-text"><span>外围任务</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_enemy_delegate.html">		<i class="xjDir-icon fas fa-explosion"></i>				<i class="xjDir-text"><span>歼灭委托</span></i></a></li>
+			<li class="xjDir-divide"></li>
 			
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>基地建设</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>废料回收</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>室内装修</span></i></a></li><!-- 家具清单 -->
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>费用计算</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_manage_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>城防体系</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_manage_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>基地建设</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_manage_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>室内装修</span></i></a></li><!-- 家具清单 -->
+			<li class="xjDir-disabled"><a href="./data_manage_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>商店机制</span></i></a></li><!--◇商店和黑市售卖物品的概率◇-->
+			<li                       ><a href="./data_manage_material.html">		<i class="xjDir-icon fas fa-recycle"></i>				<i class="xjDir-text"><span>废料回收</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./data_manage_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>费用计算</span></i></a></li>
+			<li class="xjDir-divide"></li>
 			
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>术语名词</span></i></a></li><!-- 游戏提示 -->
-			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>商店机制</span></i></a></li><!--◇商店和黑市售卖物品的概率◇-->
+			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>术语名词</span></i></a></li><!-- 包括 Buffs 信息和游戏提示 -->
 			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>成就系统</span></i></a></li>
 			<li class="xjDir-disabled"><a href="./data_module_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>按键设置</span></i></a></li>
 			

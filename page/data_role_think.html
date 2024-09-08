@@ -45,20 +45,20 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-17T01:59:54UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-08-17T01:59:54UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-09-08T00:04:50UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-09-08T00:04:50UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-17T01:59:54UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-08-17T01:59:54UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-09-08T00:04:50UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-09-08T00:04:50UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
 <title>思潮影响</title>
 </head>
 <body>
@@ -144,7 +144,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<thead>
 		<tr>
 			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
-			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #b9454d 0%, #b9454d 84%, #b9454d 84%, #b9454d 84%, #b9454d 84%, #b9454d 100%);"></span></th>
+			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #b9454d 0%, #b9454d 75%, #b9454d 75%, #b9454d 75%, #b9454d 75%, #b9454d 100%);"></span></th>
 			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
@@ -228,8 +228,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解
-
+<script>/* 数据注解 */
+/*
 CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax:0
 Syns = NeedWeapon = ColorPlus = Cluster = '-',
 Day:-1, Level:1,
@@ -477,7 +477,7 @@ let ItemsNameList = {
 };
 
 // 文本描述
-let DescriptionList = {
+let DescriptionsList = {
 	
 	'Rebellion_0' :		[/*'叛逆 Lv1',	*/'可以偷税(在战后结算页面进行操作)',		'可以進行偷稅',							'Tax evasion is possible',														'脱税が可能になる',														],		
 	'Rebellion_7' :		[/*'叛逆 Lv2',	*/'偷税成功率增加(当前的成功率翻倍)',		'偷稅成功率增加',						'Success rate of tax evasion increased',										'脱税成功率上昇',														],		
@@ -582,7 +582,7 @@ tbodyArray01.forEach(function(item){
 		
 		// 项目图片
 		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/10_role_thought/'+item[1]+'.png" style="width:64px;height:64px;" /></td>' }else 
+		+'" src="../static/image/10_role_think/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 项目名称
 		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
@@ -597,7 +597,7 @@ tbodyArray01.forEach(function(item){
 		if(index === 15){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[15]][0]) +'</td>' }else 
 		
 		// 文本描述
-		if(index === 16){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		if(index === 16){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -627,13 +627,13 @@ tbodyArray02.forEach(function(item){
 	item.forEach(function(data, index){
 		
 		// 名称
-		if(index === 2){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[  item[3]][0] +'</td>' }else 
+		if(index === 2){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[   item[3]][0] +'</td>' }else 
 		
 		// 反面
-		if(index === 6){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[  item[6]][0] +'</td>' }else 
+		if(index === 6){ powerTable_tbody_node02 += '<td style="height:40px;">'+ ItemsNameList[   item[6]][0] +'</td>' }else 
 		
 		// 描述
-		if(index === 7){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionList[item[3]][0] +'</td>' }else 
+		if(index === 7){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionsList[item[3]][0] +'</td>' }else 
 		
 		// 常规
 		if(index !== 0){ powerTable_tbody_node02 += '<td style="height:40px;">'+ data +'</td>' };
@@ -656,7 +656,7 @@ buildPowerTable('powerTable02');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
 </div>
 </div>
 </div>

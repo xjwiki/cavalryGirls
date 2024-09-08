@@ -45,20 +45,20 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-08-17T01:59:54UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-08-17T01:59:54UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-09-08T00:04:50UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-09-08T00:04:50UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Private ↓ -->
 
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-08-17T01:59:54UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-08-17T01:59:54UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-09-08T00:04:50UTC+8" /> -->
+<!-- <script src="../static/cjs/index.js?time=2024-09-08T00:04:50UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, guide, wiki, xjwiki" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
 <title>机体详情</title>
 </head>
 <body>
@@ -359,8 +359,8 @@ border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);poi
 
 
 
-<script>/* 数据注解
-
+<script>/* 数据注解 */
+/*
 Price : 0 // 项目价格, 都是 0 既无价状态, 所以这个值就不用了
 InitState : 0 // 初始状态, 都是 0 既无状态, 所以这个值就不用了
 
@@ -422,6 +422,12 @@ let tbodyArray01 = [
 	[1,			'01_13',	'14',			'高级炮塔',			105,		'15',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_13',	'-',				11,			'-',		'-',		'-',			3,			10,			3,			10,			'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10007',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],		//01		
 	[0,			'01_14',	'15',			'无人机',			100,		'2',		'-',		'-',		'-',			'1.00',			0,			0,				0,			0,			'-',		'-',		'-',		'02_14',	'-',				0,			'-',		'-',		'-',			0,			0,			'-',		'-',		'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10000',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],
 	[0,			'01_15',	'16',			'大门',				103,		'100',		'-',		'-',		'-',			'0.00',			30,			40,				0,			0,			'-',		'-',		'-',		'02_15',	'-',				0,			'-',		'-',		'-',			3,			9,			'-',		'-',		'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'0',			'-',			'-',			'-',			'-',			'-',		'-',		'-',					],		//01		
+	
+	// 空袭炮台和机枪炮塔就只有下面的这几项数据区别, 等做到到整备城页面再回来处理这个新机体
+	// TankType,	Name,		FirstWeapon,	InitBattery,	MaxBattery,		InitState,		
+	// 101,			机枪炮塔,	0,				2,				4|6,			,				
+	// 106,			空袭炮台,	10024,			,				,				2054_2055,		
+	
 ];
 
 // 无机数据
@@ -523,7 +529,7 @@ let EquipNameList = {
 };
 
 // 文本描述
-let DescriptionList = {
+let DescriptionsList = {
 	0 :   [/*'游骑兵号',		*/'帝国制式装甲, 尽管没特色, 但也没什么缺点, 拥有奔跑时可跨过障碍的长动力足, 推荐配置: 各种武器均可',		'帝國制式裝甲, 沒什麼特色也沒什麼明顯的缺點, 擁有奔跑時可以跨過障礙的長動力足, \n【推薦配置】各種武器均可',									'Standard empire armor with no distinctive features of glaring flaws, equipped with a pair of lengthened power feet, capable of leaping over obstacles when sprinting.\nRecommended setup: All kinds of weapons are available.',							'帝国軍の制式的な装甲で、特徴はほとんどなく、目立った欠点もない, 走行時に障害物を越えることができる長いパワーフットを持つ, \n【推奨装備】あらゆる種類の武器が利用可能です',						],
 	1 :   [/*'骠骑兵号',		*/'帝国制式装甲II型, 拆卸了部分强化模块, 增加了投掷物上限, 推荐配置: 轻型或元素武器, 投掷武器, 重甲',		'帝國制式裝甲2型, 拆卸了部分強化模組, 增加了投擲物上限, 起步很快, 但裝甲稍弱, \n【推薦配置】與隊長機體相似',								'Standard empire armor Type 2 with some enhancement modules removed and a higher capacity of thrown ordnance. The start was fast, but the armor was slightly weaker.\nRecommended setup: Light or elemental weapons, thrown ordnance, heavy armor.',		'帝国軍制式装甲2式、強化モジュールの一部を取り外し、投擲物の上限を増加した, 膝関節はしゃがむ中の射撃ができるように改造された\n【推奨装備】軽武器またはエレメンタル武器、投擲武器、重装甲',		],
 	2 :   [/*'龙骑士号',		*/'近战特化形机体, 近战武器强化空间极大, 拥有极高的速度, 但耐久不高, 推荐配置: 速射或散射武器, 重甲',		'近戰特化機體, 近戰武器強化空間極大, 但是拆卸了部分武器強化空間, 擁有極高的速度, 缺點是耐久不高, \n【推薦配置】速射或散射武器, 重甲',		'A specialized melee mecha with a lot of room for melee weapon enhancements and less for other weapon types. Its high movement speed is balanced by its low durability.\nRecommended setup: Rapid-firing or spreadshot weapons, heavy armor.',				'近接特化機体、近接武器強化の余地が大きいが、武器強化スペースの一部が取り外された, 速度が非常に速いが、耐久性が高くないのが欠点, \n【推奨装備】連射または散弾武器、重装甲',						],
@@ -579,7 +585,7 @@ tbodyArray01.forEach(function(item){
 		if(index ===  5){ powerTable_tbody_node01 += '<td>'+data+'<span class="letterK"></span></td>' }else 
 		
 		// 文本描述
-		if(index === 18){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4]][0] +'</td>' }else 
+		if(index === 18){ powerTable_tbody_node01 += '<td>'+ DescriptionsList[item[4]][0] +'</td>' }else 
 		
 		// 原型研发
 		if(index === 33){ powerTable_tbody_node01 += '<td>'+ CompanyList[item[33]][0] +'</td>' }else 
@@ -676,7 +682,7 @@ $(window).on('keyup', function(event){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
 </div>
 </div>
 </div>
