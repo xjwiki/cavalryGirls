@@ -45,17 +45,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-09-08T00:04:50UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-09-08T00:04:50UTC+8"></script>
-<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
-<!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
-
-<!-- ↑ Public | Private ↓ -->
-
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-09-08T00:04:50UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-09-08T00:04:50UTC+8"></script> -->
-<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
-<!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -136,7 +127,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <p>
 	01. 主力机体和作战单元都拥有投掷物品的装备槽位, 这些机体可携带投掷物的数量在 <code>3 ~ 6</code> 之间, 更多细节可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
 	02. 以下是投掷物品的列表, 共 <code>24</code> 种 / 分 <code>15</code> 类, 它们的升级都是用两个下级物品合成一个上级物品, 就像武器配件的升级那样; <br />
-	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 备注内容</a>; <br />
+	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 额外拓展</a>; <br />
 	04. 你可以借助筛选工具进行精确查找, 值得一提的是, 投掷物品并非一次性的, CD 到了就能再继续丢, 并且它们不会产生任何弹药费; <br />
 </p>
 
@@ -177,11 +168,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
@@ -193,7 +184,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<section><h2 id="heading02">02. 备注内容</h2>
+<section><h2 id="heading02">02. 额外拓展</h2>
 
 <p>使用方法: 当机体携带了投掷物后, 在战场中可以使用鼠标中键对它们进行操控, 中键上下滚动就是切换, 中键按住不放可以进行瞄准, 所有机体的默认投掷距离都是 <code>15</code>, 我们可以通过按住中键将瞄准点放得更近一些, 但需要要注意的是, 许多投掷物都是范围伤害, 如果丢得太近, 是可能会炸到自己的, 当一个投掷物被抛出后, 系统会自动切换到下一个投掷物, 而不需要你使用鼠标滚轮进行手动切换;</p>
 
@@ -212,204 +203,230 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <style>/* 表格样式 */
 #powerTable01 .hideTr{display:none;}
+
+/* 归属种类 */
+#powerTable01 tr > td:nth-of-type(10){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
+#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(10):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(10):active > span:nth-of-type(2){display:block;}
+
+/* 原形研发 */
+#powerTable01 tr > td:nth-of-type(11){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
+#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(11):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(11):active > span:nth-of-type(2){display:block;}
+
+/* 合成材料 */
+#powerTable01 tr > td:nth-of-type(12){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
+#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(12):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(12):active > span:nth-of-type(2){display:block;}
+
+/* 出现条件 */
+#powerTable01 tr > td:nth-of-type(13){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
+#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(13):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(13):active > span:nth-of-type(2){display:block;}
 </style>
 
 
 
 <script>/* 数据注解 */
 /*
-CargoPiles=0, 
-CargoPilesMax=0, 
-CargoPilesFusion=0, 
-CargoPilesFusionMax=0, 
-ColorPlus='-', 
-Cluster='-', 
-MaxPile=1,
+
+CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
+MaxPile = 1, ColorPlus = Cluster = '-',
+debugHide = 0,
+
+————
+
+"照明弹"和"长效照明弹"的解锁天数被改成了 $NightOpenDay, 这个变量是战场地图启用黑夜的事件, 在剧情
+模式下这事件总在第 65 天被触发, 也就是说这两个投掷物品的解锁天数也是 65 天, 跟旧版一样就不用改了
 
 */
 
-// 融合数据
+// 项目数据
 let tbodyArray01 = [
 	
 	// 高亮,	装备图片,	装备序号,	装备名称,			项目代码,	参考价格,	配件等级,	默认排序,		解锁天数,	物品类型,		归属种类,		原型研发,		合成材料,								出现条件,			文本描述,		],		
 	// Active,	Image,		Number,		Name,				Items,		Price,		Level,		ResolveID,		Day,		Type,			Tag,			Company,		Syns,									NeedWeapon,			Description,	],		//01		
 	
-	[1,			1101,		'01',		'手榴弹',			1101,		35,			1,			166,			7,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
-	[1,			1102,		'02',		'集束炸弹',			1102,		65,			2,			167,			7,			'Throw',		'Throw',		'Main_4',		'-',									'1101',				'-',			],		
-	[1,			1103,		'03',		'高级集束炸弹',		1103,		125,		-1,			168,			33,			'Throw',		'Throw',		'Main_5',		'-',									'1101',				'-',			],		//01		
+	[1,			1101,		'01',		'手榴弹',			1101,		35,			1,			166,			7,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		//01		
+
+	[0,			1102,		'02',		'集束炸弹',			1102,		65,			2,			167,			7,			'Throw',		'Throw',		'Main_4',		'-',									'1101_1104',		'-',			],		
+	[0,			1103,		'03',		'高级集束炸弹',		1103,		125,		-1,			168,			33,			'Throw',		'Throw',		'Main_5',		'-',									'1101_1104',		'-',			],		//01		
 	
-	[0,			1105,		'04',		'寒冰炸弹',			1105,		30,			1,			170,			9,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_3|40016_1',				'-',				'-',			],		
-	[0,			1108,		'05',		'集束寒冰炸弹',		1108,		65,			-1,			171,			31,			'Throw',		'Throw',		'Main_4',		'-',									'1105',				'-',			],		//01		
+	[1,			1105,		'04',		'寒冰炸弹',			1105,		30,			1,			170,			9,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_3|40016_1',				'1105_1106',		'-',			],		
+	[1,			1108,		'05',		'集束寒冰炸弹',		1108,		65,			-1,			171,			31,			'Throw',		'Throw',		'Main_4',		'-',									'1108_1110',		'-',			],		//01		
 	
-	[1,			1106,		'06',		'燃烧炸弹',			1106,		30,			1,			172,			11,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_3|40015_1',				'-',				'-',			],		
-	[1,			1109,		'07',		'集束燃烧炸弹',		1109,		65,			-1,			173,			35,			'Throw',		'Throw',		'Main_4',		'-',									'1106',				'-',			],		//01		
-	
-	[0,			1107,		'08',		'震撼弹',			1107,		30,			1,			186,			37,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
-	[0,			1110,		'09',		'集束震撼弹',		1110,		65,			-1,			187,			65,			'Throw',		'Throw',		'Main_4',		'-',									'1107',				'-',			],		//01		
+	[0,			1106,		'06',		'燃烧炸弹',			1106,		30,			1,			172,			11,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_3|40015_1',				'1105_1106',		'-',			],		
+	[0,			1109,		'07',		'集束燃烧炸弹',		1109,		65,			-1,			173,			35,			'Throw',		'Throw',		'Main_4',		'-',									'1108_1110',		'-',			],		//01		
 	
 	[1,			1118,		'10',		'电磁炸弹',			1118,		30,			1,			174,			13,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_3|40017_1',				'-',				'-',			],		
-	[1,			1122,		'11',		'集束电磁炸弹',		1122,		65,			-1,			175,			37,			'Throw',		'Throw',		'Main_4',		'-',									'1118',				'-',			],		//01		
+	[1,			1122,		'11',		'集束电磁炸弹',		1122,		65,			-1,			175,			37,			'Throw',		'Throw',		'Main_4',		'-',									'1108_1110',		'-',			],		//01		
 	
-	[0,			1111,		'12',		'破片手雷',			1111,		20,			1,			176,			7,			'Throw',		'Throw',		'Main_2',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
-	[0,			1112,		'13',		'穿甲破片手雷',		1112,		40,			-1,			177,			12,			'Throw',		'Throw',		'Main_3',		'-',									'1111',				'-',			],		//01		
+	[0,			1107,		'08',		'震撼弹',			1107,		30,			1,			186,			37,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
+	[0,			1110,		'09',		'集束震撼弹',		1110,		65,			-1,			187,			65,			'Throw',		'Throw',		'Main_4',		'-',									'1107|1110',		'-',			],		//01		
 	
-	[1,			1113,		'14',		'烟雾弹',			1113,		25,			1,			178,			8,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_1|40031_1|40005_1',		'-',				'-',			],		
-	[1,			1114,		'15',		'长效烟雾弹',		1114,		40,			-1,			179,			31,			'Throw',		'Throw',		'Main_3',		'-',									'1113',				'-',			],		//01		
+	[1,			1111,		'12',		'破片手雷',			1111,		20,			1,			176,			7,			'Throw',		'Throw',		'Main_2',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
+	[1,			1112,		'13',		'穿甲破片手雷',		1112,		40,			-1,			177,			12,			'Throw',		'Throw',		'Main_3',		'-',									'1111|1112',		'-',			],		//01		
 	
-	[0,			1115,		'16',		'照明弹',			1115,		25,			1,			180,			65,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
-	[0,			1116,		'17',		'长效照明弹',		1116,		40,			-1,			181,			65,			'Throw',		'Throw',		'Main_3',		'-',									'1115',				'-',			],		//01		
+	[0,			1113,		'14',		'烟雾弹',			1113,		25,			1,			178,			8,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_1|40031_1|40005_1',		'-',				'-',			],		
+	[0,			1114,		'15',		'长效烟雾弹',		1114,		40,			-1,			179,			31,			'Throw',		'Throw',		'Main_3',		'-',									'1113|1114',		'-',			],		//01		
 	
-	[1,			1117,		'18',		'水炸弹',			1117,		20,			-2,			182,			15,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
-	[1,			1119,		'19',		'油炸弹',			1119,		20,			-2,			183,			19,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		//01		
+	[1,			1115,		'16',		'照明弹',			1115,		25,			1,			180,			65,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
+	[1,			1116,		'17',		'长效照明弹',		1116,		40,			-1,			181,			65,			'Throw',		'Throw',		'Main_3',		'-',									'1115|1116',		'-',			],		//01		
 	
-	[0,			1120,		'20',		'干扰弹',			1120,		80,			-2,			184,			0,			'Throw',		'Throw',		'Main_3',		'-',									'-',				'-',			],		
-	[0,			1121,		'21',		'投掷式地雷',		1121,		80,			-2,			185,			0,			'Throw',		'Throw',		'Main_3',		'-',									'-',				'-',			],		//01		
+	[0,			1117,		'18',		'水炸弹',			1117,		20,			-2,			182,			15,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		
+	[0,			1119,		'19',		'油炸弹',			1119,		20,			-2,			183,			19,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_2|40005_1',				'-',				'-',			],		//01		
 	
-	[1,			1124,		'22',		'护盾破坏装置',		1124,		30,			-2,			188,			37,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
-	[1,			1125,		'23',		'反隐形装置',		1125,		30,			-2,			189,			18,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
-	[1,			1104,		'24',		'杀伤手雷',			1104,		75,			-2,			169,			12,			'Throw',		'Throw',		'Main_4',		'40008_2|40010_9|40005_2',				'1101',				'-',			],		//01		
+	[1,			1120,		'20',		'干扰弹',			1120,		80,			-2,			184,			0,			'Throw',		'Throw',		'Main_3',		'-',									'-',				'-',			],		
+	[1,			1121,		'21',		'投掷式地雷',		1121,		80,			-2,			185,			0,			'Throw',		'Throw',		'Main_3',		'-',									'-',				'-',			],		//01		
+	
+	[0,			1124,		'22',		'护盾破坏装置',		1124,		30,			-2,			188,			37,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
+	[0,			1125,		'23',		'反隐形装置',		1125,		30,			-2,			189,			18,			'Throw',		'Throw',		'Main_3',		'40008_1|40010_4|40005_1',				'-',				'-',			],		
+	[0,			1104,		'24',		'杀伤手雷',			1104,		75,			-2,			169,			12,			'Throw',		'Throw',		'Main_4',		'40008_2|40010_9|40005_2',				'1101_1104',		'-',			],		//01		
 	
 ];
 
 // 配件名称
 let ItemsNameList = {
-	1101 : ['手榴弹',				'手榴彈',				'Grenade',								'グレネード',				],
-	1102 : ['集束炸弹',				'集束炸彈',				'Cluster Bomb',							'集束爆弾',					],
-	1103 : ['高级集束炸弹',			'高級集束炸彈',			'Advanced Cluster Bomb',				'上級集束爆弾',				],
-	1104 : ['杀伤手雷',				'殺傷手雷',				'Fatality Grenade',						'殺傷グレネード',			],
-	1105 : ['寒冰炸弹',				'寒冰炸彈',				'Ice Bomb',								'氷爆弾',					],
-	1108 : ['集束寒冰炸弹',			'集束寒冰炸彈',			'Cluster Ice Bomb',						'集束氷爆弾',				],
-	1106 : ['燃烧炸弹',				'燃燒炸彈',				'Flaming Bomb',							'焼夷弾',					],
-	1109 : ['集束燃烧炸弹',			'集束燃燒炸彈',			'Cluster Flaming Bomb',					'集束焼夷弾',				],
-	1118 : ['电磁炸弹',				'電磁炸彈',				'Electromagnetic Bomb',					'電磁爆弾',					],
-	1122 : ['集束电磁炸弹',			'集束電磁炸彈',			'Cluster Electromagnetic Bomb',			'集束電磁爆弾',				],
-	1111 : ['破片手雷',				'破片手雷',				'Frag Grenade',							'フラググレネード',			],
-	1112 : ['穿甲破片手雷',			'穿甲破片手雷',			'Armor Penetration Frag Grenade',		'徹甲フラググレネード',		],
-	1113 : ['烟雾弹',				'煙霧彈',				'Smoke Bomb',							'煙幕弾',					],
-	1114 : ['长效烟雾弹',			'長效煙霧彈',			'Long-Lasting Smoke Bomb',				'長持ち煙幕弾',				],
-	1115 : ['照明弹',				'照明彈',				'Flare',								'フレア',					],
-	1116 : ['长效照明弹',			'長效照明彈',			'Long-Lasting Flare',					'長持ちフレア',				],
-	1117 : ['水炸弹',				'水炸彈',				'Water Bomb',							'水爆弾',					],
-	1119 : ['油炸弹',				'油炸彈',				'Oil Bomb',								'オイル爆弾',				],
-	1120 : ['干扰弹',				'干擾彈',				'Interference bomb',					'ぼうがい弾',				],
-	1121 : ['投掷式地雷',			'投擲式地雷',			'Throwing landmines',					'投擲地雷',					],
-	1107 : ['震撼弹',				'震撼彈',				'Shock Bomb',							'衝撃爆弾',					],
-	1110 : ['集束震撼弹',			'集束震撼彈',			'Cluster Shock Bomb',					'集束衝撃爆弾',				],
-	1124 : ['护盾破坏装置',			'護盾破壞裝置',			'Shield destruction device',			'シールド破壊装置',			],
-	1125 : ['反隐形装置',			'反隱形裝置',			'Anti stealth device',					'アンチステルス装置',		],
+	
+	1101 : ['手榴弹',			'手榴彈',			'Grenade',								'グレネード',				],		//01		
+	
+	1102 : ['集束炸弹',			'集束炸彈',			'Cluster Bomb',							'集束爆弾',					],		
+	1103 : ['高级集束炸弹',		'高級集束炸彈',		'Advanced Cluster Bomb',				'上級集束爆弾',				],		//02		
+	
+	1105 : ['寒冰炸弹',			'寒冰炸彈',			'Ice Bomb',								'氷爆弾',					],		
+	1108 : ['集束寒冰炸弹',		'集束寒冰炸彈',		'Cluster Ice Bomb',						'集束氷爆弾',				],		//02		
+	
+	1106 : ['燃烧炸弹',			'燃燒炸彈',			'Flaming Bomb',							'焼夷弾',					],		
+	1109 : ['集束燃烧炸弹',		'集束燃燒炸彈',		'Cluster Flaming Bomb',					'集束焼夷弾',				],		//02		
+	
+	1118 : ['电磁炸弹',			'電磁炸彈',			'Electromagnetic Bomb',					'電磁爆弾',					],		
+	1122 : ['集束电磁炸弹',		'集束電磁炸彈',		'Cluster Electromagnetic Bomb',			'集束電磁爆弾',				],		//02		
+	
+	1107 : ['震撼炸弹',			'震撼炸彈',			'Shock Bomb',							'衝撃爆弾',					],		
+	1110 : ['集束震撼炸弹',		'集束震撼炸彈',		'Cluster Shock Bomb',					'集束衝撃爆弾',				],		//02		
+	
+	1111 : ['破片手雷',			'破片手雷',			'Frag Grenade',							'フラググレネード',			],		
+	1112 : ['穿甲破片手雷',		'穿甲破片手雷',		'Armor Penetration Frag Grenade',		'徹甲フラググレネード',		],		//02		
+	
+	1113 : ['烟雾弹',			'煙霧彈',			'Smoke Bomb',							'煙幕弾',					],		
+	1114 : ['长效烟雾弹',		'長效煙霧彈',		'Long-Lasting Smoke Bomb',				'長持ち煙幕弾',				],		//02		
+	
+	1115 : ['照明弹',			'照明彈',			'Flare',								'フレア',					],		
+	1116 : ['长效照明弹',		'長效照明彈',		'Long-Lasting Flare',					'長持ちフレア',				],		//02		
+	
+	1117 : ['水炸弹',			'水炸彈',			'Water Bomb',							'水爆弾',					],		
+	1119 : ['油炸弹',			'油炸彈',			'Oil Bomb',								'オイル爆弾',				],		//02		
+	
+	1120 : ['干扰弹',			'干擾彈',			'Interference bomb',					'ぼうがい弾',				],		
+	1121 : ['投掷式地雷',		'投擲式地雷',		'Throwing landmines',					'投擲地雷',					],		//02		
+	
+	1124 : ['护盾破坏装置',		'護盾破壞裝置',		'Shield destruction device',			'シールド破壊装置',			],		
+	1125 : ['反隐形装置',		'反隱形裝置',		'Anti stealth device',					'アンチステルス装置',		],		
+	1104 : ['杀伤手雷',			'殺傷手雷',			'Fatality Grenade',						'殺傷グレネード',			],		//02		
+	
+};
+
+// 文本描述
+let DescriptionList = {
+	
+	1101 : [/*'手榴弹',			Throw:Grenade|ThrowCD:24,				*/'CD 24 秒, 小型爆炸, 能眩晕敌人, 一段爆炸伤害共:　900',															'投擲後可以產生爆炸的武器\n（冷卻: <Description:1>）',																								'A throwing weapon that explodes on impact.\n(Cooldown: <Description:1>)',																																																							'投げると爆発を起こする武器\n(クールダウン:<Description:1>)',																																				],		//01		
+	
+	1102 : [/*'集束炸弹',		Throw:GrenadeMiddle|ThrowCD:35,			*/'CD 35 秒, 中型爆炸, 能眩晕敌人, 二段爆炸伤害共: 1500',															'投擲後可以產生大量爆炸的武器\n（冷卻: <Description:1>）',																							'A throwing weapon that causes a huge explosion on impact.\n(Cooldown: <Description:1>)',																																																			'投げると大量の爆発を起こす武器\n(クールダウン:<Description:1>)',																																			],		
+	1103 : [/*'高级集束炸弹',	Throw:GrenadeBig|ThrowCD:40,			*/'CD 40 秒, 大型爆炸, 能眩晕敌人, 六段爆炸伤害共: 6000',															'投擲後可以產生極多爆炸的武器\n（冷卻: <Description:1>）',																							'A throwing weapon that causes multiple explosions on impact.\n(Cooldown: <Description:1>)',																																																		'投げると非常に大量の爆発を起こす武器\n(クールダウン:<Description:1>)',																																		],		//03		
+	
+	1105 : [/*'寒冰炸弹',		Throw:GrenadeIce|ThrowCD:25,			*/'CD 25 秒, 小型寒冷爆炸, 造成寒冷效果, 和直接伤害　40',															'投擲後可以產生寒冷爆炸的武器, 寒冷時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a Cold explosion to make a Cold effect on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																							'投擲後に寒冷爆発を起こす武器、寒冷時間が長い\n（クールダウン: <Description:1>）',																															],		
+	1108 : [/*'集束寒冰炸弹',	Throw:GrenadeIceBig|ThrowCD:35,			*/'CD 35 秒, 大型寒冷爆炸, 造成寒冷效果, 和直接伤害 120',															'投擲後可以產生大量寒冷爆炸的武器, 寒冷時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large Cold explosion to affect Cold Effect on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																					'投擲後に大量の寒冷爆発を起こす武器、寒冷時間が長い\n（クールダウン: <Description:1>）',																													],		//03		
+	
+	1106 : [/*'燃烧炸弹',		Throw:GrenadeFlame|ThrowCD:40,			*/'CD 40 秒, 小型燃烧爆炸, 持续燃烧 10 秒和直接伤害 100',															'投擲後可以產生燃燒爆炸的武器, 燃燒時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a burning explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																												'投げると燃焼爆発を起こす武器、燃焼時間が非常に長い\n(クールダウン:<Description:1>)',																														],		
+	1109 : [/*'集束燃烧炸弹',	Throw:GrenadeFlameBig|ThrowCD:55,		*/'CD 55 秒, 大型燃烧爆炸, 持续燃烧 12 秒和直接伤害 200',															'投擲後可以產生大量燃燒爆炸的武器, 燃燒時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large burning explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																										'投げると大量の燃焼爆発を起こす武器、燃焼時間が非常に長い\n(クールダウン:<Description:1>)',																													],		//03		
+	
+	1118 : [/*'电磁炸弹',		Throw:GrenadeElectric|ThrowCD:30,		*/'CD 30 秒, 小型麻痹爆炸, 造成伤害　50, 麻痹的时间很长(具体的时长有待进一步确认)',									'投擲後可以產生麻痹爆炸的武器, 麻痹時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a Paralysis explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																											'投擲後に麻痺爆発を起こす武器、麻痺時間が長い\n（クールダウン: <Description:1>）',																															],		
+	1122 : [/*'集束电磁炸弹',	Throw:GrenadeElectricBig|ThrowCD:40,	*/'CD 40 秒, 大型麻痹爆炸, 造成伤害 150, 麻痹的时间很长(具体的时长有待进一步确认)',									'投擲後可以產生大量麻痹爆炸的武器, 麻痹時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large Paralysis explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																										'投擲後に大量の麻痺爆発を起こす武器、麻痺時間が長い\n（クールダウン: <Description:1>）',																													],		//03		
+	
+	1107 : [/*'震撼炸弹',		Throw:GrenadeStun|ThrowCD:60,			*/'CD 60 秒, 小型眩晕爆炸, 直接造成伤害　50, 并让敌人眩晕, 投掷后引爆有一定的延迟',									'投擲後可以造成強制眩暈的武器, 引爆延時較長\n（冷卻: <Description:1>）',																			'A throwing object that can cause forced stun, with a longer detonation delay. \n(Cooldown:<Description:1>)',																																														'投げると強制眩暈を引き起こす武器で、爆発の遅延時間が長い \n(クールダウン: <Description:1>)',																												],		
+	1110 : [/*'集束震撼炸弹',	Throw:GrenadeStunBig|ThrowCD:80,		*/'CD 80 秒, 大型眩晕爆炸, 直接造成伤害 200, 并让敌人眩晕, 投掷后引爆有一定的延迟',									'投擲後可以造成大範圍強制眩暈的武器, 引爆延時較長\n（冷卻: <Description:1>）',																		'A throwing object that can cause  large-scale forced stun, with a longer detonation delay. \n(Cooldown:<Description:1>)',																																											'投げると広範囲の強制眩暈を引き起こす武器で、爆発の遅延時間が長い \n(クールダウン: <Description:1>)',																										],		//03		
+	
+	1111 : [/*'破片手雷',		Throw:GrenadeSeparate|ThrowCD:30,		*/'CD 30 秒, 以投掷点为圆心发出大量常规破片, 每片的伤害为 120, 破甲能力较低, 看起来很壮观, 但实际上效果有限',		'投擲後可以產生大量破片的手雷, 破甲能力較低, 因此看起來很壯觀實際上效果有限\n（冷卻: <Description:1>）',											'A grenade that breaks into fragments on impact. While the explosion seems specular, the actual effect is restricted by its low armor-piercing.\n(Cooldown: <Description:1>)',																														'投げると大量の破片を生成できるグレネード、装甲貫通能力が低いため、見た目は派手だが、効果は限られている\n(クールダウン:<Description:1>)',																	],		
+	1112 : [/*'穿甲破片手雷',	Throw:GrenadeSeparatePierce|ThrowCD:40,	*/'CD 40 秒, 以投掷点为圆心发出大量穿甲破片, 每片的伤害为 300, 该手雷的破甲能力较高, 但投掷后引爆有一定延迟',		'投擲後可以產生大量穿甲破片的手雷, 延時較長\n（冷卻: <Description:1>）',																			'A grenade with a long delay that breaks into armor penetration fragments on impact.\n(Cooldown: <Description:1>)',																																													'投げると大量の装甲貫通破片を生成できるグレネード、遅延が長め\n(クールダウン:<Description:1>)',																												],		//03		
+	
+	1113 : [/*'烟雾弹',			Throw:GrenadeSmoke|ThrowCD:50,			*/'CD 50 秒, 投掷可以产生大量烟雾的爆炸, 敌方于烟雾中会失去视野, 友方于烟雾中不会被敌人发现, 烟雾持续 10 秒',		'投擲後可以產生煙霧的手雷, 位於煙霧中的敵方單位將會失去視野, 位於煙霧中的友方單位不會被發現\n（冷卻: <Description:1>）',							'A grenade that generates smoke. Enemies in the smoke lose their field of vision while allies remain unseen.\n(Cooldown: <Description:1>)',																																							'投げると煙幕を出すことができるグレネード、煙幕の中の敵ユニットは視界を失い、煙幕の中の味方ユニットは発見されない\n(クールダウン:<Description:1>)',															],		
+	1114 : [/*'长效烟雾弹',		Throw:GrenadeSmokeLong|ThrowCD:60,		*/'CD 60 秒, 投掷可以产生大量烟雾的爆炸, 敌方于烟雾中会失去视野, 友方于烟雾中不会被敌人发现, 烟雾持续 20 秒',		'效果時間是普通煙霧彈三倍的煙霧彈\n（冷卻: <Description:1>）',																						'A smoke bomb that lasts three times as long as the regular smoke bomb.\n(Cooldown: <Description:1>)',																																																'効果時間が通常の煙幕弾よりも3倍長い煙幕弾\n(クールダウン:<Description:1>)',																																],		//03		
+	
+	1115 : [/*'照明弹',			Throw:GrenadeFlash|ThrowCD:40,			*/'CD 40 秒, 投掷可以产生范围性光照爆炸, 夜晚可用于照明, 白天可以降低敌人射程, 持续时间较短(具体的时长未知)',		'投擲後可以產生大範圍光照的投擲物（夜晚可以照明, 白天可以降低敵人的開火距離）\n（冷卻: <Description:1>）',											'A throwing object that generates a lot of lighting. (can be illuminated at night, and the enemy\'s firing distance can be reduced during the day)\n(Cooldown: <Description:1>)',																													'投げると広い範囲で照明を生成する投擲物（夜間は照明、昼間は敵の射程距離を縮める）\n(クールダウン: <Description:1>)',																						],		
+	1116 : [/*'长效照明弹',		Throw:GrenadeFlashLong|ThrowCD:50,		*/'CD 50 秒, 投掷可以产生范围性光照爆炸, 夜晚可用于照明, 白天可以降低敌人射程, 持续时间极长(具体的时长未知)',		'投擲後可以產生大範圍光照的投擲物, 時間極長（夜晚可以照明, 白天可以降低敵人的開火距離）\n（冷卻: <Description:1>）',								'A throwing object that generates a lot of lighting that lasts for a long time. (can be illuminated at night, and the enemy\'s firing distance can be reduced during the day)\n(Cooldown: <Description:1>)',																						'投げると広い範囲で照明を生成する投擲物、持続時間は極めて長い（夜間は照明、昼間は敵の射程距離を縮める）\n(クールダウン: <Description:1>)',																	],		//03		
+	
+	1117 : [/*'水炸弹',			Throw:GrenadeSeparateWater|ThrowCD:25,	*/'CD 25 秒, 产生大量水滴的爆炸, 破甲能力较低, 如果未被敌方抵抗, 可以造成潮湿效果',									'投擲後會產生大量水滴的手榴彈, 對護甲穿透能力較低, 如果未被敵方抵抗, 可以造成潮濕效果, \n（冷卻: <Description:1>）',								'A grenade that generates a large amount of water droplets upon detonation, with relatively low armor-piercing capabilities. If not resisted by the enemy, it can cause a wet effect.\n(Cooldown: <Description:1>)',																				'投げると大量の水滴を生成できるグレネード、装甲貫通能力が低い、敵に抵抗されていない場合は湿潤効果を付与できる\n(クールダウン: <Description:1>)',															],		
+	1119 : [/*'油炸弹',			Throw:GrenadeSeparateOil|ThrowCD:30,	*/'CD 30 秒, 产生大量油滴的爆炸, 破甲能力较低, 如果未被敌方抵抗, 可以造成油腻效果',									'投擲後可以產生大量油滴的手榴彈, 破甲能力較低, 如果未被敵方抵抗, 可以造成油膩效果, \n（冷卻: <Description:1>）',									'A grenade that generates a large amount of oil droplets upon detonation, with lower armor-piercing capability. If not resisted by the enemy, it can cause a greasy effect.\n(Cooldown: <Description:1>)',																						'投げると大量のオイルドロップを生成できるグレネード、装甲貫通能力が低い、敵に抵抗されていない場合は油まみれ効果を付与できる\n(クールダウン: <Description:1>)',													],		//03		
+	
+	1120 : [/*'干扰弹',			Throw:GrenadeAttractLight|ThrowCD:60,	*/'CD 60 秒, 投掷后可产生大量干扰音的爆炸, 可以吸引敌军注意力(更容易被暗杀), 已处于警戒状态的敌人无法被吸引',		'投擲後可產生大量干擾音, 可以吸引敵軍注意力一段時間\n被吸引的敵軍將更容易被暗殺\n已經處於警戒狀態的敵人無法被吸引\n（冷卻: <Description:1>）',		'A throwing object that can produce a large amount of interference sound, which can attract the attention of the enemy for a period of time\nThe enemies that are attracted are easier to be assasinated\nEnemies that are already on alert cannot be attracted\n(Cooldown: <Description:1>)',		'投げると投擲後に大量の妨害音が発生し、敵軍の注意をしばらく引き付けることができる\n引き込まれた敵軍は暗殺されやすいだろう\nすでに警戒状態にある敵は引きつけられない\n(クールダウン: <Description:1>)',		],		
+	1121 : [/*'投掷式地雷',		Throw:GrenadeMine|ThrowCD:150,			*/'CD 150秒, 投掷后会部署为战术地雷, 部署期间被激发只会造成很少的伤害, 但部署完成之后被激发, 可造成极大伤害',		'投擲後會部署為一枚戰術地雷, 部署期間會激發只會造成很少的傷害, 部署完成後激發可以造成極大傷害\n（冷卻: <Description:1>）',							'A throwing object that can deployed as a tactical landmine. During deployment, it will only cause minimal damage when triggered. After deployment, it can cause significant damage when triggered\n(Cooldown: <Description:1>)',																	'投げると投擲後は戦術地雷として配備され、配備期間中に励起されるとダメージが少ないだけで、配備完了後に励起されるとダメージが大きい\n(クールダウン: <Description:1>)',										],		//03		
+	
+	1124 : [/*'护盾破坏装置',	Throw:GrenadeAntiShiled|ThrowCD:75,		*/'CD 75 秒, 力场持续破坏护盾',																						'投擲後可以產生一個持續破壞護盾的力場\n（冷卻: <Description:1>）',																					'A throwing object that can generate a force field that continuously damages the shield. \n(Cooldown:<Description:1>)',																																												'投げるとシールドを破壊し続ける力場を作ることができます \n(クールダウン: <Description:1>)',																													],		
+	1125 : [/*'反隐形装置',		Throw:GrenadeAntiHide|ThrowCD:30,		*/'CD 30 秒, 产生持续破坏光学迷彩的力场(让敌军无法隐形)',															'投擲後可以產生一個持續破壞敵人光學迷彩的力場\n（冷卻: <Description:1>）',																			'A throwing object that can generate a force field that continuously destroys the enemy\'s optical camouflage. \n(Cooldown:<Description:1>)',																																						'投げると敵の光学迷彩を破壊し続ける力場を発生させることができる \n(クールダウン: <Description:1>)',																											],		
+	1104 : [/*'杀伤手雷',		Throw:GrenadeKill|ThrowCD:45,			*/'CD 45 秒, 投掷可以产生大爆炸的武器, 爆炸范围很广, 伤害为 6000 且带眩晕效果, 但是投掷后到引爆会有一定延迟',		'投擲後可以產生爆炸的武器, 殺傷很高, 但是引爆延時長\n（冷卻: <Description:1>）',																	'A throwing weapon that explodes on impact. High damage, and long delay.\n(Cooldown: <Description:1>)',																																															'投げると爆発を起こす武器、殺傷能力は高いが起爆遅延が長い\n(クールダウン:<Description:1>)',																														],		//03		
+	
 };
 
 // 物品类型
 let TypeList = {
-	Throw :			['投掷物品',		'投擲物品',		'Throwing object',		'投擲の物',					],
+	Throw : ['投掷物品',		'投擲物品',		'Throwing object',		'投擲の物',			],
 };
 
 // 归属种类
 let TagList = {
-	Throw : 		['投掷',			'投擲',			'Throwing object',		'投擲',						],
+	Throw : ['投掷',			'投擲',			'Throwing object',		'投擲',				],
 };
 
 // 原型研发
 let CompanyList = {
-	TankType_PlayerName_0 :	['玛丽',					'瑪麗',					'Mary',										'メアリー',					],
-	TankType_PlayerName_1 :	['库罗库',					'庫羅庫',				'Kuroku',									'クロック',					],
-	TankType_PlayerName_2 :	['桑',						'桑',					'San',										'サン',						],
-	TankType_PlayerName_3 :	['赭石色',					'赭石色',				'Ocher',									'オーカー',					],
-	TankType_PlayerName_4 :	['克莱尔',					'克萊爾',				'Claire',									'クレア',					],
-	Main_1 :				['帝国重工',				'帝國重工',				'Imperial Heavy Industries',				'帝国重工',					],
-	Main_2 :				['帝国武器制造总局',		'帝國武器製造總局',		'Imperial Weapon Manufacturing Bureau',		'帝国兵器製造局',			],
-	Main_3 :				['依热夫兵工厂',			'依熱夫兵工廠',			'Irev Arsenal',								'Irevアーセナル',			],
-	Main_4 :				['帝国兵器集团',			'帝國兵器集團',			'Imperial Weapon Group',					'帝国兵器集団',				],
-	Main_5 :				['皇家军械公司',			'皇家軍械公司',			'Royal Ordnance Company',					'王立武器会社',				],
-	Main_6 :				['帝国铁骑制造总局',		'帝國鐵騎製造總局',		'mperial Cavalry Manufacturing Bureau',		'帝国鉄騎製造総局',			],
-	Main2_1 :				['船舶集团有限公司',		'船舶集團有限公司',		'Shipbuilding Group Co., Ltd',				'船舶重工グループ株式会社',	],
-	Main2_2 :				['航空集团有限公司',		'航空集團有限公司',		'Aviation Group Co., Ltd',					'航空グループ株式会社',		],
-	Main2_3 :				['总装备制造局',			'總裝備製造局',			'General Equipment Manufacturing Bureau',	'汎用設備製造局',			],
-	Main2_4 :				['苏尔发动机制造局',		'蘇爾發動機製造局',		'Sul Engine Manufacturing Bureau',			'スールエンジン製造局',		],
-	Main2_5 :				['风神公司',				'風神公司',				'Hermes Company',							'風神公司',					],
-	Main2_6 :				['布尔发动机公司',			'布爾發動機公司',		'Boolean Engine Company',					'ブールエンジン株式会社',	],
-	Main2_7 :				['蓝天电子公司',			'藍天電子公司',			'Blue Sky Electronics Company',				'青空電子株式会社',			],
-	Main2_8 :				['首都兵工厂',				'首都兵工廠',			'Capital Arsenal',							'首都兵器工場',				],
-	Main2_9 :				['帝国火炮集团',			'帝國火炮集團',			'Imperial Artillery Group',					'帝国火砲集団',				],
-	Main2_10 :				['格罗姆钢管厂',			'格羅姆鋼管廠',			'Grom Steel Pipe Factory',					'グロム鋼管工場',			],
-	Main2_11 :				['弹头总装部',				'彈頭總裝部',			'Bullet Assembly Department',				'弾頭総装填部',				],
-	Main2_12 :				['帝国仪器厂',				'帝國儀器廠',			'Imperial Instrument Factory',				'帝国計器工場',				],
+	Main_3 : ['依热夫兵工厂',			'依熱夫兵工廠',			'Irev Arsenal',								'Irevアーセナル',		],
+	Main_4 : ['帝国兵器集团',			'帝國兵器集團',			'Imperial Weapon Group',					'帝国兵器集団',			],
+	Main_5 : ['皇家军械公司',			'皇家軍械公司',			'Royal Ordnance Company',					'王立武器会社',			],
+	Main_2 : ['帝国武器制造总局',		'帝國武器製造總局',		'Imperial Weapon Manufacturing Bureau',		'帝国兵器製造局',		],
 };
 
 // 合成材料
 let ScrapList = {
-	40001 :	['废铁',			'廢鐵',			'Scrap Iron',					'スクラップアイロン',		],
-	40002 :	['废料',			'廢料',			'Waste Material',				'スクラップ',				],
-	40003 :	['弹壳',			'彈殼',			'Bullet Shell',					'薬莢',						],
-	40004 :	['弹头',			'彈頭',			'Warhead',						'弾頭',						],
-	40005 :	['接合物件',		'接合物件',		'Joining Component',			'接続オブジェクト',			],
-	40006 :	['齿轮',			'齒輪',			'Gear',							'ギア',						],
-	40007 :	['框架',			'框架',			'Frame',						'フレーム',					],
-	40008 :	['铁管',			'鐵管',			'Iron Pipe',					'鉄パイプ',					],
-	40009 :	['扳机',			'扳機',			'Trigger',						'トリガー',					],
-	40010 :	['雷管',			'雷管',			'Detonator',					'起爆装置',					],
-	40011 :	['工业塑料',		'工業塑膠',		'Industrial Plastic',			'工業用プラスチック',		],
-	40012 :	['弹链',			'彈鏈',			'Ammunition Belt',				'弾帯',						],
-	40013 :	['棱镜',			'稜鏡',			'Prism',						'プリズム',					],
-	40014 :	['透镜',			'透鏡',			'Lens',							'レンズ',					],
-	40015 :	['点火器',			'點火器',		'Igniter',						'イグナイター',				],
-	40016 :	['冷凝管',			'冷凝管',		'Condenser',					'復水管',					],
-	40017 :	['线圈',			'線圈',			'Coil',							'コイル',					],
-	40018 :	['电容',			'電容',			'Capacitor',					'コンデンサ',				],
-	40019 :	['电感',			'電感',			'Inductor',						'インダクター',				],
-	40020 :	['三极管',			'三極管',		'Transistor',					'三極管',					],
-	40021 :	['润滑油',			'潤滑油',		'Lubricating Oil',				'潤滑油',					],
-	40022 :	['火花塞',			'火花塞',		'Spark Plug',					'スパークプラグ',			],
-	40023 :	['冷冻剂',			'冷凍劑',		'Refrigerant',					'冷媒',						],
-	40024 :	['装甲',			'裝甲',			'Armor',						'装甲',						],
-	40025 :	['厚装甲',			'厚裝甲',		'Heavy Armor',					'厚い装甲',					],
-	40026 :	['力场管',			'力場管',		'Force Field Generator',		'力場パイプ',				],
-	40027 :	['力场膜',			'力場膜',		'Force Field Membrane',			'力場膜',					],
-	40028 :	['共振器',			'共振器',		'Resonator',					'共振器',					],
-	40029 :	['刀片',			'刀片',			'Blade',						'ブレード',					],
-	40030 :	['振荡器',			'振盪器',		'Oscillator',					'発振回路',					],
-	40031 :	['涂层',			'塗層',			'Coating',						'コーティング',				],
-	40032 :	['核心',			'核心',			'Core',							'コア',						],
-};
-
-// 文本描述
-let DescriptionsList = {
-	
-	1101 : [/*'手榴弹',			Throw:Grenade|ThrowCD:30,				*/'CD 30 秒, 投掷可产生小型爆炸, 能够眩晕敌人, 一段爆炸伤害共:　900',																		'投擲後可以產生爆炸的武器\n（冷卻: <Description:1>）',																								'A throwing weapon that explodes on impact.\n(Cooldown: <Description:1>)',																																																							'投げると爆発を起こする武器\n(クールダウン:<Description:1>)',																																				],		
-	1102 : [/*'集束炸弹',		Throw:GrenadeMiddle|ThrowCD:35,			*/'CD 35 秒, 投掷可产生中型爆炸, 能够眩晕敌人, 二段爆炸伤害共: 1500',																		'投擲後可以產生大量爆炸的武器\n（冷卻: <Description:1>）',																							'A throwing weapon that causes a huge explosion on impact.\n(Cooldown: <Description:1>)',																																																			'投げると大量の爆発を起こす武器\n(クールダウン:<Description:1>)',																																			],		
-	1103 : [/*'高级集束炸弹',	Throw:GrenadeBig|ThrowCD:40,			*/'CD 40 秒, 投掷可产生大型爆炸, 能够眩晕敌人, 六段爆炸伤害共: 6000',																		'投擲後可以產生極多爆炸的武器\n（冷卻: <Description:1>）',																							'A throwing weapon that causes multiple explosions on impact.\n(Cooldown: <Description:1>)',																																																		'投げると非常に大量の爆発を起こす武器\n(クールダウン:<Description:1>)',																																		],		//02		
-	
-	1105 : [/*'寒冰炸弹',		Throw:GrenadeIce|ThrowCD:25,			*/'CD 25 秒, 投掷可以产生小型寒冷爆炸, 造成寒冷效果, 和直接伤害　40',																		'投擲後可以產生寒冷爆炸的武器, 寒冷時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a Cold explosion to make a Cold effect on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																							'投擲後に寒冷爆発を起こす武器、寒冷時間が長い\n（クールダウン: <Description:1>）',																															],		
-	1108 : [/*'集束寒冰炸弹',	Throw:GrenadeIceBig|ThrowCD:35,			*/'CD 35 秒, 投掷可以产生大型寒冷爆炸, 造成寒冷效果, 和直接伤害 120',																		'投擲後可以產生大量寒冷爆炸的武器, 寒冷時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large Cold explosion to affect Cold Effect on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																					'投擲後に大量の寒冷爆発を起こす武器、寒冷時間が長い\n（クールダウン: <Description:1>）',																													],		//02		
-	
-	1106 : [/*'燃烧炸弹',		Throw:GrenadeFlame|ThrowCD:40,			*/'CD 40 秒, 投掷可以产生小型燃烧爆炸, 持续燃烧 10 秒和直接伤害 100',																		'投擲後可以產生燃燒爆炸的武器, 燃燒時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a burning explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																												'投げると燃焼爆発を起こす武器、燃焼時間が非常に長い\n(クールダウン:<Description:1>)',																														],		
-	1109 : [/*'集束燃烧炸弹',	Throw:GrenadeFlameBig|ThrowCD:55,		*/'CD 55 秒, 投掷可以产生大型燃烧爆炸, 持续燃烧 12 秒和直接伤害 200',																		'投擲後可以產生大量燃燒爆炸的武器, 燃燒時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large burning explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																										'投げると大量の燃焼爆発を起こす武器、燃焼時間が非常に長い\n(クールダウン:<Description:1>)',																													],		//02		
-	
-	1107 : [/*'震撼弹',			Throw:GrenadeStun|ThrowCD:60,			*/'CD 60 秒, 投掷可以产生小型眩晕爆炸, 让敌人进入眩晕状态, 并直接造成伤害　50, 投掷后引爆有一定延迟',										'投擲後可以造成強制眩暈的武器, 引爆延時較長\n（冷卻: <Description:1>）',																			'A throwing object that can cause forced stun, with a longer detonation delay. \n(Cooldown:<Description:1>)',																																														'投げると強制眩暈を引き起こす武器で、爆発の遅延時間が長い \n(クールダウン: <Description:1>)',																												],		
-	1110 : [/*'集束震撼弹',		Throw:GrenadeStunBig|ThrowCD:80,		*/'CD 80 秒, 投掷可以造成大型眩晕爆炸, 让敌人进入眩晕状态, 并直接造成伤害 200, 投掷后引爆有一定延迟',										'投擲後可以造成大範圍強制眩暈的武器, 引爆延時較長\n（冷卻: <Description:1>）',																		'A throwing object that can cause  large-scale forced stun, with a longer detonation delay. \n(Cooldown:<Description:1>)',																																											'投げると広範囲の強制眩暈を引き起こす武器で、爆発の遅延時間が長い \n(クールダウン: <Description:1>)',																										],		//02		
-	
-	1118 : [/*'电磁炸弹',		Throw:GrenadeElectric|ThrowCD:30,		*/'CD 30 秒, 投掷可以产生小型麻痹爆炸, 直接造成伤害　50, 麻痹的时间很长(但具体的时长有待进一步确认)',										'投擲後可以產生麻痹爆炸的武器, 麻痹時間很長\n（冷卻: <Description:1>）',																			'A throwing weapon that causes a Paralysis explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																											'投擲後に麻痺爆発を起こす武器、麻痺時間が長い\n（クールダウン: <Description:1>）',																															],		
-	1122 : [/*'集束电磁炸弹',	Throw:GrenadeElectricBig|ThrowCD:40,	*/'CD 40 秒, 投掷可以产生大型麻痹爆炸, 直接造成伤害 150, 麻痹的时间很长(但具体的时长有待进一步确认)',										'投擲後可以產生大量麻痹爆炸的武器, 麻痹時間很長\n（冷卻: <Description:1>）',																		'A throwing weapon that causes a large Paralysis explosion on impact that lasts for a long time.\n(Cooldown: <Description:1>)',																																										'投擲後に大量の麻痺爆発を起こす武器、麻痺時間が長い\n（クールダウン: <Description:1>）',																													],		//02		
-	
-	1111 : [/*'破片手雷',		Throw:GrenadeSeparate|ThrowCD:30,		*/'CD 30 秒, 投掷可以产生大量常规破片, 以投掷点为圆心发出大量破片, 每片伤害为 120, 破甲能力较低, 因此看起来很壮观, 但实际上效果有限',		'投擲後可以產生大量破片的手雷, 破甲能力較低, 因此看起來很壯觀實際上效果有限\n（冷卻: <Description:1>）',											'A grenade that breaks into fragments on impact. While the explosion seems specular, the actual effect is restricted by its low armor-piercing.\n(Cooldown: <Description:1>)',																														'投げると大量の破片を生成できるグレネード、装甲貫通能力が低いため、見た目は派手だが、効果は限られている\n(クールダウン:<Description:1>)',																	],		
-	1112 : [/*'穿甲破片手雷',	Throw:GrenadeSeparatePierce|ThrowCD:40,	*/'CD 40 秒, 投掷可以产生大量穿甲破片, 以投掷点为圆心发出大量破片, 每片伤害为 300, 该手雷的破甲能力就比较高, 但投掷后引爆有一定延迟',		'投擲後可以產生大量穿甲破片的手雷, 延時較長\n（冷卻: <Description:1>）',																			'A grenade with a long delay that breaks into armor penetration fragments on impact.\n(Cooldown: <Description:1>)',																																													'投げると大量の装甲貫通破片を生成できるグレネード、遅延が長め\n(クールダウン:<Description:1>)',																												],		//02		
-	
-	1113 : [/*'烟雾弹',			Throw:GrenadeSmoke|ThrowCD:50,			*/'CD 50 秒, 投掷可以产生大量烟雾爆炸, 敌方于烟雾中会失去视野, 友方于烟雾中不会被发现, 将持续 10 秒',										'投擲後可以產生煙霧的手雷, 位於煙霧中的敵方單位將會失去視野, 位於煙霧中的友方單位不會被發現\n（冷卻: <Description:1>）',							'A grenade that generates smoke. Enemies in the smoke lose their field of vision while allies remain unseen.\n(Cooldown: <Description:1>)',																																							'投げると煙幕を出すことができるグレネード、煙幕の中の敵ユニットは視界を失い、煙幕の中の味方ユニットは発見されない\n(クールダウン:<Description:1>)',															],		
-	1114 : [/*'长效烟雾弹',		Throw:GrenadeSmokeLong|ThrowCD:60,		*/'CD 60 秒, 投掷可以产生大量烟雾爆炸, 敌方于烟雾中会失去视野, 友方于烟雾中不会被发现, 将持续 20 秒',										'效果時間是普通煙霧彈三倍的煙霧彈\n（冷卻: <Description:1>）',																						'A smoke bomb that lasts three times as long as the regular smoke bomb.\n(Cooldown: <Description:1>)',																																																'効果時間が通常の煙幕弾よりも3倍長い煙幕弾\n(クールダウン:<Description:1>)',																																],		//02		
-	
-	1115 : [/*'照明弹',			Throw:GrenadeFlash|ThrowCD:40,			*/'CD 40 秒, 投掷可以产生范围光照爆炸, 夜晚可照明, 白天可降低敌人的射程, 持续时间较短(具体时长未知)',										'投擲後可以產生大範圍光照的投擲物（夜晚可以照明, 白天可以降低敵人的開火距離）\n（冷卻: <Description:1>）',											'A throwing object that generates a lot of lighting. (can be illuminated at night, and the enemy\'s firing distance can be reduced during the day)\n(Cooldown: <Description:1>)',																													'投げると広い範囲で照明を生成する投擲物（夜間は照明、昼間は敵の射程距離を縮める）\n(クールダウン: <Description:1>)',																						],		
-	1116 : [/*'长效照明弹',		Throw:GrenadeFlashLong|ThrowCD:50,		*/'CD 50 秒, 投掷可以产生范围光照爆炸, 夜晚可照明, 白天可降低敌人的射程, 持续时间极长(具体时长未知)',										'投擲後可以產生大範圍光照的投擲物, 時間極長（夜晚可以照明, 白天可以降低敵人的開火距離）\n（冷卻: <Description:1>）',								'A throwing object that generates a lot of lighting that lasts for a long time. (can be illuminated at night, and the enemy\'s firing distance can be reduced during the day)\n(Cooldown: <Description:1>)',																						'投げると広い範囲で照明を生成する投擲物、持続時間は極めて長い（夜間は照明、昼間は敵の射程距離を縮める）\n(クールダウン: <Description:1>)',																	],		//02		
-	
-	1117 : [/*'水炸弹',			Throw:GrenadeSeparateWater|ThrowCD:25,	*/'CD 25 秒, 投掷可以产生大量水滴爆炸, 这种爆炸破甲能力较低, 但如果未被敌方抵抗, 就可以造成潮湿效果',										'投擲後會產生大量水滴的手榴彈, 對護甲穿透能力較低, 如果未被敵方抵抗, 可以造成潮濕效果, \n（冷卻: <Description:1>）',								'A grenade that generates a large amount of water droplets upon detonation, with relatively low armor-piercing capabilities. If not resisted by the enemy, it can cause a wet effect.\n(Cooldown: <Description:1>)',																				'投げると大量の水滴を生成できるグレネード、装甲貫通能力が低い、敵に抵抗されていない場合は湿潤効果を付与できる\n(クールダウン: <Description:1>)',															],		
-	1119 : [/*'油炸弹',			Throw:GrenadeSeparateOil|ThrowCD:30,	*/'CD 30 秒, 投掷可以产生大量油滴爆炸, 这种爆炸破甲能力较低, 但如果未被敌方抵抗, 就可以造成油腻效果',										'投擲後可以產生大量油滴的手榴彈, 破甲能力較低, 如果未被敵方抵抗, 可以造成油膩效果, \n（冷卻: <Description:1>）',									'A grenade that generates a large amount of oil droplets upon detonation, with lower armor-piercing capability. If not resisted by the enemy, it can cause a greasy effect.\n(Cooldown: <Description:1>)',																						'投げると大量のオイルドロップを生成できるグレネード、装甲貫通能力が低い、敵に抵抗されていない場合は油まみれ効果を付与できる\n(クールダウン: <Description:1>)',													],		//02		
-	
-	1120 : [/*'干扰弹',			Throw:GrenadeAttractLight|ThrowCD:60,	*/'CD 60 秒, 投掷可产生大量干扰音, 可以吸引敌军注意力(更容易被暗杀), 已处于警戒状态的敌人无法被吸引',										'投擲後可產生大量干擾音, 可以吸引敵軍注意力一段時間\n被吸引的敵軍將更容易被暗殺\n已經處於警戒狀態的敵人無法被吸引\n（冷卻: <Description:1>）',		'A throwing object that can produce a large amount of interference sound, which can attract the attention of the enemy for a period of time\nThe enemies that are attracted are easier to be assasinated\nEnemies that are already on alert cannot be attracted\n(Cooldown: <Description:1>)',		'投げると投擲後に大量の妨害音が発生し、敵軍の注意をしばらく引き付けることができる\n引き込まれた敵軍は暗殺されやすいだろう\nすでに警戒状態にある敵は引きつけられない\n(クールダウン: <Description:1>)',		],		
-	1121 : [/*'投掷式地雷',		Throw:GrenadeMine|ThrowCD:150,			*/'CD 150秒, 投掷会部署为战术地雷, 部署期间被激发只会造成很少的伤害, 但部署完成后激发可造成极大伤害',										'投擲後會部署為一枚戰術地雷, 部署期間會激發只會造成很少的傷害, 部署完成後激發可以造成極大傷害\n（冷卻: <Description:1>）',							'A throwing object that can deployed as a tactical landmine. During deployment, it will only cause minimal damage when triggered. After deployment, it can cause significant damage when triggered\n(Cooldown: <Description:1>)',																	'投げると投擲後は戦術地雷として配備され、配備期間中に励起されるとダメージが少ないだけで、配備完了後に励起されるとダメージが大きい\n(クールダウン: <Description:1>)',										],		//02		
-	
-	1124 : [/*'护盾破坏装置',	Throw:GrenadeAntiShiled|ThrowCD:75,		*/'CD 75 秒, 产生持续破坏护盾的力场',																										'投擲後可以產生一個持續破壞護盾的力場\n（冷卻: <Description:1>）',																					'A throwing object that can generate a force field that continuously damages the shield. \n(Cooldown:<Description:1>)',																																												'投げるとシールドを破壊し続ける力場を作ることができます \n(クールダウン: <Description:1>)',																													],		
-	1125 : [/*'反隐形装置',		Throw:GrenadeAntiHide|ThrowCD:30,		*/'CD 30 秒, 产生一个持续破坏敌人光学迷彩的力场(敌军变动无法隐形了)',																		'投擲後可以產生一個持續破壞敵人光學迷彩的力場\n（冷卻: <Description:1>）',																			'A throwing object that can generate a force field that continuously destroys the enemy\'s optical camouflage. \n(Cooldown:<Description:1>)',																																						'投げると敵の光学迷彩を破壊し続ける力場を発生させることができる \n(クールダウン: <Description:1>)',																											],		
-	1104 : [/*'杀伤手雷',		Throw:GrenadeKill|ThrowCD:45,			*/'CD 45 秒, 投掷可以产生爆炸的武器, 爆炸范围巨大, 伤害为 6000 且带眩晕效果, 但投掷后引爆有一定延迟',										'投擲後可以產生爆炸的武器, 殺傷很高, 但是引爆延時長\n（冷卻: <Description:1>）',																	'A throwing weapon that explodes on impact. High damage, and long delay.\n(Cooldown: <Description:1>)',																																															'投げると爆発を起こす武器、殺傷能力は高いが起爆遅延が長い\n(クールダウン:<Description:1>)',																														],		//02		
-	
+	40001 :	['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
+	40002 :	['废料',			'廢料',				'Waste Material',				'スクラップ',				],
+	40003 :	['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
+	40004 :	['弹头',			'彈頭',				'Warhead',						'弾頭',						],
+	40005 :	['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
+	40006 :	['齿轮',			'齒輪',				'Gear',							'ギア',						],
+	40007 :	['框架',			'框架',				'Frame',						'フレーム',					],
+	40008 :	['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
+	40009 :	['扳机',			'扳機',				'Trigger',						'トリガー',					],
+	40010 :	['雷管',			'雷管',				'Detonator',					'起爆装置',					],
+	40011 :	['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
+	40012 :	['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
+	40013 :	['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
+	40014 :	['透镜',			'透鏡',				'Lens',							'レンズ',					],
+	40015 :	['点火器',			'點火器',			'Igniter',						'イグナイター',				],
+	40016 :	['冷凝管',			'冷凝管',			'Condenser',					'復水管',					],
+	40017 :	['线圈',			'線圈',				'Coil',							'コイル',					],
+	40018 :	['电容',			'電容',				'Capacitor',					'コンデンサ',				],
+	40019 :	['电感',			'電感',				'Inductor',						'インダクター',				],
+	40020 :	['三极管',			'三極管',			'Transistor',					'三極管',					],
+	40021 :	['润滑油',			'潤滑油',			'Lubricating Oil',				'潤滑油',					],
+	40022 :	['火花塞',			'火花塞',			'Spark Plug',					'スパークプラグ',			],
+	40023 :	['冷冻剂',			'冷凍劑',			'Refrigerant',					'冷媒',						],
+	40024 :	['装甲',			'裝甲',				'Armor',						'装甲',						],
+	40025 :	['厚装甲',			'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
+	40026 :	['力场管',			'力場管',			'Force Field Generator',		'力場パイプ',				],
+	40027 :	['力场膜',			'力場膜',			'Force Field Membrane',			'力場膜',					],
+	40028 :	['共振器',			'共振器',			'Resonator',					'共振器',					],
+	40029 :	['刀片',			'刀片',				'Blade',						'ブレード',					],
+	40030 :	['振荡器',			'振盪器',			'Oscillator',					'発振回路',					],
+	40031 :	['涂层',			'塗層',				'Coating',						'コーティング',				],
+	40032 :	['核心',			'核心',				'Core',							'コア',						],
 };
 
 // ---------------------------------------------
@@ -438,29 +455,48 @@ tbodyArray01.forEach(function(item){
 		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][0]) +'</td>' }else 
 		
 		// 归属种类
-		if(index === 10){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : 
-		data.split('|').map(function(e){ return TagList[e][0] }).join('<br />')) +'</td>' }else 
+		if(index === 10){
+			let result = data.split('|').map(
+			function(e){ return TagList[e][0] }).join(' | ');
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
+		}else 
 		
 		// 原型研发
-		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (CompanyList[data][0]) +'</td>' }else 
+		if(index === 11){
+			let result = CompanyList[data][0];
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
+		}else 
 		
 		// 合成材料
-		if(index === 12){ powerTable_tbody_node01 += '<td>'+ (
-			data === '-' ? '-' : 
-				data.split('|').map(function(material){
-					let [name, count, ] = material.split('_');
-					return (count + ScrapList[name][0])
-				}).join(' + ')
-		) +'</td>' }else 
+		if(index === 12){
+			let result = data;
+			if(result != '-'){
+				result=data.split('|').map(function(string){
+					let [name, count, ] = string.split('_');
+					if(name.charAt(0) === '4'){ return count + ScrapList[name][0] }
+					else if(name.charAt(0) === '1'){ return count + ItemsNameList[name][0] }
+				}).join(' + ');
+			};
+			powerTable_tbody_node01 += 
+			'<td>'+ (result === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>'
+		}else 
 		
 		// 出现条件
-		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (
-			data === '-' ? 'Unlock' : data.split('|').map(function
-			(string){ return ItemsNameList[string][0] }).join(' | ')
-		) +'</td>' }else 
+		if(index === 13){
+			let result = '';
+			let dataList = [];
+			data.split('|').forEach(function(code){
+				if(code.indexOf('_') === -1){ dataList.push(code) }else{
+					let [start, end, ] = code.split('_');
+					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
+				};
+			});
+			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
+		}else 
 		
 		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -478,36 +514,29 @@ buildPowerTable('powerTable01');
 
 // 配件等级
 let attrSelect01Option = [
-	{text: 'Level +1',					value: '1',			},
-	{text: 'Level +2',					value: '2',			},
-	{text: 'Level -1(满级)',			value: '-1',		},
-	{text: 'Level -2(不可升级)',		value: '-2',		},
-	{text: 'Level -3(-1 + -2 = -3)',	value: '-3',		},
+	{value: '1',	text: ['Level +1',						'Level +1',						'Level +1',						'Level +1',						],		},
+	{value: '2',	text: ['Level +2',						'Level +2',						'Level +2',						'Level +2',						],		},
+	{value: '-1',	text: ['Level -1(满级)',				'Level -1(滿級)',				'Level -1(Full)',				'Level -1(最高)',				],		},
+	{value: '-2',	text: ['Level -2(不可升级)',			'Level -2(不可升級)',			'Level -2(AntiGoUp)',			'Level -2(進階不可)',			],		},
+	{value: '-3',	text: ['Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		],		},
 ];
 
 // 物品类型
 let attrSelect02Option = [
-	{text: '投掷物品 / Throwing object',		value: 'Throw',			},
+	{value: 'Throw',		text: ['投掷物品',		'投擲物品',		'Throwing object',		'投擲の物',			],		},
 ];
 
 // 归属种类
 let attrSelect03Option = [
-	{text: '投掷 / Throwing object',			value: 'Throw',			},
+	{value:'Throw',			text: ['投掷',			'投擲',			'Throwing object',		'投擲',				],		},
 ];
 
 // 原型研发
 let attrSelect04Option = [
-	{text: '玛丽 / Mary',													value: 'TankType_PlayerName_0',		},
-	{text: '库罗库 / Kuroku',												value: 'TankType_PlayerName_1',		},
-	{text: '桑 / San',														value: 'TankType_PlayerName_2',		},
-	{text: '赭石色 / Ocher',												value: 'TankType_PlayerName_3',		},
-	{text: '克莱尔 / Claire',												value: 'TankType_PlayerName_4',		},
-	{text: '帝国重工 / Imperial Heavy Industries',							value: 'Main_1',					},
-	{text: '帝国武器制造总局 / Imperial Weapon Manufacturing Bureau',		value: 'Main_2',					},
-	{text: '依热夫兵工厂 / Irev Arsenal',									value: 'Main_3',					},
-	{text: '帝国兵器集团 / Imperial Weapon Group',							value: 'Main_4',					},
-	{text: '皇家军械公司 / Royal Ordnance Company',							value: 'Main_5',					},
-	{text: '帝国铁骑制造总局 / mperial Cavalry Manufacturing Bureau',		value: 'Main_6',					},
+	{value: 'Main_3',		text: ['依热夫兵工厂',			'依熱夫兵工廠',			'Irev Arsenal',								'Irevアーセナル',		],		},
+	{value: 'Main_4',		text: ['帝国兵器集团',			'帝國兵器集團',			'Imperial Weapon Group',					'帝国兵器集団',			],		},
+	{value: 'Main_5',		text: ['皇家军械公司',			'皇家軍械公司',			'Royal Ordnance Company',					'王立武器会社',			],		},
+	{value: 'Main_2',		text: ['帝国武器制造总局',		'帝國武器製造總局',		'Imperial Weapon Manufacturing Bureau',		'帝国兵器製造局',		],		},
 ];
 
 // 创建空值
@@ -517,10 +546,10 @@ let attrSelect03Html = '<option value="empty" selected="selected" style="backgro
 let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
 
 // 生成结构
-attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
+attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
+attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
+attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
 
 // 创建元素
 let jqi_attrSelect01 = $('#attrSelect01').html(attrSelect01Html);
@@ -571,7 +600,7 @@ let filterFunction = function(event){
 	.forEach(function(text, index01){
 		tbodyArray01.forEach(function(item, index02){
 			if(item[3].indexOf(text) >= 0 
-			|| DescriptionsList[item[1]][0].indexOf(text) >= 0){
+			|| DescriptionList[item[1]][0].indexOf(text) >= 0){
 				
 				// if(jqi_attrSelect01_value !== 'empty' 
 				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
@@ -635,7 +664,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
 </div>
 </div>
 </div>
@@ -648,7 +677,7 @@ jqi_resetButton.on('click', function(){
 		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
 		<div id="pub_toolAnchorTip">
 			<a href="#heading01">01. 基本信息</a>
-			<a href="#heading02">02. 备注内容</a>
+			<a href="#heading02">02. 额外拓展</a>
 		</div>
 	</div>
 </div>

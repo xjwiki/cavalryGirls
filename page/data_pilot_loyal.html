@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+
+<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<title>忠诚好感</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>忠诚好感</span><small>(人情世故)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 礼物勋章</h2>
+
+<p>
+	01. 总共有 <code>30</code> 种礼物勋章, 送队友可降低脑负荷或加技能点, 并提升忠诚度, 但队长没忠诚度概念, 取而代之的是: <a href="./data_pilot_think.html">思潮影响.html</a>; <br />
+	02. 它们可在商店购买, 也能在休息室制作, 或是在有机合成组合成, 勋章是特例, 尽管也能买到, 但主要获取途径是休息日完成委托; <br />
+	03. 当队长思潮为博爱时, 队友收到礼物后有概率会回赠物品给队长, 不能将回赠的物品再送回去给她, 但是转增给其她队友就没问题; <br />
+	04. 不同角色的喜好是不同的, 送最爱的礼物可额外增加忠诚度, 反之则会减忠诚度, 关于角色喜好的细节, 可以查阅: <a href="./data_pilot_intro.html">主角小队.html</a>; <br />
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
+			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #e45fba 0%, #e45fba 75%, #e45fba 75%, #e45fba 75%, #e45fba 75%, #e45fba 100%);"></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大堆叠<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">减脑负荷<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">加技能点<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">制作对象<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 奖励效果</h2>
+
+<p>
+	01. 以下是角色忠诚度的奖励列表, "标题"是对话事件的文本, "需求"是忠诚度达标的点数, "差值"是 2 个级别之间需要的忠诚度数值; <br />
+	02. 玛丽在剧情模式下固定是队长, 因为没忠诚度, 所以不会触发这些事件, 但无尽模式下可选择其她人做队长, 就能得到这些奖励了; <br />
+	03. 有些装备需要获得后才能解锁合成, 商店也才可能售卖, 剧情模式由于玛丽无法获得忠诚奖励, 所以"肩扛航炮"是固定无法解锁的; <br />
+	04. 尽管玛丽的这些奖励也都很不错, 但如果不是为了解锁全图鉴(肩扛航炮/自制咖啡), 则无尽模式下让玛丽继续担任队长最具性价比; <br />
+</p>
+
+<table originalSort="0" id="powerTable02" class="powerTable table-xs table-hover"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="number" style="width: 40px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">对象<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:160px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">标题<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">事件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">需求<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">差值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;padding-bottom:4px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">结果<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading03">03. 额外拓展</h2>
+
+<p>送礼技巧: 赠送礼物给角色, 除了能降低她的脑负荷或增加技能点之外, 如果礼物是角色的最爱, 还能额外 <code>+3</code> 忠诚度, 如果礼物是角色喜欢的, 则是额外 <code>+1</code> 忠诚度, 如果礼物是角色讨厌的, 那么将会 <code>-1</code> 忠诚度, 某些礼物对某个角色是最爱, 但对某个角色则可能是讨厌, 例如库罗库喜欢的玩具和甜食, 对克莱尔而言就都是讨厌, 所以送礼的时候要看准, 可别送错了, 值得注意的是, 由于队长并没有忠诚度机制, 所以你可以把大家都讨厌的营养膏都喂给队长, 但大家都喜欢的可乐/咖啡/便当就没必要送队长了, 留着给别人更划算;</p>
+
+<p>忠诚提升: 送礼时, 跳出几个蓝心就是增进了几点的忠诚度(给队友晋升军衔/送队友进城娱乐/某些事件选项也都有机会加忠诚度), 角色爱心边框的颜色越蓝, 就说明当前阶段忠诚度越接近满值, 当爱心变成纯蓝就是满了, 那么你可以在第二天去休息室, 耗费 <code>1</code> 行动点触发剧情以获得奖励, 并进入下阶段的忠诚度, 如果这阶段的忠诚度满了却还继续送礼, 则增加的忠诚度会 <code>× 5</code> 后转成降低的脑负荷;</p>
+
+<p>好感溢出: 当我们送礼给某个角色的时候, 每天只有第一份礼物会增加忠诚度(假如这个礼物是她的最爱或喜欢), 之后再送的礼物就会变成降低脑负荷了, 例如说第二份礼物原本可以 <code>+3</code> 忠诚度, 此时增加的忠诚度会 <code>× 5</code> 后转成降低的脑负荷, 也就是 <code>-15</code> 脑负荷;</p>
+
+<p>————</p>
+
+<p>烟酒危害: 将香烟或酒当作礼物送给角色, 都会导致这个角色的某项能力永久性降低(甚至可被降成负数), 降低的目标能力项是随机的, 而具体的数值算法为 <code>减脑负荷 ÷ 15 × 属性修正</code>, 结果向下取整, 如果是武器散射/射击间隔/武器维护, 则属性修正为 <code>2</code>, 如果是装弹时间/移动速度/奔跑速度, 则属性修正为 <code>1</code>, 例如说你送了一份酒, 而随机到的属性修正为"武器散射", 那么接收礼物的角色, 武器散射的能力将会降低 <code>Floor(50 ÷ 15 × 2) = 6</code>, 总而言之, 香烟和酒还是用于贿赂吧, 虽然你不能没有它们, 但是别用在自己身上;</p>
+
+<p>回礼机制: 实际上角色的回礼并非随机的, 当忠诚度到达或超过 <code>1|3|6|9|12|15|19|22|24|28|33|39|45|51|57|64|72|80|88|96</code> 这些数值的时候, 就会触发一次回礼, 如果某个数值被跳过, 例如从 <code>0</code> 直接到达 <code>4</code>, 则触发的是 <code>3</code> 的回礼, 而 <code>1</code> 的回礼会被跳过, 当角色的忠诚度满之后了(十二颗心), 每隔 <code>5</code> 天就会送队长一次礼物(自动触发), 不过收到回礼还有个大前提, 就是思潮不能为自私;</p>
+
+<p>价值兑换: 如果你仔细观察, 也许就会发现, 礼物的价格和减压值是有关联的, 基本上它们会保持 <code>1 : -1</code> 的关系, 也就是礼物值多少钱, 就能降低多少的脑负荷, 当然一些大家都喜欢的礼物, 例如可乐便当会更贵一些, 而大家都讨厌或有副作用的礼物, 则会更加便宜;</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 表格样式 */
+#powerTable01 .hideTr{display:none;}
+</style>
+
+
+
+<script>/* 数据注解 */
+/*
+CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax:0
+Syns = NeedWeapon = ColorPlus = Cluster = '-',
+Level:1, Tag = '-',
+
+*/
+
+// 表01数据
+let tbodyArray01 = [
+	
+	//高亮,		项目图片,	项目序号,	项目名称,		|	项目代码,		参考价格,		默认排序,		项目类型,		归属种类,			最大堆叠,		解锁天数,		减脑负荷,			加技能点,	|	制作对象,						文本描述,		],		
+	//Active,	Image,		Number,		Name,			|	Items,			Price,			ResolveID,		Type,			Tag,				MaxPile,		Day,			DownPressure,		AddPoint,	|	Company,						Description,	],		//01		
+	
+	[1,			7,			'01',		'咖啡',				7,				36,				875,			'Present',		'Consumable',		99,				31,				-36,				0,				'Sub_8',						'-',			],		
+	[1,			18,			'02',		'可乐',				18,				15,				886,			'Present',		'Consumable',		99,				26,				-1,					0,				'Sub_8',						'-',			],		//01		
+	
+	[0,			1,			'03',		'玩偶',				1,				12,				869,			'Present',		'Consumable',		99,				16,				-12,				0,				'Sub_3',						'-',			],		
+	[0,			2,			'04',		'甜品',				2,				36,				870,			'Present',		'Consumable',		99,				21,				-36,				0,				'Sub_8',						'-',			],		//01		
+	
+	[1,			8,			'05',		'时尚杂志',			8,				12,				876,			'Present',		'Consumable',		99,				16,				-12,				0,				'Sub_2',						'-',			],		
+	[1,			9,			'06',		'漂亮衣服',			9,				20,				877,			'Present',		'Consumable',		99,				21,				-20,				0,				'Sub_2',						'-',			],		//01		
+	
+	[0,			3,			'07',		'废旧报纸',			3,				12,				871,			'Present',		'Consumable',		99,				16,				-12,				0,				'Book_1',						'-',			],		
+	[0,			4,			'08',		'各式书本',			4,				20,				872,			'Present',		'Consumable',		99,				26,				-20,				0,				'Book_1',						'-',			],		//01		
+	
+	[1,			10,			'09',		'弹壳',				10,				12,				878,			'Present',		'Consumable',		99,				16,				-12,				0,				'Sub_3',						'-',			],		
+	[1,			11,			'10',		'唱片',				11,				20,				879,			'Present',		'Consumable',		99,				21,				-20,				0,				'Main2_7',						'-',			],		//01		
+	
+	[0,			16,			'11',		'营养膏',			16,				20,				884,			'Present',		'Consumable',		99,				18,				-35,				0,				'Sub_8',						'-',			],		
+	[0,			5,			'12',		'香烟',				5,				12,				873,			'Present',		'Consumable',		99,				16,				-40,				0,				'Sub_1',						'-',			],		
+	[0,			6,			'13',		'酒',				6,				12,				874,			'Present',		'Consumable',		99,				16,				-50,				0,				'Sub_1',						'-',			],		//01		
+	
+	[1,			12,			'14',		'量产勋章',			12,				20,				880,			'Present',		'Consumable',		99,				11,				0,					'+1',			'Sub_4',						'-',			],		
+	[1,			13,			'15',		'标准勋章',			13,				45,				881,			'Present',		'Consumable',		99,				21,				0,					'+2',			'Sub_4',						'-',			],		
+	[1,			14,			'16',		'英雄勋章',			14,				90,				882,			'Present',		'Consumable',		99,				31,				0,					'+4',			'Sub_4',						'-',			],		//01		
+	
+	[0,			15,			'17',		'干粮',				15,				5,				883,			'Present',		'Consumable',		99,				10,				-7,					0,				'Sub_8',						'-',			],		
+	[0,			19,			'18',		'罐头',				19,				15,				887,			'Present',		'Consumable',		99,				10,				-15,				0,				'Sub_8',						'-',			],		
+	[0,			0,			'19',		'野战口粮',			0,				8,				868,			'Present',		'Consumable',		99,				10,				-9,					0,				'Sub_8',						'-',			],		
+	[0,			20,			'20',		'压缩饼干',			20,				25,				888,			'Present',		'Consumable',		99,				10,				-25,				0,				'Sub_8',						'-',			],		//01		
+	
+	[1,			17,			'21',		'便当',				17,				12,				885,			'Present',		'Consumable',		99,				13,				-4,					0,				'Sub_8',						'-',			],		
+	[1,			30,			'22',		'自制咖啡',			30,				10,				890,			'Present',		'Consumable',		99,				999,			-18,				0,				'TankType_PlayerName_0',		'-',			],		//01		
+	
+	[0,			31,			'23',		'手作饼干',			31,				10,				891,			'Present',		'Consumable',		99,				999,			-18,				0,				'TankType_PlayerName_1',		'-',			],		
+	[0,			35,			'24',		'红茶',				35,				10,				895,			'Present',		'Consumable',		99,				999,			-30,				0,				'TankType_PlayerName_1',		'-',			],		//01		
+	
+	[1,			32,			'25',		'首饰',				32,				10,				892,			'Present',		'Consumable',		99,				999,			-10,				0,				'TankType_PlayerName_2',		'-',			],		
+	[1,			36,			'26',		'香水',				36,				10,				896,			'Present',		'Consumable',		99,				999,			-20,				0,				'TankType_PlayerName_2',		'-',			],		//01		
+	
+	[0,			34,			'27',		'旧奖章',			34,				10,				894,			'Present',		'Consumable',		99,				999,			-10,				0,				'TankType_PlayerName_4',		'-',			],		
+	[0,			38,			'28',		'子弹花',			38,				10,				898,			'Present',		'Consumable',		99,				999,			-20,				0,				'TankType_PlayerName_4',		'-',			],		//01		
+	
+	[1,			33,			'29',		'小说草稿',			33,				10,				893,			'Present',		'Consumable',		99,				999,			-10,				0,				'TankType_PlayerName_3',		'-',			],		
+	[1,			37,			'30',		'哲学巨著',			37,				10,				897,			'Present',		'Consumable',		99,				999,			0,					'+2',			'TankType_PlayerName_3',		'-',			],		//01		
+	
+];
+
+// 表02数据
+let tbodyArray02 = [
+	
+	//高亮,		序号,		对象,				标题,							代码,				事件,		等级,		需求,		差值,		结果,		],		
+	//Active,	Number,		Target,				Plot,							LoyaltyLevelUp,		Event,		Level,		Required,	Gap,		Result,		],		//01		
+	
+	[1,			'01',		'100_Name', 		'队长好',						'0_1',				513,		'01',		3,			3,			'-',		],		
+	[1,			'02',		'100_Name', 		'我做了点有趣的东西',			'0_2',				515,		'02',		9,			6,			'-',		],		
+	[1,			'03',		'100_Name', 		'给你一个好东西吧',				'0_3',				517,		'03',		15,			6,			'-',		],		
+	[1,			'04',		'100_Name', 		'我做了一些改进',				'0_4',				523,		'04',		23,			8,			'-',		],		
+	[1,			'05',		'100_Name', 		'又做了点有趣的东西',			'0_5',				520,		'05',		30,			7,			'-',		],		
+	[1,			'06',		'100_Name', 		'看看我的最新成果',				'0_6',				521,		'06',		37,			7,			'-',		],		
+	[1,			'07',		'100_Name', 		'又有一个好东西',				'0_7',				525,		'07',		47,			10,			'-',		],		
+	[1,			'08',		'100_Name', 		'今天做了很危险的事',			'0_8',				528,		'08',		56,			9,			'-',		],		
+	[1,			'09',		'100_Name', 		'我自己做的呢',					'0_9',				530,		'09',		66,			10,			'-',		],		
+	[1,			'10',		'100_Name', 		'头好疼',						'0_10',				531,		'10',		76,			10,			'-',		],		
+	[1,			'11',		'100_Name', 		'我又改进了一下成果',			'0_11',				534,		'11',		88,			12,			'-',		],		
+	[1,			'12',		'100_Name', 		'我有个好消息',					'0_12',				536,		'12',		100,		12,			'-',		],		//01		
+	
+	[0,			'13',		'101_Name', 		'队长好啊',						'1_1',				401,		'01',		3,			3,			'-',		],		
+	[0,			'14',		'101_Name', 		'有个事儿',						'1_2',				403,		'02',		9,			6,			'-',		],		
+	[0,			'15',		'101_Name', 		'送你个好东西',					'1_3',				406,		'03',		15,			6,			'-',		],		
+	[0,			'16',		'101_Name', 		'是不是心情不太好',				'1_4',				499,		'04',		23,			8,			'-',		],		
+	[0,			'17',		'101_Name', 		'又有了新进展',					'1_5',				408,		'05',		30,			7,			'-',		],		
+	[0,			'18',		'101_Name', 		'被骂了呢',						'1_6',				410,		'06',		37,			7,			'-',		],		
+	[0,			'19',		'101_Name', 		'有好东西',						'1_7',				412,		'07',		47,			10,			'-',		],		
+	[0,			'20',		'101_Name', 		'是烦恼吗',						'1_8',				501,		'08',		56,			9,			'-',		],		
+	[0,			'21',		'101_Name', 		'我成功啦',						'1_9',				416,		'09',		66,			10,			'-',		],		
+	[0,			'22',		'101_Name', 		'新的应用',						'1_10',				419,		'10',		76,			10,			'-',		],		
+	[0,			'23',		'101_Name', 		'好消息耶',						'1_11',				421,		'11',		88,			12,			'-',		],		
+	[0,			'24',		'101_Name', 		'我有些话想跟你说',				'1_12',				423,		'12',		100,		12,			'-',		],		//01		
+	
+	[1,			'25',		'102_Name', 		'队长好',						'2_1',				424,		'01',		3,			3,			'-',		],		
+	[1,			'26',		'102_Name', 		'给你个东西',					'2_2',				426,		'02',		9,			6,			'-',		],		
+	[1,			'27',		'102_Name', 		'这个我用不上了',				'2_3',				428,		'03',		15,			6,			'-',		],		
+	[1,			'28',		'102_Name', 		'我狠狠揍了他们一顿',			'2_4',				503,		'04',		23,			8,			'-',		],		
+	[1,			'29',		'102_Name', 		'又有新的技术突破了',			'2_5',				430,		'05',		30,			7,			'-',		],		
+	[1,			'30',		'102_Name', 		'我自己做了点新东西',			'2_6',				432,		'06',		37,			7,			'-',		],		
+	[1,			'31',		'102_Name', 		'我又做了些新的东西',			'2_7',				435,		'07',		47,			10,			'-',		],		
+	[1,			'32',		'102_Name', 		'我又打人了',					'2_8',				504,		'08',		56,			9,			'-',		],		
+	[1,			'33',		'102_Name', 		'又来了用不上的东西',			'2_9',				436,		'09',		66,			10,			'-',		],		
+	[1,			'34',		'102_Name', 		'有个好东西',					'2_10',				439,		'10',		76,			10,			'-',		],		
+	[1,			'35',		'102_Name', 		'基建部又出新玩意了',			'2_11',				441,		'11',		88,			12,			'-',		],		
+	[1,			'36',		'102_Name', 		'终于做好了',					'2_12',				444,		'12',		100,		12,			'-',		],		//01		
+	
+	[0,			'37',		'103_Name', 		'你好',							'3_1',				447,		'01',		3,			3,			'-',		],		
+	[0,			'38',		'103_Name', 		'报告',							'3_2',				449,		'02',		9,			6,			'-',		],		
+	[0,			'39',		'103_Name', 		'报告',							'3_3',				451,		'03',		15,			6,			'-',		],		
+	[0,			'40',		'103_Name', 		'你好',							'3_4',				505,		'04',		23,			8,			'-',		],		
+	[0,			'41',		'103_Name', 		'有份报告',						'3_5',				454,		'05',		30,			7,			'-',		],		
+	[0,			'42',		'103_Name', 		'有个事儿',						'3_6',				457,		'06',		37,			7,			'-',		],		
+	[0,			'43',		'103_Name', 		'有份报告',						'3_7',				460,		'07',		47,			10,			'-',		],		
+	[0,			'44',		'103_Name', 		'有个东西',						'3_8',				507,		'08',		56,			9,			'-',		],		
+	[0,			'45',		'103_Name', 		'有个奖章',						'3_9',				462,		'09',		66,			10,			'-',		],		
+	[0,			'46',		'103_Name', 		'有件事儿',						'3_10',				466,		'10',		76,			10,			'-',		],		
+	[0,			'47',		'103_Name', 		'有好消息',						'3_11',				469,		'11',		88,			12,			'-',		],		
+	[0,			'48',		'103_Name', 		'终于完成',						'3_12',				472,		'12',		100,		12,			'-',		],		//01		
+	
+	[1,			'49',		'104_Name', 		'Hello~',						'4_1',				475,		'01',		3,			3,			'-',		],		
+	[1,			'50',		'104_Name', 		'好消息唉',						'4_2',				477,		'02',		9,			6,			'-',		],		
+	[1,			'51',		'104_Name', 		'送你个宝贝',					'4_3',				480,		'03',		15,			6,			'-',		],		
+	[1,			'52',		'104_Name', 		'我去打点了一下',				'4_4',				509,		'04',		23,			8,			'-',		],		
+	[1,			'53',		'104_Name', 		'弄了一些很新的东西',			'4_5',				483,		'05',		30,			7,			'-',		],		
+	[1,			'54',		'104_Name', 		'我刚调制了一些烈性炸药',		'4_6',				484,		'06',		37,			7,			'-',		],		
+	[1,			'55',		'104_Name', 		'我又有好东西了',				'4_7',				486,		'07',		47,			10,			'-',		],		
+	[1,			'56',		'104_Name', 		'又去打点了一下',				'4_8',				511,		'08',		56,			9,			'-',		],		
+	[1,			'57',		'104_Name', 		'有个好玩意给你',				'4_9',				488,		'09',		66,			10,			'-',		],		
+	[1,			'58',		'104_Name', 		'有新武器了',					'4_10',				491,		'10',		76,			10,			'-',		],		
+	[1,			'59',		'104_Name', 		'有新武器咯',					'4_11',				493,		'11',		88,			12,			'-',		],		
+	[1,			'60',		'104_Name', 		'给你个惊喜',					'4_12',				496,		'12',		100,		12,			'-',		],		//01		
+	
+];
+
+// 项目名称
+let ItemsNameList = {
+	
+	7 :		['咖啡',			'咖啡',				'Coffee',							'コーヒー',				],		
+	18 :	['可乐',			'可樂',				'Coke',								'コーラ',				],		//02		
+	
+	1 :		['玩偶',			'玩偶',				'Doll',								'人形',					],		
+	2 :		['甜品',			'甜品',				'Dessert',							'デザート',				],		//02		
+	
+	8 :		['时尚杂志',		'時尚雜誌',			'Fashion Magazine',					'ファッション誌',		],		
+	9 :		['漂亮衣服',		'漂亮衣服',			'Pretty Clothes',					'綺麗なお洋服',			],		//02		
+	
+	3 :		['废旧报纸',		'廢舊報紙',			'Old Newspaper',					'古い新聞紙',			],		
+	4 :		['各式书本',		'書本',				'Book',								'本',					],		//02		
+	
+	10 :	['弹壳',			'彈殼',				'Bullet Shell',						'薬莢',					],		
+	11 :	['唱片',			'唱片',				'Vinyl',							'レコード',				],		//02		
+	
+	16 :	['营养膏',			'營養膏',			'Nutrition Paste',					'栄養クリーム',			],		
+	5 :		['香烟',			'香菸',				'Cigarette',						'シガレット',			],		
+	6 :		['酒',				'酒',				'Liquor',							'酒',					],		//02		
+	
+	12 :	['量产勋章',		'量產勳章',			'Mass-Produced Medal',				'量産メダル',			],		
+	13 :	['标准勋章',		'標準勳章',			'Standard Medal',					'制式メダル',			],		
+	14 :	['英雄勋章',		'英雄勳章',			'Hero Medal',						'英雄メダル',			],		//02		
+	
+	15 :	['干粮',			'乾糧',				'Field Rations',					'携行食',				],		
+	19 :	['罐头',			'罐頭',				'Canned food',						'缶詰',					],		
+	0 :		['野战口粮',		'口糧包',			'Ration Pack',						'配給パック',			],		
+	20 :	['压缩饼干',		'壓縮餅乾',			'Hardtack',							'圧縮ビスケット',		],		//02		
+	
+	17 :	['便当',			'便當',				'Bento',							'お弁当',				],		
+	30 :	['自制咖啡',		'自製咖啡',			'Homemade Coffee',					'自家製コーヒー',		],		//02		
+	
+	31 :	['手作饼干',		'手作餅乾',			'Homemade Biscuit',					'手作りビスケット',		],		
+	35 :	['红茶',			'紅茶',				'Black Tea',						'紅茶',					],		//02		
+	
+	32 :	['首饰',			'首飾',				'Jewelry',							'装身具',				],		
+	36 :	['香水',			'香水',				'Perfume',							'香水',					],		//02		
+	
+	34 :	['旧奖章',			'舊獎章',			'Old Medal',						'古いメダル',			],		
+	38 :	['子弹花',			'子彈花',			'Flowers of bullets',				'弾丸の花',				],		//02		
+	
+	33 :	['小说草稿',		'小說草稿',			'Novel Draft',						'小説の下書き',			],		
+	37 :	['哲学巨著',		'哲學巨著',			'Philosophical masterpiece',		'哲学傑作',				],		//02		
+	
+	Present : ['礼物',		'禮物',		'Gift',		'贈物',		],
+	
+	Consumable : ['耗品', 		'耗品', 	'Consumable',		'消耗品',		],
+	
+	Sub_1 :		['格鲁公司',				'格魯公司',				'Grub Corporation',						'Grub株式会社',								],
+	Sub_2 :		['诺普德公司',				'諾普德公司',			'Novode Company',						'Novode株式会社',							],
+	Sub_3 :		['红树林制造局',			'紅樹林製造局',			'Mangrove Manufacturing Bureau',		'マングローブ製造局',						],
+	Sub_4 :		['科尔第一集团公司',		'科爾第一集團公司',		'Cole First Group Company',				'コール第一グループ会社',					],
+	Sub_5 :		['科尔第二集团公司',		'科爾第二集團公司',		'Cole Second Group Company',			'コール第二グループ会社',					],
+	Sub_6 :		['拜克家具',				'拜克傢俱',				'BAIC Furniture',						'BAIC家具株式会社',							],
+	Sub_7 :		['第一家居',				'第一家居',				'First Home International Group',		'第一ホームインターナショナルグループ',		],
+	Sub_8 :		['联合食品',				'聯合食品',				'United Food Company',					'共同食品株式会社',							],
+	
+	Book_1 :	['帝国出版总局',			'帝國出版總局',			'Imperial Publishing Bureau',			'帝国出版局',								],
+	Book_2 :	['共和国出版社',			'共和國出版社',			'Republic Publishing House',			'共和国出版社',								],
+	Book_3 :	['自由军出版社',			'自由軍出版社',			'Free Army Press',						'自由軍出版社',								],
+	
+	Main2_7 :	['蓝天电子公司',			'藍天電子公司',			'Blue Sky Electronics Company',			'青空電子株式会社',							],
+	
+	TankType_PlayerName_0 :	['玛丽',		'瑪麗',					'Mary',									'メアリー',									],
+	TankType_PlayerName_1 :	['库罗库',		'庫羅庫',				'Kuroku',								'クロック',									],
+	TankType_PlayerName_2 :	['桑',			'桑',					'San',									'サン',										],
+	TankType_PlayerName_3 :	['赭石色',		'赭石色',				'Ocher',								'オーカー',									],
+	TankType_PlayerName_4 :	['克莱尔',		'克萊爾',				'Claire',								'クレア',									],
+	
+	'0_1' :		['队长好',						'隊長好',						'Hello Captain',											'ハァイ、隊長',							],
+	'0_2' :		['我做了点有趣的东西',			'我做了一點有趣的東西',			'I made something interesting',								'ちょっと面白いものを作ってみたよ',		],
+	'0_3' :		['给你一个好东西吧',			'給你個好東西',					'Here\'s something good for you',							'いいものをあげる',						],
+	'0_4' :		['我做了一些改进',				'做了一些改進',					'Made some improvements',									'いくつか改良を加えたよ',				],
+	'0_5' :		['又做了点有趣的东西',			'又做了一點有趣的東西',			'I did something interesting again',						'またちょっと面白いものを作ったよ',		],
+	'0_6' :		['看看我的最新成果',			'看看我的最新成果',				'Take a look at my latest achievements',					'私の最新の成果を見て',					],
+	'0_7' :		['又有一个好东西',				'又有個好東西',					'There\'s another good thing',								'またいいものがあるよ',					],
+	'0_8' :		['今天做了很危险的事',			'今天做了一件很危險的事',		'I did something very dangerous today',						'今日は危険なことをした',				],
+	'0_9' :		['我自己做的呢',				'我自己做的',					'I made it myself',											'自分で作ったよ',						],
+	'0_10' :	['头好疼',						'頭好疼',						'My head hurts a lot',										'頭が痛い',								],
+	'0_11' :	['我又改进了一下成果',			'我改進了一下成果',				'I improved the results a bit',								'改善したよ',							],
+	'0_12' :	['我有个好消息',				'好消息！',						'Good news!',												'良いニュースだよ！',					],
+	
+	'1_1' :		['队长好啊',					'隊長好啊',						'Hello, Captain!',											'こんにちは隊長',						],
+	'1_2' :		['有个事儿',					'有個事兒！',					'I have something to tell you!',							'ちょっとお願いが！',					],
+	'1_3' :		['送你个好东西',				'送你個好東西',					'Here\'s something for you',								'素敵なものをあげる',					],
+	'1_4' :		['是不是心情不太好',			'是不是心情不太好',				'Are you feeling a bit blue',								'どうかしたの？',						],
+	'1_5' :		['又有了新进展',				'又有了新的進展',				'New progress made',										'新しい進捗だよ',						],
+	'1_6' :		['被骂了呢',					'被罵了',						'I was scolded',											'叱られちゃった',						],
+	'1_7' :		['有好东西',					'有個好東西！',					'Here\'s something nice!',									'いいものがあるよ！',					],
+	'1_8' :		['是烦恼吗',					'有煩惱了嗎',					'Are you troubled',											'悩み事？',								],
+	'1_9' :		['我成功啦',					'我成功啦！',					'I did it!',												'やったよ！',							],
+	'1_10' :	['新的应用',					'有新的應用了',					'New applications available',								'新しいガジェットができたよ',			],
+	'1_11' :	['好消息耶',					'好消息！',						'Good news!',												'朗報だよ！',							],
+	'1_12' :	['我有些话想跟你说',			'隊長, 我有話想跟你說',			'Captain, I have something to tell you',					'隊長、話したいことがあるの',			],
+	
+	'2_1' :		['队长好',						'隊長好',						'Hello, Captain!',											'よお、隊長！',							],
+	'2_2' :		['给你个东西',					'給你個東西',					'Here\'s something for you',								'渡すモノがある',						],
+	'2_3' :		['这个我用不上了',				'這個我用不上了',				'I don\'t need it anymore',									'これはもう必要ない',					],
+	'2_4' :		['我狠狠揍了他们一顿',			'揍了他們一頓',					'I kicked their asses',										'あいつらをぶん殴った',					],
+	'2_5' :		['又有新的技术突破了',			'又有新的技術突破了',			'New technical breakthrough made',							'技術革新だぜ',							],
+	'2_6' :		['我自己做了点新东西',			'我自己做了點新東西',			'I made some new stuff by myself',							'新しく作った',							],
+	'2_7' :		['我又做了些新的东西',			'又做了些東西',					'I made something again',									'また作った',							],
+	'2_8' :		['我又打人了',					'又打人了',						'I hit someone again',										'また殴っちまった',						],
+	'2_9' :		['又来了用不上的东西',			'又來了, 用不上的東西',			'Again, things I don\'t need',								'また要らないものばかり',				],
+	'2_10' :	['有个好东西',					'有個好東西',					'Here\'s something nice',									'いいものがあるぜ！',					],
+	'2_11' :	['基建部又出新玩意了',			'基建部又出新玩意了',			'The Infrastructure Division has made something new',		'インフラ部がまたなんか作った',			],
+	'2_12' :	['终于做好了',					'終於做好了',					'It\'s finally done',										'ついに出来た',							],
+	
+	'3_1' :		['你好',						'你好',							'Hello',													'こんにちは',							],
+	'3_2' :		['报告',						'報告',							'Here\'s a report',											'報告',									],
+	'3_3' :		['报告',						'报告',							'Hello',													'こんにちは',							],
+	'3_4' :		['你好',						'你好',							'Hello',													'こんにちは',							],
+	'3_5' :		['有份报告',					'有份報告',						'Here\'s a report',											'報告',									],
+	'3_6' :		['有个事儿',					'有個事兒',						'I have something to tell you',								'少しお願いが',							],
+	'3_7' :		['有份报告',					'有份報告',						'Here\'s a report',											'報告',									],
+	'3_8' :		['有个东西',					'有個東西',						'Here\'s something for you',								'朗報',									],
+	'3_9' :		['有个奖章',					'有獎章',						'It\'s a medal',											'メダル',								],
+	'3_10' :	['有件事儿',					'有個事兒',						'I have something to tell you',								'少しお願いが',							],
+	'3_11' :	['有好消息',					'好消息',						'Good news',												'朗報',									],
+	'3_12' :	['终于完成',					'終於完成',						'It\'s finally done',										'ついに出来た',							],
+	
+	'4_1' :		['Hello~',						'Hello~',						'Hello~',													'Hello~',								],
+	'4_2' :		['好消息唉',					'好消息唉',						'Good news',												'朗報だよ',								],
+	'4_3' :		['送你个宝贝',					'送你個寶貝',					'Here\'s something for you',								'いいものをあげる',						],
+	'4_4' :		['我去打点了一下',				'我去打點了一下',				'I used my connections',									'話をつけてきたよ',						],
+	'4_5' :		['弄了一些很新的东西',			'弄了一些很新的東西',			'And get some novel stuff',									'新しいものを作ったよ',					],
+	'4_6' :		['我刚调制了一些烈性炸药',		'我剛調製了一些烈性炸藥',		'I made some powerful explosives',							'高性能爆薬を調合したよ',				],
+	'4_7' :		['我又有好东西了',				'又有好東西啦',					'Here\'s something good',									'いいものあるよ',						],
+	'4_8' :		['又去打点了一下',				'我又去打點了一下',				'I used my connections',									'また話をつけてたよ',					],
+	'4_9' :		['有个好玩意给你',				'諾, 有個好玩意給你',			'Here. This is for you',									'いいものあげる',						],
+	'4_10' :	['有新武器了',					'有新武器了',					'A new weapon',												'新しい武器があるよ',					],
+	'4_11' :	['有新武器咯',					'有新武器咯',					'Wow, a new weapon',										'新しい武器だよ',						],
+	'4_12' :	['给你个惊喜',					'給你個驚喜',					'Here\'s a surprise for you',								'サプライズ',							],
+	
+	'100_Name' :	['玛　丽',		'瑪　麗',		'Mary',		'メアリー',		],
+	'101_Name' :	['库罗库',		'庫羅庫',		'Kuroku',	'クロック',		],
+	'102_Name' :	['桑/San',		'桑/San',		'San',		'サン',			],
+	'103_Name' :	['赭石色',		'赭石色',		'Ocher',	'オーカー',		],
+	'104_Name' :	['克莱尔',		'克萊爾',		'Claire',	'クレア',		],
+	
+};
+
+// 文本描述
+let DescriptionsList = {
+	
+	7 :		[/*'咖啡',			DownPressure:-36,		*/'不知道从哪里搞到的咖啡豆磨成的粉, 味道不算好, 但是不招人讨厌(所有人都喜欢该礼物)',												'不知道從哪里搞到的咖啡豆磨成的粉, 味道不算好, 但是不招人討厭\n成員腦負荷<Description>',																		'Coffee ground from coffee beans of an unknown origin. Not so good in taste,  but not terrible either.\nCrew brainload <Description>',																																'どこで手に入れたのかわからないコーヒー豆を挽いたもの, 味はあまり良くないが、嫌われるほどでものない\nメンバーの脳への負荷<Description>',																								],		
+	18 :	[/*'可乐',			DownPressure:-1,		*/'谁又能拒绝快乐水呢, 虽然它真的没什么热量(这是所有人的最爱, 送礼可极大提升好感度)',												'誰又能拒絕快樂水呢, 雖然他真的沒什麼熱量\n成員腦負荷<Description>',																							'Everyone loves this soda drink,  even though it contains very few calories.\nCrew brainload <Description>',																																						'コーラを拒絶できる人間なんて居る？あんまカロリーないけど\nメンバーの脳への負荷<Description>',																																			],		//03		
+	
+	1 :		[/*'玩偶',			DownPressure:-12,		*/'用战场上的弹片拼成的玩具, 有童心的人一定会喜欢的(库罗库的最爱, 但克莱尔讨厌这个)',												'用戰場上的彈片拼成的玩具, 有童心的人一定會喜歡的\n成員腦負荷<Description>',																					'Toy made with bullet fragments found on the battlefield. It awakens the inner child in you.\nCrew brainload <Description>',																																		'戦場からの破片でできたおもちゃ、子供っぽい無邪気な人はきっと気に入るはず\nメンバーの脳への負荷<Description>',																															],		
+	2 :		[/*'甜品',			DownPressure:-36,		*/'从煤焦油提炼的甜味剂可能致癌, 但有些人还是会喜欢(库罗库的最爱, 但克莱尔讨厌这个)',												'雖然是從煤焦油裏提煉的甜味劑, 吃多了可能會致癌, 但是他是甜的! 深受年輕人喜愛\n成員腦負荷<Description>',														'This sweetener loved by young people is extracted from coal tar. Over-consumption may lead to cancer,  but it\'s so sweet!\nCrew brainload <Description>',																											'コールタールから抽出した甘味料、食べ過ぎるとガンの原因になるが、甘い! 若い人たちに愛されている\nメンバーの脳への負荷<Description>',																									],		//03		
+	
+	8 :		[/*'时尚杂志',		DownPressure:-12,		*/'描绘上流人奢靡生活的杂志, 但听说真的上流可比这劲大多了(桑的最爱, 赭石色讨厌这个)',												'描繪上流人奢靡生活的雜誌, 不過聽說真正的上流生活可比這個勁大多了\n成員腦負荷<Description>',																	'A magazine that depicts the extravagant lives of the upper class. Although it\'s rumored that their real lives are much more eye-opening.\nCrew brainload <Description>',																							'上流階級の贅沢な生活を描いた雑誌, でも、本当のハイライフはこれよりずっと過激らしい\nメンバーの脳への負荷<Description>',																												],		
+	9 :		[/*'漂亮衣服',		DownPressure:-20,		*/'应是百货商场被轰炸后找到的, 毕竟军队已经生产不了新衣服(桑的最爱, 赭石色讨厌这个)',												'應該是百貨商場被轟炸後被人找到的, 畢竟軍隊可已經生產不了新衣服了\n成員腦負荷<Description>',																	'Probably found after the mall was bombed,  as the army likely cannot produce new clothes anymore.\nCrew brainload <Description>',																																	'デパートが爆撃された後に発見されたものらしい, なんせ軍隊はもう新しい服を生産できなくなった\nメンバーの脳への負荷<Description>',																										],		//03		
+	
+	3 :		[/*'废旧报纸',		DownPressure:-12,		*/'大部分是无意义的歌颂, 但有些填字游戏是读书者的福音(赭石色的最爱, 库罗库讨厌这个)',												'雖然大部分都是毫無卵用的歌頌報導, 但是你能找到填字遊戲! 讀書愛好者的福音\n成員腦負荷<Description>',															'Most of the content is useless propaganda,  but there are crossword puzzles! The best gift for book lovers.\nCrew brainload <Description>',																														'そのほとんどは役に立たない褒め称える報道だが、クロスワードパズルを見つけることができる!本好きにはたまらない\nメンバーの脳への負荷<Description>',																						],		
+	4 :		[/*'各式书本',		DownPressure:-20,		*/'曾是管制物品, 如今战事正鏖, 对违禁品的管理也变松了(赭石色的最爱, 库罗库讨厌这个)',												'曾經是管制物品, 如今戰事正鏖, 對這些違禁品的管理也變松了\n成員腦負荷<Description>',																			'Books were once a controlled item. With the raging ongoing war,  the restriction on these prohibited items has been eased.\nCrew brainload <Description>',																											'かつては規制品だったが、戦争が激化した今、これらの禁制品の管理も緩くなった\nメンバーの脳への負荷<Description>',																														],		//03		
+	
+	10 :	[/*'弹壳',			DownPressure:-12,		*/'战场上到处都是, 但这是少数比较完整的, 有些人会喜欢收藏(克莱尔的最爱, 桑讨厌这个)',												'戰場上到處都是, 但這是少數比較完整的, 有些人喜歡收藏\n成員腦負荷<Description>',																				'The battlefields are full of them. This is a rare,  intact one. Some people collect them.\nCrew brainload <Description>',																																			'戦場のどこにでもあるが、これは数少ない比較的完全なものだ, 一部の人々は好んで収集している\nメンバーの脳への負荷<Description>',																											],		
+	11 :	[/*'唱片',			DownPressure:-20,		*/'花到几乎无法正常播放的老旧唱片, 不过有人把它当纪念品卖(克莱尔的最爱, 桑讨厌这个)',												'十分老舊, 已經花到幾乎無法正常播放的唱片, 不過有人把它當紀念品來賣\n成員腦負荷<Description>',																	'An old vinyl that can barely be played. Some sell it as a collectible.\nCrew brainload <Description>',																																								'非常に古く、ほとんど再生できないレコードだが、お土産として販売している人もいる\nメンバーの脳への負荷<Description>',																													],		//03		
+	
+	15 :	[/*'干粮',			DownPressure:-7,		*/'合成的有机营养块, 不好吃也不健康, 但便宜',																						'合成有機營養塊, 他可能不好吃也不健康, 但是真的很便宜\n成員腦負荷<Description>',																				'A synthetic organic nutritional block. Neither tasty nor healthy,  but it\'s really cheap.\nCrew brainload <Description>',																																			'合成有機栄養ブロック, おいしくもなければ健康的ではないかもしれんが、とても安い\nメンバーの脳への負荷<Description>',																													],		
+	19 :	[/*'罐头',			DownPressure:-15,		*/'肉馅的, 只不过都是人造肉, 所以口味会很柴',																						'肉餡的, 但是是人造肉, 很柴\n成員腦負荷<Description>',																											'Meat filling,  but it\'s artificial meat,  it\'s very cheesy\nCrew brainload <Description>',																																										'肉が詰まっているが、人工肉でとても乾いている\nメンバーの脳への負荷<Description>',																																						],		
+	0 :		[/*'野战口粮',		DownPressure:-9,		*/'没味道, 但是用生物质压制, 不是合成营养块',																						'真正的口糧包, 雖然沒有任何味道, 但是這是用生物質壓制的, 不再是合成有機營養塊! \n成員腦負荷<Description>',														'A real ration pack. Although flavorless,  it\'s made of pressed biomass,  not synthetic organic nutrition block!\nCrew brainload <Description>',																													'本物の配給パック、味は一切しないが、これは合成有機栄養ブロックではなく、本物のバイオマスで圧縮されている! \nメンバーの脳への負荷<Description>',																						],		
+	20 :	[/*'压缩饼干',		DownPressure:-25,		*/'量大管饱, 因为有咸味, 所以也不是特别难吃',																						'量大管飽, 有鹹味所以也不是特別難吃\n成員腦負荷<Description>',																									'Large in quantity and full,  with a salty taste,  so it\'s not particularly unpleasant to eat\nCrew brainload <Description>',																																		'大量供給品、塩味も効いているのでそんなに不味くない\nメンバーの脳への負荷<Description>',																																				],		//03		
+	
+	16 :	[/*'营养膏',		DownPressure:-35,		*/'这应该是世界上味道最糟糕的食物了, 吃了会让人连续恶心一整天, 但必须承认真的很顶饱(所有人都讨厌它, 但队长没忠诚度, 随便吃)',		'世界上最難吃的食物, 吃了會讓人噁心一整天, 但是真的很頂飽\n成員腦負荷<Description>',																			'The worst type of food in the world. No one likes it,  but it keeps the belly full.\nCrew brainload <Description>',																																				'世界最悪の食べ物、食べると一日中嫌な気分になる, でも腹持ちがいい\nメンバーの脳への負荷<Description>',																																	],		
+	5 :		[/*'香烟',			DownPressureDanger:-40,	*/'用不知道从哪搞来的正品烟量产的山寨烟, 平均一根含烟丝三厘米, 这不是送女孩的好礼物(所有人都讨厌它, 会永久性的降低角色能力)',		'用不知道從哪里搞來的正品香菸量產的山寨煙, 平均一根含煙絲三釐米, 不過這不是送女孩的好禮物\n(警告：可能有意想不到的副作用)\n成員腦負荷<Description>',			'Mass-produced counterfeit cigarettes based on a genuine brand obtained from an unknown source. Each cigarette is three centimeters long. Not an ideal gift for girls.\n(warning: may come with unexpected side effects)\nCrew brainload <Description>',			'入手先不明の本物のシガレットをバラして大量生産した偽造タバコ、平均3cmの刻みタバコが含まれている, ただし、女の子へのプレゼントに向いていない\n(警告:意図しない副作用が発生する可能性がある)\nメンバーの脳への負荷<Description>',		],		
+	6 :		[/*'酒',			DownPressureDanger:-50,	*/'从冷冻剂里萃取乙醇后再精炼的饮品, 喜欢它的人会视它为神明吧, 但不是送女孩的好礼物(尽管没人讨厌它, 会永久性的降低角色能力)',		'從冷凍劑裏萃取的乙醇精煉的飲品, 喜歡它的人會視它為神明吧\n(警告：可能有意想不到的副作用)\n成員腦負荷<Description>',											'An ethanol-refined drink extracted from refrigerant. Those who like it will die for it.\n(warning: may come with unexpected side effects)\nCrew brainload <Description>',																							'冷媒から抽出されたエタノール精製飲料, 好きな人にとっては神に見えるだろう\n(警告:意図しない副作用が発生する可能性がある)\nメンバーの脳への負荷<Description>',																			],		//03		
+	
+	12 :	[/*'量产勋章',		AddPoint:1,				*/'为了应付激增的征召兵员临时赶制的勋章, 可以说是烂大街了(玛丽喜欢它, 其她人则无感)',												'為了應付激增的徵召兵員臨時趕制的勳章, 可以說是爛大街了, \n成員升級點數<Description>',																			'A mass-produced medal for the surge of conscripts. They\'re quite common.\nCrew leveling up points <Description>',																																					'徴兵制の急増に対応するために即席で作ったメダル、どこにでもあるガラクタ, \nメンバーのレベルアップポイント<Description>',																												],		
+	13 :	[/*'标准勋章',		AddPoint:2,				*/'战争初期颁发的勋章, 比起赶制的勋章, 还是有一定含金量的(玛丽的最爱, 其他人也喜欢)',												'戰爭初期頒發的勳章, 比起趕制的勳章還是有一定含金量的, \n成員升級點數<Description>',																			'A medal given at the start of the war. It\'s worth more than the mass-produced ones.\nCrew leveling up points <Description>',																																		'開戦初期に発行されたメダル、急いで作ったメダルに比べて、まだある程度の価値が残っている, \nメンバーのレベルアップポイント<Description>',																								],		
+	14 :	[/*'英雄勋章',		AddPoint:4,				*/'这是在上场卫国战争颁发的荣誉勋章, 但是它是如何流落到市场上的(所有人都喜欢该礼物)',												'上一場衛國戰爭的榮譽勳章, 可是他是怎麼流落到市場上的, \n成員升級點數<Description>',																			'The Medal of Honor from the last great war. How did it end up on the market?\nCrew leveling up points <Description>',																																				'前回の護国戦争のメダル、どうやって市場に出回ったのだろうか, \nメンバーのレベルアップポイント<Description>',																															],		//03		
+	
+	17 :	[/*'便当',			DownPressure:-4,		*/'比起罐头来说要美味一点, 不过也没那么顶饱(所有人都喜欢该礼物, 就像咖啡那样的存在)',												'比起罐頭來說要美味一點, 不過也沒那麼頂飽\n成員腦負荷<Description>',																							'Slightly more delicious than canned food,  but doesn\'t fill up the stomach as much.\nCrew brainload <Description>',																																				'缶詰よりちょっと美味しいけど、腹ごしらえには向いてない\nメンバーの脳への負荷<Description>',																																			],		
+	30 :	[/*'自制咖啡',		DownPressure:-18,		*/'自己磨的咖啡豆后冲泡的咖啡, 很香浓的味道(这是玛丽非队长的时候, 送礼给玛丽的回礼)',												'自己磨的咖啡豆沖泡的咖啡, 很香濃的味道\n成員腦負荷<Description>',																								'Coffee brewed from coffee beans ground by the user. Quite aromatic.\nCrew brainload <Description>',																																								'自家挽きのコーヒー豆で淹れた、香り高いコーヒー\nメンバーの脳への負荷<Description>',																																					],		//03		
+	
+	31 :	[/*'手作饼干',		DownPressure:-18,		*/'有点糊的饼干, 不过味道还是很不错的, 很香(这是我们送礼给库罗库后, 库罗库给的回礼)',												'有點糊, 不過味道很不錯, 很香\n成員腦負荷<Description>',																										'Slightly over-baked,  but tastes good.\nCrew brainload <Description>',																																																'少しどろどろだが、味はとても良く、とても香りがよい\nメンバーの脳への負荷<Description>',																																				],		
+	35 :	[/*'红茶',			DownPressure:-30,		*/'这是一杯库罗库自己手工泡制的美味<s>昏睡</s>红茶(库罗库六心忠诚度送的礼物, 全局只有一份)',										'一杯自己泡制的美味紅茶\n成員腦負荷<Description>',																												'A cup of delicious black tea brewed by oneself\nCrew brainload <Description>',																																														'美味しい自家製紅茶1杯\nメンバーの脳への負荷<Description>',																																												],		//03		
+	
+	32 :	[/*'首饰',			DownPressure:-10,		*/'可以看得出是自己用现有首饰改造的饰品, 非常的精致(这是我们送礼给桑后, 桑给的回礼)',												'可以看得出是自己用現有首飾改造的飾品, 非常精緻\n成員腦負荷<Description>',																						'A delicate ornament made from old pieces of jewelry.\nCrew brainload <Description>',																																												'既存の装身具に自分で手を加えたアクセサリーであることが分かる、とても精巧\nメンバーの脳への負荷<Description>',																															],		
+	36 :	[/*'香水',			DownPressure:-20,		*/'这是桑她自己精心调配的一款香水, 味道非常独特(桑六心忠诚度送的礼物, 全局只有一份)',												'一款自己調配的香水\n成員腦負荷<Description>',																													'A self prepared perfume\nCrew brainload <Description>',																																																			'自分で調合した香水\nメンバーの脳への負荷<Description>',																																												],		//03		
+	
+	34 :	[/*'旧奖章',		DownPressure:-10,		*/'似乎是上一次作战的奖章, 写着"颁给克莱尔"(这是我们送礼给克莱尔后, 克莱尔给的回礼)',												'似乎是上一次作戰的獎章, “頒給克萊爾”\n成員腦負荷<Description>',																								'Seems to be a medal from the last war. On it engraved "To Claire".\nCrew brainload <Description>',																																									'「クレアへ」、前回の作戦のメダルと思われる\nメンバーの脳への負荷<Description>',																																						],		
+	38 :	[/*'子弹花',		DownPressure:-20,		*/'这是克莱尔用废旧弹壳拼成的一朵工艺品花朵(克莱尔六心忠诚度送的礼物, 全局只有一份)',												'一支用廢舊彈殼拼成的工藝品花朵\n成員腦負荷<Description>',																										'A handicraft flower made from waste bullet shells\nCrew brainload <Description>',																																													'廃棄薬莢で作られた手工芸品の花\nメンバーの脳への負荷<Description>',																																									],		//03		
+	
+	33 :	[/*'小说草稿',		DownPressure:-10,		*/'某小说的手稿, 比市面上能买到的有意思多了(这是我们送礼给赭石色后, 赭石色给的回礼)',												'某小說的手稿, 比市面上能買到的有意思多了\n成員腦負荷<Description>',																							'The draft of a novel,  much more interesting than the ones publicly sold.\nCrew brainload <Description>',																																							'とある小説の原稿、市場で買えるものよりもずっと面白い\nメンバーの脳への負荷<Description>',																																				],		
+	37 :	[/*'哲学巨著',		AddPoint:2,				*/'一部极其晦涩难懂的哲学巨著, 可增加技能点(赭石色六心忠诚度送的礼物, 全局只有一份)',												'一部極其晦澀難懂的哲學巨著\n成員升級點數<Description>',																										'A philosophical masterpiece that is extremely obscure and difficult to understand\nCrew leveling up points <Description>',																																			'非常に難解な哲学傑作\nメンバーのレベルアップポイント<Description>',																																									],		//03		
+	
+	'0_1' :		[/*'ThrownCDDown:10',			*/'投掷物品冷却时间 - 10%',					'投擲物冷卻-<Description>%',								'Throwing object Cooldown -<Description>%',																			'投擲物クールダウン-<Description>%',												],
+	'0_2' :		[/*'AddItem:1103',				*/'获得: 高级集束炸弹',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_3' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_4' :		[/*'StrategyCDDown:20',			*/'战略武器冷却时间 - 20%',					'戰略武器冷卻-<Description>%',								'Strategic weapon cooldown -<Description>%',																		'戦略兵器クールダウン-<Description>%',												],
+	'0_5' :		[/*'AddItem:1254',				*/'获得: 肩扛航炮',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_6' :		[/*'AddItem:3011',				*/'获得: 枪塔许可',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_7' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_8' :		[/*'SkillCDDown:5',				*/'战场技能冷却时间 -　5%',					'技能冷卻-<Description>%',									'Skill cooldown -<Description>%',																					'スキルクールダウン-<Description>%',												],
+	'0_9' :		[/*'AddItem:265',				*/'获得: 玉过载框架(挂画)',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_10' :	[/*'SkillCDDown:10',			*/'战场技能冷却时间 - 10%',					'技能冷卻-<Description>%',									'Skill cooldown -<Description>%',																					'スキルクールダウン-<Description>%',												],
+	'0_11' :	[/*'AddItem:3012',				*/'获得: 枪塔许可(升级版)',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'0_12' :	[/*'SkillCDDown:20',			*/'战场技能冷却时间 - 20%',					'技能冷卻-<Description>%',									'Skill cooldown -<Description>%',																					'スキルクールダウン-<Description>%',												],
+	
+	'1_1' :		[/*'PressureUpDown:2',			*/'所有角色脑负荷增长 - 2',					'全局壓力增長降低<Description>',							'Overall Pressure Increment Down <Description>',																	'グローバルストレス増加量が<Description>低下する',									],
+	'1_2' :		[/*'AddItem:1304',				*/'获得: 空投路障',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_3' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_4' :		[/*'PressureUpDown:2',			*/'所有角色脑负荷增长 - 2',					'全局壓力增長降低<Description>',							'Overall Pressure Increment Down <Description>',																	'グローバルストレス増加量が<Description>低下する',									],
+	'1_5' :		[/*'AddItem:1305',				*/'获得: 空投地雷',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_6' :		[/*'AddItem:1302',				*/'获得: 地毯轰炸',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_7' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_8' :		[/*'PressureUpDown:3',			*/'所有角色脑负荷增长 - 3',					'全局壓力增長降低<Description>',							'Overall Pressure Increment Down <Description>',																	'グローバルストレス増加量が<Description>低下する',									],
+	'1_9' :		[/*'AddItem:10035',				*/'获得: 治疗枪(也可在商店买到了)',			'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_10' :	[/*'AddItem:1310',				*/'获得: 纳米修复机器人',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_11' :	[/*'AddItem:1303',				*/'获得: 饱和轰炸',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'1_12' :	[/*'PressureUpDown:5',			*/'所有角色脑负荷增长 - 5',					'全局壓力增長降低<Description>',							'Overall Pressure Increment Down <Description>',																	'グローバルストレス増加量が<Description>低下する',									],
+	
+	'2_1' :		[/*'RefreshMoneyDown:1',		*/'商店每次刷新价格降低 1',					'商店刷新價格降低<Description>',							'Shop Refresh Price Down <Description>',																			'ショップ更新コストが<Description>低下する',										],
+	'2_2' :		[/*'AddItem:1309',				*/'获得: 空投液氮炸弹',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_3' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_4' :		[/*'ShopRefreshNumUp:2',		*/'商店每次刷新数量增加 2',					'商店刷新數量增加<Description>',							'Shop Refresh Quantity Up <Description>',																			'ショップの更新数が<Description>増加する',											],
+	'2_5' :		[/*'AddItem:1307',				*/'获得: 空投汽油弹(战略)',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_6' :		[/*'AddItem:1252',				*/'获得: 肩扛式火炮(轻型)',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_7' :		[/*'AddItem:1251',				*/'获得: 肩扛火箭炮(重型)',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_8' :		[/*'ShopRefreshNumUp:2',		*/'商店每次刷新数量增加 2',					'商店刷新數量增加<Description>',							'Shop Refresh Quantity Up <Description>',																			'ショップの更新数が<Description>増加する',											],
+	'2_9' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_10' :	[/*'AddItem:10054',				*/'获得: 电光斧',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_11' :	[/*'AddItem:1308',				*/'获得: 空投震撼弹',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'2_12' :	[/*'AddItem:10059',				*/'获得: 电子胁差',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	
+	'3_1' :		[/*'FreeInfomation:1',			*/'情报部查看敌人进攻方向不消耗人力',		'情報部內查看敵人進攻方向不再消耗人力',						'Checking the enemy\'s attack direction in the Intel Division no longer consumes manpower',							'諜報部で敵の攻撃方向を確認時に人員を消費しなくなる',								],
+	'3_2' :		[/*'DroneUpLevel:1',			*/'所有无人机属性加强(改进无人机01)',		'所有無人機屬性加強',										'Enhance all drones\' stats',																						'全ドローンステータス強化',															],
+	'3_3' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'3_4' :		[/*'AddItem:1253',				*/'获得: 肩扛重型火炮',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'3_5' :		[/*'DroneUpLevel:1',			*/'所有无人机属性加强(改进无人机02)',		'所有無人機屬性加強',										'Enhance all drones\' stats',																						'全ドローンステータス強化',															],
+	'3_6' :		[/*'FreeInfomation:1',			*/'情报部内查看敌人种类不再消耗人力',		'情報部內查看敵人種類不再消耗人力',							'Checking the enemy types in the Intel Division no longer consumes manpower',										'諜報部で敵の種類を確認時に人員を消費しなくなる',									],
+	'3_7' :		[/*'DroneUpLevel:1',			*/'所有无人机属性加强(改进无人机03)',		'所有無人機屬性加強',										'Enhance all drones\' stats',																						'全ドローンステータス強化',															],
+	'3_8' :		[/*'AddItem:1253',				*/'获得: 肩扛重型火炮',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'3_9' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'3_10' :	[/*'FreeInfomation:1',			*/'情报部所有操作均不再消耗任何人力',		'情報部不再消耗人力',										'Intel Division no longer consumes manpower',																		'諜報部は人員を消費しなくなる',														],
+	'3_11' :	[/*'OutPeoplePlus:1',			*/'出战人数(机体数)+1',						'出戰人數(機體數)+<Description>',							'Deployed units (Mechas) +<Description>',																			'出撃人数(機体数)+<Description>',													],
+	'3_12' :	[/*'DroneUpLevel:1',			*/'所有无人机属性加强(改进无人机04)',		'所有無人機屬性加強',										'Enhance all drones\' stats',																						'全ドローンステータス強化',															],
+	
+	'4_1' :		[/*'UseManpowerUpDown:1',		*/'基建部使用后人力消耗上升 -1',			'基建部使用人力後其他人力消耗上升減少<Description>',		'Increase other human resource consumption after the Infrastructure Division uses Manpower <Description>',			'インフラ部が人員を使用した後、他の人員消費の増加量が<Description>低下する',		],
+	'4_2' :		[/*'AddItem:1300',				*/'获得: 空袭扫射',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_3' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_4' :		[/*'ManPowerRefreshNumUp:1',	*/'基建部制造物品备选 +1',					'基建部製造物品備選增加<Description>',						'Infrastructure Division Item Manufacturing Options Increase <Description>',										'インフラ部のアイテム制作オプションが<Description>種類増加',						],
+	'4_5' :		[/*'AddItem:1256',				*/'获得: 肩扛式EMP脉冲',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_6' :		[/*'AddItem:1306',				*/'获得: 空投云爆弹',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_7' :		[/*'AddItem:1256',				*/'获得: 肩扛式EMP脉冲',					'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_8' :		[/*'ManPowerRefreshNumUp:1',	*/'基建部制造物品备选 +1',					'基建部製造物品備選增加<Description>',						'Infrastructure Division Item Manufacturing Options Increase <Description>',										'インフラ部のアイテム制作オプションが<Description>種類増加',						],
+	'4_9' :		[/*'AddItem:14',				*/'获得: 英雄勋章',							'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_10' :	[/*'AddItem:1311',				*/'获得: 空投烟雾弹',						'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_11' :	[/*'AddItem:1257',				*/'获得: 肩扛式EMP脉冲(重型)',				'獲得<Description:Item>',									'Obtained <Description:Item>',																						'<Description:Item>を獲得',															],
+	'4_12' :	[/*'AddSeatEffect:25',			*/'机体蹲踞时触发跳弹概率 +25%',			'所有機體蹲踞跳彈概率加強',									'All mechas\' ricochet chance when crouching increases',															'すべての機体のしゃがむ中の跳弾確率強化',											],
+	
+};
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 项目图片
+		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
+		+'" src="../static/image/11_role_loyal/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		
+		// 项目名称
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
+		
+		// 项目类型
+		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 7]][0]) +'</td>' }else 
+
+		// 归属种类
+		if(index ===  8){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 8]][0]) +'</td>' }else 
+		
+		// 制作对象
+		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[13]][0]) +'</td>' }else 
+		
+		// 文本描述
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
+		
+		// 常规数据
+		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable02 = $('#powerTable02'), powerTable_tbody_node02 = '';
+
+// 生成表格
+tbodyArray02.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node02 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 对象
+		if(index === 2){ powerTable_tbody_node02 += '<td style="height:33px;line-height:12px;">'+ ItemsNameList[   item[2]][0] +'</td>' }else 
+		
+		// 标题
+		if(index === 3){ powerTable_tbody_node02 += '<td style="height:33px;line-height:12px;">'+ ItemsNameList[   item[4]][0] +'</td>' }else 
+		
+		// 结果
+		if(index === 9){ powerTable_tbody_node02 += '<td style="height:33px;line-height:12px;">'+ DescriptionsList[item[4]][0] +'</td>' }else 
+		
+		// 常规
+		if(index !== 0){ powerTable_tbody_node02 += '<td style="height:33px;line-height:12px;">'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node02 += '</tr>';
+	
+});
+$('#powerTable02 tbody').html(powerTable_tbody_node02);
+buildPowerTable('powerTable02');
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 礼物勋章</a>
+			<a href="#heading02">02. 奖励效果</a>
+			<a href="#heading03">03. 额外拓展</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+

@@ -1,0 +1,2073 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+
+<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<title>特殊模式</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>特殊模式</span><small>(别样玩法)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 基本信息</h2>
+
+<p>
+	01. 以下是特殊模式的每日信息, 具体包括了: P01=无尽模式(Enl) / P02=潜入模式(KRK) / P03=挑战模式(Cha) / P04=幸存模式(Sur); <br />
+	02. 尽管特殊模式的玩法和需要坚守的天数并不同, 但是数据结构都是类似的, 所以就放到了一起展示, 细微差异可查阅: <a href="#heading02"># 额外拓展</a>; <br />
+	03. 由于特殊模式的所有数据属性和剧情模式基本一致, 因此本页面没有重复解析这些属性的含义, 如果想了解可查阅 <a href="./data_enemy_plot.html">剧情遭遇.html</a>; <br />
+	04. 你可以通过点击表格右上角的按钮切换不同模式, 也可用键盘的 A/D 字母键或左右方向键, 以及数字键盘的 1/2 和 3/4 实现切换; <br />
+</p>
+
+<table originalSort="0" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			
+			<th sorttype="number" style="width:40px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">剧情天数<i class="icon fa fa-sort" style="margin-left:00;"></i>
+			</span>
+				<div id="turnPart">
+					<button id="nextPart" type="button" title="Next Part"><i class="fas fa-arrow-right"></i></button>
+					<span id="textPart">P01</span>
+					<button id="prevPart" type="button" title="Prev Part"><i class="fas fa-arrow-left "></i></button>
+				</div>
+			</th>
+			
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 额外拓展</h2>
+
+<p>无尽模式: P01 展示了无尽模式的数据, 它以 <code>40</code> 天为一个循环周期, 理论上来讲, 只要你想, 它便不会结束, 与其他模式相比, 它的特殊之处还在于多了一个 <code>OutMissionMaxLoop</code> 属性, 用于决定当天的外勤任务会被循环几次, 例如第六天的外勤任务只会被循环三次, 既第四次循环(第 120 天会开始第四次循环)就不会再触发了, 现在这个参数被放在了"外勤数量"的属性里(下划线后的第二个参数便是);</p>
+
+<p>潜入模式: P02 展示了潜入模式的数据, 它需要我们坚守 <code>39</code> 天, 但其实我们的主要任务都出外勤, 防守大门的情况反而是少数, 该模式提供了特别的暗杀操作, 这是种其他模式下无法执行的特殊行动, 可以对敌人实现秒杀(只要不被敌人发现), 值得一提的是, 虽然大多数任务都是破坏目标即可撤退, 但杀掉敌人会有额外的资金奖励(具体数值由敌人的特殊价值决定, 特殊价值可以参考: <a href="./data_enemy_info.html">敌军情报.html</a>);</p>
+
+<p>挑战模式: P03 展示了挑战模式的数据, 它要求我们坚守 <code>38</code> 天, 这个模式允许我们自行挑选两个角色, 并展开保卫大门的战斗, 该模式最重要的特色为, 它允许双人游玩, 尽管你需要一个手柄(和一个朋友)才能控制 Player2 的机体, 当然你也可以选择单人模式, 然后将 Player2 交由 AI 托管, 除此之外, 该模式的与其他模式的另外一个小区别为, 它是从第 <code>1</code> 天开始游戏, 而不是从第 <code>0</code> 天开始;</p>
+
+<p>幸存模式: P04 展示了幸存模式的数据, 它会让我们在场景中连续面对 <code>62</code> 波敌人, 每歼灭一波敌人就会给予我们装备奖励, 并允许我们进行机体的整备, 与其他模式相比, 幸存模式并没有太多运营的要素, 你不能购买装备, 也不能用废料合成, 只能用关卡有限的奖励去面对挑战, 在去除了冗余的运营操作之后, 剩下的就是不断打打打, 节奏很快但难度也高, 没有太多的容错空间, 大意就可以得重来了;</p>
+
+<p>————</p>
+
+<p>无尽模式的间隔因素: 每批敌人的数量由"每组价值"所决定(小于"资金奖励"但大于"剧情价值"), 每个敌人出现的间隔为 <code>0.25</code> 秒, 而两批敌人出现的间隔时间就是"间隔因素"乘以这些敌人的"生成间隔"之和, 大于 20 秒则等于 20 秒(敌人的"生成间隔"可参阅 <a href="./data_enemy_info.html">敌军情报.html</a>), 在无尽模式中, 两批敌人出现的间隔时间还要除以循环次数(每 <code>40</code> 天为一循环), 既循环次数越多则敌人出现的间隔就越短;</p>
+
+<p>幸存模式的关卡奖励: 幸存模式的关卡奖励数据被放在了"假日安排"的数据里, 当假日安排不为 <code>0</code>, 那么关卡的奖励就不是随机的, 而是从预设中挑选, 如果"外勤类型"为 <code>1</code>, 就表示执行一个假日安排中的函数, 如果"外勤类型"为 <code>2</code>, 就表示获得一个假日安排中的物品, 实际上随机的装备奖励也不是真的完全随机, 有的奖励还是需要低级装备才能解锁, 所以最好是一开始就决定好这回要玩什么武器;</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 表格样式 */
+
+#powerTable01 .hideTr{display:none;}
+
+#powerTable01.showPart01 tr > *:nth-child(n+23):nth-child(-n+88){display:none;}
+#powerTable01.showPart02 tr > *:nth-child(n+ 2):nth-child(-n+22){display:none;}
+#powerTable01.showPart02 tr > *:nth-child(n+45):nth-child(-n+88){display:none;}
+#powerTable01.showPart03 tr > *:nth-child(n+ 2):nth-child(-n+44){display:none;}
+#powerTable01.showPart03 tr > *:nth-child(n+67):nth-child(-n+88){display:none;}
+#powerTable01.showPart04 tr > *:nth-child(n+ 2):nth-child(-n+66){display:none;}
+
+#powerTable01.showPart01 tbody > tr:nth-child(n+42):nth-child(-n+63){display:none;}
+#powerTable01.showPart02 tbody > tr:nth-child(n+41):nth-child(-n+63){display:none;}
+#powerTable01.showPart03 tbody > tr:nth-child(n+40):nth-child(-n+63){display:none;}
+
+#turnPart{position:absolute;top:-1px;bottom:1px;right:-920px;display:flex;flex-direction:column;}
+#textPart{flex:0 0 auto;height:20px;border:1px solid #ccc;border-top:0;border-bottom:0;text-align:center;line-height:20px;cursor:default;}
+
+#nextPart{flex:1 1 auto;}
+#prevPart{flex:1 1 auto;}
+
+/* 地图类型 */
+#powerTable01 tr > td:nth-of-type( 22n+4){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type( 22n+4) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type( 22n+4) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type( 22n+4) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type( 22n+4):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type( 22n+4):active > span:nth-of-type(2){display:block;}
+
+/* 地图预设 */
+#powerTable01 tr > td:nth-of-type( 22n+5){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type( 22n+5) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type( 22n+5) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type( 22n+5) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type( 22n+5):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type( 22n+5):active > span:nth-of-type(2){display:block;}
+
+/* 天气状况 */
+#powerTable01 tr > td:nth-of-type( 22n+6){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type( 22n+6) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type( 22n+6) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type( 22n+6) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type( 22n+6):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type( 22n+6):active > span:nth-of-type(2){display:block;}
+
+/* 特殊曲调 */
+#powerTable01 tr > td:nth-of-type( 22n+8){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type( 22n+8) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type( 22n+8) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type( 22n+8) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type( 22n+8):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type( 22n+8):active > span:nth-of-type(2){display:block;}
+
+/* 敌人选择 */
+#powerTable01 tr > td:nth-of-type( 22n+9){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type( 22n+9) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type( 22n+9) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type( 22n+9) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type( 22n+9):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type( 22n+9):active > span:nth-of-type(2){display:block;}
+
+/* 奖励系数 */
+#powerTable01 tr > td:nth-of-type(22n+10){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(22n+10) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(22n+10) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:112px;}
+#powerTable01 tr > td:nth-of-type(22n+10) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(22n+10):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(22n+10):active > span:nth-of-type(2){display:block;}
+
+/* 外勤任务 */
+#powerTable01 tr > td:nth-of-type(22n+13){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(22n+13) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(22n+13) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;flex-wrap:wrap;gap:4px;}
+#powerTable01 tr > td:nth-of-type(22n+13) > span:nth-of-type(2) > span{flex:0 0 auto;display:inline-block;width:128px;}
+#powerTable01 tr > td:nth-of-type(22n+13) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(22n+13):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(22n+13):active > span:nth-of-type(2){display:flex;}
+
+/* 假日安排 */
+#powerTable01 tr > td:nth-of-type(22n+14){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(22n+14) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(22n+14) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;flex-wrap:wrap;gap:4px;}
+#powerTable01 tr > td:nth-of-type(22n+14) > span:nth-of-type(2) > span{flex:0 0 auto;display:inline-block;width:128px;}
+#powerTable01 tr > td:nth-of-type(22n+14) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(22n+14):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(22n+14):active > span:nth-of-type(2){display:flex;}
+
+/* 特殊敌人 */
+#powerTable01 tr > td:nth-of-type(22n+21){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(22n+21) > span:nth-of-type(1){display:inline-block;width:30px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(22n+21) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;flex-wrap:wrap;gap:4px;}
+#powerTable01 tr > td:nth-of-type(22n+21) > span:nth-of-type(2) > span{flex:0 0 auto;display:flex;gap:4px;width:100%;}
+#powerTable01 tr > td:nth-of-type(22n+21) > span:nth-of-type(2) > span > span{flex:0 0 auto;display:inline-block;width:64px;}
+#powerTable01 tr > td:nth-of-type(22n+21) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(22n+21):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(22n+21):active > span:nth-of-type(2){display:flex;}
+
+/* 敌军组合 */
+#powerTable01 tr > td:nth-of-type(22n+22){position:relative;cursor:default;}
+#powerTable01 tr > td:nth-of-type(22n+22) > span:nth-of-type(1){display:inline-block;width:110px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
+#powerTable01 tr > td:nth-of-type(22n+22) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;flex-wrap:wrap;gap:4px;}
+#powerTable01 tr > td:nth-of-type(22n+22) > span:nth-of-type(2) > span{flex:0 0 auto;display:flex;gap:4px;width:100%;}
+#powerTable01 tr > td:nth-of-type(22n+22) > span:nth-of-type(2) > span > span{flex:0 0 auto;display:inline-block;width:64px;}
+#powerTable01 tr > td:nth-of-type(22n+22) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
+#powerTable01 tr > td:nth-of-type(22n+22):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(22n+22):active > span:nth-of-type(2){display:flex;}
+
+</style>
+
+
+
+<script>/* 数据注解 */
+/*
+
+SpawnEnemies_Enl, 无尽模式, 40 天, 从第 0 天开始
+SpawnEnemies_KRK, 潜入模式, 39 天, 从第 0 天开始
+SpawnEnemies_Cha, 挑战模式, 38 天, 从第 1 天开始
+SpawnEnemies_Sur, 幸存模式, 62 天, 从第 0 天开始
+
+OutMissionMaxLoop 属性是无尽模式独有的, 现在融合到 OutMissionCount 属性中了
+任务名称中的 14(罐头运输) 和 14(英雄勋章) 起冲突了, 于是把幸存模式下的 14 既英雄勋章奖励改成 142
+
+*/
+
+// 表01数据
+let tbodyArray01 = [
+	
+	//高亮,		剧情天数,			资金奖励,			荣誉奖励,			地图类型,						地图预设,			天气状况,			昼夜状态,			特殊曲调,			敌人选择,			奖励系数,			外勤类型,			外勤数量,			外勤任务,													假日安排,									每组价值,			间隔因素,			出敌加速,			来袭方向,			敌军上限,			辅兵刷新,			特殊敌人,			敌军组合,														|	剧情天数,			资金奖励,			荣誉奖励,			地图类型,						地图预设,			天气状况,			昼夜状态,			特殊曲调,			敌人选择,			奖励系数,			外勤类型,			外勤数量,			外勤任务,													假日安排,									每组价值,			间隔因素,			出敌加速,			来袭方向,			敌军上限,			辅兵刷新,			特殊敌人,			敌军组合,														|	剧情天数,			资金奖励,			荣誉奖励,			地图类型,						地图预设,			天气状况,			昼夜状态,			特殊曲调,			敌人选择,			奖励系数,			外勤类型,			外勤数量,			外勤任务,													假日安排,									每组价值,			间隔因素,			出敌加速,			来袭方向,			敌军上限,			辅兵刷新,			特殊敌人,			敌军组合,														|	剧情天数,			资金奖励,			荣誉奖励,			地图类型,						地图预设,			天气状况,			昼夜状态,			特殊曲调,			敌人选择,			奖励系数,			外勤类型,			外勤数量,			外勤任务,													假日安排,									每组价值,			间隔因素,			出敌加速,			来袭方向,			敌军上限,			辅兵刷新,			特殊敌人,			敌军组合,															],		
+	//Active,	Enl,				TotalCost,			TotalHonor,			MapType,						Room,				RainRate,			Night,				Music,				EnemyType,			CostRate,			OutMissionType,		OutMissionCount,	OutMissionID,												MissionType,								PeriodCost,			PeriodTimeRate,		MinUnitValue,		RouteNum,			EnemyMax,			LoopSpawnTime,		BossBase,			Value,															|	KRK,				TotalCost,			TotalHonor,			MapType,						Room,				RainRate,			Night,				Music,				EnemyType,			CostRate,			OutMissionType,		OutMissionCount,	OutMissionID,												MissionType,								PeriodCost,			PeriodTimeRate,		MinUnitValue,		RouteNum,			EnemyMax,			LoopSpawnTime,		BossBase,			Value,															|	Chan,				TotalCost,			TotalHonor,			MapType,						Room,				RainRate,			Night,				Music,				EnemyType,			CostRate,			OutMissionType,		OutMissionCount,	OutMissionID,												MissionType,								PeriodCost,			PeriodTimeRate,		MinUnitValue,		RouteNum,			EnemyMax,			LoopSpawnTime,		BossBase,			Value,															|	Sur,				TotalCost,			TotalHonor,			MapType,						Room,				RainRate,			Night,				Music,				EnemyType,			CostRate,			OutMissionType,		OutMissionCount,	OutMissionID,												MissionType,								PeriodCost,			PeriodTimeRate,		MinUnitValue,		RouteNum,			EnemyMax,			LoopSpawnTime,		BossBase,			Value,																],		//01		
+	
+	[1,			0,					50,					30,					'-',							'Level0',			'0_0',				'1',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										50,					0.5,				1,					4,					99,					0,					'-',				'Ena',																0,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																0,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																0,					50,					20,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										50,					1,					1,					3,					99,					0,					'-',				'Ca',																],		//01		
+	
+	[0,			1,					60,					30,					'-',							'Level0',			'0_0',				'0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										25,					1,					1,					1,					99,					0,					'-',				'Enb1|Enb2|Enb3',													1,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'2_0',				'1102|1103',												'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																1,					60,					30,					'-',							'LevelChan',		'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										25,					1,					1,					2,					0,					0,					'-',				'Ca',																1,					30,					25,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										25,					1,					1,					2,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			2,					70,					50,					'-',							'-',				'0_0',				'0',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										24,					1,					1,					2,					99,					0,					'-',				'Enb4|Enb5|Enb6',													2,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'1101',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																2,					100,				50,					'-',							'-',				'0_0',				'0',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										25,					1,					1,					2,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4',													2,					35,					30,					'-',							'-',				'5_15',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										30,					1,					1,					2,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			3,					80,					60,					'-',							'-',				'0_0',				'1|0',				'-',				'-',				'0.5|1|1',			0,					'0_0',				'-',														'-',										27,					1,					10,					2,					99,					0,					'-',				'Enb1|Enb2|Enb3|Enb4|Enb5|Enb6',									3,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																3,					120,				60,					'-',							'-',				'0_0',				'1',				'-',				'ChooseEne',		'0.5|1|1',			0,					'0_0',				'-',														'-',										30,					1,					10,					2,					99,					0,					'-',				'Cb4|Cb5|Cb6|Cb7',													3,					35,					30,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										30,					1,					1,					2,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			4,					80,					70,					'-',							'-',				'0_0',				'0',				'-',				'ChooseEne',		'1|1|1.5',			0,					'0_0',				'-',														'-',										40,					0.75,				10,					2,					99,					0,					'-',				'Enb1|Enb2|Enb3|Enb4|Enb5|Enb6',									4,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'2_0',				'1105|1106',												'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																4,					140,				70,					'-',							'-',				'0_0',				'0',				'-',				'ChooseEne',		'1|1|1.5',			2,					'1_0',				'229|231|233|235|237',										'-',										35,					0.75,				10,					2,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4',													4,					40,					30,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										20,					1,					1,					0,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			5,					90,					70,					'-',							'-',				'10_30',			'1|0',				'-',				'-',				'0.8|1|1.1',		0,					'0_0',				'-',														'-',										30,					0.75,				10,					2,					99,					0,					'-',				'Enc1|Enc2|Enc3',													5,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																5,					150,				70,					'-',							'-',				'10_30',			'0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										25,					0.75,				10,					3,					99,					0,					'-',				'Cc5|Cc6|Cc7|Cc8',													5,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					1,					1,					99,					0,					'-',				'0',																],		
+	[0,			6,					100,				80,					'-',							'-',				'10_30',			'0',				'-',				'ChooseEne',		'0.8|1|1.1',		2,					'4_3',				'201|202|206|207|211|212|213|214|215|216|217',				'-',										50,					0.6,				15,					3,					99,					0,					'-',				'Enc4|Enc5|Enc6',													6,					45,					45,					'-',							'LevelParDT',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										15,					1,					1,					3,					10,					0,					'-',				'ParA0',															6,					200,				100,				'-',							'-',				'10_30',			'1|0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										40,					0.6,				15,					3,					99,					0,					'-',				'Cc9|Cc10|Cc11|Cc12',												6,					50,					40,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										50,					1,					1,					2,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			7,					150,				150,				'-',							'Level0B',			'10_30',			'0',				'Boss',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										150,				1,					1,					7,					25,					75,					'315',				'EnBa1|EnBa2|EnBa3',												7,					60,					60,					'-',							'LevelParD0',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										25,					1,					2,					3,					10,					0,					'-',				'ParA2',															7,					240,				200,				'-',							'LevelChanB',		'10_30',			'0',				'Boss',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										120,				1,					1,					7,					25,					75,					'315',				'Ba1|Ba2|Ba3',														7,					50,					40,					'-',							'-',				'5_15',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1300|1301',								25,					1,					1,					2,					99,					0,					'-',				'Ca',																],		
+	[0,			8,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'1_1',				'229|231|233|235|237',										'22|23|24',									0,					1,					1,					0,					30,					0,					'-',				'0',																8,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'1104',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																8,					0,					0,					'-',							'LevelChan',		'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'3_0',				'201|202|211|212|213|214|215|216|217',						'31|39|40',									0,					1,					1,					0,					30,					0,					'-',				'0',																8,					55,					40,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										55,					1,					1,					1,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4|Cc5|Cc6|Cc7|Cc8|Cc9|Cc10|Cc11|Cc12',				],		
+	[0,			9,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'1_4',				'229|231|233|235|237|240|242',								'22|23|24|13|14',							0,					1,					1,					0,					25,					0,					'5',				'0',																9,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'3_0',				'1107|1108|1109',											'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																9,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'2_0',				'229|231|233|235|237|240|242',								'31|41|42',									0,					1,					1,					0,					25,					0,					'-',				'0',																9,					55,					40,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										55,					1,					1,					0,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4|Cc5|Cc6|Cc7|Cc8|Cc9|Cc10|Cc11|Cc12',				],		
+	[0,			10,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'2_4',				'101|102|103|104',											'13|14',									0,					1,					1,					0,					25,					12,					'5',				'0',																10,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																10,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'101|102|103|104',											'32|43|44',									0,					1,					1,					0,					25,					0,					'-',				'0',																10,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					1,					2,					99,					0,					'-',				'0',																],		//01		
+	
+	[1,			11,					120,				60,					'-',							'Level0',			'-30_50',			'0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										60,					0.9,				20,					2,					0,					0,					'-',				'Enc1|Enc2|Enc3|Enc4|Enc5|Enc6',									11,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'3_0',				'1110|1111|1112',											'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																11,					200,				100,				'Chan2|Chan3|Chan4|Chan5',		'-',				'-30_50',			'0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										50,					0.5,				20,					2,					0,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			11,					90,					45,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										45,					1,					1,					2,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4|Cc5|Cc6|Cc7|Cc8|Cc9|Cc10|Cc11|Cc12',				],		
+	[1,			12,					135,				60,					'-',							'-',				'-30_50',			'1|0',				'-',				'-',				'0.8|1|1.1',		0,					'0_0',				'-',														'-',										45,					0.3,				20,					2,					40,					0,					'-',				'Enc1|Enc2|Enc3|Enc4|Enc5|Enc6',									12,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																12,					225,				100,				'-',							'-',				'-30_50',			'1|0',				'-',				'ChooseEne',		'0.8|1|1.1',		0,					'0_0',				'-',														'-',										60,					0.5,				20,					3,					40,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			12,					90,					45,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1307|1308|1309',							90,					1,					1,					3,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4|Cc5|Cc6|Cc7|Cc8|Cc9|Cc10|Cc11|Cc12',				],		
+	[1,			13,					140,				70,					'-',							'-',				'-30_50',			'0',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										70,					0.8,				20,					2,					40,					0,					'-',				'End1|End2|End3',													13,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																13,					250,				125,				'-',							'-',				'-30_50',			'1',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										50,					0.5,				20,					3,					40,					0,					'-',				'Ce1|Ce2|Ce3|Ce4',													13,					90,					45,					'-',							'-',				'20_40',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										90,					1,					5,					2,					99,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			],		
+	[1,			14,					160,				70,					'-',							'-',				'-30_50',			'1|0',				'-',				'-',				'0.6|1|1.5',		1,					'1_5',				'13|14',													'-',										40,					0.5,				20,					3,					40,					0,					'-',				'End4|End5|End6',													14,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																14,					275,				125,				'-',							'-',				'-30_50',			'1|0',				'-',				'ChooseEne',		'0.6|1|1.5',		1,					'1_0',				'13|14',													'-',										45,					0.5,				20,					3,					40,					0,					'-',				'Ce5|Ce6|Ce7',														14,					150,				150,				'-',							'-',				'30_60',			'0',				'Boss',				'-',				'1|1|1',			0,					'0_0',				'-',														'10054|10004|10035|1250|1252|217|142',		150,				1,					1,					7,					99,					0,					'-',				'Ba1|Ba2|Ba3',														],		
+	[1,			15,					180,				70,					'-',							'-',				'-30_50',			'1|0',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										60,					0.45,				20,					3,					40,					0,					'-',				'End1|End2|End3|End4|End5|End6',									15,					80,					80,					'-',							'LevelParD',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										40,					1,					3,					3,					15,					0,					'-',				'ParA5',															15,					300,				150,				'-',							'-',				'-30_50',			'0',				'-',				'ChooseEne',		'1|1|1',			0,					'0_0',				'-',														'-',										45,					0.5,				20,					4,					40,					0,					'-',				'Cf1|Cf2|Cf3',														15,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'554|555|556|557',							0,					1,					1,					0,					99,					0,					'-',				'0',																],		
+	[1,			16,					200,				100,				'-',							'-',				'-30_50',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		2,					'3_3',				'201|202|206|207|211|212|213|214|215|216|217',				'-',										50,					0.4,				30,					4,					40,					0,					'-',				'End1|End2|End3|End4|End5|End6',									16,					90,					90,					'-',							'LevelParD2',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										45,					0.8,				3,					3,					15,					0,					'-',				'ParA6',															16,					350,				150,				'-',							'-',				'-30_50',			'1',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										100,				0.5,				30,					4,					40,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		16,					70,					50,					'-',							'-',				'20_40',			'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'2050|2054|2146|2308',						35,					1,					5,					2,					99,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			],		
+	[1,			17,					200,				200,				'-',							'Level0B',			'0_0',				'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										200,				0.5,				1,					7,					20,					75,					'19',				'EnBb1|EnBb2|EnBb3',												17,					120,				120,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										60,					0.6,				4,					3,					15,					0,					'-',				'ParAD0',															17,					300,				300,				'-',							'LevelChanB',		'0_0',				'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										150,				0.5,				1,					7,					20,					90,					'19',				'B4A|B4B|B4C',														17,					75,					50,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1304|1305',								25,					1,					5,					2,					99,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			],		
+	[1,			18,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'25|26|27',									0,					1,					1,					0,					20,					0,					'-',				'0',																18,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'3_0',				'1131|1132|1133',											'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																18,					0,					0,					'-',							'LevelChan',		'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'3_0',				'201|202|211|212|213|214|215|216|217',						'32|45|46',									0,					1,					1,					0,					20,					0,					'-',				'0',																18,					75,					50,					'-',							'-',				'5_15',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										75,					1,					5,					3,					99,					0,					'-',				'Cd1|Cd2|Cd3|Cd4|Cd5|Cd6|Cd7|Cd8|Cd9|Cd10|Cd11|Cd12|Cd13',			],		
+	[1,			19,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'2_4',				'229|231|233|235|237|240|242',								'15|16|22|23|24|25|26',						0,					1,					1,					0,					25,					10,					'115',				'0',																19,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																19,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'1_0',				'230|232|234|236|238|241',									'33|47',									0,					1,					1,					0,					25,					0,					'-',				'0',																19,					75,					50,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										75,					1,					1,					0,					99,					0,					'-',				'Ca',																],		
+	[1,			20,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'2_2',				'105|106|107|108',											'15|16|22|23|24|25|26',						0,					1,					1,					0,					15,					8,					'116',				'0',																20,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																20,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'105|106|107|108',											'31|36',									0,					1,					1,					0,					15,					0,					'-',				'0',																20,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					5,					3,					99,					0,					'-',				'0',																],		//01		
+	
+	[0,			21,					160,				80,					'-',							'Level0',			'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										40,					0.75,				20,					2,					50,					0,					'-',				'Enf1|Enf2|Enf3',													21,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'3_0',				'1134|1135|1136',											'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																21,					250,				125,				'Chan2|Chan3|Chan4|Chan5',		'-',				'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										40,					0.8,				20,					2,					20,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		21,					80,					60,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										40,					1,					5,					3,					99,					0,					'-',				'Ce1|Ce2|Ce3|Ce4|Ce5|Ce6|Ce7',										],		
+	[0,			22,					180,				85,					'-',							'-',				'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										45,					0.6,				25,					3,					50,					0,					'-',				'Enf4|Enf5|Enf6',													22,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																22,					275,				125,				'-',							'-',				'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										45,					0.8,				25,					3,					20,					0,					'-',				'Cfa5|Cfa6|Cfa7|Cfa8|Cfb5|Cfb6|Cfb7|Cfb8|Cfc5|Cfc6|Cfc7|Cfc8',		22,					90,					75,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										45,					1,					5,					3,					99,					0,					'-',				'Ce1|Ce2|Ce3|Ce4|Ce5|Ce6|Ce7',										],		
+	[0,			23,					180,				90,					'-',							'-',				'-60_100',			'1|0',				'-',				'-',				'0.6|1|1.5',		0,					'0_0',				'-',														'-',										60,					0.45,				30,					3,					50,					0,					'-',				'Enf1|Enf2|Enf3|Enf4|Enf5|Enf6',									23,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																23,					300,				150,				'-',							'-',				'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										60,					0.6,				30,					3,					20,					0,					'-',				'Cfa5|Cfa6|Cfa7|Cfa8|Cfb5|Cfb6|Cfb7|Cfb8|Cfc5|Cfc6|Cfc7|Cfc8',		23,					90,					75,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1302|1306',								90,					1,					1,					0,					99,					0,					'-',				'Ca',																],		
+	[0,			24,					200,				100,				'-',							'-',				'-60_100',			'0',				'-',				'ChooseEne',		'0.6|1|1.5',		1,					'1_5',				'15|16',													'-',										100,				0.5,				30,					3,					50,					0,					'-',				'Enf1|Enf2|Enf3|Enf4|Enf5|Enf6',									24,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																24,					300,				150,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.6|1|1.5',		1,					'1_0',				'15|16',													'-',										60,					0.6,				30,					3,					20,					0,					'-',				'Cga1|Cga2|Cga3|Cga4|Cgb1|Cgb2|Cgb3|Cgb4|Cgc1|Cgc2|Cgc3|Cgc4',		24,					100,				75,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										50,					1,					15,					2,					99,					0,					'-',				'Ce1|Ce2|Ce3|Ce4|Ce5|Ce6|Ce7',										],		
+	[0,			25,					225,				100,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										45,					0.3,				35,					4,					50,					0,					'-',				'Eng1|Eng2|Eng3',													25,					180,				180,				'-',							'LevelParD',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										60,					0.6,				4,					2,					0,					0,					'-',				'ParAD',															25,					350,				150,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										75,					0.5,				35,					4,					20,					0,					'-',				'Cga1|Cga2|Cga3|Cga4|Cgb1|Cgb2|Cgb3|Cgb4|Cgc1|Cgc2|Cgc3|Cgc4',		25,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					15,					2,					99,					0,					'-',				'0',																],		
+	[0,			26,					240,				120,				'-',							'-',				'-60_100',			'1|0',				'-',				'-',				'0.6|1|1.5',		0,					'0_0',				'-',														'-',										80,					0.35,				35,					4,					50,					0,					'-',				'Eng4|Eng5|Eng6',													26,					210,				210,				'-',							'LevelParD2',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										70,					0.5,				4,					3,					0,					0,					'-',				'ParAD',															26,					350,				150,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.6|1|1.5',		0,					'0_0',				'-',														'-',										75,					0.5,				35,					4,					20,					0,					'-',				'Cga5|Cga6|Cga7|Cga8|Cgb5|Cgb6|Cgb7|Cgb8|Cgc5|Cgc6|Cgc7|Cgc8',		26,					100,				80,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										125,				1,					15,					3,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[0,			27,					300,				400,				'-',							'Level0B',			'0_0',				'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										300,				1,					1,					7,					10,					75,					'Aa1',				'EnBc',																27,					240,				240,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										80,					0.35,				5,					4,					20,					0,					'-',				'ParAD2',															27,					600,				500,				'-',							'LevelChanB',		'0_0',				'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										300,				1,					1,					7,					10,					150,				'Aa1',				'B5|B3',															27,					125,				100,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'2050|2054|2146|2308',						125,				1,					15,					4,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[0,			28,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'4_4',				'230|232|234|236|238|241|243',								'28|29|30',									0,					1,					1,					0,					50,					0,					'-',				'0',																28,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'2_0',				'1140|1142',												'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																28,					0,					0,					'-',							'LevelChan',		'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'2_0',				'230|232|234|236|238|241|243',								'32|37',									0,					1,					1,					0,					20,					0,					'-',				'0',																28,					125,				100,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										150,				1,					5,					3,					99,					0,					'-',				'19',																],		
+	[0,			29,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'3_4',				'203|204|205|206|208|209|210|213|214|219|220|227|228',		'19|20|21|27|28|29|30',						0,					1,					1,					0,					20,					6,					'315',				'0',																29,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																29,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'3_0',				'203|204|205|206|208|209|210|213|214|219|220|227|228',		'33|38',									0,					1,					1,					0,					20,					0,					'-',				'0',																29,					200,				200,				'-',							'-',				'30_60',			'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'10054|10004|10035|1250|1252|217|142',		200,				1,					1,					7,					99,					0,					'-',				'Bb1|Bb2|Bb3',														],		
+	[0,			30,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'2_3',				'111|112|113|114',											'19|20|21|27|28|29|30',						0,					1,					1,					0,					20,					6,					'315',				'0',																30,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'1141',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																30,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'111|112|113|114',											'33|38',									0,					1,					1,					0,					20,					0,					'-',				'0',																30,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'554|555|556|557',							0,					1,					1,					0,					99,					0,					'-',				'0',																],		//01		
+	
+	[1,			31,					240,				110,				'-',							'Level0',			'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										80,					0.5,				25,					3,					50,					0,					'-',				'Eng1|Eng2|Eng3|Eng4|Eng5|Eng6',									31,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																31,					300,				150,				'Chan2|Chan3|Chan4|Chan5',		'-',				'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										45,					0.5,				25,					3,					20,					0,					'-',				'Cga5|Cga6|Cga7|Cga8|Cgb5|Cgb6|Cgb7|Cgb8|Cgc5|Cgc6|Cgc7|Cgc8',		31,					125,				80,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										150,				1,					5,					3,					99,					0,					'-',				'19',																],		
+	[1,			32,					250,				120,				'-',							'-',				'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		1,					'1_5',				'17',														'-',										50,					0.2,				30,					3,					50,					0,					'-',				'Eng1|Eng2|Eng3|Eng4|Eng5|Eng6',									32,					300,				300,				'-',							'LevelParD2',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										100,				1,					8,					4,					20,					0,					'-',				'ParAD2',															32,					350,				175,				'-',							'-',				'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		1,					'1_0',				'17',														'-',										60,					0.5,				30,					4,					20,					0,					'-',				'Cga5|Cga6|Cga7|Cga8|Cgb5|Cgb6|Cgb7|Cgb8|Cgc5|Cgc6|Cgc7|Cgc8',		32,					125,				80,					'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										150,				1,					15,					4,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[1,			33,					280,				135,				'-',							'-',				'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										70,					0.4,				40,					4,					50,					0,					'-',				'Enh1|Enh2|Enh3',													33,					300,				300,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										100,				1,					8,					4,					20,					0,					'-',				'ParAD3',															33,					350,				175,				'-',							'-',				'0_0',				'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										70,					0.4,				40,					4,					20,					0,					'-',				'Ch1|Ch2|Ch3|Ch4',													33,					125,				100,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'217|227',									150,				1,					15,					3,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[1,			34,					300,				150,				'-',							'-',				'-60_100',			'1|0',				'-',				'-',				'0.5|1|1.2',		0,					'0_0',				'-',														'-',										100,				0.3,				50,					4,					50,					0,					'-',				'Enh4|Enh5|Enh6',													34,					300,				300,				'-',							'LevelParD3',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										100,				1,					8,					4,					20,					0,					'-',				'ParAD4',															34,					350,				175,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										120,				0.4,				50,					4,					20,					0,					'-',				'Ch5|Ch6|Ch7|Ch8',													34,					150,				100,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										150,				1,					15,					4,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[1,			35,					320,				150,				'-',							'-',				'-60_100',			'1|0',				'-',				'-',				'0.5|1|1.2',		1,					'1_3',				'115|116|117|118|119',										'-',										160,				1,					50,					5,					50,					0,					'-',				'Enh1|Enh2|Enh3|Enh4|Enh5|Enh6',									35,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																35,					400,				200,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		1,					'1_0',				'115|116|117|118|119',										'-',										100,				0.4,				50,					5,					20,					0,					'-',				'Ch9|Ch10|Ch11|Ch12',												35,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					30,					3,					99,					0,					'-',				'0',																],		
+	[1,			36,					350,				200,				'-',							'-',				'-60_100',			'1|0',				'-',				'-',				'0.5|1|1.2',		0,					'0_0',				'-',														'-',										70,					0.25,				50,					5,					50,					0,					'-',				'Enh1|Enh2|Enh3|Enh4|Enh5|Enh6',									36,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			1,					'1_0',				'1151',														'0',										0,					1,					0,					0,					0,					0,					'-',				'0',																36,					400,				200,				'-',							'-',				'-60_100',			'1|0',				'-',				'ChooseEne',		'0.5|1|1.2',		0,					'0_0',				'-',														'-',										200,				0.4,				50,					5,					20,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				36,					150,				120,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										150,				1,					30,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4',													],		
+	[1,			37,					400,				400,				'-',							'Level0B',			'0_0',				'0',				'Boss2',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										400,				1,					1,					7,					20,					75,					'Aa1',				'EnBd1|EnBd2|EnBd3',												37,					0,					0,					'-',							'-',				'0_100',			'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					25,					0,					'-',				'0',																37,					400,				400,				'-',							'LevelChan5',		'0_0',				'0',				'Boss2',			'-',				'1|1|1',			0,					'0_0',				'-',														'-',										400,				1,					1,					7,					0,					0,					'-',				'B6',																37,					200,				150,				'-',							'-',				'0_60',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1311|1312|1303',							200,				1,					30,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4',													],		
+	[1,			38,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'22|23|24',									0,					1,					1,					0,					50,					0,					'-',				'0',																38,					0,					0,					'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										0,					1,					0,					0,					25,					0,					'-',				'0',																38,					0,					0,					'-',							'-',				'0_100',			'1|0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'33|38',									0,					1,					1,					0,					20,					0,					'-',				'0',																38,					200,				180,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										200,				1,					30,					3,					99,					0,					'-',				'Ch5|Ch6|Ch7|Ch8',													],		
+	[1,			39,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'25|26|27',									0,					1,					1,					0,					50,					0,					'-',				'0',																39,					45,					45,					'-',							'LevelParD3',		'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										15,					1,					1,					3,					10,					0,					'-',				'ParA0',															39,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																39,					200,				180,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										200,				1,					1,					0,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[1,			40,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'28|29|30',									0,					1,					1,					0,					50,					0,					'-',				'0',																40,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																40,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																40,					200,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							200,				1,					30,					3,					99,					0,					'-',				'0',																],		//01		
+	
+	[0,			41,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																41,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																41,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																41,					225,				200,				'-',							'-',				'30_60',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										225,				1,					30,					3,					99,					0,					'-',				'Ch5|Ch6|Ch7|Ch8',													],		
+	[0,			42,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																42,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																42,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																42,					225,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'1210|1213|1216',							225,				1,					30,					3,					99,					0,					'-',				'Ch5|Ch6|Ch7|Ch8',													],		
+	[0,			43,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																43,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																43,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																43,					225,				200,				'-',							'-',				'0_60',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										225,				1,					30,					3,					99,					0,					'-',				'Aa1',																],		
+	[0,			44,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																44,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																44,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																44,					300,				300,				'-',							'-',				'0_60',				'0',				'Boss3',			'-',				'1|1|1',			0,					'0_0',				'-',														'10155|10013|10014|1251|1253|218|142',		300,				1,					30,					3,					99,					0,					'-',				'B4A|B4B|B4C',														],		
+	[0,			45,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																45,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																45,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																45,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'554|555|556|557',							0,					1,					1,					0,					99,					0,					'-',				'0',																],		
+	[0,			46,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																46,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																46,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																46,					225,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										225,				1,					1,					0,					99,					0,					'-',				'Cb1|Cb2|Cb3|Cb4|Cb5|Cb6|Cb7',										],		
+	[0,			47,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																47,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																47,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																47,					250,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										250,				1,					30,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[0,			48,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																48,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																48,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																48,					250,				200,				'-',							'-',				'0_60',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'218|226',									250,				1,					30,					3,					99,					0,					'-',				'Cfa1|Cfa2|Cfa3|Cfa4|Cfb1|Cfb2|Cfb3|Cfb4|Cfc1|Cfc2|Cfc3|Cfc4',		],		
+	[0,			49,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																49,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																49,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																49,					250,				200,				'-',							'-',				'0_60',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										250,				1,					30,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4',													],		
+	[0,			50,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																50,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																50,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																50,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					1,					0,					99,					0,					'-',				'0',																],		//01		
+	
+	[1,			51,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																51,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																51,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																51,					250,				200,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										250,				1,					20,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[1,			52,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																52,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																52,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																52,					300,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			2,					'0_0',				'-',														'2052|2056|2148|2309',						300,				1,					20,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[1,			53,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																53,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																53,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																53,					300,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										300,				1,					20,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[1,			54,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																54,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																54,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																54,					300,				200,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										300,				1,					30,					3,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[1,			55,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																55,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																55,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																55,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					30,					4,					99,					0,					'-',				'0',																],		
+	[1,			56,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																56,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																56,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																56,					300,				200,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										300,				1,					1,					0,					99,					0,					'-',				'Cc1|Cc2|Cc3|Cc4|Cc5|Cc6|Cc7|Cc8|Cc9|Cc10|Cc11|Cc12',				],		
+	[1,			57,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																57,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																57,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																57,					300,				200,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										300,				1,					30,					4,					99,					0,					'-',				'Ch1|Ch2|Ch3|Ch4|Ch5|Ch6|Ch7|Ch8|Ch9|Ch10|Ch11|Ch12',				],		
+	[1,			58,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																58,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																58,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																58,					300,				200,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'0',										300,				1,					1,					3,					99,					0,					'-',				'Aa1',																],		
+	[1,			59,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																59,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																59,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																59,					300,				200,				'-',							'-',				'0_100',			'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'10155|10013|10014|1251|1253|218|142',		300,				1,					30,					3,					99,					0,					'-',				'Aa1',																],		
+	[1,			60,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																60,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																60,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																60,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'554|555|556|557',							0,					1,					1,					0,					99,					0,					'0',				'0',																],		//01		
+	
+	[0,			61,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																61,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																61,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																61,					400,				400,				'-',							'-',				'60_100',			'0',				'Boss2',			'-',				'1|1|1',			0,					'0_0',				'-',														'0',										400,				1,					1,					7,					99,					0,					'-',				'B5|B3',															],		
+	[0,			62,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																62,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																62,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																62,					0,					0,					'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			1,					'0_0',				'-',														'550|551|552|553',							0,					1,					1,					0,					99,					0,					'0',				'0',																],		//01		
+	
+	[0,			'SUM',				5440,				3410,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																'SUM',				1970,				1970,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																'SUM',				7885,				4455,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																'SUM',				8200,				6435,				'-',							'-',				'0_0',				'0',				'-',				'-',				'1|1|1',			0,					'0_0',				'-',														'-',										0,					1,					1,					0,					0,					0,					'-',				'0',																],		//01		
+	
+];
+
+// 项目名称
+let ItemsNameList = {
+	
+	// 任务名称
+	1 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	2 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	3 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	4 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	5 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
+	6 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
+	7 :    ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	8 :    ['敌方炮击阵地',					'敵方炮擊陣地',					'Enemy Artillery Position Group',				'敵砲撃陣地',									],
+	9 :    ['敌方炮击阵地群',				'敵方炮擊陣地群',				'Enemy Artillery Position Stronghold',			'敵砲撃陣地群',									],
+	10 :   ['敌方炮击阵地据点',				'敵方炮擊陣地據點',				'Enemy Artillery Stronghold',					'敵砲撃陣地拠点',								],
+	11 :   ['敌方要塞炮阵地',				'敵方要塞炮陣地',				'Enemy Stronghold Artillery Position',			'敵要塞砲陣地',									],
+	12 :   ['敌方要塞炮据点',				'敵方要塞炮據點',				'Enemy Stronghold Artillery Stronghold',		'敵要塞砲拠点',									],
+	13 :   ['敌方武器补给线',				'敵方武器補給線',				'Enemy Weapon Supply Chain',					'敵兵器補給線',									],
+	14 :   ['敌方装甲补给线',				'敵方裝甲補給線',				'Enemy Armor Supply Chain',						'敵装甲補給線',									],
+	15 :   ['敌方兵员补给线',				'敵方兵員補給線',				'Enemy Soldiers Supply Chain',					'敵兵力補給線',									],
+	16 :   ['敌方建材物资补给线',			'敵方建材物資補給線',			'Enemy Building Materials Supply Chain',		'敵建材物資補給線',								],
+	17 :   ['敌方战略物资补给线',			'敵方戰略物資補給線',			'Enemy Strategic Materials Supply Chain',		'敵戦略物資補給線',								],
+	18 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
+	19 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
+	20 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
+	21 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
+	22 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
+	23 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
+	24 :   ['敌方大型工业区',				'敵方大型工業區',				'Enemy Large Industrial Zone',					'敵大型工業地帯',								],
+	25 :   ['叛军集结点',					'叛軍集結點',					'Rebel Assembly Point',							'反乱軍集結ポイント',							],
+	26 :   ['叛军示威区',					'叛軍示威區',					'Rebel Demonstration Area',						'反乱軍デモ',									],
+	27 :   ['叛军据点',						'叛軍據點',						'Rebel Strongholds',							'反乱軍拠点',									],
+	28 :   ['叛军基地',						'叛軍基地',						'Rebel Bases',									'反乱軍基地',									],
+	29 :   ['叛军防卫圈',					'叛軍防衛圈',					'Rebel Defense Circle',							'反乱軍防衛隊',									],
+	30 :   ['叛军总部',						'叛軍總部',						'Rebel Headquarters',							'反乱軍本部',									],
+	31 :   ['营救行动',						'營救行動',						'Operation Rescue',								'救出作戦',										],
+	32 :   ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
+	33 :   ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
+	34 :   ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
+	35 :   ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
+	36 :   ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット: 「ハンター」エール',				],
+	37 :   ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Grenadier', 				'ボスユニット: 「スロワー」BM500',				],
+	38 :   ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット: 「バーサーカー」レッドアイ',		],
+	39 :   ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット: 「首狩り」ブルー伯爵',			],
+	40 :   ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット: 「要塞」ホワイト将軍',			],
+	101 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	102 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	103 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	104 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	105 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	106 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	107 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	108 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	111 :  ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
+	112 :  ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
+	113 :  ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
+	114 :  ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
+	115 :  ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット:「ハンター」エール',				],
+	116 :  ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Thrower', 					'ボスユニット:「スロワー」BM500',				],
+	117 :  ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット:「バーサーカー」レッドアイ',		],
+	118 :  ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット:「首狩り」ブルー伯爵',			],
+	119 :  ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット:「要塞」ホワイト将軍',			],
+	
+	201 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	202 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	203 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	204 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	205 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	206 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	207 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	208 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	209 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	210 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	211 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	212 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	213 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	214 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	215 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	216 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	217 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	218 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	219 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	220 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	221 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	222 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	223 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	224 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	225 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	226 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	227 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	228 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	229 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	230 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	231 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	232 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	233 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	234 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	235 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	236 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	237 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	238 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	239 :  ['敌军要塞',						'敵軍要塞',						'Enemy Stronghold',								'敵軍の要塞',									],
+	240 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	241 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	242 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	243 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	
+	1101 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1102 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1103 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1104 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1105 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1106 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1107 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1108 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1109 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1110 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
+	1111 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1112 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
+	1113 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
+	1131 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1132 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
+	1133 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1134 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1135 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1136 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
+	1140 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
+	1141 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1142 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1151 : ['叛军总部歼灭',					'叛軍總部殲滅',					'Destruction of Rebel HQ',						'反乱軍本部の壊滅',								],
+	1152 : ['复仇之战',						'復仇之戰',						'Battle of f Revenge',							'復讐の戦い',									],
+	
+	// 任务描述
+	A :  ['敌方机体工厂, 很多建筑, 少量炮台',				'敵方機體工廠, 很多建築, 少量炮臺',					'Enemy mecha factories, a lot of buildings, a small number of turrets',				'敵の機体工場, 建物が多く、砲台は少ない',						],
+	B :  ['敌方炮击阵地, 目标坚固, 有严密的防御工事',		'敵方炮擊陣地, 目標堅固, 有嚴密的防禦工事',			'Enemy artillery positions, fortified targets, tight fortifications',				'敵の砲撃陣地, 標的は強固, 堅牢な防衛施設',						],
+	C :  ['敌方的补给线, 必须在敌方车辆通过之前摧毁',		'敵方的補給線, 必須在敵方車輛通過之前摧毀',			'Enemy supply chains, which must be destroyed before enemy vehicles can pass',		'敵の補給線, 敵の車両が通過する前に破壊する必要がある',			],
+	D :  ['叛军在此集结, 影响我们的工业产出',				'叛軍在此集結, 影響我們的工業產出',					'The rebels have amassed forces here, affecting our industrial output',				'反乱軍はここに集結し、我々の工業生産に影響を与えている',		],
+	E :  ['需要全歼敌方这些精锐部队',						'需要全殲敵方這些精銳部隊',							'Enemy Elite Force',																'敵軍精鋭部隊',													],
+	F :  ['歼灭委托, 歼灭这一批散兵',						'殲滅委託, 殲滅這一批散兵',							'Destroy a group of scattered soldiers',											'殲滅依頼, 一群の散兵を殲滅する',								],
+	G :  ['击败敌方首领单位',								'擊敗敵方首領單位',									'Enemy Boss units',																	'敵軍ボスユニット',												],
+	Ma : ['需要摧毁敌方运输车队完成营救行动',				'需要摧毀敵方運輸車隊完成營救行動',					'Destroy enemy transport convoys to complete rescue operation',						'敵輸送船団を撃破し、救出作戦を完了させる, ',					],
+	C0 : ['潜入任务, 秘密完成或消灭所有敌人',				'潛入任務, 秘密完成或消滅所有敵人',					'Infiltrate missions, secretly complete or eliminate all',							'潜入任務, 秘密裏に完遂、またはすべての人員を消滅させる',		],
+	
+	// 存在影响
+	DefaultMoneyMinus :				['每日基础工资减少',	'每日基礎工資減少',		'Lower basic salary',					'基本給低下: ',				],
+	DefaultManpowerMinus :			['基地建设人力减少',	'基地建設人力減少',		'Manpower consumption: -',				'インフラ人力: -',			],
+	EnemyStrengthen_Speed :			['敌方移动速度强化',	'敵方移動速度強化',		'Enemy Movement speed Enhancement',		'敵移動速度強化',			],
+	EnemyStrengthen_Life :			['敌方生命上限强化',	'敵方生命上限強化',		'Enemy HP Enhanced',					'敵HP強化',					],
+	EnemyStrengthen_FireRate :		['敌方射击间隔减少',	'敵方射擊間隔減少',		'Enemy Firing rate Enhancement',		'敵射撃間隔強化',			],
+	EnemyStrengthen_Armor :			['敌方抵抗穿甲强化',	'敵方抵抗穿甲強化',		'Enemy Resistance Enhanced',			'敵抵抗強化',				],
+	EnemyStrengthen_ReloadRate :	['敌方换弹时间减少',	'敵方換彈時間減少',		'Enemy Reload speed Enhancement',		'敵リロード時間強化',		],
+	EnemyStrengthen_RangePlus :		['敌方武器射程强化',	'敵方武器射程強化',		'Enemy Range Enhanced',					'敵射程強化',				],
+	EnemyStrengthen_DamagePlus :	['敌方武器伤害强化',	'敵方武器傷害強化',		'Enemy Damage Enhancement',				'敵ダメージ強化',			],
+	EnemyStrengthen_All :			['敌方全面属性强化',	'敵方全面屬性強化',		'Enemy All Stats Enhanced',				'敵全ステータス強化',		],
+	
+	// 任务类型
+	OutMission :  ['外围阵地',		'週邊陣地',			'Perimeter Positions',				'外周陣地',		],
+	Elimination : ['歼灭委托',		'殲滅委託',			'Destruction Commission',			'殲滅依頼',		],
+	Assasin :     ['渗透刺杀',		'滲透刺殺',			'Penetration Assassination',		'浸透暗殺',		],
+	
+	// 难度系数
+	Normal :   	['普通',	'普通',		'Normal',		'通常',				],
+	Hard :     	['较强',	'較強',		'Hard',			'やや強い',			],
+	UltraHard :	['极强',	'極強',		'Nightmare',	'非常に強い',		],
+	
+	// 任务奖励
+	reward_13 :	['标准勋章',		'標準勳章',			'Standard Medal',				'制式メダル',				],
+	reward_14 :	['英雄勋章',		'英雄勳章',			'Hero Medal',					'英雄メダル',				],
+	
+	reward_Honor : ['荣誉',			'榮譽',				'Honor',						'名誉ポイント',				],
+	reward_Money : ['资金',			'資金',				'Funding',						'資金',						],
+	
+	reward_40001 : ['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
+	reward_40002 : ['废料',			'廢料',				'Waste Material',				'スクラップ',				],
+	reward_40005 : ['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
+	reward_40006 : ['齿轮',			'齒輪',				'Gear',							'ギア',						],
+	reward_40007 : ['框架',			'框架',				'Frame',						'フレーム',					],
+	
+	reward_40003 : ['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
+	reward_40008 : ['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
+	reward_40009 : ['扳机',			'扳機',				'Trigger',						'トリガー',					],
+	
+	reward_40021 : ['润滑油',		'潤滑油',			'Lubricating Oil',				'潤滑油',					],
+	reward_40022 : ['火花塞',		'火花塞',			'Spark Plug',					'スパークプラグ',			],
+	reward_40023 : ['冷冻剂',		'冷凍劑',			'Refrigerant',					'冷媒',						],
+	
+	reward_40028 : ['共振器',		'共振器',			'Resonator',					'共振器',					],
+	reward_40029 : ['刀片',			'刀片',				'Blade',						'ブレード',					],
+	reward_40030 : ['振荡器',		'振盪器',			'Oscillator',					'発振回路',					],
+	
+	reward_40017 : ['线圈',			'線圈',				'Coil',							'コイル',					],
+	reward_40018 : ['电容',			'電容',				'Capacitor',					'コンデンサ',				],
+	reward_40019 : ['电感',			'電感',				'Inductor',						'インダクター',				],
+	
+	reward_40026 : ['力场管',		'力場管',			'Force Field Generator',		'力場パイプ',				],
+	reward_40027 : ['力场膜',		'力場膜',			'Force Field Membrane',			'力場膜',					],
+	
+	reward_40013 : ['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
+	reward_40014 : ['透镜',			'透鏡',				'Lens',							'レンズ',					],
+	
+	reward_40024 : ['装甲',			'裝甲',				'Armor',						'装甲',						],
+	reward_40025 : ['厚装甲',		'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
+	
+	reward_40011 : ['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
+	
+	reward_40015 : ['点火器',		'點火器',			'Igniter',						'イグナイター',				],
+	reward_40016 : ['冷凝管',		'冷凝管',			'Condenser',					'復水管',					],
+	reward_40020 : ['三极管',		'三極管',			'Transistor',					'三極管',					],
+	
+	reward_40004 : ['弹头',			'彈頭',				'Warhead',						'弾頭',						],
+	reward_40010 : ['雷管',			'雷管',				'Detonator',					'起爆装置',					],
+	reward_40031 : ['涂层',			'塗層',				'Coating',						'コーティング',				],
+	reward_40012 : ['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
+	reward_40032 : ['核心',			'核心',				'Core',							'コア',						],
+	
+};
+
+// 任务图片
+let outMissionsSrc = {
+	
+	1 :		'AA1',
+	2 :		'AA1',
+	3 :		'AA2',
+	4 :		'AA2',
+	5 :		'AA3',
+	6 :		'AA4',
+	7 :		'AA5',
+	8 :		'AC1',
+	9 :		'AC2',
+	10 :	'AC3',
+	11 :	'AC4',
+	12 :	'AC5',
+	18 :	'AB1',
+	19 :	'AB1',
+	20 :	'AB2',
+	21 :	'AB2',
+	22 :	'AB3',
+	23 :	'AB3',
+	24 :	'AB5',
+	13 :	'AD1',
+	14 :	'AD2',
+	15 :	'AD3',
+	16 :	'AD4',
+	17 :	'AD5',
+	25 :	'AE1',
+	26 :	'AE2',
+	29 :	'AE5',
+	27 :	'AE3',
+	28 :	'AE4',
+	31 :	'EE0',
+	32 :	'EE1',
+	33 :	'EE2',
+	34 :	'EE3',
+	35 :	'EE4',
+	36 :	'EE5',
+	37 :	'EE6',
+	38 :	'EE7',
+	39 :	'EE8',
+	40 :	'EE9',
+	101 :	'AA1',
+	102 :	'AA1',
+	103 :	'AA2',
+	104 :	'AA2',
+	105 :	'AA5',
+	106 :	'AA5',
+	107 :	'AA5',
+	108 :	'AA5',
+	111 :	'EE1',
+	112 :	'EE2',
+	113 :	'EE3',
+	114 :	'EE4',
+	115 :	'EE5',
+	116 :	'EE6',
+	117 :	'EE7',
+	118 :	'EE8',
+	119 :	'EE9',
+	
+	201 :	'FF1',
+	202 :	'FF1',
+	203 :	'FF1',
+	204 :	'FF1',
+	205 :	'FF1',
+	206 :	'FF2',
+	207 :	'FF2',
+	208 :	'FF2',
+	209 :	'FF2',
+	210 :	'FF2',
+	211 :	'FF3',
+	212 :	'FF3',
+	213 :	'FF3',
+	214 :	'FF3',
+	215 :	'FF4',
+	216 :	'FF4',
+	217 :	'FF4',
+	218 :	'FF4',
+	219 :	'FF4',
+	220 :	'FF4',
+	221 :	'FF5',
+	222 :	'FF5',
+	223 :	'FF5',
+	224 :	'FF5',
+	225 :	'FF6',
+	226 :	'FF6',
+	227 :	'FF6',
+	228 :	'FF6',
+	229 :	'FF101',
+	230 :	'FF101',
+	231 :	'FF102',
+	232 :	'FF102',
+	233 :	'FF103',
+	234 :	'FF103',
+	235 :	'FF104',
+	236 :	'FF104',
+	237 :	'FF105',
+	238 :	'FF105',
+	239 :	'FF0',
+	240 :	'FF106',
+	241 :	'FF106',
+	242 :	'FF107',
+	243 :	'FF107',
+	
+	1100 :	'Par3',
+	1104 :	'Par3',
+	1133 :	'Par3B',
+	1134 :	'Par3B',
+	1101 :	'Par1',
+	1105 :	'Par1',
+	1108 :	'Par1C',
+	1131 :	'Par1B',
+	1135 :	'Par1B',
+	1102 :	'Par2',
+	1103 :	'Par2',
+	1106 :	'Par2C',
+	1109 :	'Par2C',
+	1132 :	'Par2B',
+	1136 :	'Par2B',
+	1110 :	'Par4',
+	1113 :	'Par4C',
+	1140 :	'Par4B',
+	1111 :	'Par5',
+	1141 :	'Par5B',
+	1142 :	'Par5B',
+	1107 :	'Par6',
+	1112 :	'Par3C',
+	1151 :	'ParF',
+	1152 :	'ParF2',
+	
+};
+
+// 任务名称
+let outMissionsStr = {
+	
+	1 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	2 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	3 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	4 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	5 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
+	6 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
+	7 :    ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	8 :    ['敌方炮击阵地',					'敵方炮擊陣地',					'Enemy Artillery Position Group',				'敵砲撃陣地',									],
+	9 :    ['敌方炮击阵地群',				'敵方炮擊陣地群',				'Enemy Artillery Position Stronghold',			'敵砲撃陣地群',									],
+	10 :   ['敌方炮击阵地据点',				'敵方炮擊陣地據點',				'Enemy Artillery Stronghold',					'敵砲撃陣地拠点',								],
+	11 :   ['敌方要塞炮阵地',				'敵方要塞炮陣地',				'Enemy Stronghold Artillery Position',			'敵要塞砲陣地',									],
+	12 :   ['敌方要塞炮据点',				'敵方要塞炮據點',				'Enemy Stronghold Artillery Stronghold',		'敵要塞砲拠点',									],
+	13 :   ['敌方武器补给线',				'敵方武器補給線',				'Enemy Weapon Supply Chain',					'敵兵器補給線',									],
+	14 :   ['敌方装甲补给线',				'敵方裝甲補給線',				'Enemy Armor Supply Chain',						'敵装甲補給線',									],
+	15 :   ['敌方兵员补给线',				'敵方兵員補給線',				'Enemy Soldiers Supply Chain',					'敵兵力補給線',									],
+	16 :   ['敌方建材物资补给线',			'敵方建材物資補給線',			'Enemy Building Materials Supply Chain',		'敵建材物資補給線',								],
+	17 :   ['敌方战略物资补给线',			'敵方戰略物資補給線',			'Enemy Strategic Materials Supply Chain',		'敵戦略物資補給線',								],
+	18 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
+	19 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
+	20 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
+	21 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
+	22 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
+	23 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
+	24 :   ['敌方大型工业区',				'敵方大型工業區',				'Enemy Large Industrial Zone',					'敵大型工業地帯',								],
+	25 :   ['叛军集结点',					'叛軍集結點',					'Rebel Assembly Point',							'反乱軍集結ポイント',							],
+	26 :   ['叛军示威区',					'叛軍示威區',					'Rebel Demonstration Area',						'反乱軍デモ',									],
+	27 :   ['叛军据点',						'叛軍據點',						'Rebel Strongholds',							'反乱軍拠点',									],
+	28 :   ['叛军基地',						'叛軍基地',						'Rebel Bases',									'反乱軍基地',									],
+	29 :   ['叛军防卫圈',					'叛軍防衛圈',					'Rebel Defense Circle',							'反乱軍防衛隊',									],
+	30 :   ['叛军总部',						'叛軍總部',						'Rebel Headquarters',							'反乱軍本部',									],
+	31 :   ['营救行动',						'營救行動',						'Operation Rescue',								'救出作戦',										],
+	32 :   ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
+	33 :   ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
+	34 :   ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
+	35 :   ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
+	36 :   ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット: 「ハンター」エール',				],
+	37 :   ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Grenadier', 				'ボスユニット: 「スロワー」BM500',				],
+	38 :   ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット: 「バーサーカー」レッドアイ',		],
+	39 :   ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット: 「首狩り」ブルー伯爵',			],
+	40 :   ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット: 「要塞」ホワイト将軍',			],
+	101 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	102 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
+	103 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	104 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
+	105 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	106 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	107 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	108 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
+	111 :  ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
+	112 :  ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
+	113 :  ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
+	114 :  ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
+	115 :  ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット:「ハンター」エール',				],
+	116 :  ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Thrower', 					'ボスユニット:「スロワー」BM500',				],
+	117 :  ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット:「バーサーカー」レッドアイ',		],
+	118 :  ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット:「首狩り」ブルー伯爵',			],
+	119 :  ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット:「要塞」ホワイト将軍',			],
+	
+	201 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	202 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	203 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	204 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	205 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
+	206 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	207 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	208 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	209 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	210 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
+	211 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	212 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	213 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	214 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
+	215 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	216 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	217 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	218 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	219 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	220 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
+	221 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	222 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	223 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	224 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
+	225 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	226 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	227 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	228 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
+	229 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	230 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	231 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	232 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	233 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	234 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	235 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	236 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	237 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	238 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	239 :  ['敌军要塞',						'敵軍要塞',						'Enemy Stronghold',								'敵軍の要塞',									],
+	240 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	241 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	242 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
+	243 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	
+	1100 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1101 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1102 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1103 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1104 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1105 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1106 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1107 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
+	1108 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1109 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
+	1110 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
+	1111 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1112 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
+	1113 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
+	1131 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1132 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
+	1133 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1134 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
+	1135 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
+	1136 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
+	1140 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
+	1141 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1142 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
+	1151 : ['叛军总部歼灭',					'叛軍總部殲滅',					'Destruction of Rebel HQ',						'反乱軍本部の壊滅',								],
+	1152 : ['最终复仇之战',					'最終復仇之戰',					'Battle of f Revenge',							'復讐の戦い',									],
+	
+};
+
+// 任务图片
+let holidayTaskSrc = {
+	
+	0 :		0,
+	13 :	13,
+	14 :	14,
+	15 :	15,
+	16 :	16,
+	17 :	17,
+	18 :	18,
+	19 :	19,
+	20 :	20,
+	21 :	21,
+	22 :	22,
+	23 :	23,
+	24 :	24,
+	25 :	25,
+	26 :	26,
+	27 :	27,
+	28 :	28,
+	29 :	29,
+	30 :	30,
+	31 :	31,
+	32 :	31,
+	33 :	31,
+	36 :	36,
+	37 :	36,
+	38 :	36,
+	39 :	34,
+	40 :	34,
+	41 :	34,
+	42 :	34,
+	43 :	34,
+	44 :	34,
+	45 :	34,
+	46 :	34,
+	47 :	34,
+	48 :	34,
+	49 :	34,
+	
+	142 :	142,
+	
+	217 :	217,
+	218 :	218,
+	226 :	226,
+	227 :	227,
+	
+	550 :	550,
+	551 :	551,
+	552 :	552,
+	553 :	553,
+	554 :	554,
+	555 :	555,
+	556 :	556,
+	557 :	557,
+	
+	1210 :	1210,
+	1213 :	1213,
+	1216 :	1216,
+	
+	1250 :	1250,
+	1251 :	1251,
+	1252 :	1252,
+	1253 :	1253,
+	
+	1300 :	1300,
+	1301 :	1301,
+	1302 :	1302,
+	1303 :	1303,
+	1304 :	1304,
+	1305 :	1305,
+	1306 :	1306,
+	1307 :	1307,
+	1308 :	1308,
+	1309 :	1309,
+	1311 :	1311,
+	1312 :	1312,
+	
+	2050 :	2050,
+	2052 :	2052,
+	2054 :	2054,
+	2056 :	2056,
+	2308 :	2308,
+	2309 :	2309,
+	
+	2146 :	2146,
+	2148 :	2148,
+	
+	10004 :	10004,
+	10013 :	10013,
+	10014 :	10014,
+	10035 :	10035,
+	10054 :	10054,
+	10155 :	10155,
+	
+};
+
+// 任务名称
+let holidayTaskStr = {
+	
+	0 :		['宿舍休息',			'宿舍休息',				'Dormitory Rest',								'寮休',									],
+	13 :	['生物质运输',			'生物質運輸',			'Biomass Transport',							'バイオマス輸送',						],
+	14 :	['罐头运输',			'罐頭運輸',				'Can Transport',								'缶詰輸送',								],
+	15 :	['食物运输',			'食物運輸',				'Food Transport',								'食料輸送',								],
+	16 :	['有机质运输',			'有機質運輸',			'Organic Compound Transport',					'有機質輸送',							],
+	17 :	['咖啡因运输',			'咖啡因運輸',			'Caffeine Transport',							'カフェイン輸送',						],
+	18 :	['甲醇运输',			'甲醇運輸',				'Methanol Transport',							'メタノール輸送',						],
+	19 :	['烟草运输',			'煙草運輸',				'Tobacco Transport',							'タバコ輸送',							],
+	20 :	['涤纶运输',			'滌綸運輸',				'Polyester Transport',							'ポリエステル輸送',						],
+	21 :	['纸制品运输',			'紙製品運輸',			'Paper Product Transport',						'紙製品輸送',							],
+	22 :	['赶制弹药',			'趕制彈藥',				'Craft Ammo',									'弾薬緊急作成',							],
+	23 :	['修补防线',			'修補防線',				'Defense Repair',								'防衛線修復',							],
+	24 :	['运送设备',			'運送設備',				'Equipment Transport',							'設備輸送',								],
+	25 :	['教育新兵',			'教育新兵',				'Recruit Training',								'新兵教育',								],
+	26 :	['慰问前线',			'慰問前線',				'Front Line Visitation',						'前線慰問',								],
+	27 :	['清洁指挥部',			'清潔指揮部',			'HQ Cleaning',									'指揮所清掃',							],
+	28 :	['参与宴会',			'參與宴會',				'Banquet Attendance',							'宴会参加',								],
+	29 :	['装修指挥部',			'裝修指揮部',			'HQ Renovation',								'指揮所工事',							],
+	30 :	['招待上级',			'招待上級',				'Hosting Superiors',							'上官歓待',								],
+	31 :	['领取补助',			'領取補助',				'Receive Subsidies',							'手当を受け取る',						],
+	32 :	['骗取补助',			'騙取補助',				'Defraud Subsidies',							'手当を騙し取る',						],
+	33 :	['偷取补助',			'偷取補助',				'Stealing Subsidies',							'手当を横領',							],
+	34 :	['哄抢枪械',			'哄搶槍械',				'Loot a firearm',								'銃器を一斉強奪する',					],
+	35 :	['抢夺枪械',			'搶奪槍械',				'Snatch a firearm',								'銃器を強奪する',						],
+	36 :	['督促工人',			'督促工人',				'Urge workers',									'労働者を催促する',						],
+	37 :	['压榨工人',			'壓榨工人',				'Squeezing workers',							'労働者を搾取する',						],
+	38 :	['剥削工人',			'剝削工人',				'Exploiting workers',							'労働者から搾り取る',					],
+	39 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	40 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	41 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	42 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	43 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	44 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	45 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	46 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	47 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	48 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	49 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	
+	142 :	['英雄勋章',			'英雄勳章',				'Hero Medal',									'英雄メダル',							],
+	
+	217 :	['武器扩展槽A',			'武器擴展槽A',			'Weapon Expansion Slot A',						'武器拡張スロットA',					],
+	218 :	['武器扩展槽B',			'武器擴展槽B',			'Weapon Expansion Slot B',						'武器拡張スロットB',					],
+	226 :	['快速供弹匣',			'快速供彈匣',			'Quick Reload Magazine',						'高速マガジン',							],
+	227 :	['膛压过载器',			'膛壓超載器',			'Chamber Pressure Overloader',					'ボア圧力オーバーローダー',				],
+	
+	550 :	['资金 + 75',			'資金 + 75',			'Funding + 75',									'資金 + 75',							],
+	551 :	['荣誉点 + 75',			'榮譽點 + 75',			'Honor points + 75',							'名誉ポイント + 75',					],
+	552 :	['标准勋章 × 3',		'標準勳章 × 3',			'Standard Medal × 3',							'制式メダル × 3',						],
+	553 :	['维修机体 25%',		'維修機體 25%',			'Repair the mache body by 25%',					'ボディメンテナンス 25%',				],
+	554 :	['核心 × 3',			'核心 × 3',				'Core × 3',										'ける × 3',								],
+	555 :	['荣誉点 + 200',		'榮譽點 + 200',			'Honor points + 200',							'名誉ポイント + 200',					],
+	556 :	['英雄勋章 × 3',		'英雄勳章 × 3',			'Hero Medal × 3',								'英雄メダル × 3',						],
+	557 :	['维修机体 50%',		'維修機體 50%',			'Repair the mache body by 50%',					'ボディメンテナンス 50%',				],
+	
+	1210 :	['外挂弹夹舱',			'外掛彈艙',				'External Bomb Bay',							'外付け弾倉',							],
+	1213 :	['外挂液压机',			'外掛液壓機',			'External Hydraulic Press',						'外付け油圧プレス',						],
+	1216 :	['外挂传动器',			'外掛傳動器',			'External Drive',								'外付け伝動装置',						],
+	
+	1250 :	['肩扛火箭炮',			'肩扛式火箭炮',			'Shoulder-mounted Rocket Launcher',				'肩発射式ロケットランチャー',			],
+	1251 :	['重型肩扛火箭炮',		'重型肩扛式火箭炮',		'Heavy Shoulder-mounted Rocket Launcher',		'重装肩発射式ロケットランチャー',		],
+	1252 :	['肩扛火炮',			'肩扛式火炮',			'Shoulder-mounted Cannon',						'肩発射式火砲',							],
+	1253 :	['重型肩扛火炮',		'肩扛式重型火炮',		'Heavy Shoulder-mounted Cannon',				'肩発射式重火砲',						],
+	
+	1300 :	['空袭扫射',			'空襲掃射',				'Air Raid',										'空襲掃射',								],
+	1301 :	['空袭破片炸弹',		'空襲破片炸彈',			'Aerial Frag Bombardment',						'空襲フラグ爆撃',						],
+	1302 :	['地毯式破片炸弹',		'地毯式破片炸彈',		'Carpet Frag Bombing',							'絨毯フラグ爆撃',						],
+	1303 :	['饱和破片炸弹',		'飽和破片炸彈',			'Saturation Frag Bombing',						'飽和フラグ爆撃',						],
+	1304 :	['空投路障',			'空投路障',				'Airdropped Roadblock',							'エアドロップバリケード',				],
+	1305 :	['空投地雷',			'空投地雷',				'Airdropped Land Mine',							'エアドロップ地雷',						],
+	1306 :	['空投云爆弹',			'空投雲爆彈',			'Airdropped Thermobaric Weapon',				'エアドロップクラウドボム',				],
+	1307 :	['空投汽油弹',			'空投汽油彈',			'Airdropped Napalm',							'エアドロップガソリン爆弾',				],
+	1308 :	['空投电磁炸弹',		'空投電磁炸彈',			'Airdropped Electromagnetic Bomb',				'エアドロップ電磁爆弾',					],
+	1309 :	['空投液氮炸弹',		'空投液氮炸彈',			'Airdropped Liquid Nitrogen Bomb',				'エアドロップ液体窒素爆弾',				],
+	1311 :	['空投烟雾弹',			'空投煙霧彈',			'Airdropped Smoke Bomb',						'エアドロップ煙幕弾',					],
+	1312 :	['空投照明弹',			'空投照明彈',			'Airdropped Flare',								'エアドロップフレア',					],
+	
+	2050 :	['速度模块',			'速度模組',				'Speed Module',									'速度モジュール',						],
+	2052 :	['高级速度模块',		'高級速度模組',			'Advanced Speed Module',						'上級速度モジュール',					],
+	2054 :	['转轴模块',			'轉軸模組',				'Rotating Shaft Module',						'回転軸モジュール',						],
+	2056 :	['高级转轴模块',		'高級轉軸模組',			'Advanced Rotating Shaft Module',				'上級回転軸モジュール',					],
+	2308 :	['功率放大器',			'功率放大器',			'Power Amplifier',								'出力増幅器',							],
+	2309 :	['功率放大器2',			'功率放大器2',			'Power Amplifier 2',							'出力増幅器2',							],
+	
+	2146 :	['对冲线圈1',			'對沖線圈1',			'Hedge coils 1',								'ヘッジコイル1',						],
+	2148 :	['对冲线圈3',			'對沖線圈3',			'Hedge coils 3',								'ヘッジコイル3',						],
+	
+	10004 :	['重型狙',				'重型狙',				'Heavy Sniper',									'重狙撃銃',								],
+	10013 :	['重机枪',				'重機槍',				'Heavy Machine Gun',							'重機関銃',								],
+	10014 :	['火神炮',				'火神炮',				'Vulcan Cannon',								'ガトリングガン',						],
+	10035 :	['治疗枪',				'治療槍',				'Healing Gun',									'治療銃',								],
+	10054 :	['电光斧',				'電光斧',				'Lightning Ax',									'電光斧',								],
+	10155 :	['高能电光斧M',			'高能電光斧M',			'High-Power Lightning Axe M',					'高エネルギー電光斧M',					],
+	
+};
+
+// 敌人编队
+let enemyTeam = {
+	'0' :		'1',
+	'6' :		'3',
+	'1' :		'1|0',
+	'2' :		'1|2',
+	'19' :		'33|2',
+	'20' :		'33|3|31',
+	'5' :		'4|1',
+	'108' :		'7|1',
+	'109' :		'7|4',
+	'3' :		'12|1|2',
+	'103' :		'12|13|3',
+	'106' :		'12|24|25',
+	'107' :		'21|20|22',
+	'110' :		'21|1|4|7',
+	'111' :		'1|22|10|7',
+	'7' :		'22|1',
+	'8' :		'23|2',
+	'104' :		'23|2|22',
+	'9' :		'23|4|5',
+	'200' :		'14|2',
+	'203' :		'14|16',
+	'201' :		'14|15',
+	'202' :		'16|0|1',
+	'10' :		'1|5|6',
+	'12' :		'31|8|22',
+	'14' :		'31|8|2|1',
+	'11' :		'31|5|6|4|22',
+	'310' :		'26|29|28',
+	'306' :		'26|29|19',
+	'307' :		'30|4|7',
+	'309' :		'30|27|21',
+	'308' :		'30|10|9|29',
+	'300' :		'27|2',
+	'302' :		'27|7|4',
+	'305' :		'27|22|23|24',
+	'301' :		'27|12|25|13',
+	'303' :		'27|12|13|25',
+	'304' :		'27|8|10|20',
+	'312' :		'26|2',
+	'313' :		'26|8',
+	'100' :		'9|0',
+	'314' :		'9|10',
+	'311' :		'9|26|19',
+	'102' :		'9|10|3|24',
+	'101' :		'2|10|3|24',
+	'15' :		'3|24',
+	'212' :		'15|14|16|25',
+	'16' :		'3|0|1|2|24',
+	'117' :		'11|13|12|20|21',
+	'213' :		'7|18|19|17|22',
+	'17' :		'8|5|6|4|9|31',
+	'116' :		'8|10|9|22|23|24',
+	'315' :		'26|30|27|23|28|29',
+	'18' :		'8|5|6|4|9|0|1|2|24|31|33',
+	'118' :		'8|11|10|9|20|21|22|23|24|31|33|32',
+	'204' :		'17|25',
+	'207' :		'17|3',
+	'205' :		'17|18|24',
+	'206' :		'17|19|25',
+	'208' :		'4|18|2',
+	'209' :		'4|19|0',
+	'210' :		'17|20|23',
+	'211' :		'19|21|25',
+	'119' :		'11|32',
+	'114' :		'11|5|6',
+	'13' :		'4|5|6',
+	'113' :		'11|32|7|4',
+	'115' :		'11|32|23|22',
+	'112' :		'11|32|8|22',
+	'1003C' :	'107B|106B',
+	'1002B' :	'27|106C',
+	'1002C' :	'109C',
+	'1001C' :	'106C',
+	'1000C' :	'103C|104C',
+	'1000A' :	'101A|102A',
+	'1001A' :	'103A|102A',
+	'1002A' :	'104A|101A',
+	'1003A' :	'106A|107A',
+	'1000B' :	'101B|102B',
+	'1001B' :	'108B|109B',
+	'4' :		'0|1|2',
+	'105' :		'0|22|24',
+	'Aa1' :		'104C|103A|109B',
+	'120' :		'7|31|33',
+	'Ba1' :		'Boss1_',
+	'Bb1' :		'Boss1',
+	'Ba2' :		'Boss2_',
+	'Bb2' :		'Boss2',
+	'Ba3' :		'Boss3_',
+	'Bb3' :		'Boss3',
+	'B4' :		'Boss10',
+	'B4A' :		'Boss10A',
+	'B4B' :		'Boss10B',
+	'B4C' :		'Boss10C',
+	'B3' :		'Boss4',
+	'B5' :		'Boss5',
+	'B6' :		'BossFinal',
+	'B5S' :		'107C|107A|109C|107B',
+	'1000' :	'101',
+	'1001' :	'102',
+	'1002' :	'101|102',
+	'1005' :	'104|103',
+	'1006' :	'105|101',
+	'1003' :	'104|101|102',
+	'1004' :	'103|101|102',
+	'1010' :	'107|102',
+	'1007' :	'105|102',
+	'1008' :	'104|105|103',
+	'1011' :	'104|107|101',
+	'1009' :	'106|103|101',
+	'1013' :	'108|101',
+	'1014' :	'108|109',
+	'1016' :	'104|109',
+	'1012' :	'108|105|106',
+	'1015' :	'109|101|102',
+	'M3a' :		'103C|104C|108B',
+	'M4a' :		'107A|108C|105B',
+	'M4b' :		'106A|109C|105B',
+	'M4c' :		'106C|101A|102A',
+	'MD' :		'RebelMecha1|RebelMecha2',
+	'MDb1' :	'Car1|RebelMecha1',
+	'MDb2' :	'Car1|RebelMecha2',
+	'MDa2' :	'Car1|Car3',
+	'MDa1' :	'Car1|Car2',
+	'Ena' :		'2|0|1',
+	'Ena_2' :	'11|0',
+	'Ena_3' :	'101C|101A|101B',
+	'Ena_4' :	'101C|101B|101A',
+	'Enb1' :	'0|2',
+	'Enb2' :	'3|1',
+	'Enb3' :	'23|22',
+	'Enb4' :	'25|1',
+	'Enb5' :	'5|6',
+	'Enb6' :	'2|20|21|24',
+	'Enc3' :	'31|33',
+	'Enc2' :	'9|10',
+	'Enc6' :	'27|23|21',
+	'Enc4' :	'19|18|17',
+	'Enc5' :	'4|18|22',
+	'Enc1' :	'4|8|9|1',
+	'End5' :	'31|27',
+	'End1' :	'29|2',
+	'End2' :	'28|29|30',
+	'End3' :	'1|9|30',
+	'End4' :	'8|24|28',
+	'End6' :	'13|23|25',
+	'Enf6' :	'31|18',
+	'Enf5' :	'8|9|33',
+	'Enf4' :	'32|31|2',
+	'Enf3' :	'32|9|10',
+	'Enf2' :	'32|0|8',
+	'Enf1' :	'11|9|10',
+	'Eng2' :	'32|31|29',
+	'Eng3' :	'32|31|33',
+	'Eng1' :	'11|30|33',
+	'Eng5' :	'19|9|33',
+	'Eng6' :	'7|22|33',
+	'Eng4' :	'8|9|15|31',
+	'Enh5' :	'101B|108B',
+	'Enh1' :	'102A|101A',
+	'Enh4' :	'102A|109A',
+	'Enh3' :	'101C|102C',
+	'Enh6' :	'101C|102C|103C',
+	'Enh2' :	'101B|102B|103B',
+	'EnBa1' :	'Boss1_',
+	'EnBa2' :	'Boss2_',
+	'EnBa3' :	'Boss3_',
+	'EnBb1' :	'Boss1',
+	'EnBb2' :	'Boss2',
+	'EnBb3' :	'Boss3',
+	'EnBc' :	'Boss4',
+	'EnBd1' :	'Boss10A',
+	'EnBd2' :	'Boss10B',
+	'EnBd3' :	'Boss10C',
+	'Enb6_2' :	'31|18',
+	'Enb1_2' :	'11|9|10',
+	'Enb5_2' :	'8|9|33',
+	'Enb2_2' :	'32|8|0',
+	'Enb3_2' :	'32|10|9',
+	'Enb4_2' :	'32|31|2',
+	'Enc1_2' :	'14|8',
+	'Enc3_2' :	'15|31',
+	'Enc2_2' :	'15|14|2',
+	'Enc4_2' :	'11|32|33',
+	'Enc5_2' :	'16|33|23',
+	'Enc6_2' :	'14|15|16|25',
+	'End2_2' :	'32|31|29',
+	'End3_2' :	'32|31|33',
+	'End1_2' :	'11|30|33',
+	'End5_2' :	'19|9|33',
+	'End6_2' :	'7|33|22',
+	'End4_2' :	'8|9|15|31',
+	'Enf3_2' :	'101B|108B',
+	'Enf1_2' :	'109A|102A',
+	'Enf4_2' :	'104B|106B',
+	'Enf2_2' :	'105A|103A',
+	'Enf5_2' :	'101C|102C|103C',
+	'Enf6_2' :	'101C|102C|104C',
+	'Eng1_2' :	'108A|101A',
+	'Eng2_2' :	'104A|106A',
+	'Eng3_2' :	'103B|102B',
+	'Eng4_2' :	'105B|107B',
+	'Eng6_2' :	'108C|105C',
+	'Eng5_2' :	'106C|107C',
+	'Enh3_2' :	'108B',
+	'Enh6_2' :	'109C',
+	'Enh1_2' :	'107A',
+	'Enh2_2' :	'105A|107A|109A',
+	'Enh5_2' :	'106C|108C|101C',
+	'Enh4_2' :	'103B|101B|102B|108B',
+	'EnBa1_2' :	'Boss1',
+	'EnBa2_2' :	'Boss2',
+	'EnBa3_2' :	'Boss3',
+	'EnBb1_2' :	'Boss4|Boss5',
+	'EnBb2_2' :	'Boss4|Boss5',
+	'EnBb3_2' :	'Boss4|Boss5',
+	'EnBc_2' :	'High11a|High12a|High13a|High14a',
+	'EnBd1_2' :	'Boss10A',
+	'EnBd2_2' :	'Boss10B',
+	'EnBd3_2' :	'Boss10C',
+	'Enb3_3' :	'101B|108B',
+	'Enb1_3' :	'109A|102A',
+	'Enb2_3' :	'105A|103A',
+	'Enb4_3' :	'104B|106B',
+	'Enb5_3' :	'103C|102C|101C',
+	'Enb6_3' :	'104C|102C|101C',
+	'Enc1_3' :	'108A|101A',
+	'Enc2_3' :	'104A|106A',
+	'Enc3_3' :	'103B|102B',
+	'Enc4_3' :	'105B|107B',
+	'Enc6_3' :	'105C|108C',
+	'Enc5_3' :	'106C|107C',
+	'End3_3' :	'108B',
+	'End6_3' :	'109C',
+	'End1_3' :	'107A',
+	'End2_3' :	'105A|107A|109A',
+	'End5_3' :	'106C|108C|101C',
+	'End4_3' :	'103B|108B|101B|102B',
+	'Enf5_3' :	'16|101C',
+	'Enf4_3' :	'13|103B|25',
+	'Enf6_3' :	'102C|20|21',
+	'Enf1_3' :	'32|11|101A|102A',
+	'Enf2_3' :	'107A|103A|28|22',
+	'Enf3_3' :	'101B|102B|24|22',
+	'Eng3_3' :	'104B|33',
+	'Eng5_3' :	'103C|33',
+	'Eng2_3' :	'15|106A',
+	'Eng1_3' :	'104A|30|29',
+	'Eng6_3' :	'104C|11|32',
+	'Eng4_3' :	'105B|13|106B|25',
+	'Enh4_3' :	'107C|105A|109B',
+	'Enh6_3' :	'106C|109A|104B',
+	'Enh2_3' :	'103C|104C|102A|23',
+	'Enh1_3' :	'102C|101A|101B|22|24',
+	'Enh5_3' :	'103C|103A|11|109B|31',
+	'Enh3_3' :	'107C|107B|101C|28|29|106B',
+	'EnBa2_3' :	'High11a|High12a',
+	'EnBa3_3' :	'High13a|High14a',
+	'EnBa1_3' :	'Boss4|Boss5',
+	'EnBb2_3' :	'ElitePuppeteer',
+	'EnBb1_3' :	'EliteLord',
+	'EnBb3_3' :	'EliteRanger',
+	'EnBc_3' :	'High11a|High12a|High13a|High14a',
+	'EnBd1_3' :	'High1',
+	'EnBd2_3' :	'High2',
+	'EnBd3_3' :	'High4',
+	'Enb5_4' :	'16|101C',
+	'Enb6_4' :	'102C|20|21',
+	'Enb4_4' :	'103B|25|13',
+	'Enb3_4' :	'101B|102B|24|22',
+	'Enb2_4' :	'103A|22|28|107A',
+	'Enb1_4' :	'101A|102A|11|32',
+	'Enc3_4' :	'104B|33',
+	'Enc5_4' :	'103C|33',
+	'Enc2_4' :	'15|106A',
+	'Enc6_4' :	'104C|11|32',
+	'Enc1_4' :	'104A|29|30',
+	'Enc4_4' :	'105B|106B|13|25',
+	'End2_4' :	'105A|7',
+	'End6_4' :	'106C|9|10',
+	'End5_4' :	'105C|7|4',
+	'End4_4' :	'108B|18|19',
+	'End3_4' :	'106B|107B|13',
+	'End1_4' :	'109A|4|5|6',
+	'Enf3_4' :	'108B|17',
+	'Enf1_4' :	'107A|33',
+	'Enf5_4' :	'109C|17|19',
+	'Enf6_4' :	'109C|108C|33',
+	'Enf2_4' :	'108A|8|31',
+	'Enf4_4' :	'109B|31|32',
+	'Eng4_4' :	'107C|105A|109B',
+	'Eng6_4' :	'106C|109A|104B',
+	'Eng2_4' :	'103C|104C|102A|23',
+	'Eng1_4' :	'102C|101A|101B|22|24',
+	'Eng5_4' :	'103C|103A|11|31|109B',
+	'Eng3_4' :	'107C|107B|101C|28|29|106B',
+	'Enh3_4' :	'104C|109B|107A',
+	'Enh5_4' :	'109B|109A|109C',
+	'Enh2_4' :	'108A|7|108C|108B',
+	'Enh1_4' :	'106A|33|108C|105B',
+	'Enh6_4' :	'106A|11|109C|108B',
+	'Enh4_4' :	'104C|107A|109B|32',
+	'EnBa1_4' :	'High1',
+	'EnBa2_4' :	'High2',
+	'EnBa3_4' :	'High4',
+	'EnBb1_4' :	'High11a|High12a|High13a|High14a',
+	'EnBb2_4' :	'High11a|High12a|High13a|High14a',
+	'EnBb3_4' :	'High11a|High12a|High13a|High14a',
+	'EnBc_4' :	'High1|High2|High4',
+	'EnBd1_4' :	'EliteLord2',
+	'EnBd2_4' :	'ElitePuppeteer2',
+	'EnBd3_4' :	'EliteRanger2',
+	'0_1' :		'1',
+	'0_2' :		'1',
+	'0_3' :		'1',
+	'0_4' :		'1',
+	'Ca' :		'0|2|1',
+	'Cb1' :		'0|2',
+	'Cb2' :		'1|3',
+	'Cb3' :		'22|23',
+	'Cb4' :		'1|25',
+	'Cb5' :		'5|6',
+	'Cb6' :		'2|20|24',
+	'Cb7' :		'2|21|24',
+	'Cc7' :		'29|2',
+	'Cc2' :		'9|10',
+	'Cc3' :		'31|33',
+	'Cc11' :	'31|27',
+	'Cc6' :		'27|23|21',
+	'Cc8' :		'30|28|29',
+	'Cc4' :		'18|17|19',
+	'Cc5' :		'18|4|22',
+	'Cc9' :		'30|9|1',
+	'Cc12' :	'13|23|25',
+	'Cc10' :	'8|24|28',
+	'Cc1' :		'8|4|9|1',
+	'Cd1' :		'11|0',
+	'Cd7' :		'31|18',
+	'Cd8' :		'14|8',
+	'Cd10' :	'15|31',
+	'Cd2' :		'9|10|11',
+	'Cd3' :		'32|0|8',
+	'Cd4' :		'9|10|32',
+	'Cd5' :		'31|32|2',
+	'Cd6' :		'8|9|33',
+	'Cd11' :	'11|32|33',
+	'Cd12' :	'16|33|23',
+	'Cd9' :		'15|14|2',
+	'Cd13' :	'15|14|16|25',
+	'Ce6' :		'7|33',
+	'Ce7' :		'9|1|22',
+	'Ce5' :		'9|19|33',
+	'Ce1' :		'11|30|33',
+	'Ce2' :		'32|31|29',
+	'Ce3' :		'32|31|33',
+	'Ce4' :		'8|9|15|31',
+	'Cf1' :		'101A|102A',
+	'Cf3' :		'101C|102C',
+	'Cf2' :		'101B|102B|103B',
+	'Cfa2' :	'102A|109A',
+	'Cfa3' :	'102A|106A',
+	'Cfa4' :	'107A|103A',
+	'Cfa6' :	'107A|101A',
+	'Cfa8' :	'106A|101A',
+	'Cfa7' :	'104A|109A',
+	'Cfa1' :	'104A|103A|101A',
+	'Cfa5' :	'105A|107A|101A',
+	'Cfb1' :	'101B|108B',
+	'Cfb5' :	'101B|109B',
+	'Cfb6' :	'102B|109B',
+	'Cfb3' :	'104B|109B',
+	'Cfb4' :	'104B|107B',
+	'Cfb7' :	'105B|107B',
+	'Cfb2' :	'105B|102B|106B',
+	'Cfb8' :	'103B|102B|101B|109B',
+	'Cfc4' :	'108C|105C',
+	'Cfc6' :	'108C|107C',
+	'Cfc7' :	'105C|106C',
+	'Cfc3' :	'107C|106C',
+	'Cfc5' :	'103C|104C',
+	'Cfc1' :	'103C|102C|101C',
+	'Cfc2' :	'104C|102C|101C',
+	'Cfc8' :	'106C|108C|101C',
+	'Cga4' :	'106A|15',
+	'Cga6' :	'105A|7',
+	'Cga7' :	'107A|33',
+	'Cga3' :	'104A|29|30',
+	'Cga8' :	'108A|8|31',
+	'Cga1' :	'32|11|101A|102A',
+	'Cga2' :	'107A|103A|22|28',
+	'Cga5' :	'109A|4|5|6',
+	'Cgb3' :	'104B|33',
+	'Cgb7' :	'108B|17',
+	'Cgb2' :	'103B|25|13',
+	'Cgb5' :	'107B|106B|13',
+	'Cgb6' :	'108B|18|19',
+	'Cgb8' :	'32|31|109B',
+	'Cgb1' :	'101B|102B|24|22',
+	'Cgb4' :	'105B|106B|13|25',
+	'Cgc1' :	'16|101C',
+	'Cgc3' :	'103C|33',
+	'Cgc2' :	'102C|20|21',
+	'Cgc5' :	'105C|7|4',
+	'Cgc7' :	'109C|17|19',
+	'Cgc8' :	'108C|109C|33',
+	'Cgc4' :	'104C|11|32',
+	'Cgc6' :	'106C|9|10',
+	'Ch10' :	'104C|107A|32',
+	'Ch11' :	'104C|109B|32',
+	'Ch12' :	'107A|109B|32',
+	'Ch4' :		'105A|107C|109B',
+	'Ch6' :		'109A|106C|104B',
+	'Ch9' :		'107A|104C|109B',
+	'Ch2' :		'102A|104C|103C|23',
+	'Ch7' :		'106A|105B|108C|33',
+	'Ch8' :		'108B|108C|108A|7',
+	'Ch1' :		'101A|101B|22|102C|24',
+	'Ch5' :		'103C|103A|11|31|109B',
+	'Ch3' :		'107B|101C|28|29|106B|107C',
+	'ParA0' :	'Para2',
+	'ParA1' :	'Para1',
+	'ParA2' :	'Para1|Para2',
+	'ParA3' :	'Para3|Para2|Para1',
+	'ParA7' :	'Para3|Parb1|Pare',
+	'ParA4' :	'Para1|Para2|ParCar1',
+	'ParA8' :	'Parf|Parb2|ParCar2',
+	'ParA5' :	'Para1|Para2|Para3|ParCar2',
+	'ParA6' :	'Para1|Para2|Para3|ParCar1',
+	'ParA9' :	'Parc1|Parf|Parb1|Parb2',
+	'ParA11' :	'Parc1|Parf|Parb1|Parb2|Pare|PardT|ParCar3',
+	'ParA10' :	'Para3|Parf|Parb1|Parb2|Pare|Parc1|ParCar2',
+	'ParAD5' :	'Para1',
+	'ParAD' :	'Parb1b|Parb2b',
+	'ParAD0' :	'Para3|ParCar3',
+	'ParAD3' :	'Para3|Parb1b|Parb2b',
+	'ParAD2' :	'Parb2b|Parb1b|Pareb|ParCar2',
+	'ParAD4' :	'Para3|Parb2b|Parb1b|Parfb|Pareb|ParCar2',
+	'ParAB' :	'HighPar',
+};
+
+// 敌人名称
+let enemyName = {
+	
+	'-1' :				['None',					'None',						'None',										'None',							],		//02		
+	
+	'0' :				['长矛',					'長矛',						'Spear',									'槍',							],		
+	'1' :				['军刀',					'軍刀',						'Saber',									'セイバー',						],		
+	'3' :				['弯刃',					'彎刃',						'Curved Blade',								'カーブブレード',				],		
+	'2' :				['利剑',					'利劍',						'Sword',									'鋭い剣',						],		//02		
+	
+	'8' :				['钢盾',					'鋼盾',						'Steel Shield',								'鋼の盾',						],		
+	'10' :				['胡蜂',					'胡蜂',						'Wasp',										'胡蜂',							],		
+	'9' :				['弹雨',					'彈雨',						'Bullet Rain',								'弾の雨',						],		
+	'11' :				['暴君',					'暴君',						'Tyrant',									'暴君',							],		//02		
+	
+	'4' :				['狙击者',					'狙擊者',					'Sniper',									'狙撃者',						],		
+	'5' :				['压制者',					'壓制者',					'Suppressor',								'制圧者',						],		
+	'6' :				['突破者',					'突破者',					'Breaker',									'突破者',						],		
+	'7' :				['倾泻者',					'傾瀉者',					'Pourer',									'火力手',						],		//02		
+	
+	'12' :				['歌利亚',					'歌利亞',					'Goliath',									'ゴリアテ',						],		
+	'13' :				['携带者',					'攜帶者',					'Carrier',									'携行者',						],		
+	'15' :				['践踏者',					'踐踏者',					'Trampler',									'トランプラー',					],		
+	'14' :				['铁浮屠',					'鐵浮屠',					'Iron Buddha',								'鉄甲兵',						],		//02		
+	
+	'17' :				['游击者',					'遊擊者',					'Guerrilla',								'遊撃者',						],		
+	'18' :				['刺杀者',					'刺殺者',					'Assassin',									'暗殺者',						],		
+	'16' :				['护卫者',					'護衛者',					'Guardian',									'守護者',						],		
+	'19' :				['割喉者',					'割喉者',					'Throat Cutter',							'喉笛切り',						],		//02		
+	
+	'25' :				['冲击者',					'衝擊者',					'Assaulter',								'衝撃者',						],		
+	'24' :				['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
+	'27' :				['轰炸者',					'轟炸者',					'Bomber',									'爆撃者',						],		
+	'26' :				['分裂者',					'分裂者',					'Splitter',									'分裂者',						],		//02		
+	
+	'22' :				['猎手',					'獵手',						'Hunter',									'ハンター',						],		
+	'23' :				['链锯',					'鏈鋸',						'Chain Saw',								'チェーンソー',					],		
+	'28' :				['棱镜',					'棱鏡',						'Prism',									'プリズム',						],		
+	'29' :				['圣光',					'聖光',						'Light',									'聖光',							],		
+	'33' :				['屠刀',					'屠刀',						'Butcher\'s Knife',							'スローターナイフ',				],		//02		
+	
+	'30' :				['致盲者',					'致盲者',					'Blinder',									'目潰し',						],		
+	'31' :				['肢解者',					'肢解者',					'Dissector',								'ミューティレーター',			],		
+	'32' :				['弑君者',					'弑君者',					'Regicide',									'キングスレイヤー',				],		
+	'20' :				['火法师',					'火法師',					'Fire Mage',								'火魔術師',						],		
+	'21' :				['冰法师',					'冰法師',					'Ice Mage',									'氷魔術師',						],		//02		
+	
+	'101A' :			['装甲猎手',				'裝甲獵手',					'Armored Hunter',							'装甲ハンター',					],		
+	'102A' :			['装甲链锯',				'裝甲鏈鋸',					'Armored Chain Saw',						'装甲チェーンソー',				],		
+	'109A' :			['封喉冲车',				'封喉衝車',					'Executor',									'喉潰し',						],		
+	'103A' :			['埋葬者',					'埋葬者',					'Undertaker',								'埋葬者',						],		
+	'104A' :			['绞肉机',					'絞肉機',					'Meat Grinder',								'肉挽き器',						],		
+	'105A' :			['力法师',					'力法師',					'Force Mage',								'力の魔術師',					],		
+	'106A' :			['扭曲者',					'扭曲者',					'Twister',									'ツイスター',					],		
+	'107A' :			['角斗士',					'角鬥士',					'Gladiator',								'グラディエーター',				],		
+	'108A' :			['推进者',					'推進者',					'Pusher',									'推進者',						],		//02		
+	
+	'101B' :			['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
+	'108B' :			['执法队',					'執法隊',					'Enforcement Squad',						'執行部隊',						],		
+	'102B' :			['绞刑架',					'絞刑架',					'Gallows',									'絞首台',						],		
+	'103B' :			['食尸鬼',					'食屍鬼',					'Ghoul',									'グール',						],		
+	'105B' :			['开瓶器',					'開瓶器',					'Bottle Opener',							'ボトルオープナー',				],		
+	'107B' :			['膨胀者',					'膨脹者',					'Expander',									'膨張者',						],		
+	'106B' :			['楔形兵',					'楔形兵',					'Wedge Rifleman',							'楔コマンド',					],		
+	'109B' :			['方阵兵',					'方陣兵',					'Phalanx Soldier',							'ファランクス',					],		
+	'104B' :			['移动堡',					'移動堡',					'Moving Castle',							'移動城',						],		//02		
+	
+	'101C' :			['靓蓝',					'靚藍',						'Indigo',									'インディゴ',					],		
+	'102C' :			['匕首',					'匕首',						'Dagger',									'ダガー',						],		
+	'106C' :			['骑士',					'騎士',						'Knight',									'騎士',							],		
+	'105C' :			['结晶体',					'結晶體',					'Crystal',									'結晶体',						],		
+	'108C' :			['镇暴队',					'鎮暴隊',					'Riot Squad',								'鎮圧隊',						],		
+	'109C' :			['圣骑士',					'聖騎士',					'Paladin',									'聖騎士',						],		
+	'103C' :			['十夫长',					'十夫長',					'Decurio',									'十人長',						],		
+	'104C' :			['百夫长',					'百夫長',					'Centurion',								'百人長',						],		
+	'107C' :			['狂轰者',					'狂轟者',					'Advanced Bomber',							'狂爆者',						],		//02		
+	
+	'Boss2_' :			['增殖者',					'增殖者',					'Multiplier',								'増殖者',						],		
+	'Boss2' :			['精锐增殖者',				'精銳增殖者',				'Elite Multiplier',							'精鋭増殖者',					],		//02		
+	
+	'Boss3_' :			['百臂巨人',				'百臂巨人',					'Hundred-Armed Giant',						'百腕巨人',						],		
+	'Boss3' :			['精锐百臂巨人',			'精銳百臂巨人',				'Elite Hundred-Armed Giant',				'精鋭百腕巨人',					],		//02		
+	
+	'Boss4' :			['泰坦',					'泰坦',						'Titan',									'タイタン',						],		
+	'Boss5' :			['巨像',					'巨像',						'Colossus',									'コロッサス',					],		//02		
+	
+	'Boss10A' :			['装甲母体',				'裝甲母體',					'Armored Matrix',							'装甲母体',						],		
+	'Boss10B' :			['特战母体',				'特戰母體',					'Special Forces Matrix',					'特殊戦母体',					],		
+	'Boss10C' :			['圣盾母体',				'聖盾母體',					'Holy Shield Matrix',						'聖盾母体',						],		//02		
+	
+	'Boss1_' :			['钢蛞蝓',					'鋼蛞蝓',					'Steel slug',								'スチールスラグ',				],		
+	'Boss1' :			['精锐钢蛞蝓',				'精銳鋼蛞蝓',				'Elite Steel slug',							'精鋭スチールスラグ',			],		
+	'Boss1a' :			['钢蛞蝓分身体01',			'鋼蛞蝓分身體01',			'Steel slug Clone 01',						'スチールスラグ分身体01',		],		
+	'Boss1b' :			['钢蛞蝓分身体02',			'鋼蛞蝓分身體02',			'Steel slug Clone 02',						'スチールスラグ分身体02',		],		
+	'Boss1c' :			['钢蛞蝓分身体03',			'鋼蛞蝓分身體03',			'Steel slug Clone 03',						'スチールスラグ分身体03',		],		//02		
+	
+	'EliteRanger' :		['游侠',					'遊俠',						'Ranger',									'ランジャ',						],		
+	'EliteRanger2' :	['高阶游侠',				'高階遊俠',					'Advanced Ranger',							'精鋭ランジャ',					],		//02		
+	
+	'EliteSamurai' :	['足轻',					'足輕',						'Foot Soldier',								'アシガル',						],		
+	'EliteSamurai2' :	['高阶足轻',				'高階足輕',					'Elite Foot Soldier',						'精鋭アシガル',					],		//02		
+	
+	'EliteAshigaru' :	['武士',					'武士',						'Sumurai',									'サムライ',						],		
+	'EliteAshigaru2' :	['高阶武士',				'高階武士',					'Advanced Sumurai',							'精鋭サムライ',					],		//02		
+	
+	'ElitePuppeteer' :	['傀儡师',					'傀儡師',					'Puppeteer',								'人形師',						],		
+	'EliteSamurai3' :	['傀儡足轻',				'傀儡足輕',					'Puppet Foot Soldier',						'人形師アシガル',				],		
+	'ElitePuppeteer2' :	['高阶傀儡师',				'高階傀儡師',				'Advanced Puppeteer',						'精鋭人形師',					],		
+	'EliteSamurai4' :	['高阶傀儡足轻',			'高階傀儡足輕',				'Advanced Puppet Foot Soldier',				'精鋭人形師アシガル',			],		//02		
+	
+	'A2' :				['教官',					'教官',						'Instructor',								'教官',							],		
+	'A1' :				['督战队',					'督戰隊',					'Overseer Squad',							'督戦隊',						],		//02		
+	
+	'Striker' :			['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
+	'Striker2' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
+	'StrikerRam' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		//02		
+	
+	'Door' :			['大门',					'大門',						'Gate',										'ゲート',						],		
+	'Door2' :			['大门',					'大門',						'Gate',										'ゲート',						],		//02		
+	
+	'Canon1' :			['基础炮台',				'基礎炮臺',					'Basic Turret',								'基礎砲塔',						],		
+	'Canon2' :			['狙击炮台',				'狙擊炮臺',					'Sniper Turret',							'狙撃砲塔',						],		
+	'Canon3' :			['重型炮台',				'重型炮臺',					'Heavy Turret',								'重型砲塔',						],		//02		
+	
+	'Hive1' :			['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
+	'Hive2' :			['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		
+	'HiveK' :			['帝国制造厂',				'帝国制造厂',				'Imperial Manufacturing Plant',				'帝国メーカー',					],		//02		
+	
+	'BuildingCanon0' :	['要塞炮',					'要塞炮',					'Stronghold Artillery',						'要塞砲',						],		
+	'BuildingCanon' :	['强要塞炮',				'強要塞炮',					'Advanced Stronghold Artillery',			'強要塞砲',						],		
+	'BuildingCanonC' :	['帝国要塞炮',				'帝國要塞炮',				'Imperial Fortress Cannon',					'帝国要塞砲',					],		//02		
+	
+	'Camp' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		
+	'CampC' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		//02		
+	
+	'HiveCannon1' :		['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
+	'HiveCannon2' :		['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		//02		
+	
+	'Car1' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
+	'Car2' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
+	'Car3' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		//02		
+	
+	'RebelMecha1' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		
+	'RebelMecha2' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		//02		
+	
+	'High11' :			['渗透型机甲',				'滲透型機甲',				'Infiltrator mecha',						'潜入型機体',					],		
+	'High12' :			['掷弹型机甲',				'擲彈型機甲',				'Grenade launcher mecha',					'擲弾型機体',					],		
+	'High13' :			['冲锋型机甲',				'衝鋒型機甲',				'Assault mecha',							'突撃型機体',					],		
+	'High14' :			['狙击型机甲',				'狙擊型機甲',				'Sniper mecha',								'狙撃型機体',					],		//02		
+	
+	'High11a' :			['精锐渗透型机甲',			'精銳滲透型機甲',			'Elite Infiltrator mecha',					'精鋭潜入型機体',				],		
+	'High12a' :			['精锐掷弹型机甲',			'精銳擲彈型機甲',			'Elite Grenade launcher mecha',				'精鋭擲弾型機体',				],		
+	'High13a' :			['精锐冲锋型机甲',			'精銳衝鋒型機甲',			'Elite Assault mecha',						'精鋭突撃型機体',				],		
+	'High14a' :			['精锐狙击型机甲',			'精銳狙擊型機甲',			'Elite Sniper mecha',						'精鋭狙撃型機体',				],		//02		
+	
+	'Mine' :			['地雷',					'地雷',						'A land mine.',								'地雷',							],		//02		
+	
+	'EliteLord' :		['领主',					'領主',						'Lord',										'ロード',						],		
+	'EliteLord2' :		['高阶领主',				'高階領主',					'Advanced Lord',							'精鋭ロード',					],		
+	'LordChild' :		['领主辅助战机',			'領主輔助戰機',				'Lord Child Mech Drone',					'ロードの子機体',				],		
+	'TestDummy' :		['测试模型',				'測試模型',					'Test Dummy',								'測試モデル',					],		//02		
+	
+	'EliteGiant' :		['独眼巨人',				'獨眼巨人',					'One-Eyed Giant',							'サイクロプス',					],		
+	'EliteGiant2' :		['精锐独眼巨人',			'精銳獨眼巨人',				'Elite One-Eyed Giant',						'精鋭サイクロプス',				],		
+	'GiantCanon' :		['独眼巨人炮台',			'獨眼巨人炮臺',				'One-Eyed Giant Cannon',					'サイクロプス砲塔',				],		
+	'GiantCanon2' :		['精锐独眼巨人炮台',		'精锐獨眼巨人炮臺',			'Elite One-Eyed Giant Cannon',				'精鋭サイクロプス砲塔',			],		
+	'GiantChild' :		['巨人子战机',				'巨人子戰機',				'Elite One-Eyed Giant Child',				'サイクロプスの子戦機',			],		//02		
+	
+	'Sandworm' :		['沙虫',					'沙蟲',						'Sandworm',									'サンドワーム',					],		
+	'Sandworm2' :		['灾厄沙虫',				'災厄沙蟲',					'Catastrophe Sandworm',						'災厄サンドワーム',				],		
+	'SandwormHead' :	['沙虫头部',				'沙蟲頭部',					'Sandworm Head',							'サンドワーム頭部',				],		
+	'SandwormBody' :	['沙虫身躯',				'沙蟲身軀',					'Sandworm Body',							'サンドワーム躯体',				],		
+	'SandwormTail' :	['沙虫尾部',				'沙蟲尾部',					'Sandworm Tail',							'サンドワーム尾部',				],		
+	'SandwormBody2' :	['灾厄沙虫身躯',			'灾厄沙虫身軀',				'Sandworm Body2',							'災厄サンドワーム躯体',			],		//02		
+	
+	'BossFinal' :		['主宰',					'主宰',						'Dominator',								'ドミネーター',					],		
+	'BFinalCanon1' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
+	'BFinalCanon2' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
+	'HiveBoss' :		['制造工厂',				'製造工廠',					'Factory',									'製造工場',						],		//02		
+	
+	'High1' :			['黑骑兵号',				'黑騎兵號',					'Black Knight',								'黒騎兵号',						],		
+	'High2' :			['突骑兵号',				'突騎兵號',					'Charge Cavalry',							'突撃騎兵号',					],		
+	'High3' :			['烈驹号',					'烈駒號',					'Fierce Steed',								'烈馬号',						],		
+	'High4' :			['枪骑兵号',				'槍騎兵號',					'Spear Cavalry',							'槍騎兵号',						],		
+	'High5' :			['甲胄骑士号',				'甲胄騎士號',				'Armor Knight',								'甲冑騎士号',					],		//02		
+	
+	'CCannon' :			['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
+	'CCannon0' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
+	'CCannon3' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
+	'CCannon4' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	
+	'ParCar1' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
+	'ParCar2' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
+	'ParCar3' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		//02		
+	
+	'CanonRebel1' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
+	'CanonRebel2' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	
+	'Para1' :			['帝国轻型量产机甲',		'帝國輕型量產機甲',			'Empire light production mecha',			'帝国軽量産機甲',				],		
+	'Para2' :			['帝国中型量产机甲',		'帝國中型量產機甲',			'Empire mid size mass-produced mecha',		'帝国中型量産機甲',				],		//02		
+	
+	'Para3' :			['帝国重型量产机甲',		'帝國重型量產機甲',			'Empire heavy production mecha',			'帝国重型量産機甲',				],		
+	'Para3T' :			['帝国重型机甲',			'帝國重型機甲',				'Empire Heavy Mech',						'帝国重型機甲',					],		//02		
+	
+	'Pard' :			['帝国精锐量产机甲',		'帝國精銳量產型機甲',		'Empire\'s elite mass-produced mecha',		'帝国精鋭量産型機甲',			],		
+	'PardT' :			['帝国精锐机甲',			'帝國精銳機甲',				'Empire\'s elite mecha',					'帝国精鋭機甲',					],		//02		
+	
+	'Parb1' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
+	'Parb1b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
+	'Parb2' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
+	'Parb2b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		//02		
+	
+	'Parc1' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		
+	'Parc1b' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		//02		
+	
+	'Pare' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		
+	'Pareb' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		//02		
+	
+	'Parf' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		
+	'Parfb' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		//02		
+	
+	'HighPar' :			['骠骑兵号(改)',			'驃騎兵號(改)',				'Hussar(Reform)',							'ユサール号(改)',				],		//02		
+	
+	'SupplyBox0' :		['补给箱(通用)',			'補給箱(通用)',				'Supply box-Universal',						'補給箱-汎用',					],		
+	'SupplyBox1' :		['补给箱(动力)',			'補給箱(動力)',				'Supply box-Power',							'補給箱-動力',					],		
+	'SupplyBox2' :		['补给箱(装甲)',			'補給箱(裝甲)',				'Supply box-Armor',							'補給箱-装甲',					],		
+	'SupplyBox3' :		['补给箱(弹头)',			'補給箱(彈頭)',				'Supply box-Warhead',						'補給箱-弾頭',					],		
+	'SupplyBox4' :		['补给箱(元素)',			'補給箱(元素)',				'Supply box-Elemental',						'補給箱-元素',					],		
+	'SupplyBox5' :		['补给箱(核心)',			'補給箱(核心)',				'Supply box-Core',							'補給箱-コア',					],		
+	'SupplyBox6' :		['补给箱(近战)',			'補給箱(近戰)',				'Supply box-Melee',							'補給箱-近接',					],		
+	'SupplyBox7' :		['补给箱(能量)',			'補給箱(能量)',				'Supply box-Energy',						'補給箱-エネルギー',			],		
+	'SupplyBox8' :		['补给箱(重武)',			'補給箱(重武)',				'Supply box-Heavy',							'補給箱-じゅうへいき',			],		//02		
+	
+	'Boss10'  :			['装甲母体/特战母体/圣盾母体',		'裝甲母體/特戰母體/聖盾母體',			'Armored Matrix/Special Forces Matrix/Holy Shield Matrix',		'装甲母体/特殊戦母体/聖盾母体',					],		//02		
+	
+	'101' :				['装甲猎手/干扰者/靓蓝',			'裝甲獵手/干擾者/靚藍',					'Armored Hunter/Disruptor/Indigo',								'装甲ハンター/攪乱者/インディゴ',				],		
+	'102' :				['装甲链锯/绞刑架/匕首',			'裝甲鏈鋸/絞刑架/匕首',					'Armored Chain Saw/Gallows/Dagger',								'装甲チェーンソー/絞首台/ダガー',				],		
+	'103' :				['埋葬者/食尸鬼/十夫长',			'埋葬者/食屍鬼/十夫長',					'Undertaker/Ghoul/Decurio',										'埋葬者/グール/十人長',							],		//02		
+	
+	'104' :				['绞肉机/移动堡/百夫长',			'絞肉機/移動堡/百夫長',					'Meat Grinder/Moving Castle/Centurion',							'肉挽き器/移動城/百人長',						],		
+	'105' :				['力法师/开瓶器/结晶体',			'力法師/開瓶器/結晶體',					'Force Mage/Opener/Crystal',									'力の魔術師/ボトルオープナー/結晶体',			],		
+	'106' :				['扭曲者/楔形兵/骑士',				'扭曲者/楔形兵/騎士',					'Twister/Wedge Rifleman/Knight',								'ツイスター/楔コマンド/騎士',					],		//02		
+	
+	'107' :				['角斗士/膨胀者/狂轰者',			'角鬥士/膨脹者/狂轟者',					'Gladiator/Expander/Advanced Bomber',							'グラディエーター/膨張者/狂爆者',				],		
+	'108' :				['推进者/执法队/镇暴队',			'推進者/執法隊/鎮暴隊',					'Pusher/Enforcement Squad/Riot Squad',							'推進者/執行部隊/鎮圧隊',						],		
+	'109' :				['封喉冲车/方阵兵/圣骑士',			'封喉衝車/方陣兵/聖騎士',				'Executor/Phalanx Soldier/Paladin',								'喉潰し/ファランクス/聖騎士',					],		//02		
+	
+};
+
+// ---------------------------------------------
+
+// 特殊编队
+let specialEnemy = ['101', '102', '103', '104', '105', '106', '107', '108', '109', 'Boss10', ]; // 这些敌人的图片需前缀 'z' 且格式为 'png'
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +' style="position:relative;">';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 地图类型
+		if(index ===  4 || index ===  4+22 || index ===  4+44 || index ===  4+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 地图预设
+		if(index ===  5 || index ===  5+22 || index ===  5+44 || index ===  5+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 天气状况
+		if(index ===  6 || index ===  6+22 || index ===  6+44 || index ===  6+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 特殊曲调
+		if(index ===  8 || index ===  8+22 || index ===  8+44 || index ===  8+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 敌人选择
+		if(index ===  9 || index ===  9+22 || index ===  9+44 || index ===  9+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 奖励系数
+		if(index === 10 || index === 10+22 || index === 10+44 || index === 10+66){
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span><span>'+ data +'</span>')) + '</td>'
+		}else 
+		
+		// 外勤任务
+		if(index === 13 || index === 13+22 || index === 13+44 || index === 13+66){
+			let itemLength = data.split('|').length, flexWidth = 540;
+			if(itemLength === 1){ flexWidth = 144 }else if(itemLength === 2){ flexWidth = 276 }else if(itemLength === 3){ flexWidth = 408 };
+			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span>' + '<span style="width:'+flexWidth+'px;">' + 
+				data.split('|').map(function(e){ return '<span><img alt="'+ outMissionsStr[e][0] +'" src="../static/image/mission/'+ outMissionsSrc[e] 
+				+ '.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />'+ e +' '+ outMissionsStr[e][0] +'</span>' }).join('') + '</span>'
+			)) + '</td>'
+		}else 
+		
+		// 假日安排 // ◆◆ 2 和 4 的 0 代表什么意思?
+		if(index === 14 || index === 14+22 || index === 14+44 || index === 14+66){
+			let itemLength = data.split('|').length, flexWidth = 540;
+			if(itemLength === 1){ flexWidth = 144 }else if(itemLength === 2){ flexWidth = 276 }else if(itemLength === 3){ flexWidth = 408 };
+			powerTable_tbody_node01 += '<td>'+ ((data === '-' || data === '0') ? data : ('<span>' + data + '</span>' + '<span style="width:'+flexWidth+'px;">' + 
+				data.split('|').map(function(e){ return '<span><img alt="'+ holidayTaskStr[e][0] +'" src="../static/image/'+ (index !== 80 ? 'holiday/' : 'survival/')
+				+ holidayTaskSrc[e] +'.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />' + e + ' ' + holidayTaskStr[e][0] + '</span>' }).join('') + '</span>'
+			)) + '</td>'
+		}else 
+		
+		// 特殊敌人
+		if(index === 21 || index === 21+22 || index === 21+44 || index === 21+66){
+			if(data === '-'){ powerTable_tbody_node01 += '<td>-</td>' }else{
+				
+				let result = '';
+				let isSpecialEnemy = false;
+				
+				result += '<span>'+ data +'</span>';
+				result += '<span>';
+				data.split('|').forEach(function(e01){
+					result += '<span>';
+						result += '<span><img alt="Placeholder" src="../static/image/enemy/-1.jpg" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ e01 +' : </span>';
+						enemyTeam[e01].split('|').forEach(function(e02){
+							
+							let src = e02;
+							isSpecialEnemy = specialEnemy.includes(e02);
+							
+							if(src === 'Parb1b'){ src = 'Parb1' }else if(src === 'Parb2b'){ src = 'Parb2' }
+							else if(src === 'Pareb'){ src = 'Pare' }else if(src === 'Parfb'){ src = 'Parf' };
+							
+							result += '<span><img alt="'+ enemyName[e02][0] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
+							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][0] +'</span>';
+							
+						});
+					result += '</span>';
+				});
+				result += '</span>';
+				
+				powerTable_tbody_node01 += '<td>'+ result +'</td>';
+				
+			};
+			
+		}else 
+		
+		// 敌军组合
+		if(index === 22 || index === 22+22 || index === 22+44 || index === 22+66){
+			if(data === '0'){ powerTable_tbody_node01 += '<td>0</td>' }else{
+				
+				let result = '';
+				let isSpecialEnemy = false;
+				
+				result += '<span>'+ data +'</span>';
+				result += '<span>';
+				data.split('|').forEach(function(e01){
+					result += '<span>';
+						result += '<span><img alt="Placeholder" src="../static/image/enemy/-1.jpg" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ e01 +' : </span>';
+						enemyTeam[e01].split('|').forEach(function(e02){
+							
+							let src = e02;
+							isSpecialEnemy = specialEnemy.includes(e02);
+							
+							if(src === 'Parb1b'){ src = 'Parb1' }else if(src === 'Parb2b'){ src = 'Parb2' }
+							else if(src === 'Pareb'){ src = 'Pare' }else if(src === 'Parfb'){ src = 'Parf' };
+							
+							result += '<span><img alt="'+ enemyName[e02][0] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
+							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][0] +'</span>';
+							
+						});
+					result += '</span>';
+				});
+				result += '</span>';
+				
+				powerTable_tbody_node01 += '<td>'+ result +'</td>';
+				
+			};
+			
+		}else 
+		
+		// 隐藏天数
+		if(index === 23 || index === 45 || index === 67){ 
+			powerTable_tbody_node01 += '<td style="display:none;">'+ data +'</td>'
+		}else
+		
+		// 常规数据
+		if(index !== 0){ powerTable_tbody_node01 += '<td style="height:40px;">'+ data +'</td>' };
+		
+	});
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+
+// 动画同步
+jqi_powerTable01.find('tbody > tr > td:nth-of-type(21), tbody > tr > td:nth-of-type(22), '
++'tbody > tr > td:nth-of-type(43), tbody > tr > td:nth-of-type(44)')
+.on('mouseenter touchstart', function(event){
+	$(this).find('img').each(function(index, element){
+		let jqi_img = $(this), src = jqi_img.attr('src');
+		jqi_img.attr('src', '../static/image/enemy/-1.jpg');
+		setTimeout(function(){ jqi_img.attr('src', src) }, 10);
+	})
+});
+
+// ---------------------------------------------
+
+// 当前所在
+let jqi_textPart = $('#textPart');
+
+// 向后翻页
+let nextPartAction = function(){
+	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') }else 
+	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart03'), jqi_textPart.text('P03') }else 
+	if(jqi_powerTable01.hasClass('showPart03') === true){ jqi_powerTable01.removeClass('showPart03').addClass('showPart04'), jqi_textPart.text('P04') }else 
+	if(jqi_powerTable01.hasClass('showPart04') === true){ jqi_powerTable01.removeClass('showPart04').addClass('showPart01'), jqi_textPart.text('P01') };
+};
+
+// 向前翻页
+let prevPartAction = function(){
+	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart04'), jqi_textPart.text('P04') }else 
+	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart01'), jqi_textPart.text('P01') }else 
+	if(jqi_powerTable01.hasClass('showPart03') === true){ jqi_powerTable01.removeClass('showPart03').addClass('showPart02'), jqi_textPart.text('P02') }else 
+	if(jqi_powerTable01.hasClass('showPart04') === true){ jqi_powerTable01.removeClass('showPart04').addClass('showPart03'), jqi_textPart.text('P03') };
+};
+
+// 阻止排序
+$('#turnPart').on('click', function(event){ event.stopPropagation() });
+
+// 翻页事件
+$('#nextPart').on('click', function(e){ nextPartAction() });
+$('#prevPart').on('click', function(e){ prevPartAction() });
+
+// 键盘翻页
+$(window).on('keyup', function(event){
+	let activeElement = document.activeElement;
+	if(activeElement !== $('#pub_headFormText')[0]
+	&& document.documentElement.clientWidth >= 1280){
+		if(event.keyCode === 37 || event.keyCode === 65){ prevPartAction() }else	// 右或者 D
+		if(event.keyCode === 39 || event.keyCode === 68){ nextPartAction() }else	// 左或者 A
+		if(event.key === '1'){ jqi_powerTable01.removeClass('showPart02 showPart03 showPart04').addClass('showPart01'), jqi_textPart.text('P01') }else	// 1 / 小键盘或数字键盘都行
+		if(event.key === '2'){ jqi_powerTable01.removeClass('showPart01 showPart03 showPart04').addClass('showPart02'), jqi_textPart.text('P02') }else	// 2 / 小键盘或数字键盘都行
+		if(event.key === '3'){ jqi_powerTable01.removeClass('showPart01 showPart02 showPart04').addClass('showPart03'), jqi_textPart.text('P03') }else	// 3 / 小键盘或数字键盘都行
+		if(event.key === '4'){ jqi_powerTable01.removeClass('showPart01 showPart02 showPart03').addClass('showPart04'), jqi_textPart.text('P04') };		// 4 / 小键盘或数字键盘都行
+	};
+});
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 基本信息</a>
+			<a href="#heading02">02. 额外拓展</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+

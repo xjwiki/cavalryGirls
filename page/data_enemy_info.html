@@ -45,17 +45,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-09-08T00:04:50UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-09-08T00:04:50UTC+8"></script>
-<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
-<!-- <script>document.write('<script src="../static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
-
-<!-- ↑ Public | Private ↓ -->
-
-<!-- <link rel="stylesheet" href="../static/cjs/index.css?time=2024-09-08T00:04:50UTC+8" /> -->
-<!-- <script src="../static/cjs/index.js?time=2024-09-08T00:04:50UTC+8"></script> -->
-<!-- <script>document.write('<link rel="stylesheet" href="../static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
-<!-- <script>document.write('<script src="../static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -134,10 +125,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 以下是敌人的数据, 目前敌人共有 <code>169</code> 种, 外观不同的有 <code>125</code> 类, 少部分敌人由于没被收录进图鉴, 所以也就没有预览图片; <br />
+	01. 以下是敌人的数据, 目前敌人共有 <code>178</code> 种, 外观不同的有 <code>125</code> 类, 少部分敌人由于没被收录进图鉴, 所以也就没有预览图片; <br />
 	02. 由于相关属性较多, 因此内容被拆成了三部分, 可点击表格右上角按钮, 或使用键盘方向键实现翻页, 属性详情请查阅 <a href="#heading02"># 属性解析</a>; <br />
 	03. 在第三部分的数据, 是一些高级敌人才特有的装备武器和行为逻辑, 有些内容无法用表格进一步解释, 细节详情请查阅 <a href="#heading03"># 额外拓展</a>; <br />
-	04. 根据判断条件差异, 还可以将敌人再细分为精英/常规(<code>54/115</code>)或者建筑/机甲(<code>30/139</code>), 借助下面的筛选工具进一步的剖析吧; <br />
+	04. 根据判断条件差异, 还可以将敌人再细分为精英/常规(<code>54/124</code>)或者建筑/机甲(<code>39/139</code>), 借助下面的筛选工具进一步的剖析吧; <br />
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
@@ -195,7 +186,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">剧情价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">挑战价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">生成间隔<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解体电力<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">训练调出<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
@@ -244,7 +235,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>07. 抵抗穿甲: 各种武器的穿甲概率都不同, 穿甲算法为 <code>1 - 穿甲概率 / 抵抗穿甲</code>, 如果抵抗成功, 子弹就只能造成 <code>5%</code> 的伤害;</p>
 
-<p>08. 抵抗爆炸: 爆炸伤害将无视抵抗和护盾, 如果抗暴成功, 伤害就只剩下十分之一, 如果抗暴失败则会受到全额爆炸伤害并进入眩晕;</p>
+<p>08. 抵抗爆炸: 爆炸伤害将无视抵抗和护盾, 如果抗暴成功, 伤害就只剩 <code>1/10</code> 了, 如果抗暴失败则会受到全额爆炸伤害并进入眩晕;</p>
 
 <p>09. 抵抗元素: 该属性可以减少机体受到的元素伤害百分比, 如果是 HP 伤害就是减少伤害值, 如果是 Debuff 就是减少受影响的时间;</p>
 
@@ -260,11 +251,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>————</p>
 
-<p>15. 剧情价值: 剧情模式下, 每个关卡背后都有个参数, 可将其称为关卡总价, 会出现什么类型的敌人, 一般是由代码预设, 但敌人的数量是多少, 则由关卡总价和敌人的剧情价值决定, 每出一个敌人, 关卡总价就会减去该敌人的剧情价值, 当关卡总价耗尽, 就不再出敌;</p>
+<p>15. 剧情价值: 在剧情模式下, 会出现什么类型的敌人, 由"敌军组合"决定, 而每个关卡都有"资金奖励"这个参数, 该参数同时也是敌人总价, 而敌人的数量就由资金奖励所决定, 每出现一个敌人, 资金奖励就会减去该敌人的剧情价值, 当资金奖励数值耗尽, 就不再出敌;</p>
 
-<p>16. 挑战价值: 类似剧情价值, 该参数适用于所有的挑战模式, 假设某个关卡总价为 P, 而敌人的种类被设定为钢盾和暴君, 敌人的出现比例是随机的, 而不是固定比例, 每出一个钢盾就是 <code>P - 5</code> 而每出一个暴君就是 <code>P - 15</code>, 当关卡总价既 <code>P <= 0</code> 了就不再出敌;</p>
+<p>16. 特殊价值: 类似剧情价值, 该参数适用于所有的特殊模式, 假设某个资金奖励为 P, 而敌人的种类被设定为钢盾和暴君, 敌人的出现比例是随机的, 而不是固定比例, 每出一个钢盾就是 <code>P - 5</code> 而每出一个暴君就是 <code>P - 15</code>, 当资金奖励既 <code>P <= 0</code> 了就不再出敌;</p>
 
-<p>17. 生成间隔: 敌人在战场上出现的间隔, 默认为 0.25 秒, 而出现的形式是一批接一批的, 每批敌人的数量则由 PeriodCost 参数决定(小于关卡总价但大于敌人价值), 当战场上的敌人数量过多或总价过高, 则敌人出现的间隔会延迟, 这生成间隔的属性就用于控制延迟;</p>
+<p>17. 生成间隔: 敌人在战场上出现的间隔, 默认为 0.25 秒(既每秒四个), 而出现的形式是一批接一批的, 每批敌人的数量由"每组价值"所决定(小于资金奖励但大于敌人价值), 两批敌人出现的间隔是"间隔因素"乘以这些敌人的生成间隔之总和, 大于 20 秒则等于 20 秒;</p>
 
 <p>18. 解体电力: 该参数就是敌人被发电厂回收后, 解体残骸所需的电力数值, 同时它也是究竟解体能获得多少材料的基数, 每种材料的价格都不同, 最终我们能获取的材料价值总和, 大约就等于解体所需要的电力(有可能略微超出, 因为是获取材料后才判断是否价值耗尽);</p>
 
@@ -317,19 +308,21 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading03">03. 额外拓展</h2>
 
-<p>01. 训练场调出敌人: 我们只能在剧情模式下且难度为故事的时候, 才能在训练场调出敌人, 其他难度的战略面板右上角并没有输入框;</p>
+<p>训练场调出敌人: 只能在剧情模式, 并且难度为故事时, 才可在训练场调出敌人(按 Tab 唤出战略面板后, 于右上角输入敌人 ID 即可);</p>
 
-<p>02. 不同属性的同类敌人: 部分敌人有普通和精锐两种版本, 例如百臂巨人和精锐百臂巨人, 还有的外观相同, 仅属性略有区别, 例如制造厂和强制造厂, 它们并非是不同难度下的敌人, 实际上它们是可能并存于同一个难度下的, 只是单纯的一个弱一点, 一个强一点而已;</p>
+<p>不同属性的同类敌人: 部分敌人存在普通和精锐两种版本, 例如百臂巨人和精锐百臂巨人, 还有的外观相同, 仅属性略有区别, 例如制造厂和强制造厂, 它们并非是不同难度下的敌人, 实际上它们是有可能并存于同一个难度下的, 只是单纯的一个弱一点, 一个强一点而已;</p>
 
-<p>03. 看不见但是存在的空指部: 游戏中有三种空指部, 会召唤空袭武器攻击我们, 由于它们在战场上不可见, 所以很难发现它们的存在, 但通过在训练场中唤出, XJ 发现它们其实会投下阴影, 尽管普通子弹无法射中它们, 但电弧武器和炸弹或空袭还是能伤到它们, 也就是说它们也是能被打爆的, 只不过由于不被纳入统计范围, 所以就算你没能清掉它们, 当战场上没有其他敌人的时候, 也是照样能通关的;</p>
+<p>看不见但是存在的空指部: 游戏中有三种空指部, 会召唤空袭武器攻击我们, 由于它们在战场上不可见, 所以很难发现它们的存在, 但通过在训练场中唤出, XJ 发现它们其实会投下阴影, 尽管普通子弹无法射中它们, 但电弧武器和炸弹或空袭还是能伤到它们, 也就是说它们也是能够被打爆的, 只不过是由于不被纳入统计范围, 所以就算你没能清掉它们, 当战场上没有其他敌人的时候, 也是照样能够通关;</p>
 
 <p>————</p>
 
-<p>04. 烈驹号功能参数解析: <code>CloseDashTime:15+0.6+1.2+0.5</code> 既烈驹号的冲刺细节, 对行为逻辑为 <code>Close</code> 的高级敌人(目前仅烈驹号), 将由 <code>CloseDashTime</code> 控制冲刺技能在各个阶段的时间(单位为秒), 第一个 <code>15</code> 是冲刺的冷却时间, 第二个 <code>0.6</code> 是前摇, 第三个 <code>1.2</code> 是实际的冲刺时间, 第四个 <code>0.5</code> 是后摇, <code>CloseDashSpeed:15</code> 既烈驹号冲刺技能在实际冲刺时的速度(烈驹号是纯近战单位);</p>
+<p>烈驹号功能参数解析: <code>CloseDashTime:15+0.6+1.2+0.5</code> 既烈驹号的冲刺细节, 对行为逻辑为 <code>Close</code> 的高级敌人(目前仅烈驹号), 将由 <code>CloseDashTime</code> 控制冲刺技能在各个阶段的时间(单位为秒), 第一个 <code>15</code> 是冲刺冷却时间, 第二个 <code>0.6</code> 是前摇, 第三个 <code>1.2</code> 是实际的冲刺时间, 第四个 <code>0.5</code> 是后摇, <code>CloseDashSpeed:15</code> 既烈驹号冲刺技能在实际冲刺时的速度(实际上烈驹号是纯近战单位);</p>
 
-<p>05. 甲胄骑士号功能参数解析: <code>AddStrategy:0+1+2+3+6+7+8+9</code> 既甲胄骑士号可以召唤的空袭类型, 而这八个数值分别代表, 空袭扫射(1300) / 空袭轰炸(1301) / 地毯式轰炸(1302) / 饱和轰炸(1303) / 空投云爆弹(1306) / 空投汽油弹(1307) / 空投震撼弹(1308) / 空投液氮炸弹(1309), 它会按照顺序召唤这些空袭, 如果其中某个还在冷却, 则会跳过并尝试召唤下一个(注意地面标记, 以免被炸懵!);</p>
+<p>甲胄骑士号功能参数解析: <code>AddStrategy:0+1+2+3+6+7+8+9</code> 既甲胄骑士号可召唤的空袭类型, 而这八个数值分别代表, 空袭扫射(1300) / 空袭轰炸(1301) / 地毯式轰炸(1302) / 饱和轰炸(1303) / 空投云爆弹(1306) / 空投汽油弹(1307) / 空投震撼弹(1308) / 空投液氮炸弹(1309), 甲胄骑士号会按照顺序召唤这些空袭, 如果其中某个还在冷却, 则会跳过并尝试召唤下一个(注意地面标记, 以免被炸懵!);</p>
 
-<p>06. 主宰功能参数解析: <code>1-1+3+6|0.9-1+4+5+6|0.8-2+3+6+8-2+Canon2|0.6-4+5+7-2+CanonRebel2|0.4-1+2+3+7+8-2+HiveBoss|0.2-1+2+3+4+5+6+7+8-2+Boss3_+Boss2_+Boss1_</code> 既主宰根据生命值变化, 在不同阶段所的不同行为逻辑, 这段代码在格式化之后细节如下所示: <br />
+<p>————</p>
+
+<p>主宰功能参数解析: <code>1-1+3+6|0.9-1+4+5+6|0.8-2+3+6+8-2+Canon2|0.6-4+5+7-2+CanonRebel2|0.4-1+2+3+7+8-2+HiveBoss|0.2-1+2+3+4+5+6+7+8-2+Boss3_+Boss2_+Boss1_</code> 既主宰根据当前生命值变化, 在不同阶段所的不同行为逻辑, 这段代码在格式化之后细节如下所示: <br />
 <br />
 
 <code style="display:block;white-space:pre;">1.0 - 1 + 3 + 6                                             |
@@ -360,6 +353,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 第 6 阶段, 生命值已经 <= 20% 的时候, 使用所有逻辑, 入场时两只手各拿一个精英敌人, 种类从 Boss3_/Boss2_/Boss1_ 里随机挑选; <br />
 </p>
 
+<p>————</p>
+
+<p>补给箱功能参数解析: <code>CanLoot</code> 既可在战场上拾取的意思, <code>V1.2.1841</code> 新增了补给箱的内容, 它们会在外围任务的战场中出现, 靠近后可以按 F 进行拾取, 战后它们就会跟敌军残骸那样会出现在发电厂了, 解体可获得各种废料, 在高难度任务中, 物资箱价值也会更高;</p>
+
 <hr />
 </section>
 
@@ -386,20 +383,20 @@ function(){ FastClick.attach(document.body) }, false);</script>
 #powerTable01 tr > td:nth-of-type( 5) span{overflow:hidden;display:inline-block;width:30px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap;}
 #powerTable01 tr > td:nth-of-type( 5):hover span, #powerTable01 tr > td:nth-of-type( 5):active span{overflow:visible;text-overflow:clip;white-space:normal;}
 
-/* 标签样式 */
+/* 解体产出 */
 
 #powerTable01 td:nth-of-type(27){position:relative;cursor:default;}
 
-#powerTable01 td:nth-of-type(27) span:first-child{overflow:hidden;display:inline-block;width:70px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap;}
+#powerTable01 td:nth-of-type(27) span:first-child{overflow:hidden;display:inline-block;width:70px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
 #powerTable01 td:nth-of-type(27):hover span:first-child, #powerTable01 tr > td:nth-of-type(27):active span:first-child{overflow:visible;text-overflow:clip;white-space:normal;}
 
 #powerTable01 td:nth-of-type(27) span:last-child{position:absolute;top:50%;right:100%;visibility:hidden;padding:8px;border-radius:4px;z-index:1;
 background-color:rgba(0,0,0,0.75);color:#fff;white-space:pre;transform:translate(-8px, -50%);pointer-events:none;}
 #powerTable01 td:nth-of-type(27):hover span:last-child{visibility:visible;}
 
-#powerTable01 td:nth-of-type(27)::after{position:absolute;top:50%;right:100%;visibility:hidden;width:0;height:0;border:8px solid transparent;border-right:0;
-border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);pointer-events:none;}
-#powerTable01 td:nth-of-type(27):hover::after{visibility:visible;}
+#powerTable01 td:nth-of-type(27) span:last-child::after{position:absolute;top:50%;left:100%;visibility:hidden;width:0;height:0;border:8px solid transparent;
+border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);pointer-events:none;}
+#powerTable01 td:nth-of-type(27):hover span:last-child::after{visibility:visible;}
 
 /* 武器代码*/
 
@@ -416,6 +413,7 @@ border-radius:4px;background-color:rgba(0,0,0,0.75);color:#fff;text-align:left;l
 
 <script>/* 数据注解 */
 /*
+
 Enemies.csv
 
 Content : '-',				// 没用, 原表格里用来标记是什么类型的敌人
@@ -429,40 +427,36 @@ Weapons & Bullets
 大部分 Projectile 和 Prefab 是相同的, 仅有以下两对属性不等, 武器列表检查过了也没有写错
 BulletLargeMinu0 !== BulletLargeMinu / BulletLargeMinu0b !== BulletLargeMinu
 DefaultModule 既默认配件, 都是 '-', 就跟 Prefab 既预制名称都去掉了
+DefaultFusion 既默认融合, 都是 '-', 就跟 Prefab 既预制名称都去掉了
 Reload 既换弹声音仅 GunShield 为 0, 其余都是 1, 但敌人并没有用到该武器, 所以也舍弃掉了
-
-————
-
-生成间隔这个属性, 究竟影响的是每个敌人出现的速度, 还是算一整批敌人的生成间隔, 这个尚且还没搞清除
-但无关紧要就不深入细究了, 反正就是当敌人在场上的数量过多时, 之后敌人出现就会延迟, 以避免性能问题
 
 */
 
 // 表01数据
 let tbodyArray01 = [
 	
-	//高亮,				敌人图片,				敌人序号,				敌人名称,				|	敌人代码,				最大血量,	最大移速,		炮台转速,		抵抗穿甲,	抵抗爆炸,		抵抗元素,	元素免疫,		开火距离,	预瞄时间,		精英领袖,	建筑属性,		文本描述,		|	剧情价值,		挑战价值,		生成间隔,			解体电力,		训练调出,		统计排除,		图鉴排除,		出场聚焦,		死亡动画,		原型研发,			解体产出,										武器代码,										|	爆破时间,		阶段血量,		退避范围,		行为逻辑,		投掷距离,		投掷间隔,		投掷物品,		机体改造,		武器配件,						功能参数,																																	],		
+	//高亮,				敌人图片,				敌人序号,				敌人名称,				|	敌人代码,				最大血量,	最大移速,		炮台转速,		抵抗穿甲,	抵抗爆炸,		抵抗元素,	元素免疫,		开火距离,	预瞄时间,		精英领袖,	建筑属性,		文本描述,		|	剧情价值,		特殊价值,		生成间隔,			解体电力,		训练调出,		统计排除,		图鉴排除,		出场聚焦,		死亡动画,		原型研发,			解体产出,										武器代码,										|	爆破时间,		阶段血量,		退避范围,		行为逻辑,		投掷距离,		投掷间隔,		投掷物品,		机体改造,		武器配件,						功能参数,																																	],		
 	//Active,			Image,					Number,					Name,					|	Enemys,					MaxHp,		MaxMoveSpeed,	RotateSpeed,	Armor,		ExploResist,	Resist,		Immune,			Range,		PreFireTime,	IsBoss,		IsBuilding,		Description,	|	Price,			Price_Chan,		UnitPeriodTime,		DemoPrice,		AllowedDebug,	DontCount,		InData,			IsFocus,		DieEffect,		Company,			Drop,											WeaponID,										|	Bursting,		LostHp,			MoveAwayRange,	Logic,			ThrowDistance,	ThrowCD,		Throw,			AddRemodel,		AddWeaponModel,					Params,																																		],		//01		
 	
 	[0,					'0',					'001',					'长矛',						'0',					100,		28,				1,				0,			0,				0,			0,				12,			0.2,			0,			0,				'-',				0.75,			0.5,			0.5,				1,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack|Speed',									'1102',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[0,					'1',					'002',					'军刀',						'1',					200,		7,				0.5,			5,			0,				0,			0,				15,			0.5,			0,			0,				'-',				0.2,			0.1,			0.05,				1,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack',										'1100',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[0,					'3',					'003',					'弯刃',						'3',					500,		175,			1,				16,			0,				0,			0,				18,			0.5,			0,			0,				'-',				3,				2,				1.5,				5,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack',										'1100',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[0,					'2',					'004',					'利剑',						'2',					450,		40,				0.5,			20,			0,				0,			0,				18,			0.5,			0,			0,				'-',				1,				0.6,			0.5,				3,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack',										'1100|1100',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
+	[0,					'3',					'003',					'弯刃',						'3',					500,		175,			1,				15,			0,				0,			0,				18,			0.5,			0,			0,				'-',				3,				2,				1.5,				5,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack',										'1100',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
+	[0,					'2',					'004',					'利剑',						'2',					450,		40,				0.5,			18,			0,				0,			0,				18,			0.5,			0,			0,				'-',				1,				0.6,			0.5,				3,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack',										'1100|1100',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[1,					'8',					'005',					'钢盾',						'8',					1250,		200,			0.5,			0,			40,				0,			0,				16,			0.5,			0,			0,				'-',				9,				5,				3.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor',									'6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'10',					'006',					'胡蜂',						'10',					2000,		200,			0.5,			0,			10,				0,			0,				18,			0.25,			0,			0,				'-',				10,				5,				3.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack|Armor|MG',								'1120|1120',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[1,					'9',					'007',					'弹雨',						'9',					1500,		200,			1,				35,			10,				0,			0,				18,			1,				0,			0,				'-',				9,				5,				3.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack|Shot',									'1104|1104',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
+	[1,					'9',					'007',					'弹雨',						'9',					1500,		200,			1,				20,			10,				0,			0,				18,			1,				0,			0,				'-',				9,				5,				3.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_1',			'Attack|Shot',									'1104|1104',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'11',					'008',					'暴君',						'11',					2000,		125,			0.5,			40,			55,				0,			0,				25,			1,				0,			0,				'-',				25,				15,				7.5,				20,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor|Explo',							'7|6|6',											'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[0,					'4',					'009',					'狙击者',					'4',					800,		50,				0.75,			10,			15,				0,			0,				22,			1.5,			0,			0,				'-',				6,				7,				3,					6,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Damage',								'1101',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[0,					'5',					'010',					'压制者',					'5',					2800,		300,			0.75,			35,			25,				0,			0,				15,			0.15,			0,			0,				'-',				5,				3,				2.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor',									'6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[0,					'6',					'011',					'突破者',					'6',					2000,		250,			0.75,			35,			25,				0,			0,				18,			0.15,			0,			0,				'-',				5,				5,				2.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor',									'1',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[0,					'7',					'012',					'倾泻者',					'7',					2000,		120,			0.75,			20,			35,				0,			0,				30,			2.5,			0,			0,				'-',				20,				15,				7.5,				9,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor|Damage|MG',						'1103',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
+	[0,					'5',					'010',					'压制者',					'5',					2800,		300,			0.75,			27,			25,				0,			0,				15,			0.15,			0,			0,				'-',				7,				3,				2.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor',									'6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
+	[0,					'6',					'011',					'突破者',					'6',					2000,		250,			0.75,			27,			25,				0,			0,				18,			0.15,			0,			0,				'-',				7,				5,				2.5,				8,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor',									'1',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
+	[0,					'7',					'012',					'倾泻者',					'7',					2000,		120,			0.75,			18,			35,				0,			0,				30,			2.5,			0,			0,				'-',				20,				15,				7.5,				9,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor|Damage|MG',						'1103',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[1,					'12',					'013',					'歌利亚',					'12',					100,		200,			0.75,			0,			0,				0,			0,				1,			0.5,			0,			0,				'-',				1,				0.3,			0.5,				1,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Explo',										'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'13',					'014',					'携带者',					'13',					1500,		150,			0.75,			20,			0,				0,			0,				30,			0.5,			0,			0,				'-',				18,				9,				9,					9,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Split',										'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'15',					'015',					'践踏者',					'15',					500,		200,			0.75,			0,			30,				0,			0,				18,			0.1,			0,			0,				'-',				18,				12,				9,					9,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Energy|Split',							'6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[1,					'14',					'016',					'铁浮屠',					'14',					1000,		50,				0.75,			15,			30,				0,			0,				18,			0.5,			0,			0,				'-',				7,				4,				3.5,				7,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Energy',								'1100|1100',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
+	[1,					'14',					'016',					'铁浮屠',					'14',					1000,		50,				0.75,			10,			30,				0,			0,				18,			0.5,			0,			0,				'-',				7,				4,				3.5,				7,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Energy',								'1100|1100',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[0,					'17',					'017',					'游击者',					'17',					600,		150,			0.75,			18,			15,				0,			0,				15,			0.25,			0,			0,				'-',				4,				2,				2,					4,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Fade',									'1100',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[0,					'18',					'018',					'刺杀者',					'18',					1000,		100,			0.75,			18,			15,				0,			0,				25,			1,				0,			0,				'-',				15,				12,				4,					8,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Fade|Damage',							'1101',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
@@ -483,8 +477,8 @@ let tbodyArray01 = [
 	[1,					'30',					'030',					'致盲者',					'30',					2000,		300,			1,				35,			30,				0,			0,				30,			1.5,			0,			0,				'-',				20,				10,				10,					10,				1,				0,				0,				0,				'-',			'Mainb_3',			'Attack|Laser',									'30',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'31',					'031',					'肢解者',					'31',					1500,		150,			1,				15,			50,				0,			0,				18,			0.25,			0,			0,				'-',				15,				12,				7.5,				10,				1,				0,				0,				0,				'-',			'Mainb_3',			'Attack|Armor|MG',								'1117',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[1,					'32',					'032',					'弑君者',					'32',					2000,		125,			1.2,			60,			50,				0,			0,				24,			1.25,			0,			0,				'-',				35,				20,				12.5,				10,				1,				0,				0,				0,				'-',			'Mainb2_2',			'Attack|Armor|MG',								'1116|1116',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[1,					'20',					'033',					'火法师',					'20',					200,		25,				0.75,			35,			15,				0,			0,				12,			0.5,			0,			0,				'-',				6,				2,				3,					6,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Flame|Speed',							'10|10',											'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[1,					'21',					'034',					'冰法师',					'21',					200,		25,				0.75,			35,			15,				0,			0,				12,			0.5,			0,			0,				'-',				5,				2,				2.5,				5,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Freeze|Speed',							'11|6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
+	[1,					'20',					'033',					'火法师',					'20',					200,		25,				0.75,			25,			15,				0,			0,				12,			0.5,			0,			0,				'-',				6,				2,				3,					6,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Flame|Speed',							'10|10',											'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
+	[1,					'21',					'034',					'冰法师',					'21',					200,		25,				0.75,			25,			15,				0,			0,				12,			0.5,			0,			0,				'-',				5,				2,				2.5,				5,				1,				0,				0,				0,				'-',			'Mainb2_3',			'Attack|Freeze|Speed',							'11|6',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[0,					'101A',					'035',					'装甲猎手',					'101A',					800,		750,			1,				45,			50,				25,			20,				15,			0.1,			0,			0,				'-',				4,				2,				1,					4,				1,				0,				0,				0,				'-',			'Mainb2_5',			'Attack|Armor',									'1102',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[0,					'102A',					'036',					'装甲链锯',					'102A',					800,		1200,			1,				45,			20,				25,			20,				1,			0.5,			0,			0,				'-',				10,				5,				2.5,				5,				1,				0,				0,				0,				'-',			'Mainb2_5',			'Melee|Armor',									'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
@@ -599,7 +593,7 @@ let tbodyArray01 = [
 	[1,					'EliteLord',			'120',					'领主',						'EliteLord',			35000,		200,			3,				45,			100,			40,			50,				30,			0.5,			1,			0,				'-',				600,			900,			1,					50,				0,				0,				0,				1,				'1|2|3|4',		'Mainb_5',			'Attack|Ellite|Melee|Armor',					'54|54|1101|1101',									'-',			'-',			'-',			'-',			21,				9,				'3+6+8+5+12+4',	'-',			'-',							'-',																																		],		
 	[1,					'EliteLord2',			'121',					'高阶领主',					'EliteLord2',			56000,		200,			3,				120,		135,			75,			75,				30,			0.5,			1,			0,				'-',				800,			1200,			1,					50,				0,				0,				0,				1,				'5|6|7',		'Mainb_5',			'Attack|Ellite|Melee|Armor',					'54|54|1116|1116',									'-',			'-',			'-',			'-',			25,				6,				'3+6+8+5+12+4',	'-',			'-',							'-',																																		],		
 	[1,					'None',					'122',					'领主辅助战机',				'LordChild',			10000,		1000,			10,				200,		150,			90,			90,				30,			0.5,			0,			0,				'-',				100,			100,			1,					50,				0,				1,				1,				0,				'-',			'Mainb_5',			'-',											'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
-	[1,					'None',					'123',					'测试模型',					'TestDummy',			100000000,	50000,			3,				0,			0,				0,			0,				30,			0.5,			1,			1,				'-',				100,			100,			1,					50,				0,				0,				1,				0,				'-',			'Main_6',			'-',											'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
+	[1,					'None',					'123',					'测试模型',					'TestDummy',			100000000,	50000,			3,				0,			0,				0,			0,				30,			0.5,			0,			1,				'-',				100,			100,			1,					50,				0,				0,				1,				0,				'-',			'Main_6',			'-',											'-',												'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[0,					'EliteGiant',			'124',					'独眼巨人',					'EliteGiant',			30000,		500,			0.4,			50,			100,			0,			0,				30,			0.5,			1,			0,				'-',				750,			900,			1,					50,				0,				0,				0,				1,				'1|2|3|4',		'Mainb_5',			'Attack|Ellite|Armor',							'1202|1202',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
 	[0,					'EliteGiant2',			'125',					'精锐独眼巨人',				'EliteGiant2',			50000,		650,			0.4,			100,		135,			0,			0,				30,			0.5,			1,			0,				'-',				900,			1000,			1,					50,				0,				0,				0,				1,				'5|6|7',		'Mainb_5',			'Attack|Ellite|Damage|Armor',					'1202|1202',										'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'-',																																		],		
@@ -661,6 +655,16 @@ let tbodyArray01 = [
 	[1,					'Parf',					'168',					'帝国战略部队机甲',			'Parfb',				10000,		150,			1,				75,			80,				10,			10,				35,			0,				0,			0,				'-',				45,				35,				4,					15,				0,				0,				1,				0,				'-',			'Main_6',			'-',											'1131|1131',										7,				'-',			20,				'Range',		'-',			'-',			'-',			'-',			'-',							'-',																																		],		//01		
 	
 	[0,					'HighPar',				'169',					'骠骑兵号(改)',				'HighPar',				55000,		300,			0.5,			300,		99,				75,			20,				24,			0,				1,			0,				'-',				250,			600,			1.5,				100,			0,				0,				0,				1,				'5|6|7',		'Main_6',			'-',											'1125|1125',										3,				33,				15,				'Throw',		20,				5,				'3+6+8+5+4',	'1',			'-',							'-',																																		],		//01		
+	
+	[1,					'None',					'170',					'补给箱(通用)',				'SupplyBox0',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				10,				10,				1,					10,				0,				1,				1,				0,				'-',			'Main_2',			'All|Attack',									'-',												1,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'171',					'补给箱(动力)',				'SupplyBox1',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				15,				15,				1,					15,				0,				1,				1,				0,				'-',			'Main_2',			'Speed|All',									'-',												1,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'172',					'补给箱(装甲)',				'SupplyBox2',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				15,				15,				1,					15,				0,				1,				1,				0,				'-',			'Main_2',			'Armor|All',									'-',												1,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'173',					'补给箱(弹头)',				'SupplyBox3',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				25,				25,				1,					25,				0,				1,				1,				0,				'-',			'Main_2',			'Attack|Damage',								'-',												2,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'174',					'补给箱(元素)',				'SupplyBox4',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				25,				25,				1,					25,				0,				1,				1,				0,				'-',			'Main_2',			'Electric|Flame|Freeze|All',					'-',												2,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'175',					'补给箱(核心)',				'SupplyBox5',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				25,				25,				1,					25,				0,				1,				1,				0,				'-',			'Main_2',			'Ellite|All|Attack',							'-',												2,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'176',					'补给箱(近战)',				'SupplyBox6',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				25,				25,				1,					25,				0,				1,				1,				0,				'-',			'Main_2',			'Attack|Melee',									'-',												2,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'177',					'补给箱(能量)',				'SupplyBox7',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				40,				40,				1,					40,				0,				1,				1,				0,				'-',			'Main_2',			'Laser|Split|Energy|Fade',						'-',												3,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		
+	[1,					'None',					'178',					'补给箱(重武)',				'SupplyBox8',			2000,		0,				0,				20,			20,				0,			0,				0,			0,				0,			1,				'-',				40,				40,				1,					40,				0,				1,				1,				0,				'-',			'Main_2',			'Explo|Shot|MG|Attack',							'-',												3,				'-',			'-',			'-',			'-',			'-',			'-',			'-',			'-',							'CanLoot',																																	],		//01		
 	
 ];
 
@@ -885,6 +889,16 @@ let ItemsNameList = {
 	
 	'HighPar' :			['骠骑兵号(改)',			'驃騎兵號(改)',				'Hussar(Reform)',							'ユサール号(改)',				],		//02		
 	
+	'SupplyBox0' :		['补给箱(通用)',			'補給箱(通用)',				'Supply box-Universal',						'補給箱-汎用',					],		
+	'SupplyBox1' :		['补给箱(动力)',			'補給箱(動力)',				'Supply box-Power',							'補給箱-動力',					],		
+	'SupplyBox2' :		['补给箱(装甲)',			'補給箱(裝甲)',				'Supply box-Armor',							'補給箱-装甲',					],		
+	'SupplyBox3' :		['补给箱(弹头)',			'補給箱(彈頭)',				'Supply box-Warhead',						'補給箱-弾頭',					],		
+	'SupplyBox4' :		['补给箱(元素)',			'補給箱(元素)',				'Supply box-Elemental',						'補給箱-元素',					],		
+	'SupplyBox5' :		['补给箱(核心)',			'補給箱(核心)',				'Supply box-Core',							'補給箱-コア',					],		
+	'SupplyBox6' :		['补给箱(近战)',			'補給箱(近戰)',				'Supply box-Melee',							'補給箱-近接',					],		
+	'SupplyBox7' :		['补给箱(能量)',			'補給箱(能量)',				'Supply box-Energy',						'補給箱-エネルギー',			],		
+	'SupplyBox8' :		['补给箱(重武)',			'補給箱(重武)',				'Supply box-Heavy',							'補給箱-じゅうへいき',			],		//02		
+	
 	'Main_1' :		['帝国重工',				'帝國重工',					'Imperial Heavy Industries',					'帝国重工',						],
 	'Main_2' :		['帝国武器制造总局',		'帝國武器製造總局',			'Imperial Weapon Manufacturing Bureau',			'帝国兵器製造局',				],
 	'Main_3' :		['依热夫兵工厂',			'依熱夫兵工廠',				'Irev Arsenal',									'Irevアーセナル',				],
@@ -896,21 +910,21 @@ let ItemsNameList = {
 	'Main2_3' :		['总装备制造局',			'總裝備製造局',				'General Equipment Manufacturing Bureau',		'汎用設備製造局',				],
 	'Main2_4' :		['苏尔发动机制造局',		'蘇爾發動機製造局',			'Sul Engine Manufacturing Bureau',				'スールエンジン製造局',			],
 	'Main2_5' :		['风神公司',				'風神公司',					'Hermes Company',								'風神公司',						],
-	'Main2_6' :		['布尔引擎公司',			'布爾引擎公司',				'Boolean Engine Company',						'ブールエンジン株式会社',		],
+	'Main2_6' :		['布尔发动机公司',			'布爾發動機公司',			'Boolean Engine Company',						'ブールエンジン株式会社',		],
 	'Main2_7' :		['蓝天电子公司',			'藍天電子公司',				'Blue Sky Electronics Company',					'青空電子株式会社',				],
-	'Main2_8' :		['首都兵器工厂',			'首都兵器工廠',				'Capital Arsenal',								'首都兵器工場',					],
+	'Main2_8' :		['首都兵工厂',				'首都兵工廠',				'Capital Arsenal',								'首都兵器工場',					],
 	'Main2_9' :		['帝国火炮集团',			'帝國火炮集團',				'Imperial Artillery Group',						'帝国火砲集団',					],
 	'Main2_10' :	['格罗姆钢管厂',			'格羅姆鋼管廠',				'Grom Steel Pipe Factory',						'グロム鋼管工場',				],
-	'Main2_11' :	['弹头总填装部',			'彈頭總填裝部',				'Bullet Assembly Department',					'弾頭総装填部',					],
-	'Main2_12' :	['帝国仪器工厂',			'帝國儀器工廠',				'Imperial Instrument Factory',					'帝国計器工場',					],
+	'Main2_11' :	['弹头总装部',				'彈頭總裝部',				'Bullet Assembly Department',					'弾頭総装填部',					],
+	'Main2_12' :	['帝国仪器厂',				'帝國儀器廠',				'Imperial Instrument Factory',					'帝国計器工場',					],
 	'Mainb_1' :		['联盟重工',				'聯盟重工',					'Alliance Heavy Industries',					'連合重工',						],
 	'Mainb_2' :		['联合工业集团',			'聯合工業集團',				'United Industries Group',						'連合工業グループ',				],
 	'Mainb_3' :		['联盟轻工联合',			'聯盟輕工聯合',				'Alliance Light Industry Alliance',				'連合軽工業連合',				],
-	'Mainb_4' :		['扎尔铁骑设计机构',		'紮爾鐵騎設計機構',			'Zhar Cavalry Design Bureau',					'ザル鉄騎設計機構',				],
+	'Mainb_4' :		['扎尔铁骑设计局',			'紮爾鐵騎設計局',			'Zhar Cavalry Design Bureau',					'ザル鉄騎設計局',				],
 	'Mainb_5' :		['火雨重工',				'火雨重工',					'Flame Rain Heavy Industry',					'火雨重工',						],
-	'Mainb_6' :		['巨型设备总装部门',		'巨型設備總裝部門',			'Giant Equipment Assembly Department',			'巨大設備総組立部門',			],
-	'Mainb2_1' :	['共和国轻武装备厂',		'共和國輕武裝備廠',			'Republic Light Weapons Equipment Factory',		'共和国軽兵器装備工場',			],
-	'Mainb2_2' :	['第二坦克制造总局',		'第二坦克製造總局',			'2nd Tank Manufacturing Bureau',				'第二戦車製造総局',				],
+	'Mainb_6' :		['巨型设备总装部',			'巨型設備總裝部',			'Giant Equipment Assembly Department',			'巨大設備総組立部',				],
+	'Mainb2_1' :	['共和国轻武器装备厂',		'共和國輕武器裝備廠',		'Republic Light Weapons Equipment Factory',		'共和国軽兵器装備工場',			],
+	'Mainb2_2' :	['第二坦克制造局',			'第二坦克製造局',			'2nd Tank Manufacturing Bureau',				'第二戦車製造局',				],
 	'Mainb2_3' :	['爱国者汽车制造局',		'愛國者汽車製造局',			'Patriot Automobile Manufacturing Bureau',		'パトリオット自動車製造局',		],
 	'Mainb2_4' :	['远松电器',				'遠松電器',					'Y.S Electric Appliances',						'テレマツでんき',				],
 	'Mainb2_5' :	['道格拉斯轻工',			'道格拉斯輕工',				'Douglas Light Industry',						'ダグラス軽工業',				],
@@ -1007,7 +1021,7 @@ let ItemsNameList = {
 };
 
 // 文本描述
-let DescriptionsList = {
+let DescriptionList = {
 	
 	'0' :				[/*'长矛',					*/'速度很快, 但是也很脆',																																						'速度很快, 但是也很脆',																																					'Fast but fragile.',																																																																																																																									'速いが脆い',																																																																																																	],		
 	'1' :				[/*'军刀',					*/'最基础的敌人, 很平庸',																																						'最基礎的敵人, 很平庸',																																					'The most basic type of enemy.',																																																																																																																						'最も基本的な敵',																																																																																																],		
@@ -1226,222 +1240,230 @@ let DescriptionsList = {
 	'Parfb' :			[/*'帝国战略部队机甲',		*/'帝国战略机甲, 会从远距离发射火箭弹, 机动性较弱, 但是火力和防御力都很强, 警觉性也非常的高, [背后感知: 极强, 感知角度: 窄]',													'帝國戰略機甲, 會從遠距離發射火箭彈, 機動性較弱, 但是火力和防禦力都很強, 警覺性也非常的高, [背後感知: 極強, 感知角度: 窄]',												'Empire strategic mechs will launch rockets from a long distance. Very weak mobility, but strong firepower and defense. [Rear perception: extremely strong | Perception angle: narrow',																																																																																	'帝国戦略機甲は, 長距離からロケット弾を発射する, 機動性は弱いが, 火力も防御力も強い, [背後感知: 極強い｜感知角度: 狭い]'																																																																						],		//03		
 	
 	'HighPar' :			[/*'骠骑兵号(改)',			*/'敌军首领驾驶的, 掷弹型特化高级机甲, 装备有大量投掷物, 投掷时会进行预瞄, 要注意它的各种投掷物, 否则可能会被持续控制住, 受到一定伤害后会张开无敌护盾, 并会召唤敌军',			'敵軍首領駕駛的, 擲彈型特化高級機甲, 裝備有大量投擲物, 投擲時會進行預瞄, 要註意它的各種投擲物, 否則可能會被持續控製住, 受到一定傷害後會張開無敵護盾, 並會召喚敵軍',		'The enemy leader drove, a specialized mech of the bullet throwing, equipped with a large number of throwing objects, and pre -aiming when throwing. Pay attention to its various throws. Otherwise, it may be continuously controlled. Invincible shields, and will summon enemy forces',																																																								'敵のリーダーは、多数のスローオブジェクトを装備した特別な高エンドのメカを運転し、それ以外の場合は、継続的に制御されます敵軍',																																																																					],		//03		
+
+	'SupplyBox0' :		[/*'骠骑兵号(改)',			*/'敌军首领驾驶的, 掷弹型特化高级机甲, 装备有大量投掷物, 投掷时会进行预瞄, 要注意它的各种投掷物, 否则可能会被持续控制住, 受到一定伤害后会张开无敌护盾, 并会召唤敌军',			'敵軍首領駕駛的, 擲彈型特化高級機甲, 裝備有大量投擲物, 投擲時會進行預瞄, 要註意它的各種投擲物, 否則可能會被持續控製住, 受到一定傷害後會張開無敵護盾, 並會召喚敵軍',		'The enemy leader drove, a specialized mech of the bullet throwing, equipped with a large number of throwing objects, and pre -aiming when throwing. Pay attention to its various throws. Otherwise, it may be continuously controlled. Invincible shields, and will summon enemy forces',																																																								'敵のリーダーは、多数のスローオブジェクトを装備した特別な高エンドのメカを運転し、それ以外の場合は、継続的に制御されます敵軍',																																																																					],		//03		
+
+	'SupplyBox0' :		[/*'补给箱(通用)',			*/'拾取后会向解体厂库存添加一个补给箱: 通用',																																	'拾取后会向解體廠庫存添加一個補給箱: 通用',																																'Add a supply box to the inventory of the Disassembly factory:Universal',																																																																																																												'解体プラントの在庫に補給箱を追加する：汎用',																																																																																									],		
+	'SupplyBox1' :		[/*'补给箱(动力)',			*/'拾取后会向解体厂库存添加一个补给箱: 动力',																																	'拾取后会向解體廠庫存添加一個補給箱: 動力',																																'Add a supply box to the inventory of the Disassembly factory:Power',																																																																																																													'解体プラントの在庫に補給箱を追加する：動力',																																																																																									],		
+	'SupplyBox2' :		[/*'补给箱(装甲)',			*/'拾取后会向解体厂库存添加一个补给箱: 装甲',																																	'拾取后会向解體廠庫存添加一個補給箱: 裝甲',																																'Add a supply box to the inventory of the Disassembly factory:Armor',																																																																																																													'解体プラントの在庫に補給箱を追加する：装甲',																																																																																									],		
+	'SupplyBox3' :		[/*'补给箱(弹头)',			*/'拾取后会向解体厂库存添加一个补给箱: 弹头',																																	'拾取后会向解體廠庫存添加一個補給箱: 彈頭',																																'Add a supply box to the inventory of the Disassembly factory:Warhead',																																																																																																													'解体プラントの在庫に補給箱を追加する：弾頭',																																																																																									],		
+	'SupplyBox4' :		[/*'补给箱(元素)',			*/'拾取后会向解体厂库存添加一个补给箱: 元素',																																	'拾取后会向解體廠庫存添加一個補給箱: 元素',																																'Add a supply box to the inventory of the Disassembly factory:Elemental',																																																																																																												'解体プラントの在庫に補給箱を追加する：元素',																																																																																									],		
+	'SupplyBox5' :		[/*'补给箱(核心)',			*/'拾取后会向解体厂库存添加一个补给箱: 核心',																																	'拾取后会向解體廠庫存添加一個補給箱: 核心',																																'Add a supply box to the inventory of the Disassembly factory:Core',																																																																																																													'解体プラントの在庫に補給箱を追加する：コア',																																																																																									],		
+	'SupplyBox6' :		[/*'补给箱(近战)',			*/'拾取后会向解体厂库存添加一个补给箱: 近战',																																	'拾取后会向解體廠庫存添加一個補給箱: 近戰',																																'Add a supply box to the inventory of the Disassembly factory:Melee',																																																																																																													'解体プラントの在庫に補給箱を追加する：近接',																																																																																									],		
+	'SupplyBox7' :		[/*'补给箱(能量)',			*/'拾取后会向解体厂库存添加一个补给箱: 能量',																																	'拾取后会向解體廠庫存添加一個補給箱: 能量',																																'Add a supply box to the inventory of the Disassembly factory:Energy',																																																																																																													'解体プラントの在庫に補給箱を追加する：エネルギー',																																																																																								],		
+	'SupplyBox8' :		[/*'补给箱(重武)',			*/'拾取后会向解体厂库存添加一个补给箱: 重武',																																	'拾取后会向解體廠庫存添加一個補給箱: 重武',																																'Add a supply box to the inventory of the Disassembly factory:Heavy',																																																																																																													'解体プラントの在庫に補給箱を追加する：じゅうへいき',																																																																																							],		//03		
 	
 };
 
 // 武器信息
 let WeaponsList = {
-	//		子弹伤害,		子弹射程,		子弹速度,		弹夹容量,		射击间隔,		每发弹数,		穿甲概率,				暴击概率,				暴击伤害,			装弹时间,			最大弹射,		最小射程,		开火动画,		开火火焰,		弹道跟随,		负面效果,		最大散射,		偏移角度,	换弹老化,		换弹音效,		开火音效,			开火老化,		后坐力值,	弹壳类型,			特殊效果,			武器标记,			子弹名称,								],		
-	//		Damage,			BulletRange,	BulletSpeed,	ClipNum,		FireRate,		FireNum,		PiercingPossibility,	CriticPossibility,		CriticDamage,		ReloadSpeed,		MaxHit,			MinRange,		FireType,		fireFlash,		SetParent,		Debuff,			AngleFloat,		Stable,		BrokePos,		ClipSound,		Sound,				BrokePos2,		Force,		Case,				Func,				Weapons,			Projectile,								],		
-	None :	[0,				0,				0,				0,				0,				0,				0,						0,						0,					0,					0,				0,				0,				0,				0,				0,				0,				0,			0,				'-',			'-',				0,				0,			'-',				'-',				'None',				'-',									],		
-	0 :		[200,			20,				800,			12,				0.18,			1,				10,						5,						100,				2,					1,				2,				1,				1,				0,				0,				8,				0.1,		4,				'SL',			'0_SMG',			3,				240,		'CaseNormal',		'-',				0,					'BulletNormal',							],		
-	1 :		[200,			20,				800,			15,				0.12,			1,				10,						5,						100,				3.5,				1,				2,				1,				1,				0,				0,				11,				0.125,		5,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				1,					'BulletNormal',							],		
-	2 :		[200,			20,				800,			6,				1.25,			12,				10,						5,						100,				6,					1,				2,				1,				1,				0,				0,				15,				0.01,		17,				'Sh',			'2_SSG',			9,				900,		'CaseLarge',		'-',				2,					'BulletNormal',							],		
-	3 :		[120,			16,				800,			7,				1,				25,				7,						5,						100,				7,					0,				1,				1,				1,				0,				0,				36,				0.01,		15,				'Sh',			'3_HSG',			9,				900,		'CaseLarge',		'-',				3,					'BulletMinu',							],		
-	4 :		[1250,			28,				8000,			5,				2,				1,				40,						15,						100,				5.6,				1,				3,				2,				1,				0,				0,				5,				0.2,		15,				'LL2',			'4_LRF',			9,				2400,		'CaseLarge',		'-',				4,					'BulletLarge',							],		
-	5 :		[700,			27,				2500,			12,				0.3,			1,				25,						15,						150,				8,					1,				3,				2,				1,				0,				0,				24,				0.4,		11,				'LL',			'5_HRF',			6,				1000,		'CaseLarge',		'-',				5,					'BulletLargeMinu',						],		
-	6 :		[120,			16,				800,			50,				0.08,			1,				7,						5,						100,				2,					0,				1,				1,				1,				0,				0,				14,				0.15,		6,				'SS',			'6_GTL',			3,				180,		'CaseSmall',		'-',				6,					'BulletMinu',							],		
-	7 :		[900,			28,				2000,			6,				1,				1,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				8,				0.1,		27,				'LS',			'7_CAN',			15,				1600,		'CaseSmoke',		'-',				7,					'BulletExplode',						],		
-	8 :		[600,			24,				750,			2,				2,				6,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				15,				0.01,		24,				'LS',			'7_CAN',			15,				2400,		'CaseSmoke2',		'-',				8,					'BulletExplodeMin',						],		
-	9 :		[150,			20,				800,			12,				0.2,			1,				100,					5,						100,				3,					0,				2,				1,				1,				0,				0,				7,				0.075,		5,				'SL2',			'1_HMG',			3,				300,		'CaseNormal',		'-',				9,					'BulletPierce',							],		
-	10 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					6,					0,				0,				1,				3,				1,				0,				0,				0.1,		4,				'-',			'FLM',				0,				0,			'-',				'-',				10,					'Thrower-Fire',							],		
-	11 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.1,		4,				'-',			'FLM2',				0,				0,			'-',				'-',				11,					'Thrower-Freeze',						],		
-	12 :	[300,			16,				800,			10,				0.2,			1,				15,						5,						100,				5,					0,				1,				1,				1,				0,				3,				9,				0.1,		7,				'SL2',			'1_HMG',			0,				120,		'CaseNormal',		'-',				12,					'BulletElectr',							],		
-	13 :	[540,			24,				2000,			80,				0.1,			1,				20,						5,						100,				20,					1,				3,				1,				1,				0,				0,				18,				0.25,		28,				'ML2',			'MG',				15,				500,		'CaseLarge',		'ForceSeat',		13,					'BulletBig',							],		
-	14 :	[700,			27,				2500,			90,				0.075,			1,				25,						15,						150,				36,					1,				3,				2,				1,				0,				0,				15,				0.1,		63,				'LS',			'MGC',				36,				600,		'CaseLarge',		'ForceSeat',		14,					'BulletLargeMinu',						],		
-	15 :	[400,			26,				2000,			9,				0.6,			1,				24,						10,						100,				3.5,				1,				3,				2,				1,				0,				0,				7,				0.2,		9,				'SL2',			'0_RF',				6,				600,		'CaseNormal',		'-',				15,					'BulletBigFar',							],		
-	16 :	[250,			21,				800,			25,				0.12,			1,				12,						5,						100,				4.5,				1,				2,				1,				1,				0,				0,				10,				0.15,		7,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				16,					'BulletNormal2',						],		
-	17 :	[250,			21,				800,			25,				0.1,			1,				12,						5,						100,				4.5,				1,				2,				1,				1,				0,				0,				18,				0.225,		7,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				17,					'BulletNormal2',						],		
-	18 :	[200,			20,				800,			3,				0.07,			1,				10,						5,						100,				0.6,				1,				2,				1,				1,				0,				0,				6,				0.075,		2,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',				18,					'BulletNormal',							],		
-	19 :	[250,			21,				800,			5,				0.5,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				5,				0.05,		3,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',				19,					'BulletNormal2',						],		
-	20 :	[250,			21,				800,			2,				0.25,			20,				12,						5,						100,				5,					1,				2,				1,				1,				0,				0,				24,				0.01,		6,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',				20,					'BulletNormal2',						],		
-	21 :	[120,			16,				800,			100,			0.08,			1,				7,						5,						100,				4,					0,				1,				1,				1,				0,				0,				16,				0.2,		12,				'SS',			'6_GTL',			6,				192,		'CaseSmall',		'-',				21,					'BulletMinu',							],		
-	22 :	[150,			18,				800,			42,				0.1,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				12,				0.1,		7,				'SS',			'6_GTL',			3,				192,		'CaseSmall',		'-',				22,					'BulletMinu2',							],		
-	23 :	[540,			24,				2000,			2,				2,				6,				20,						5,						100,				5.5,				1,				3,				1,				1,				0,				0,				15,				0.01,		7,				'LS',			'2_SSG',			3,				1600,		'CaseLarge',		'-',				23,					'BulletBig',							],		
-	24 :	[200,			20,				800,			60,				0.1,			1,				10,						5,						100,				9,					1,				2,				1,				1,				0,				0,				12,				0.2,		20,				'SL2',			'MG2',				10,				300,		'CaseNormal',		'-',				24,					'BulletNormal',							],		
-	25 :	[200,			20,				800,			8,				0.2,			3,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				5,				0.01,		7,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',				25,					'BulletNormal',							],		
-	26 :	[300,			24,				600,			15,				0.2,			1,				0,						0,						0,					9,					0,				0,				2,				1,				0,				0,				20,				0.5,		40,				'LS',			'7_CAN',			24,				300,		'CaseSmoke',		'ForceSeat',		26,					'BulletExplodeMin2',					],		
-	27 :	[80,			13,				0,				9,				1,				1,				0,						0,						0,					3.5,				0,				0,				1,				2,				1,				0,				0,				0.01,		12,				'-',			'Laser 03',			0,				0,			'-',				'-',				27,					'RayNormal',							],		
-	28 :	[60,			22,				0,				4,				1.5,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		10,				'-',			'Laser 03',			0,				0,			'-',				'-',				28,					'RayNormalLong',						],		
-	29 :	[1800,			18,				0,				4,				1,				1,				0,						0,						0,					2.5,				0,				0,				1,				2,				1,				0,				0,				0.01,		5,				'-',			'Laser 03',			0,				0,			'-',				'-',				29,					'RayBurst',								],		
-	30 :	[1250,			28,				0,				1,				2,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		5,				'-',			'Laser 03',			0,				0,			'-',				'-',				30,					'RayBurstLong',							],		
-	31 :	[150,			18,				0,				8,				1,				1,				0,						0,						0,					4,					3,				0,				1,				2,				1,				0,				0,				0.01,		20,				'-',			'Electric',			0,				0,			'-',				'-',				31,					'Lightning',							],		
-	32 :	[200,			30,				0,				4,				1.5,			1,				0,						0,						0,					5.5,				2,				0,				1,				2,				1,				0,				0,				0.01,		35,				'-',			'Electric',			0,				0,			'-',				'-',				32,					'LightningLong',						],		
-	33 :	[600,			20,				0,				2,				1.5,			1,				0,						0,						0,					7,					2,				0,				1,				2,				1,				0,				0,				0.01,		42,				'-',			'Electric',			0,				0,			'-',				'-',				33,					'LightingDamage',						],		
-	34 :	[450,			14,				0,				3,				2,				1,				0,						0,						0,					6.5,				7,				0,				1,				2,				1,				0,				0,				0.01,		40,				'-',			'Electric',			0,				0,			'-',				'-',				34,					'LightningBurst',						],		
-	35 :	[-200,			20,				0,				5,				1,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		50,				'-',			'Lightning_Treat',	30,				0,			'-',				'-',				35,					'Lightning_Treat',						],		
-	36 :	[0,				15,				300,			1,				4,				1,				0,						0,						0,					6,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				36,					'Thrower-Oil',							],		
-	37 :	[0,				15,				300,			4,				4,				1,				0,						0,						0,					6,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				37,					'Thrower-Water',						],		
-	38 :	[45,			16,				600,			36,				0.05,			1,				50,						0,						0,					2,					0,				0,				1,				2,				0,				6,				10,				0.1,		4,				'SS',			'6_GTL',			3,				240,		'CaseNormal',		'-',				38,					'BulletWater',							],		
-	39 :	[225,			15,				800,			20,				0.09,			1,				8,						5,						100,				3.5,				0,				1,				1,				1,				0,				3,				18,				0.2,		4,				'SS',			'6_GTL',			3,				150,		'CaseSmall',		'-',				39,					'BulletElectrMin',						],		
-	40 :	[900,			28,				2000,			2,				1,				1,				50,						20,						150,				3.5,				0,				3,				1,				1,				0,				3,				3,				0.15,		6,				'ML3',			'4_LRF',			3,				800,		'CaseLarge',		'-',				40,					'BulletElectrLarge',					],		
-	41 :	[0,				3,				1,				0,				0,				0,				0,						0,						0,					0,					0,				0,				-2,				-1,				-1,				0,				0,				0,			0,				'-',			'-',				0,				0,			'-',				'-',				41,					'GunShield',							],		
-	42 :	[300,			24,				600,			5,				0.5,			1,				0,						0,						0,					3,					0,				0,				2,				1,				0,				0,				8,				0.1,		15,				'LS',			'7_CAN',			12,				300,		'CaseSmoke',		'-',				42,					'BulletExplodeMin2',					],		
-	43 :	[550,			16,				2000,			3,				0.5,			1,				24,						15,						100,				4,					1,				3,				2,				1,				0,				0,				20,				0.35,		4,				'LL',			'5_HRF',			3,				1000,		'CaseLarge',		'-',				43,					'BulletLargeMinu0',						],		
-	100 :	[200,			20,				800,			15,				0.18,			1,				10,						5,						100,				2,					1,				2,				1,				1,				0,				0,				7,				0.1,		5,				'SL',			'0_SMG',			3,				240,		'CaseNormal',		'-',				100,				'BulletNormal',							],		
-	101 :	[200,			20,				800,			16,				0.11,			1,				10,						5,						100,				3.2,				1,				2,				1,				1,				0,				0,				8,				0.1,		5,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				101,				'BulletNormal',							],		
-	102 :	[250,			21,				800,			6,				1.2,			10,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				12,				0.01,		15,				'Sh',			'2_SSG',			9,				900,		'CaseLarge',		'-',				102,				'BulletNormal2',						],		
-	103 :	[120,			16,				800,			7,				1,				32,				7,						5,						100,				7.5,				0,				1,				1,				1,				0,				0,				42,				0.01,		15,				'Sh',			'3_HSG',			9,				900,		'CaseLarge',		'-',				103,				'BulletMinu',							],		
-	104 :	[1250,			28,				8000,			6,				1.75,			1,				40,						15,						100,				5,					1,				3,				2,				1,				0,				0,				2,				0.2,		20,				'LL2',			'4_LRF',			12,				2400,		'CaseLarge',		'-',				104,				'BulletLarge',							],		
-	105 :	[700,			27,				2500,			13,				0.3,			1,				25,						15,						150,				7.5,				1,				3,				2,				1,				0,				0,				22,				0.4,		11,				'LL',			'5_HRF',			6,				1000,		'CaseLarge',		'-',				105,				'BulletLargeMinu',						],		
-	106 :	[120,			16,				800,			50,				0.08,			1,				7,						5,						100,				2.5,				0,				1,				1,				1,				0,				0,				14,				0.15,		5,				'SS',			'6_GTL',			3,				180,		'CaseSmall',		'-',				106,				'BulletMinu',							],		
-	107 :	[900,			28,				2000,			7,				1.6,			1,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				8,				0.1,		33,				'LS',			'7_CAN',			18,				1600,		'CaseSmoke',		'-',				107,				'BulletExplode',						],		
-	108 :	[600,			24,				750,			3,				2,				4,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				15,				0.01,		30,				'LS',			'7_CAN',			18,				2400,		'CaseSmoke2',		'-',				108,				'BulletExplodeMin',						],		
-	109 :	[150,			20,				800,			15,				0.25,			1,				100,					5,						100,				3,					0,				2,				1,				1,				0,				0,				9,				0.1,		7,				'SL2',			'1_HMG',			3,				300,		'CaseNormal',		'-',				109,				'BulletPierce',							],		
-	110 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					5.5,				0,				0,				1,				3,				1,				0,				0,				0.1,		3,				'-',			'FLM',				0,				0,			'-',				'-',				110,				'Thrower-Fire',							],		
-	111 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					5.5,				0,				0,				1,				2,				1,				0,				0,				0.1,		3,				'-',			'FLM2',				0,				0,			'-',				'-',				111,				'Thrower-Freeze',						],		
-	113 :	[540,			24,				2000,			80,				0.125,			1,				20,						5,						100,				20,					1,				3,				1,				1,				0,				0,				18,				0.25,		30,				'ML2',			'MG',				18,				500,		'CaseLarge',		'ForceSeat',		113,				'BulletBig',							],		
-	114 :	[700,			27,				2500,			80,				0.09,			1,				25,						15,						150,				40,					1,				3,				2,				1,				0,				0,				18,				0.1,		69,				'LS',			'MGC',				45,				600,		'CaseLarge',		'ForceSeat',		114,				'BulletLargeMinu',						],		
-	115 :	[400,			26,				2000,			10,				0.5,			1,				24,						10,						100,				3.2,				1,				3,				2,				1,				0,				0,				2,				0.2,		8,				'ML3',			'0_RF',				3,				600,		'CaseNormal',		'-',				115,				'BulletBigFar',							],		
-	116 :	[250,			21,				800,			36,				0.12,			1,				12,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		8,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				116,				'BulletNormal2',						],		
-	117 :	[320,			22,				800,			36,				0.1,			1,				15,						5,						100,				4,					1,				2,				1,				1,				0,				0,				18,				0.225,		8,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',				117,				'BulletNormal3',						],		
-	118 :	[250,			21,				800,			3,				0.07,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				4,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',				118,				'BulletNormal2',						],		
-	119 :	[250,			21,				800,			5,				0.5,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				5,				0.05,		2,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',				119,				'BulletNormal2',						],		
-	120 :	[250,			21,				800,			2,				0.25,			25,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				24,				0.01,		5,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',				120,				'BulletNormal2',						],		
-	121 :	[120,			16,				800,			150,			0.08,			1,				7,						5,						100,				4,					0,				1,				1,				1,				0,				0,				16,				0.2,		16,				'SS',			'6_GTL',			9,				192,		'CaseSmall',		'-',				121,				'BulletMinu',							],		
-	122 :	[150,			18,				800,			42,				0.11,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				12,				0.1,		4,				'SS',			'6_GTL',			2,				192,		'CaseSmall',		'-',				122,				'BulletMinu2',							],		
-	123 :	[540,			24,				2000,			2,				2,				7,				20,						5,						100,				7,					1,				3,				1,				1,				0,				0,				15,				0.01,		9,				'LS',			'2_SSG',			6,				1600,		'CaseLarge',		'-',				123,				'BulletBig',							],		
-	124 :	[250,			21,				800,			50,				0.1,			1,				12,						5,						100,				7,					1,				2,				1,				1,				0,				0,				12,				0.2,		17,				'SL2',			'MG2',				8,				300,		'CaseLarge',		'-',				124,				'BulletNormal2',						],		
-	125 :	[250,			21,				800,			8,				0.12,			3,				12,						5,						100,				5.5,				1,				2,				1,				1,				0,				0,				5,				0.01,		7,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',				125,				'BulletNormal2',						],		
-	126 :	[300,			24,				600,			18,				0.2,			1,				0,						0,						0,					9,					0,				0,				2,				1,				0,				0,				20,				0.5,		50,				'LS',			'7_CAN',			30,				300,		'CaseLarge',		'ForceSeat',		126,				'BulletExplodeMin2',					],		
-	127 :	[100,			15,				0,				10,				1,				1,				0,						0,						0,					3,					0,				0,				1,				2,				1,				0,				0,				0.01,		10,				'-',			'Laser 03',			0,				0,			'-',				'-',				127,				'RayNormal2',							],		
-	128 :	[75,			27,				0,				4,				1.6,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		8,				'-',			'Laser 03',			0,				0,			'-',				'-',				128,				'RayNormalLong2',						],		
-	129 :	[2400,			20,				0,				5,				1,				1,				0,						0,						0,					2.2,				0,				0,				1,				2,				1,				0,				0,				0.01,		4,				'-',			'Laser 03',			0,				0,			'-',				'-',				129,				'RayBurst2',							],		
-	130 :	[1500,			28,				0,				1,				2.2,			1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		8,				'-',			'Laser 03',			0,				0,			'-',				'-',				130,				'RayBurstLong2',						],		
-	131 :	[160,			18,				0,				9,				0.8,			1,				0,						0,						0,					3.6,				4,				0,				1,				2,				1,				0,				0,				0.01,		27,				'-',			'Electric',			0,				0,			'-',				'-',				131,				'Lightning2',							],		
-	132 :	[200,			32,				0,				4,				1.7,			1,				0,						0,						0,					6,					3,				0,				1,				2,				1,				0,				0,				0.01,		30,				'-',			'Electric',			0,				0,			'-',				'-',				132,				'LightningLong2',						],		
-	133 :	[750,			21,				0,				3,				1.25,			1,				0,						0,						0,					6,					2,				0,				1,				2,				1,				0,				0,				0.01,		36,				'-',			'Electric',			0,				0,			'-',				'-',				133,				'LightingDamage2',						],		
-	134 :	[600,			14,				0,				3,				2,				1,				0,						0,						0,					6.5,				9,				0,				1,				2,				1,				0,				0,				0.01,		50,				'-',			'Electric',			0,				0,			'-',				'-',				134,				'LightningBurst2',						],		
-	136 :	[0,				15,				300,			1,				4,				1,				0,						0,						0,					5.5,				0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				136,				'Thrower-Oil',							],		
-	137 :	[0,				15,				300,			4,				4,				1,				0,						0,						0,					5.5,				0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				137,				'Thrower-Water',						],		
-	138 :	[75,			18,				600,			36,				0.05,			1,				50,						0,						0,					2,					0,				0,				1,				2,				0,				6,				10,				0.1,		4,				'SS',			'6_GTL',			3,				240,		'CaseNormal',		'-',				138,				'BulletWater2',							],		
-	139 :	[225,			15,				800,			22,				0.075,			1,				8,						5,						100,				3,					0,				1,				1,				1,				0,				3,				15,				0.2,		4,				'SS',			'6_GTL',			0,				150,		'CaseSmall',		'-',				139,				'BulletElectrMin',						],		
-	140 :	[900,			28,				2000,			2,				0.8,			1,				50,						20,						150,				3,					0,				3,				1,				1,				0,				3,				4,				0.15,		6,				'ML3',			'4_LRF',			0,				800,		'CaseLarge',		'-',				140,				'BulletElectrLarge',					],		
-	142 :	[600,			24,				750,			3,				0.75,			1,				0,						0,						0,					2.5,				0,				0,				2,				1,				0,				0,				8,				0.1,		15,				'LS',			'7_CAN',			12,				1600,		'CaseSmoke',		'-',				142,				'BulletExplodeMin',						],		
-	143 :	[700,			19,				2000,			2,				0.75,			1,				24,						15,						100,				3,					1,				3,				2,				1,				0,				0,				20,				0.35,		10,				'LL',			'5_HRF',			10,				1000,		'CaseLarge',		'-',				143,				'BulletLargeMinu0b',					],		
-	200 :	[250,			21,				800,			16,				0.16,			1,				12,						5,						100,				1.8,				1,				2,				1,				1,				0,				0,				6,				0.1,		4,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',				200,				'BulletNormal2',						],		
-	201 :	[250,			21,				800,			16,				0.11,			1,				12,						5,						100,				3.2,				1,				2,				1,				1,				0,				0,				8,				0.1,		3,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',				201,				'BulletNormal2',						],		
-	202 :	[320,			22,				800,			6,				1.5,			10,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				12,				0.01,		10,				'Sh',			'2_SSG',			6,				900,		'CaseLarge',		'-',				202,				'BulletNormal3',						],		
-	203 :	[150,			18,				800,			7,				1,				48,				8,						5,						100,				7.5,				0,				1,				1,				1,				0,				0,				42,				0.01,		21,				'Sh',			'3_HSG',			12,				900,		'CaseLarge',		'-',				203,				'BulletMinu2',							],		
-	204 :	[1500,			28,				8000,			4,				1.75,			1,				60,						20,						150,				6,					1,				3,				2,				1,				0,				0,				2,				0.2,		25,				'LL2',			'0_LRF',			80,				2400,		'CaseLarge',		'ForceSeat',		204,				'BulletLargePierce',					],		
-	205 :	[900,			27,				2500,			13,				0.27,			1,				36,						15,						150,				7,					1,				3,				2,				1,				0,				0,				20,				0.5,		15,				'LL',			'5_HRF',			9,				1000,		'CaseLarge',		'-',				205,				'BulletLargeMinu2',						],		
-	206 :	[150,			18,				800,			55,				0.07,			1,				8,						5,						100,				2.2,				0,				1,				1,				1,				0,				0,				12,				0.15,		4,				'SS',			'6_GTL',			0,				180,		'CaseSmall',		'-',				206,				'BulletMinu2',							],		
-	210 :	[0,				15,				300,			4,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				3,				1,				0,				0,				0.1,		3,				'-',			'FLM',				0,				0,			'-',				'-',				210,				'Thrower-Fire',							],		
-	211 :	[0,				15,				300,			4,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.1,		3,				'-',			'FLM2',				0,				0,			'-',				'-',				211,				'Thrower-Freeze',						],		
-	213 :	[540,			24,				2000,			85,				0.11,			1,				20,						5,						100,				16,					1,				3,				1,				1,				0,				0,				15,				0.25,		32,				'ML2',			'MG',				20,				300,		'CaseLarge',		'ForceSeat',		213,				'BulletBig',							],		
-	215 :	[500,			28,				2000,			10,				0.44,			1,				32,						10,						100,				2.6,				1,				3,				2,				1,				0,				0,				2,				0.2,		10,				'ML3',			'0_RF',				6,				700,		'CaseNormal',		'-',				215,				'BulletBigFar2',						],		
-	216 :	[250,			21,				800,			36,				0.12,			1,				12,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		5,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',				216,				'BulletNormal2',						],		
-	218 :	[250,			21,				800,			3,				0.05,			1,				12,						5,						100,				0.45,				1,				2,				1,				1,				0,				0,				3,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',				218,				'BulletNormal2',						],		
-	219 :	[320,			22,				800,			5,				0.4,			1,				15,						5,						100,				0.4,				1,				2,				1,				1,				0,				0,				4,				0.05,		2,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',				219,				'BulletNormal3',						],		
-	220 :	[250,			21,				800,			3,				0.35,			25,				12,						5,						100,				9,					1,				2,				1,				1,				0,				0,				24,				0.01,		10,				'Sh',			'2_SSG',			6,				700,		'CaseLarge',		'-',				220,				'BulletNormal2',						],		
-	221 :	[150,			18,				800,			150,			0.07,			1,				8,						5,						100,				3.5,				0,				1,				1,				1,				0,				0,				12,				0.15,		19,				'SS',			'6_GTL',			12,				192,		'CaseSmall',		'-',				221,				'BulletMinu2',							],		
-	222 :	[180,			18,				800,			48,				0.1,			1,				9,						5,						100,				1.7,				0,				1,				1,				1,				0,				0,				11,				0.075,		3,				'SS',			'6_GTL',			1,				192,		'CaseSmall',		'-',				222,				'BulletMinu3',							],		
-	223 :	[540,			24,				2000,			2,				1,				7,				20,						5,						100,				8,					1,				3,				1,				1,				0,				0,				12,				0.01,		9,				'LS',			'2_SSG',			9,				1600,		'CaseLarge',		'-',				223,				'BulletBig',							],		
-	224 :	[250,			21,				800,			54,				0.09,			1,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				10,				0.15,		15,				'SL2',			'MG2',				7,				300,		'CaseLarge',		'-',				224,				'BulletNormal2',						],		
-	225 :	[320,			22,				800,			8,				0.12,			3,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				5,				0.01,		5,				'Sh',			'2_SSG',			5,				600,		'CaseLarge',		'-',				225,				'BulletNormal3',						],		
-	230 :	[2000,			30,				0,				1,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		25,				'-',			'Laser 03',			0,				0,			'-',				'-',				230,				'RayBurstLong3',						],		
-	232 :	[240,			35,				0,				5,				1.6,			1,				0,						0,						0,					5.4,				3,				0,				1,				2,				1,				0,				0,				0.01,		54,				'-',			'Electric',			0,				0,			'-',				'-',				232,				'LightningLong3',						],		
-	233 :	[1000,			23,				0,				3,				1.25,			1,				0,						0,						0,					6,					3,				0,				1,				2,				1,				0,				0,				0.01,		45,				'-',			'Electric',			0,				0,			'-',				'-',				233,				'LightingDamage3',						],		
-	236 :	[0,				15,				300,			1,				3.6,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				236,				'Thrower-Oil',							],		
-	237 :	[0,				15,				300,			4,				3.6,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',				237,				'Thrower-Water',						],		
-	300 :	[250,			21,				800,			17,				0.145,			1,				12,						5,						100,				1.6,				1,				2,				1,				1,				0,				0,				5,				0.1,		4,				'SL',			'0_SMG',			5,				240,		'CaseNormal',		'-',				300,				'BulletNormal2',						],		
-	301 :	[250,			21,				800,			17,				0.1,			1,				12,						5,						100,				3,					1,				2,				1,				1,				0,				0,				7,				0.075,		4,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',				301,				'BulletNormal2',						],		
-	303 :	[180,			18,				800,			7,				0.9,			50,				9,						5,						100,				7,					0,				1,				1,				1,				0,				0,				36,				0.01,		13,				'Sh',			'3_HSG',			15,				900,		'CaseLarge',		'-',				303,				'BulletMinu3',							],		
-	304 :	[3000,			28,				8000,			2,				2,				1,				60,						25,						200,				9,					1,				3,				2,				1,				0,				0,				2,				0.2,		35,				'LL2',			'0_LRF',			120,			3200,		'CaseLarge',		'ForceSeat',		304,				'BulletLargeKill',						],		
-	306 :	[150,			18,				800,			60,				0.06,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				10,				0.135,		5,				'LL',			'6_GTL',			5,				180,		'CaseSmall',		'-',				306,				'BulletMinu2',							],		
-	315 :	[500,			28,				2000,			10,				0.4,			1,				32,						10,						100,				2,					1,				3,				2,				1,				0,				0,				1,				0.2,		6,				'ML3',			'0_RF',				5,				800,		'CaseNormal',		'-',				315,				'BulletBigFar2',						],		
-	316 :	[320,			22,				800,			36,				0.14,			1,				15,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		7,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',				316,				'BulletNormal3',						],		
-	318 :	[320,			22,				800,			3,				0.035,			1,				15,						5,						100,				0.4,				1,				2,				1,				1,				0,				0,				2,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',				318,				'BulletNormal3',						],		
-	320 :	[320,			22,				800,			4,				0.45,			25,				15,						5,						100,				12,					1,				2,				1,				1,				0,				0,				24,				0.01,		12,				'Sh',			'2_SSG',			6,				800,		'CaseLarge',		'-',				320,				'BulletNormal3',						],		
-	321 :	[150,			18,				800,			150,			0.07,			1,				8,						5,						100,				3,					0,				1,				1,				1,				0,				0,				10,				0.12,		14,				'SS',			'6_GTL',			15,				192,		'CaseSmall',		'-',				321,				'BulletMinu2',							],		
-	322 :	[180,			18,				800,			48,				0.09,			1,				9,						5,						100,				1.8,				0,				1,				1,				1,				0,				0,				11,				0.075,		5,				'SS',			'6_GTL',			3,				192,		'CaseSmall',		'-',				322,				'BulletMinu3',							],		
-	324 :	[320,			22,				800,			40,				0.09,			1,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				9,				0.1,		18,				'SL2',			'MG2',				12,				300,		'CaseLarge',		'-',				324,				'BulletNormal3',						],		
-	330 :	[10000,			40,				0,				1,				5,				1,				0,						0,						0,					20,					0,				0,				1,				2,				1,				0,				1,				0.05,		100,			'-',			'LaserBoss',		300,			0,			'-',				'-',				330,				'RayBoss',								],		
-	333 :	[2400,			27,				0,				3,				4.2,			1,				0,						0,						0,					12,					3,				0,				1,				2,				1,				0,				0,				0.01,		75,				'-',			'Electric' ,		200,			0,			'-',				'-',				333,				'LightingDamage4',						],		
-	400 :	[320,			22,				800,			17,				0.145,			1,				15,						5,						100,				1.6,				1,				2,				1,				1,				0,				0,				5,				0.1,		4,				'SL',			'0_SMG',			5,				240,		'CaseNormal',		'-',				400,				'BulletNormal3',						],		
-	401 :	[320,			22,				800,			18,				0.09,			1,				15,						5,						100,				2.7,				1,				2,				1,				1,				0,				0,				6,				0.075,		4,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',				401,				'BulletNormal3',						],		
-	406 :	[180,			18,				800,			64,				0.055,			1,				9,						5,						100,				1.8,				0,				1,				1,				1,				0,				0,				9,				0.125,		5,				'SS',			'6_GTL',			5,				180,		'CaseSmall',		'-',				406,				'BulletMinu3',							],		
-	415 :	[700,			27,				2500,			10,				0.35,			1,				25,						15,						150,				1.8,				1,				3,				2,				1,				0,				0,				1,				0.2,		5,				'ML3',			'0_RF',				5,				100,		'CaseNormal',		'-',				415,				'BulletLargeMinu',						],		
-	424 :	[400,			26,				2000,			38,				0.1,			1,				24,						10,						100,				8.7,				1,				3,				2,				1,				0,				0,				9,				0.09,		9,				'SL2',			'MG2',				6,				50,			'CaseLarge',		'-',				424,				'BulletBigFar',							],		
-	504 :	[5000,			30,				10000,			1,				3,				1,				100,					30,						300,				10,					1,				3,				2,				1,				0,				0,				1,				0.1,		35,				'LL3',			'0_LRF2',			120,			5400,		'CaseLarge',		'ForceSeat',		504,				'BulletLargeKill2',						],		
-	507 :	[3000,			24,				600,			2,				3,				1,				0,						0,						0,					4,					0,				0,				2,				1,				0,				0,				15,				0.01,		45,				'LS',			'7_CAN',			60,				4500,		'CaseSmoke2',		'ForceSeat',		507,				'BulletExplodeMegaMini',				],		
-	510 :	[0,				15,				300,			2,				2.25,			1,				0,						0,						0,					5,					0,				0,				1,				3,				1,				0,				0,				0.1,		25,				'-',			'FLM3',				50,				0,			'-',				'-',				510,				'Thrower-Melt',							],		
-	530 :	[10000,			45,				0,				1,				2,				1,				0,						0,						0,					10,					0,				0,				1,				2,				1,				0,				1,				0.05,		100,			'-',			'LaserBoss2',		300,			0,			'-',				'ForceSeat',		530,				'RayBoss2',								],		
-	533 :	[2400,			27,				0,				6,				3.5,			1,				0,						0,						0,					10,					5,				0,				1,				2,				1,				0,				0,				0.01,		100,			'-',			'Electric' ,		300,			0,			'-',				'-',				533,				'LightingDamage5',						],		
-	1098 :	[200,			20,				800,			15,				0.1,			1,				10,						5,						100,				5,					1,				2,				1,				1,				0,				0,				9,				0.1,		0,				'-',			'1_HMG',			0,				40,			'CaseNormal',		'-',				1098,				'BulletNormal',							],		
-	1099 :	[600,			24,				750,			2,				2,				1,				0,						0,						0,					8,					0,				0,				2,				1,				0,				0,				15,				0.15,		0,				'-',			'7_CAN',			0,				400,		'CaseSmoke',		'-',				1099,				'BulletExplodeMin',						],		
-	1100 :	[200,			20,				800,			5,				0.5,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				3,				0.15,		0,				'-',			'E_SMG',			0,				25,			'CaseNormal',		'-',				1100,				'BulletNormal',							],		
-	1101 :	[1250,			28,				8000,			3,				2,				1,				40,						15,						100,				12,					1,				3,				2,				1,				0,				0,				1,				0.15,		0,				'-',			'5_HRF',			0,				400,		'CaseLarge',		'-',				1101,				'BulletLarge',							],		
-	1102 :	[120,			16,				800,			20,				0.1,			1,				7,						5,						100,				6,					0,				1,				1,				1,				0,				0,				15,				0.25,		0,				'-',			'6_GTL',			0,				40,			'CaseSmall',		'-',				1102,				'BulletMinu',							],		
-	1103 :	[1250,			28,				8000,			3,				0.4,			1,				40,						15,						100,				12,					1,				3,				2,				1,				0,				0,				8,				0.3,		0,				'-',			'5_HRF',			0,				400,		'CaseLarge',		'-',				1103,				'BulletLarge',							],		
-	1104 :	[200,			20,				800,			2,				1,				8,				10,						5,						100,				8,					1,				2,				1,				1,				0,				0,				18,				0.01,		0,				'-',			'2_SSG',			0,				200,		'CaseLarge',		'-',				1104,				'BulletNormal',							],		
-	1105 :	[200,			20,				800,			30,				0.15,			1,				10,						5,						100,				3,					1,				2,				1,				1,				0,				0,				8,				0.15,		0,				'-',			'E_HMG',			0,				100,		'CaseNormal',		'-',				1105,				'BulletNormal',							],		
-	1106 :	[1250,			28,				8000,			5,				0.15,			1,				40,						15,						100,				5,					1,				3,				2,				1,				0,				0,				1,				0.15,		0,				'-',			'4_LRF',			0,				700,		'CaseLarge',		'-',				1106,				'BulletLarge',							],		
-	1107 :	[225,			15,				800,			20,				0.05,			1,				8,						5,						100,				6,					0,				1,				1,				1,				0,				3,				7,				0.15,		0,				'-',			'6_GTL',			0,				50,			'CaseSmall',		'-',				1107,				'BulletElectrMin',						],		
-	1108 :	[300,			16,				800,			4,				1,				10,				15,						5,						100,				6,					0,				1,				1,				1,				0,				3,				24,				0.01,		0,				'-',			'2_SSG',			0,				200,		'CaseLarge',		'-',				1108,				'BulletElectr',							],		
-	1109 :	[900,			28,				2000,			2,				1,				1,				50,						20,						150,				6,					0,				3,				1,				1,				0,				3,				3,				0.15,		0,				'-',			'4_LRF',			0,				800,		'CaseLarge',		'-',				1109,				'BulletElectrLarge',					],		
-	1110 :	[200,			20,				800,			5,				0.5,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				3,				0.15,		0,				'-',			'E_SMG',			0,				15,			'CaseNormal',		'-',				1110,				'BulletNormal',							],		
-	1111 :	[80,			13,				0,				1,				2,				1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 04',			0,				0,			'-',				'-',				1111,				'RayNormal',							],		
-	1112 :	[10000,			40,				0,				1,				3.5,			1,				0,						0,						0,					15,					0,				0,				1,				2,				1,				0,				1,				0.05,		5,				'-',			'LaserBoss',		0,				0,			'-',				'-',				1112,				'RayBoss',								],		
-	1113 :	[200,			25,				250,			40,				0.1,			1,				8,						3,						50,					3,					1,				0,				1,				1,				0,				0,				40,				0.25,		5,				'-',			'E_SMG',			0,				200,		'CaseNormal',		'-',				1113,				'BulletFollow',							],		
-	1114 :	[0,				25,				800,			5,				0.4,			1,				0,						0,						0,					10,					0,				0,				2,				1,				0,				0,				40,				0.15,		9,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',				1114,				'BulletExplodeFollow',					],		
-	1115 :	[200,			25,				250,			10,				0.15,			1,				8,						3,						50,					5,					1,				0,				1,				1,				0,				0,				30,				0.15,		5,				'-',			'E_SMG',			0,				200,		'CaseNormal',		'-',				1115,				'BulletFollow',							],		
-	1116 :	[540,			24,				2000,			20,				0.075,			1,				20,						5,						100,				5,					1,				3,				1,				1,				0,				0,				12,				0.25,		28,				'-',			'MG',				0,				300,		'CaseLarge',		'-',				1116,				'BulletBig',							],		
-	1117 :	[200,			20,				800,			20,				0.08,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				18,				0.25,		18,				'-',			'MG2',				0,				300,		'CaseNormal',		'-',				1117,				'BulletNormal',							],		
-	1118 :	[3000,			28,				8000,			3,				2,				1,				60,						25,						200,				8,					1,				3,				2,				1,				0,				0,				2,				0.05,		35,				'-',			'4_LRF',			0,				4000,		'CaseLarge',		'-',				1118,				'BulletLargeKill',						],		
-	1119 :	[540,			24,				2000,			39,				0.05,			1,				20,						5,						100,				2,					1,				3,				1,				1,				0,				0,				15,				0.125,		28,				'-',			'MG',				0,				300,		'CaseLarge',		'-',				1119,				'BulletBig',							],		
-	1120 :	[200,			20,				800,			12,				0.1,			1,				10,						5,						100,				2.5,				1,				2,				1,				1,				0,				0,				18,				0.25,		18,				'-',			'MG2',				0,				300,		'CaseNormal',		'-',				1120,				'BulletNormal',							],		
-	1121 :	[0,				50,				800,			1,				0.4,			1,				0,						0,						0,					1,					0,				0,				2,				1,				0,				0,				40,				0.15,		0,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',				1121,				'BulletExplodeFollowDestructible',		],		
-	1122 :	[0,				20,				800,			1,				0.4,			5,				0,						0,						0,					1,					0,				0,				2,				1,				0,				0,				20,				0.15,		0,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',				1122,				'BulletExplodeDestructible',			],		
-	1123 :	[500000,		100,			0,				1,				9,				1,				0,						0,						0,					1,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 03',			0,				0,			'-',				'-',				1123,				'RayBurstSpecialLong',					],		
-	1124 :	[10000,			50,				0,				1,				2,				1,				0,						0,						0,					1,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 03',			0,				0,			'-',				'-',				1124,				'RayBurstLongEne',						],		
-	1125 :	[700,			27,				2500,			20,				0.075,			1,				25,						15,						150,				5,					1,				3,				2,				1,				0,				0,				12,				0.25,		28,				'LS',			'MGC',				0,				300,		'CaseLarge',		'-',				1125,				'BulletLargeMinu',						],		
-	1126 :	[900,			28,				2000,			9,				0.5,			1,				50,						20,						150,				4,					0,				3,				1,				1,				0,				3,				5,				0.2,		9,				'LL',			'5_HRF',			6,				2000,		'CaseNormal',		'-',				1126,				'BulletElectrLarge',					],		
-	1127 :	[540,			24,				2000,			2,				0.7,			15,				20,						5,						100,				12,					1,				3,				1,				1,				0,				0,				12,				0.01,		9,				'-',			'LS',				9,				1600,		'CaseLarge',		'-',				1127,				'BulletBig',							],		
-	1128 :	[10000,			40,				0,				1,				3.5,			1,				0,						0,						0,					30,					0,				0,				1,				2,				1,				0,				1,				0.05,		5,				'-',			'LaserBoss',		0,				0,			'-',				'-',				1128,				'RayBoss',								],		
-	1129 :	[2500,			23,				2500,			1,				0.2,			1,				0,						0,						0,					1,					0,				0,				-1,				-1,				0,				0,				0,				0.01,		0,				'-',			'Sw_1',				0,				500,		'-',				'-',				1129,				'Aurablade',							],		
-	1130 :	[1250,			28,				8000,			15,				0.27,			1,				40,						15,						100,				6.4,				1,				3,				2,				1,				0,				0,				8,				0.2,		15,				'LL',			'5_HRF',			9,				1000,		'CaseLarge',		'-',				1130,				'BulletLarge',							],		
-	1131 :	[0,				50,				800,			3,				0.35,			2,				0,						0,						0,					12,					0,				0,				2,				1,				0,				0,				20,				0.15,		0,				'-',			'7_CAN',			0,				500,		'CaseSmoke',		'-',				1131,				'BulletExplodeFollowDestructible',		],		
-	1132 :	[0,				50,				800,			3,				0.35,			3,				0,						0,						0,					10,					0,				0,				2,				1,				0,				0,				30,				0.15,		0,				'-',			'7_CAN',			0,				0,			'CaseSmoke',		'-',				1132,				'BulletExplodeFollowDestructible',		],		
-	50 :	[100,			3,				1500,			3,				0.3,			1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_0',				0,				4000,		'-',				'-',				50,					'SlashSword0',							],		
-	51 :	[240,			5,				2200,			2,				1,				1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		3,				'-',			'Sw_0',				0,				4000,		'-',				'-',				51,					'SlashSword0b',							],		
-	52 :	[240,			3,				1500,			5,				0.4,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'Sw_1',				0,				2000,		'-',				'-',				52,					'SlashSword1',							],		
-	53 :	[135,			3,				1500,			5,				0.2,			1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		5,				'-',			'Sw_1',				0,				500,		'-',				'-',				53,					'SlashSword1b',							],		
-	54 :	[900,			5,				2200,			2,				3,				1,				0,						0,						0,					7.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		30,				'-',			'Sw_2',				0,				4000,		'-',				'-',				54,					'SlashSword2',							],		
-	55 :	[1350,			5,				2500,			2,				6,				1,				0,						0,						0,					13.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		50,				'-',			'Sw_2',				0,				4000,		'-',				'-',				55,					'SlashSword2b',							],		
-	56 :	[450,			6,				2200,			2,				0.5,			1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		8,				'-',			'Sw_3',				0,				4000,		'-',				'-',				56,					'SlashSword3',							],		
-	57 :	[350,			6,				2200,			4,				0.2,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		10,				'-',			'Sw_3',				0,				2000,		'-',				'-',				57,					'SlashSword3b',							],		
-	58 :	[400,			9,				2200,			2,				0.8,			1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		8,				'-',			'Sw_3',				0,				2000,		'-',				'-',				58,					'SlashSword3c',							],		
-	59 :	[125,			5,				0,				2,				6,				1,				0,						0,						0,					9,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		12,				'-',			'Sw_4',				0,				0,			'-',				'-',				59,					'SlashSword4',							],		
-	60 :	[2000,			5,				0,				2,				9,				1,				0,						0,						0,					9,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'Sw_2',				0,				4000,		'-',				'-',				60,					'SlashSwordEneBig',						],		
-	61 :	[150,			3,				0,				4,				0.5,			1,				0,						0,						0,					8,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		4,				'-',			'Sw_1',				0,				2000,		'-',				'-',				61,					'SlashSwordEne',						],		
-	62 :	[5000,			4,				0,				1,				0.1,			1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_2',				0,				8000,		'-',				'-',				62,					'SlashSwordEnemyBossFinal',				],		
-	63 :	[100,			3,				0,				1,				0.6,			1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_0',				0,				4000,		'-',				'-',				63,					'SlashSwordShield',						],		
-	65 :	[240,			3,				1500,			5,				0.4,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'Sw_1',				0,				2000,		'-',				'Assassin',			65,					'SlashSword1',							],		
-	151 :	[420,			5,				2500,			2,				1,				1,				0,						0,						0,					2.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		3,				'-',			'Sw_0',				0,				7500,		'-',				'-',				151,				'SlashSword0b2',						],		
-	152 :	[240,			3,				1500,			5,				0.4,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		5,				'-',			'Sw_1',				0,				2000,		'-',				'-',				152,				'SlashSword1',							],		
-	153 :	[135,			3,				1500,			5,				0.175,			1,				0,						0,						0,					1.2,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'Sw_1',				0,				500,		'-',				'-',				153,				'SlashSword1b',							],		
-	154 :	[900,			5,				2200,			2,				2.5,			1,				0,						0,						0,					6.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		46,				'-',			'Sw_2',				0,				4000,		'-',				'-',				154,				'SlashSword2',							],		
-	155 :	[1350,			5,				2500,			2,				5.5,			1,				0,						0,						0,					12,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		60,				'-',			'Sw_2',				0,				4000,		'-',				'-',				155,				'SlashSword2b',							],		
-	156 :	[450,			6,				2200,			2,				0.5,			1,				0,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		8,				'-',			'Sw_3',				0,				4000,		'-',				'-',				156,				'SlashSword3',							],		
-	157 :	[350,			6,				2200,			4,				0.2,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		10,				'-',			'Sw_3',				0,				2000,		'-',				'-',				157,				'SlashSword3b',							],		
-	158 :	[550,			9,				2200,			2,				1,				1,				0,						0,						0,					1.8,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		8,				'-',			'Sw_3',				0,				2000,		'-',				'-',				158,				'SlashSword3c2',						],		
-	159 :	[125,			5,				0,				2,				6,				1,				0,						0,						0,					9,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		16,				'-',			'Sw_4',				0,				0,			'-',				'-',				159,				'SlashSword42',							],		
-	165 :	[240,			3,				1500,			5,				0.4,			1,				0,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'Sw_1',				0,				2000,		'-',				'Assassin',			165,				'SlashSword1',							],		
-	1201 :	[800,			4,				0,				3,				0.8,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_2',				0,				3000,		'-',				'-',				1201,				'SlashSwordEneMiddle',					],		
-	1202 :	[5000,			3,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_2',				0,				6000,		'-',				'-',				1202,				'SlashSwordGiant',						],		
-	1203 :	[1800,			9,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_3',				0,				2000,		'-',				'-',				1203,				'SlashSword3c3',						],		
-	1204 :	[1200,			5,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_2',				0,				8000,		'-',				'-',				1204,				'SlashSwordEneBig2',					],		
-	1205 :	[800,			3,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_0',				0,				10000,		'-',				'-',				1205,				'SlashSwordShiAttack',					],		
-	1206 :	[2000,			5,				0,				3,				0.8,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'Sw_2',				0,				3000,		'-',				'-',				1206,				'SlashSwordEneBig',						],		
+	//		子弹伤害,		子弹射程,		子弹速度,		弹夹容量,		射击间隔,		每发弹数,		穿甲概率,				暴击概率,				暴击伤害,			装弹时间,			最大弹射,		最小射程,		开火动画,		开火火焰,		弹道跟随,		负面效果,		最大散射,		偏移角度,	换弹老化,		换弹音效,		开火音效,			开火老化,		后坐力值,	弹壳类型,			特殊效果,				武器标记,			子弹名称,								],		
+	//		Damage,			BulletRange,	BulletSpeed,	ClipNum,		FireRate,		FireNum,		PiercingPossibility,	CriticPossibility,		CriticDamage,		ReloadSpeed,		MaxHit,			MinRange,		FireType,		fireFlash,		SetParent,		Debuff,			AngleFloat,		Stable,		BrokePos,		ClipSound,		Sound,				BrokePos2,		Force,		Case,				Func,					Weapons,			Projectile,								],		
+	None :	[0,				0,				0,				0,				0,				0,				0,						0,						0,					0,					0,				0,				0,				0,				0,				0,				0,				0,			0,				'-',			'-',				0,				0,			'-',				'-',					'None',				'-',									],		
+	0 :		[200,			20,				800,			12,				0.18,			1,				10,						5,						100,				2,					1,				2,				1,				1,				0,				0,				8,				0.1,		4,				'SL',			'0_SMG',			3,				240,		'CaseNormal',		'-',					0,					'BulletNormal',							],		
+	1 :		[200,			20,				800,			15,				0.12,			1,				10,						5,						100,				3.5,				1,				2,				1,				1,				0,				0,				11,				0.125,		5,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					1,					'BulletNormal',							],		
+	2 :		[200,			20,				800,			6,				1.25,			12,				10,						5,						100,				6,					1,				2,				1,				1,				0,				0,				15,				0.01,		17,				'Sh',			'2_SSG',			9,				900,		'CaseLarge',		'-',					2,					'BulletNormal',							],		
+	3 :		[120,			16,				800,			7,				1,				25,				7,						5,						100,				7,					0,				1,				1,				1,				0,				0,				36,				0.01,		15,				'Sh',			'3_HSG',			9,				900,		'CaseLarge',		'-',					3,					'BulletMinu',							],		
+	4 :		[1250,			28,				8000,			5,				2,				1,				40,						15,						100,				5.6,				1,				3,				2,				1,				0,				0,				5,				0.2,		15,				'LL2',			'4_LRF',			9,				2400,		'CaseLarge',		'-',					4,					'BulletLarge',							],		
+	5 :		[700,			27,				2500,			12,				0.3,			1,				25,						15,						150,				8,					1,				3,				2,				1,				0,				0,				24,				0.4,		11,				'LL',			'5_HRF',			6,				1000,		'CaseLarge',		'-',					5,					'BulletLargeMinu',						],		
+	6 :		[120,			16,				800,			50,				0.08,			1,				7,						5,						100,				2,					0,				1,				1,				1,				0,				0,				14,				0.15,		6,				'SS',			'6_GTL',			3,				180,		'CaseSmall',		'-',					6,					'BulletMinu',							],		
+	7 :		[900,			28,				2000,			6,				1,				1,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				8,				0.1,		27,				'LS',			'7_CAN',			15,				1600,		'CaseSmoke',		'-',					7,					'BulletExplode',						],		
+	8 :		[600,			24,				750,			2,				2,				6,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				15,				0.01,		24,				'LS',			'7_CAN',			15,				2400,		'CaseSmoke2',		'-',					8,					'BulletExplodeMin',						],		
+	9 :		[150,			20,				800,			12,				0.2,			1,				100,					5,						100,				3,					0,				2,				1,				1,				0,				0,				7,				0.075,		5,				'SL2',			'1_HMG',			3,				300,		'CaseNormal',		'-',					9,					'BulletPierce',							],		
+	10 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					6,					0,				0,				1,				3,				1,				0,				0,				0.1,		4,				'-',			'FLM',				0,				0,			'-',				'-',					10,					'Thrower-Fire',							],		
+	11 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.1,		4,				'-',			'FLM2',				0,				0,			'-',				'-',					11,					'Thrower-Freeze',						],		
+	12 :	[300,			16,				800,			10,				0.2,			1,				15,						5,						100,				5,					0,				1,				1,				1,				0,				3,				9,				0.1,		7,				'SL2',			'1_HMG',			0,				120,		'CaseNormal',		'-',					12,					'BulletElectr',							],		
+	13 :	[540,			24,				2000,			80,				0.1,			1,				20,						5,						100,				20,					1,				3,				1,				1,				0,				0,				18,				0.25,		28,				'ML2',			'MG',				15,				500,		'CaseLarge',		'ForceSeat',			13,					'BulletBig',							],		
+	14 :	[700,			27,				2500,			90,				0.075,			1,				25,						15,						150,				36,					1,				3,				2,				1,				0,				0,				15,				0.1,		63,				'LS',			'MGC',				36,				600,		'CaseLarge',		'ForceSeat',			14,					'BulletLargeMinu',						],		
+	15 :	[400,			26,				2000,			9,				0.6,			1,				24,						10,						100,				3.5,				1,				3,				2,				1,				0,				0,				7,				0.2,		9,				'SL2',			'0_RF',				6,				600,		'CaseNormal',		'-',					15,					'BulletBigFar',							],		
+	16 :	[250,			21,				800,			25,				0.12,			1,				12,						5,						100,				4.5,				1,				2,				1,				1,				0,				0,				10,				0.15,		7,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					16,					'BulletNormal2',						],		
+	17 :	[250,			21,				800,			25,				0.1,			1,				12,						5,						100,				4.5,				1,				2,				1,				1,				0,				0,				18,				0.225,		7,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					17,					'BulletNormal2',						],		
+	18 :	[200,			20,				800,			3,				0.07,			1,				10,						5,						100,				0.6,				1,				2,				1,				1,				0,				0,				6,				0.075,		2,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',					18,					'BulletNormal',							],		
+	19 :	[250,			21,				800,			5,				0.5,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				5,				0.05,		3,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',					19,					'BulletNormal2',						],		
+	20 :	[250,			21,				800,			2,				0.25,			20,				12,						5,						100,				5,					1,				2,				1,				1,				0,				0,				24,				0.01,		6,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',					20,					'BulletNormal2',						],		
+	21 :	[120,			16,				800,			100,			0.08,			1,				7,						5,						100,				4,					0,				1,				1,				1,				0,				0,				16,				0.2,		12,				'SS',			'6_GTL',			6,				192,		'CaseSmall',		'-',					21,					'BulletMinu',							],		
+	22 :	[150,			18,				800,			42,				0.1,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				12,				0.1,		7,				'SS',			'6_GTL',			3,				192,		'CaseSmall',		'-',					22,					'BulletMinu2',							],		
+	23 :	[540,			24,				2000,			2,				2,				6,				20,						5,						100,				5.5,				1,				3,				1,				1,				0,				0,				15,				0.01,		7,				'LS',			'2_SSG',			3,				1600,		'CaseLarge',		'-',					23,					'BulletBig',							],		
+	24 :	[200,			20,				800,			60,				0.1,			1,				10,						5,						100,				9,					1,				2,				1,				1,				0,				0,				12,				0.2,		20,				'SL2',			'MG2',				10,				300,		'CaseNormal',		'-',					24,					'BulletNormal',							],		
+	25 :	[200,			20,				800,			8,				0.2,			3,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				5,				0.01,		7,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',					25,					'BulletNormal',							],		
+	26 :	[300,			24,				600,			15,				0.2,			1,				0,						0,						0,					9,					0,				0,				2,				1,				0,				0,				20,				0.5,		40,				'LS',			'7_CAN',			24,				300,		'CaseSmoke',		'ForceSeat',			26,					'BulletExplodeMin2',					],		
+	27 :	[80,			13,				0,				9,				1,				1,				0,						0,						0,					3.5,				0,				0,				1,				2,				1,				0,				0,				0.01,		12,				'-',			'Laser 03',			0,				0,			'-',				'-',					27,					'RayNormal',							],		
+	28 :	[60,			22,				0,				4,				1.5,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		10,				'-',			'Laser 03',			0,				0,			'-',				'-',					28,					'RayNormalLong',						],		
+	29 :	[1800,			18,				0,				4,				1,				1,				0,						0,						0,					2.5,				0,				0,				1,				2,				1,				0,				0,				0.01,		5,				'-',			'Laser 03',			0,				0,			'-',				'-',					29,					'RayBurst',								],		
+	30 :	[1250,			28,				0,				1,				2,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		5,				'-',			'Laser 03',			0,				0,			'-',				'-',					30,					'RayBurstLong',							],		
+	31 :	[150,			18,				0,				8,				1,				1,				0,						0,						0,					4,					3,				0,				1,				2,				1,				0,				0,				0.01,		20,				'-',			'Electric',			0,				0,			'-',				'-',					31,					'Lightning',							],		
+	32 :	[200,			30,				0,				4,				1.5,			1,				0,						0,						0,					5.5,				2,				0,				1,				2,				1,				0,				0,				0.01,		35,				'-',			'Electric',			0,				0,			'-',				'-',					32,					'LightningLong',						],		
+	33 :	[600,			20,				0,				2,				1.5,			1,				0,						0,						0,					7,					2,				0,				1,				2,				1,				0,				0,				0.01,		42,				'-',			'Electric',			0,				0,			'-',				'-',					33,					'LightingDamage',						],		
+	34 :	[450,			14,				0,				3,				2,				1,				0,						0,						0,					6.5,				7,				0,				1,				2,				1,				0,				0,				0.01,		40,				'-',			'Electric',			0,				0,			'-',				'-',					34,					'LightningBurst',						],		
+	35 :	[-200,			20,				0,				5,				1,				1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		50,				'-',			'Lightning_Treat',	30,				0,			'-',				'-',					35,					'Lightning_Treat',						],		
+	36 :	[0,				15,				300,			1,				4,				1,				0,						0,						0,					6,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					36,					'Thrower-Oil',							],		
+	37 :	[0,				15,				300,			4,				4,				1,				0,						0,						0,					6,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					37,					'Thrower-Water',						],		
+	38 :	[45,			16,				600,			36,				0.05,			1,				50,						0,						0,					2,					0,				0,				1,				2,				0,				6,				10,				0.1,		4,				'SS',			'6_GTL',			3,				240,		'CaseNormal',		'-',					38,					'BulletWater',							],		
+	39 :	[225,			15,				800,			20,				0.09,			1,				8,						5,						100,				3.5,				0,				1,				1,				1,				0,				3,				18,				0.2,		4,				'SS',			'6_GTL',			3,				150,		'CaseSmall',		'-',					39,					'BulletElectrMin',						],		
+	40 :	[900,			28,				2000,			2,				1,				1,				50,						20,						150,				3.5,				0,				3,				1,				1,				0,				3,				3,				0.15,		6,				'ML3',			'4_LRF',			3,				800,		'CaseLarge',		'-',					40,					'BulletElectrLarge',					],		
+	41 :	[0,				3,				1,				0,				0,				0,				0,						0,						0,					0,					0,				0,				-2,				-1,				-1,				0,				0,				0,			0,				'-',			'-',				0,				0,			'-',				'-',					41,					'GunShield',							],		
+	42 :	[300,			24,				600,			5,				0.5,			1,				0,						0,						0,					3,					0,				0,				2,				1,				0,				0,				8,				0.1,		15,				'LS',			'7_CAN',			12,				300,		'CaseSmoke',		'-',					42,					'BulletExplodeMin2',					],		
+	43 :	[550,			16,				2000,			3,				0.5,			1,				24,						15,						100,				4,					1,				3,				2,				1,				0,				0,				20,				0.35,		4,				'LL',			'5_HRF',			3,				1000,		'CaseLarge',		'-',					43,					'BulletLargeMinu',						],		
+	100 :	[200,			20,				800,			15,				0.18,			1,				10,						5,						100,				2,					1,				2,				1,				1,				0,				0,				7,				0.1,		5,				'SL',			'0_SMG',			3,				240,		'CaseNormal',		'-',					100,				'BulletNormal',							],		
+	101 :	[200,			20,				800,			16,				0.11,			1,				10,						5,						100,				3.2,				1,				2,				1,				1,				0,				0,				8,				0.1,		5,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					101,				'BulletNormal',							],		
+	102 :	[250,			21,				800,			6,				1.2,			10,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				12,				0.01,		15,				'Sh',			'2_SSG',			9,				900,		'CaseLarge',		'-',					102,				'BulletNormal2',						],		
+	103 :	[120,			16,				800,			7,				1,				32,				7,						5,						100,				7.5,				0,				1,				1,				1,				0,				0,				42,				0.01,		15,				'Sh',			'3_HSG',			9,				900,		'CaseLarge',		'-',					103,				'BulletMinu',							],		
+	104 :	[1250,			28,				8000,			6,				1.75,			1,				40,						15,						100,				5,					1,				3,				2,				1,				0,				0,				2,				0.2,		20,				'LL2',			'4_LRF',			12,				2400,		'CaseLarge',		'-',					104,				'BulletLarge',							],		
+	105 :	[700,			27,				2500,			13,				0.3,			1,				25,						15,						150,				7.5,				1,				3,				2,				1,				0,				0,				22,				0.4,		11,				'LL',			'5_HRF',			6,				1000,		'CaseLarge',		'-',					105,				'BulletLargeMinu',						],		
+	106 :	[120,			16,				800,			50,				0.08,			1,				7,						5,						100,				2.5,				0,				1,				1,				1,				0,				0,				14,				0.15,		5,				'SS',			'6_GTL',			3,				180,		'CaseSmall',		'-',					106,				'BulletMinu',							],		
+	107 :	[900,			28,				2000,			7,				1.6,			1,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				8,				0.1,		33,				'LS',			'7_CAN',			18,				1600,		'CaseSmoke',		'-',					107,				'BulletExplode',						],		
+	108 :	[600,			24,				750,			3,				2,				4,				0,						0,						0,					7,					0,				0,				2,				1,				0,				0,				15,				0.01,		30,				'LS',			'7_CAN',			18,				2400,		'CaseSmoke2',		'-',					108,				'BulletExplodeMin',						],		
+	109 :	[150,			20,				800,			15,				0.25,			1,				100,					5,						100,				3,					0,				2,				1,				1,				0,				0,				9,				0.1,		7,				'SL2',			'1_HMG',			3,				300,		'CaseNormal',		'-',					109,				'BulletPierce',							],		
+	110 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					5.5,				0,				0,				1,				3,				1,				0,				0,				0.1,		3,				'-',			'FLM',				0,				0,			'-',				'-',					110,				'Thrower-Fire',							],		
+	111 :	[0,				15,				300,			3,				2,				1,				0,						0,						0,					5.5,				0,				0,				1,				2,				1,				0,				0,				0.1,		3,				'-',			'FLM2',				0,				0,			'-',				'-',					111,				'Thrower-Freeze',						],		
+	113 :	[540,			24,				2000,			80,				0.125,			1,				20,						5,						100,				20,					1,				3,				1,				1,				0,				0,				18,				0.25,		30,				'ML2',			'MG',				18,				500,		'CaseLarge',		'ForceSeat',			113,				'BulletBig',							],		
+	114 :	[700,			27,				2500,			80,				0.09,			1,				25,						15,						150,				40,					1,				3,				2,				1,				0,				0,				18,				0.1,		69,				'LS',			'MGC',				45,				600,		'CaseLarge',		'ForceSeat',			114,				'BulletLargeMinu',						],		
+	115 :	[400,			26,				2000,			10,				0.5,			1,				24,						10,						100,				3.2,				1,				3,				2,				1,				0,				0,				2,				0.2,		8,				'ML3',			'0_RF',				3,				600,		'CaseNormal',		'-',					115,				'BulletBigFar',							],		
+	116 :	[250,			21,				800,			36,				0.12,			1,				12,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		8,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					116,				'BulletNormal2',						],		
+	117 :	[320,			22,				800,			36,				0.1,			1,				15,						5,						100,				4,					1,				2,				1,				1,				0,				0,				18,				0.225,		8,				'SL',			'1_HMG',			3,				270,		'CaseNormal',		'-',					117,				'BulletNormal3',						],		
+	118 :	[250,			21,				800,			3,				0.07,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				4,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',					118,				'BulletNormal2',						],		
+	119 :	[250,			21,				800,			5,				0.5,			1,				12,						5,						100,				0.5,				1,				2,				1,				1,				0,				0,				5,				0.05,		2,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',					119,				'BulletNormal2',						],		
+	120 :	[250,			21,				800,			2,				0.25,			25,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				24,				0.01,		5,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',					120,				'BulletNormal2',						],		
+	121 :	[120,			16,				800,			150,			0.08,			1,				7,						5,						100,				4,					0,				1,				1,				1,				0,				0,				16,				0.2,		16,				'SS',			'6_GTL',			9,				192,		'CaseSmall',		'-',					121,				'BulletMinu',							],		
+	122 :	[150,			18,				800,			42,				0.11,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				12,				0.1,		4,				'SS',			'6_GTL',			2,				192,		'CaseSmall',		'-',					122,				'BulletMinu2',							],		
+	123 :	[540,			24,				2000,			2,				2,				7,				20,						5,						100,				7,					1,				3,				1,				1,				0,				0,				15,				0.01,		9,				'LS',			'2_SSG',			6,				1600,		'CaseLarge',		'-',					123,				'BulletBig',							],		
+	124 :	[250,			21,				800,			50,				0.1,			1,				12,						5,						100,				7,					1,				2,				1,				1,				0,				0,				12,				0.2,		17,				'SL2',			'MG2',				8,				300,		'CaseLarge',		'-',					124,				'BulletNormal2',						],		
+	125 :	[250,			21,				800,			8,				0.12,			3,				12,						5,						100,				5.5,				1,				2,				1,				1,				0,				0,				5,				0.01,		7,				'Sh',			'2_SSG',			3,				600,		'CaseLarge',		'-',					125,				'BulletNormal2',						],		
+	126 :	[300,			24,				600,			18,				0.2,			1,				0,						0,						0,					9,					0,				0,				2,				1,				0,				0,				20,				0.5,		50,				'LS',			'7_CAN',			30,				300,		'CaseLarge',		'ForceSeat',			126,				'BulletExplodeMin2',					],		
+	127 :	[100,			15,				0,				10,				1,				1,				0,						0,						0,					3,					0,				0,				1,				2,				1,				0,				0,				0.01,		10,				'-',			'Laser 03',			0,				0,			'-',				'-',					127,				'RayNormal2',							],		
+	128 :	[75,			27,				0,				4,				1.6,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		8,				'-',			'Laser 03',			0,				0,			'-',				'-',					128,				'RayNormalLong2',						],		
+	129 :	[2400,			20,				0,				5,				1,				1,				0,						0,						0,					2.2,				0,				0,				1,				2,				1,				0,				0,				0.01,		4,				'-',			'Laser 03',			0,				0,			'-',				'-',					129,				'RayBurst2',							],		
+	130 :	[1500,			28,				0,				1,				2.2,			1,				0,						0,						0,					6,					0,				0,				1,				2,				1,				0,				0,				0.01,		8,				'-',			'Laser 03',			0,				0,			'-',				'-',					130,				'RayBurstLong2',						],		
+	131 :	[160,			18,				0,				9,				0.8,			1,				0,						0,						0,					3.6,				4,				0,				1,				2,				1,				0,				0,				0.01,		27,				'-',			'Electric',			0,				0,			'-',				'-',					131,				'Lightning2',							],		
+	132 :	[200,			32,				0,				4,				1.7,			1,				0,						0,						0,					6,					3,				0,				1,				2,				1,				0,				0,				0.01,		30,				'-',			'Electric',			0,				0,			'-',				'-',					132,				'LightningLong2',						],		
+	133 :	[750,			21,				0,				3,				1.25,			1,				0,						0,						0,					6,					2,				0,				1,				2,				1,				0,				0,				0.01,		36,				'-',			'Electric',			0,				0,			'-',				'-',					133,				'LightingDamage2',						],		
+	134 :	[600,			14,				0,				3,				2,				1,				0,						0,						0,					6.5,				9,				0,				1,				2,				1,				0,				0,				0.01,		50,				'-',			'Electric',			0,				0,			'-',				'-',					134,				'LightningBurst2',						],		
+	136 :	[0,				15,				300,			1,				4,				1,				0,						0,						0,					5.5,				0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					136,				'Thrower-Oil',							],		
+	137 :	[0,				15,				300,			4,				4,				1,				0,						0,						0,					5.5,				0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					137,				'Thrower-Water',						],		
+	138 :	[75,			18,				600,			36,				0.05,			1,				50,						0,						0,					2,					0,				0,				1,				2,				0,				6,				10,				0.1,		4,				'SS',			'6_GTL',			3,				240,		'CaseNormal',		'-',					138,				'BulletWater2',							],		
+	139 :	[225,			15,				800,			22,				0.075,			1,				8,						5,						100,				3,					0,				1,				1,				1,				0,				3,				15,				0.2,		4,				'SS',			'6_GTL',			0,				150,		'CaseSmall',		'-',					139,				'BulletElectrMin',						],		
+	140 :	[900,			28,				2000,			2,				0.8,			1,				50,						20,						150,				3,					0,				3,				1,				1,				0,				3,				4,				0.15,		6,				'ML3',			'4_LRF',			0,				800,		'CaseLarge',		'-',					140,				'BulletElectrLarge',					],		
+	142 :	[600,			24,				750,			3,				0.75,			1,				0,						0,						0,					2.5,				0,				0,				2,				1,				0,				0,				8,				0.1,		15,				'LS',			'7_CAN',			12,				1600,		'CaseSmoke',		'-',					142,				'BulletExplodeMin',						],		
+	143 :	[700,			19,				2000,			2,				0.75,			1,				24,						15,						100,				3,					1,				3,				2,				1,				0,				0,				20,				0.35,		10,				'LL',			'5_HRF',			10,				1000,		'CaseLarge',		'-',					143,				'BulletLargeMinu0b',					],		
+	200 :	[250,			21,				800,			16,				0.16,			1,				12,						5,						100,				1.8,				1,				2,				1,				1,				0,				0,				6,				0.1,		4,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',					200,				'BulletNormal2',						],		
+	201 :	[250,			21,				800,			16,				0.11,			1,				12,						5,						100,				3.2,				1,				2,				1,				1,				0,				0,				8,				0.1,		3,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',					201,				'BulletNormal2',						],		
+	202 :	[320,			22,				800,			6,				1.5,			10,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				12,				0.01,		10,				'Sh',			'2_SSG',			6,				900,		'CaseLarge',		'-',					202,				'BulletNormal3',						],		
+	203 :	[150,			18,				800,			7,				1,				48,				8,						5,						100,				7.5,				0,				1,				1,				1,				0,				0,				42,				0.01,		21,				'Sh',			'3_HSG',			12,				900,		'CaseLarge',		'-',					203,				'BulletMinu2',							],		
+	204 :	[1500,			28,				8000,			4,				1.75,			1,				60,						20,						150,				6,					1,				3,				2,				1,				0,				0,				2,				0.2,		25,				'LL2',			'0_LRF',			80,				2400,		'CaseLarge',		'ForceSeat',			204,				'BulletLargePierce',					],		
+	205 :	[900,			27,				2500,			13,				0.27,			1,				36,						15,						150,				7,					1,				3,				2,				1,				0,				0,				20,				0.5,		15,				'LL',			'5_HRF',			9,				1000,		'CaseLarge',		'-',					205,				'BulletLargeMinu2',						],		
+	206 :	[150,			18,				800,			55,				0.07,			1,				8,						5,						100,				2.2,				0,				1,				1,				1,				0,				0,				12,				0.15,		4,				'SS',			'6_GTL',			0,				180,		'CaseSmall',		'-',					206,				'BulletMinu2',							],		
+	210 :	[0,				15,				300,			4,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				3,				1,				0,				0,				0.1,		3,				'-',			'FLM',				0,				0,			'-',				'-',					210,				'Thrower-Fire',							],		
+	211 :	[0,				15,				300,			4,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.1,		3,				'-',			'FLM2',				0,				0,			'-',				'-',					211,				'Thrower-Freeze',						],		
+	213 :	[540,			24,				2000,			85,				0.11,			1,				20,						5,						100,				16,					1,				3,				1,				1,				0,				0,				15,				0.25,		32,				'ML2',			'MG',				20,				300,		'CaseLarge',		'ForceSeat',			213,				'BulletBig',							],		
+	215 :	[500,			28,				2000,			10,				0.44,			1,				32,						10,						100,				2.6,				1,				3,				2,				1,				0,				0,				2,				0.2,		10,				'ML3',			'0_RF',				6,				700,		'CaseNormal',		'-',					215,				'BulletBigFar2',						],		
+	216 :	[250,			21,				800,			36,				0.12,			1,				12,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		5,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',					216,				'BulletNormal2',						],		
+	218 :	[250,			21,				800,			3,				0.05,			1,				12,						5,						100,				0.45,				1,				2,				1,				1,				0,				0,				3,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',					218,				'BulletNormal2',						],		
+	219 :	[320,			22,				800,			5,				0.4,			1,				15,						5,						100,				0.4,				1,				2,				1,				1,				0,				0,				4,				0.05,		2,				'SL',			'0_SMG',			0,				240,		'CaseNormal',		'-',					219,				'BulletNormal3',						],		
+	220 :	[250,			21,				800,			3,				0.35,			25,				12,						5,						100,				9,					1,				2,				1,				1,				0,				0,				24,				0.01,		10,				'Sh',			'2_SSG',			6,				700,		'CaseLarge',		'-',					220,				'BulletNormal2',						],		
+	221 :	[150,			18,				800,			150,			0.07,			1,				8,						5,						100,				3.5,				0,				1,				1,				1,				0,				0,				12,				0.15,		19,				'SS',			'6_GTL',			12,				192,		'CaseSmall',		'-',					221,				'BulletMinu2',							],		
+	222 :	[180,			18,				800,			48,				0.1,			1,				9,						5,						100,				1.7,				0,				1,				1,				1,				0,				0,				11,				0.075,		3,				'SS',			'6_GTL',			1,				192,		'CaseSmall',		'-',					222,				'BulletMinu3',							],		
+	223 :	[540,			24,				2000,			2,				1,				7,				20,						5,						100,				8,					1,				3,				1,				1,				0,				0,				12,				0.01,		9,				'LS',			'2_SSG',			9,				1600,		'CaseLarge',		'-',					223,				'BulletBig',							],		
+	224 :	[250,			21,				800,			54,				0.09,			1,				12,						5,						100,				6,					1,				2,				1,				1,				0,				0,				10,				0.15,		15,				'SL2',			'MG2',				7,				300,		'CaseLarge',		'-',					224,				'BulletNormal2',						],		
+	225 :	[320,			22,				800,			8,				0.12,			3,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				5,				0.01,		5,				'Sh',			'2_SSG',			5,				600,		'CaseLarge',		'-',					225,				'BulletNormal3',						],		
+	230 :	[2000,			30,				0,				1,				1.8,			1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		25,				'-',			'Laser 03',			0,				0,			'-',				'-',					230,				'RayBurstLong3',						],		
+	232 :	[240,			35,				0,				5,				1.6,			1,				0,						0,						0,					5.4,				3,				0,				1,				2,				1,				0,				0,				0.01,		54,				'-',			'Electric',			0,				0,			'-',				'-',					232,				'LightningLong3',						],		
+	233 :	[1000,			23,				0,				3,				1.25,			1,				0,						0,						0,					6,					3,				0,				1,				2,				1,				0,				0,				0.01,		45,				'-',			'Electric',			0,				0,			'-',				'-',					233,				'LightingDamage3',						],		
+	236 :	[0,				15,				300,			1,				3.6,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					236,				'Thrower-Oil',							],		
+	237 :	[0,				15,				300,			4,				3.6,			1,				0,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.1,		4,				'SS',			'WTE',				0,				0,			'-',				'-',					237,				'Thrower-Water',						],		
+	300 :	[250,			21,				800,			17,				0.145,			1,				12,						5,						100,				1.6,				1,				2,				1,				1,				0,				0,				5,				0.1,		4,				'SL',			'0_SMG',			5,				240,		'CaseNormal',		'-',					300,				'BulletNormal2',						],		
+	301 :	[250,			21,				800,			17,				0.1,			1,				12,						5,						100,				3,					1,				2,				1,				1,				0,				0,				7,				0.075,		4,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',					301,				'BulletNormal2',						],		
+	303 :	[180,			18,				800,			7,				0.9,			50,				9,						5,						100,				7,					0,				1,				1,				1,				0,				0,				36,				0.01,		13,				'Sh',			'3_HSG',			15,				900,		'CaseLarge',		'-',					303,				'BulletMinu3',							],		
+	304 :	[3000,			28,				8000,			2,				2,				1,				60,						25,						200,				9,					1,				3,				2,				1,				0,				0,				2,				0.2,		35,				'LL2',			'0_LRF',			120,			3200,		'CaseLarge',		'ForceSeat',			304,				'BulletLargeKill',						],		
+	306 :	[150,			18,				800,			60,				0.06,			1,				8,						5,						100,				2,					0,				1,				1,				1,				0,				0,				10,				0.135,		5,				'LL',			'6_GTL',			5,				180,		'CaseSmall',		'-',					306,				'BulletMinu2',							],		
+	315 :	[500,			28,				2000,			10,				0.4,			1,				32,						10,						100,				2,					1,				3,				2,				1,				0,				0,				1,				0.2,		6,				'ML3',			'0_RF',				5,				800,		'CaseNormal',		'-',					315,				'BulletBigFar2',						],		
+	316 :	[320,			22,				800,			36,				0.14,			1,				15,						5,						100,				4,					1,				2,				1,				1,				0,				0,				10,				0.15,		7,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',					316,				'BulletNormal3',						],		
+	318 :	[320,			22,				800,			3,				0.035,			1,				15,						5,						100,				0.4,				1,				2,				1,				1,				0,				0,				2,				0.05,		1,				'SL',			'1_HMG',			0,				270,		'CaseNormal',		'-',					318,				'BulletNormal3',						],		
+	320 :	[320,			22,				800,			4,				0.45,			25,				15,						5,						100,				12,					1,				2,				1,				1,				0,				0,				24,				0.01,		12,				'Sh',			'2_SSG',			6,				800,		'CaseLarge',		'-',					320,				'BulletNormal3',						],		
+	321 :	[150,			18,				800,			150,			0.07,			1,				8,						5,						100,				3,					0,				1,				1,				1,				0,				0,				10,				0.12,		14,				'SS',			'6_GTL',			15,				192,		'CaseSmall',		'-',					321,				'BulletMinu2',							],		
+	322 :	[180,			18,				800,			48,				0.09,			1,				9,						5,						100,				1.8,				0,				1,				1,				1,				0,				0,				11,				0.075,		5,				'SS',			'6_GTL',			3,				192,		'CaseSmall',		'-',					322,				'BulletMinu3',							],		
+	324 :	[320,			22,				800,			40,				0.09,			1,				15,						5,						100,				6,					1,				2,				1,				1,				0,				0,				9,				0.1,		18,				'SL2',			'MG2',				12,				300,		'CaseLarge',		'-',					324,				'BulletNormal3',						],		
+	330 :	[10000,			40,				0,				1,				5,				1,				0,						0,						0,					20,					0,				0,				1,				2,				1,				0,				1,				0.05,		100,			'-',			'LaserBoss',		300,			0,			'-',				'-',					330,				'RayBoss',								],		
+	333 :	[2400,			27,				0,				3,				4.2,			1,				0,						0,						0,					12,					3,				0,				1,				2,				1,				0,				0,				0.01,		75,				'-',			'Electric',			200,			0,			'-',				'-',					333,				'LightingDamage4',						],		
+	400 :	[320,			22,				800,			17,				0.145,			1,				15,						5,						100,				1.6,				1,				2,				1,				1,				0,				0,				5,				0.1,		4,				'SL',			'0_SMG',			5,				240,		'CaseNormal',		'-',					400,				'BulletNormal3',						],		
+	401 :	[320,			22,				800,			18,				0.09,			1,				15,						5,						100,				2.7,				1,				2,				1,				1,				0,				0,				6,				0.075,		4,				'SL',			'1_HMG',			5,				270,		'CaseNormal',		'-',					401,				'BulletNormal3',						],		
+	406 :	[180,			18,				800,			64,				0.055,			1,				9,						5,						100,				1.8,				0,				1,				1,				1,				0,				0,				9,				0.125,		5,				'SS',			'6_GTL',			5,				180,		'CaseSmall',		'-',					406,				'BulletMinu3',							],		
+	415 :	[700,			27,				2500,			10,				0.35,			1,				25,						15,						150,				1.8,				1,				3,				2,				1,				0,				0,				1,				0.2,		5,				'ML3',			'0_RF',				5,				100,		'CaseNormal',		'-',					415,				'BulletLargeMinu',						],		
+	424 :	[400,			26,				2000,			38,				0.1,			1,				24,						10,						100,				8.7,				1,				3,				2,				1,				0,				0,				9,				0.09,		9,				'SL2',			'MG2',				6,				50,			'CaseLarge',		'-',					424,				'BulletBigFar',							],		
+	504 :	[5000,			30,				10000,			1,				3,				1,				100,					30,						300,				10,					1,				3,				2,				1,				0,				0,				1,				0.1,		35,				'LL3',			'0_LRF2',			120,			5400,		'CaseLarge',		'ForceSeat',			504,				'BulletLargeKill2',						],		
+	507 :	[3000,			24,				600,			2,				3,				1,				0,						0,						0,					4,					0,				0,				2,				1,				0,				0,				15,				0.01,		45,				'LS',			'7_CAN',			60,				4500,		'CaseSmoke2',		'ForceSeat',			507,				'BulletExplodeMegaMini',				],		
+	510 :	[0,				15,				300,			2,				2.25,			1,				0,						0,						0,					5,					0,				0,				1,				3,				1,				0,				0,				0.1,		25,				'-',			'FLM3',				50,				0,			'-',				'-',					510,				'Thrower-Melt',							],		
+	530 :	[10000,			45,				0,				1,				2,				1,				0,						0,						0,					10,					0,				0,				1,				2,				1,				0,				1,				0.05,		100,			'-',			'LaserBoss2',		300,			0,			'-',				'ForceSeat',			530,				'RayBoss2',								],		
+	533 :	[2400,			27,				0,				6,				3.5,			1,				0,						0,						0,					10,					5,				0,				1,				2,				1,				0,				0,				0.01,		100,			'-',			'Electric',			300,			0,			'-',				'-',					533,				'LightingDamage5',						],		
+	1098 :	[200,			20,				800,			15,				0.1,			1,				10,						5,						100,				5,					1,				2,				1,				1,				0,				0,				9,				0.1,		0,				'-',			'1_HMG',			0,				40,			'CaseNormal',		'-',					1098,				'BulletNormal',							],		
+	1099 :	[600,			24,				750,			2,				2,				1,				0,						0,						0,					8,					0,				0,				2,				1,				0,				0,				15,				0.15,		0,				'-',			'7_CAN',			0,				400,		'CaseSmoke',		'-',					1099,				'BulletExplodeMin',						],		
+	1100 :	[200,			20,				800,			5,				0.5,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				3,				0.15,		0,				'-',			'E_SMG',			0,				25,			'CaseNormal',		'-',					1100,				'BulletNormal',							],		
+	1101 :	[1250,			28,				8000,			3,				2,				1,				40,						15,						100,				12,					1,				3,				2,				1,				0,				0,				1,				0.15,		0,				'-',			'5_HRF',			0,				400,		'CaseLarge',		'-',					1101,				'BulletLarge',							],		
+	1102 :	[120,			16,				800,			20,				0.1,			1,				7,						5,						100,				6,					0,				1,				1,				1,				0,				0,				15,				0.25,		0,				'-',			'6_GTL',			0,				40,			'CaseSmall',		'-',					1102,				'BulletMinu',							],		
+	1103 :	[1250,			28,				8000,			3,				0.4,			1,				40,						15,						100,				12,					1,				3,				2,				1,				0,				0,				8,				0.3,		0,				'-',			'5_HRF',			0,				400,		'CaseLarge',		'-',					1103,				'BulletLarge',							],		
+	1104 :	[200,			20,				800,			2,				1,				8,				10,						5,						100,				8,					1,				2,				1,				1,				0,				0,				18,				0.01,		0,				'-',			'2_SSG',			0,				200,		'CaseLarge',		'-',					1104,				'BulletNormal',							],		
+	1105 :	[200,			20,				800,			30,				0.15,			1,				10,						5,						100,				3,					1,				2,				1,				1,				0,				0,				8,				0.15,		0,				'-',			'E_HMG',			0,				100,		'CaseNormal',		'-',					1105,				'BulletNormal',							],		
+	1106 :	[1250,			28,				8000,			5,				0.15,			1,				40,						15,						100,				5,					1,				3,				2,				1,				0,				0,				1,				0.15,		0,				'-',			'4_LRF',			0,				700,		'CaseLarge',		'-',					1106,				'BulletLarge',							],		
+	1107 :	[225,			15,				800,			20,				0.05,			1,				8,						5,						100,				6,					0,				1,				1,				1,				0,				3,				7,				0.15,		0,				'-',			'6_GTL',			0,				50,			'CaseSmall',		'-',					1107,				'BulletElectrMin',						],		
+	1108 :	[300,			16,				800,			4,				1,				10,				15,						5,						100,				6,					0,				1,				1,				1,				0,				3,				24,				0.01,		0,				'-',			'2_SSG',			0,				200,		'CaseLarge',		'-',					1108,				'BulletElectr',							],		
+	1109 :	[900,			28,				2000,			2,				1,				1,				50,						20,						150,				6,					0,				3,				1,				1,				0,				3,				3,				0.15,		0,				'-',			'4_LRF',			0,				800,		'CaseLarge',		'-',					1109,				'BulletElectrLarge',					],		
+	1110 :	[200,			20,				800,			5,				0.5,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				3,				0.15,		0,				'-',			'E_SMG',			0,				15,			'CaseNormal',		'-',					1110,				'BulletNormal',							],		
+	1111 :	[80,			13,				0,				1,				2,				1,				0,						0,						0,					5,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 04',			0,				0,			'-',				'-',					1111,				'RayNormal',							],		
+	1112 :	[10000,			40,				0,				1,				3.5,			1,				0,						0,						0,					15,					0,				0,				1,				2,				1,				0,				1,				0.05,		5,				'-',			'LaserBoss',		0,				0,			'-',				'-',					1112,				'RayBoss',								],		
+	1113 :	[200,			25,				250,			40,				0.1,			1,				8,						3,						50,					3,					1,				0,				1,				1,				0,				0,				40,				0.25,		5,				'-',			'E_SMG',			0,				200,		'CaseNormal',		'-',					1113,				'BulletFollow',							],		
+	1114 :	[0,				25,				800,			5,				0.4,			1,				0,						0,						0,					10,					0,				1.5,			2,				1,				0,				0,				40,				0.15,		9,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',					1114,				'BulletExplodeFollow',					],		
+	1115 :	[200,			25,				250,			10,				0.15,			1,				8,						3,						50,					5,					1,				0,				1,				1,				0,				0,				30,				0.15,		5,				'-',			'E_SMG',			0,				200,		'CaseNormal',		'-',					1115,				'BulletFollow',							],		
+	1116 :	[540,			24,				2000,			20,				0.075,			1,				20,						5,						100,				5,					1,				3,				1,				1,				0,				0,				12,				0.25,		28,				'-',			'MG',				0,				300,		'CaseLarge',		'-',					1116,				'BulletBig',							],		
+	1117 :	[200,			20,				800,			20,				0.08,			1,				10,						5,						100,				4,					1,				2,				1,				1,				0,				0,				18,				0.25,		18,				'-',			'MG2',				0,				300,		'CaseNormal',		'-',					1117,				'BulletNormal',							],		
+	1118 :	[3000,			28,				8000,			3,				2,				1,				60,						25,						200,				8,					1,				3,				2,				1,				0,				0,				2,				0.05,		35,				'-',			'4_LRF',			0,				4000,		'CaseLarge',		'-',					1118,				'BulletLargeKill',						],		
+	1119 :	[540,			24,				2000,			39,				0.05,			1,				20,						5,						100,				2,					1,				3,				1,				1,				0,				0,				15,				0.125,		28,				'-',			'MG',				0,				300,		'CaseLarge',		'-',					1119,				'BulletBig',							],		
+	1120 :	[200,			20,				800,			12,				0.1,			1,				10,						5,						100,				2.5,				1,				2,				1,				1,				0,				0,				18,				0.25,		18,				'-',			'MG2',				0,				300,		'CaseNormal',		'-',					1120,				'BulletNormal',							],		
+	1121 :	[0,				50,				800,			1,				0.4,			1,				0,						0,						0,					1,					0,				0,				2,				1,				0,				0,				40,				0.15,		0,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',					1121,				'BulletExplodeFollowDestructible',		],		
+	1122 :	[0,				20,				800,			1,				0.4,			5,				0,						0,						0,					1,					0,				0,				2,				1,				0,				0,				20,				0.15,		0,				'-',			'7_CAN',			0,				1600,		'CaseSmoke',		'-',					1122,				'BulletExplodeDestructible',			],		
+	1123 :	[500000,		100,			0,				1,				9,				1,				0,						0,						0,					1,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 03',			0,				0,			'-',				'-',					1123,				'RayBurstSpecialLong',					],		
+	1124 :	[10000,			50,				0,				1,				2,				1,				0,						0,						0,					1,					0,				0,				1,				2,				1,				0,				0,				0.01,		0,				'-',			'Laser 03',			0,				0,			'-',				'-',					1124,				'RayBurstLongEne',						],		
+	1125 :	[700,			27,				2500,			20,				0.075,			1,				25,						15,						150,				5,					1,				3,				2,				1,				0,				0,				12,				0.25,		28,				'LS',			'MGC',				0,				300,		'CaseLarge',		'-',					1125,				'BulletLargeMinu',						],		
+	1126 :	[900,			28,				2000,			9,				0.5,			1,				50,						20,						150,				4,					0,				3,				1,				1,				0,				3,				5,				0.2,		9,				'LL',			'5_HRF',			6,				2000,		'CaseNormal',		'-',					1126,				'BulletElectrLarge',					],		
+	1127 :	[540,			24,				2000,			2,				0.7,			15,				20,						5,						100,				12,					1,				3,				1,				1,				0,				0,				12,				0.01,		9,				'-',			'LS',				9,				1600,		'CaseLarge',		'-',					1127,				'BulletBig',							],		
+	1128 :	[10000,			40,				0,				1,				3.5,			1,				0,						0,						0,					30,					0,				0,				1,				2,				1,				0,				1,				0.05,		5,				'-',			'LaserBoss',		0,				0,			'-',				'-',					1128,				'RayBoss',								],		
+	1129 :	[2500,			23,				2500,			1,				0.2,			1,				0,						0,						0,					1,					0,				0,				-1,				-1,				0,				0,				0,				0.01,		0,				'-',			'Sw_1',				0,				500,		'-',				'-',					1129,				'Aurablade',							],		
+	1130 :	[1250,			28,				8000,			15,				0.27,			1,				40,						15,						100,				6.4,				1,				3,				2,				1,				0,				0,				8,				0.2,		15,				'LL',			'5_HRF',			9,				1000,		'CaseLarge',		'-',					1130,				'BulletLarge',							],		
+	1131 :	[0,				50,				800,			3,				0.35,			2,				0,						0,						0,					12,					0,				0,				2,				1,				0,				0,				20,				0.15,		0,				'-',			'7_CAN',			0,				500,		'CaseSmoke',		'-',					1131,				'BulletExplodeFollowDestructible',		],		
+	1132 :	[0,				50,				800,			3,				0.35,			3,				0,						0,						0,					10,					0,				0,				2,				1,				0,				0,				30,				0.15,		0,				'-',			'7_CAN',			0,				0,			'CaseSmoke',		'-',					1132,				'BulletExplodeFollowDestructible',		],		
+	50 :	[75,			3,				1500,			3,				0.3,			1,				15,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				4000,		'-',				'-',					50,					'SlashSword0',							],		
+	51 :	[90,			5,				2200,			4,				0.5,			1,				24,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		3,				'-',			'-',				0,				4000,		'-',				'-',					51,					'SlashSword0b',							],		
+	52 :	[150,			3,				1500,			3,				0.5,			1,				10,						0,						0,					1.2,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'-',				0,				2000,		'-',				'-',					52,					'SlashSword1',							],		
+	53 :	[80,			3,				1500,			5,				0.2,			1,				9,						0,						0,					1.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		5,				'-',			'-',				0,				500,		'-',				'-',					53,					'SlashSword1b',							],		
+	54 :	[360,			5,				2200,			4,				0.6,			1,				36,						0,						0,					2.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		30,				'-',			'-',				30,				4000,		'-',				'-',					54,					'SlashSword2',							],		
+	55 :	[640,			5,				2500,			3,				0.8,			1,				54,						0,						0,					3.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		40,				'-',			'-',				75,				4000,		'-',				'AuraCombo',			55,					'SlashSword2b',							],		
+	56 :	[240,			6,				2200,			3,				0.4,			1,				28,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		10,				'-',			'-',				0,				4000,		'-',				'DashFoward',			56,					'SlashSword3',							],		
+	57 :	[120,			6,				2200,			4,				0.3,			1,				15,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		10,				'-',			'-',				0,				2000,		'-',				'-',					57,					'SlashSword3b',							],		
+	58 :	[150,			9,				2200,			3,				0.65,			1,				36,						0,						0,					2.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		15,				'-',			'-',				1,				2000,		'-',				'AuraCombo',			58,					'SlashSword3c',							],		
+	59 :	[160,			3,				1500,			4,				0.25,			1,				4,						0,						0,					1.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		18,				'-',			'-',				2,				2000,		'-',				'AuraBlade',			59,					'SlashSword1e',							],		
+	60 :	[2000,			5,				0,				2,				9,				1,				40,						0,						0,					9,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'-',				0,				4000,		'-',				'-',					60,					'SlashSwordEneBig',						],		
+	61 :	[150,			3,				0,				4,				0.5,			1,				15,						0,						0,					8,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		4,				'-',			'-',				0,				2000,		'-',				'-',					61,					'SlashSwordEne',						],		
+	62 :	[5000,			4,				0,				1,				0.1,			1,				50,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				8000,		'-',				'-',					62,					'SlashSwordEnemyBossFinal',				],		
+	63 :	[100,			3,				0,				1,				0.6,			1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				4000,		'-',				'-',					63,					'SlashSwordShield',						],		
+	65 :	[150,			3,				1500,			3,				0.25,			1,				10,						0,						0,					2,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'-',				0,				2000,		'-',				'Assassin',				65,					'SlashSword1',							],		
+	151 :	[160,			5,				2500,			3,				0.6,			1,				30,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		4,				'-',			'-',				0,				7500,		'-',				'-',					151,				'SlashSword0b2',						],		
+	152 :	[150,			3,				1500,			3,				0.4,			1,				10,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		9,				'-',			'-',				0,				2000,		'-',				'AuraCombo',			152,				'SlashSword1',							],		
+	153 :	[80,			3,				1500,			4,				0.175,			1,				9,						0,						0,					1.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		7,				'-',			'-',				0,				500,		'-',				'-',					153,				'SlashSword1b',							],		
+	154 :	[360,			5,				2200,			3,				0.7,			1,				36,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		40,				'-',			'-',				50,				4000,		'-',				'AuraCombo',			154,				'SlashSword2',							],		
+	155 :	[640,			5,				2500,			3,				1,				1,				54,						0,						0,					4,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		50,				'-',			'-',				100,			4000,		'-',				'AuraBlade',			155,				'SlashSword2b',							],		
+	156 :	[240,			6,				2200,			3,				0.5,			1,				28,						0,						0,					2.5,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		13,				'-',			'-',				0,				4000,		'-',				'DashFoward',			156,				'SlashSword3',							],		
+	157 :	[120,			6,				2200,			4,				0.2,			1,				15,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		13,				'-',			'-',				0,				2000,		'-',				'-',					157,				'SlashSword3b',							],		
+	158 :	[200,			9,				2200,			3,				1.25,			1,				54,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		24,				'-',			'-',				4,				2000,		'-',				'AuraCombo|AuraBlade',	158,				'SlashSword3c2',						],		
+	159 :	[160,			3,				1500,			3,				0.25,			1,				4,						0,						0,					1.35,				0,				0,				-1,				-1,				1,				0,				0,				0.01,		25,				'-',			'-',				3,				2000,		'-',				'AuraCombo|AuraBlade',	159,				'SlashSword1e',							],		
+	165 :	[150,			3,				1500,			5,				0.4,			1,				10,						0,						0,					3,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		6,				'-',			'-',				0,				2000,		'-',				'Assassin',				165,				'SlashSword1',							],		
+	1201 :	[800,			4,				0,				3,				0.8,			1,				35,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				3000,		'-',				'-',					1201,				'SlashSwordEneMiddle',					],		
+	1202 :	[5000,			3,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				6000,		'-',				'-',					1202,				'SlashSwordGiant',						],		
+	1203 :	[1800,			9,				0,				1,				1,				1,				0,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				2000,		'-',				'-',					1203,				'SlashSword3c3',						],		
+	1204 :	[1200,			5,				0,				1,				1,				1,				40,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				8000,		'-',				'-',					1204,				'SlashSwordEneBig2',					],		
+	1205 :	[800,			3,				0,				1,				1,				1,				55,						0,						0,					1,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				10000,		'-',				'-',					1205,				'SlashSwordShiAttack',					],		
+	1206 :	[2000,			5,				0,				3,				0.8,			1,				40,						0,						0,					5,					0,				0,				-1,				-1,				1,				0,				0,				0.01,		0,				'-',			'-',				0,				3000,		'-',				'-',					1206,				'SlashSwordEneBig',						],		
 };
 
 // 武器参数
 let weaponText = [
-	
-	// ['预制名称',		'預製名稱',			'Prefab',					'プレハブ名',						],
-	// ['换弹声音',		'換彈聲音',			'Reload',					'リロード音',						],
-	// ['默认配件',		'默認配件',			'DefaultModule',			'デフォルトのアクセサリ',			],
 	
 	['子弹伤害',		'子彈傷害',			'Damage',					'弾丸ダメージ',						],
 	['子弹射程',		'子彈射程',			'BulletRange',				'弾丸の範囲',						],
@@ -1476,6 +1498,10 @@ let weaponText = [
 	['武器标记',		'武器標記',			'Weapons',					'武器のマーキング',					],
 	['子弹名称',		'子彈名稱',			'Projectile',				'弾丸名',							],
 	
+	// ['预制名称',		'預製名稱',			'Prefab',					'プレハブ名',						],
+	// ['换弹声音',		'換彈聲音',			'Reload',					'リロード音',						],
+	// ['默认配件',		'默認配件',			'DefaultModule',			'デフォルトのアクセサリ',			],
+	
 ];
 
 // ---------------------------------------------
@@ -1495,13 +1521,13 @@ tbodyArray01.forEach(function(item){
 		
 		// 武器图片
 		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;">' +
-		'<img loading="lazy" alt="'+ item[3] + '" src="../static/image/enemy/'+ item[1] +'.jpg" style="width:64px;height:64px;" /></td>' }else 
+		'<img loading="lazy" alt="' + item[3] + '" src="../static/image/enemy/'+ item[1] +'.jpg" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 敌人名称
 		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]] === undefined ? '-' : ItemsNameList[item[4]][0]) +'</td>' }else 
 		
 		// 文本描述
-		if(index === 16){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]] === undefined ? '-' : DescriptionsList[item[4]][0]) +'</td>' }else 
+		if(index === 16){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]] === undefined ? '-' : DescriptionList[item[4]][0]) +'</td>' }else 
 		
 		// 敌人代码
 		if(index ===  4){ powerTable_tbody_node01 += '<td><span>'+ (data) +'</span></td>' }else 
@@ -1518,6 +1544,7 @@ tbodyArray01.forEach(function(item){
 		// 解体产出
 		if(index === 27){
 			let data27 = (data === '-' ? '-' : 'All|' + data);
+			if(item[4].includes('SupplyBox') === true){ data27 = data27.slice(4) }; // 补给箱跟其他残骸不同, 不一定有 All 的类型的材料
 			powerTable_tbody_node01 += ('<td>'+ 
 				'<span>'+ (data27 === '-' ? 'None' : data27) +'</span>' + 
 				'<span>'+ (data27 === '-' ? 'None' : data27.split('|').map(function(e){ return (e.padEnd(8) +' : '+ ItemsNameList[e].map(function(e){ return ItemsNameList[e][0] })) }).join('<br />')) +'</span>' +
@@ -1692,7 +1719,7 @@ let filterFunction = function(event){
 	.forEach(function(text, index01){
 		tbodyArray01.forEach(function(item, index02){
 			if(item[3].indexOf(text) >= 0 
-			|| DescriptionsList[item[4]][0].indexOf(text) >= 0){
+			|| DescriptionList[item[4]][0].indexOf(text) >= 0){
 				
 				// 精英领袖
 				if(jqi_attrSelect01_value !== 'empty' 
@@ -1752,7 +1779,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.2</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
 </div>
 </div>
 </div>
