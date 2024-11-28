@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>武器配件</title>
 </head>
 <body>
@@ -200,13 +200,13 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>04. 项目代码: 配件的下级代码为当前配件代码 <code>+1</code>, 例如: 差速机(2001)/差速机+(2002)/高级差速机(2003)/制式差速机(2004), 目前配件的代码位于 <code>1401 ~ 2365</code> 之间, 但并非这个范围之内的所有数值都是配件, 如果想你制作配件模组, 最好仔细检查, 避免重复;</p>
 
-<p>05. 参考价格: 这是配件在商店购买时的价格, 当配件被拖到回收栏, 可选择要获得资金还是获得废料, 如果要资金就能得到一半的参考价格, 如果要废料则是得到一半的合成材料, 一般购入低级配件合成高级配件更有性价比, 只是商店卖什么东西我们也没法控制就是了;</p>
+<p>05. 参考价格: 这是配件在采购部购买的价格, 当配件被拖到回收栏, 可选择要获得资金还是获得废料, 如果要资金就能得到一半的参考价格, 如果要废料则是得到一半的合成材料, 一般购入低级配件合成高级配件更有性价比, 但采购部卖什么东西我们也没法控制就是了;</p>
 
 <p>06. 配件等级: <code>-1</code> 表示满级, <code>-2</code> 表示不可升级, 高一级的配件都是用两个低一级的配件合成, 这就意味着如果你想合成第 <code>N</code> 级配件, 就需要 <code>2</code> 的 <code>N-1</code> 次方个初级配件, 例如说你想合成第 <code>4</code> 级的差速机, 那你就需要 <code>2</code> 的 <code>4-1</code> 次方既 <code>8</code> 个差速机;</p>
 
 <p>07. 默认排序: 这是配件在游戏物品栏内的排序 id, 它会把上下级关系的配件放在一起, 让我们的查找变得更加方便, 这个排序就显得更合理, 而不会像武器那样是按照等级而不是同类进行排序, 其实排序与代码也有关系, 武器就是代码的不连续才导致了乱糟糟的序列;</p>
 
-<p>08. 解锁天数: 配件的解锁时间, 解锁后商店才可能售卖, 也能在合成车间合成, 否则那个物品就不可见(下方会写着随天数解锁), 也就没法被点击到, 不过剧情模式下合成车间需要到第 24 天才开放, 所以尽管有些配件的解锁天数小于 24, 但此时就算解锁了也没法合成;</p>
+<p>08. 解锁天数: 配件的解锁时间, 解锁后采购部才可能售卖, 也能在合成车间合成, 否则那个物品就不可见(下方写着随天数解锁), 也就没法被点击到, 不过剧情模式下合成车间需要到第 24 天才开放, 所以尽管有些配件的解锁天数小于 24, 但此时就算解锁了也没法合成;</p>
 
 <p>09. 物品类型: 游戏中的物品可分为远程/近战/投掷/书籍/强化等多个种类, 当前页仅展示了其中的远程强化/近战强化/肩扛强化共三类, 这个属性主要是决定配件究竟是用于远程还是近战或是肩扛, 可发现远程的数量大约是近战的六倍, 关于近战方面还是有些许单调呢;</p>
 
@@ -216,11 +216,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>————</p>
 
-<p>12. 合成材料: 既合成初级配件或终极配件所需材料(高级配件是用两个低级配件升级而来, 升级机制可查看"06. 配件等级", 也有部分配件如"高级能量弹"无法合成, 只能在商店购买), 合成材料是通过发电厂拆解敌方机体回收获得, 详情可到 <a href="./data_manage_material.html">回收废料.html</a> 查看细节;</p>
+<p>12. 合成材料: 既合成初级配件所需要的材料, 高级配件是用两个低级配件升级而来, 升级机制可查看"06. 配件等级", 也存在部分配件如"高级能量弹"无法合成, 只能在采购部购买, 合成材料是通过在解体厂拆解敌方机体回收获得的, 详情可到 <a href="./data_manage_material.html">回收废料.html</a> 查看细节;</p>
 
-<p>13. 出现条件: 拥有过这里的某件物品(进过物品栏即可, 卖掉或拆解都行), 商店才可能售卖它们, 当某些低级物品作为条件时, 则是如果你拥有过它们的高级版也行, Unlock 既默认已解锁, 但最终商店会不会售卖这种东西还跟权重有关, 可到 <a href="javascript:void(0)"><s>商店机制.html</s></a> 查看细节;</p>
+<p>13. 出现条件: 拥有过这里的某件物品(进过物品栏即可, 卖掉或拆解都行), 采购部才可能售卖, 某些低级物品作为条件时, 也许拥有过高级版也行, Unlock 既默认已解锁而 - 则代表不会在采购部出现, 但是采购部会不会卖还跟权重有关, 可到 <a href="./data_others_priority.html">商品权重.html</a> 查看细节;</p>
 
-<p>14. 文本描述: 使用文字简单的概述配件特性, 游戏对某些配件的描述是较为模糊的, 因此 XJ 通过实测补全了不少内容, 有些还在最后的额外拓展章节进行了深入解析(如果你为模组编写 Description, 记得要将表格保存为 UTF-8 格式, 并且其中不能有半角逗号或引号);</p>
+<p>14. 文本描述: 使用文字描述配件特性, 值得注意的是, <code>%</code> 单位和 <code>P</code> 单位的数据, 算法并不同, 如差速机可让射击间隔 <code>-5%</code>, 假设射击间隔为 <code>1</code> 秒, 则结果为 <code>1*(1-5%)=0.95</code> 秒, 如暴击模块可让暴击概率 <code>+4P</code>, 假设暴击概率为 <code>10</code>, 则结果为 <code>10+4=14</code>;</p>
 
 <hr />
 </section>
@@ -229,11 +229,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading03">03. 额外拓展</h2>
 
-<p>配件获取: 并非所有配件都能自己合成, 在远程配件中只有 <code>1</code> 种既高级能量弹模块(2088)无法合成, 但近战配件却有 <code>5</code> 种无法合成, 分别为近战高温模块(2200) / 近战相位模块(2201) / 暗杀效率模块(2218) / 暗杀隐匿模块(2221) / 暗杀广度模块(2224), 这些模块仅能在商店中购买到, 但商店是否会出这类东西也是完全随机的, 如果你是想达成全图鉴的解锁, 那就得时刻留意商店里的新品情况了;</p>
+<p>配件获取: 并非所有配件都能自己合成, 在远程配件中只有 <code>1</code> 种既高级能量弹模块(2088)无法合成, 但近战配件却有 <code>5</code> 种无法合成, 分别为近战高温模块(2200) / 近战相位模块(2201) / 暗杀效率模块(2218) / 暗杀隐匿模块(2221) / 暗杀广度模块(2224), 这些模块仅能在采购部里购买到, 但采购部是否刷出这类东西也是随机的, 如果你是想达成全图鉴的解锁, 那就得时刻留意采购部的新品情况了;</p>
 
 <p>拆卸折损: 将配件拖曳到武器的配件槽即可安装, 反之从配件槽拖放回空的物品栏位则是拆卸, 但拆卸这种行为有时会损害到武器, 也就是会降低武器的耐久度, 根据实测, 价格 <code>>=30</code> 的配件, 拆卸时就会损害到武器, 耐久度降低值等于配件价格的十分之一(向下取整), 例如战术燃烧榴弹发射器(2363)价格为  <code>75</code>, 那么拆卸就会造成武器 <code>7%</code> 的损耗, 尽管维修武器也花不了多少钱, 但还是要慎重操作;</p>
 
-<p>元素影响: 各类武器都有一些施加元素影响的配件, 例如动能类武器使用的火焰模块(2033)或高爆类武器使用的火焰炸弹模块(2159), 这类配件的目的都在于为攻击附加元素伤害, 当他们单独存在的时候, 作用非常有限, 但如果两种或更多元素混合, 往往可以造成极大的影响, 例如: <code>燃烧+寒冷=融化(抵抗-80%)</code> / <code>燃烧+电磁=超载(眩晕敌人)</code>, 这部分的系统较为复杂, 更多的细节可查阅 <a href="javascript:void(0)"><s>术语名词.html</s></a>;</p>
+<p>元素影响: 各类武器都有一些施加元素影响的配件, 例如动能类武器使用的火焰模块(2033)或高爆类武器使用的火焰炸弹模块(2159), 这类配件的目的都在于为攻击附加元素伤害, 当他们单独存在的时候, 作用非常有限, 但如果两种或更多元素混合, 往往可以造成极大的影响, 例如: <code>燃烧+寒冷=融化(抵抗-80%)</code> / <code>燃烧+电磁=超载(范围麻痹)</code>, 这部分的系统较为复杂, 更多的细节可查阅 <a href="./data_others_parlance.html">术语提示.html</a>;</p>
 
 <p>过穿现象: 在众多的配件中, 滞留弹(2295)是比较特殊的, 它影响的是过穿概率, 过穿表现为子弹只会造成 <code>20%</code> 的伤害, 但子弹击中目标后不会消失, 而是在目标身后出现, 直到打中下个敌人或消失, 触发算法为: <code>随机数 = 0 ~ 99</code>, <code>过穿修正 = 我方 20, 敌人 1</code>, <code>if(子弹伤害 > 400 && 被击中的机体当前生命 < 子弹伤害 * 过穿修正){ if(随机数 < ((伤害 / 20) * (1 - (子弹过穿概率默认0 - 滞留弹配件效果) / 100)) && 机体抵抗 < 穿甲概率){ 触发过穿 } }</code>, 触发过穿不一定是好事, 例如说高斯狙击步枪, 它的子弹伤害很高, 也就导致它的过穿概率也很高, 结果就是触发过穿之后, 只能造成五分之一的伤害值, 这在面对群集的敌人时也许是好事, 因为可以造成直线的 AOE 伤害, 但在面对某些精英敌人时, 就不尽人意了, 此时我们就可以选择安装滞留弹系列的配件, 来降低过穿触发的概率;</p>
 
@@ -293,7 +293,7 @@ ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料�
 Cluster 属性是物品的群组信息, 只有融合的配件有这个属性, 用于判断同类项配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
 CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是武器配件槽位和融合槽位的数据, 只有武器才拥有, 其它的物品该属性没有任何意义, 所以删掉了
 
-观察 ItemsCount 数据发现, 尽管出现条件可能都是空, 但有些高级物品是不会在商店中出现的, 因此修改了出现条件的内容, 1=没有限制, 0=不会出现
+观察 ItemsCount 数据发现, 尽管出现条件可能都是空, 但有些高级物品是不会在采购部出现的, 因此修改了出现条件的内容, 1=没有限制, 0=不会出现
 由于空间放不下, 所以出现条件被精简了, 删掉了高级物品, 只保留低级物品, 所以遇到条件为低级物品时, 意味着如果拥有过物品的高级版本也能解锁
 
 */
@@ -622,7 +622,7 @@ let tbodyArray01 = [
 	
 ];
 
-// 配件名称
+// 项目名称
 let ItemsNameList = {
 	
 	2001 : ['差速机',						'差速機',						'Differential',										'差動装置',									],		
@@ -1187,15 +1187,15 @@ let DescriptionList = {
 	2090 : [/*'高级能量弹模块3',		ShiledDamage:150|Damage:-30,										*/ '护盾伤害+150%<br />子弹伤害 -30%',																				'對護盾傷害 +150%(僅動能武器有效), 傷害 - 30%',															'Increases damage against shields by <Description:0>%.\n(affects only kinetic weapons)\nDamage by <Description:1>%.\n',																'シールドダメージ+<Description:0>%\n(キネティック兵器のみ有効\nダメージ<Description:1>%\n',																								],		
 	2091 : [/*'高级能量弹模块4',		ShiledDamage:250|Damage:-50,										*/ '护盾伤害+250%<br />子弹伤害 -50%',																				'對護盾傷害 +250%(僅動能武器有效), 傷害 - 50%',															'Increases damage against shields by <Description:0>%.\n(affects only kinetic weapons)\nDamage by <Description:1>%.\n',																'シールドダメージ+<Description:0>%\n(キネティック兵器のみ有効\nダメージ<Description:1>%\n',																								],		//03		
 	
-	2066 : [/*'暴击模块',				CriticPossibility:4,												*/ '暴击概率 + 4%<br />装弹时间 + 0%',																				'暴擊率 +　4%, 裝彈時間 +　0%',																			'Increases crit rate by <Description>.\n',																																			'会心率+<Description>\n',																																								],		
-	2067 : [/*'暴击模块+',				CriticPossibility:10|ReloadSpeed:5,									*/ '暴击概率 +10%<br />装弹时间 + 5%',																				'暴擊率 + 10%, 裝彈時間 +　5%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		
-	2068 : [/*'高级暴击模块',			CriticPossibility:15|ReloadSpeed:12,								*/ '暴击概率 +15%<br />装弹时间 +12%',																				'暴擊率 + 15%, 裝彈時間 + 12%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		
-	2069 : [/*'制式暴击模块',			CriticPossibility:20|ReloadSpeed:20,								*/ '暴击概率 +20%<br />装弹时间 +20%',																				'暴擊率 + 20%, 裝彈時間 + 20%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		//03		
+	2066 : [/*'暴击模块',				CriticPossibility:4,												*/ '暴击概率 + 4P<br />装弹时间 + 0%',																				'暴擊率 +　4%, 裝彈時間 +　0%',																			'Increases crit rate by <Description>.\n',																																			'会心率+<Description>\n',																																								],		
+	2067 : [/*'暴击模块+',				CriticPossibility:10|ReloadSpeed:5,									*/ '暴击概率 +10P<br />装弹时间 + 5%',																				'暴擊率 + 10%, 裝彈時間 +　5%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		
+	2068 : [/*'高级暴击模块',			CriticPossibility:15|ReloadSpeed:12,								*/ '暴击概率 +15P<br />装弹时间 +12%',																				'暴擊率 + 15%, 裝彈時間 + 12%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		
+	2069 : [/*'制式暴击模块',			CriticPossibility:20|ReloadSpeed:20,								*/ '暴击概率 +20P<br />装弹时间 +20%',																				'暴擊率 + 20%, 裝彈時間 + 20%',																			'Increases crit rate by <Description:0>.\nReload time +<Description:1>%',																											'会心率+<Description:0>\nリロード時間+<Description:1>%',																																],		//03		
 	
-	2070 : [/*'暴伤模块',				CriticDamage:20,													*/ '暴击伤害 +20%<br />装弹时间 + 0%',																				'暴擊傷害 + 20%, 裝彈時間 +　0%',																		'Increases crit damage by <Description>%.\n',																																		'会心ダメージ+<Description>%\n',																																						],		
-	2071 : [/*'暴伤模块+',				CriticDamage:50|ReloadSpeed:5,										*/ '暴击伤害 +50%<br />装弹时间 + 5%',																				'暴擊傷害 + 50%, 裝彈時間 +　5%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		
-	2072 : [/*'高级暴伤模块',			CriticDamage:100|ReloadSpeed:12,									*/ '暴击伤害+100%<br />装弹时间 +12%',																				'暴擊傷害 +100%, 裝彈時間 + 12%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		
-	2073 : [/*'制式暴伤模块',			CriticDamage:200|ReloadSpeed:20,									*/ '暴击伤害+200%<br />装弹时间 +20%',																				'暴擊傷害 +200%, 裝彈時間 + 20%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		//03		
+	2070 : [/*'暴伤模块',				CriticDamage:20,													*/ '暴击伤害 +20P<br />装弹时间 + 0%',																				'暴擊傷害 + 20%, 裝彈時間 +　0%',																		'Increases crit damage by <Description>%.\n',																																		'会心ダメージ+<Description>%\n',																																						],		
+	2071 : [/*'暴伤模块+',				CriticDamage:50|ReloadSpeed:5,										*/ '暴击伤害 +50P<br />装弹时间 + 5%',																				'暴擊傷害 + 50%, 裝彈時間 +　5%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		
+	2072 : [/*'高级暴伤模块',			CriticDamage:100|ReloadSpeed:12,									*/ '暴击伤害+100P<br />装弹时间 +12%',																				'暴擊傷害 +100%, 裝彈時間 + 12%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		
+	2073 : [/*'制式暴伤模块',			CriticDamage:200|ReloadSpeed:20,									*/ '暴击伤害+200P<br />装弹时间 +20%',																				'暴擊傷害 +200%, 裝彈時間 + 20%',																		'Increases crit damage by <Description:0>%.\nReload time +<Description:1>%',																										'会心ダメージ+<Description:0>%\nリロード時間+<Description:1>%',																															],		//03		
 	
 	2096 : [/*'分裂模块',				SeparatePoss:2,														*/ '子弹分裂的概率 + 2%, 子弹伤害每 + 100 则分裂概率会额外 + 1%, 弹射也可能分裂',									'子彈分裂概率 +2%(每次彈射均有概率分裂, 子彈每100傷害額外增加1%概率)(僅動能武器有效)',					'Increases bullet splitting rate by <Description>%.\n(every bounce has a chance of splitting; +1% for every 100 bullet damage)\n(affects only kinetic weapons)',					'弾丸分裂確率+<Description>%\n(発射ごとに分裂する確率があり、弾丸ダメージ100ごとに確率が1%上昇)\n(キネティック兵器のみに有効)',															],		
 	2097 : [/*'分裂模块+',				SeparatePoss:4,														*/ '子弹分裂的概率 + 4%, 子弹伤害每 + 100 则分裂概率会额外 + 1%, 弹射也可能分裂',									'子彈分裂概率 +4%(每次彈射均有概率分裂, 子彈每100傷害額外增加1%概率)(僅動能武器有效)',					'Increases bullet splitting rate by <Description>%.\n(every bounce has a chance of splitting; +1% for every 100 bullet damage)\n(affects only kinetic weapons)',					'弾丸分裂確率+<Description>%\n(発射ごとに分裂する確率があり、弾丸ダメージ100ごとに確率が1%上昇)\n(キネティック兵器のみに有効)',															],		
@@ -1779,7 +1779,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
 </div>
 </div>
 </div>

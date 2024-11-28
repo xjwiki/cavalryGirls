@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>饰品装备</title>
 </head>
 <body>
@@ -161,7 +161,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>背刺饰品: 库罗库专属的四类饰品仅会在潜行模式下出现, 商店里不会卖(价格为 -1 的物品商店都不会卖), 除了剧情事件可获取之外, 你也能在潜行模式的整备人员界面右上角, 点击"解锁专属装备"获取, 这需要以荣誉点为代价, 需求算法为 <code>50+(25*N)</code>, N 是当前通过该功能获取的饰品数量, 例如第一个饰品就是 <code>50+(25*0)=50</code>, 第二个饰品就是 <code>50+(25*1)=75</code>, 值得注意的是, 普通模式下角色最多可以解锁四个饰品槽位, 但潜行模式下最多只能解锁三个饰品槽位, 因为第四个饰品槽位的位置被新增的"解锁专属装备"的按钮占据了;</p>
+<p>背刺饰品: 库罗库专属的四类饰品仅会在潜行模式下出现, 采购部不会卖(价格为 -1 的物品采购部都不会卖), 除了剧情事件可获取外, 你也能在潜行模式的整备人员界面右上角, 点击"解锁专属装备"获取, 这需要以荣誉点为代价, 需求算法为 <code>50+(25*N)</code>, N 是当前通过该功能获取的饰品数量, 例如第一个饰品就是 <code>50+(25*0)=50</code>, 第二个饰品就是 <code>50+(25*1)=75</code>, 值得注意的是, 普通模式下角色最多可以解锁四个饰品槽位, 但潜行模式下最多只能解锁三个饰品槽位, 因为第四个饰品槽位的位置被新增的"解锁专属装备"的按钮占据了;</p>
 
 <p>拆卸增压: 当饰品的价格 <code>>= 30</code>, 卸下饰品就会增加角色的脑负荷, 具体算法为 <code>饰品价格/10</code>, 最后向下取整, 例如玉过载框架-精矿, 价格是 <code>85</code>, 那么卸下时就会增加 <code>Floor(85/10)≈8</code> 的脑负荷, 但库罗库专属的四类饰品价格都是 <code>-1</code>, 所以卸下就没有惩罚;</p>
 
@@ -254,104 +254,112 @@ let tbodyArray01 = [
 	
 ];
 
-// 配件名称
+// 项目名称
 let ItemsNameList = {
 	
 	251 : ['玉稳定框架-原石',		'玉穩定框架-原石',		'Jade Stable Frame - Raw Stone',				'翡翠安定性フレーム-原石',							],		
 	252 : ['玉增幅框架-原石',		'玉增幅框架-原石',		'Jade Amplification Frame - Raw Stone',			'翡翠増幅フレーム-原石',							],		
-	253 : ['玉过载框架-原石',		'玉超載框架-原石',		'Jade Overload Frame - Raw Stone',				'翡翠オーバーロードフレーム-原石',					],		
+	253 : ['玉过载框架-原石',		'玉超載框架-原石',		'Jade Overload Frame - Raw Stone',				'翡翠オーバーロードフレーム-原石',					],		//02		
+	
 	254 : ['玉稳定框架-原矿',		'玉穩定框架-原礦',		'Jade Stable Frame - Raw Ore',					'翡翠安定性フレーム-原鉱',							],		
 	255 : ['玉增幅框架-原矿',		'玉增幅框架-原礦',		'Jade Amplification Frame - Raw Ore',			'翡翠増幅フレーム-原鉱',							],		
-	256 : ['玉过载框架-原矿',		'玉超載框架-原礦',		'Jade Overload Frame - Raw Ore',				'翡翠オーバーロードフレーム-原鉱',					],		
+	256 : ['玉过载框架-原矿',		'玉超載框架-原礦',		'Jade Overload Frame - Raw Ore',				'翡翠オーバーロードフレーム-原鉱',					],		//02		
+	
 	257 : ['玉稳定框架-精矿',		'玉穩定框架-精礦',		'Jade Stable Frame - Refined Ore',				'翡翠安定性フレーム-精鉱',							],		
 	258 : ['玉增幅框架-精矿',		'玉增幅框架-精礦',		'Jade Amplification Frame - Refined Ore',		'翡翠増幅フレーム-精鉱',							],		
-	259 : ['玉过载框架-精矿',		'玉超載框架-精礦',		'Jade Overload Frame - Refined Ore',			'翡翠オーバーロードフレーム-精鉱',					],		
+	259 : ['玉过载框架-精矿',		'玉超載框架-精礦',		'Jade Overload Frame - Refined Ore',			'翡翠オーバーロードフレーム-精鉱',					],		//02		
+	
 	260 : ['玉稳定框架-摆件',		'玉穩定框架-擺件',		'Jade Stable Frame - Ornament',					'翡翠安定性フレーム-調度品',						],		
 	261 : ['玉增幅框架-摆件',		'玉增幅框架-擺件',		'Jade Amplification Frame - Ornament',			'翡翠増幅フレーム-調度品',							],		
-	262 : ['玉过载框架-摆件',		'玉超載框架-擺件',		'Jade Overload Frame - Ornament',				'翡翠オーバーロードフレーム-調度品',				],		
+	262 : ['玉过载框架-摆件',		'玉超載框架-擺件',		'Jade Overload Frame - Ornament',				'翡翠オーバーロードフレーム-調度品',				],		//02		
+	
 	263 : ['玉稳定框架-挂画',		'玉穩定框架-掛畫',		'Jade Stable Frame - Painting',					'翡翠安定性フレーム-掛け絵',						],		
 	264 : ['玉增幅框架-挂画',		'玉增幅框架-掛畫',		'Jade Amplification Frame - Painting',			'翡翠増幅フレーム-掛け絵',							],		
-	265 : ['玉过载框架-挂画',		'玉超載框架-掛畫',		'Jade Overload Frame - Painting',				'翡翠オーバーロードフレーム-掛け絵',				],		
+	265 : ['玉过载框架-挂画',		'玉超載框架-掛畫',		'Jade Overload Frame - Painting',				'翡翠オーバーロードフレーム-掛け絵',				],		//02		
+	
 	266 : ['玉稳定框架-挂饰',		'玉穩定框架-掛飾',		'Jade Stable Frame - Pendant',					'翡翠安定性フレーム-オーナメント',					],		
 	267 : ['玉增幅框架-挂饰',		'玉增幅框架-掛飾',		'Jade Amplification Frame - Pendant',			'翡翠増幅フレーム-オーナメント',					],		
-	268 : ['玉过载框架-挂饰',		'玉超載框架-掛飾',		'Jade Overload Frame - Pendant',				'翡翠オーバーロードフレーム-ム-オーナメント',		],		
+	268 : ['玉过载框架-挂饰',		'玉超載框架-掛飾',		'Jade Overload Frame - Pendant',				'翡翠オーバーロードフレーム-ム-オーナメント',		],		//02		
 	
 	601 : ['玉刀刃-原矿',			'玉刀刃-原礦',			'Jade Blade - Raw Stone',						'翡翠刃-原石',										],		
 	602 : ['玉刀刃-原石',			'玉刀刃-原石',			'Jade Blade - Raw Ore',							'翡翠刃-原鉱',										],		
 	603 : ['玉刀刃-粗制品',			'玉刀刃-粗製品',		'Jade Blade - Crudes',							'翡翠刃-粗製品',									],		
-	604 : ['玉刀刃-精制品',			'玉刀刃-精製品',		'Jade Blade - Boutique',						'翡翠刃-精製品',									],		
+	604 : ['玉刀刃-精制品',			'玉刀刃-精製品',		'Jade Blade - Boutique',						'翡翠刃-精製品',									],		//02		
+	
 	605 : ['玉刀把-原矿',			'玉刀把-原礦',			'Jade Handle - Raw Stone',						'翡翠柄-原石',										],		
 	606 : ['玉刀把-原石',			'玉刀把-原石',			'Jade Handle - Raw Ore',						'翡翠柄-原鉱',										],		
 	607 : ['玉刀把-粗制品',			'玉刀把-粗製品',		'Jade Handle - Crudes',							'翡翠柄-粗製品',									],		
-	608 : ['玉刀把-精制品',			'玉刀把-精製品',		'Jade Handle - Boutique',						'翡翠柄-精製品',									],		
+	608 : ['玉刀把-精制品',			'玉刀把-精製品',		'Jade Handle - Boutique',						'翡翠柄-精製品',									],		//02		
+	
 	609 : ['玉刀鞘-原矿',			'玉刀鞘-原礦',			'Jade Scabbard - Raw Stone',					'翡翠鞘-原石',										],		
 	610 : ['玉刀鞘-原石',			'玉刀鞘-原石',			'Jade Scabbard - Raw Ore',						'翡翠鞘-原鉱',										],		
 	611 : ['玉刀鞘-粗制品',			'玉刀鞘-粗製品',		'Jade Scabbard - Crudes',						'翡翠鞘-粗製品',									],		
-	612 : ['玉刀鞘-精制品',			'玉刀鞘-精製品',		'Jade Scabbard - Boutique',						'翡翠鞘-精製品',									],		
+	612 : ['玉刀鞘-精制品',			'玉刀鞘-精製品',		'Jade Scabbard - Boutique',						'翡翠鞘-精製品',									],		//02		
+	
 	613 : ['玉刀镡-原矿',			'玉刀鐔-原礦',			'Jade Holder - Raw Stone',						'翡翠ナイフホルダ-原石',							],		
 	614 : ['玉刀镡-原石',			'玉刀鐔-原石',			'Jade Holder - Raw Ore',						'翡翠ナイフホルダ-原鉱',							],		
 	615 : ['玉刀镡-粗制品',			'玉刀鐔-粗製品',		'Jade Holder  - Crudes',						'翡翠ナイフホルダ-粗製品',							],		
-	616 : ['玉刀镡-精制品',			'玉刀鐔-精製品',		'Jade Holder  - Boutique',						'翡翠ナイフホルダ-精製品',							],		
+	616 : ['玉刀镡-精制品',			'玉刀鐔-精製品',		'Jade Holder  - Boutique',						'翡翠ナイフホルダ-精製品',							],		//02		
 	
-	Equip : ['饰品',	'飾品',		'Jewelry',		'アクセサリー',		],
+	Equip : ['饰品',	'飾品',		'Jewelry',		'アクセサリー',		],		//02		
 	
-	NormalEquip : ['普通饰品',		'普通飾品',		'Normal Equip',		'普通宝石',		],
-	CantRecycle : ['不可回收',		'不可回收',		'Cant Recycle',		'回収不可',		],
+	NormalEquip : ['普通饰品',		'普通飾品',		'Normal Equip',		'普通宝石',		],		
+	CantRecycle : ['不可回收',		'不可回收',		'Cant Recycle',		'回収不可',		],		//02		
 	
-	TankType_PlayerName_0 :	['玛丽',		'瑪麗',			'Mary',			'メアリー',		],
-	TankType_PlayerName_1 :	['库罗库',		'庫羅庫',		'Kuroku',		'クロック',		],
-	TankType_PlayerName_2 :	['桑',			'桑',			'San',			'サン',			],
-	TankType_PlayerName_3 :	['赭石色',		'赭石色',		'Ocher',		'オーカー',		],
-	TankType_PlayerName_4 :	['克莱尔',		'克萊爾',		'Claire',		'クレア',		],
+	TankType_PlayerName_0 :	['玛丽',		'瑪麗',			'Mary',			'メアリー',		],		
+	TankType_PlayerName_1 :	['库罗库',		'庫羅庫',		'Kuroku',		'クロック',		],		
+	TankType_PlayerName_2 :	['桑',			'桑',			'San',			'サン',			],		
+	TankType_PlayerName_3 :	['赭石色',		'赭石色',		'Ocher',		'オーカー',		],		
+	TankType_PlayerName_4 :	['克莱尔',		'克萊爾',		'Claire',		'クレア',		],		//02		
 	
-	EquipA : ['通用的装备',		'通用的裝備',		'Universal Equip',					'汎用の装備',			],
-	Equip0 : ['玛丽　专属',		'瑪麗　專屬',		'Mary\'s Exclusive Equip',			'メアリー専用装備',		],
-	Equip1 : ['库罗库专属',		'庫羅庫專屬',		'Kuroku\'s Exclusive Equip',		'クロック専用装備',		],
-	Equip2 : ['桑　　专属',		'桑　　專屬',		'San\'s Exclusive Equip',			'サン専用装備',			],
-	Equip3 : ['赭石色专属',		'赭石色專屬',		'Ocher\'s Exclusive Equip',			'オーカー専用装備',		],
-	Equip4 : ['克莱尔专属',		'克萊爾專屬',		'Claire\'s Exclusive Equip',		'クレア専用装備',		],
+	EquipA : ['通用的装备',		'通用的裝備',		'Universal Equip',					'汎用の装備',			],		
+	Equip0 : ['玛丽　专属',		'瑪麗　專屬',		'Mary\'s Exclusive Equip',			'メアリー専用装備',		],		
+	Equip1 : ['库罗库专属',		'庫羅庫專屬',		'Kuroku\'s Exclusive Equip',		'クロック専用装備',		],		
+	Equip2 : ['桑　　专属',		'桑　　專屬',		'San\'s Exclusive Equip',			'サン専用装備',			],		
+	Equip3 : ['赭石色专属',		'赭石色專屬',		'Ocher\'s Exclusive Equip',			'オーカー専用装備',		],		
+	Equip4 : ['克莱尔专属',		'克萊爾專屬',		'Claire\'s Exclusive Equip',		'クレア専用装備',		],		//02		
 	
-	Sub_1 : ['格鲁公司',				'格魯公司',				'Grub Corporation',						'Grub株式会社',								],
-	Sub_2 : ['诺普德公司',				'諾普德公司',			'Novode Company',						'Novode株式会社',							],
-	Sub_3 : ['红树林制造局',			'紅樹林製造局',			'Mangrove Manufacturing Bureau',		'マングローブ製造局',						],
-	Sub_4 : ['科尔第一集团公司',		'科爾第一集團公司',		'Cole First Group Company',				'コール第一グループ会社',					],
-	Sub_5 : ['科尔第二集团公司',		'科爾第二集團公司',		'Cole Second Group Company',			'コール第二グループ会社',					],
-	Sub_6 : ['拜克家具',				'拜克傢俱',				'BAIC Furniture',						'BAIC家具株式会社',							],
-	Sub_7 : ['第一家居',				'第一家居',				'First Home International Group',		'第一ホームインターナショナルグループ',		],
-	Sub_8 : ['联合食品',				'聯合食品',				'United Food Company',					'共同食品株式会社',							],
+	Sub_1 : ['格鲁公司',				'格魯公司',				'Grub Corporation',						'Grub株式会社',								],		
+	Sub_2 : ['诺普德公司',				'諾普德公司',			'Novode Company',						'Novode株式会社',							],		
+	Sub_3 : ['红树林制造局',			'紅樹林製造局',			'Mangrove Manufacturing Bureau',		'マングローブ製造局',						],		
+	Sub_4 : ['科尔第一集团公司',		'科爾第一集團公司',		'Cole First Group Company',				'コール第一グループ会社',					],		
+	Sub_5 : ['科尔第二集团公司',		'科爾第二集團公司',		'Cole Second Group Company',			'コール第二グループ会社',					],		
+	Sub_6 : ['拜克家具',				'拜克傢俱',				'BAIC Furniture',						'BAIC家具株式会社',							],		
+	Sub_7 : ['第一家居',				'第一家居',				'First Home International Group',		'第一ホームインターナショナルグループ',		],		
+	Sub_8 : ['联合食品',				'聯合食品',				'United Food Company',					'共同食品株式会社',							],		//02		
 	
-	40001 :	['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
-	40002 :	['废料',			'廢料',				'Waste Material',				'スクラップ',				],
-	40003 :	['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
-	40004 :	['弹头',			'彈頭',				'Warhead',						'弾頭',						],
-	40005 :	['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
-	40006 :	['齿轮',			'齒輪',				'Gear',							'ギア',						],
-	40007 :	['框架',			'框架',				'Frame',						'フレーム',					],
-	40008 :	['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
-	40009 :	['扳机',			'扳機',				'Trigger',						'トリガー',					],
-	40010 :	['雷管',			'雷管',				'Detonator',					'起爆装置',					],
-	40011 :	['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
-	40012 :	['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
-	40013 :	['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
-	40014 :	['透镜',			'透鏡',				'Lens',							'レンズ',					],
-	40015 :	['点火器',			'點火器',			'Igniter',						'イグナイター',				],
-	40016 :	['冷凝管',			'冷凝管',			'Condenser',					'復水管',					],
-	40017 :	['线圈',			'線圈',				'Coil',							'コイル',					],
-	40018 :	['电容',			'電容',				'Capacitor',					'コンデンサ',				],
-	40019 :	['电感',			'電感',				'Inductor',						'インダクター',				],
-	40020 :	['三极管',			'三極管',			'Transistor',					'三極管',					],
-	40021 :	['润滑油',			'潤滑油',			'Lubricating Oil',				'潤滑油',					],
-	40022 :	['火花塞',			'火花塞',			'Spark Plug',					'スパークプラグ',			],
-	40023 :	['冷冻剂',			'冷凍劑',			'Refrigerant',					'冷媒',						],
-	40024 :	['装甲',			'裝甲',				'Armor',						'装甲',						],
-	40025 :	['厚装甲',			'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
-	40026 :	['力场管',			'力場管',			'Force Field Generator',		'力場パイプ',				],
-	40027 :	['力场膜',			'力場膜',			'Force Field Membrane',			'力場膜',					],
-	40028 :	['共振器',			'共振器',			'Resonator',					'共振器',					],
-	40029 :	['刀片',			'刀片',				'Blade',						'ブレード',					],
-	40030 :	['振荡器',			'振盪器',			'Oscillator',					'発振回路',					],
-	40031 :	['涂层',			'塗層',				'Coating',						'コーティング',				],
-	40032 :	['核心',			'核心',				'Core',							'コア',						],
+	40001 :	['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],		
+	40002 :	['废料',			'廢料',				'Waste Material',				'スクラップ',				],		
+	40003 :	['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],		
+	40004 :	['弹头',			'彈頭',				'Warhead',						'弾頭',						],		
+	40005 :	['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],		
+	40006 :	['齿轮',			'齒輪',				'Gear',							'ギア',						],		
+	40007 :	['框架',			'框架',				'Frame',						'フレーム',					],		
+	40008 :	['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],		
+	40009 :	['扳机',			'扳機',				'Trigger',						'トリガー',					],		
+	40010 :	['雷管',			'雷管',				'Detonator',					'起爆装置',					],		
+	40011 :	['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],		
+	40012 :	['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],		
+	40013 :	['棱镜',			'稜鏡',				'Prism',						'プリズム',					],		
+	40014 :	['透镜',			'透鏡',				'Lens',							'レンズ',					],		
+	40015 :	['点火器',			'點火器',			'Igniter',						'イグナイター',				],		
+	40016 :	['冷凝管',			'冷凝管',			'Condenser',					'復水管',					],		
+	40017 :	['线圈',			'線圈',				'Coil',							'コイル',					],		
+	40018 :	['电容',			'電容',				'Capacitor',					'コンデンサ',				],		
+	40019 :	['电感',			'電感',				'Inductor',						'インダクター',				],		
+	40020 :	['三极管',			'三極管',			'Transistor',					'三極管',					],		
+	40021 :	['润滑油',			'潤滑油',			'Lubricating Oil',				'潤滑油',					],		
+	40022 :	['火花塞',			'火花塞',			'Spark Plug',					'スパークプラグ',			],		
+	40023 :	['冷冻剂',			'冷凍劑',			'Refrigerant',					'冷媒',						],		
+	40024 :	['装甲',			'裝甲',				'Armor',						'装甲',						],		
+	40025 :	['厚装甲',			'厚裝甲',			'Heavy Armor',					'厚い装甲',					],		
+	40026 :	['力场管',			'力場管',			'Force Field Generator',		'力場パイプ',				],		
+	40027 :	['力场膜',			'力場膜',			'Force Field Membrane',			'力場膜',					],		
+	40028 :	['共振器',			'共振器',			'Resonator',					'共振器',					],		
+	40029 :	['刀片',			'刀片',				'Blade',						'ブレード',					],		
+	40030 :	['振荡器',			'振盪器',			'Oscillator',					'発振回路',					],		
+	40031 :	['涂层',			'塗層',				'Coating',						'コーティング',				],		
+	40032 :	['核心',			'核心',				'Core',							'コア',						],		//02		
 	
 };
 
@@ -360,47 +368,47 @@ let DescriptionsList = {
 	
 	251 : [/*'玉稳定框架-原石',		GlobalPressureUp:-2,						*/'子弹时间(技能)时长 + 0%, 压力增长 -2',				'壓力增長<Description>',															'Pressure Increment <Description>',																										'ストレス増加<Description>',																	],		
 	252 : [/*'玉增幅框架-原石',		BulletTimePlus:25|GlobalPressureUp:2,		*/'子弹时间(技能)时长 +25%, 压力增长 +2',				'子彈時間時長增加<Description:0>%, 壓力增長+<Description:1>',						'Bullet time duration increases by <Description:0>%, Pressure Increment +<Description:1>',												'バレットタイム<Description:0>%延長、ストレス増加+<Description:1>',								],		
-	253 : [/*'玉过载框架-原石',		BulletTimePlus:40|GlobalPressureUp:5,		*/'子弹时间(技能)时长 +40%, 压力增长 +5',				'子彈時間時長增加<Description:0>%, 壓力增長+<Description:1>',						'Bullet time duration increases by <Description:0>%, Pressure Increment +<Description:1>',												'バレットタイム<Description:0>%延長、ストレス増加+<Description:1>',								],		//02		
+	253 : [/*'玉过载框架-原石',		BulletTimePlus:40|GlobalPressureUp:5,		*/'子弹时间(技能)时长 +40%, 压力增长 +5',				'子彈時間時長增加<Description:0>%, 壓力增長+<Description:1>',						'Bullet time duration increases by <Description:0>%, Pressure Increment +<Description:1>',												'バレットタイム<Description:0>%延長、ストレス増加+<Description:1>',								],		//03		
 	
 	254 : [/*'玉稳定框架-原矿',		GlobalPressureUp:-2,						*/'子弹时间换弹和射击间隔- 0%, 压力增长-2',				'壓力增長<Description>',															'Pressure Increment <Description>',																										'ストレス増加<Description>',																	],		
 	255 : [/*'玉增幅框架-原矿',		BulletTimeEffectPlus:20|GlobalPressureUp:2,	*/'子弹时间换弹和射击间隔-20%, 压力增长+2',				'子彈時間內換彈時間與射擊間隔-<Description:0>%, 壓力增長+<Description:1>',			'Reload Speed within bullet time and firing rate -<Description:0>%, Pressure Increment +<Description:1>',								'バレットタイム中のリロード時間と射撃間隔-<Description:0>%、ストレス増加+<Description:1>',		],		
-	256 : [/*'玉过载框架-原矿',		BulletTimeEffectPlus:30|GlobalPressureUp:5,	*/'子弹时间换弹和射击间隔-30%, 压力增长+5',				'子彈時間內換彈時間與射擊間隔-<Description:0>%, 壓力增長+<Description:1>',			'Reload Speed within bullet time and firing rate -<Description:0>%, Pressure Increment +<Description:1>',								'バレットタイム中のリロード時間と射撃間隔-<Description:0>%、ストレス増加+<Description:1>',		],		//02		
+	256 : [/*'玉过载框架-原矿',		BulletTimeEffectPlus:30|GlobalPressureUp:5,	*/'子弹时间换弹和射击间隔-30%, 压力增长+5',				'子彈時間內換彈時間與射擊間隔-<Description:0>%, 壓力增長+<Description:1>',			'Reload Speed within bullet time and firing rate -<Description:0>%, Pressure Increment +<Description:1>',								'バレットタイム中のリロード時間と射撃間隔-<Description:0>%、ストレス増加+<Description:1>',		],		//03		
 	
 	257 : [/*'玉稳定框架-精矿',		HarmPressureUp:-50,							*/'换弹时间额外 - 0%, 受伤导致压力增长 -50%',			'受傷壓力增長<Description>%',														'Injury pressure increase<Description>%',																								'負傷ストレス増加<Description>%',																],		
 	258 : [/*'玉增幅框架-精矿',		AddWeaponReload:-4|HarmPressureUp:10,		*/'换弹时间额外 - 4%, 受伤导致压力增长 +10%',			'換彈時間<Description:0>%, 受傷壓力增長+<Description:1>%',							'Reload Speed <Description:0>%, Injury Pressure Increment +<Description:1>%',															'リロード時間<Description:0>%、負傷ストレス増加+<Description:1>%',								],		
-	259 : [/*'玉过载框架-精矿',		AddWeaponReload:-6|HarmPressureUp:15,		*/'换弹时间额外 - 6%, 受伤导致压力增长 +15%',			'換彈時間<Description:0>%, 受傷壓力增長+<Description:1>%',							'Reload Speed <Description:0>%, Injury Pressure Increment +<Description:1>%',															'リロード時間<Description:0>%、負傷ストレス増加+<Description:1>%',								],		//02		
+	259 : [/*'玉过载框架-精矿',		AddWeaponReload:-6|HarmPressureUp:15,		*/'换弹时间额外 - 6%, 受伤导致压力增长 +15%',			'換彈時間<Description:0>%, 受傷壓力增長+<Description:1>%',							'Reload Speed <Description:0>%, Injury Pressure Increment +<Description:1>%',															'リロード時間<Description:0>%、負傷ストレス増加+<Description:1>%',								],		//03		
 	
 	260 : [/*'玉稳定框架-摆件',		GiftEffect:15,								*/'当收到礼物时, 降低的压力值额外 + 15%',				'禮物回復壓力+<Description>%',														'Pressure Regeneration from Gift +<Description>%',																						'プレゼントストレス回復+<Description>%',														],		
 	261 : [/*'玉增幅框架-摆件',		GiftEffect:25,								*/'当收到礼物时, 降低的压力值额外 + 25%',				'禮物回復壓力+<Description>%',														'Pressure Regeneration from Gift +<Description>%',																						'プレゼントストレス回復+<Description>%',														],		
-	262 : [/*'玉过载框架-摆件',		GiftEffect:40,								*/'当收到礼物时, 降低的压力值额外 + 40%',				'禮物回復壓力+<Description>%',														'Pressure Regeneration from Gift +<Description>%',																						'プレゼントストレス回復+<Description>%',														],		//02		
+	262 : [/*'玉过载框架-摆件',		GiftEffect:40,								*/'当收到礼物时, 降低的压力值额外 + 40%',				'禮物回復壓力+<Description>%',														'Pressure Regeneration from Gift +<Description>%',																						'プレゼントストレス回復+<Description>%',														],		//03		
 	
 	266 : [/*'玉稳定框架-挂饰',		RestEffect:15,								*/'休息(没出战在宿舍休息时)回复压力 + 15%',				'休息回復壓力+<Description>%',														'Pressure Regeneration from Resting +<Description>%',																					'休憩ストレス回復+<Description>%',																],		
 	267 : [/*'玉增幅框架-挂饰',		RestEffect:25,								*/'休息(没出战在宿舍休息时)回复压力 + 25%',				'休息回復壓力+<Description>%',														'Pressure Regeneration from Resting +<Description>%',																					'休憩ストレス回復+<Description>%',																],		
-	268 : [/*'玉过载框架-挂饰',		RestEffect:40,								*/'休息(没出战在宿舍休息时)回复压力 + 40%',				'休息回復壓力+<Description>%',														'Pressure Regeneration from Resting +<Description>%',																					'休憩ストレス回復+<Description>%',																],		//02		
+	268 : [/*'玉过载框架-挂饰',		RestEffect:40,								*/'休息(没出战在宿舍休息时)回复压力 + 40%',				'休息回復壓力+<Description>%',														'Pressure Regeneration from Resting +<Description>%',																					'休憩ストレス回復+<Description>%',																],		//03		
 	
 	263 : [/*'玉稳定框架-挂画',		AddShiledLife:20|RestEffect:-15,			*/'护盾基础生命值 + 20%, 休息回复压力 - 15%',			'護盾基礎生命值+<Description:0>%, 休息回復壓力<Description:1>%',					'Shield Base HP +<Description:0>%, Pressure Regeneration from Resting <Description:1>%',												'シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%',							],		
 	264 : [/*'玉增幅框架-挂画',		AddShiledLife:35|RestEffect:-25,			*/'护盾基础生命值 + 35%, 休息回复压力 - 25%',			'護盾基礎生命值+<Description:0>%, 休息回復壓力<Description:1>%',					'Shield Base HP +<Description:0>%, Pressure Regeneration from Resting <Description:1>%',												'シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%',							],		
-	265 : [/*'玉过载框架-挂画',		AddShiledLife:60|RestEffect:-40,			*/'护盾基础生命值 + 60%, 休息回复压力 - 40%',			'護盾基礎生命值+<Description:0>%, 休息回復壓力<Description:1>%',					'Shield Base HP +<Description:0>%, Pressure Regeneration from Resting <Description:1>%',												'シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%',							],		//02		
+	265 : [/*'玉过载框架-挂画',		AddShiledLife:60|RestEffect:-40,			*/'护盾基础生命值 + 60%, 休息回复压力 - 40%',			'護盾基礎生命值+<Description:0>%, 休息回復壓力<Description:1>%',					'Shield Base HP +<Description:0>%, Pressure Regeneration from Resting <Description:1>%',												'シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%',							],		//03		
 	
 	601 : [/*'玉刀刃-原矿',			AsssinEffective:5,							*/'背刺(潜行模式下特殊操作)效率 +　5%',					'背刺效率+<Description>%',															'Backstab efficiency +<Description>%',																									'暗殺効率+<Description>%',																		],		
 	602 : [/*'玉刀刃-原石',			AsssinEffective:9,							*/'背刺(潜行模式下特殊操作)效率 +　9%',					'背刺效率+<Description>%',															'Backstab efficiency +<Description>%',																									'暗殺効率+<Description>%',																		],		
 	603 : [/*'玉刀刃-粗制品',		AsssinEffective:15,							*/'背刺(潜行模式下特殊操作)效率 + 15%',					'背刺效率+<Description>%',															'Backstab efficiency +<Description>%',																									'暗殺効率+<Description>%',																		],		
-	604 : [/*'玉刀刃-精制品',		AsssinEffective:25,							*/'背刺(潜行模式下特殊操作)效率 + 25%',					'背刺效率+<Description>%',															'Backstab efficiency +<Description>%',																									'暗殺効率+<Description>%',																		],		//02		
+	604 : [/*'玉刀刃-精制品',		AsssinEffective:25,							*/'背刺(潜行模式下特殊操作)效率 + 25%',					'背刺效率+<Description>%',															'Backstab efficiency +<Description>%',																									'暗殺効率+<Description>%',																		],		//03		
 	
 	605 : [/*'玉刀把-原矿',			AsssinAngDis:15,							*/'背刺判定角度(决定是否能够操作) + 15°',				'背刺判定角度+<Description>°',														'Backstab angle determination +<Description>°',																							'暗殺判定角度+<Description>°',																	],		
 	606 : [/*'玉刀把-原石',			AsssinEffective:24,							*/'背刺判定角度(决定是否能够操作) + 24°',				'背刺判定角度+<Description>°',														'Backstab angle determination +<Description>°',																							'暗殺判定角度+<Description>°',																	],		
 	607 : [/*'玉刀把-粗制品',		AsssinEffective:30,							*/'背刺判定角度(决定是否能够操作) + 30°',				'背刺判定角度+<Description>°',														'Backstab angle determination +<Description>°',																							'暗殺判定角度+<Description>°',																	],		
-	608 : [/*'玉刀把-精制品',		AsssinAngDis:45,							*/'背刺判定角度(决定是否能够操作) + 45°',				'背刺判定角度+<Description>°',														'Backstab angle determination +<Description>°',																							'暗殺判定角度+<Description>°',																	],		//02		
+	608 : [/*'玉刀把-精制品',		AsssinAngDis:45,							*/'背刺判定角度(决定是否能够操作) + 45°',				'背刺判定角度+<Description>°',														'Backstab angle determination +<Description>°',																							'暗殺判定角度+<Description>°',																	],		//03		
 	
 	609 : [/*'玉刀鞘-原矿',			AsssinSearchRange:20,						*/'敌人警觉后搜索的精度(发现的概率) - 20%',				'敵軍警覺後搜索精度-<Description>%(降低敵軍搜索時的精度)',							'Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting)',											'敵軍警戒の時の捜索精度-<Description>%(敵軍捜索の時の精度を低下)',								],		
 	610 : [/*'玉刀鞘-原石',			AsssinSearchRange:35,						*/'敌人警觉后搜索的精度(发现的概率) - 35%',				'敵軍警覺後搜索精度-<Description>%(降低敵軍搜索時的精度)',							'Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting)',											'敵軍警戒の時の捜索精度-<Description>%(敵軍捜索の時の精度を低下)',								],		
 	611 : [/*'玉刀鞘-粗制品',		AsssinSearchRange:60,						*/'敌人警觉后搜索的精度(发现的概率) - 60%',				'敵軍警覺後搜索精度-<Description>%(降低敵軍搜索時的精度)',							'Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting)',											'敵軍警戒の時の捜索精度-<Description>%(敵軍捜索の時の精度を低下)',								],		
-	612 : [/*'玉刀鞘-精制品',		AsssinSearchRange:100,						*/'敌人警觉后搜索的精度(发现的概率) -100%',				'敵軍警覺後搜索精度-<Description>%(降低敵軍搜索時的精度)',							'Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting)',											'敵軍警戒の時の捜索精度-<Description>%(敵軍捜索の時の精度を低下)',								],		//02		
+	612 : [/*'玉刀鞘-精制品',		AsssinSearchRange:100,						*/'敌人警觉后搜索的精度(发现的概率) -100%',				'敵軍警覺後搜索精度-<Description>%(降低敵軍搜索時的精度)',							'Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting)',											'敵軍警戒の時の捜索精度-<Description>%(敵軍捜索の時の精度を低下)',								],		//03		
 	
 	613 : [/*'玉刀镡-原矿',			AsssinFeelDis:-6,							*/'从敌人背后接近时对方感知我方的距离 -　6%',			'敵軍背後感知距離<Description>%(從背後接近敵人時敵人的感知距離)',					'Enemy\'s perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind)',		'敵軍背後感知距離<Description>%(背後から敵に接近した場合の敵の感知距離)',						],		
 	614 : [/*'玉刀镡-原石',			AsssinFeelDis:-15,							*/'从敌人背后接近时对方感知我方的距离 - 15%',			'敵軍背後感知距離<Description>%(從背後接近敵人時敵人的感知距離)',					'Enemy\'s perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind)',		'敵軍背後感知距離<Description>%(背後から敵に接近した場合の敵の感知距離)',						],		
 	615 : [/*'玉刀镡-粗制品',		AsssinFeelDis:-30,							*/'从敌人背后接近时对方感知我方的距离 - 30%',			'敵軍背後感知距離<Description>%(從背後接近敵人時敵人的感知距離)',					'Enemy\'s perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind)',		'敵軍背後感知距離<Description>%(背後から敵に接近した場合の敵の感知距離)',						],		
-	616 : [/*'玉刀镡-精制品',		AsssinFeelDis:-50,							*/'从敌人背后接近时对方感知我方的距离 - 50%',			'敵軍背後感知距離<Description>%(從背後接近敵人時敵人的感知距離)',					'Enemy\'s perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind)',		'敵軍背後感知距離<Description>%(背後から敵に接近した場合の敵の感知距離)',						],		//02		
+	616 : [/*'玉刀镡-精制品',		AsssinFeelDis:-50,							*/'从敌人背后接近时对方感知我方的距离 - 50%',			'敵軍背後感知距離<Description>%(從背後接近敵人時敵人的感知距離)',					'Enemy\'s perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind)',		'敵軍背後感知距離<Description>%(背後から敵に接近した場合の敵の感知距離)',						],		//03		
 	
 };
 
@@ -421,7 +429,7 @@ tbodyArray01.forEach(function(item){
 		
 		// 项目图片
 		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/13_role_jewel/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		+'" src="../static/image/12_role_jewel/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 项目名称
 		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
@@ -471,7 +479,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
 </div>
 </div>
 </div>

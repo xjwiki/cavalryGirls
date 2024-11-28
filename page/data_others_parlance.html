@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<title>术语提示</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>术语提示</span><small>(解析文本)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 术语解析</h2>
+
+<p>00. 章节概述: 在游戏的整备阶段, 顶部有个问号按钮, 点击即可查看游戏中的名词解析, 本节既是展示那些内容, <code>HintBrief</code> 是名词的顺序, 如果为 <code>N</code>, 就表示不是游戏提供, 而是由 XJ 补充的, <code>Tag</code> 是触发的关键词, 如果某些装备或武器的名称或描述中有匹配的关键词, 那么解析的文本就会在装备详情中展示出来, <code>Weight</code> 是权重, 当关键词匹配到多个对象时, 权重高且顺序靠前的会优先展示;</p>
+
+<p>————</p>
+
+<p>01. 属性加成: 装备的所有属性加成, 均为先计算总和, 再乘上原始值, 举例来说, 武器本身自带的穿甲值为 <code>10</code>, 配备 <code>+10%</code> 穿甲值和 <code>+20%</code> 穿甲值的两个配件, 那么武器最终的穿甲值就是 <code>10 × (1 + 10% + 20%) = 13</code>. HintBrief:<code>1</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>02. 队友伤害: 电弧武器/射线武器/近战武器/链锯(机身挂件), 这些武器不会造成友伤, 需要特别注意的是, 动能武器的弹跳流弹对大门是有伤害的(尤其需要警惕高斯狙击步枪), 此外, 所有的爆炸均有友伤, 敌我双方皆是如此. HintBrief:<code>2</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>03. 忠诚等级: 在公共休息室开放后, 当驾驶员的忠诚度达到一定的值, 在娱乐室回复他们, 就能触发好感事件, 可提升忠诚等级, 如果未提升忠诚等级, 则忠诚度上限会被锁死, 将无法再提高忠诚度(额外的忠诚度会被转为降压). HintBrief:<code>3</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>————</p>
+
+<p>04. 老化: 在战场上, 武器每次的开火和换弹, 均有概率会降低武器的耐久(开火老化 <code>-1%</code>, 换弹老化 <code>-3%</code>), 当耐久低于 <code>90%</code>, 就有可能产生"哑弹"或"卡壳"的负面效果, 耐久越低, 这些负面效果的出现概率就越高. HintBrief:<code>4</code>, tag:<code>wear rate</code>, Weight:<code>1</code>;</p>
+
+<p>05. 哑弹: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 具体的算法为 <code>(DefaultBlockValue - 武器耐久度 ÷ 100) × 100</code>, 结果向下取整, <code>DefaultBlockValue</code> 默认为 <code>0.6</code>. HintBrief:<code>6</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>06. 卡壳: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 并且还会强制武器立即换弹, 具体的算法为 <code>哑弹率 ÷ BloackFailRate</code>, 结果向下取整, <code>BloackFailRate</code> 默认为 <code>5</code>. HintBrief:<code>7</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>07. 修理: 在工坊开放后, 右键武器既可对武器进行修理, 使用武器为材料进行修理, 效果最好, 使用其他物件为材料, 效果很差, 如果资金充裕, 也可以用资金维修, 细节可查阅 <a href="./data_manage_building.html#heading04">基地部门.html # 04.机体部门</a>. HintBrief:<code>5</code>, tag:<code>repaired|repairing</code>, Weight:<code>0</code>;</p>
+
+<p>————</p>
+
+<p>08. 异常状态: 特指"燃烧/寒冷/潮湿/高温/麻痹/油腻", 总共六项基础状态, 以及"冻结/融化", 总共两项叠加状态, 基础状态会都会持续一段时间, 如果期间内触发了其他基础状态, 就会造成冻结或融化等叠加状态, 但原本的基础状态就不会再生效了, 机体的"属性抵抗", 能够降低这些状态的持续时间和效果, 机体的"属性免疫", 有概率能无视这些状态的影响. HintBrief:<code>20</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>09. 属性伤害: 特指由异常状态或叠加状态所造成的伤害, 一颗子弹能同时造成多种元素效果, 但触发元素效果需要媒介, 动能武器和喷射武器会被护盾挡住(不过投掷物可直接扔进护盾里), 如果打不到敌方机体或被免疫, 元素效果就无法触发, 由于元素伤害是固定值, 后期对敌人影响有限, 所以需要持续的火力触发, 攻击间隔太大或装弹时间过长的武器并不适合. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>————</p>
+
+<p>10. 燃烧: 造成每秒 <code>50</code> 的持续性伤害(玩家机体伤害会翻倍), 时长的算法为 <code>(基础 6.5 秒 + 子弹伤害 ÷ 100) × (1 - 属性抵抗)</code>, 通过喷火器/燃烧炸弹/火焰配件, 都可触发该效果. HintBrief:<code>12</code>, tag:<code>火炎|燃焼|fire|flame|flaming|burning</code>, Weight:<code>3</code>;</p>
+
+<p>11. 寒冷: 造成机体的移动速度和旋转速度 <code>-75%</code>, 时长算法与燃烧相同但基础为 <code>8</code> 秒, 使用寒冰喷雾可直接造成这种状态, 此外用寒冰炸弹或为武器配置冰冻配件也可触发, 冻住带盾敌人并绕后输出也是常见战术. HintBrief:<code>11</code>, tag:<code>冻结|colds</code>, Weight:<code>3</code>;</p>
+
+<p>12. 潮湿: 被子弹击中时受到暴击的概率翻倍, 时长算法与燃烧相同但基础为 <code>10</code> 秒, 在下雨天或某些漏水管道附近, 敌我双方会沾染该状态, 此外使用喷水器或喷水枪(子弹需破甲才行)或水炸弹, 也可给敌人附上该状态. HintBrief:<code>10</code>, tag:<code>湿|wet</code>, Weight:<code>3</code>;</p>
+
+<p>13. 高温: 会导致机体的爆炸抗性 <code>-80%</code>, 时长算法与燃烧相同但基础为 <code>7</code> 秒, 处于"炎热/烈日/暴晒"天气时, 敌我双方会自动沾染该状态, 镭射武器有 <code>45%</code> 概率让敌人附加该状态, 部分配件和融合也可能造成这种状态. HintBrief:<code>13</code>, tag:<code>'',</code>, Weight:<code>3</code>;</p>
+
+<p>14. 麻痹: 会导致护盾被破坏且机体无法开火, 时长算法与燃烧相同但基础为 <code>5</code> 秒, 在地图上的某些漏电管道附近, 敌我双方会自动沾染该状态, 电磁炸弹也可触发, 电弧武器有 <code>75%</code> 概率给敌人附上该状态. HintBrief:<code>14</code>, tag:<code>麻痺|paralyzing</code>, Weight:<code>3</code>;</p>
+
+<p>15. 油腻: 会导致开火速度和装弹速率 <code>-50%</code>, 时长算法与燃烧相同但基础为 <code>10</code> 秒, 在地图上的某些漏油管道附近, 敌我双方会自动沾染该状态, 使用喷油枪(喷射武器)或油炸弹(投掷物), 也可以给敌人附上该状态. HintBrief:<code>15</code>, tag:<code>油|greasy</code>, Weight:<code>3</code>;</p>
+
+<p>————</p>
+
+<p>16. 冻结: 潮湿+寒冷 / 油腻+寒冷, 无法移动和开火(但似乎还可以放技能或丢炸弹), 默认持续 <code>10</code> 秒, 这个负面效果较为实用, 如果你实在不想装备喷水枪和寒冰喷雾, 也可以带上水炸弹和寒冰炸弹, 一同丢出以实现该效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>17. 融化: 燃烧+寒冷, 机体穿甲抵抗 <code>-80%</code>, 默认持续 <code>10</code> 秒, 这种状态也被称之为"装甲融化", 是低穿甲武器对付重甲的常用手段, 由于动能武器有燃烧模块和冰冻模块的配件, 同时装备即可, 所以出现率颇高, 也很实用. HintBrief:<code>27</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
+
+<p>18. 蒸发: 潮湿+高温, 造成蒸发爆炸(<code>300</code> 点伤害), 蒸汽会遮蔽视野且爆炸会造成眩晕, 雨天的镭射武器特别容易触发, 高温天气下带喷水器或喷水枪也能触发, 所以是较为常见的叠加效果, 但毕竟伤害较低, 只能说聊胜于无. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>19. 蒸汽: 潮湿+燃烧 / 寒冷+高温, 造成小蒸汽爆炸(<code>600</code> 点伤害) / 造成大蒸汽爆炸(<code>900</code> 点伤害), 蒸汽爆炸会眩晕敌人, 并且产生类似烟雾的蒸汽, 蒸汽会遮蔽视野, AI 无法发现蒸汽中的敌人, 这对敌我双方都会有影响. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>20. 爆燃: 燃烧+高温, 造成火属性小爆炸(<code>100</code> 点伤害), 这种爆炸不会导致机体出现眩晕, 该效果在高温天气下很容易触发, 但伤害非常有限, 是属于看似可怕但其实没什么用处的情况, 伤害结果往往可能还不如放任火焰燃烧. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>21. 爆裂: 燃烧+油腻, 造成火属性大爆炸(<code>100</code> 点伤害), 这种爆炸不会导致机体出现眩晕, 它的范围比爆燃更大, 且会爆炸多次, 还会造成长达 <code>6</code> 秒的焚烧伤害(雷神焚天炮开火自带该效果), 每秒 <code>-30</code> HP(我方会加倍). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>22. 引爆: 高温+油腻 / 麻痹+油腻, 造成范围性多次爆炸, 首次爆炸所造成的伤害为 <code>900</code>, 后续爆炸所造成的伤害为 <code>600</code>, 后续爆炸可能出现多次(大约是 <code>2~3</code> 次), 所以伤害可能大于 <code>900+600=1500</code>, 且爆炸会导致眩晕. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>23. 清晰: 潮湿+油腻, 造成异常状态的无效化, 如果你的目的是杀伤, 那么水和油就只能二选一, 考虑到战场的天气状况是不可控的, 雨天也很常见, 所以油腻效果是众多效果之中最不可考的, 你或许得考虑因地制宜搭配装备了. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>24. 感电: 潮湿+麻痹, 造成电弧小伤害(<code>80</code> 点伤害), 电弧会在少数敌人间跳转(AOE 群伤). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>25. 超导: 寒冷+麻痹, 造成电弧大伤害(<code>80</code> 点伤害), 电弧会在多数敌人间跳转(AOE 群伤). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>26. 超载: 燃烧+麻痹, 造成电磁小爆炸(<code>50</code> 点伤害), 并且小范围内的敌人会获得麻痹效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>27. 雷暴: 高温+麻痹, 造成电磁大爆炸(<code>50</code> 点伤害), 并且大范围内的敌人会获得麻痹效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>————</p>
+
+<p>28. 穿甲: 每种子弹都有它的穿甲值, 每个单位都有它的抵抗值, 触发抵抗的概率为: <code>1-(穿甲值÷抵抗值)</code>, 触发抵抗后子弹就只能造成 <code>5%</code> 的伤害. HintBrief:<code>24</code>, tag:<code>'贯通|Armor-piercing|armor penetration|armor piercing|armor-piercing</code>, Weight:<code>2</code>;</p>
+
+<p>29. 抵抗: 每一个单位(敌人/自身)都有抵抗值, 可以在属性面板查看, 每一种子弹都有穿甲值, 亦可在武器面板查看, 触发抵抗的概率为 <code>1-(穿甲值÷抵抗值)</code>, 触发抵抗后, 子弹就只能造成 <code>5%</code> 的伤害. HintBrief:<code>16</code>, tag:<code>'resistance|resisted</code>, Weight:<code>2</code>;</p>
+
+<p>30. 击穿: 其他抵抗物件(沙袋/房屋墙壁/外挂装甲)也都有抵抗值(敌人的外挂装甲通常默认为 <code>100</code>, 但仅部分敌人拥有外挂装甲), 触发击穿的概率为 <code>穿甲值÷抵抗值</code>, 如果子弹未击穿, 将会直接消失. HintBrief:<code>17</code>, tag:<code>'penetration|penetrate</code>, Weight:<code>2</code>;</p>
+
+<p>31. 跳弹: 跳弹既子弹从装甲表面擦过, 表现为没有造成任何伤害, 只有蹲距的单位才可能触发跳弹, 基础概率为 <code>15%</code>, 主体强化中的斜面装甲和机体改造中的蹲据防护, 以及克莱尔的 LV12 忠诚度奖励, 都可提升蹲据弹跳率. HintBrief:<code>18</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>32. 过穿: 过穿既子弹穿过了机体(会在机体后方继续存在), 表现为只造成 <code>20%</code> 的伤害, 高穿甲武器打低抵抗单位, 过穿的触发概率会更高, 可为武器安装滞留弹降低过穿率. HintBrief:<code>19</code>, tag:<code>'transpiercing|overpenetration|Overpenetration'</code>, Weight:<code>2</code>;</p>
+
+<p>————</p>
+
+<p>33. 爆炸: 爆炸伤害无视穿甲抵抗和属性抵抗, 但可被爆抗削弱, 护盾虽然能防御高爆弹, 但如果爆炸发生于护盾内则无法起到保护机体的作用, 未触发爆抗的攻击将导致机体眩晕, 值得注意的是, 并非只有高爆弹会造成爆炸, 机体损毁后的爆炸也可能造成伤害, 不同机体爆炸后所造成的伤害值也不同(数百到上千的情况都有), 甚至部分敌人还会爆炸多次. HintBrief:<code>28</code>, tag:<code>explodes</code>, Weight:<code>3</code>;</p>
+
+<p>34. 标记: 在过去, 机体于 <code>0.2</code> 秒内只会受到一次爆炸伤害, 这就导致了一些能造成复数爆炸效果的武器, 伤害效果并不理想(比如榴散炮和集束炸弹), 现在机制被改为, 每次受到爆炸伤害, 就会在被命中的机体身上积累一个标记, 这个标记最多能同时存在 <code>6</code> 个, 当标记满了之后将不再受到爆炸伤害, 不过这个标记会按一定速度减少(每 <code>0.33</code> 秒减少一个). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>35. 爆抗: 触发爆炸抗性的概率, 触发爆抗后爆炸只能造成 <code>10%</code> 的伤害, 且机体不会因为爆炸而进入眩晕状态, 主体强化模块的防爆模块和防爆涂层可提高爆抗. HintBrief:<code>21</code>, tag:<code>爆炸抗性|爆発抵抗|critical resistance|explosive resistance</code>, Weight:<code>2</code>;</p>
+
+<p>36. 眩晕: 无法做出任何反应, 且触发抵抗的减伤会降低(<code>5% => 25%</code>), 眩晕单位被近战武器攻击时, 伤害会 <code>× 4</code>, 眩晕最多会持续 <code>5.5</code> 秒(相同条件下我方眩晕时长仅为敌军的 <code>1/3</code>), 可安装抗震头盔来降低眩晕时长. HintBrief:<code>26</code>, tag:<code>stun</code>, Weight:<code>3</code>;</p>
+
+<p>————</p>
+
+<p>37. 散射: 散射既子弹的散布范围, 通常来说该值越低越好, 因为这意味着伤害集中(除非你需要扩大杀伤的面积), 散弹类的武器, 该项属性一般都会很高, 如果你能将它降下来, 将子弹集中到某个点, 则散弹武器可造成巨额伤害. HintBrief:<code>8</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>38. 偏移: 这是枪械连续开火后, 准星偏移中心点的速度, 尽管偏移后机体会自动帮你重新校准, 但校准速度一般都赶不上偏移速度, 所以连续扫射时子弹就会越来越偏, 因此为了确保精度, 推荐以点射为主, 毕竟射不中也没意义. HintBrief:<code>9</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>39. 弹射: 既子弹击中后形成了跳弹, 跳弹能够弹跳的最大次数, 跳弹也是种群伤的手段, 但常规武器的跳弹是不可控的, 不一定能打到敌人(甚至可能会伤到队友和大门), 不过电弧类武器的弹射是特例, 它会自动索敌且没有友伤. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>————</p>
+
+<p>40. 护盾: 可代替机体受到伤害, 电弧对护盾的伤害只有 <code>20%</code>, 但可通过融合射线武器得到"电弧折返核心"来提升伤害, 射线对护盾的伤害只有 <code>33.33%</code>, 但可通过融合电弧武器得到"射线能量核心"来提升伤害. HintBrief:<code>23</code>, tag:<code>shileds|shielded</code>, Weight:<code>2</code>;</p>
+
+<p>41. 沙袋: 沙袋相当于摆在地面上的装甲, 不同沙袋的抵抗值不同(低级 <code>40</code>, 中级 <code>70</code>, 高级 <code>100</code>), 它们有正面和背面的区别, 子弹如果是从正面射来的, 就有可能会被抵抗, 所以蹲在沙袋后面是降低伤害的好方法. HintBrief:<code>22</code>, tag:<code>sandbags</code>, Weight:<code>2</code>;</p>
+
+<p>42. 电磁: 磁电冲锋枪和磁电狙击步枪能够射出电磁弹, 电磁弹对护盾有着较大的伤害加成(对护盾有双倍的伤害, 要注意, 这对敌人来说也一样的), 电磁弹还可以麻痹敌人, 不过需要成功击穿才能触发, 被抵抗则没有麻痹效果. HintBrief:<code>25</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
+
+<p>————</p>
+
+<p>43. 连段: 近战武器在进行数次轻击后, 可打出连段攻击(一般弹夹最后那次攻击会变成连段, 在蹲距状态下可直接打出连段攻击), 这通常会带有特殊效果(例如打中可为机体回复能量), 不过武器在连段攻击时, 老化概率会更高. HintBrief:<code>29</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
+
+<p>44. 韧性: 每个单位都有韧性值(敌我双方都是 <code>100</code>, 但敌方 Boss 是 <code>300</code>), 单位在受到近战攻击时, 会降低韧性值, 尽管韧性值会慢慢的恢复至, 但当韧性归 <code>0</code> 时, 单位就会被强制眩晕(此时近战可造成 <code>4</code> 倍的伤害). HintBrief:<code>30</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>45. 削韧: 每种近战武器均有个削韧值(这取决于武器穿甲概率), 每次攻击都会按削韧值降低敌方的韧性(详见"韧性"术语), 韧性减少后会慢慢恢复至最大值, 当韧性归 <code>0</code>, 单位会被强制眩晕, 但眩晕状态中就无法被继续削韧. HintBrief:<code>31</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+
+<p>————</p>
+
+<p>46. 蹲据: 武器散射降低 <code>66.67%</code>, 武器射程增加 <code>25%</code>, 子弹弹跳概率为 <code>15%</code>, 如果蹲在沙袋后则子弹弹跳率会上升到 <code>35%</code>, 但是对爆炸没有减伤, 也不会减少眩晕时间, 且移动速度会降低(只剩下常规移动速度的 <code>50%</code>). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>47. 奔跑: 在移动时, 按住 Shift 即可实现奔跑, 奔跑速度与滑轮或履带等机体改造模块无关, 它的算法为 <code>移动速度 × BaseRunRate × 各种加成</code>, 其中的 <code>BaseRunRate</code> 是 Base.csv 表中的一个变量, 在默认的情况下为 <code>3</code>. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<p>48. 闪避: 在战场中, 按下 Space 既空格键就能实现闪避(该操作需要消耗奔跑能量), 它又可分为横跳和跳跃, 这跟机体的改造模块相关, 目前仅龙骑士号出场自带的弹力足可实现跳跃, 除了躲避子弹, 跳跃还能造成击退与眩晕. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 提示文本</h2>
+
+<p>以下是剧情模式中, 初始的新手引导, 如果没有选择跳过教程, 则第 <code>0</code> 天就是教官于战场上指导我们如何操作机体(不要攻击教官, 那是反叛行为, 会导致游戏直接结束), 值得一提的是, <code>Toturial7</code> 提到"弹跳闪避子弹可以增加子弹时间", 子弹时间其实是玛丽初始自带的技能, 但由于技能需要等到第 <code>41</code> 天才解锁, 所以教程并没有涉及到技能, 且该行为是否真的可以增加子弹时间, 目前也是个谜;</p>
+
+<p>
+	ToturialStart: 早上好啊; <br />
+	Toturial0:　　 欢迎你来到前线; <br />
+	Toturial1:　　 今天我会教你怎么战斗; <br />
+</p>
+<p>
+	Toturial2:　　 先使用 WSAD 移动机体; <br />
+	Toturial3:　　 鼠标的左右键可以开火; <br />
+	Toturial4:　　 Q 键可以切换近战攻击; <br />
+</p>
+<p>
+	Toturial5:　　 Shift 按住就可以奔跑; <br />
+	Toturial6:　　 按空格键即可实现弹跳闪避; <br />
+	Toturial7:　　 弹跳闪避子弹可以增加子弹时间; <br />
+</p>
+<p>
+	Toturial8:　　 点击 Ctrl 可蹲踞; <br />
+	Toturial9:　　 蹲踞能够降低散射, 增强防御和射程; <br />
+	Toturial10:　　现在来实战一下吧; <br />
+	Toturial11:　　要保护好城市的大门, 这是主要目标; <br />
+	ToturialVic:　 不错, 好好加油吧; <br />
+</p>
+
+<p>————</p>
+
+<p>以下是潜入模式中, 初始的操作说明, 主要是讲解隐蔽和暗杀的关键, 总结起来无非就是, 避开灯, 树里躲, 背后刺, 蹲下溜, 值得一提的是, 大部分情况下我们都不需要清空场中的所有敌人, 只要完成任务目标就能撤退了, 但尽可能杀敌还是有好处的, 这样可以得到更多资金, 有钱了就能买到更多装备, 进一步提升机体强度, 但中后期资金的用途开始变小, 就不用强求清场了, 因为有的敌人确实很棘手;</p>
+
+<p>
+	ToturialC1: 潜入任务中, 不要暴露在敌人的探照灯下; <br />
+</p>
+<p>
+	ToturialC2: 潜入任务中, 若没有被敌人注视, 即可在敌人身后执行暗杀(需装备电子匕首), <br />
+	　　　　　　即使敌人背对着我们, 但距离太近时也可能会感知到(距离越近感知程度越高), <br />
+	　　　　　　如果我们的机体与敌人的机体发生了任何的触碰, 那么敌人就会立刻发现我们; <br />
+</p>
+<p>
+	ToturialC3: 树丛是极佳的藏匿和暗杀地点, 除非距离敌人非常近, 不然基本不会被察觉, 但是树丛本身不具备遮挡视线的功能, 谨记; <br />
+	ToturialC4: 敌人的视野远比探照灯广, 但如果处于蹲距状态, 敌人对你的视野就仅限探照灯内了(除非距离过近); <br />
+	ToturialC5: 当我们的盟友开火时, 若自身处于隐匿状态, 则敌人会优先被盟友的火力吸引; <br />
+</p>
+<p>
+	ToturialC6: 如果敌人已经进入索敌状态, 但玩家自身未被发现, 此时背刺效率便会翻两倍; <br />
+	ToturialC7: 有些建筑具有炮台守卫, 这些炮台通常生命值较低, 适合狙杀, 亦可以被爆破, <br />
+	　　　　　　炮台不会被警报或声音等因素吸引, 炮台开火也不会影响任务评价(敌军警觉); <br />
+</p>
+<p>
+	ToturialC8: 工厂类的建筑被破坏之后, 会出现自动防御的机械, <br />
+	　　　　　　自动防御机械没有视野限制, 会始终锁定玩家, <br />
+	　　　　　　这些机械开火不影响任务评价(敌军警觉); <br />
+</p>
+
+<p>————</p>
+
+<p>以下是战后结算界面会随机出现的各种游戏提示, 包括机制细节和玩法建议, 目前共有 <code>65</code> 条(最后几条是 XJ 自己加的), 这些提示都是随机出现的, 但它们有个特殊的 <code>Day</code> 属性, 意思是最早出现的天数限制, 例如 <code>Hint_25</code> 的值为 <code>10</code>, 这意味着这条提示在第十天开始才可能出现, 它告诉我们脑负荷会随天数而逐渐增加, 因为剧情模式下第十天才会开启人员整备界面, 也需要开始处理脑负荷了;</p>
+
+<p>
+	Hint_0 (Day= 0): 机体的抵抗值越高, 被攻击后就越是容易触发抵抗效果; <br />
+	Hint_1 (Day= 0): 被抵抗了的攻击只会造成 <code>10%</code> 的伤害而已; <br />
+	Hint_2 (Day= 0): 抵抗值会被穿甲值抵消, 低穿甲的武器更容易触发抵抗的效果; <br />
+	Hint_3 (Day= 0): 触发抵抗的公式= <code>子弹穿甲值÷目标抵抗值</code>; <br />
+	Hint_4 (Day= 0): 子弹即使被抵抗也可造成属性攻击, 低穿甲武器可考虑多加属性攻击; <br />
+	Hint_5 (Day= 0): 敌人所装备装甲, 一般都是 <code>100</code> 的抵抗值; <br />
+	Hint_6 (Day= 0): 近战攻击无视抵抗和护盾; <br />
+	Hint_7 (Day= 0): 爆炸/射线/电弧的伤害无视抵抗; <br />
+	Hint_8 (Day= 0): 同一发子弹可以触发多种属性攻击; <br />
+	Hint_9 (Day=10): 射线与电弧无视抵抗且不会被障碍物阻挡; <br />
+</p>
+<p>
+	Hint_10(Day= 0): 没有不好用的武器, 经过特定的强化后, 任何武器都会变得非常强大; <br />
+	Hint_11(Day= 0): 低转速和低移速的负面效果远比想象中的更大, 要尽量避免这种情况; <br />
+	Hint_12(Day= 0): 挂载装甲的效果比想象的更好, 冲锋枪等低穿甲攻击几乎不再有威胁; <br />
+	Hint_13(Day= 0): 看准敌人装甲的位置, 通常装备了装甲的敌人, 无甲部分都非常脆弱; <br />
+	Hint_14(Day= 0): 投掷武器经过 CD 后可以再次使用, 不用担心会用完; <br />
+	Hint_15(Day= 0): 投掷武器需要配置后才能使用, 会按机体整备处安排的顺序进行投掷; <br />
+	Hint_16(Day= 0): 适当强化缩短开火间隔及装弹时间, 即使数值表现不明确, 体验上可能也会带来质变; <br />
+	Hint_17(Day= 0): 进行首领战时, 优先消灭首领, 否则杂兵会不断增援; <br />
+	Hint_18(Day= 0): 敌人之间存在友伤, 可合理利用这点; <br />
+	Hint_19(Day= 0): 武器散射越低就越准; <br />
+</p>
+<p>
+	Hint_20(Day= 0): 概率均为加乘, 例如 <code>+10%</code> 弹夹弹量和 <code>+20%</code> 弹夹弹量的模块配合一起用时, 最后的结果是 <code>+30%</code> 弹夹弹量; <br />
+	Hint_21(Day= 0): 不以百分号结尾的参数强化为直接加, 例如暴击率为 <code>50</code>, 装载了 <code>+25</code> 暴击的模块, 最终的暴击率为<code>75%</code>; <br />
+	Hint_22(Day= 0): 以百分号结尾的参数强化为计算比例, 例如穿甲为 <code>50</code>, 装载了 <code>+50%</code> 穿甲的模块, 最终的穿甲为 <code>75</code>; <br />
+	Hint_23(Day= 0): 模块强化为四舍五入, 例如穿甲 <code>8</code> 的武器 <code>+30%</code> 穿甲, 本应为 <code>10.4</code> 穿甲, 但是会折算成 <code>10</code>; <br />
+	Hint_24(Day= 0): 榴散炮也是一种散弹, 所以也受散弹模块的加成影响; <br />
+	Hint_25(Day=10): 随着战局的持续, 每日增加的脑负荷也会逐渐的增加; <br />
+	Hint_26(Day=10): 在城防界面请尽量把队友安排在掩体(沙袋)后面, 这将极大提升他们在战场的生存率; <br />
+	Hint_27(Day=10): 保护好以远程攻击为主的队友, 由于炮管本身有长度, 被近战攻击缠上时会很难脱身; <br />
+	Hint_28(Day=10): 没有弱小的队友, 要根据队友的 AI 和武器, 进行合理的安排和强化; <br />
+	Hint_29(Day=10): 爱护你的队友, 因为在这个残酷的世界, 除了你没有人会关心他们了; <br />
+</p>
+<p>
+	Hint_30(Day=10): 忠诚度与受伤撤退的阈值相关, 如忠诚为 <code>50</code> 的队友, 会在受伤 <code>>= 50%</code> 时撤退; <br />
+	Hint_31(Day=10): 好好培养和队友的感情, 当好感达 <code>65</code> 以上时, 可能会有额外惊喜; <br />
+	Hint_32(Day=10): 队友每天的首次送礼才会加忠诚度, 而自己则不限量; <br />
+	Hint_33(Day=10): 分裂模块和爆炸模块看似用处不大, 但配置得当也许会有惊人的效果; <br />
+	Hint_34(Day=10): 队友会尽量避免友伤(停火避免误伤), 但不排除意外, 尽量别站在队友的射击路线上; <br />
+	Hint_35(Day=10): 如果自己不上场, 可选择队友进行操作; <br />
+	Hint_36(Day=10): 宿舍的休息效果只对不上场的队友有效; <br />
+	Hint_37(Day=10): 参与外勤作战时, 尽量选择移动速度相近的队友配合, 不然掉队的队友很容易被消灭; <br />
+	Hint_38(Day=10): 参与外勤作战时, 最好直奔目标, 别和杂兵缠斗, 因为杂兵是无限的; <br />
+	Hint_39(Day=10): 驾驶员的每一种属性都存在着强化上限; <br />
+</p>
+<p>
+	Hint_40(Day=10): 招募完所有队友后, 会收到增加出战人数上限的申请(但是需要 <code>1000</code> 资金以及 <code>1000</code> 荣誉为代价); <br />
+	Hint_41(Day=20): 即使敌人处于隐身状态, 也会在地上留下影子, 当然队友可能不一定能注意到这一点; <br />
+	Hint_42(Day=20): 部分敌方 Boss 会携带实体盾牌, 这些盾牌免疫子弹, 只能绕开攻击; <br />
+	Hint_43(Day=20): 炮弹无法穿过能量盾, 但是会在接触的那个位置爆炸; <br />
+	Hint_44(Day=20): 投掷物可以直接穿过护盾, 是消灭拥有护盾的敌人首选; <br />
+	Hint_45(Day=20): 护盾通常需要持续火力来压制, 狙击枪等武器就不太适合; <br />
+	Hint_46(Day=20): 近战武器不受那些只对动能武器有效的模块影响(如子弹伤害/暴击暴伤/元素伤害等); <br />
+	Hint_47(Day=20): 近战武器的本质其实是能量武器, 所以需要充能, 也有攻击间隔, 弹夹数量等概念; <br />
+	Hint_48(Day=20): 隐身敌人如果被附加元素属性(异常状态)就会显形, 可以此向队友呈现敌人位置; <br />
+	Hint_49(Day=20): 商品的总数是有限的, 被刷掉的商品不会再出现(当然大部分商品都不止一件); <br />
+</p>
+<p>
+	Hint_50(Day=20): 总是垂直于敌人的炮口进行移动, 是战场生存的第一法则; <br />
+	Hint_51(Day=20): 如果被数量庞大的敌人给包围了, 可考虑暂时离开大门, 敌人会优先攻击大门, 大门非常坚固, 可以撑一会的(大概); <br />
+	Hint_52(Day=20): 在对付强大的敌人时, 尽量和队友先集火同一个敌人, 而不是选择各自为战(除非多个方向的敌人都非常多); <br />
+	Hint_53(Day=20): 情报处时有奇效, 尤其是前期强力城防设施不多时, 例如可将大量地雷优先铺设到敌人前进线路; <br />
+	Hint_54(Day=20): 沙袋的抵抗不高, 但是绝对比你站在空地好; <br />
+	Hint_55(Day=20): 敌人几乎不会预判射击(因为 AI 没做), 保持移动很重要; <br />
+	Hint_56(Day=20): 不要只是强化你自己, 队友在很多时候都射得比你更准, 属性也比你好; <br />
+	Hint_57(Day=30): 护盾对电弧及射线武器均有较好的减伤效果; <br />
+	Hint_58(Day=30): 由于护盾会回复的特性, 就不太适合使用狙击武器来对付; <br />
+	Hint_59(Day=30): 由于护盾会回复的特性, 推荐用冲锋枪或散弹等武器对付(因为高 DPS); <br />
+</p>
+<p>
+	Hint_60(Day= 0): 射线及电弧均可以穿透装甲(穿甲抵抗无法防御这些武器); <br />
+	Hint_61(Day= 0): 烟雾是个好东西, 在外围作战时的需求很高; <br />
+	Hint_62(Day= 0): 如果身上有负面效果, 即使躲藏在烟雾中也会被敌人发现; <br />
+	Hint_63(Day=60): 如果敌人身上有负面效果, 即使是躲藏在黑暗中, 也可以被队友发现到; <br />
+	Hint_64(Day= 0): 善用元素反应效果有奇效; <br />
+	Hint_64(Day= 0): 电磁效果对护盾或有奇效; <br />
+</p>
+<p>
+	Hint_XJ(Day= 0): 无人机和作战单元都不会攻击那些正在被爆破的建筑(以避免元素反应); <br />
+	Hint_XJ(Day= 0): 部分敌方 Boss 会携带实体盾牌, 实体盾牌免疫大多数远程武器, 除了绕后, 你还可以尝试用远距离的近战武器攻击; <br />
+</p>
+<p>
+	Hint_XJ(Day= 0): 敌人身上的携带的装甲, 默认抵抗值都是 <code>100</code>, 就像 LV3 复合装甲; <br />
+	Hint_XJ(Day= 0): 钢盾(id:8)/肢解者(id:31)/角斗士(id:107A)/方阵兵(id:109B)等敌人, 身上有携带装甲, 但仅部分部分方向有而已; <br />
+</p>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading03">03. 每日新闻</h2>
+
+<p>以下是战后结算界面会出现的背景新闻(仅剧情模式有), 根据事件设定, 每隔几天会选取同个 <code>NewsN_</code> 前缀的 <code>3</code> 条随机新闻显示(但不会重复), 如果同个 <code>NewsN_</code> 前缀的新闻都已经出现过, 则以 <code>XXXXXX</code> 代替, 从这些内容里, 我们能发现帝国的情况是逐步恶化的, 尽管新闻媒体尽量粉饰了帝国节节败退的实情, 但是战线不会骗人, 在这些新闻中, 我们也能了解到为什么玛丽他们的负担会越来越重;</p>
+
+<p>
+	News1_1:　在南方战场, 我方的战士再一次英勇击退了敌军; <br />
+	News1_2:　西线登陆行动受阻, 但将军表示敌人是负隅顽抗; <br />
+	News1_3:　今日在首都逮捕了数名叛国分子; <br />
+	News1_4:　财政部长在访谈中表示不排除进一步增加消费税; <br />
+	News1_5:　各大城市妇女纷纷表示将砸锅卖铁支持战斗; <br />
+	News1_6:　从明日起, 非法持有菜刀将会被视为犯罪; <br />
+	News1_7:　《百年画展》即将于明日在首都举行; <br />
+	News1_8:　万寿无疆研究院今日在皇宫挂牌, 将致力于让元首及其家眷生活的更好; <br />
+	News1_9:　我国外交部的发言人否认了目前在帝国北部发生了饥荒的谣言; <br />
+	News1_10: 教育部: 民族主义在学士的教育中拟再增加三个学分; <br />
+</p>
+<p>
+	News2_1:　南方战线形势大好, 敌军行动屡屡受挫; <br />
+	News2_2:　东线轰炸行动成功摧毁了敌国重要的军事中心; <br />
+	News2_3:　新消费税法案将于明日生效, 各位公民尽好自身义务; <br />
+	News2_4:　数日前逮捕的叛国分子狡辩自己没受到外部势力蛊惑; <br />
+	News2_5:　万寿无疆研究院今日研究出了新牛肉料理供元首品尝; <br />
+	News2_6:　从明日起, 非法持有铁制品, 将会被视为犯罪; <br />
+	News2_7:　商务部: 拟进一步降低遗产税; <br />
+	News2_8:　国防部: 新型战斗机甲已列装, 我国实力再上一层楼; <br />
+	News2_9:　内务局称, 今日首都出现的大量"饥民"均为敌国间谍; <br />
+	News2_10: 舞蹈团慰问了南方战线的将士, 将士称战局非常顺利; <br />
+</p>
+<p>
+	News3_1:　今日我国向东部国家正式宣战! 邪恶国度终将被打倒; <br />
+	News3_2:　我方战俘营今日接受国际调查团调查, 战俘: 这里比家里还棒; <br />
+	News3_3:　"不生育罪"第一案今日将正式宣判; <br />
+	News3_4:　急了! 敌国看见我方军的新式装备酸了; <br />
+	News3_5:　当红女星声称将退出演艺界, 因已无奖可拿; <br />
+	News3_6:　近九成老兵声称, 自己没有战后创伤应激症; <br />
+	News3_7:　统计局: 基尼系数再创历史新低, 人民安居乐业; <br />
+	News3_8:　奋斗者最美, 首都劳动之星今获得带薪休假三天奖励; <br />
+	News3_9:　农业部声称, 最近的蔬菜短缺是季节性正常情况; <br />
+	News3_10: 公务员贪污六个月工资案主犯今日已被枪决; <br />
+</p>
+<p>
+	News4_1:　新机甲型号已投入使用, 提升了帝国防御实力; <br />
+	News4_2:　鼓励市民购买自动机械, 尽量提升生产效率; <br />
+	News4_3:　天气预报: 今日晴朗温暖, 适合户外活动; <br />
+	News4_4:　粮食价格持续上涨, 政府稳定市场秩序; <br />
+	News4_5:　战局稳定, 帝国军队获得了重大胜利; <br />
+	News4_6:　皇帝号令全国, 呼吁所有市民为战争做出贡献; <br />
+	News4_7:　涉嫌泄露国家机密, 一名官员被判处极刑; <br />
+</p>
+<p>
+	News5_1:　数百名涉嫌叛变的人员已被逮捕; <br />
+	News5_2:　帝国各地举行了盛大游行, 展示国家繁荣景象; <br />
+	News5_3:　帝国皇帝向军队发表讲话, 要求保卫国家安全; <br />
+	News5_4:　帝国政府发表声明否认出现叛徒; <br />
+	News5_5:　性丑闻涉及高级将领; <br />
+</p>
+<p>
+	News6_1:　帝国贸易受挫, 官方表示将推行新政策以提高出口; <br />
+	News6_2:　帝国高层会议讨论前线状况, 并确认调整战略方向; <br />
+	News6_3:　将军表示: 前线战线捷报频繁, 战线收缩系战略方向调整; <br />
+	News6_4:　帝国士兵反映武器装备补给不足, 官方称将加强后勤保障; <br />
+	News6_5:　帝国内部人事调整, 官方声称, 旨在提高工作效率; <br />
+	News6_6:　帝国经济增速下降, 官方声称, 系正常调整阶段; <br />
+	News6_7:　帝国政府承认减员现象, 声称正积极采取措施; <br />
+</p>
+<p>
+	News7_1:　帝国夜战失利, 将军声称, 仍在寻找有效对策; <br />
+	News7_2:　帝国国境深夜频遭袭扰, 当局称仍在加强防御; <br />
+	News7_3:　帝国战线陷入苦战, 指挥官称正在调整战略; <br />
+	News7_4:　帝国战线缩减, 国防部长称正积极应对局势; <br />
+	News7_5:　帝国战事陷入僵局, 将军呼吁保持信念坚定; <br />
+</p>
+<p>
+	News8_1:　帝国发动大规模清剿行动, 铲除叛乱势力, 维护社会安定; <br />
+	News8_2:　反叛分子与敌人勾结, 企图破坏帝国的安宁; <br />
+	News8_3:　帝国的军警联手, 成功抓获了多名反叛分子, 揭开其阴谋; <br />
+	News8_4:　帝国国民挺身而出, 积极配合政府打击反叛分子, 共同维护了国家安宁; <br />
+	News8_5:　任何破坏社会稳定, 危害国家利益的行为都将受严厉打击; <br />
+</p>
+<p>
+	News9_1:　帝国将士已经英勇牺牲, 民众更应为国捐躯; <br />
+	News9_2:　政府呼吁更多能力者主动向政府申报; <br />
+	News9_3:　民众义不容辞参战, 保家卫国; <br />
+	News9_4:　我们需要你们的力量; <br />
+	News9_5:　志愿参战是一种荣誉; <br />
+	News9_6:　教育系统开始军事化; <br />
+	News9_7:　展开抓捕反战抗议者; <br />
+	News9_8:　帝国秘密行动, 已成功摧毁敌方重要补给线; <br />
+	News9_9:　帝国士兵表现英勇, 成功突破了敌军包围圈; <br />
+</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 样式设置 */
+</style>
+
+
+
+<script>/* 脚本逻辑 */
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 术语解析</a>
+			<a href="#heading02">02. 提示文本</a>
+			<a href="#heading03">03. 每日新闻</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+

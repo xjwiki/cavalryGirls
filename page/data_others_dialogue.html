@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico">
+<script src="../static/cjs/_xj.plugins.setting.js?ver=2022-12-16T05:16:20UTC+8"></script>
+
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.operate/0.6.0/dist/xj.operate.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.css" />
+<script src="../static/plugin/xj.ripple/0.5.0/dist/xj.ripple.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.css" />
+<script src="../static/plugin/xj.focus/0.4.0/dist/xj.focus.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xj.base/0.4.0/dist/xj.base.min.css" />
+<script src="../static/plugin/xj.base/0.4.0/dist/xj.base.min.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', 
+function(){ FastClick.attach(document.body) }, false);</script>
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.4.2/css/all.min.css" />
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.0/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<title>台词对白</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
+		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<script>
+				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
+				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
+				() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	let ele_pub_size = document.getElementById('pub_size');
+	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
+	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
+	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
+	setDirMinHeight();
+	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
+	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
+	$('#xjScroll01').xjScroll({});
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>台词对白</span><small>(角色塑造)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
+		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" onclick="this.parentElement.submit()"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source from GitHub" target="_blank" 
+		href="https://github.com/xjwiki/cavalryGirls/">
+	<i class="fab fa-github"></i></a>
+	
+	<span id="pub_headLang">
+		<button id="pub_headLangIcon" type="button" 
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		<div id="pub_headLangMenu">
+			<a class="a-unset" href="">简体中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
+			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+		</div>
+	</span>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 文本展示</h2>
+
+<p>
+	01. 目前总共有 <code>170</code> 段台词对白, 每个驾驶员平均 <code>34</code> 段, 但其中有些存在多段选项(下表以斜杠分开), 在触发时会随机挑中某段; <br />
+	02. 台词对白只是用于塑造角色并丰富体验而已, 它们大部分还有相应的配音(中英日三语), 可在游戏的"档案室">"角色语音"界面听到; <br />
+	03. 在不同的场景下会自动触发各种台词对白(以及配音), 但由于文化差异等问题, 在不同的语言下, 它们的选项&含义可能会略有差异; <br />
+	04. 表格中的"场景描述"是 XJ 自己添加的, 用于标明台词对白的触发场景或环境, 未必精准, 更多的信息可以查阅后面的 <a href="#heading02"># 额外拓展</a>; <br />
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
+	<thead>
+		<tr>
+			<th sorttype="number" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属角色<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:100px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">属性代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">场景描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">具体内容<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 字段解析</h2>
+
+<p>拒绝指令: 字段"反抗指令/否定指令/谢绝指令", 代码 <code>Change/ChangeSec/ChangeLast</code>, 它们是驾驶员的忠诚度小于 <code>20/50/80</code> 的情况下拒绝更改作战指令的台词对白, 每个驾驶员都有自己偏爱的作战方式, 忠诚度到达阈值才能改变它们, 细节可查阅 <a href="./data_pilot_intro.html">主角小队.html</a>;</p>
+
+<p>作战胜利: 字段"艰难胜利/普通胜利/完美胜利", 代码 <code>VicBad/VicNormal/VicPerfect</code>, 它们是驾驶员在完成战斗后说的话, 但实际上说什么话跟战斗无关, 而是与忠诚度挂钩, 忠诚度 <code>>65</code> 就是 VicPerfect, 忠诚度 <code>>30</code> 是 VicNormal, 忠诚度 <code><=30</code> 是 VicBad;</p>
+
+<p>进入战场: 字段"艰难开始/普通开始/完美开始", 代码 <code>StartBad/StartNormal/StartPerfect</code>, 它们是驾驶员进入战场后说的话, 但实际上说什么话也是跟忠诚度挂钩的, 忠诚度 <code>>65</code> 就是 StartPerfect, 忠诚度 <code>>30</code> 是 StartNormal, 忠诚度 <code><=30</code> 是 StartBad;</p>
+
+<p>————</p>
+
+<p>拒绝命令: 字段"拒绝命令", 代码 <code>CommandRefuse</code>, XJ 猜测这可能是挑战模式下在战场上修改 AI 指令被拒绝的台词, 但是由于游戏机制在后来发生了变动, 既战场上修改 AI 必定会成功, 所以这个字段也就从此失去了作用, 你也不会有机会在游戏中再次遇到它们了;</p>
+
+<p>宿舍交互: 字段"宿舍交互", 代码 <code>Touch</code>, XJ 猜测这应该是在宿舍与驾驶员互动时, 角色会发出的台词对白, 所谓互动就是你能用鼠标把驾驶员抓起来再放下(他们会在空中挣扎), 但 XJ 在交互的时候从未触发过这些内容, 根据开发者的说法, 实际上仅日语会有语音;</p>
+
+<p>登录语音: 字段"登录语音", 代码 <code>Login</code>, XJ 从未触发过这个字段, 根据开发者的说法, 这个文本不会显示, 但实际上如果使用英文版语音, 那么在初始进入游戏的时候就会出现这段语音, 如果你感兴趣, 也许可以切换成英文版语音试试, 虽然也没有什么意义就是了;</p>
+
+<p>————</p>
+
+<p>约会对话: 在整备阶段, 可以使用"城市通行卡"让某个驾驶员进城娱乐以降低脑负荷并提升忠诚度, 可前往的地方包括, 五号商店街/野狼酒吧/红树电影院/人工沙滩/钢管厂温泉, 不同的地方所需要的城市通行卡数量也不同, 而且对驾驶员的忠诚度还有要求(队长无限制), 忠诚度太低了他们会拒绝邀请, 而上表中两种对话, 分别是驾驶员作为队长或作为队友的两种情况, 不过这些对话都没配音, 仅有文本;</p>
+
+<p>你可以在进城界面的右下角花 <code>100</code> 荣誉兑换 <code>2</code> 张城市通行卡, 采购部有时也会销售城市通行卡(价值 <code>15</code> 资金), 除此之外, 在某些事件中你可以用烟酒和长官交换城市通行卡, 而某些假日安排的任务奖励也可能是城市通行卡, 需要注意的是, 就算你有足够的通行卡, 但每天最多也只能进城一次, 一般来说, 在正常运营的情况下, 其实也用不着派驾驶员去娱乐来降低脑负荷, 许多玩家使用这个功能, 更多的是想收集福利 CG, 除此之外, 这也是快速提升忠诚度的手段(尤其是对后期加入的驾驶员), 以下是可前往地点的描述和相关信息:</p>
+
+<p>
+01. 5 号商店街, 小偷和奸商都很多, 但保管好钱包也能逛的很开心的(团结路与力量路交界处/1通行卡/1心忠诚/+1忠诚度/-15脑压值); <br />
+02. 野狼酒吧, 提供廉价的酒精, 以及礼服租赁服务, 是一个放松的好去处(领袖路68号Ａ单元/2通行卡/4心忠诚/+2忠诚度/-25脑压值); <br />
+03. 红树电影院, 已经十多年没拍出新电影了, 尽管如此, 还是常常一座难求(思想塔45层11号/3通行卡/7心忠诚/+3忠诚度/-36脑压值); <br />
+04. 人工沙滩, 使用建筑沙和巨型照明灯临时搭建的沙滩(都是废水不能游泳)(思想塔45层12号/4通行卡/9心忠诚/+3忠诚度/-45脑压值); <br />
+05. 钢管厂温泉, 炼钢厂隔壁的温泉店, 由于使用炼钢冷却水所以很便宜(第四工业区5号大道/5通行卡/12心忠诚/+3忠诚度/-54脑压值); <br />
+</p>
+
+<hr />
+</section>
+
+
+
+<style>/* 样式设置 */
+</style>
+
+
+
+<script>/* 脚本逻辑 */
+
+// 表01数据
+let tbodyArray01 = [
+	
+	// 高亮		文本序号,	归属角色,	属性代码,				场景描述,			具体内容,																																			],		
+	// Active, 	Number,		Players,	Code,					Type, 				Dialogue,																																			],		//01		
+	
+	[1,			'001',		0,			'BattleRetreat',		'战斗撤退',			'为什么… / 怎么会这样…',																															],		
+	[1,			'002',		1,			'BattleRetreat',		'战斗撤退',			'下次我会赢的…',																																	],		
+	[1,			'003',		2,			'BattleRetreat',		'战斗撤退',			'呃, 抱歉',																																			],		
+	[1,			'004',		3,			'BattleRetreat',		'战斗撤退',			'真不想这样啊',																																		],		
+	[1,			'005',		4,			'BattleRetreat',		'战斗撤退',			'哎呀, 他们太强了',																																	],		//01		
+	
+	[0,			'006',		0,			'Damage2',				'受到伤害',			'痛痛痛 / 痛痛痛 / 痛痛痛 / 啊! / 噢! / 唔',																										],		
+	[0,			'007',		1,			'Damage2',				'受到伤害',			'啊呜 / 啊呜 / 唔啊 / 啊啊 / 别! / 不! ',																											],		
+	[0,			'008',		2,			'Damage2',				'受到伤害',			'哼 / 哼 / 哼 / 可恶 / 见鬼 / 呃啊',																												],		
+	[0,			'009',		3,			'Damage2',				'受到伤害',			'呃 / 呃 / 呃 / 噢 / 唔 / 我没事',																													],		
+	[0,			'010',		4,			'Damage2',				'受到伤害',			'哎哟 / 哎哟 / 哎哟 / 噢 / 你怎么敢 / 有点痛',																										],		//01		
+	
+	[1,			'011',		0,			'Death',				'机体瘫痪',			'噢! 不… 我得撤退了 / 战略性后撤 / 我失误了, 对不起, 对不起 / 我很抱歉 / 计划调整',																	],		
+	[1,			'012',		1,			'Death',				'机体瘫痪',			'别打我了, 别打我了, 呜呜呜呜 / 对不起, 我无法再坚持下去了… / 好可怕, 好可怕 / 救救我 / 求求了, 不…',												],		
+	[1,			'013',		2,			'Death',				'机体瘫痪',			'你们等着! / 这次算你们走运! / 我不会就这么算了的! / 我会让你们付出代价的! / 可恶可恶可恶',															],		
+	[1,			'014',		3,			'Death',				'机体瘫痪',			'机体损坏 / 作战终止 / 机体破损 / 战术撤离 / 我要撤离了, 抱歉',																						],		
+	[1,			'015',		4,			'Death',				'机体瘫痪',			'抱歉, 我真的很抱歉 / 糟糕, 我失误了 / 撤退是为了更大的胜利 / 这次先放过你 / 战斗不止于此',															],		//01		
+	
+	[0,			'016',		0,			'Change',				'反抗指令',			'我觉得那样不太合适',																																],		
+	[0,			'017',		1,			'Change',				'反抗指令',			'求你了, 别这样, 现在挺好的…',																														],		
+	[0,			'018',		2,			'Change',				'反抗指令',			'别想命令我! ',																																		],		
+	[0,			'019',		3,			'Change',				'反抗指令',			'不',																																				],		
+	[0,			'020',		4,			'Change',				'反抗指令',			'还是按我的作战思路来吧',																															],		//01		
+	
+	[1,			'021',		0,			'ChangeSec',			'否定指令',			'能不能再商量一下',																																	],		
+	[1,			'022',		1,			'ChangeSec',			'否定指令',			'让我跟在你身边吧…',																																],		
+	[1,			'023',		2,			'ChangeSec',			'否定指令',			'我要主动杀敌, 这一点不妥协',																														],		
+	[1,			'024',		3,			'ChangeSec',			'否定指令',			'我要防守',																																			],		
+	[1,			'025',		4,			'ChangeSec',			'否定指令',			'我需要风险小一点的方案',																															],		//01		
+	
+	[0,			'026',		0,			'ChangeLast',			'谢绝指令',			'我觉得还是按自己的想法比较好',																														],		
+	[0,			'027',		1,			'ChangeLast',			'谢绝指令',			'不不不除了这个… 求你了',																															],		
+	[0,			'028',		2,			'ChangeLast',			'谢绝指令',			'我拒绝这种懦夫行为',																																],		
+	[0,			'029',		3,			'ChangeLast',			'谢绝指令',			'我不涉险',																																			],		
+	[0,			'030',		4,			'ChangeLast',			'谢绝指令',			'除了这个都行',																																		],		//01		
+	
+	[1,			'031',		0,			'ChangeSuccess',		'接受指令',			'好的 / 好的, 我觉得不错',																															],		
+	[1,			'032',		1,			'ChangeSuccess',		'接受指令',			'你说了算… / 具体需要怎么做…',																														],		
+	[1,			'033',		2,			'ChangeSuccess',		'接受指令',			'行 / 得令! ',																																		],		
+	[1,			'034',		3,			'ChangeSuccess',		'接受指令',			'行吧 / 好',																																		],		
+	[1,			'035',		4,			'ChangeSuccess',		'接受指令',			'收到 / 听上去不错',																																],		//01		
+	
+	[0,			'036',		0,			'VicBad',				'艰难胜利',			'活下来了, 不容易啊 / 又是一天 / 总算是坚持下来了 / 无论多困难, 我们从未放弃 / 我们证明了自己的实力和价值',											],		
+	[0,			'037',		1,			'VicBad',				'艰难胜利',			'活下来了, 呜呜呜 / 呜呜, 还以为会死掉 / 终于… / 我们胜利了! 呜呜呜呜! / 我战斗到了最后',															],		
+	[0,			'038',		2,			'VicBad',				'艰难胜利',			'我就知道会赢! / 哼, 理所当然的胜利 / 都不是我的对手 / 我们扭转了局势! / 没有人能够阻止我们! ',														],		
+	[0,			'039',		3,			'VicBad',				'艰难胜利',			'胜利 / 赢了 / 歼灭完毕 / 战斗结束 / 任务完成',																										],		
+	[0,			'040',		4,			'VicBad',				'艰难胜利',			'虽然很艰难, 好歹赢了 / 敌人已被尽数消灭 / 作战完成 / 真是一场苦战 / 真不容易',																		],		//01		
+	
+	[1,			'041',		0,			'VicNormal',			'普通胜利',			'胜利了, 太好了 / 总算是赢了 / 我们的实力得到了验证 / 我们又一次战胜了他们! ',																		],		
+	[1,			'042',		1,			'VicNormal',			'普通胜利',			'赢了吗 / 是不是结束了 / 敌人终于撤退了 / 又撑过了一天! / 啊, 他们撤退了',																			],		
+	[1,			'043',		2,			'VicNormal',			'普通胜利',			'有我在什么仗打不赢! / 敌人落荒而逃了! / 不自量力! / 哈! 不堪一击 / 轻轻松松',																		],		
+	[1,			'044',		3,			'VicNormal',			'普通胜利',			'作战完毕 / 已尽数歼灭敌军 / 镇压完毕 / 我们成功了, 毫无疑问 / 一切顺利',																			],		
+	[1,			'045',		4,			'VicNormal',			'普通胜利',			'我们的战术取得了成果 / 真不愧是队长啊 / 我们配合的不错 / 胜利的感觉令人陶醉 / 队长好战术! ',														],		//01		
+	
+	[0,			'046',		0,			'VicPerfect',			'完美胜利',			'终于! / 作战顺利! / 作战顺利! / 我做到了! / 我们取得了完美的胜利! / 大家辛苦了',																	],		
+	[0,			'047',		1,			'VicPerfect',			'完美胜利',			'我做到了! / 我做到了! / 这一战很顺利 / 赢了赢了 / 这是我们共同的胜利 / 太棒了! 完美的胜利! ',														],		
+	[0,			'048',		2,			'VicPerfect',			'完美胜利',			'你高估了你自己 / 记得要感谢我嗷 / 你高估了你自己 / 我就知道我们一定能赢 / 哼, 理所应当的胜利 / 哈哈哈! 我们战无不胜! ',							],		
+	[0,			'049',		3,			'VicPerfect',			'完美胜利',			'一如既往 / 行动结束 / 行动结束 / 行动结束 / 行动胜于言辞 / 毫无破绽',																				],		
+	[0,			'050',		4,			'VicPerfect',			'完美胜利',			'结束了 / 它坏了吗 / 真是自杀袭击 / 嘿, 看见我们的胜利了吗? 那简直是太酷了! ',																		],		//01		
+	
+	[1,			'051',		0,			'StartBad',				'艰难开始',			'已发现敌人 / 新的一天开始了 / 作战行动开始 / 大家注意安全',																						],		
+	[1,			'052',		1,			'StartBad',				'艰难开始',			'又回到了地狱… / 我会尽力的… / 唔…',																												],		
+	[1,			'053',		2,			'StartBad',				'艰难开始',			'我已经等不及了 / 我将击溃所有敌人 / 我会把你们全都干掉',																							],		
+	[1,			'054',		3,			'StartBad',				'艰难开始',			'作战开始 / 进入战斗配置 / 开始战斗 / 开始行动',																									],		
+	[1,			'055',		4,			'StartBad',				'艰难开始',			'愿你们安息 / 啊, 战争真是悲哀 / 又要开始互相残杀了 / 看来我们不太走运',																			],		//01		
+	
+	[0,			'056',		0,			'StartNormal',			'普通开始',			'已发现敌人 / 新的一天开始了 / 作战行动开始 / 出发! ',																								],		
+	[0,			'057',		1,			'StartNormal',			'普通开始',			'原谅我吧… / 真想一个人静静 / 我没事, 走吧 / 我能坚持下来的',																						],		
+	[0,			'058',		2,			'StartNormal',			'普通开始',			'上吧 / 你瞅啥 / 真烦人 / 大家打起精神',																											],		
+	[0,			'059',		3,			'StartNormal',			'普通开始',			'集中精神 / 我在试 / 原谅我吧 / 再见了',																											],		
+	[0,			'060',		4,			'StartNormal',			'普通开始',			'这一切是不可避免的吗 / 真希望能一直并肩作战啊 / 新的一天, 同样的风景',																				],		//01		
+	
+	[1,			'061',		0,			'StartPerfect',			'完美开始',			'终于开始了 / 我准备好了',																															],		
+	[1,			'062',		1,			'StartPerfect',			'完美开始',			'别慌… 别慌… / 没事的, 没事的',																														],		
+	[1,			'063',		2,			'StartPerfect',			'完美开始',			'就算你不说, 我也会上的 / 别跟丢了! ',																												],		
+	[1,			'064',		3,			'StartPerfect',			'完美开始',			'发现目标 / 锁定目标',																																],		
+	[1,			'065',		4,			'StartPerfect',			'完美开始',			'又要开始互相残杀了 / 我又一次回到了这里',																											],		//01		
+	
+	[0,			'066',		0,			'GiftDis',				'讨厌礼物',			'呃, 我真不喜欢这个 / 谢谢, 但我不太喜欢这个 / 嗯… 哈哈… 谢谢',																						],		
+	[0,			'067',		1,			'GiftDis',				'讨厌礼物',			'虽然不知道有啥用, 不过谢谢 / 我能用它做什么呢… / 噢… 谢… 谢谢',																					],		
+	[0,			'068',		2,			'GiftDis',				'讨厌礼物',			'什么鬼东西?! / 容我拒绝 / 呃… 我只能保证不会扔进垃圾桶',																							],		
+	[0,			'069',		3,			'GiftDis',				'讨厌礼物',			'不需要 / 可以还给你吗 / 同样的东西下次就不要给我了',																								],		
+	[0,			'070',		4,			'GiftDis',				'讨厌礼物',			'谢谢, 不过你应该留着它 / 真没必要… / 送的很好, 下次别送了',																						],		//01		
+	
+	[1,			'071',		0,			'GiftNormal',			'普通礼物',			'哦谢谢 / 还不错 / 有意思 / 我不讨厌这个 / 我应该用得到它',																							],		
+	[1,			'072',		1,			'GiftNormal',			'普通礼物',			'谢谢… / 这是… 什么? / 噢, 谢谢你 / 谢谢你送我礼物',																								],		
+	[1,			'073',		2,			'GiftNormal',			'普通礼物',			'我能用这作甚 / 你想拿回去也行 / 谢谢… / 呃, 勉强还行吧',																							],		
+	[1,			'074',		3,			'GiftNormal',			'普通礼物',			'谢谢 / 这是什么 / 我不知道这个能干嘛 / 挺好的, 谢谢',																								],		
+	[1,			'075',		4,			'GiftNormal',			'普通礼物',			'这倒也不是我的风格 / 我觉得这对我用处不大… / 不过我觉得这个可能更适合你 / 嗯… 这大概不能列入我的收藏',												],		//01		
+	
+	[0,			'076',		0,			'GiftLike',				'喜欢礼物',			'太棒了吧 / 我喜欢它 / 送我的吗? 谢谢! / 我太喜欢它了 / 我都还没送过你什么呢',																		],		
+	[0,			'077',		1,			'GiftLike',				'喜欢礼物',			'我太喜欢了! / 真的太感谢了! / 呜呜! 谢谢! 我很喜欢 / 这对我来说很有意义 / 我真的很喜欢这个!',														],		
+	[0,			'078',		2,			'GiftLike',				'喜欢礼物',			'我才不需要呢 / 呃, 谢了嗷 / 有时间我会看看的 / 挺好的 / 可能会有用吧',																				],		
+	[0,			'079',		3,			'GiftLike',				'喜欢礼物',			'我很喜欢, 谢谢 / 哦, 真令人惊喜 / 感谢 / 谢谢, 不错 / 我真的很喜欢这个',																			],		
+	[0,			'080',		4,			'GiftLike',				'喜欢礼物',			'哇, 送我的? / 真是惊艳的礼物呀 / 哈哈, 谢了 / 真不错 / 真的很开心, 谢谢',																			],		//01		
+	
+	[1,			'081',		0,			'GiftPerfect',			'最爱礼物',			'和你并肩作战令我感到荣幸 / 你送给我这么美妙的礼物! 我真的很幸运 / 我太喜欢了! 谢谢你花费这么多心思给我选礼物! ',									],		
+	[1,			'082',		1,			'GiftPerfect',			'最爱礼物',			'今晚别去餐厅了, 我准备了些好吃的~ / 天啊, 谢谢, 我太喜欢了, 我做了些饼干, 要一起吃吗? / 这是给我的吗? 哇… 这个礼物太让我开心了, 谢谢你的心意! ',	],		
+	[1,			'083',		2,			'GiftPerfect',			'最爱礼物',			'我亲自来感谢你, 开心吧 / 哼, 这个礼物还不错嘛, 呃, 我是说我很喜欢啦! / 哇!嗯, 我很喜欢啦…',														],		
+	[1,			'084',		3,			'GiftPerfect',			'最爱礼物',			'队长, 我会为你准备好一切的 / 谢谢, 我想要这个很久了 / 我很喜欢, 我能感受到你花了很多心思, 谢谢! ',													],		
+	[1,			'085',		4,			'GiftPerfect',			'最爱礼物',			'我得承认我们是一路人了 / 看来你是通过某种神秘力量知道了我的心愿! 谢谢你的超能力! / 我简直要为你颁发最佳礼物奖了! 我太喜欢了! ',					],		//01		
+	
+	[0,			'086',		0,			'CommandRefuse',		'拒绝命令',			'请等一下',																																			],		
+	[0,			'087',		1,			'CommandRefuse',		'拒绝命令',			'我做不到…',																																		],		
+	[0,			'088',		2,			'CommandRefuse',		'拒绝命令',			'正忙着呢! 别打扰我',																																],		
+	[0,			'089',		3,			'CommandRefuse',		'拒绝命令',			'不',																																				],		
+	[0,			'090',		4,			'CommandRefuse',		'拒绝命令',			'我现在忙不过来',																																	],		//01		
+	
+	[1,			'091',		0,			'Entrance',				'部门遭遇',			'Hi, 我在这 / 是你来太早了 / 要做点什么呢 / 开工~ / 我等不及要开始了',																				],		
+	[1,			'092',		1,			'Entrance',				'部门遭遇',			'啊, 我在 / 我来晚了吗 / 我来啦! / 你还好吗 / 你怎么样啊',																							],		
+	[1,			'093',		2,			'Entrance',				'部门遭遇',			'有什么能帮到你的吗 / 我在呢 / 你有什么需要吗 / 你需要我在这吗',																					],		
+	[1,			'094',		3,			'Entrance',				'部门遭遇',			'我在 / 来了 / 和往常一样的时间 / 来了 / 不好意思来晚了',																							],		
+	[1,			'095',		4,			'Entrance',				'部门遭遇',			'今天你们怎么样呀 / 祝你有愉快的一天 / 我在了 / 我们来找点乐子吧 / 要开始了吗',																		],		//01		
+	
+	[0,			'096',		0,			'Exit',					'部门退出',			'-',																																				],		
+	[0,			'097',		1,			'Exit',					'部门退出',			'-',																																				],		
+	[0,			'098',		2,			'Exit',					'部门退出',			'-',																																				],		
+	[0,			'099',		3,			'Exit',					'部门退出',			'-',																																				],		
+	[0,			'100',		4,			'Exit',					'部门退出',			'-',																																				],		//01		
+	
+	[1,			'101',		0,			'Refuse',				'拒绝约会',			'等再熟一点吧',																																		],		
+	[1,			'102',		1,			'Refuse',				'拒绝约会',			'有点不好意思啊…',																																	],		
+	[1,			'103',		2,			'Refuse',				'拒绝约会',			'感觉有点不好意思哎',																																],		
+	[1,			'104',		3,			'Refuse',				'拒绝约会',			'等我们再熟一点吧',																																	],		
+	[1,			'105',		4,			'Refuse',				'拒绝约会',			'我今天刚好有点别的事',																																],		//01		
+	
+	[0,			'106',		0,			'Meet',					'初次见面',			'队长, 你好! / 队长, 你好! ',																														],		
+	[0,			'107',		1,			'Meet',					'初次见面',			'队长, 是你? / 你是, 队长? ',																														],		
+	[0,			'108',		2,			'Meet',					'初次见面',			'让我看看有什么新面孔',																																],		
+	[0,			'109',		3,			'Meet',					'初次见面',			'赭石色, 记住这个名字吧',																															],		
+	[0,			'110',		4,			'Meet',					'初次见面',			'还记得我是谁吗~ / 还记得我吗~',																													],		//01		
+	
+	[1,			'111',		0,			'Battle',				'战斗台词',			'抱歉, 你没有机会的 / 冲啊! / 冲啊! / 不会让你过去的 / 抱歉了',																						],		
+	[1,			'112',		1,			'Battle',				'战斗台词',			'开, 开火! / 开, 开火! / 尝尝这个! / 尝尝这个! / 我会尽我所能 / 我没有退路',																		],		
+	[1,			'113',		2,			'Battle',				'战斗台词',			'挡路! / 想起一张让人火大的脸 / 我是天生杀手 / 让开! 让开! 让开! / 我在这呢',																		],		
+	[1,			'114',		3,			'Battle',				'战斗台词',			'和你的好运说再见吧 / 我会看着你咽气的 / 这无关个人恩怨 / 我看见你了 / 再见了',																		],		
+	[1,			'115',		4,			'Battle',				'战斗台词',			'看到你了 / 到我了 / 再陪你玩玩 / 送你个礼物 / 别着急, 我来了~',																					],		//01		
+	
+	[0,			'116',		0,			'Promoting',			'改装机体',			'我离目标更近了吗…不, 没什么 / 这是我想要的吗… / 强化完成 / 强化完成',																				],		
+	[0,			'117',		1,			'Promoting',			'改装机体',			'我感到充满了力量! / 我一定会回应您的期待! / 谢谢你为我这么费心',																					],		
+	[0,			'118',		2,			'Promoting',			'改装机体',			'让我变强保护你吧 / 一个正确的决定 / 我感到了更大的责任',																							],		
+	[0,			'119',		3,			'Promoting',			'改装机体',			'一点点变强 / 我的价值得到了认可 / 强化完成',																										],		
+	[0,			'120',		4,			'Promoting',			'改装机体',			'超进化! / 战斗会结束的更快了 / 不会让你失望的',																									],		//01		
+	
+	[1,			'121',		0,			'Touch',				'宿舍交互',			'怎么了? / 我在的, 不用担心 / 嗯? / 我刚泡好了咖啡, 你要喝一杯吗? ',																				],		
+	[1,			'122',		1,			'Touch',				'宿舍交互',			'噢! 怎么啦? / 啊, 不好意思我刚在想事情 / 怎么了? / 队长, 我刚做了些小蛋糕, 你要尝尝吗?',															],		
+	[1,			'123',		2,			'Touch',				'宿舍交互',			'干嘛 / 哼? / 请离我远点! 啊… 不, 我不是这个意思! / 啊? 我在做新的首饰, 不要打扰我~',																],		
+	[1,			'124',		3,			'Touch',				'宿舍交互',			'怎么了? / 我正要看书 / 有什么事吗? / 怎么了? 你也想看这本书吗? ',																					],		
+	[1,			'125',		4,			'Touch',				'宿舍交互',			'怎么了? / 再戳我… 我就要反击咯? / 我肩膀上掉了什么吗? / 嗯? 要一起去健身房吗? ',																	],		//01		
+	
+	[0,			'126',		0,			'Login',				'登录语音',			'铁骑少女',																																			],		
+	[0,			'127',		1,			'Login',				'登录语音',			'铁骑少女',																																			],		
+	[0,			'128',		2,			'Login',				'登录语音',			'铁骑少女',																																			],		
+	[0,			'129',		3,			'Login',				'登录语音',			'铁骑少女',																																			],		
+	[0,			'130',		4,			'Login',				'登录语音',			'铁骑少女',																																			],		//01		
+	
+	[1,			'131',		0,			'Shop',					'逛商店街',			'好久没出来逛街了',																																	],		
+	[1,			'132',		1,			'Shop',					'逛商店街',			'去饰品店逛逛吧',																																	],		
+	[1,			'133',		2,			'Shop',					'逛商店街',			'包包太贵了, 还是随便逛吧',																															],		
+	[1,			'134',		3,			'Shop',					'逛商店街',			'去书店逛逛吧',																																		],		
+	[1,			'135',		4,			'Shop',					'逛商店街',			'去健身房吧',																																		],		//01		
+	
+	[0,			'136',		0,			'ShopAi',				'逛商店街',			'走吧~',																																			],		
+	[0,			'137',		1,			'ShopAi',				'逛商店街',			'我准备好啦~',																																		],		
+	[0,			'138',		2,			'ShopAi',				'逛商店街',			'等你好久了, 我们走',																																],		
+	[0,			'139',		3,			'ShopAi',				'逛商店街',			'可以去书店吗',																																		],		
+	[0,			'140',		4,			'ShopAi',				'逛商店街',			'去哪听你的',																																		],		//01		
+	
+	[1,			'141',		0,			'Restraunt',			'野狼酒吧',			'终于可以小酌一番了',																																],		
+	[1,			'142',		1,			'Restraunt',			'野狼酒吧',			'有点不适应这种场合呢',																																],		
+	[1,			'143',		2,			'Restraunt',			'野狼酒吧',			'今晚要多喝点',																																		],		
+	[1,			'144',		3,			'Restraunt',			'野狼酒吧',			'虽然还是更想在家里看书',																															],		
+	[1,			'145',		4,			'Restraunt',			'野狼酒吧',			'哈哈, 今晚不醉无归',																																],		//01		
+	
+	[0,			'146',		0,			'RestrauntAi',			'野狼酒吧',			'终于可以小酌一番了',																																],		
+	[0,			'147',		1,			'RestrauntAi',			'野狼酒吧',			'可以放松一下了',																																	],		
+	[0,			'148',		2,			'RestrauntAi',			'野狼酒吧',			'别发呆了, 走',																																		],		
+	[0,			'149',		3,			'RestrauntAi',			'野狼酒吧',			'走吧',																																				],		
+	[0,			'150',		4,			'RestrauntAi',			'野狼酒吧',			'尽情喝吧, 我会把你背回去的',																														],		//01		
+	
+	[1,			'171',		0,			'Cinema',				'红树影院',			'找个好位置吧',																																		],		
+	[1,			'172',		1,			'Cinema',				'红树影院',			'往后面坐',																																			],		
+	[1,			'173',		2,			'Cinema',				'红树影院',			'往前面坐',																																			],		
+	[1,			'174',		3,			'Cinema',				'红树影院',			'找个安静的位置吧',																																	],		
+	[1,			'175',		4,			'Cinema',				'红树影院',			'坐哪里呢',																																			],		//01		
+	
+	[0,			'176',		0,			'CinemaAi',				'红树影院',			'你想坐哪',																																			],		
+	[0,			'177',		1,			'CinemaAi',				'红树影院',			'坐后面吧',																																			],		
+	[0,			'178',		2,			'CinemaAi',				'红树影院',			'坐前面吧',																																			],		
+	[0,			'179',		3,			'CinemaAi',				'红树影院',			'找个没人的地方吧',																																	],		
+	[0,			'180',		4,			'CinemaAi',				'红树影院',			'坐哪哈哈',																																			],		//01		
+	
+	[1,			'151',		0,			'Beach',				'人工沙滩',			'清凉的盐水, 真不错',																																],		
+	[1,			'152',		1,			'Beach',				'人工沙滩',			'游泳去咯',																																			],		
+	[1,			'153',		2,			'Beach',				'人工沙滩',			'防晒霜, 啊都带好了',																																],		
+	[1,			'154',		3,			'Beach',				'人工沙滩',			'哪里可以看书呢',																																	],		
+	[1,			'155',		4,			'Beach',				'人工沙滩',			'去晒日光浴咯',																																		],		//01		
+	
+	[0,			'156',		0,			'BeachAi',				'人工沙滩',			'来呀',																																				],		
+	[0,			'157',		1,			'BeachAi',				'人工沙滩',			'去游泳吧~',																																		],		
+	[0,			'158',		2,			'BeachAi',				'人工沙滩',			'走！',																																				],		
+	[0,			'159',		3,			'BeachAi',				'人工沙滩',			'就玩一会嗷',																																		],		
+	[0,			'160',		4,			'BeachAi',				'人工沙滩',			'我给你涂防晒霜吧',																																	],		//01		
+	
+	[1,			'161',		0,			'Onsen',				'钢厂温泉',			'疲劳都消除了, 真好',																																],		
+	[1,			'162',		1,			'Onsen',				'钢厂温泉',			'真想多泡一会热水啊',																																],		
+	[1,			'163',		2,			'Onsen',				'钢厂温泉',			'水温正好',																																			],		
+	[1,			'164',		3,			'Onsen',				'钢厂温泉',			'偶尔这样也不错',																																	],		
+	[1,			'165',		4,			'Onsen',				'钢厂温泉',			'这里挺不错的',																																		],		//01		
+	
+	[0,			'166',		0,			'OnsenAi',				'钢厂温泉',			'泡澡真舒服啊',																																		],		
+	[0,			'167',		1,			'OnsenAi',				'钢厂温泉',			'走吧~进去了',																																		],		
+	[0,			'168',		2,			'OnsenAi',				'钢厂温泉',			'要我帮你洗洗吗',																																	],		
+	[0,			'169',		3,			'OnsenAi',				'钢厂温泉',			'谢谢了, 我自己能擦干',																																],		
+	[0,			'170',		4,			'OnsenAi',				'钢厂温泉',			'水温很好, 快来呀',																																	],		//01		
+	
+];
+
+// 项目名称
+let ItemsNameList = {
+	
+	BattleRetreat_0 :	['为什么… / 怎么会这样…',																																'為什麼… / 為什麼',																						'Why… / Why',																																																																'どうして… / どうしてこんなことに…',																																														],		
+	BattleRetreat_1 :	['下次我会赢的…',																																		'下次我會贏的…',																						'I\'ll win next time…',																																																														'次は勝ちますから…',																																																		],		
+	BattleRetreat_2 :	['呃, 抱歉',																																			'呃, 抱歉',																								'Er, sorry',																																																																'その, 悪かった',																																																			],		
+	BattleRetreat_3 :	['真不想这样啊',																																		'真不想這樣啊',																							'This is not what I wanted.',																																																												'こんな結果は嫌',																																																			],		
+	BattleRetreat_4 :	['哎呀, 他们太强了',																																	'哎呀, 他們太強了',																						'Geez. They are way too powerful.',																																																											'あらまあ, 相手が強すぎたわ',																																																],		//02		
+	
+	Damage2_0 :			['痛痛痛 / 痛痛痛 / 痛痛痛 / 啊! / 噢! / 唔',																											'痛痛痛 / 痛痛痛 / 痛痛痛',																				'Ouch / Ouch / Ouch / Ah! / Ow! / Hmm',																																																										'いたたた! / いったぁ! / いてて! / きゃ! / あっ! / うぅ!',																																									],		
+	Damage2_1 :			['啊呜 / 啊呜 / 啊呜 / 唔啊啊 / 别! / 不!',																												'啊嗚 / 啊嗚 / 啊嗚',																					'Boo hoo / Boo hoo / It hurts! / No, please! / Please don\'t!',																																																				'あうぅ! / うぅ! / うああああ! / やめてぇ! / いやぁ!',																																										],		
+	Damage2_2 :			['哼 / 哼 / 哼 / 可恶 / 见鬼 / 呃啊',																													'哼 / 哼 / 哼',																							'Humph / Humph / Humph / Darn it! / Damn it! / Ugh!',																																																						'ふん / ぐっ / つうっ / くそっ! / ちくしょうが! / うあ!',																																									],		
+	Damage2_3 :			['呃 / 呃 / 呃 / 噢 / 唔 / 我没事',																														'呃 / 呃 / 呃',																							'Argh / Argh / Argh / Oww / Hmmph / I\'m fine.',																																																							'うぅ / くぅ / あぁ / あう / うぅ / 大丈夫',																																												],		
+	Damage2_4 :			['哎哟 / 哎哟 / 哎哟 / 噢 / 你怎敢 / 有点痛',																											'哎喲 / 哎喲 / 哎喲',																					'Aah / Aah / Aah / Ohh / How could you! / It is a little painful.',																																																			'おっと! / うぐっ! / うあっ! / あう / よくも / 少し痛いわね',																																								],		//02		
+	
+	Death_0 :			['噢! 不… 我得撤退了 / 战略性后撤 / 我失误了, 对不起, 对不起 / 我很抱歉 / 计划调整',																	'救命 / 完蛋了 / 糟糕',																					'Oh no! I have to retreat. / Tactical retreat / I made a mistake.I\'m sorry, I\'m sorry. / I\'m deeply sorry. / Plan adjustment.',																																			'あっ! そんな! 撤退しないと! / 戦略的撤退よ / 私の失態だ, ごめんなさい, ごめんなさい… / 本当にごめんなさい / プランを変更しよう',																							],		
+	Death_1 :			['别打我了, 别打我了 / 对不起, 我无法再坚持了… / 好可怕, 好可怕 / 救救我 / 求求你了, 不',																'不要啊 / 嗚嗚 / 啊!',																					'Please stop hitting me, please stop. / I\'m sorry, I can\'t hold on anymore… / The battlefield is just so cruel… / Need…help! / Please, no!',																																'もう叩かないで, 叩かないで, うぅぅぅ… / ごめんなさい, これ以上はもう無理です… / こわいよぉ, こわいよぉ… / 助けてぇ! / お願い, もうやめてぇ…',																				],		
+	Death_2 :			['你们等着! / 这次算你们走运! / 我不会就这么算了的! / 我会让你们付出代价的! / 可恶可恶可恶',															'不! / 不! / 不! /',																					'You better wait and see! / You\'re lucky this time! / I won\'t let it go like this! / I will make you pay! / Darn it, darn it, darn it!',																																	'待ってろよ! / 命拾いしたな! / このままじゃ終わらねえぞ! / 必ず対価を払わせてやるからな! / くそくそくそ!',																													],		
+	Death_3 :			['机体损坏 / 作战终止 / 机体破损 / 战术撤离 / 我要撤离了, 抱歉',																						'機體損壞 / 作戰終止 / 機體破損',																		'Mecha damaged / Operation terminated / Mecha broken / Tactical withdrawal. / I\'m about to withdraw, sorry.',																																								'機体損傷 / 作戦中止 / 機体破損 / 戦術的撤退 / 撤退する, ごめんなさい',																																						],		
+	Death_4 :			['抱歉, 我真的很抱歉 / 糟糕, 我失误了 / 撤退是为了更大的胜利 / 这次先放过你 / 战斗不止于此',															'G / 寄 / 呃',																							'Sorry, I\'m really sorry. / Oops, I made a mistake. / Retreat is for a greater victory. / I\'ll let you go this time. / The battle doesn\'t end here.',																													'ごめんなさい, 本当にごめんなさい（落ち込む） / まずい, ミスったわ / この撤退はより大きな勝利のためよ（渋々と） / 今回は見逃してあげる（歯ぎしり） / 戦いはこれで終わったわけじゃないわ',									],		//02		
+	
+	Change_0 :			['我觉得那样不合适',																																	'我覺得現在這樣不太合適',																				'This isn\'t an appropriate time to do it.',																																																								'それは適切ではないと思うな',																																																],		
+	Change_1 :			['求你了, 别这样, 现在挺好的',																															'求你了, 別這樣, 現在挺好的…',																			'I\'m begging you. Please don\'t do this…',																																																									'お願い, そんなことしないで, 今のままがいいの…',																																											],		
+	Change_2 :			['别想命令我!',																																			'別想命令我!',																							'You don\'t tell me what to do!',																																																											'オレに命令するな!',																																																		],		
+	Change_3 :			['不',																																					'不',																									'No.',																																																																		'断る',																																																						],		
+	Change_4 :			['还是按我的思路吧',																																	'還是按我的作戰思路來吧',																				'Just follow my combat plan, alright?',																																																										'やはり私の作戦で行きましょう',																																																],		//02		
+	
+	ChangeSec_0 :		['能不能再商量一下',																																	'能不能再商量一下',																						'Is there any room for negotiation.',																																																										'もう少し話し合おう',																																																		],		
+	ChangeSec_1 :		['让我跟在你身边吧',																																	'讓我跟在你身邊吧…',																					'Let me stay with you.',																																																													'お願いだから, あなたの傍に居させて…',																																														],		
+	ChangeSec_2 :		['我要主动杀敌, 这一点不妥协',																															'我要主動殺敵, 這一點不妥協',																			'I want to kill enemies. This is non-negotiable.',																																																							'オレはとにかく敵を倒す, これだけは絶対に曲げねえ',																																											],		
+	ChangeSec_3 :		['我要防守',																																			'我要防守',																								'I prefer defense.',																																																														'防衛に入る',																																																				],		
+	ChangeSec_4 :		['我需要风险小一点的作战方案',																															'我需要風險小一點的方案',																				'I need a less risky plan.',																																																												'もっとリスクの低いプランが必要だわ',																																														],		//02		
+	
+	ChangeLast_0 :		['我觉得还是按自己的想法较好',																															'能不能再商量一下',																						'I think it\'s better to stick to my own ideas.',																																																							'私のプランで動く方がいいと思う',																																															],		
+	ChangeLast_1 :		['不不不除了这个… 求你了',																																'不不不除了這個求你了',																					'No no no! Anything but this! Please!',																																																										'やだやだやだ, これだけはダメなの…お願いだから…',																																											],		
+	ChangeLast_2 :		['我拒绝这种懦夫行为',																																	'我拒絕這種懦夫行為',																					'I refuse this act of cowardice.',																																																											'卑怯な真似はお断りだ!',																																																	],		
+	ChangeLast_3 :		['我不涉险',																																			'我不涉險',																								'I don\'t want to take risks.',																																																												'リスクは犯さない',																																																			],		
+	ChangeLast_4 :		['除了这个都行',																																		'除了這個都行',																							'Anything but this.',																																																														'それ以外にないかしら',																																																		],		//02		
+	
+	ChangeSuccess_0 :	['好的 / 好的, 我觉得不错',																																'好的 / 好的, 我覺得不錯',																				'Okay / Okay, sounds good to me.',																																																											'わかった / うん, いいと思う',																																																],		
+	ChangeSuccess_1 :	['你说了算 / 具体要怎么做',																																'你說了算… / 具體需要怎麼做…',																			'You\'re in charge… / What should we do…',																																																									'あなたに任せるよ… / 具体的にどうすれば…',																																													],		
+	ChangeSuccess_2 :	['行 / 得令!',																																			'行 / 得令!',																							'Okay / Roger that!',																																																														'いいぜ / りょーかい!',																																																		],		
+	ChangeSuccess_3 :	['行吧 / 好',																																			'行吧 / 好',																							'Fine / Ok',																																																																'いいよ / はい',																																																			],		
+	ChangeSuccess_4 :	['收到 / 听上去还不错',																																	'收到 / 聽上去不錯',																					'Roger that / Sounds nice.',																																																												'ラジャー / いいわね',																																																		],		//02		
+	
+	VicBad_0 :			['活下来了, 不容易啊 / 又是一天 / 总算是坚持下来了 / 无论多困难我们从未放弃 / 我们证明了自己的实力',													'活下來了, 不容易啊 / 又是一天 / 總算是活下來了',														'I survived. Thank god / Another day has passed / We finally made it through. / No matter how difficult it was, we never gave up. / We proved our strength and worth.',																										'なんとか生き延びたね / また一日生き残ったね / なんとか耐えられたよ / どんなに辛くても, 私達は決して諦めない / 私たちの実力と価値を証明できたよ',																			],		
+	VicBad_1 :			['活下来了, 呜呜呜呜 / 呜呜, 还以为会死掉 / 终于… / 我们胜利了! 呜呜呜呜! / 我战斗到了最后',															'活下來了555 / 嗚嗚, 還以為會死掉 / 終於…',																'We survived, Boo hoo… / Boo hoo, I thought I\'d die. / Finally… / We won! Boo hoo / I fought until the end.',																																								'い, 生き残ったぁ, うぅぅ… / うぅ, 死ぬかと思ったよぉ / やっと終わった… / 私達の勝利です! うぅぅぅ! / 私, 最後まで戦ったよ',																								],		
+	VicBad_2 :			['我就知道会赢! / 理所当然的胜利 / 都不是对手 / 我们扭转了局势! / 没人能够阻止我们',																	'我就知道會贏! / 哼, 理所當然的勝利 / 都不是我的對手',													'I knew I could win! / Hump, an easy victory. / No one can defeat me. / We have turned the tide of the battle! / No one can stop us!',																																		'勝つのはわかりきってたけどな! / ふん, 当然の勝利だ / オレの相手じゃなかったな / これで形勢逆転だ! / 誰もオレたちを止められねえ!',																							],		
+	VicBad_3 :			['胜利 / 赢了 / 歼灭完毕 / 战斗结束 / 任务完成',																										'勝利 / 贏了 / 殲滅完畢',																				'Victory / Won / Enemies wiped out. / Battle over. / Mission accomplished.',																																																'勝利 / 勝った / 殲滅完了 / 戦闘終了 / 任務完了',																																											],		
+	VicBad_4 :			['虽然艰难, 好歹赢了 / 敌人已被尽数消灭 / 作战完成 / 真是场苦战 / 真不容易',																			'雖然很艱難, 好歹贏了 / 敵人已被盡數消滅 / 作戰完成',													'Though tough, we won. / Enemies wiped out. / Combat completed. / It was a hard-fought battle. / It wasn\'t easy.',																																							'厳しかったけど, 勝ったわ / 敵の全滅を確認したわ / 作戦完了 / 厳しい戦いだったわね / 簡単ではなかったわ',																													],		//02		
+	
+	VicNormal_0 :		['胜利, 太好了 / 总算是赢了 / 我们的实力得到了验证 / 我们又一次战胜了他们!',																			'勝利了, 太好了 / 總算是贏了',																			'Wonderful, we won / We finally won / Our strength has been validated. / We have defeated them once again!',																																								'勝利だ, よかった! / ようやく勝ったね! / 私たちの実力が証明されたよ / 私達はまた奴らに勝利した!',																															],		
+	VicNormal_1 :		['赢了吗 / 是不是结束了? / 敌人终于撤退了 / 又撑过了一天! / 啊, 他们撤退了',																			'贏了嗎 / 是不是結束了 / 敵人終於撤退了',																'Did we win / Is it over yet / The enemies have retreated / We have survived another day! / Ah, they are retreating.',																																						'勝ったの? / もう, 終わったの? / 敵がやっと撤退したんだ / また一日を生き抜いたよ! / ああ, 撤退していったんだね',																											],		
+	VicNormal_2 :		['有我在什么仗打不赢! / 敌人落荒而逃 / 不自量力! / 哈! 不堪一击 / 轻轻松松',																			'有我在什麼仗打不贏! / 敵人落荒而逃了! / 不自量力!',													'There\'s not a single war that I can\'t win! / The enemies have fled! / Yeah, flee! / Hah! They are vulnerable. / Easily.',																																				'オレがいる限り, 負けるわけがねえ! / 敵さん尻尾を巻いて逃げやがった! / 身の程知らずめ! / ハッ! 他愛もないな! / 楽勝楽勝!',																									],		
+	VicNormal_3 :		['作战完毕 / 已经尽数歼灭敌军 / 镇压完毕 / 我们成功了, 毫无疑问 / 一切顺利',																			'作戰完畢 / 已盡數殲滅敵軍 / 鎮壓完畢',																	'Combat completed / All enemies killed / Suppression completed / We have succeeded, without a doubt. / Everything went smoothly.',																																			'作戦完了 / 全滅を確認 / 制圧完了 / 私たちの勝利, 間違いなく / 全て順調',																																					],		
+	VicNormal_4 :		['我们的战术取得了成果 / 真不愧是队长 / 我们配合得不错~ / 胜利的感觉令人陶醉 / 队长好战术!',															'我們的戰術取得了成果 / 真不愧是隊長啊 / 我們配合的不錯',												'Our tactics worked perfectly. / The captain is really resourceful. / Our coordination is good. / The feeling of victory is intoxicating. / Captain, great tactics!',																										'我々の戦術が実を結んだわね / さすが隊長! / うまく連携が取れたわ / 勝利の美酒に酔いしれるわ / 素晴らしい戦術だったわ, 隊長!',																								],		//02		
+	
+	VicPerfect_0 :		['终于! / 作战顺利! / 作战顺利! / 我做到了! / 我们取得了完美的胜利! / 大家辛苦了',																		'終於! / 作戰順利! / 作戰順利! / 我做到了!',															'Finally! / Combat completed! / Combat completed! / I did it! / We achieved a perfect victory! / Great job, everyone worked hard!',																																			'やった! / 作戦がうまくいったね! / 順調な作戦だったね! / 私, やったよ! / 完璧な勝利だね! / よくやったよ, 皆お疲れさま!',																									],		
+	VicPerfect_1 :		['我做到了! / 我做到了! / 这一战很顺利 / 赢了赢了 / 这是我们共同的胜利 / 太棒了! 完美胜利!',															'我做到了! / 我做到了! / 終於 / 贏了贏了',																'I did it! / I did it! / Finally / I won. / This is our collective victory. / Fantastic! A perfect victory!',																																								'私, やったよ! / やったぁ! / 順調な戦いだったね / 勝った, 勝ったよぉ! / 私たち皆の勝利だね! / やったぁ! 完璧な勝利だよぉ!',																									],		
+	VicPerfect_2 :		['你高估了你自己 / 记得要感谢我嗷 / 你高估了你自己 / 我们一定能赢 / 理所应当的胜利 / 哈哈, 战无不胜!',													'你高估了你自己 / 記得要感謝我嗷 / 你高估了你自己 / 我早知道會贏',										'You over-estimated yourself. / Don\'t forget to thank me. / You over-estimated yourself. / I knew that we would definitely win. / Hmph, a well-deserved victory. / Hahaha! No one can stop me!',																			'あんたら自分の力を過信しすぎたな / オレへの感謝を忘れるなよ / あんたらはちょっと過信しすぎたな / オレたちなら勝てると思ってたわ! / ふん, 約束された勝利よ / ハハハ! オレたちは無敵だ!',									],		
+	VicPerfect_3 :		['一如既往 / 行动结束 / 行动结束 / 行动结束 / 毫无破绽 / 行动胜于言辞',																					'總有一天, 我會完全替代他們 / 行動結束 / 行動結束 / 行動結束',											'As always / Operation completed / Operation completed / Operation completed / Actions speak louder than words. / Without any flaws.',																																		'いつもの通りの結果 / オペレーション終了 / 作戦終了 / ミッション終了 / 行動は言葉よりも雄弁 / 欠陥なし',																													],		
+	VicPerfect_4 :		['结束了 / 它坏了吗 / 真是自杀袭击 / 嘿, 看见我们的胜利了吗? 那简直是太酷了',																			'結束了 / 它壞了嗎 / 真是自殺襲擊',																		'It\'s over. / Is it broken. / It\'s really a suicide attack. / Hey, see our victory? It\'s absolutely cool!',																																								'これでおしまいね / 壊れたかしら? / まさに自殺行為だったわ / ねえ, 私たちの勝利を見た? かっこよかったでしょう! （誇らしげに）',																								],		//02		
+	
+	StartBad_0 :		['已发现敌人 / 新的一天开始了 / 作战行动开始 / 大家注意安全',																							'已發現敵人 / 新的一天開始了 / 作戰行動開始',															'Enemy discovered. / A new day has begun. / Combat operation commences. / Everyone, stay safe.',																																											'敵を発見 / 新しい一日が始まるよ / 作戦行動開始 / 皆, 気をつけて',																																							],		
+	StartBad_1 :		['又回到了地狱… / 我会尽力的… / 唔…',																													'又回到了地獄… / 我會盡力的… / 唔…',																	'Back to hell again… / I\'ll do my best… / Hmm…',																																																							'また地獄に戻された… / 頑張るよ… / うぅ…',																																													],		
+	StartBad_2 :		['我已经等不及了 / 我将击溃所有的敌人! / 我会把你们全都干掉',																							'我已經等不及了 / 我將擊潰所有敵人 / 沖啊',																'I can\'t wait any longer. / I will crush all enemies in sight. / I will take all of you down.',																																											'もう待ちきれねえ! / オレが全部ぶっ潰す! / お前ら皆殺しだ!',																																								],		
+	StartBad_3 :		['作战开始 / 开始战斗 / 开始行动 / 进入战斗配置',																										'作戰開始 / 進入戰鬥配置 / 開始鎮壓',																	'Operation commences. / Entering combat configuration. / Suppression begins. / Let\'s start moving.',																																										'作戦開始 / 戦闘配置に移行 / 戦闘開始 / 行動開始',																																											],		
+	StartBad_4 :		['愿你们安息 / 啊, 战争真是悲哀 / 又要开始互相残杀了 / 看来我们不太走运',																				'願你們安息 / 啊, 戰爭真是悲哀 / 又要開始互相殘殺了',													'Rest in peace. / Ah, how merciless the war is. / We are going to kill each other again. / It seems we are having bad luck.',																																				'安らかな眠りを / ああ, 戦争はとても悲しいものね / また殺し合いが始まるのね / 私たち, ついてないみたい',																													],		//02		
+	
+	StartNormal_0 :		['已发现敌人 / 新的一天开始了 / 作战行动开始 / 出发',																									'已發現敵人 / 新的一天開始了 / 作戰行動開始',															'Enemy discovered. / A new day has begun. / Combat operation commences. / Let\'s go.',																																														'敵を発見 / 新しい一日が始まるよ / 作戦行動開始 / 出発!',																																									],		
+	StartNormal_1 :		['原谅我吧 / 真想一个人静静 / 我没事 / 我能坚持下来',																									'原諒我吧… / 真想一個人靜靜 / 我沒事, 走吧',															'Forgive me… / I want to be alone right now. / I\'m fine. Let\'s go. / I can endure this.',																																													'許して… / 一人にしてほしいよぉ / 私は大丈夫, 行こう / 私なら耐えられる',																																					],		
+	StartNormal_2 :		['上吧 / 你瞅啥 / 真烦人 / 大家打起精神',																												'上吧 / 你瞅啥 / 真煩人',																				'Let\'s go. / What are you looking at / How annoying. / Cheer up.',																																																			'行くぞ! / なに見てんだ? / うざってえな / みんな元気出せ!',																																									],		
+	StartNormal_3 :		['集中精神 / 我在试 / 原谅我吧 / 再见了',																												'現在不想說這個 / 我在試 / 原諒我吧',																	'Not now! / I\'m trying… / Forgive me… / Goodbye…',																																																							'集中して / 今やってる / 許して / さようなら',																																												],		
+	StartNormal_4 :		['这一切是不可避免的吗? / 真希望能一直并肩作战啊! / 新的一天, 同样的风景',																				'你們怎麼會變成這樣了呢 / 真希望能一直並肩作戰啊',														'How come you have all become like this. / I really wish that we can fight alongside forever. / A new day, same scenery.',																																					'どうにかして避けられないのかしら / ずっと一緒に戦えることを願っているわ / 新しい一日, 同じ景色',																															],		//02		
+	
+	StartPerfect_0 :	['终于开始了 / 我准备好了',																																'終於開始了',																							'It finally begins. / I am ready.',																																																											'ついに始まったね / 準備万端だよ',																																															],		
+	StartPerfect_1 :	['别慌… 别慌… / 没事的, 没事的',																														'別慌! 別慌!',																							'Stay calm! Stay calm! / It\'s okay, it\'s okay.',																																																							'落ち着いて… 落ち着いて… / 大丈夫, 大丈夫だから…',																																											],		
+	StartPerfect_2 :	['就算你不说, 我也会上的 / 别跟丢了!',																													'就算你不說, 我也會上的',																				'I will charge even if you don\'t say anything. / Don\'t get left behind!',																																																	'言われなくてもやってやるよ! / ちゃんとついてこいよ!',																																										],		
+	StartPerfect_3 :	['发现目标 / 锁定目标',																																	'發現目標',																								'Target spotted. / Lock on target.',																																																										'ターゲット捕捉 / ターゲットロックオン',																																													],		
+	StartPerfect_4 :	['又要开始互相残杀了 / 我又一次回到了这里',																												'又要開始互相殘殺了',																					'We are going to kill each other again. / I have returned here once again.',																																																'また殺し合いが始まるわ / またここに戻ってきてしまったわ',																																									],		//02		
+	
+	GiftDis_0 :			['呃, 我真不喜欢这个 / 谢谢, 但我不太喜欢这个 / 嗯… 哈哈… 谢谢…',																						'呃, 我真不喜歡這個',																					'Er. I really don\'t like it. / Thank you, but I don\'t really like it. / Um…haha…thank you.',																																												'ええと, これは全然好きじゃないかな / ありがとう, でもこれはあまり好きじゃないんだ / うーん… はは… ありがとう, ね',																											],		
+	GiftDis_1 :			['虽然不知道有啥用, 不过谢谢 / 我能用它做什么呢… / 噢… 谢… 谢谢',																						'雖然不知道有啥用, 不過謝謝 / 我能用它做什麼呢…',														'Thanks, though I don\'t know what I could use it for. / What can I use it for… / Oh…thank you',																																											'なんの役に立つかわからないけど, ありがとう / これ, 何に使えるのかな…? / あっ… あ…ありがとう',																																],		
+	GiftDis_2 :			['什么鬼东西? ! / 容我拒绝 / 呃… 我只能保证不会扔进垃圾桶',																								'什麼鬼東西? ! / 容我拒絕',																				'What is it?! / I have to refuse. / Uh… I can only promise not to throw it in the trash.',																																													'なんだこれ? ! / いらね / あー… 捨てはしねえよ',																																											],		
+	GiftDis_3 :			['不需要 / 可以还给你吗 / 同样的东西下次就不要给我了',																									'不需要 / 可以還給你嗎',																				'I don\'t need it. / Please take it back. / Please don\'t give me the same thing next time.',																																												'いらない / 返してもいい? / 次は同じものを渡さないで',																																										],		
+	GiftDis_4 :			['谢谢, 不过你应该留着它 / 真没必要… / 送的好, 下次别送了',																								'謝謝, 不過你應該留著它 / 真沒必要…',																	'Thanks, but you should keep it. / Not necessary… / You are so nice. But please don\'t give me any next time.',																																								'ありがとう, でもそれはあなたが持ってて / まったくいらないわ… / 素敵な贈り物ね, 次は贈らないでちょうだい',																													],		//02		
+	
+	GiftNormal_0 :		['谢谢 / 还不错 / 有意思 / 我不讨厌这个… / 我应该用得到它',																								'哦謝謝 / 還不錯 / 有意思 / 我不討厭這個 / 我能用他做什麼呢…',											'Oh, thanks / Not bad / Kind of interesting / I don\'t hate it / What can I do with it…',																																													'ああ, ありがとう / 悪くないね / 面白いね / これ, 嫌いじゃないよ / これは役に立ちそう',																																		],		
+	GiftNormal_1 :		['谢谢… / 这是… 什么? / 噢, 谢谢你 / 谢谢你送给我礼物',																									'謝謝… / 這啥啊 / 很感謝',																				'Thanks… / What is…this? / Oh, thank you. / Thank you for giving me a gift.',																																																'ありがとう… / これは… なに? / あっ, ありがとう / ありがとう, これを贈ってくれて',																																			],		
+	GiftNormal_2 :		['我能用这作甚 / 你想拿回去也行 / 谢谢… / 呃, 勉强还行吧',																								'我能用這作甚 / 你想拿回去也行 / 謝謝…',																'What can I do with it / Take it back if you want / Thanks / Um, it\'s okay, I guess.',																																														'これ何に使うんだ? / 欲しいなら返すぞ / ありがとう… / えっと, それなりにイケてるかな',																																		],		
+	GiftNormal_3 :		['谢谢 / 这是什么 / 我不知道这个能干嘛 / 挺好的, 谢谢',																									'謝謝 / 這啥 / 我不知道這個能幹嘛',																		'Thanks. / What is this? / I don\'t know what to do with it. / It\'s fine, thank you.',																																														'ありがとう / これは何 / これの用途が分からない / 悪くない, ありがとう',																																					],		
+	GiftNormal_4 :		['这倒也不是我的风格 / 我觉得这用处不大… / 不过我觉得这个可能更适合你 / 这大概不能列入我的收藏',														'這倒也不是我的風格 / 我覺得這對我用處不大… / 不過我覺得這個可能更適合你',								'This isn\'t my style. / I don\'t find it useful… / But I feel that you may actually use it. / Hmm…I guess this won\'t make it into my collection.',																														'素敵な贈り物ね次はおくらないで頂戴 / 私の趣味じゃないわ / 私にはあまり役に立たないと思うんだけど… / これはあなたの方が似合うんじゃないかしら? / うーん… これは多分, 私のコレクションには入れられないわ',					],		//02		
+	
+	GiftLike_0 :		['太棒了吧! / 我喜欢它! / 送我的吗? 谢谢! / 我太喜欢它了! / 我都还没送过你什么呢',																		'太棒了吧! / 我喜歡它 / 送我的嗎, 謝謝 / 我太喜歡它了 / 我都還沒送過你什麼呢',							'This is amazing! / I like it. / Is it for me? Thank you. / I like it so much. / I haven\'t gotten you anything.',																																							'これいいね! / これ好きだよ! / 私にくれるの? ありがとう! / とても気に入ったよ! / 私からはまだ何も贈れていないのに!',																										],		
+	GiftLike_1 :		['我太喜欢了 / 真的太感谢了 / 谢谢! 我很喜欢 / 这对我来说很有意义 / 我真的很喜欢',																		'我太喜歡了! / 真的太感謝了! / 感恩! / 這對我來說很有意義 / 我真的很喜歡這個',							'I love it. / Thank you so much. / Wow! Thank you! I really like it! / This means a lot to me. / I really like it.',																																						'これ大好き! / 本当にありがとう! / うぅ! ありがとう! これ大好き! / これ, 私が欲しかったものなの! / とっても気に入ってるよ!',																								],		
+	GiftLike_2 :		['我才不需要呢 / 呃, 谢了嗷 / 有时间我会看看的 / 挺好的 / 可能会有用吧',																				'我才不需要呢 / 呃, 謝了嗷 / 有時間我會看看的 / 還行吧也就 / 可能會有用吧',								'I don\'t need it / Er. Thanks. / I\'ll check it when I have time. / Not bad. / It may come in handy.',																																										'別にいらないんだけどなあ / あー, さんきゅ / 時間がある時に見てやるよ / 悪くないぜ / いつか役に立つかもしれないな',																											],		
+	GiftLike_3 :		['我很喜欢, 谢谢 / 哦, 真令人惊喜 / 感谢 / 谢谢, 不错 / 我真的很喜欢这个',																				'喜歡, 謝謝 / 哦, 真令人驚喜 / 感謝 / 謝謝, 不錯 / 我真的很喜歡這個',									'I really like it, thank you. / Oh. What a surprise. / Thank you. / Thank you. This is so nice. / I really like it.',																																						'好き / 気に入った, ありがとう / おお, これは予想外 / 感謝 / ありがとう, 悪くない / これ, すごく気に入った',																												],		
+	GiftLike_4 :		['哇, 送我的? / 真是惊艳的礼物呀~ / 哈哈, 谢了 / 真不错 / 真的很开心, 谢谢',																			'wow, 送我的? / 真令人驚豔呀 / 哈哈, 謝了 / 針不戳 / 真的很開心, 謝謝',									'Wow, this is for me? / How amazing! / Haha. Thanks! / It\'s really nice. / I feel so happy! Thanks.',																																										'あら, これを私に? / とても良い贈り物だわ! / ふふ, ありがとう / とっても悪くないわ / 本当にうれしいわ, ありがとう',																											],		//02		
+	
+	GiftPerfect_0 :		['和你并肩作战令我感到荣幸 / 你送给我这么美妙的礼物 / 我太喜欢了! 谢谢你花这么多心思给我选礼物',														'和你並肩作戰令我感到榮幸',																				'It\'s an honor to fight alongside you. / You gave me such a wonderful gift! I feel really lucky! / I love it so much! Thank you for putting so much thought into choosing a gift for me.',																					'あなたと一緒に戦えて光栄よ / こんなに素敵な物を贈ってくれるなんて! 私ったら本当に幸せ者だなあ! / これ大好き! プレゼント選びにも気を回してくれて, ありがとう',																],		
+	GiftPerfect_1 :		['今晚别去餐厅了, 我准备了些好吃的 / 我太喜欢了, 我做了些饼干, 要一起吃吗 / 这礼物太让我开心了',														'今晚別去餐廳了, 我準備了些好吃的~',																	'Let\'s not go to the restaurant tonight. I\'ve prepared some nice food! / Oh my, thank you, I love it so much. I made some cookies, would you like to have them together? / Is this for me? Wow… This gift makes me so happy, thank you for your thoughtfulness!',			'今夜はレストランに行かないで, 美味しい料理を用意するから! / うそ, ありがとう! 私, これ大好き! クッキーを作ったから一緒に食べよう? / これを私に? わああ…素敵な贈り物をありがとう, 私, とっても嬉しいよ!',					],		
+	GiftPerfect_2 :		['我亲自来感谢你, 开心吧 / 哼, 这个礼物还不错嘛, 呃, 我是说, 我很喜欢啦! / 哇! 嗯… 我很喜欢啦…',														'我親自來感謝你, 感到開心吧',																			'Do you feel happy that I come here to thank you in person. / Hmph, this gift is not bad after all. Um, I mean, I really like it! / Oh…Um, I really like it…',																												'オレがわざわざ感謝してるんだ, 嬉しいだろ? / ふん, この贈り物は悪くないなえっと, 気に入ったって言ってるんだよ! / うお! うん, すげぇ好きだけど…',																			],		
+	GiftPerfect_3 :		['队长, 我会为你准备好一切 / 谢谢, 我想要这个很久了 / 我很喜欢, 我能感受到你花了很多心思, 谢谢',														'隊長, 我會為你準備好一切的',																			'Captain, I\'ll get everything ready for you / Thank you, I\'ve been wanting this for a long time. / I really like it, I can feel that you put a lot of thought into it. Thank you.',																						'隊長, 準備は万端 / ありがとう, これ, ずっと欲しかった / とても気に入った, 隊長の思いが伝わる, ありがとう',																													],		
+	GiftPerfect_4 :		['我得承认我们是一路人了 / 看来你是通过某种神秘力量知道了我的心愿 / 简直要为你颁发最佳礼物奖了',														'你得承認我們是一路人了',																				'I got to admit that we\'re the same type / It seems like you knew my wish through some mysterious power! Thank you for your superpower! / I should give you the award for the best gift! I love it so much!',																'認めざるを得ないわ, 私たちは同志よ! / 神通力で私の欲しい物がわかったのかしら! あなたの超能力に乾杯! / これ大好きよ! ベストプレゼント賞をあげたいくらい!',																	],		//02		
+	
+	CommandRefuse_0 :	['请等一下',																																			'等會',																									'Please wait a moment.',																																																													'ちょっと待って',																																																			],		
+	CommandRefuse_1 :	['我做不到',																																			'我做不到…',																							'I can\'t do it…',																																																															'私には無理だよぉ…',																																																		],		
+	CommandRefuse_2 :	['正忙着呢, 别打扰我',																																	'等會再說!',																							'I\'m busy! Wait half a jiff.',																																																												'オレは忙しいんだ! 邪魔するな!',																																															],		
+	CommandRefuse_3 :	['不要',																																				'等會',																									'No.',																																																																		'いや',																																																						],		
+	CommandRefuse_4 :	['我现在已经忙不过来',																																	'有點忙不過來',																							'I can\'t handle it right now.',																																																											'今は忙しいの',																																																				],		//02		
+	
+	Entrance_0 :		['Hi, 我在这 / 是你来太早了 / 要做点什么呢 / 开工~ / 我等不及要开始了',																					'Hi, 我在這 / 是你來太早了 / 要做點什麼呢 / 開工~ / 我等不及要開始了',									'Hi, I\'m here. / You\'re too early. / What should we do. / Start working! / I can\'t wait any longer.',																																									'ハァイ, 私はここだよ / 来るのが早すぎだよ / 何をしようか? / 仕事のじか～ん / もう待ちきれないね',																															],		
+	Entrance_1 :		['啊, 我在 / 我来晚了吗 / 我来啦! / 你还好吗 / 你怎么样啊',																								'啊, 我在 / 我來晚了嗎 / 來力 / 你還好嗎 / 你怎麼樣啊',													'Ah, I\'m here. / Am I late? / I\'m coming! / Are you alright? / How are you?',																																																'あっ, 私はここにいるよ / 遅れちゃった? / 今来たよ! / 大丈夫? / 元気?',																																						],		
+	Entrance_2 :		['有什么能帮到你的吗 / 我在呢 / 你有什么需要吗 / 你需要我在这吗',																						'有什麼能幫到你的嗎 / 我在呢 / 你有什麼需要嗎 / 你需要我在這嗎',										'Is there anything I can help with? / I\'m here. / Need any help? / Do you need me to be here?',																																											'何かお困りかい? / オレはここに居るぞ / 何か必要なものはあるか? / オレにここに居て欲しいのか?',																																],		
+	Entrance_3 :		['我在 / 来了 / 和往常一样的时间 / 来了 / 不好意思来晚了',																								'我在 / 來了 / 和往常一樣的時間 / 來了 / 來晚了點',														'I\'m here. / Coming. / The same time as usual. / Coming. / Sorry for being late.',																																															'私はここ / 到着 / いつもと同じ時間 / 来た / 少し遅れた',																																									],		
+	Entrance_4 :		['今天你们怎么样 / 祝你有愉快的一天 / 我在了 / 我们来找点乐子吧 / 要开始了吗',																			'今天你們怎麼樣呀 / 祝你有愉快的一天 / 我在了 / 我們來找點樂子吧 / 要開始了嗎',							'How are you all today. / Wish you have a nice day. / I\'m here. / Let\'s have some fun. / Is it time to start.',																																							'今日の調子はどう? / 良い一日を / 私はここよ / 楽しみましょう / そろそろ始めましょう?',																																		],		//02		
+	
+	Exit_0 :			['-',																																					'-',																									'-',																																																																		'-',																																																						],		
+	Exit_1 :			['-',																																					'-',																									'-',																																																																		'-',																																																						],		
+	Exit_2 :			['-',																																					'-',																									'-',																																																																		'-',																																																						],		
+	Exit_3 :			['-',																																					'-',																									'-',																																																																		'-',																																																						],		
+	Exit_4 :			['-',																																					'-',																									'-',																																																																		'-',																																																						],		//02		
+	
+	Refuse_0 :			['等再熟一点吧',																																		'等再熟一點吧',																							'Wait until we know each other better.',																																																									'もう少しお互いをよく知ってからにしよう',																																													],		
+	Refuse_1 :			['有点不好意思啊…',																																		'有點不好意思啊…',																						'I feel kind of embarrassed…',																																																												'ちょっと恥ずかしいよ…',																																																	],		
+	Refuse_2 :			['感觉有点不好意思哎',																																	'感覺有點不太好意思',																					'I\'m a little bit embarrassed.',																																																											'ちょっと恥ずかしいぞ…',																																																	],		
+	Refuse_3 :			['等我们再熟一点吧',																																	'等我們再熟一點吧',																						'Wait until we know each other better.',																																																									'もっと親しくなってから',																																																	],		
+	Refuse_4 :			['我今天刚好有点别的事…',																																'我今天剛好有點別的事',																					'I have something else to do today.',																																																										'ごめんね, 今日はたまたま別の用事があるの',																																													],		//02		
+	
+	Meet_0 :			['队长, 你好! / 队长, 你好!',																															'隊長, 你好! / 隊長, 你好!',																			'Hello, captain! / Hello, captain!',																																																										'隊長, こんにちは! / 隊長, ハロー!',																																														],		
+	Meet_1 :			['队长, 是你? / 你是, 队长?',																															'隊長, 是你? / 你是, 隊長?',																			'Is that you, captain? / You are the Captain?',																																																								'隊長は, あなた? / あなたが, 隊長?',																																														],		
+	Meet_2 :			['让我看看有什么新面孔',																																'讓我看看有什麼新面孔',																					'Let me see if there are any new faces.',																																																									'どんな新顔が居るのか見せてもらおうじゃん',																																													],		
+	Meet_3 :			['赭石色, 请记住这个名字吧',																															'赭石色, 記住這個名字吧',																				'Ocher, remember this name.',																																																												'オーカー, この名前を覚えておいて',																																															],		
+	Meet_4 :			['还记得我是谁吗 / 还记得我吗?',																														'還記得我是誰嗎~ / 還記得我是誰嗎~',																	'Do you remember who I am? / Do you remember who I am?',																																																					'私が誰か覚えてる? / 私のこと覚えてる?',																																													],		//02		
+	
+	Battle_0 :			['抱歉, 你没有机会的 / 冲啊! / 冲啊! / 不会让你过去的 / 抱歉了',																						'抱歉, 你沒有機會的 / 沖啊! / 沖啊!',																	'Sorry, you don\'t have any chance. / Charge! / Charge! / I won\'t let you pass. / I\'m sorry. /',																																											'悪いけど, チャンスはあげないよ / 行っけぇ! / 突撃! / ここは通さないから / 悪いね',																																			],		
+	Battle_1 :			['开, 开火! / 开, 开火! / 尝尝这个! / 尝尝这个! / 我会尽我所能 / 我没有退路',																			'開, 開火! / 開, 開火! / 嘗嘗這個! / 嘗嘗這個! /',														'F-fire! / F-fire! / Take this! / Take this! / I will do my best. / I have no choice…',																																														'う, 撃ちます! / は, 発射! / これでも喰らっちゃえ! / これでもどうぞ! / できる限りは頑張るよ / もう後戻りできないよぉ',																										],		
+	Battle_2 :			['挡路! / 想起一张让人火大的脸 / 我是天生杀手! / 让开! 让开! 让开! / 我在这呢',																			'擋路! / 想起一張讓人火大的臉 / 我是天生殺手',															'Get out of my way. / A very annoying face springs up in mind. / I am a born killer. / Move aside! Move aside! Move aside! / I\'m here.',																																	'邪魔だ! / 嫌な顔を思い出したぜ / オレは天性の殺し屋だ / どけ! どけ! どけ! / オレはここだぜ',																																],		
+	Battle_3 :			['和你的好运说再见吧 / 我会看着你咽气的 / 这无关个人恩怨… / 我看见你了 / 再见了',																		'和你的好運說拜拜吧 / 我會看著你咽氣的 / 這無關個人恩怨',												'Say goodbye to your good luck. / I\'ll watch you breathe your last. / This isn\'t personal. / I see you. / Goodbye.',																																						'幸運にさようなら / 最期を見届けてあげる / 個人的に恨みはないけど / 見えてる / さよなら',																																	],		
+	Battle_4 :			['看到你了 / 到我了 / 再陪你玩玩 / 送你个礼物 / 别着急, 我来了',																						'找到你了 / 到我了 / 再陪你玩玩',																		'I found you. / My turn. / Another round. / I\'ll give you a gift. / Don\'t worry, I\'m coming~',																																											'見つけたわ / 私の番ね / ちょっと遊んであげる / プレゼントよ! / 大丈夫, 今行くわよ?!',																																		],		//02		
+	
+	Promoting_0 :		['我离目标更近了吗… 不, 没什么 / 这是我想要的吗… / 强化完成! / 强化完成!',																				'我離目標更近了嗎… 不沒什麼 / 這是我想要的嗎… / 強化完成 / 強化完成',									'Am I closer to the target… Never mind / Is this what I wanted… / Enhance completed / Enhance completed',																																									'目標に近づいたかな? …いいや, 何でもないよ / これはまさに私が欲しかったものだよ / 強化完了 / 強化バッチリだね',																												],		
+	Promoting_1 :		['我感到充满了力量! / 我一定会回应您的期待! / 谢谢你为我这么费心',																						'我感到充滿了力量! / 我一定會回應您的期待! / 我覺著不錯誒',												'I feel powerful! / I won\'t let you down! / I like it. / Thank you for taking so much effort for me.',																																										'力がみなぎってきたよ! / あなたの期待に応えてみせるよ! / ありがとう, 私なんかのために',																																		],		
+	Promoting_2 :		['让我变强保护你吧 / 一个正确的决定 / 我感到了更大的责任',																								'讓我變強保護你吧 / 一個正確的決定 / 我感到了更大的責任',												'Let me become stronger and protect you. / A right decision. / I feel bigger responsibilities.',																																											'強くなって, お前を守ってやるよ / 良い判断だ / どーんと任せな',																																								],		
+	Promoting_3 :		['一点点变强 / 我的价值得到了认可 / 强化完成',																											'一點點變強 / 我的價值得到了認可 / 強化完成',															'Grow stronger bit by bit. / My worth is recognized. / Enhance completed.',																																																	'少し強くなった / 私の価値が認められた / 強化完了',																																											],		
+	Promoting_4 :		['超进化 / 战斗会结束的更快 / 不会让你失望的',																											'超進化! / 戰鬥會結束的更快了 / 不會讓你失望的',														'Super evolution! / The battle will end quicker. / I won\'t let you down.',																																																	'超進化! / これで戦いがもっと早く終わるかしらね / がっかりすることはないわ',																																				],		//02		
+	
+	Touch_0 :			['怎么了? / 我在的, 不用担心 / 嗯? / 我刚泡好了咖啡, 你要喝一杯吗?',																					'怎么了? / 我在的, 不用担心 / 嗯? / 我刚泡好了咖啡, 你要喝一杯吗?',										'What\'s wrong? / I\'m here, don\'t worry. / Hmm? / I just made some coffee, would you like some?',																																											'どうしたの? / 私はここにいるよ, 心配しないで / うん? / 丁度コーヒーを淹れたところだけど, どう?',																															],		
+	Touch_1 :			['噢! 怎么啦? / 啊, 不好意思我刚在想事情 / 怎么了? / 队长, 我刚做了些小蛋糕, 要尝尝吗?',																'噢! 怎么啦? / 啊, 不好意思我刚在想事情 / 怎么了? / 队长, 我刚做了些小蛋糕, 你要尝尝吗?',				'Oh!  / What\'s the matter? / Oh, sorry, I was lost in thought. / What\'s the matter? / Captain, I just made some small cakes. Would you like to try them?',																												'わぁっ! / どうしたの? / ごめん, ちょっと考え事をしてたの / どうしたの? / 隊長, カップケーキを作ったんだけど, 食べる?',																										],		
+	Touch_2 :			['干嘛 / 哼 / 请离我远点! 啊… 我不是这个意思 / 啊? 在做新的首饰, 不要打扰我~',																			'干嘛 / 哼? / 请离我远点! 啊… 不, 我不是这个意思! / 啊? 我在做新的首饰, 不要打扰我~',					'What\'s up? / Huh? / Please keep your distance! Ah… No, I didn\'t mean it like that. / Huh? I\'m working on a new piece of jewelry, please don\'t disturb me!',																											'なんだ? / ふん? / オレから離れろ! ああ…..ちが, そういうつもりじゃなかったんだ（慌てる） / あん? オレは新しいアクセサリーを作ってんだ, 邪魔すんな!',																		],		
+	Touch_3 :			['怎么了? / 我正要看书 / 有什么事吗? / 怎么了? 你也想要看这本书吗?',																					'怎么了? / 我正要看书 / 有什么事吗? / 怎么了? 你也想看这本书吗?',										'What\'s wrong? / I am about to read a book. / Is there something you need? / What\'s wrong? Are you interested in this book too?',																																			'どうしたの? / これから本を読むところ / 何か用? / どうしたの? あなたもこの本を読みたい?',																																	],		
+	Touch_4 :			['怎么了? / 再戳我… 我要反击咯 / 我肩膀上掉了什么吗? / 嗯? 要一起去健身房吗?',																			'怎么了? / 再戳我…我就要反击咯? / 我肩膀上掉了什么吗? / 嗯? 要一起去健身房吗?',							'What\'s wrong? / Poke me again and I\'ll retaliate, you know? / Did something fall off my shoulder? / Hmm? Do you want to go to the gym together?',																														'どうしたの? / もう一度つついたら…反撃するわよ? / 私の肩に何か落ちてたかしら? / うん? 一緒にジムに行きたいの?',																												],		//02		
+	
+	Login_0 :			['铁骑少女',																																			'鐵騎少女',																								'Cavalry Girl',																																																																'鐵騎の少女',																																																				],		
+	Login_1 :			['铁骑少女',																																			'鐵騎少女',																								'Cavalry Girl',																																																																'鐵騎の少女',																																																				],		
+	Login_2 :			['铁骑少女',																																			'鐵騎少女',																								'Cavalry Girl',																																																																'鐵騎の少女',																																																				],		
+	Login_3 :			['铁骑少女',																																			'鐵騎少女',																								'Cavalry Girl',																																																																'鐵騎の少女',																																																				],		
+	Login_4 :			['铁骑少女',																																			'鐵騎少女',																								'Cavalry Girl',																																																																'鐵騎の少女',																																																				],		//02		
+	
+	Shop_0 :			['好久没出来逛街了',																																	'好久沒出來逛街了',																						'It\'s been quite a while since we went shopping',																																																							'久しぶりに買い物だぁ～',																																																	],		
+	Shop_1 :			['去饰品店逛逛吧',																																		'去飾品店逛逛吧',																						'Let\'s go to the trinket shop',																																																											'アクセサリーショップに行こう',																																																],		
+	Shop_2 :			['还是随便逛吧',																																		'包包太貴了, 還是隨便逛吧',																				'The bags are too expensive, Let\'s just look around',																																																						'バッグが高いから, 適当に見て回るか',																																														],		
+	Shop_3 :			['去书店逛逛',																																			'去書店逛逛吧',																							'Let\'s go to the bookstore',																																																												'本屋に行こ',																																																				],		
+	Shop_4 :			['去健身房',																																			'去健身房吧',																							'Go to the gym',																																																															'ジムへ行こうかしら',																																																		],		//02		
+	
+	ShopAi_0 :			['走吧~',																																				'走吧~',																								'Let\'s go!',																																																																'行こう～',																																																					],		
+	ShopAi_1 :			['我准备好啦~',																																			'我準備好啦~',																							'I’m ready!',																																																																'準備OK～',																																																					],		
+	ShopAi_2 :			['等好久了, 我们走',																																	'等你好久了, 我們走',																					'I\'ve been waiting for you, Let\'s go',																																																									'待っていたぜ, 行こう',																																																		],		
+	ShopAi_3 :			['可以去书店吗?',																																		'可以去書店嗎',																							'Can we go to the bookstore',																																																												'本屋に行ってもいい?',																																																		],		
+	ShopAi_4 :			['去哪听你的',																																			'去哪聽你的',																							'It\'s your call',																																																															'どこに行きたいの?',																																																		],		//02		
+	
+	Restraunt_0 :		['终于可以小酌一番了',																																	'終於可以小酌一番了',																					'We can finally have some drinks',																																																											'やっと一杯やれるよ',																																																		],		
+	Restraunt_1 :		['有点不适应这种场合',																																	'有點不適應這種場合呢',																					'I’m not very used to this occasion',																																																										'こういう場所な慣れないなぁ',																																																],		
+	Restraunt_2 :		['今晚多喝点',																																			'今晚要多喝點',																							'We must drink until we are completely drunk',																																																								'今夜はたくさん飲むぞ',																																																		],		
+	Restraunt_3 :		['更想在家里看书',																																		'雖然還是更想在家裏看書',																				'Although I prefer reading a book at home',																																																									'家で本を読みたい',																																																			],		
+	Restraunt_4 :		['哈哈, 今晚不醉无归',																																	'哈哈, 今晚不醉無歸',																					'Haha. Let’s get hammered tonight',																																																											'はは, 今夜は酔わずに帰れないわね',																																															],		//02		
+	
+	RestrauntAi_0 :		['终于可以小酌一番了',																																	'終於可以小酌一番了',																					'We can finally have some drinks',																																																											'やっと一杯やれるよ',																																																		],		
+	RestrauntAi_1 :		['可以放松一下了',																																		'可以放鬆一下了',																						'I can finally relax a bit',																																																												'やっとリラックスできるね',																																																	],		
+	RestrauntAi_2 :		['别发呆, 走',																																			'別發呆了, 走',																							'Hey, wake up! Let\'s go',																																																													'ぼーっとしないで, 早く行こうぜ',																																															],		
+	RestrauntAi_3 :		['走吧…',																																				'走吧',																									'Let\'s go',																																																																'さあ, 行こう',																																																				],		
+	RestrauntAi_4 :		['就尽情喝吧, 我会把你背回去的',																														'盡情喝吧, 我會把你背回去的',																			'Drink all you want. I\'ll carry you back',																																																									'好きなだけ飲んでもいいよ, 私が家まで運んであげるから',																																										],		//02		
+	
+	Cinema_0 :			['找个好位置吧',																																		'找個好位置吧',																							'Find a good seat',																																																															'いい席を探そ',																																																				],		
+	Cinema_1 :			['往后面坐',																																			'往後面坐',																								'Sit back',																																																																	'後ろの方に座ろうかな',																																																		],		
+	Cinema_2 :			['往前面坐',																																			'往前面坐',																								'Sit facing forward',																																																														'前の方に座るか',																																																			],		
+	Cinema_3 :			['找个安静位置',																																		'找個安靜的位置吧',																						'Find a quiet place',																																																														'静かな席を探そ',																																																			],		
+	Cinema_4 :			['坐哪里呢',																																			'坐哪里呢',																								'Where to sit',																																																																'どこに座ろっかな',																																																			],		//02		
+	
+	CinemaAi_0 :		['你想坐哪',																																			'你想坐哪',																								'Where do you want to si\'t',																																																												'どこに座る?',																																																				],		
+	CinemaAi_1 :		['坐后面吧',																																			'坐後面吧',																								'Sit in the back',																																																															'後ろの方に座ろ?',																																																			],		
+	CinemaAi_2 :		['坐前面吧',																																			'坐前面吧',																								'Sit in the front',																																																															'前に行こうぜ!',																																																			],		
+	CinemaAi_3 :		['找个没人地方',																																		'找個沒人的地方吧',																						'Find a place where nobody is around',																																																										'誰もいない場所を',																																																			],		
+	CinemaAi_4 :		['我们坐哪哈哈',																																		'坐哪哈哈',																								'Where are you sitting? Haha',																																																												'アハハ, どこに座ってるの?',																																																],		//02		
+	
+	Beach_0 :			['清凉的盐水, 真不错',																																	'清涼的鹽水, 真不錯',																					'The cool and refreshing water with salt is so nice',																																																						'海水が冷たくて気持ちいい, 悪くないね',																																														],		
+	Beach_1 :			['游泳去咯',																																			'游泳去咯',																								'Let\'s go swimming',																																																														'泳ぎに行こう',																																																				],		
+	Beach_2 :			['防晒霜, 啊都带好了',																																	'防曬霜, 啊都帶好了',																					'Sunscreen? I have it packed already',																																																										'日焼け止めは, 全部持った',																																																	],		
+	Beach_3 :			['哪里可以看书呢',																																		'哪里可以看書呢',																						'Where can I read a book',																																																													'どこかで本を読もうか',																																																		],		
+	Beach_4 :			['晒日光浴咯',																																			'去曬日光浴咯',																							'Let’s go sunbathing',																																																														'日光浴に出発!',																																																			],		//02		
+	
+	BeachAi_0 :			['来呀',																																				'來呀',																									'Come',																																																																		'来て',																																																						],		
+	BeachAi_1 :			['去游泳吧',																																			'去游泳吧~',																							'Let\'s go swimming!',																																																														'泳ぎに行こうよ～',																																																			],		
+	BeachAi_2 :			['走吧',																																				'走!',																									'Let\'s go!',																																																																'行こう!',																																																					],		
+	BeachAi_3 :			['就玩一会',																																			'就玩一會嗷',																							'Just for a while',																																																															'ちょっとだけ',																																																				],		
+	BeachAi_4 :			['我给你涂防晒霜吧',																																	'我給你塗防曬霜吧',																						'Let me help you put on the sunscreen',																																																										'日焼け止めを塗ってあげるね',																																																],		//02		
+	
+	Onsen_0 :			['疲劳消除了, 真好',																																	'疲勞都消除了, 真好',																					'Tiredness\'s gone, it feels so nice',																																																										'あぁ～, 疲れが取れたよ',																																																	],		
+	Onsen_1 :			['真想多泡一会热水',																																	'真想多泡一會熱水啊',																					'I don\'t want to get out of this hot water',																																																								'もっと長くお湯に浸かっていたいなあ',																																														],		
+	Onsen_2 :			['水温正好',																																			'水溫正好',																								'Perfect temperature',																																																														'湯加減がちょうどいい',																																																		],		
+	Onsen_3 :			['偶尔这样也不错呢',																																	'偶爾這樣也不錯',																						'It\'s nice to do this occasionally',																																																										'たまにはいいじゃない',																																																		],		
+	Onsen_4 :			['这里真是挺不错的',																																	'這裏挺不錯的',																							'This is a lovely place',																																																													'ここがいい場所だ',																																																			],		//02		
+	
+	OnsenAi_0 :			['泡澡真舒服啊',																																		'泡澡真舒服啊',																							'Taking a bath is really soothing',																																																											'お風呂気持ちいい',																																																			],		
+	OnsenAi_1 :			['走吧, 进去了',																																		'走吧~進去了',																							'Let\'s get in!',																																																															'さあ, 中に入ろ～',																																																			],		
+	OnsenAi_2 :			['要我帮你洗吗',																																		'要我幫你洗洗嗎',																						'Do you need help?',																																																														'洗うのを手伝ってやろうか',																																																	],		
+	OnsenAi_3 :			['我自己能擦干',																																		'謝謝了, 我自己能擦乾',																					'Thanks. I can dry myself',																																																													'ありがとう, 自分で乾かせる',																																																],		
+	OnsenAi_4 :			['水温很好快来',																																		'水溫很好, 快來呀',																						'The temperature is perfect. Come on',																																																										'丁度いい湯加減よ, 早くいらっしゃい',																																														],		//02		
+	
+	BattleRetreat :		['战斗撤退',		'戰鬥撤退',			'BattleRetreat',			'戦闘撤退',						],		
+	Damage2 :			['受到伤害',		'受到傷害',			'Damage2',					'ダメージを受ける',				],		
+	Death :				['机体瘫痪',		'機體癱瘓',			'Death',					'機体が麻痺する',				],		
+	Change :			['反抗指令',		'反抗指令',			'Change',					'はんこうめいれい',				],		
+	ChangeSec :			['否定指令',		'否定指令',			'ChangeSec',				'ひていめいれい',				],		
+	ChangeLast :		['谢绝指令',		'謝絕指令',			'ChangeLast',				'拒否命令',						],		
+	ChangeSuccess :		['接受指令',		'接受指令',			'ChangeSuccess',			'命令を受ける',					],		
+	VicBad :			['艰难胜利',		'艱難勝利',			'VicBad',					'辛勝',							],		
+	VicNormal :			['普通胜利',		'普通勝利',			'VicNormal',				'普通の勝利',					],		
+	VicPerfect :		['完美胜利',		'完美勝利',			'VicPerfect',				'完璧な勝利',					],		
+	StartBad :			['艰难开始',		'艱難開始',			'StartBad',					'困難なスタート',				],		
+	StartNormal :		['普通开始',		'普通開始',			'StartNormal',				'通常の開始',					],		
+	StartPerfect :		['完美开始',		'完美開始',			'StartPerfect',				'パーフェクトスタート',			],		
+	GiftDis :			['讨厌礼物',		'討厭禮物',			'GiftDis',					'プレゼントが嫌い',				],		
+	GiftNormal :		['普通礼物',		'普通禮物',			'GiftNormal',				'普通の贈り物',					],		
+	GiftLike :			['喜欢礼物',		'喜歡禮物',			'GiftLike',					'プレゼントが好き',				],		
+	GiftPerfect :		['最爱礼物',		'最愛禮物',			'GiftPerfect',				'プレゼント大好き',				],		
+	CommandRefuse :		['拒绝命令',		'拒絕命令',			'CommandRefuse',			'拒否コマンド',					],		
+	Entrance :			['部门遭遇',		'部門遭遇',			'Entrance',					'部門の遭遇',					],		
+	Exit :				['部门退出',		'部門退出',			'Exit',						'部門の終了',					],		
+	Refuse :			['拒绝约会',		'拒絕約會',			'Refuse',					'約束を断る',					],		
+	Meet :				['初次见面',		'初次見面',			'Meet',						'はじめまして',					],		
+	Battle :			['战斗台词',		'戰鬥台詞',			'Battle',					'戦いのせりふ',					],		
+	Promoting :			['改装机体',		'改裝機體',			'Promoting',				'機体を改造する.',				],		
+	Touch :				['宿舍交互',		'宿舍交互',			'Touch',					'寮のインタラクション',			],		
+	Login :				['登录语音',		'登錄語音',			'Login',					'ログイン音声',					],		
+	Shop :				['逛商店街',		'逛商店街',			'Shop',						'商店街をぶらつく',				],		
+	ShopAi :			['逛商店街',		'逛商店街',			'ShopAi',					'商店街をぶらつく',				],		
+	Restraunt :			['野狼酒吧',		'野狼酒吧',			'Restraunt',				'狼バー',						],		
+	RestrauntAi :		['野狼酒吧',		'野狼酒吧',			'RestrauntAi',				'狼バー',						],		
+	Beach :				['人工沙滩',		'人工沙灘',			'Beach',					'人工砂浜',						],		
+	BeachAi :			['人工沙滩',		'人工沙灘',			'BeachAi',					'人工砂浜',						],		
+	Onsen :				['钢厂温泉',		'鋼廠溫泉',			'Onsen',					'製鉄所温泉',					],		
+	OnsenAi :			['钢厂温泉',		'鋼廠溫泉',			'OnsenAi',					'製鉄所温泉',					],		
+	Cinema :			['红树影院',		'紅樹影院',			'Cinema',					'マングローブ映画館',			],		
+	CinemaAi :			['红树影院',		'紅樹影院',			'CinemaAi',					'マングローブ映画館',			],		//02		
+	
+	0 :					['玛　丽',			'瑪　麗',			'Mary',						'メアリー',						],		
+	1 :					['库罗库',			'庫羅庫',			'Kuroku',					'クロック',						],		
+	2 :					['桑/San',			'桑/San',			'San',						'サン',							],		
+	3 :					['赭石色',			'赭石色',			'Ocher',					'オーカー',						],		
+	4 :					['克莱尔',			'克萊爾',			'Claire',					'クレア',						],		//02		
+	
+};
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+
+// 生成表格
+tbodyArray01.forEach(function(item){
+	
+	// 高亮同类
+	powerTable_tbody_node01 += 
+	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	
+	// 遍历出td
+	item.forEach(function(data, index){
+		
+		// 归属角色
+		if(index ===  2){ powerTable_tbody_node01 += '<td style="height:40px;">'+ ItemsNameList[item[2]][0] +'</td>' }else 
+		
+		// 场景描述
+		if(index ===  4){ powerTable_tbody_node01 += '<td style="height:40px;">'+ ItemsNameList[item[3]][0] +'</td>' }else 
+		
+		// 文本描述
+		if(index ===  5){ powerTable_tbody_node01 += '<td style="height:40px;">'+ ItemsNameList[item[3]+'_'+item[2]][0] +'</td>' }else 
+		
+		// 常规数据
+		if(index !==  0){ powerTable_tbody_node01 += '<td style="height:40px;">'+ data +'</td>' };
+		
+	});
+	
+	// 闭合掉tr
+	powerTable_tbody_node01 += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable_tbody_node01);
+buildPowerTable('powerTable01');
+</script>
+
+
+
+</div>
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 文本展示</a>
+			<a href="#heading02">02. 字段解析</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+</body>
+</html>
+
+

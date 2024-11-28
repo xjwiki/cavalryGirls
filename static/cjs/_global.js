@@ -112,8 +112,8 @@ let buildPowerTable = function(tableID){
 			
 			// 针对 '500 ~ 2000' 这种范围数的排序
 			case 'numberRange' : {
-				if(a.split(' ~ ')[0] === b.split(' ~ ')[0]){ return a.split(' ~ ')[1] - b.split(' ~ ')[1] }
-				else{ return a.split(' ~ ')[0] - b.split(' ~ ')[0] };
+				if(a.split(/ *~ */)[0] === b.split(/ *~ */)[0]){ return a.split(/ *~ */)[1] - b.split(/ *~ */)[1] }
+				else{ return a.split(/ *~ */)[0] - b.split(/ *~ */)[0] };
 			}; break;
 			
 		};
@@ -202,8 +202,8 @@ let dirRepeatAnchor = $(/*html*/`
 			<li><a href="./data_pilot_intro.html">			<i class="xjDir-icon fas fa-people-group"></i>			<i class="xjDir-text"><span>主角小队</span></i></a></li>
 			<li><a href="./data_pilot_think.html">			<i class="xjDir-icon fas fa-book-open-reader"></i>		<i class="xjDir-text"><span>思潮影响</span></i></a></li>
 			<li><a href="./data_pilot_loyal.html">			<i class="xjDir-icon fas fa-heart"></i>					<i class="xjDir-text"><span>忠诚好感</span></i></a></li>
-			<li><a href="./data_pilot_skill.html">			<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
 			<li><a href="./data_pilot_jewel.html">			<i class="xjDir-icon fas fa-gem"></i>					<i class="xjDir-text"><span>饰品装备</span></i></a></li>
+			<li><a href="./data_pilot_skill.html">			<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
 			<li><a href="./data_pilot_level.html">			<i class="xjDir-icon fas fa-medal"></i>					<i class="xjDir-text"><span>军衔等级</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
@@ -215,24 +215,20 @@ let dirRepeatAnchor = $(/*html*/`
 			<li><a href="./data_enemy_rest.html">			<i class="xjDir-icon fas fa-calendar-days"></i>			<i class="xjDir-text"><span>假日安排</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li                       ><a href="./data_manage_defenses.html">		<i class="xjDir-icon fas fa-chess-rook"></i>			<i class="xjDir-text"><span>城防设施</span></i></a></li>
-			<li                       ><a href="./data_manage_strategy.html">		<i class="xjDir-icon fas fa-plane-up"></i>				<i class="xjDir-text"><span>战略支援</span></i></a></li>
-			<li                       ><a href="./data_manage_renovate.html">		<i class="xjDir-icon fas fa-chair"></i>					<i class="xjDir-text"><span>家具清单</span></i></a></li>
-			<li                       ><a href="./data_manage_material.html">		<i class="xjDir-icon fas fa-recycle"></i>				<i class="xjDir-text"><span>回收废料</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_manage_building.html">		<i class="xjDir-icon fas fa-warehouse"></i>				<i class="xjDir-text"><span>基地建设</span></i></a></li><!--◇ 也包括进城券的使用 StreetCardUse/Street_BU ◇-->
-			<li class="xjDir-disabled"><a href="./data_manage_expenses.html">		<i class="xjDir-icon fas fa-money-bill"></i>			<i class="xjDir-text"><span>费用计算</span></i></a></li>
+			<li><a href="./data_manage_defenses.html">		<i class="xjDir-icon fas fa-chess-rook"></i>			<i class="xjDir-text"><span>城防设施</span></i></a></li>
+			<li><a href="./data_manage_strategy.html">		<i class="xjDir-icon fas fa-plane-up"></i>				<i class="xjDir-text"><span>战略支援</span></i></a></li>
+			<li><a href="./data_manage_renovate.html">		<i class="xjDir-icon fas fa-chair"></i>					<i class="xjDir-text"><span>家具清单</span></i></a></li>
+			<li><a href="./data_manage_material.html">		<i class="xjDir-icon fas fa-recycle"></i>				<i class="xjDir-text"><span>回收废料</span></i></a></li>
+			<li><a href="./data_manage_expenses.html">		<i class="xjDir-icon fas fa-money-bill"></i>			<i class="xjDir-text"><span>费用计算</span></i></a></li>
+			<li><a href="./data_manage_building.html">		<i class="xjDir-icon fas fa-warehouse"></i>				<i class="xjDir-text"><span>基地部门</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>成就系统</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>术语名词</span></i></a></li><!-- 包括 Buffs 信息和游戏提示 -->
-			<li class="xjDir-disabled"><a href="./data_manage_shopping.html">		<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>商店机制</span></i></a></li><!--◇商店和黑市售卖物品的概率◇-->
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>按键设置</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>台词对白</span></i></a></li><!--◇ 也许改成模式事件 ◇-->
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>全局参数</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./data_other_list.html">			<i class="xjDir-icon fas fa-gear"></i>					<i class="xjDir-text"><span>问题合集</span></i></a></li>
-			
-			<!--◇ 各种模式的增益减益 ◇-->
-			
+			<li><a href="./data_others_priority.html">		<i class="xjDir-icon fas fa-scale-balanced"></i>		<i class="xjDir-text"><span>商品权重</span></i></a></li>
+			<li><a href="./data_others_achieved.html">		<i class="xjDir-icon fas fa-trophy"></i>				<i class="xjDir-text"><span>成就系统</span></i></a></li>
+			<li><a href="./data_others_advanced.html">		<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
+			<li><a href="./data_others_dialogue.html">		<i class="xjDir-icon fas fa-comment-dots"></i>			<i class="xjDir-text"><span>台词对白</span></i></a></li>
+			<li><a href="./data_others_parlance.html">		<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>术语提示</span></i></a></li>
+			<li><a href="./data_others_question.html">		<i class="xjDir-icon fas fa-circle-question"></i>		<i class="xjDir-text"><span>问题合集</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -240,8 +236,8 @@ let dirRepeatAnchor = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-square-pen"></i><i class="xjDir-text">事件剧情</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li class="xjDir-disabled"><a href="./story_tool_event.html">			<i class="xjDir-icon fas fa-toolbox"></i>				<i class="xjDir-text"><span>工具事件(未完成)</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./story_trip_event.html">			<i class="xjDir-icon fas fa-book"></i>					<i class="xjDir-text"><span>剧情事件(未完成)</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./event_mode.html">			<i class="xjDir-icon fas fa-file-lines"></i>		<i class="xjDir-text"><span>模式事件(未完成)</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./event_list.html">			<i class="xjDir-icon fas fa-book"></i>				<i class="xjDir-text"><span>事件详情(未完成)</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -249,11 +245,11 @@ let dirRepeatAnchor = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-square-plus"></i><i class="xjDir-text">衍生内容</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./ertra_wiki_update.html">		<i class="xjDir-icon fas fa-rotate"></i>						<i class="xjDir-text"><span>网站更新</span></i></a></li>
-			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/workshop/">								<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>创意工坊	</span></i></a></li>
+			<li><a href="./ertra_wiki_update.html">																	<i class="xjDir-icon fas fa-rotate"></i>				<i class="xjDir-text"><span>网站更新</span></i></a></li>
+			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/workshop/">							<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>创意工坊</span></i></a></li>
 			<!--◇
 			<li class="xjDir-disabled"><a href="./extra_modify_save.html">			<i class="xjDir-icon fas fa-code"></i>					<i class="xjDir-text"><span>修改存档(未完成)</span></i></a></li>
-			<li class="xjDir-disabled"><a href="./ertra_good_mod.html">			<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>模组推荐(未完成)</span></i></a></li>
+			<li class="xjDir-disabled"><a href="./ertra_good_mod.html">				<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>模组推荐(未完成)</span></i></a></li>
 			◇-->
 		</ul>
 	</li>
@@ -262,10 +258,10 @@ let dirRepeatAnchor = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-link"></i><i class="xjDir-text">相关地址</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/eventcomments/">						<i class="xjDir-icon fas fa-clock-rotate-left"></i>		<i class="xjDir-text"><span>游戏更新记录</span></i></a></li>
-			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/discussions/">							<i class="xjDir-icon fas fa-message"></i>				<i class="xjDir-text"><span>游戏讨论社区</span></i></a></li>
-			<li><a target="_blank" href="https://github.com/xjwiki/cavalryGirls/issues">								<i class="xjDir-icon fas fa-bug"></i>					<i class="xjDir-text"><span>百科问题反馈</span></i></a></li>
-			<li><a target="_blank" href="https://github.com/xjwiki/cavalryGirls/releases">								<i class="xjDir-icon fas fa-download"></i>				<i class="xjDir-text"><span>下载离线百科</span></i></a></li>
+			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/eventcomments/">					<i class="xjDir-icon fas fa-clock-rotate-left"></i>		<i class="xjDir-text"><span>游戏更新</span></i></a></li>
+			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/discussions/">						<i class="xjDir-icon fas fa-comments"></i>				<i class="xjDir-text"><span>游戏社区</span></i></a></li>
+			<li><a target="_blank" href="https://github.com/xjwiki/cavalryGirls/issues">							<i class="xjDir-icon fas fa-bug"></i>					<i class="xjDir-text"><span>百科反馈</span></i></a></li>
+			<li><a target="_blank" href="https://github.com/xjwiki/cavalryGirls/releases">							<i class="xjDir-icon fas fa-download"></i>				<i class="xjDir-text"><span>百科下载</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -273,7 +269,7 @@ let dirRepeatAnchor = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon far fa-handshake" style="transform:rotate(-30deg);"></i><i class="xjDir-text">友情链接</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a target="_blank" href="https://xjwiki.github.io/wastelandExpress/">									<i class="xjDir-icon fas fa-heart-circle-plus"></i>		<i class="xjDir-text"><span>废土快递</span></i></a></li>
+			<li><a target="_blank" href="https://xjwiki.github.io/wastelandExpress/">								<i class="xjDir-icon fas fa-heart-circle-plus"></i>		<i class="xjDir-text"><span>废土快递</span></i></a></li>
 		</ul>
 	</li>
 	

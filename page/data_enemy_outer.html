@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>外勤任务</title>
 </head>
 <body>
@@ -128,7 +128,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	01. 目前共计有 <code>124</code> 种外勤任务, 它们可以被简单的分为三大类型, 也就是: 外围阵地(<code>56</code>) / 歼灭委托(<code>22</code>) / 渗透刺杀(<code>46</code>); <br />
 	02. 外围阵地和歼灭委托的任务会在剧情模式/挑战模式/无尽模式出现, 而渗透刺杀的任务则是潜入模式的专属(库罗库的三叶草 DLC); <br />
 	03. 虽然也能派作战单元去完成任务, 但作战单元无法被控制, 所以让主力机体去更稳妥, 但要注意外出的机体就无法参与正面战场了; <br />
-	04. 对于这类任务, 需要考虑战力分配/存在时效/负面影响/解体残骸所需电力等因素合理的处置它们, 甚至有的时候, 放弃也是种选择; <br />
+	04. 外勤任务在默认情况下, 只能派一台主力机体&一台作战单元前往, 你需要合理安排, 如果某些任务真的太难, 也许放弃也是种选择; <br />
 </p>
 
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
@@ -186,7 +186,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>02. 生效天数: 既负面影响开始生效的时间(单位是天), 存在天数 - 生效天数 = 留给我们的缓冲期, 在此期间任务带来的负面影响还不会正式生效(大部分外围阵地都存在负面影响), 因此当存在外围阵地的时候也无需立即处理, 分配好资源, 选个合适的时间去完成即可;</p>
 
-<p>03. 前往天数: 既机体出击后抵达目的地所需的时间(单位是天), 目前最大的耗时是两天, 在外派期间驾驶员的脑负荷会照常上涨, 这可能导致角色开战后由于脑负荷过高而无法使用战场技能, 所以需要注意, 但无论前往天数是多少, 完成任务后的第二天机体必定能归队;</p>
+<p>03. 前往天数: 既机体出击后抵达目的地所需的时间(单位是天), 目前最大的耗时是四天, 在外派期间驾驶员的脑负荷会照常上涨, 但即使脑负荷超过警戒线(100)或达到上限(135), 也不影响战场技能的释放, 且无论前往天数是多少, 完成任务后的第二天机体必定能归队;</p>
 
 <p>04. 特殊敌人: 特殊敌人要么是些不会动的建筑物(可以靠近后按快捷键 F 进行爆破), 要么是些难以对付的精英 Boss, 不管如何, 当这个任务存在特殊敌人的时候, 任务的目标往往就是解决这些特殊敌人(将鼠标悬停在表格那些具有下划线的代码上可以查看敌人缩略图);</p>
 
@@ -219,9 +219,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading03">03. 额外拓展</h2>
 
-<p>任务机制: 解决任务需要派遣某个驾驶员以及她的机体外出, 我们一般管这种行为叫外勤或外派, 要注意的是, 主力机体的驾驶员如果当前脑负荷过大是无法外派的, 尽管作战单元也能被委派, 但由于玩家并不能操控作战单元, 所以难度稍高的任务它们可能都无法很好的完成, 因此并不推荐这样做, 我们固然可以在战斗开始前将机体召回既取消出战, 但此时会清零到达天数, 还有就是, 如果有机体正在前往目的地则无法执行换防, 假设所有机体均已外派而基地防守无人能出战, 就只能在整备机体界面花钱(耗费 <code>100</code> 资金)立即召回驾驶员;</p>
-
-<p>回收注意: 在任务中被我们打爆的机体, 几乎所有的精英敌人和大约 1/10 的常规敌人都会在当天被回收, 也就是说我们能在发电厂中见到这些敌人的残骸, 但由于我们的电量是有限的, 而敌人的残骸过夜就会被清掉, 因此在出战前, 最好留意一下电量是否足够解体它们, 常规的 Boss 和精英 Boss 分别需要 <code>50</code> 和 <code>100</code> 的电力, 如果电力不够, 就需要花钱购买, 但每日购入电力的价格是递增的, 如果需要 100 电力, 资金需求就是 20+40+60+80+100=300, 这是不小的开支, 可不回收就没有核心, 所以能不能打和什么时候打, 需要规划;</p>
+<p>任务机制: 解决任务需要派遣某个驾驶员和他的机体外出, 我们一般管这种行为叫外勤或外派, 要注意的是, 驾驶员如果当前脑负荷过大(大于等于 100)是无法外派的, 尽管作战单元也能被委派, 但由于玩家并不能操控作战单元, 所以难度稍高的任务它们可能都无法很好的完成, 因此并不推荐, 我们固然可在战斗开始前将机体召回既取消出战, 但此时会清零到达天数, 还有就是, 如果有机体正在前往目的地则无法执行换防, 假设所有机体均已外派而基地防守无人能出战, 就只能在整备机体界面花钱(耗费 <code>100</code> 资金)立即召回驾驶员和机体;</p>
 
 <p>————</p>
 
@@ -602,7 +600,7 @@ let ItemsNameList = {
 	EnemyStrengthen_Speed :			['敌方移动速度强化',	'敵方移動速度強化',		'Enemy Movement speed Enhancement',		'敵移動速度強化',			],
 	EnemyStrengthen_Life :			['敌方生命上限强化',	'敵方生命上限強化',		'Enemy HP Enhanced',					'敵HP強化',					],
 	EnemyStrengthen_FireRate :		['敌方射击间隔减少',	'敵方射擊間隔減少',		'Enemy Firing rate Enhancement',		'敵射撃間隔強化',			],
-	EnemyStrengthen_Armor :			['敌方抵抗穿甲强化',	'敵方抵抗穿甲強化',		'Enemy Resistance Enhanced',			'敵抵抗強化',				],
+	EnemyStrengthen_Armor :			['敌方穿甲抵抗强化',	'敵方穿甲抵抗強化',		'Enemy Resistance Enhanced',			'敵抵抗強化',				],
 	EnemyStrengthen_ReloadRate :	['敌方换弹时间减少',	'敵方換彈時間減少',		'Enemy Reload speed Enhancement',		'敵リロード時間強化',		],
 	EnemyStrengthen_RangePlus :		['敌方武器射程强化',	'敵方武器射程強化',		'Enemy Range Enhanced',					'敵射程強化',				],
 	EnemyStrengthen_DamagePlus :	['敌方武器伤害强化',	'敵方武器傷害強化',		'Enemy Damage Enhancement',				'敵ダメージ強化',			],
@@ -980,7 +978,7 @@ $(window).on('keyup', function(event){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
 </div>
 </div>
 </div>

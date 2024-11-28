@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-10-24T09:54:58UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-10-24T09:54:58UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
+<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女(Cavalry Girls)这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
-<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
+<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>网站更新</title>
 </head>
 <body>
@@ -125,8 +125,52 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <p>————</p>
 
 <div>
+	<h4><b>V0.1.4(2024-11-28)</b></h4>
+	<p>概述: 本次更新补全了游戏数据剩余的相关页面, 自此, 游戏中除事件以外, 所有能展示或查询的内容都已经完成, 此外还微调了许多文本描述的细节, 并修复了一些机制的错误描述, 下回应该就会更新游戏的事件内容了, 包括触发真实结局的方法, 总之, 就敬请期待吧…;</p>
+	<p>
+		新增: 商品权重.html / 成就系统.html / 奖惩机制.html / 台词对白.html / 术语提示.html / 问题合集.html; <br />
+		新增: 费用计算.html / 基地部门.html; <br />
+	</p>
+	<p>
+		改进: 全局 > 将右下角的导航做成半透明, 避免遮挡到正文内容; <br />
+		改进: 全局 > 为 SEO 的描述和关键词添加了英文和日文的内容; <br />
+		改进: 全局 > 优化了表格的数字范围值排序算法(numberRange); <br />
+		改进: 武器列表 > 调整了换弹费用的税率基数(3 提升为了 4); <br />
+	</p>
+	<p>
+		修复: 全局 > 修正了装备配件的描述(P 单位结尾的数值是直接加到属性上, 而不是百分比乘算); <br />
+		修复: 主角小队 > 召开作战总结会议可提升能力, 但提升能力上限的前提是角色能力已到达上限; <br />
+		修复: 家具清单 > 获取特殊家具的忠诚度错误问题(3->6, 桑是个特例, 9 心忠诚度才会送机车); <br />
+	</p>
+	<p>
+		修复: 回收废料 > 解决了使用电力回收敌方残骸的价值收益算法错误问题(价值需 ×4); <br />
+		修复: 机体详情 > 解决了作战单元和机枪炮塔等的机体 ID 错误(它们好像并没有 ID); <br />
+		修复: 武器列表 > 解决作战单元武器可装备性算法错误问题(它们其实无法双持武器!); <br />
+	</p>
+	<p>
+		修复: 家具清单 > 解决了宿舍自带的垃圾家具回收所需费用的错误问题; <br />
+		修复: 城防设施 > 解决了表格首行数据没有被高亮的错误问题; <br />
+		修复: 全局 > 商店更正为采购部, 技能点改为升级点; <br />
+	</p>
+	<!--◇
+	<p>
+		更新: 战场技能 > 同步了克莱尔的动力臂透支技能; <br />
+	</p>
+	◇-->
+</div>
+<p>————</p>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 过往历史</h2>
+<p>————</p>
+
+<div>
 	<h4><b>V0.1.3(2024-10-24)</b></h4>
-	<p>概述: 本次更新补全了剩余的物品信息, 并罗列了各种模式的场景内容, 这些比起之前的页面, 相对来讲没那么重要, 但做起来却颇为费劲, 还有就是还同步了游戏近期的更新, 由于数据变动过多, 为了避免出错, 很多表格都是重新构筑的, 总而言之费了很多时间就是了…;</p>
+	<p>概述: 本次更新补全了剩余的物品信息, 并罗列了各种模式的场景内容, 这些比起之前的页面, 相对来讲没那么重要, 但做起来却颇为费劲, 还有就是还同步了游戏近期的更新, 由于数据变动过多, 为了避免出错, 很多表格都是重新构筑的, 总而言之花了很多时间就是了…;</p>
 	<p>
 		新增: 编队建制.html / 剧情遭遇.html / 特殊模式.html / 外勤任务.html / 假日安排.html; <br />
 		新增: 城防设施.html / 战略支援.html / 家具清单.html; <br />
@@ -158,17 +202,9 @@ function(){ FastClick.attach(document.body) }, false);</script>
 		更新: 思潮影响 > 同步书籍和电视节目的默认排序, 同步了所有电视节目的价格(+0 -> -1); <br />
 		更新: 忠诚好感 > 同步礼物的默认排序; <br />
 		更新: 战场技能 > 同步技能的默认排序; <br />
-		更新: 饰品装备 > 同步技能的默认排序; <br />
+		更新: 饰品装备 > 同步饰品的默认排序; <br />
 	</p>
 </div>
-<p>————</p>
-
-<hr />
-</section>
-
-
-
-<section><h2 id="heading02">02. 过往历史</h2>
 <p>————</p>
 
 <div>
@@ -229,7 +265,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
 </div>
 </div>
 </div>
