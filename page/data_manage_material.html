@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>回收废料</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>回收废料</span><small>(残骸解体)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.回收废料); $('#pub_headText > a > small').text(xj2.i18n.残骸解体);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -125,7 +128,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 目前合成材料总共有 <code>32</code> 种, 可以根据关键词分为 <code>17</code> 类, 它们存在的意义, 就是用于合成各种武器与配件, 以及部件和饰品; <br />
+	01. 目前合成材料总共有 <span class="code">32</span> 种, 可以根据关键词分为 <span class="code">17</span> 类, 它们存在的意义, 就是用于合成各种武器与配件, 以及部件和饰品; <br />
 	02. 合成材料的文本颜色只是为了区分而做出来的视觉效果, 没有其他任何影响, 可在合成界面左下角的仓库了解当前持有的材料数量; <br />
 	03. 合成材料的主要来源有三种, 一是解体厂开通后回收敌人的残骸, 二是回收各种装备选择回收成材料, 三是完成歼灭委托得到奖励; <br />
 	04. 装备回收的材料类型与合成装备所需材料类型相同, 而敌人回收的材料类型则取决于解体产出的词条, 词条可查阅 <a href="./data_enemy_info.html">敌军情报.html</a>; <br />
@@ -134,18 +137,17 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
-			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #95794d 0%, #95794d 75%, #95794d 75%, #95794d 75%, #95794d 75%, #95794d 100%);"></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大堆叠<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本颜色<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目图片</zh-i><jp-i>画像</jp-i><en-i>Img</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>归属种类</zh-i><jp-i>タグ</jp-i><en-i>Tag</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>参考价格</zh-i><jp-i>価格</jp-i><en-i>Price</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>最大堆叠</zh-i><jp-i>スタック</jp-i><en-i>MaxPile</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>默认排序</zh-i><jp-i>ソート</jp-i><en-i>Resolve</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目类型</zh-i><jp-i>アイテムタイプ</jp-i><en-i>Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本颜色</zh-i><jp-i>カラー</jp-i><en-i>Color</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -158,29 +160,29 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>堆叠细节: 合成材料是游戏中少有的可以堆叠的物品(另外两种可堆叠的物品为礼物和书籍), 当堆叠的数量超过 <code>99</code> 之后, 就会在另外一个物品格子中生成一个新的同类项, 你可以在合成界面的仓库里, 查看当前所拥有的各项材料数量(一般都需要翻页到末尾才能看到);</p>
+<p>堆叠细节: 合成材料是游戏中少有的可以堆叠的物品(另外两种可堆叠的物品为礼物和书籍), 当堆叠的数量超过 <span class="code">99</span> 之后, 就会在另外一个物品格子中生成一个新的同类项, 你可以在合成界面的仓库里, 查看当前所拥有的各项材料数量(一般都需要翻页到末尾才能看到);</p>
 
-<p>词条概念: 能从敌方机体上回收到什么类型的材料, 取决于"解体产出"的词条, 由于所有的敌人都有 <code>All</code> 这个词条, 所以, 废铁/废料/接合物件/齿轮/框架, 这五种材料是在任意残骸都可能获取到的, 而相应的假设你想要核心, 那就得看对方是否带有 <code>Ellite</code> 词条了;</p>
+<p>词条概念: 能从敌方机体上回收到什么类型的材料, 取决于"解体产出"的词条, 由于所有的敌人都有 <span class="code">All</span> 这个词条, 所以, 废铁/废料/接合物件/齿轮/框架, 这五种材料是在任意残骸都可能获取到的, 而相应的假设你想要核心, 那就得看对方是否带有 <span class="code">Ellite</span> 词条了;</p>
 
-<p>电力耗费: 解体每种敌人所需要的电力是固定的(可以到"敌军情报"页查看"解体电力"的属性), 我们大约可得到 <code>4</code> 倍于需求电力的材料, 例如耗费了 <code>X</code> 电力, 如果没有排除任何类型的材料, 保持回收价值为 <code>100%</code>, 则最后得到的材料, 合计总价格大致就等于 <code>4X</code>;</p>
-
-<p>————</p>
-
-<p>筛选影响: 当我们专注于某种材料的搜集而选择排除那些不要的材料, 此时残骸的价值就会被降低, 假设原本这个残骸可以生成 <code>10</code> 种材料, 但你现在只要其中的 <code>8</code> 种, 则残骸的价值就会变成原来的 <code>1 - (10-8)/10/1.5 ≈ 0.8667</code>, 其中 <code>1.5</code> 是 Base 表中预设的全局基础参数 <code>DemoElectLossRate</code>, 也就是说尽管能精准得到想要的材料, 但此时收获的材料价值合计就只剩原本的 <code>86.67% × 4</code> 了, 不过考虑到那些被排除的材料, 也许你已经拥有了许多, 而稀缺的材料则有很大缺口, 那么这点损失还是值得的, 不用纠结这点浪费;</p>
-
-<p>搜集残骸: 在过去的版本, 残骸是不会被保留的, 如果当天没回收则过夜后会被完全清空, 但最新版已经改变了这个规则, 现在残骸不会被自动清空了, 并且即便解体厂还没启用, 系统也会把敌军残骸进行保留, 等解体厂启用之后残骸就会被显示出来, 一般来讲, 精英敌人(BOSS)的残骸必定会被回收, 而常规敌人则要求未被"统计排除"才有回收可能(建筑和衍生物都会被排除), 回收的概率公式为 <code>解体电力/10</code>, 当结果 <code>>= 1</code> 时必定会被回收, 可以到"敌军情报"页查看"统计排除"和"解体电力"的属性, 因为残骸过夜不会被清空, 所以在外围任务中搜集补给箱就变得没什么必要, 因为最后我们面临的往往是电力不足而非缺少残骸, 所以捡箱子这事情就随缘吧, 不要太执着;</p>
-
-<p>技巧知识: 首先是, 在合成界面合成某种物品时, 可以点击材料后面的"追踪材料"按钮, 之后如果某种敌军残骸有你想要的材料, 就会显示红色的感叹号提示你, 这样方便搜集你想要的东西, 其次是, 解体厂每次解体的最低启动下限电力为 <code>7</code>, 如果敌人的残骸合计耗电量 <code><7</code>, 那么就无法被回收, 最后是, 发电厂升到最高级的时候, 每日可以提供 <code>70</code> 的电力, 电力能逐日积累, 甚至可以花钱购买, 每次购买可获得 <code>20</code> 电力, 虽然每日购买的次数无限, 但每次购买后价格都会提升, 具体算法为 <code>20+(20×(购买次数-1))=资金</code>, 例如每天购买的价格, 第1次是 <code>20</code>, 第2次是 <code>40</code>, 第3次是 <code>60</code>, 第4次是 <code>80</code>, 以此类推, 考虑到电力解体所得材料, 它们合计的价格是电力的 <code>4</code> 倍左右, 所以即便花 <code>80</code> 资金购买 <code>20</code> 电力也不算亏, 而"电能转换"既一次性将电力以 <code>1:1</code> 比值售出, 就完全不值了;</p>
+<p>电力耗费: 解体每种敌人所需要的电力是固定的(可以到"敌军情报"页查看"解体电力"的属性), 我们大约可得到 <span class="code">4</span> 倍于需求电力的材料, 例如耗费了 <span class="code">X</span> 电力, 如果没有排除任何类型的材料, 保持回收价值为 <span class="code">100%</span>, 则最后得到的材料, 合计总价格大致就等于 <span class="code">4X</span>;</p>
 
 <p>————</p>
 
-<p>分解算法: 将装备拖到物品栏右下角"回收"处, 即可选择是回收成资金或回收成材料, 如果选择回收成资金, 可得到装备价值 <code>1/2</code> 的资金(向下取整), 如果选择回收成材料, 就会得到一些合成这个装备所需要的材料, 算法为 <code>材料回收数量 = (合成该物品的初级物品的材料数量 * PlusNum)/2</code>, 结果值仅保留整数, 若小于 1 则等于 1, 而 PlusNum 这参数为 <code>该物品的价格 / 该物品的初级物品的价格</code>, 结果值仅保留整数, 若小于 1 则等于 1, 例如回收 1 把"老式步枪B2M12", 这把武器的价格是 <code>80</code>, 而它的初级物品既"老式步枪"的价格为 <code>8</code>, 合成它的材料为 <code>3废铁 + 1铁管 + 1接合物件</code>, 那么参数 PlusNum 就是 <code>Integer(80/8) = 10</code>, 因此最终回收的三种合成材料数量就分别如下所示, 废铁 = <code>Integer(3*10)/2 = 15</code>, 铁管 = <code>Integer(1*10)/2 = 5</code>, 接合物件 = <code>Integer(1*10)/2 = 5</code>;</p>
+<p>筛选影响: 当我们专注于某种材料的搜集而选择排除那些不要的材料, 此时残骸的价值就会被降低, 假设原本这个残骸可以生成 <span class="code">10</span> 种材料, 但你现在只要其中的 <span class="code">8</span> 种, 则残骸的价值就会变成原来的 <span class="code">1 - (10-8)/10/1.5 ≈ 0.8667</span>, 其中 <span class="code">1.5</span> 是 Base 表中预设的全局基础参数 <span class="code">DemoElectLossRate</span>, 也就是说尽管能精准得到想要的材料, 但此时收获的材料价值合计就只剩原本的 <span class="code">86.67% × 4</span> 了, 不过考虑到那些被排除的材料, 也许你已经拥有了许多, 而稀缺的材料则有很大缺口, 那么这点损失还是值得的, 不用纠结这点浪费;</p>
 
-<p>解体算法: 假设要解体"弑君者", 需求电力是 <code>10</code>, 词条为 <code>All|Attack|Armor|MG</code>, 则可能获取的材料为(废铁,废料,接合物件,齿轮,框架|弹壳,铁管,扳机|装甲,厚装甲|弹链), 我们只要(厚装甲|弹链), 筛选后残骸价值为 <code>1-(11-2)/11/1.5≈0.45</code> 既 <code>4*10*0.45≈18</code>, 此时系统会从(厚装甲|弹链)中随机选中某个, 假设首回得到弹链(价格:8), 则残骸价值只剩下 <code>18-8=10</code>, 再随机选中某个, 假设这回得到弹链(价格:8), 则残骸价值只剩下 <code>10-8=2</code>, 再随机选中某个, 假设这回得到厚装甲(价格:10), 则残骸价值只剩下 <code>2-10=-8</code>, 由于 <code>-8<=0</code>, 这意味残骸价值耗尽, 那么到此结束, 本回最终收获是 <code>2弹链+1厚装甲</code>, 材料的价值合计为 <code>(8*2)+(10*1)=26</code>, 这也就是说, 我们的收获是有可能大于残骸价值的, 而残骸的材料回收机制大体就是如此, 不断随机获取允许的材料, 往复循环直到价值耗尽;</p>
+<p>搜集残骸: 在过去的版本, 残骸是不会被保留的, 如果当天没回收则过夜后会被完全清空, 但最新版已经改变了这个规则, 现在残骸不会被自动清空了, 并且即便解体厂还没启用, 系统也会把敌军残骸进行保留, 等解体厂启用之后残骸就会被显示出来, 一般来讲, 精英敌人(BOSS)的残骸必定会被回收, 而常规敌人则要求未被"统计排除"才有回收可能(建筑和衍生物都会被排除), 回收的概率公式为 <span class="code">解体电力/10</span>, 当结果 <span class="code">>= 1</span> 时必定会被回收, 可以到"敌军情报"页查看"统计排除"和"解体电力"的属性, 因为残骸过夜不会被清空, 所以在外围任务中搜集补给箱就变得没什么必要, 因为最后我们面临的往往是电力不足而非缺少残骸, 所以捡箱子这事情就随缘吧, 不要太执着;</p>
+
+<p>技巧知识: 首先是, 在合成界面合成某种物品时, 可以点击材料后面的"追踪材料"按钮, 之后如果某种敌军残骸有你想要的材料, 就会显示红色的感叹号提示你, 这样方便搜集你想要的东西, 其次是, 解体厂每次解体的最低启动下限电力为 <span class="code">7</span>, 如果敌人的残骸合计耗电量 <span class="code"><7</span>, 那么就无法被回收, 最后是, 发电厂升到最高级的时候, 每日可以提供 <span class="code">70</span> 的电力, 电力能逐日积累, 甚至可以花钱购买, 每次购买可获得 <span class="code">20</span> 电力, 虽然每日购买的次数无限, 但每次购买后价格都会提升, 具体算法为 <span class="code">20+(20×(购买次数-1))=资金</span>, 例如每天购买的价格, 第1次是 <span class="code">20</span>, 第2次是 <span class="code">40</span>, 第3次是 <span class="code">60</span>, 第4次是 <span class="code">80</span>, 以此类推, 考虑到电力解体所得材料, 它们合计的价格是电力的 <span class="code">4</span> 倍左右, 所以即便花 <span class="code">80</span> 资金购买 <span class="code">20</span> 电力也不算亏, 而"电能转换"既一次性将电力以 <span class="code">1:1</span> 比值售出, 就完全不值了;</p>
 
 <p>————</p>
 
-<p>电力借贷: 假设你现在只有 <code>50</code> 电力, 但是却拥有 <code>10</code> 台弑君者需要解体, 每台需要 <code>10</code> 的电力, 正常情况下我们只能解体其中的 <code>5</code> 台, 但如果你在输入框中直接写 <code>10</code>, 然后直接点击"确定"按钮, 此时 <code>10</code> 台弑君者会被同时解体, 但之后的电力会变成 <code>-50</code>, 下一天如果发电量为 <code>70</code>, 则电力会变成 <code>20</code>, 也就是说我们可以预支电力, 并且没有任何利息, 虽然迟早是要还回去的, 但如果你着急解构某些机体以获得关键材料, 那么可以用这个方法来实现预支(预支得到的材料数量跟正常使用电力结构得到的材料数量是一样的);
+<p>分解算法: 将装备拖到物品栏右下角"回收"处, 即可选择是回收成资金或回收成材料, 如果选择回收成资金, 可得到装备价值 <span class="code">1/2</span> 的资金(向下取整), 如果选择回收成材料, 就会得到一些合成这个装备所需要的材料, 算法为 <span class="code">材料回收数量 = (合成该物品的初级物品的材料数量 * PlusNum)/2</span>, 结果值仅保留整数, 若小于 1 则等于 1, 而 PlusNum 这参数为 <span class="code">该物品的价格 / 该物品的初级物品的价格</span>, 结果值仅保留整数, 若小于 1 则等于 1, 例如回收 1 把"老式步枪B2M12", 这把武器的价格是 <span class="code">80</span>, 而它的初级物品既"老式步枪"的价格为 <span class="code">8</span>, 合成它的材料为 <span class="code">3废铁 + 1铁管 + 1接合物件</span>, 那么参数 PlusNum 就是 <span class="code">Integer(80/8) = 10</span>, 因此最终回收的三种合成材料数量就分别如下所示, 废铁 = <span class="code">Integer(3*10)/2 = 15</span>, 铁管 = <span class="code">Integer(1*10)/2 = 5</span>, 接合物件 = <span class="code">Integer(1*10)/2 = 5</span>;</p>
+
+<p>解体算法: 假设要解体"弑君者", 需求电力是 <span class="code">10</span>, 词条为 <span class="code">All|Attack|Armor|MG</span>, 则可能获取的材料为(废铁,废料,接合物件,齿轮,框架|弹壳,铁管,扳机|装甲,厚装甲|弹链), 我们只要(厚装甲|弹链), 筛选后残骸价值为 <span class="code">1-(11-2)/11/1.5≈0.45</span> 既 <span class="code">4*10*0.45≈18</span>, 此时系统会从(厚装甲|弹链)中随机选中某个, 假设首回得到弹链(价格:8), 则残骸价值只剩下 <span class="code">18-8=10</span>, 再随机选中某个, 假设这回得到弹链(价格:8), 则残骸价值只剩下 <span class="code">10-8=2</span>, 再随机选中某个, 假设这回得到厚装甲(价格:10), 则残骸价值只剩下 <span class="code">2-10=-8</span>, 由于 <span class="code">-8<=0</span>, 这意味残骸价值耗尽, 那么到此结束, 本回最终收获是 <span class="code">2弹链+1厚装甲</span>, 材料的价值合计为 <span class="code">(8*2)+(10*1)=26</span>, 这也就是说, 我们的收获是有可能大于残骸价值的, 而残骸的材料回收机制大体就是如此, 不断随机获取允许的材料, 往复循环直到价值耗尽;</p>
+
+<p>————</p>
+
+<p>电力借贷: 假设你现在只有 <span class="code">50</span> 电力, 但是却拥有 <span class="code">10</span> 台弑君者需要解体, 每台需要 <span class="code">10</span> 的电力, 正常情况下我们只能解体其中的 <span class="code">5</span> 台, 但如果你在输入框中直接写 <span class="code">10</span>, 然后直接点击"确定"按钮, 此时 <span class="code">10</span> 台弑君者会被同时解体, 但之后的电力会变成 <span class="code">-50</span>, 下一天如果发电量为 <span class="code">70</span>, 则电力会变成 <span class="code">20</span>, 也就是说我们可以预支电力, 并且没有任何利息, 虽然迟早是要还回去的, 但如果你着急解构某些机体以获得关键材料, 那么可以用这个方法来实现预支(预支得到的材料数量跟正常使用电力解构得到的材料数量是一样的);
 </p>
 
 <hr />
@@ -188,14 +190,16 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 #powerTable01 .hideTr{display:none;}
 </style>
 
 
 
-<script>/* 数据注解 */
-/*
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
 
 CargoPiles=CargoPilesMax=CargoPilesFusion=CargoPilesFusionMax=0
 Company='', Syns='', NeedWeapon='', Cluster = '', 
@@ -257,96 +261,96 @@ let tbodyArray01 = [
 // 项目名称
 let ItemsNameList = {
 	
-	40001 : ['废铁',		'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],		
-	40002 : ['废料',		'廢料',				'Waste Material',				'スクラップ',				],		
-	40005 : ['接合物件',	'接合物件',			'Joining Component',			'接続オブジェクト',			],		
-	40006 : ['齿轮',		'齒輪',				'Gear',							'ギア',						],		
-	40007 : ['框架',		'框架',				'Frame',						'フレーム',					],		//02		
+	40001 : ['废铁',			'スクラップアイロン',		'Scrap Iron',						],		
+	40002 : ['废料',			'スクラップ',				'Waste Material',					],		
+	40005 : ['接合物件',		'接続オブジェクト',			'Joining Component',				],		
+	40006 : ['齿轮',			'ギア',						'Gear',								],		
+	40007 : ['框架',			'フレーム',					'Frame',							],		//02		
 	
-	40003 : ['弹壳',		'彈殼',				'Bullet Shell',					'薬莢',						],		
-	40008 : ['铁管',		'鐵管',				'Iron Pipe',					'鉄パイプ',					],		
-	40009 : ['扳机',		'扳機',				'Trigger',						'トリガー',					],		//02		
+	40003 : ['弹壳',			'薬莢',						'Bullet Shell',						],		
+	40008 : ['铁管',			'鉄パイプ',					'Iron Pipe',						],		
+	40009 : ['扳机',			'トリガー',					'Trigger',							],		//02		
 	
-	40021 : ['润滑油',		'潤滑油',			'Lubricating Oil',				'潤滑油',					],		
-	40022 : ['火花塞',		'火花塞',			'Spark Plug',					'スパークプラグ',			],		
-	40023 : ['冷冻剂',		'冷凍劑',			'Refrigerant',					'冷媒',						],		//02		
+	40021 : ['润滑油',			'潤滑油',					'Lubricating Oil',					],		
+	40022 : ['火花塞',			'スパークプラグ',			'Spark Plug',						],		
+	40023 : ['冷冻剂',			'冷媒',						'Refrigerant',						],		//02		
 	
-	40028 : ['共振器',		'共振器',			'Resonator',					'共振器',					],		
-	40029 : ['刀片',		'刀片',				'Blade',						'ブレード',					],		
-	40030 : ['振荡器',		'振盪器',			'Oscillator',					'発振回路',					],		//02		
+	40028 : ['共振器',			'共振器',					'Resonator',						],		
+	40029 : ['刀片',			'ブレード',					'Blade',							],		
+	40030 : ['振荡器',			'発振回路',					'Oscillator',						],		//02		
 	
-	40017 : ['线圈',		'線圈',				'Coil',							'コイル',					],		
-	40018 : ['电容',		'電容',				'Capacitor',					'コンデンサ',				],		
-	40019 : ['电感',		'電感',				'Inductor',						'インダクター',				],		//02		
+	40017 : ['线圈',			'コイル',					'Coil',								],		
+	40018 : ['电容',			'コンデンサ',				'Capacitor',						],		
+	40019 : ['电感',			'インダクター',				'Inductor',							],		//02		
 	
-	40026 : ['力场管',		'力場管',			'Force Field Generator',		'力場パイプ',				],		
-	40027 : ['力场膜',		'力場膜',			'Force Field Membrane',			'力場膜',					],		//02		
+	40026 : ['力场管',			'力場パイプ',				'Force Field Generator',			],		
+	40027 : ['力场膜',			'力場膜',					'Force Field Membrane',				],		//02		
 	
-	40013 : ['棱镜',		'稜鏡',				'Prism',						'プリズム',					],		
-	40014 : ['透镜',		'透鏡',				'Lens',							'レンズ',					],		//02		
+	40013 : ['棱镜',			'プリズム',					'Prism',							],		
+	40014 : ['透镜',			'レンズ',					'Lens',								],		//02		
 	
-	40024 : ['装甲',		'裝甲',				'Armor',						'装甲',						],		
-	40025 : ['厚装甲',		'厚裝甲',			'Heavy Armor',					'厚い装甲',					],		//02		
+	40024 : ['装甲',			'装甲',						'Armor',							],		
+	40025 : ['厚装甲',			'厚い装甲',					'Heavy Armor',						],		//02		
 	
-	40011 : ['工业塑料',	'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],		//02		
+	40011 : ['工业塑料',		'工業用プラスチック',		'Industrial Plastic',				],		//02		
 	
-	40015 : ['点火器',		'點火器',			'Igniter',						'イグナイター',				],		
-	40016 : ['冷凝管',		'冷凝管',			'Condenser',					'復水管',					],		
-	40020 : ['三极管',		'三極管',			'Transistor',					'三極管',					],		//02		
+	40015 : ['点火器',			'イグナイター',				'Igniter',							],		
+	40016 : ['冷凝管',			'復水管',					'Condenser',						],		
+	40020 : ['三极管',			'三極管',					'Transistor',						],		//02		
 	
-	40004 : ['弹头',		'彈頭',				'Warhead',						'弾頭',						],		
-	40010 : ['雷管',		'雷管',				'Detonator',					'起爆装置',					],		
-	40031 : ['涂层',		'塗層',				'Coating',						'コーティング',				],		
-	40012 : ['弹链',		'彈鏈',				'Ammunition Belt',				'弾帯',						],		
-	40032 : ['核心',		'核心',				'Core',							'コア',						],		//02		
+	40004 : ['弹头',			'弾頭',						'Warhead',							],		
+	40010 : ['雷管',			'起爆装置',					'Detonator',						],		
+	40031 : ['涂层',			'コーティング',				'Coating',							],		
+	40012 : ['弹链',			'弾帯',						'Ammunition Belt',					],		
+	40032 : ['核心',			'コア',						'Core',								],		//02		
 	
 };
 
 // 文本描述
 let DescriptionsList = {
 	
-	40001 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40002 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40005 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40006 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40007 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40001 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40002 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40005 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40006 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40007 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40003 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40008 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40009 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40003 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40008 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40009 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40021 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40022 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40023 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40021 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40022 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40023 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40028 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40029 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40030 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40028 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40029 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40030 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40017 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40018 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40019 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40017 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40018 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40019 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40026 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40027 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40026 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40027 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40013 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40014 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40013 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40014 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40024 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40025 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40024 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40025 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40011 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40011 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40015 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40016 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40020 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40015 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40016 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40020 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
-	40004 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40010 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40031 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40012 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		
-	40032 : ['合成材料',	'合成材料',			'Materials for crafting',		'合成素材',					],		//03		
+	40004 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40010 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40031 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40012 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
+	40032 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
 	
 };
 
@@ -370,14 +374,14 @@ tbodyArray01.forEach(function(item){
 		+ '" src="../static/image/material/' + item[1] + '.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 项目名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 文本颜色
 		if(index === 10){ powerTable_tbody_node01 += '<td><span style="display:inline-block;vertical-align:top;width:12px;' + 
 		'height:12px;border:1px solid #999;border-radius:2px;background-color:' + data + ';"></span> ' + data + '</td>' }else 
 		
 		// 文本描述
-		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
+		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -389,7 +393,9 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
+
+})();
 </script>
 
 
@@ -400,7 +406,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -420,7 +426,7 @@ buildPowerTable('powerTable01');
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>假日安排</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>假日安排</span><small>(可选任务)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.假日安排); $('#pub_headText > a > small').text(xj2.i18n.可选任务);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -125,24 +128,24 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 目前共计有 <code>36</code> 种假日安排, 它们可以被简单的分为 <code>3</code> 大类型, 也就是: 宿舍休整(<code>1</code>) / 护送任务(<code>9</code>) / 后勤任务(<code>26</code>); <br />
+	01. 目前共计有 <span class="code">36</span> 种假日安排, 它们可以被简单的分为 <span class="code">3</span> 大类型, 也就是: 宿舍休整(<span class="code">1</span>) / 护送任务(<span class="code">9</span>) / 后勤任务(<span class="code">26</span>); <br />
 	02. 除了幸存模式, 其他模式下都有休息日, 休息日无需战斗, 系统会随机抽取护送任务和后勤任务, 与宿舍休息组成三选一供我们挑; <br />
 	03. 护送任务需要进行防守战, 保护运输车队不受攻击, 而战场上出现的敌人以及敌人的数量, 则由执行任务那天的场景数据进行控制; <br />
-	04. 后勤任务都是按照驾驶员数量获取收益的(获取战略支援除外), 例如"招待上级", 如果当前有 4 个驾驶员, 收益就是 <code>100*4=400</code>; <br />
+	04. 后勤任务都是按照驾驶员数量获取收益的(获取战略支援除外), 例如"招待上级", 如果当前有 4 个驾驶员, 收益就是 <span class="code">100*4=400</span>; <br />
 </p>
 
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="string" style="width:129px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">脑压代价<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务类别<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务报酬<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">任务描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:129px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务图片</zh-i><jp-i>画像</jp-i><en-i>Img</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>脑压代价</zh-i><jp-i>脳圧+</jp-i><en-i>Pressure+</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图类型</zh-i><jp-i>タスクマップ</jp-i><en-i>TaskMap</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务类别</zh-i><jp-i>タスクのタイプ</jp-i><en-i>Task<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务报酬</zh-i><jp-i>タスク報酬</jp-i><en-i>Task<br />Remuneration</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>任务描述</zh-i><jp-i>タスクの説明</jp-i><en-i>Task<br />Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -155,16 +158,16 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>补给战略武器: 补给战略武器的选项(id = <code>39 ~ 49</code>), 仅在某些特殊模式中会被用到, 它会给我们一件战略武器, 这是因为某些战略武器, 只能通过角色的忠诚度奖励来获取, 在我们还未获取之前它们不会解锁, 采购部也就不会售卖, 但某些特殊模式下是没有忠诚度概念的, 因此才用这种选项来弥补战略武器缺失的问题, 还有就是, 上面的表格写着"按人数发放奖励", 实际上不管如何都只是给一件而已;</p>
+<p>补给战略武器: 补给战略武器的选项(id = <span class="code">39 ~ 49</span>), 仅在某些特殊模式中会被用到, 它会给我们一件战略武器, 这是因为某些战略武器, 只能通过角色的忠诚度奖励来获取, 在我们还未获取之前它们不会解锁, 采购部也就不会售卖, 但某些特殊模式下是没有忠诚度概念的, 因此才用这种选项来弥补战略武器缺失的问题, 还有就是, 上面的表格写着"按人数发放奖励", 实际上不管如何都只是给一件而已;</p>
 
-<p>按照人数收益: 当某个角色去执行外勤任务而不在基地中, 就只会增加出外勤的压力而不会增加工作压力, 此时按照人数计算收益也不会算上他们, 但目前某些按人数计算报酬的任务, 疑似存在即便出外勤也照常算钱的情况, 这可能是 BUG, 只是对游戏也没有影响就是了, 还有就是, 脑负荷 <code>>=100</code> 的角色, 既无法出战也无法执行任务, 此时就算在基地中, 那些按人头算奖励的任务也不会算上他们的名额;</p>
+<p>按照人数收益: 当某个角色去执行外勤任务而不在基地中, 就只会增加出外勤的压力而不会增加工作压力, 此时按照人数计算收益也不会算上他们, 但目前某些按人数计算报酬的任务, 疑似存在即便出外勤也照常算钱的情况, 这可能是 BUG, 只是对游戏也没有影响就是了, 还有就是, 脑负荷 <span class="code">>=100</span> 的角色, 既无法出战也无法执行任务, 此时就算在基地中, 那些按人头算奖励的任务也不会算上他们的名额;</p>
 
 <hr />
 </section>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 
 #powerTable01 .hideTr{display:none;}
 
@@ -172,9 +175,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解 */
+<script>/* 脚本逻辑 */
+(function(){
 
-/*
+/* 数据注解
 
 */
 
@@ -240,80 +244,80 @@ let tbodyArray01 = [
 let ItemsNameList = {
 	
 	// 任务名称
-	0 :  ['宿舍休息',			'宿舍休息',			'Dormitory Rest',					'寮休',						],
-	13 : ['生物质运输',			'生物質運輸',		'Biomass Transport',				'バイオマス輸送',			],
-	14 : ['罐头运输',			'罐頭運輸',			'Can Transport',					'缶詰輸送',					],
-	15 : ['食物运输',			'食物運輸',			'Food Transport',					'食料輸送',					],
-	16 : ['有机质运输',			'有機質運輸',		'Organic Compound Transport',		'有機質輸送',				],
-	17 : ['咖啡因运输',			'咖啡因運輸',		'Caffeine Transport',				'カフェイン輸送',			],
-	18 : ['甲醇运输',			'甲醇運輸',			'Methanol Transport',				'メタノール輸送',			],
-	19 : ['烟草运输',			'煙草運輸',			'Tobacco Transport',				'タバコ輸送',				],
-	20 : ['涤纶运输',			'滌綸運輸',			'Polyester Transport',				'ポリエステル輸送',			],
-	21 : ['纸制品运输',			'紙製品運輸',		'Paper Product Transport',			'紙製品輸送',				],
-	22 : ['赶制弹药',			'趕制彈藥',			'Craft Ammo',						'弾薬緊急作成',				],
-	23 : ['修补防线',			'修補防線',			'Defense Repair',					'防衛線修復',				],
-	24 : ['运送设备',			'運送設備',			'Equipment Transport',				'設備輸送',					],
-	25 : ['教育新兵',			'教育新兵',			'Recruit Training',					'新兵教育',					],
-	26 : ['慰问前线',			'慰問前線',			'Front Line Visitation',			'前線慰問',					],
-	27 : ['清洁指挥部',			'清潔指揮部',		'HQ Cleaning',						'指揮所清掃',				],
-	28 : ['参与宴会',			'參與宴會',			'Banquet Attendance',				'宴会参加',					],
-	29 : ['装修指挥部',			'裝修指揮部',		'HQ Renovation',					'指揮所工事',				],
-	30 : ['招待上级',			'招待上級',			'Hosting Superiors',				'上官歓待',					],
-	31 : ['领取补助',			'領取補助',			'Receive Subsidies',				'手当を受け取る',			],
-	32 : ['骗取补助',			'騙取補助',			'Defraud Subsidies',				'手当を騙し取る',			],
-	33 : ['偷取补助',			'偷取補助',			'Stealing Subsidies',				'手当を横領',				],
-	34 : ['哄抢枪械',			'哄搶槍械',			'Loot a firearm',					'銃器を一斉強奪する',		],
-	35 : ['抢夺枪械',			'搶奪槍械',			'Snatch a firearm',					'銃器を強奪する',			],
-	36 : ['督促工人',			'督促工人',			'Urge workers',						'労働者を催促する',			],
-	37 : ['压榨工人',			'壓榨工人',			'Squeezing workers',				'労働者を搾取する',			],
-	38 : ['剥削工人',			'剝削工人',			'Exploiting workers',				'労働者から搾り取る',		],
-	39 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	40 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	41 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	42 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	43 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	44 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	45 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	46 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	47 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	48 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
-	49 : ['补给战略武器',		'補給戰略武器',		'Supply of strategic weapons',		'戦略兵器を補給する',		],
+	0 :  ['宿舍休息',			'寮休',						'Dormitory Rest',						],
+	13 : ['生物质运输',			'バイオマス輸送',			'Biomass Transport',					],
+	14 : ['罐头运输',			'缶詰輸送',					'Can Transport',						],
+	15 : ['食物运输',			'食料輸送',					'Food Transport',						],
+	16 : ['有机质运输',			'有機質輸送',				'Organic Compound Transport',			],
+	17 : ['咖啡因运输',			'カフェイン輸送',			'Caffeine Transport',					],
+	18 : ['甲醇运输',			'メタノール輸送',			'Methanol Transport',					],
+	19 : ['烟草运输',			'タバコ輸送',				'Tobacco Transport',					],
+	20 : ['涤纶运输',			'ポリエステル輸送',			'Polyester Transport',					],
+	21 : ['纸制品运输',			'紙製品輸送',				'Paper Product Transport',				],
+	22 : ['赶制弹药',			'弾薬緊急作成',				'Craft Ammo',							],
+	23 : ['修补防线',			'防衛線修復',				'Defense Repair',						],
+	24 : ['运送设备',			'設備輸送',					'Equipment Transport',					],
+	25 : ['教育新兵',			'新兵教育',					'Recruit Training',						],
+	26 : ['慰问前线',			'前線慰問',					'Front Line Visitation',				],
+	27 : ['清洁指挥部',			'指揮所清掃',				'HQ Cleaning',							],
+	28 : ['参与宴会',			'宴会参加',					'Banquet Attendance',					],
+	29 : ['装修指挥部',			'指揮所工事',				'HQ Renovation',						],
+	30 : ['招待上级',			'上官歓待',					'Hosting Superiors',					],
+	31 : ['领取补助',			'手当を受け取る',			'Receive Subsidies',					],
+	32 : ['骗取补助',			'手当を騙し取る',			'Defraud Subsidies',					],
+	33 : ['偷取补助',			'手当を横領',				'Stealing Subsidies',					],
+	34 : ['哄抢枪械',			'銃器を一斉強奪する',		'Loot a firearm',						],
+	35 : ['抢夺枪械',			'銃器を強奪する',			'Snatch a firearm',						],
+	36 : ['督促工人',			'労働者を催促する',			'Urge workers',							],
+	37 : ['压榨工人',			'労働者を搾取する',			'Squeezing workers',					],
+	38 : ['剥削工人',			'労働者から搾り取る',		'Exploiting workers',					],
+	39 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	40 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	41 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	42 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	43 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	44 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	45 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	46 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	47 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	48 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
+	49 : ['补给战略武器',		'戦略兵器を補給する',		'Supply of strategic weapons',			],
 	
 	// 任务类别
-	type_Protect :	['护送任务',			'護送任務',			'Armored Escort',		'護送任務',			],
-	type_Work :		['后勤任务',			'後勤任務',			'Logistics',			'兵站任務',			],
-	type_Rest :		['宿舍休整',			'宿舍休整',			'Dormitory Rest',		'寮で休養',			],
+	type_Protect :	['护送任务',		'護送任務',			'Armored Escort',			],
+	type_Work :		['后勤任务',		'兵站任務',			'Logistics',				],
+	type_Rest :		['宿舍休整',		'寮で休養',			'Dormitory Rest',			],
 	
 	// 关键名词
-	Reward_Money :	['资产',		'資產',		'Asset',		'資産',		],
-	Reward_ManPow :	['人力',		'人力',		'Manpower',		'人力',		],
+	Reward_Money :	['资产',		'資産',		'Asset',		],
+	Reward_ManPow :	['人力',		'人力',		'Manpower',		],
 	
 	// 奖励物品
-	Reward_12 :		['量产勋章',		'量產勳章',			'Mass-Produced Medal',		'量産メダル',		],
-	Reward_13 :		['标准勋章',		'標準勳章',			'Standard Medal',			'制式メダル',		],
-	Reward_14 :		['英雄勋章',		'英雄勳章',			'Hero Medal',				'英雄メダル',		],
-	Reward_50 :		['城市通行卡',		'城市通行卡',		'City Pass',				'シティパス',		],
+	Reward_12 :		['量产勋章',		'量産メダル',		'Mass-Produced Medal',			],
+	Reward_13 :		['标准勋章',		'制式メダル',		'Standard Medal',				],
+	Reward_14 :		['英雄勋章',		'英雄メダル',		'Hero Medal',					],
+	Reward_50 :		['城市通行卡',		'シティパス',		'City Pass',					],
 	
 	// 战略支援
-	Reward_1300 :	['空袭扫射',			'空襲掃射',				'Air Raid',								'空襲掃射',						],
-	Reward_1301 :	['空袭破片炸弹',		'空襲破片炸彈',			'Aerial Frag Bombardment',				'空襲フラグ爆撃',				],
-	Reward_1302 :	['地毯式破片炸弹',		'地毯式破片炸彈',		'Carpet Frag Bombing',					'絨毯フラグ爆撃',				],
-	Reward_1303 :	['饱和破片炸弹',		'飽和破片炸彈',			'Saturation Frag Bombing',				'飽和フラグ爆撃',				],
-	Reward_1304 :	['空投路障',			'空投路障',				'Airdropped Roadblock',					'エアドロップバリケード',		],
-	Reward_1305 :	['空投地雷',			'空投地雷',				'Airdropped Land Mine',					'エアドロップ地雷',				],
-	Reward_1306 :	['空投云爆弹',			'空投雲爆彈',			'Airdropped Thermobaric Weapon',		'エアドロップクラウドボム',		],
-	Reward_1307 :	['空投汽油弹',			'空投汽油彈',			'Airdropped Napalm',					'エアドロップガソリン爆弾',		],
-	Reward_1308 :	['空投电磁炸弹',		'空投電磁炸彈',			'Airdropped Electromagnetic Bomb',		'エアドロップ電磁爆弾',			],
-	Reward_1309 :	['空投液氮炸弹',		'空投液氮炸彈',			'Airdropped Liquid Nitrogen Bomb',		'エアドロップ液体窒素爆弾',		],
-	Reward_1310 :	['纳米修复机器人',		'納米修復機器人',		'Nano Repair Bot',						'ナノリペアロボット',			],
-	Reward_1311 :	['空投烟雾弹',			'空投煙霧彈',			'Airdropped Smoke Bomb',				'エアドロップ煙幕弾',			],
-	Reward_1312 :	['空投照明弹',			'空投照明彈',			'Airdropped Flare',						'エアドロップフレア',			],
-	Reward_1313 :	['空投机枪塔',			'空投機槍塔',			'Airdropped Machine Gun Turret',		'エアドロップ機関銃砲塔',		],
+	Reward_1300 :	['空袭扫射',			'空襲掃射',							'Air Raid',								],
+	Reward_1301 :	['空袭破片炸弹',		'空襲フラグ爆撃',					'Aerial Frag Bombardment',				],
+	Reward_1302 :	['地毯式破片炸弹',		'絨毯フラグ爆撃',					'Carpet Frag Bombing',					],
+	Reward_1303 :	['饱和破片炸弹',		'飽和フラグ爆撃',					'Saturation Frag Bombing',				],
+	Reward_1304 :	['空投路障',			'エアドロップバリケード',			'Airdropped Roadblock',					],
+	Reward_1305 :	['空投地雷',			'エアドロップ地雷',					'Airdropped Land Mine',					],
+	Reward_1306 :	['空投云爆弹',			'エアドロップクラウドボム',			'Airdropped Thermobaric Weapon',		],
+	Reward_1307 :	['空投汽油弹',			'エアドロップガソリン爆弾',			'Airdropped Napalm',					],
+	Reward_1308 :	['空投电磁炸弹',		'エアドロップ電磁爆弾',				'Airdropped Electromagnetic Bomb',		],
+	Reward_1309 :	['空投液氮炸弹',		'エアドロップ液体窒素爆弾',			'Airdropped Liquid Nitrogen Bomb',		],
+	Reward_1310 :	['纳米修复机器人',		'ナノリペアロボット',				'Nano Repair Bot',						],
+	Reward_1311 :	['空投烟雾弹',			'エアドロップ煙幕弾',				'Airdropped Smoke Bomb',				],
+	Reward_1312 :	['空投照明弹',			'エアドロップフレア',				'Airdropped Flare',						],
+	Reward_1313 :	['空投机枪塔',			'エアドロップ機関銃砲塔',			'Airdropped Machine Gun Turret',		],
 	
 	// 任务描述
-	desc_Protect :	['目标被破坏则任务失败, 无法获得奖励',		'目標被破壞則任務失敗, 無法獲得獎勵',		'If the target is destroyed, you fail the mission and do not receive any rewards.',			'ターゲットが破壊された場合任務は失敗し, 報酬は得られません',		],
-	desc_Work :		['不进行战斗, 按人数发放奖励',				'不進行戰鬥, 按人數發放獎勵',				'Give out rewards based on the number of people sans combat.',								'戦闘なし, 人数に応じて報酬を配布します',							],
-	desc_Rest :		['所有人在宿舍进行休整(可降低脑负荷)',		'所有人在宿舍進行休整(可降低脑负荷)',		'Order everyone to rest in the dormitory.',													'全員寮で休養する',													],
+	desc_Protect :	['目标被破坏则任务失败, 无法获得奖励',		'ターゲットが破壊された場合任務は失敗し, 報酬は得られません',		'If the target is destroyed, you fail the mission and do not receive any rewards.',		],
+	desc_Work :		['不进行战斗, 按人数发放奖励',				'戦闘なし, 人数に応じて報酬を配布します',							'Give out rewards based on the number of people sans combat.',							],
+	desc_Rest :		['所有人在宿舍进行休整(可降低脑负荷)',		'全員寮で休養する',													'Order everyone to rest in the dormitory.',												],
 	
 };
 
@@ -337,10 +341,10 @@ tbodyArray01.forEach(function(item){
 		'<img loading="lazy" alt="'+ item[3] + '" src="../static/image/holiday/'+ item[1] +'.jpg" style="width:128px;height:64px;" /></td>' }else 
 		
 		// 任务名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[item[3]][0] +'</td>' }else 
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[item[3]][xj2.lang.code] +'</td>' }else 
 		
 		// 任务类别
-		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ ItemsNameList['type_'+data][0] +'</td>' }else 
+		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ ItemsNameList['type_'+data][xj2.lang.code] +'</td>' }else 
 		
 		// 任务报酬
 		if(index ===  8){
@@ -355,13 +359,13 @@ tbodyArray01.forEach(function(item){
 				.test(data) === true){ [name, value, ] = data.split('_') };
 			
 			result = (data === '-') ? '-' 
-			: (ItemsNameList['Reward_'+name][0] + ' + ' + value);
+			: (ItemsNameList['Reward_'+name][xj2.lang.code] + ' + ' + value);
 			powerTable_tbody_node01 = powerTable_tbody_node01 + '<td>'+ result +'</td>';
 			
 		}else 
 		
 		// 任务描述
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ ItemsNameList['desc_'+item[9]][0] +'</td>' }else 
+		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ ItemsNameList['desc_'+item[9]][xj2.lang.code] +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -372,7 +376,9 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
+
+})();
 </script>
 
 
@@ -383,7 +389,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -403,7 +409,7 @@ buildPowerTable('powerTable01');
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

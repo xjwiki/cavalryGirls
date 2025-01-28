@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>网站更新</title>
 </head>
 <body>
@@ -62,29 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -93,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>网站更新</span><small>(历史记录)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.网站更新); $('#pub_headText > a > small').text(xj2.i18n.历史记录);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -105,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -122,6 +126,38 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <section><h2 id="heading01">01. 最新版本</h2>
+<p>————</p>
+
+<div>
+	<h4><b>V0.1.5(2025-01-28)</b></h4>
+	<p>概述: 本次更新事件相关的所有内容, 并且完成了新手指南, 即便你是老玩家, 或许温故知新也能发现点新东西, 此外就是为页面做了一些英文和日文的翻译, XJ 并不擅长外语, 因此只能有限度的处理它们, 完整的高质量翻译, 只能期待有热心玩家前来相助了, 就这样…;</p>
+	<p>
+		新增: 剧情环境.html / 特殊场景.html / 事件详情.html; <br />
+		新增: 选择模式.html / 内勤运营.html / 装备配置.html; <br />
+	</p>
+	<p>
+		改进: 全局 > 为网站的部分内容提供了英文和日文的版本; <br />
+		改进: 全局 > 改善了浏览器自动翻译后文本错位情况; <br />
+		改进: 全局 > 删除无用文件夹和文件以精简结构; <br />
+		改进: 全局 > 收拢全局变量避免污染全局环境; <br />
+		改进: 全局 > 优化表格搜索栏的搜索范围; <br />
+		改进: 全局 > 添加了 404.html 页面; <br />
+	</p>
+	<p>
+		更新: 问题合集 > 关于 SL 对于采购部物品和融合的影响; <br />
+		更新: 战场技能 > 同步克莱尔的动力臂透支技能描述; <br />
+		更新: 成就系统 > 添加部分成就的具体完成方法; <br />
+		更新: 首页 > 添加了页面导航链接和赞赏码; <br />
+	</p>
+</div>
+<p>————</p>
+
+<hr />
+</section>
+
+
+
+<section><h2 id="heading02">02. 过往历史</h2>
 <p>————</p>
 
 <div>
@@ -140,7 +176,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<p>
 		修复: 全局 > 修正了装备配件的描述(P 单位结尾的数值是直接加到属性上, 而不是百分比乘算); <br />
 		修复: 主角小队 > 召开作战总结会议可提升能力, 但提升能力上限的前提是角色能力已到达上限; <br />
-		修复: 家具清单 > 获取特殊家具的忠诚度错误问题(3->6, 桑是个特例, 9 心忠诚度才会送机车); <br />
+		修复: 家具清单 > 获取特殊家具的忠诚度错误问题(3->6, 赠送事件可能会出现延迟, 有待研究); <br />
 	</p>
 	<p>
 		修复: 回收废料 > 解决了使用电力回收敌方残骸的价值收益算法错误问题(价值需 ×4); <br />
@@ -152,27 +188,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 		修复: 城防设施 > 解决了表格首行数据没有被高亮的错误问题; <br />
 		修复: 全局 > 商店更正为采购部, 技能点改为升级点; <br />
 	</p>
-	<!--◇
-	<p>
-		更新: 战场技能 > 同步了克莱尔的动力臂透支技能; <br />
-	</p>
-	◇-->
 </div>
-<p>————</p>
-
-<hr />
-</section>
-
-
-
-<section><h2 id="heading02">02. 过往历史</h2>
 <p>————</p>
 
 <div>
 	<h4><b>V0.1.3(2024-10-24)</b></h4>
 	<p>概述: 本次更新补全了剩余的物品信息, 并罗列了各种模式的场景内容, 这些比起之前的页面, 相对来讲没那么重要, 但做起来却颇为费劲, 还有就是还同步了游戏近期的更新, 由于数据变动过多, 为了避免出错, 很多表格都是重新构筑的, 总而言之花了很多时间就是了…;</p>
 	<p>
-		新增: 编队建制.html / 剧情遭遇.html / 特殊模式.html / 外勤任务.html / 假日安排.html; <br />
+		新增: 编队建制.html / 剧情模式.html / 特殊遭遇.html / 外勤任务.html / 假日安排.html; <br />
 		新增: 城防设施.html / 战略支援.html / 家具清单.html; <br />
 	</p>
 	<p>
@@ -248,8 +271,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<p>概述: First Version, 以废土快递的 wiki 框架为基础, 历时一个月, 完成了 10 个页面, 其中有部分链接的页面还没实现, 如果你点击某些链接却无法跳转或显示 404, 那就是页面还没做咯, 别着急, 也许下回就更新了也不一定, 总之, 好好享受游戏吧((｡･∀･)ﾉﾞYo);</p>
 	<p>
 		新增: 网站首页; <br />
-		新增: 武器列表/武器配件/武器融合; <br />
-		新增: 机体详情/主体强化/足部强化/机身挂件/机体改造/投掷物品; <br />
+		新增: 武器) 武器列表/武器配件/武器融合; <br />
+		新增: 机体) 机体详情/主体强化/足部强化/机身挂件/机体改造/投掷物品; <br />
 	</p>
 </div>
 <p>————</p>
@@ -265,7 +288,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -285,7 +308,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

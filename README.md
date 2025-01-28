@@ -3,8 +3,8 @@
 
 **简介**: 铁骑少女(cavalryGirls)攻略百科, 游戏官方 Steam 商店: <https://store.steampowered.com/app/2055050/>  
 
-**兼容**: Edge / Firefox / Chrome / Safari / IOS Webkit / Android Platform  
+**网站**: <https://xjwiki.github.io/cavalryGirls/index.html>  
 
-**网站**: <https://xjwiki.github.io/cavalryGirls/>  
+**更新**: [wiki_update](https://xjwiki.github.io/cavalryGirls/page/ertra_wiki_update.html)  
 
 

@@ -13,13 +13,38 @@ html{overflow-x:auto;overflow-y:scroll;}
 body{background-repeat:no-repeat;background-position:center left, center right;background-size:4px 100%, 4px 100%;}
 html:not([class*="xj-base"]) body{background-color:#f0f0f0;background-image:linear-gradient(90deg, rgba(204,204,204,0.5) 0%, transparent 100%), linear-gradient(90deg, transparent 0%, rgba(204,204,204,0.5) 100%);}
 
-html[lang="zh-cmn-hans"]{font-family:Iosevka,"Microsoft YaHei","Hiragino Sans GB",Monospace;}
-html[lang="zh-cmn-hans"] body{word-break:break-all;
-line-break:anywhere;}
+/* 仅对中文用等宽的 Iosevka */
+html[lang^="zh"]{font-family:Iosevka,"Microsoft YaHei","Hiragino Sans GB",Monospace;}
+html[lang^="zh"] body{word-break:break-all;line-break:anywhere;}
 
-/* 适配 Edge 翻译后的字体 */
+/* 适配 Edge 翻译之后的字体 */
 [_msthash]{font-family:"-apple-system", "Segoe UI", "Roboto", 
 "Hiragino Sans GB", "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;}
+
+/* 自定义中日韩英文控制标签 */
+
+zh-i, jp-i, ko-i, en-i{display:inline;}
+zh-b, jp-b, ko-b, en-b{display:block;}
+zh-t, jp-t, ko-t, en-t{display:table;}
+zh-f, jp-f, ko-f, en-f{display:flex;}
+zh-g, jp-g, ko-g, en-g{display:grid;}
+
+zh-ib, jp-ib, ko-ib, en-ib{display:inline-block;}
+zh-it, jp-it, ko-it, en-it{display:inline-table;}
+zh-if, jp-if, ko-if, en-if{display:inline-flex;}
+zh-ig, jp-ig, ko-ig, en-ig{display:inline-grid;}
+
+html:not(.lang-zh) zh-i, html:not(.lang-zh) zh-b, html:not(.lang-zh) zh-ib, html:not(.lang-zh) zh-t, html:not(.lang-zh) zh-it, 
+html:not(.lang-zh) zh-f, html:not(.lang-zh) zh-if, html:not(.lang-zh) zh-g, html:not(.lang-zh) zh-ig{display:none;}
+
+html:not(.lang-jp) jp-i, html:not(.lang-jp) jp-b, html:not(.lang-jp) jp-ib, html:not(.lang-jp) jp-t, html:not(.lang-jp) jp-it, 
+html:not(.lang-jp) jp-f, html:not(.lang-jp) jp-if, html:not(.lang-jp) jp-g, html:not(.lang-jp) jp-ig{display:none;}
+
+html:not(.lang-ko) ko-i, html:not(.lang-ko) ko-b, html:not(.lang-ko) ko-ib, html:not(.lang-ko) ko-t, html:not(.lang-ko) ko-it, 
+html:not(.lang-ko) ko-f, html:not(.lang-ko) ko-if, html:not(.lang-ko) ko-g, html:not(.lang-ko) ko-ig{display:none;}
+
+html:not(.lang-en) en-i, html:not(.lang-en) en-b, html:not(.lang-en) en-ib, html:not(.lang-en) en-t, html:not(.lang-en) en-it, 
+html:not(.lang-en) en-f, html:not(.lang-en) en-if, html:not(.lang-en) en-g, html:not(.lang-en) en-ig{display:none;}
 
 
 

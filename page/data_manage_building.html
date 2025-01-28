@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>基地部门</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>基地部门</span><small>(运营建设)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.基地部门); $('#pub_headText > a > small').text(xj2.i18n.运营建设);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -126,26 +129,26 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>
 	01. 游戏中可被升级的部门共有六个, 其中的发电厂位于"解体厂", 而其它部门则是位于"基建部", 它们每天都能为我们生产各种资源; <br />
-	02. 这些部门每次升级所需资金为 <code>升级费用+(累进费用×当前等级)</code>, 如人力资源组要升到第 3 级需要资金为 <code>20 + (15 × 2) = 50</code>; <br />
+	02. 这些部门每次升级所需资金为 <span class="code">升级费用+(累进费用×当前等级)</span>, 如人力资源组要升到第 3 级需要资金为 <span class="code">20 + (15 × 2) = 50</span>; <br />
 	03. 下表的"初始价值"是未升级之前的收益范围值, "升级价值"是每次升级增加的收益范围值, "最高价值"是升到最高级的收益范围值; <br />
-	04. 除发电厂和人力资源组, 其余部门生产所需人力为 <code>累进人力×(第N次-1)+所需人力</code>, 累进人力的默认值为 <code>3</code> 但残酷模式为 <code>4</code>; <br />
+	04. 除发电厂和人力资源组, 其余部门生产所需人力为 <span class="code">累进人力×(第N次-1)+所需人力</span>, 累进人力的默认值为 <span class="code">3</span> 但残酷模式为 <span class="code">4</span>; <br />
 </p>
 
 <table originalSort="0" id="powerTable01" class="powerTable table-xs table-hover"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string"      style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string"      style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">等级上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">升级费用<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">累进费用<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">总计费用<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">升级价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最高价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number"      style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">所需人力<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string"      style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string"      style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string"      style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>等级上限</zh-i><jp-i>レベル上限</jp-i><en-i>Level<br />Max</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>升级费用</zh-i><jp-i>アップグレード費用</jp-i><en-i>Upgrade<br />Cost</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>累进费用</zh-i><jp-i>累進費用</jp-i><en-i>Progressive<br />Fees</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>总计费用</zh-i><jp-i>合計費用</jp-i><en-i>Total<br />Cost</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>初始价值</zh-i><jp-i>初期価値</jp-i><en-i>Initial<br />Value</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>升级价值</zh-i><jp-i>価値のアップグレード</jp-i><en-i>Upgrade<br />Value</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="numberRange" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>最高价值</zh-i><jp-i>最高の価値</jp-i><en-i>Highest<br />Value</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number"      style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>所需人力</zh-i><jp-i>必要な労力</jp-i><en-i>Required<br />Manpower</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string"      style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -158,29 +161,29 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 生活部门</h2>
 
-<p>生活区域: 公共休息室包含了娱乐室/休息室/会议室/资料室, 共四个区域, 这四个区域在剧情模式下分别会在第 <code>18/19/28/36</code> 天开放, 在这些区域中进行任意操作, 都需要以"行动点"为代价, 在初始情况下每天只有 <code>2</code> 个行动点, 如果行动点还没用完就直接进入下一日, 则每个行动点会被自动兑换为 <code>12</code> 资金, 理智/博爱/激进的思潮奖励都可额外增加 <code>1</code> 个行动点, 具体可查阅 <a href="./data_pilot_think.html">思潮影响.html</a>;</p>
+<p>生活区域: 公共休息室包含了娱乐室/休息室/会议室/档案室, 共四个区域, 这四个区域在剧情模式下分别会在第 <span class="code">18/19/28/36</span> 天开放, 在这些区域中进行任意操作, 都需要以"行动点"为代价, 在初始情况下每天只有 <span class="code">2</span> 个行动点, 如果行动点还没用完就直接进入下一日, 则每个行动点会被自动兑换为 <span class="code">12</span> 资金, 理智/博爱/激进的思潮奖励都可额外增加 <span class="code">1</span> 个行动点, 具体可查阅 <a href="./data_pilot_think.html">思潮影响.html</a>;</p>
 
-<p>娱乐室: 所有操作每天都只能执行 <code>1</code> 次而已, "打游戏"可降低主角 <code>18</code> 点的脑负荷, "召集队友玩桌游"可降低所有驾驶员 <code>9</code> 点脑负荷(该操作要求起码要有两个或更多驾驶员), "收看电视节目"则是从六个节目中随机挑出两个让我们选, 电视节目会导致脑负荷的增减以及思潮的变化, 其中有些看了甚至会有资金补助, 但大多数电视节目都会导致主角的思潮偏向保守, 如果你想走激进路线就不能随便看, 如果你最后选择还是不看了, 则这次操作不会消耗行动点, 但收看电视节目的选项在今天就不再可用了, 具体可查阅 <a href="./data_pilot_think.html">思潮影响.html</a>;</p>
+<p>娱乐室: 所有操作每天都只能执行 <span class="code">1</span> 次而已, "打游戏"可降低主角 <span class="code">18</span> 点的脑负荷, "召集队友玩桌游"可降低所有驾驶员 <span class="code">9</span> 点脑负荷(该操作要求起码要有两个或更多驾驶员), "收看电视节目"则是从六个节目中随机挑出两个让我们选, 电视节目会导致脑负荷的增减以及思潮的变化, 其中有些看了甚至会有资金补助, 但大多数电视节目都会导致主角的思潮偏向保守, 如果你想走激进路线就不能随便看, 如果你最后选择还是不看了, 则这次操作不会消耗行动点, 但收看电视节目的选项在今天就不再可用了, 具体可查阅 <a href="./data_pilot_think.html">思潮影响.html</a>;</p>
 
-<p>休息室: 所有操作每天都只能执行 <code>1</code> 次而已, 在休息室所获得的物品种类, 是完全随机并且概率均等的, 当然能获取某项物品的大前提是, 已到达或超过该物品的解锁天数, "烹饪料理"会从 [甜品/咖啡/干粮/营养膏/便当/可乐] 这六种食物中, 随机挑出两种让我们选, "制作工艺品"会从 [玩偶/废旧报纸/各式书本/时尚杂志/漂亮衣服/弹壳/唱片] 这七种物品中随机挑出两种让我们选, "制作家具"会从所有家具中随机挑出两种让我们选, 但是 [放射物桶/污染物桶/医疗废物箱/发臭垃圾箱/原始的背景/健身器材/书架/挂饰/机车] 这九项特殊物品不会出现, "代购烟酒"则是免费得到一盒香烟或一瓶酒, 烟酒对于偷税很重要, 除了能提高成功率外, 还能避免被抓后遭到处罚;</p>
+<p>休息室: 所有操作每天都只能执行 <span class="code">1</span> 次而已, 在休息室所获得的物品种类, 是完全随机并且概率均等的, 当然能获取某项物品的大前提是, 已到达或超过该物品的解锁天数, "烹饪料理"会从 [甜品/咖啡/干粮/营养膏/便当/可乐] 这六种食物中, 随机挑出两种让我们选, "制作工艺品"会从 [玩偶/废旧报纸/各式书本/时尚杂志/漂亮衣服/弹壳/唱片] 这七种物品中随机挑出两种让我们选, "制作家具"会从所有家具中随机挑出两种让我们选, 但是 [放射物桶/污染物桶/医疗废物箱/发臭垃圾箱/原始的背景/健身器材/书架/挂饰/机车] 这九项特殊物品不会出现, "代购烟酒"则是免费得到一盒香烟或一瓶酒, 烟酒对于偷税很重要, 除了能提高成功率外, 还能避免被抓后遭到处罚;</p>
 
-<p>会议室: 所有操作每天都只能执行 <code>1</code> 次而已, "召开作战会议"可随机为某个驾驶员加 <code>1</code> 升级点, "召开作战总结会议"可随机为某个驾驶员加 <code>X</code> 点属性, 射击散射 <code>-4%</code> / 射击间隔 <code>-4%</code> / 武器维护 <code>+4%</code> / 装弹时间 <code>-2%</code> / 移动速度 <code>+2%</code> / 奔跑速度 <code>+2%</code>, 值得注意的是, 这里增加的属性在换算成升级点后相当于 <code>2</code>,  就比召开作战会议更划算, 并且如果驾驶员的属性已到达上限, 那么这里增加的值还能突破上限(不过无尽模式下该操作是加 1 升级点), "阅读书籍"可以读一本当前拥有的书(主角出外勤时不能阅读), 如果最后选择还是不看了, 则这次操作不会消耗行动点, 但阅读书籍的选项在今天就不再可用了, "购买书籍"则是花 <code>12</code> 资金买本书, 系统会从所有书籍中随机挑出三本让我们选, 有些书籍是违禁品, 如果在检查中被搜出又没有烟酒贿赂, 就会被处罚了, 因此最好尽早读掉;</p>
+<p>会议室: 所有操作每天都只能执行 <span class="code">1</span> 次而已, "召开作战会议"可随机为某个驾驶员加 <span class="code">1</span> 升级点, "召开作战总结会议"可随机为某个驾驶员加 <span class="code">X</span> 点属性, 射击散射 <span class="code">-4%</span> / 射击间隔 <span class="code">-4%</span> / 武器维护 <span class="code">+4%</span> / 装弹时间 <span class="code">-2%</span> / 移动速度 <span class="code">+2%</span> / 奔跑速度 <span class="code">+2%</span>, 值得注意的是, 这里增加的属性在换算成升级点后相当于 <span class="code">2</span>,  就比召开作战会议更划算, 并且如果驾驶员的属性已到达上限, 那么这里增加的值还能突破上限(不过无尽模式下该操作是加 1 升级点), "阅读书籍"可以读一本当前拥有的书(主角出外勤时不能阅读), 如果最后选择还是不看了, 则这次操作不会消耗行动点, 但阅读书籍的选项在今天就不再可用了, "购买书籍"则是花 <span class="code">12</span> 资金买本书, 系统会从所有书籍中随机挑出三本让我们选, 有些书籍是违禁品, 如果在检查中被搜出又没有烟酒贿赂, 就会被处罚了, 因此最好尽早读掉;</p>
 
-<p>档案室: 我们可以在这里查阅各种物品信息, 以及敌人属性, 还有各种 CG, 除此之外还可以耗费 <code>1</code> 行动点将某个驾驶员约到档案室来, 然后再耗费 <code>1</code> 行动点和这个驾驶员进行交流, 但这种做法没什么性价比, 除非是急着触发某个事件, 否则就没必要进行这个操作了;</p>
+<p>档案室: 我们可以在这里查阅各种物品信息, 以及敌人属性, 还有各种 CG, 除此之外还可以耗费 <span class="code">1</span> 行动点将某个驾驶员约到档案室来, 然后再耗费 <span class="code">1</span> 行动点和这个驾驶员进行交流, 但这种做法没什么性价比, 除非是急着触发某个事件, 否则就没必要进行这个操作了;</p>
 
-<p>回复队友: 当通过送礼或晋升军衔等手段, 使某个驾驶员的忠诚度到达一定阈值(忠诚度的爱心变成纯蓝色), 第二天这个驾驶员就会在公共休息室的娱乐室中出现, 我们可以使用 <code>1</code> 行动点"回复"他们, 以获得忠诚度奖励, 值得一提的是, 就算驾驶员被派去执行外勤任务, 当前不在基地, 但忠诚度到达阈值后娱乐室照样会出现回复按钮(也许是视频对话吧), 关于忠诚度的详情, 具体可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
+<p>回复队友: 当通过送礼或晋升军衔等手段, 使某个驾驶员的忠诚度到达一定阈值(忠诚度的爱心变成纯蓝色), 第二天这个驾驶员就会在公共休息室的娱乐室中出现, 我们可以使用 <span class="code">1</span> 行动点"回复"他们, 以获得忠诚度奖励, 值得一提的是, 就算驾驶员被派去执行外勤任务, 当前不在基地, 但忠诚度到达阈值后娱乐室照样会出现回复按钮(也许是视频对话吧), 关于忠诚度的详情, 具体可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
 
 <p>————</p>
 
 <p>对话交流: 驾驶员总会在基地的某个随机区域出现, 不过只有当他们位于公共休息室的某个房间时, 才可进行对话, 当然玛丽除外, 尽管他也会在公共休息室出现(除非无尽模式下选择了其他人作为队长), 还有就是即使玛丽因为出外勤而不在基地内也可对话, 共 6 种选项:</p>
 
 <p>
-01. 增进感情: 该选项并无忠诚度要求, 可反复触发, <code>+2</code> 忠诚度; <br />
-02. 对战争的看法: 需忠诚度 <code>3</code> 颗心, 可反复触发, <code>+1</code> 思潮, 库罗库/桑/赭石色/克莱尔, 加思潮分别是, 博爱/激进/理智/叛逆, 在无尽模式下, 如果选择了其他人当队长, 则位于公共休息室的玛丽也可对话, 结果是思潮的方向, 既博爱/激进/理智/叛逆随机 <code>+1</code>; <br />
-03. 聊点开心的事: 需忠诚度 <code>6</code> 颗心, 可反复触发, 能够一次性为目标驾驶员 <code>-35</code> 脑负荷; <br />
-04. 聊点你的事吧: 需忠诚度 <code>10</code> 颗心, 仅能执行一次, 再次聊会显示"聊过了", 触发剧情, <code>+4</code> 忠诚度; <br />
+01. 增进感情: 该选项并无忠诚度要求, 可反复触发, <span class="code">+2</span> 忠诚度; <br />
+02. 对战争的看法: 需忠诚度 <span class="code">3</span> 颗心, 可反复触发, <span class="code">+1</span> 思潮, 库罗库/桑/赭石色/克莱尔, 加思潮分别是, 博爱/激进/理智/叛逆, 在无尽模式下, 如果选择了其他人当队长, 则位于公共休息室的玛丽也可对话, 结果是思潮的方向, 既博爱/激进/理智/叛逆随机 <span class="code">+1</span>; <br />
+03. 聊点开心的事: 需忠诚度 <span class="code">6</span> 颗心, 可反复触发, 能够一次性为目标驾驶员 <span class="code">-35</span> 脑负荷; <br />
+04. 聊点你的事吧: 需忠诚度 <span class="code">10</span> 颗心, 仅能执行一次, 再次聊会显示"聊过了", 触发剧情, <span class="code">+4</span> 忠诚度; <br />
 05. 暗号"雪绒花": 无忠诚度需求, 仅能执行一次, 加入叛军需要用这个暗号找到叛军内应, 仅有一个驾驶员会正确回应; <br />
-06. 反抗帝国的暴政吗: 需忠诚度 <code>12</code> 颗心, 仅能执行一次, 如果对方同意则选项不再出现, 这是达成真结局既革命的必要操作之一; <br />
+06. 反抗帝国的暴政吗: 需忠诚度 <span class="code">12</span> 颗心, 仅能执行一次, 如果对方同意则选项不再出现, 这是达成真结局既革命的必要操作之一; <br />
 </p>
 
 <p>行动计划: 可在计划表中直接安排行动点用途, 以免去频繁打开公共休息区的麻烦, 但这个计划表无法让你与驾驶员进行交流, 也无法触发他们忠诚度事件, 因此, 除非你已经不再需要与驾驶员进行沟通, 也已经触发过他们所有的忠诚度事件, 否则这个计划表就没什么用;</p>
@@ -192,27 +195,27 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading03">03. 基建部门</h2>
 
-<p>基建部: 包含[人力资源组/资源回收组/有机合成组/部件开发组/武器制造厂/武器工坊], 总共是六个部门, 它们在剧情模式下分别开放于第 <code>11/11/11/23/49/16</code> 天(人力资源组/资源回收组/有机合成组会同时在基建部出现), 除了武器工坊以外, 其他的五个部门都可以升级, 但升级操作每天仅能执行一次, 例如你升级了人力资源组, 则当天无法再升级其他部门(包括位于解体厂的发电厂也无法升级了);</p>
+<p>基建部: 包含[人力资源组/资源回收组/有机合成组/部件开发组/武器制造厂/武器工坊], 总共是六个部门, 它们在剧情模式下分别开放于第 <span class="code">11/11/11/23/49/16</span> 天(人力资源组/资源回收组/有机合成组会同时在基建部出现), 除了武器工坊以外, 其他的五个部门都可以升级, 但升级操作每天仅能执行一次, 例如你升级了人力资源组, 则当天无法再升级其他部门(包括位于解体厂的发电厂也无法升级了);</p>
 
-<p>人力资源组: 该部门每天都会提供固定数量的人力资源(某些事件可能导致当天人力减少, 但也存在某些假日安排可以增加人力), 除了发电厂以外, 其余生产部门的运作都需要消耗人力资源, 人力资源如果用不完则隔天会被自动清空, 不过如果剩余人力资源 <code>>=3</code>, 则每个人力资源可被兑换为 <code>3</code> 资金, 值得一提的是, 该部门的升级需要等到第二天才会正式生效, 而且情报部门的运作也有人力资源的需求;</p>
+<p>人力资源组: 该部门每天都会提供固定数量的人力资源(某些事件可能导致当天人力减少, 但也存在某些假日安排可以增加人力), 除了发电厂以外, 其余生产部门的运作都需要消耗人力资源, 人力资源如果用不完则隔天会被自动清空, 不过如果剩余人力资源 <span class="code">>=3</span>, 则每个人力资源可被兑换为 <span class="code">3</span> 资金, 值得一提的是, 该部门的升级需要等到第二天才会正式生效, 而且情报部门的运作也有人力资源的需求;</p>
 
-<p>资源回收组: 该部门会以消耗人力资源为代价为我们提供资金, 具体数值取决于该部门的等级, 例如在未升级时, 价值范围是 <code>2 ~ 10</code>, 每升一级, 价值下限与上限会分别 <code>+1</code> 和 <code>+5</code>, 如升到第一级则价值范围是 <code>3 ~ 15</code>, 升到最高十二级则价值范围是 <code>14 ~ 70</code>, 系统会从这个范围中随机取值作为资金收益, 但实际上由于其他资源具有稀缺性, 所以大多玩家都会倾向于其他部门已无法运作才会用它;</p>
+<p>资源回收组: 该部门会以消耗人力资源为代价为我们提供资金, 具体数值取决于该部门的等级, 例如在未升级时, 价值范围是 <span class="code">2 ~ 10</span>, 每升一级, 价值下限与上限会分别 <span class="code">+1</span> 和 <span class="code">+5</span>, 如升到第一级则价值范围是 <span class="code">3 ~ 15</span>, 升到最高十二级则价值范围是 <span class="code">14 ~ 70</span>, 系统会从这个范围中随机取值作为资金收益, 但实际上由于其他资源具有稀缺性, 所以大多玩家都会倾向于其他部门已无法运作才会用它;</p>
 
-<p>有机合成组: 该部门会以消耗人力资源为代价为我们提供礼物, 尽管这个部门叫有机合成组, 但实际上任何解锁天数不为 <code>999</code> 的礼物, 它都有概率会产出, 包括勋章和唱片等无机物, 而在礼物的选择方面, 一般有勋章时我们都会优先选择勋章(因为可以加升级点), 其次是各种驾驶员们最爱的礼物(因为可以加忠诚度), 然后在整备人员的界面将礼物送给驾驶员吧, 送礼的机制, 具体可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
+<p>有机合成组: 该部门会以消耗人力资源为代价为我们提供礼物, 尽管这个部门叫有机合成组, 但实际上任何解锁天数不为 <span class="code">999</span> 的礼物, 它都有概率会产出, 包括勋章和唱片等无机物, 而在礼物的选择方面, 一般有勋章时我们都会优先选择勋章(因为可以加升级点), 其次是各种驾驶员们最爱的礼物(因为可以加忠诚度), 然后在整备人员的界面将礼物送给驾驶员吧, 送礼的机制, 具体可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
 
 <p>部件开发组: 该部门会以消耗人力资源为代价为我们提供配件, 有个小技巧是, 因为生产部门不会出现尚未解锁或还没到解锁天数的物品, 因此如果你不打算用某种武器, 例如喷射或高爆, 就不要拿跟这些武器相关的物品, 以避免解锁相关装备, 这样可避免选项池被污染;</p>
 
 <p>武器制造厂: 该部门会以消耗人力资源为代价为我们提供武器, 这是基建部最晚被解锁的部门, 也是耗费人力资源最高的部门, 它其实也有规避污染选项池的必要, 但如果你是新手, 对武器还不够了解, 不知该如何挑选, 那就看价格吧, 真的用不上起码回收还能多值点钱;</p>
 
-<p>武器工坊: 武器工坊是基建部中唯一没有资源产出的部门, 但是它的开放, 可以让我们实现武器与配件的升级, 以及对武器进行维修, 因此也非常重要, 你既可以在基建部进入工坊的界面操作, 也可以在在整备机体的界面右键武器或配件进行维修或操作, 效果都是一样的;</p>
+<p>武器工坊: 武器工坊是基建部中唯一没有资源产出的部门, 但是它的开放, 可以让我们实现武器与配件的升级, 以及对武器进行维修, 因此也非常重要, 你既可以在基建部进入工坊的界面操作, 也可以在整备机体的界面, 右键武器或配件进行维修或操作, 效果都是一样的;</p>
 
 <p>基建计划: 当你已经不需要升级基建部中的任何部门了, 那么可以采用基建计划, 将人力资源分配到各个部门, 然后执行计划即可一次性获得所有基建产出, 总之, 这个功能就是让你免去进入基建部界面点点点, 稍微提升一下操作的效率, 在中后期或许有些用吧, 但不大;</p>
 
 <p>————</p>
 
-<p>基建技巧: 首先, 将人力资源升级到足够把四个产出部门都能使用一次的程度, 因为首次使用无需额外支出累进人力的值, 是最为划算的, 其次, 要避免最后还有人力被剩下, 虽说剩余人力能被兑换成资金收入, 但这明显不如在基建部用掉划算, 最后, 有个概念叫人力比值, 既不同基建部门, 每使用一个人力能换到的资金值, 具体算法为 <code>(价值下限+价值上限)÷2÷所需人力</code> 例如在部门都升到最高级的情况下, 首次使用资源回收组, 人力比值为 <code>(14+70)÷2÷2=21</code>, 既平均每个人力可兑换 <code>21</code> 资金, 而首次使用有机合成组/部件开发组/武器制造厂, 人力比值分别为 <code>12/19/11</code>, 看似资源回收组是最为划算的, 可游戏的资金并无法买到一切, 因此不能单纯只看资金的收益;</p>
+<p>基建技巧: 首先, 将人力资源升级到足够把四个产出部门都能使用一次的程度, 因为首次使用无需额外支出累进人力的值, 是最为划算的, 其次, 要避免最后还有人力被剩下, 虽说剩余人力能被兑换成资金收入, 但这明显不如在基建部用掉划算, 最后, 有个概念叫人力比值, 既不同基建部门, 每使用一个人力能换到的资金值, 具体算法为 <span class="code">(价值下限+价值上限)÷2÷所需人力</span> 例如在部门都升到最高级的情况下, 首次使用资源回收组, 人力比值为 <span class="code">(14+70)÷2÷2=21</span>, 既平均每个人力可兑换 <span class="code">21</span> 资金, 而首次使用有机合成组/部件开发组/武器制造厂, 人力比值分别为 <span class="code">12/19/11</span>, 看似资源回收组是最为划算的, 可游戏的资金并无法买到一切, 因此不能单纯只看资金的收益;</p>
 
-<p>人力奖励: 克莱尔的忠诚度(LV1)奖励, 可让基建部使用后人力消耗上升 <code>-1</code>, 例如第二次制造武器, 原本耗费的人力为 <code>(2-1)×3+6=9</code>, 奖励后会变成 <code>(2-1)×2+6=8</code>, 例如第三次制造武器, 原本耗费的人力为 <code>(3-1)×3+6=12</code>, 奖励后会变成 <code>(3-1)×2+6=10</code>, 总之就是, 从第二次耗费人力开始, 原本累进人力的值是 <code>3</code>, 而克莱尔的奖励可以让这个值变成 <code>2</code>, 减少了人力损耗, 就是变相的增加人力;</p>
+<p>人力奖励: 克莱尔的忠诚度(LV1)奖励, 可让基建部使用后人力消耗上升 <span class="code">-1</span>, 例如第二次制造武器, 原本耗费的人力为 <span class="code">(2-1)×3+6=9</span>, 奖励后会变成 <span class="code">(2-1)×2+6=8</span>, 例如第三次制造武器, 原本耗费的人力为 <span class="code">(3-1)×3+6=12</span>, 奖励后会变成 <span class="code">(3-1)×2+6=10</span>, 总之就是, 从第二次耗费人力开始, 原本累进人力的值是 <span class="code">3</span>, 而克莱尔的奖励可以让这个值变成 <span class="code">2</span>, 减少了人力损耗, 就是变相的增加人力;</p>
 
 <p>选项奖励: 基建部物品产出默认是二选一, 但克莱尔的忠诚度奖励(LV4/LV8)能再额外多加两个备选项, 变成四选一, 更容易得到好东西;</p>
 
@@ -223,25 +226,25 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading04">04. 机体部门</h2>
 
-<p>机体部门: 包含[整备机体/作战单元/机枪炮塔/训练靶场]四个部门, 在剧情模式下分别开放于第 <code>0/30/26/6</code> 天, 都和机甲配置相关;</p>
+<p>机体部门: 包含[整备机体/作战单元/机枪炮塔/训练靶场]四个部门, 在剧情模式下分别开放于第 <span class="code">0/30/26/6</span> 天, 都和机甲配置相关;</p>
 
 <p>整备机体: 装配我们的主力机体, 包括武器和配件的安装与升级, 如果想让出那些出外勤的驾驶员和机体快速回归, 也是在这界面操作;</p>
 
-<p>作战单元: 与主力机体的整备界面相似, 只是机体改造被换成作战指令设定, 剧情模式下可在第 <code>30/43/63</code> 天分别得到一个作战单元;</p>
+<p>作战单元: 与主力机体的整备界面相似, 只是机体改造被换成作战指令设定, 剧情模式下可在第 <span class="code">30/43/63</span> 天分别得到一个作战单元;</p>
 
-<p>机枪炮塔: 由武器强化/主强化/足部强化这三个模块构成, 剧情模式下可在第 <code>26</code> 天得到一个枪塔, 炮塔则需要等到第 <code>41</code> 天解锁;</p>
+<p>机枪炮塔: 由武器强化/主强化/足部强化这三个模块构成, 剧情模式下可在第 <span class="code">26</span> 天得到一个枪塔, 炮塔则需要等到第 <span class="code">41</span> 天解锁;</p>
 
 <p>训练靶场: 有个沙包可以让我们测试武器威力(沙包其实并非无敌的, 它可能被机制秒杀), 在故事难度下, 靶场还可调出敌人进行测试;</p>
 
 <p>————</p>
 
-<p>复制装备: 剧情模式下得等到第 <code>24</code> 天解锁合成车间后, 才可以对装备进行复制, 而复制的价格算法为: <code>DuplicateBaseNeed + Floor((本日复制次数 × DuplicateCountRate + 1) × 装备价格 × ((装备等级-1) × DuplicateLevelRate + 1))</code>, 其中 <code>DuplicateBaseNeed/DuplicateCountRate/DuplicateLevelRate</code> 都是 Base.csv 表中的变量, 具体为 <code>40/0.5/0.25</code>, 例如复制一把价值为 <code>8</code> 的老式步枪, 价格就是 <code>40+((1×0.5+1)×8×(0×0.25+1))=52</code>, 当天如果第二次复制老式步枪, 价格就是 <code>40+((2×0.5+1)×8×(0×0.25+1))=56</code>, 值得注意的是, 不能复制那些不能升级的物品(既等级的代码为 <code>-1</code> 或 <code>-2</code> 的物品), 还有就是, 每天复制的次数都会重置, 但幸存模式除外, 该模式下虽然战场有白天与黑夜的时间变化, 但实际上复制的次数并不会重置, 总之, 该功能在资金充裕的时候还是很有帮助的;</p>
+<p>复制装备: 剧情模式下得等到第 <span class="code">24</span> 天解锁合成车间后, 才可以对装备进行复制, 而复制的价格算法为: <span class="code">DuplicateBaseNeed + Floor((本日复制次数 × DuplicateCountRate + 1) × 装备价格 × ((装备等级-1) × DuplicateLevelRate + 1))</span>, 其中 <span class="code">DuplicateBaseNeed/DuplicateCountRate/DuplicateLevelRate</span> 都是 Base.csv 表中的变量, 具体为 <span class="code">40/0.5/0.25</span>, 例如复制一把价值为 <span class="code">8</span> 的老式步枪, 价格就是 <span class="code">40+((1×0.5+1)×8×(0×0.25+1))=52</span>, 当天如果第二次复制老式步枪, 价格就是 <span class="code">40+((2×0.5+1)×8×(0×0.25+1))=56</span>, 值得注意的是, 不能复制那些不能升级的物品(既等级的代码为 <span class="code">-1</span> 或 <span class="code">-2</span> 的物品), 还有就是, 每天复制的次数都会重置, 但幸存模式除外, 该模式下虽然战场有白天与黑夜的时间变化, 但实际上复制的次数并不会重置, 总之, 该功能在资金充裕的时候还是很有帮助的;</p>
 
-<p>维修武器: 剧情模式下得等到第 <code>24</code> 天解锁合成车间后, 才可以对武器进行维修, 而维修的资金算法为: <code>武器价格 × 1.2 × (1 - 当前武器耐久)</code>, 例如雷神焚天炮的价格为 <code>900</code>, 假设武器的耐久为 <code>52%</code>, 则维修需要的资金就是 <code>900 × 1.2 × (1 - 0.52) ≈ 518</code>;</p>
+<p>维修武器: 剧情模式下得等到第 <span class="code">24</span> 天解锁合成车间后, 才可以对武器进行维修, 而维修的资金算法为: <span class="code">武器价格 × 1.2 × (1 - 当前武器耐久)</span>, 例如雷神焚天炮的价格为 <span class="code">900</span>, 假设武器的耐久为 <span class="code">52%</span>, 则维修需要的资金就是 <span class="code">900 × 1.2 × (1 - 0.52) ≈ 518</span>;</p>
 
-<p>维修技巧: 当武器的价格 <code><= 125</code>, 使用武器作为材料维修武器, 则武器可恢复的耐久度等于 <code>被当作材料的武器价格 ÷ (被维修的武器价格 × 1.2)</code>, 例如用价格为 <code>20</code> 的轻型狙为材料, 维修价格为 <code>80</code> 的散弹枪A1S, 可恢复的耐久度为 <code>20 ÷ (80 × 1.2) ≈ 0.2</code>, 这跟直接使用 <code>20</code> 资金维修武器的结果是完全一样的, 但是当武器的价格 <code>> 125</code>, 使用武器作为材料维修武器, 则武器可恢复的耐久度等于 <code>(被当作材料的武器价格 × (被维修的武器价格÷125)) ÷ (被维修的武器价格×1.2)</code>, 例如用价格为 <code>20</code> 的轻型狙为材料, 维修价格为 <code>900</code> 的雷神焚天炮, 可恢复的耐久度为 <code>(20 × (900÷125)) ÷ (900×1.2) ≈ 0.13</code>, 如果直接使用资金, 想恢复雷神焚天炮 <code>13%</code> 的耐久度, 得花 <code>900 × 1.2 × 0.13 ≈ 140</code> 资金, 也就是说, 当武器越贵的时候, 使用武器作为材料进行维修, 就会越是划算;</p>
+<p>维修技巧: 当武器的价格 <span class="code"><= 125</span>, 使用武器作为材料维修武器, 则武器可恢复的耐久度等于 <span class="code">被当作材料的武器价格 ÷ (被维修的武器价格 × 1.2)</span>, 例如用价格为 <span class="code">20</span> 的轻型狙为材料, 维修价格为 <span class="code">80</span> 的散弹枪A1S, 可恢复的耐久度为 <span class="code">20 ÷ (80 × 1.2) ≈ 0.2</span>, 这跟直接使用 <span class="code">20</span> 资金维修武器的结果是完全一样的, 但是当武器的价格 <span class="code">> 125</span>, 使用武器作为材料维修武器, 则武器可恢复的耐久度等于 <span class="code">(被当作材料的武器价格 × (被维修的武器价格÷125)) ÷ (被维修的武器价格×1.2)</span>, 例如用价格为 <span class="code">20</span> 的轻型狙为材料, 维修价格为 <span class="code">900</span> 的雷神焚天炮, 可恢复的耐久度为 <span class="code">(20 × (900÷125)) ÷ (900×1.2) ≈ 0.13</span>, 如果直接使用资金, 想恢复雷神焚天炮 <span class="code">13%</span> 的耐久度, 得花 <span class="code">900 × 1.2 × 0.13 ≈ 140</span> 资金, 也就是说, 当武器越贵的时候, 使用武器作为材料进行维修, 就会越是划算;</p>
 
-<p>技巧总结: 首先是, 用同种武器进行维修(同种指完全相同, 同系列但不同等级的武器不算同种), 可恢复 <code>166%</code> 的武器耐久度, 其次是, 虽然配件也能当作维修武器的材料, 但配件计算价值时得 <code>÷10</code>, 是不划算的, 不要这么做, 最后是, 维修那些价格大于 <code>125</code> 的武器, 使用武器作为维修材料, 有额外的价值增益, 所以推荐尽量使用这种维修方式, 有时会弹出购买老式步枪的事件, 必须要买, 因为老式步枪就是维修最好的零件, 如果实在没有武器能用于维修, 那自己做也行, 毕竟老式步枪合成需求很低, 都是通用材料, 完全不值钱;</p>
+<p>技巧总结: 首先是, 用同种武器进行维修(同种指完全相同, 同系列但不同等级的武器不算同种), 可恢复 <span class="code">166%</span> 的武器耐久度, 其次是, 虽然配件也能当作维修武器的材料, 但配件计算价值时得 <span class="code">÷10</span>, 是不划算的, 不要这么做, 最后是, 维修那些价格大于 <span class="code">125</span> 的武器, 使用武器作为维修材料, 有额外的价值增益, 所以推荐尽量使用这种维修方式, 有时会弹出购买老式步枪的事件, 必须要买, 因为老式步枪就是维修最好的零件, 如果实在没有武器能用于维修, 那自己做也行, 毕竟老式步枪合成需求很低, 都是通用材料, 完全不值钱;</p>
 
 <hr />
 </section>
@@ -250,23 +253,23 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading05">05. 采购部门</h2>
 
-<p>采购部门: 该部门是系统第 <code>0</code> 天就自动解锁的, 初始界面会随机提供 <code>5</code> 个商品的购买选项, 可购买的任意类型商品都会在这出现;</p>
+<p>采购部门: 该部门是系统第 <span class="code">0</span> 天就自动解锁的, 初始界面会随机提供 <span class="code">5</span> 个商品的购买选项, 可购买的任意类型商品都会在这出现;</p>
 
-<p>刷新商品: 该选项是系统第 <code>0</code> 天就在采购部门中被解锁的, 点击可来额外得到 <code>4</code> 个新的任意商品选项, 首次点刷新商品的选项是不需要消耗资金的, 但第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <code>3/6/9/12…</code>, 但残酷难度下是 <code>7/14/21/28…</code>, </p>
+<p>刷新商品: 该选项是系统第 <span class="code">0</span> 天就在采购部门中被解锁的, 点击可来额外得到 <span class="code">4</span> 个新的任意商品选项, 首次点刷新商品的选项是不需要消耗资金的, 但第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <span class="code">3/6/9/12…</span>, 但残酷难度下是 <span class="code">7/14/21/28…</span>, </p>
 
-<p>刷新补给: 该选项是系统第 <code>9</code> 天在采购部门中被解锁的, 点击可来额外得到 <code>4</code> 个新的礼物或者家具, 首次点刷新补给的选项是不需要消耗资金的, 但第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <code>6/12/18/24…</code>, 但残酷难度下是 <code>10/20/30/40…</code>, </p>
+<p>刷新补给: 该选项是系统第 <span class="code">9</span> 天在采购部门中被解锁的, 点击可来额外得到 <span class="code">4</span> 个新的礼物或者家具, 首次点刷新补给的选项是不需要消耗资金的, 但第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <span class="code">6/12/18/24…</span>, 但残酷难度下是 <span class="code">10/20/30/40…</span>, </p>
 
-<p>刷新配件: 该选项是系统第 <code>12</code> 天在采购部门中被解锁的, 点击可来额外得到 <code>4</code> 个新的武器或机体配件, 首次点刷新配件的选项是不需要消耗资金的, 但第二次开始就要收费了, 且费用还会根据次数逐步递增, 具体为 <code>6/12/18/24…</code>, 残酷难度下是 <code>10/20/30/40…</code>, </p>
+<p>刷新配件: 该选项是系统第 <span class="code">12</span> 天在采购部门中被解锁的, 点击可来额外得到 <span class="code">4</span> 个新的武器或机体配件, 首次点刷新配件的选项是不需要消耗资金的, 但第二次开始就要收费了, 且费用还会根据次数逐步递增, 具体为 <span class="code">6/12/18/24…</span>, 残酷难度下是 <span class="code">10/20/30/40…</span>, </p>
 
-<p>刷新武器: 该选项是系统第 <code>12</code> 天在采购部门中被解锁的, 点击可来额外得到 <code>2</code> 个新的武器选项, 首次点刷新武器的选项是不需要消耗资金的, 但是从第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <code>6/12/18/24…</code>, 残酷难度下是 <code>10/20/30/40…</code>, </p>
+<p>刷新武器: 该选项是系统第 <span class="code">12</span> 天在采购部门中被解锁的, 点击可来额外得到 <span class="code">2</span> 个新的武器选项, 首次点刷新武器的选项是不需要消耗资金的, 但是从第二次开始就需要收费了, 且费用还会根据次数逐步递增, 具体为 <span class="code">6/12/18/24…</span>, 残酷难度下是 <span class="code">10/20/30/40…</span>, </p>
 
 <p>————</p>
 
 <p>锁定物品: 在采购部购买物品时, 如果看到了想要的东西, 但是此时没有足够的资金, 可以点击商品上方的锁定按钮, 这样可以保留这个物品, 只要你没有解锁或买下, 则不管是手动刷新商品还是过夜自动刷新商品, 该物品都会始终存在(当然这也会占住一个刷新的槽位);</p>
 
-<p>忠诚奖励: 桑有三个忠诚度奖励是和采购部门相关的, LV1 的奖励可让采购部每次刷新价格降低 <code>-1</code>, 如 <code>3</code> 变成 <code>2</code>, <code>6</code> 变成 <code>5</code>, 积少成多, 就可以省下不少钱, LV4 & LV8 的奖励可以分别让采购部每次刷新数量额外 <code>+2</code>, 如刷新商品的选项原本只会刷出 <code>4</code> 个新的任意商品选项, 但有了这两个级别的奖励后, 商品选项就会变成了 <code>8</code>, 选项更多, 也就意味着能更加容易买到我们想要的东西了;</p>
+<p>忠诚奖励: 桑有三个忠诚度奖励是和采购部门相关的, LV1 的奖励可让采购部每次刷新价格降低 <span class="code">-1</span>, 如 <span class="code">3</span> 变成 <span class="code">2</span>, <span class="code">6</span> 变成 <span class="code">5</span>, 积少成多, 就可以省下不少钱, LV4 & LV8 的奖励可以分别让采购部每次刷新数量额外 <span class="code">+2</span>, 如刷新商品的选项原本只会刷出 <span class="code">4</span> 个新的任意商品选项, 但有了这两个级别的奖励后, 商品选项就会变成了 <span class="code">8</span>, 选项更多, 也就意味着能更加容易买到我们想要的东西了;</p>
 
-<p>黑市商人: 可以使用荣誉点让黑市商人刷新各种武器和配件, 武器的选项有六个, 动能武器/进阶动能武器/炮击武器/近战武器/射线电弧武器/喷射武器, 分别耗费的荣誉点为 <code>20/80/80/40/80/30</code>, 武器配件的选项有四个, 武器配件/弹头配件/近战武器配件/射线电弧武器配件, 分别耗费的荣誉点为 <code>30/20/10/50</code>, 机体配件的选项有三个, 移速配件/转速配件/防御配件, 分别消耗的荣誉点为 <code>40/50/20</code>, 这些选项刷新的物品选项介于 <code>3 ~ 7</code> 之间, 甚至可能会出现一些尚未到解锁天数的物品, 但每天仅能交易一次, 它解锁于第 <code>32</code> 天;</p>
+<p>黑市商人: 可以使用荣誉点让黑市商人刷新各种武器和配件, 武器的选项有六个, 动能武器/进阶动能武器/炮击武器/近战武器/射线电弧武器/喷射武器, 分别耗费的荣誉点为 <span class="code">20/80/80/40/80/30</span>, 武器配件的选项有四个, 武器配件/弹头配件/近战武器配件/射线电弧武器配件, 分别耗费的荣誉点为 <span class="code">30/20/10/50</span>, 机体配件的选项有三个, 移速配件/转速配件/防御配件, 分别消耗的荣誉点为 <span class="code">40/50/20</span>, 这些选项刷新的物品选项介于 <span class="code">3 ~ 7</span> 之间, 甚至可能会出现一些尚未到解锁天数的物品, 但每天仅能交易一次, 它解锁于第 <span class="code">32</span> 天;</p>
 
 <hr />
 </section>
@@ -275,36 +278,37 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading06">06. 其他机构</h2>
 
-<p>整备人员: 解锁于第 <code>10</code> 天, 在该功能开放之后, 就能给驾驶员送礼和晋升了, 还能改变驾驶员作战策略以及提升驾驶员的技能属性, 而个人饰品的装备以及战场技能的解锁, 就得另外等到第 <code>35</code> 天和第 <code>41</code>天才能进行操作了, 总之, 和驾驶员相关的操作都集中于此;</p>
+<p>整备人员: 解锁于第 <span class="code">10</span> 天, 在该功能开放之后, 就能给驾驶员送礼和晋升了, 还能改变驾驶员作战策略以及提升驾驶员的技能属性, 而个人饰品的装备以及战场技能的解锁, 就得另外等到第 <span class="code">35</span> 天和第 <span class="code">41</span>天才能进行操作了, 总之, 和驾驶员相关的操作都集中于此;</p>
 
-<p>进城消费: 解锁于第 <code>29</code> 天, 该功能开放后, 能让驾驶员进城娱乐, 可显著降低驾驶员的压力并提升驾驶员的忠诚度, 是用于加速提升驾驶员忠诚度以尽快获得忠诚度的奖励的好手段, 甚至还有福利 CG 放送, 但进城对驾驶员有忠诚度要求(队长除外), 每天最多只能进城一次, 且需要以"通行卡"为代价, 通行卡主要来源于特殊事件, 以及完成假日安排的任务, 当然我们也可以在进城界面的右下角花 <code>100</code> 荣誉点兑换 <code>2</code> 张, 现今可以前往的地方共有 5 处, 它们分别为: 五号商店街: 需 01 心忠诚度, 1 通行卡, -15 脑负荷, +1 忠诚度, 野狼酒吧 : 需 04 心忠诚度, 2 通行卡, -25 脑负荷, +2 忠诚度, 红树电影院: 需 07 心忠诚度, 3 通行卡, -36 脑负荷, +3 忠诚度, 人工沙滩 : 需 09 心忠诚度, 4 通行卡, -45 脑负荷, +3 忠诚度, 钢管厂温泉: 需 12 心忠诚度, 5 通行卡, -54 脑负荷, +3 忠诚度;</p>
-
-<p>————</p>
-
-<p>情报部门: 解锁于第 <code>12</code> 天, 可耗费 <code>1</code> 人力查看明日敌人的类型, 可耗费 <code>1</code> 人力查看敌人的进攻方向, 可耗费 <code>10</code> 人力让间谍小组阻止敌人从某个方向来袭, 虽然最后敌人总兵力并不会减少, 但能集中力量对付少数方向的敌人, 而不需要到四处跑, 会更加容易防守, 但最终决战例外, 因为敌人过于强大, 间谍小组无法行动, 在第 <code>26</code> 天还会解锁天气预报的功能, 可耗费 <code>1</code> 人力查看明日战场的天气, 赭石色的忠诚度奖励可让情报部除间谍小队以外的操作都不再需要消耗人力, 提前知道这些情报, 对安排战力会有很大的帮助;</p>
-
-<p>整备城防: 解锁于第 <code>5</code> 天, 可以用配件强化大门防御(某些防御性配件是战机和城门通用的), 并且安排驾驶员和城防设施的布置, 在第 <code>22</code> 天还会解锁战略支援的功能, 进入战场按 Tab 开启战略界面即可启用, 更多的细节可查阅 <a href="./data_manage_defenses.html">城防设施.html</a> 和 <a href="./data_manage_strategy.html">战略支援.html</a>;</p>
+<p>进城消费: 解锁于第 <span class="code">29</span> 天, 该功能开放后, 能让驾驶员进城娱乐, 可显著降低驾驶员的压力并提升驾驶员的忠诚度, 是用于加速提升驾驶员忠诚度以尽快获得忠诚度的奖励的好手段, 甚至还有福利 CG 放送, 但进城对驾驶员有忠诚度要求(队长除外), 每天最多只能进城一次, 且需要以"通行卡"为代价, 通行卡主要来源于特殊事件, 以及完成假日安排的任务, 当然我们也可以在进城界面的右下角花 <span class="code">100</span> 荣誉点兑换 <span class="code">2</span> 张, 现今可以前往的地方共有 5 处, 它们分别为: 五号商店街: 需 01 心忠诚度, 1 通行卡, -15 脑负荷, +1 忠诚度, 野狼酒吧 : 需 04 心忠诚度, 2 通行卡, -25 脑负荷, +2 忠诚度, 红树电影院: 需 07 心忠诚度, 3 通行卡, -36 脑负荷, +3 忠诚度, 人工沙滩 : 需 09 心忠诚度, 4 通行卡, -45 脑负荷, +3 忠诚度, 钢管厂温泉: 需 12 心忠诚度, 5 通行卡, -54 脑负荷, +3 忠诚度;</p>
 
 <p>————</p>
 
-<p>解体工厂: 解锁于第 <code>27</code> 天, 解体厂可用于解体敌军残骸, 以获得各种用于合成装备的材料, 而解体厂中的发电厂则每天会给我们生成电力, 电力是解体敌军残骸所需要的一种资源, 它不像人力资源, 是可以积累的, 关于这部分的信息, 具体细节可查阅 <a href="./data_manage_material.html">回收废料.html</a>;</p>
+<p>情报部门: 解锁于第 <span class="code">12</span> 天, 可耗费 <span class="code">1</span> 人力查看明日敌人的类型, 可耗费 <span class="code">1</span> 人力查看敌人的进攻方向, 可耗费 <span class="code">10</span> 人力让间谍小组阻止敌人从某个方向来袭, 虽然最后敌人总兵力并不会减少, 但能集中力量对付少数方向的敌人, 而不需要到四处跑, 会更加容易防守, 但最终决战例外, 因为敌人过于强大, 间谍小组无法行动, 在第 <span class="code">26</span> 天还会解锁天气预报的功能, 可耗费 <span class="code">1</span> 人力查看明日战场的天气, 赭石色的忠诚度奖励可让情报部除间谍小队以外的操作都不再需要消耗人力, 提前知道这些情报, 对安排战力会有很大的帮助;</p>
 
-<p>合成车间: 解锁于第 <code>24</code> 天, 在合成车间开放后, 才能使用材料合成装备, 并对装备进行升级或对武器进行维修, 该部门还有个仓库界面, 比起整备机体的物品界面, 它只是多了材料的内容, 如果你想查看当前拥有的所有物品, 得点击外部界面左上角的第四个田形按钮;</p>
+<p>整备城防: 解锁于第 <span class="code">5</span> 天, 可以用配件强化大门防御(某些防御性配件是战机和城门通用的), 并且安排驾驶员和城防设施的布置, 在第 <span class="code">22</span> 天还会解锁战略支援的功能, 进入战场按 Tab 开启战略界面即可启用, 更多的细节可查阅 <a href="./data_manage_defenses.html">城防设施.html</a> 和 <a href="./data_manage_strategy.html">战略支援.html</a>;</p>
+
+<p>————</p>
+
+<p>解体工厂: 解锁于第 <span class="code">27</span> 天, 解体厂可用于解体敌军残骸, 以获得各种用于合成装备的材料, 而解体厂中的发电厂则每天会给我们生成电力, 电力是解体敌军残骸所需要的一种资源, 它不像人力资源, 是可以积累的, 关于这部分的信息, 具体细节可查阅 <a href="./data_manage_material.html">回收废料.html</a>;</p>
+
+<p>合成车间: 解锁于第 <span class="code">24</span> 天, 在合成车间开放后, 才能使用材料合成装备, 并对装备进行升级或对武器进行维修, 该部门还有个仓库界面, 比起整备机体的物品界面, 它只是多了材料的内容, 如果你想查看当前拥有的所有物品, 得点击外部界面左上角的第四个田形按钮;</p>
 
 <hr />
 </section>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 #powerTable01 .hideTr{display:none;}
 </style>
 
 
 
-<script>/* 数据注解 */
+<script>/* 脚本逻辑 */
+(function(){
 
-/*
+/* 数据注解
 
 */
 
@@ -322,22 +326,22 @@ let tbodyArray01 = [
 
 // 项目名称
 let ItemsNameList = {
-	ManpowerGroup :	['人力资源组',		'人力資源組',		'Human Resources Group',			'人事チーム',			],		//02		
-	ResourceGroup :	['资源回收组',		'資源回收組',		'Resource Recycling Group',			'資源回収チーム',		],		
-	ArmorGroup :	['有机合成组',		'有機合成組',		'Organic Synthesis Group',			'有機合成チーム',		],		
-	PartGroup :		['部件开发组',		'部件開發組',		'Component Development Group',		'部品開発チーム',		],		
-	WeaponGroup :	['武器制造厂',		'武器製造廠',		'Weapon Factory',					'武器製造工場',			],		//02		
-	ElectricGroup :	['发电厂',			'發電廠',			'Electricity Plant',				'発電所',				],		//02		
+	ManpowerGroup :	['人力资源组',			'人事チーム',			'Human Resources Group',			],		//02		
+	ResourceGroup :	['资源回收组',			'資源回収チーム',		'Resource Recycling Group',			],		
+	ArmorGroup :	['有机合成组',			'有機合成チーム',		'Organic Synthesis Group',			],		
+	PartGroup :		['部件开发组',			'部品開発チーム',		'Component Development Group',		],		
+	WeaponGroup :	['武器制造厂',			'武器製造工場',			'Weapon Factory',					],		//02		
+	ElectricGroup :	['发电厂',				'発電所',				'Electricity Plant',				],		//02		
 };
 
 // 文本描述
 let DescriptionList = {
-	ManpowerGroup :	['获得人力资源',			'獲得人力資源',				'Get human resources',			'人資源の獲得',			],		//03		
-	ResourceGroup :	['使用人力兑换资金',		'使用人力兌換資金',			'Cost human get money',			'人力交換資金',			],		
-	ArmorGroup :	['使用人力兑换礼物',		'使用人力兌換禮物',			'Cost human get	gift',			'人力交換贈物',			],		
-	PartGroup :		['使用人力兑换部件',		'使用人力兌換部件',			'Cost human get	models',		'人力交換部品',			],		
-	WeaponGroup :	['使用人力兑换武器',		'使用人力兌換武器',			'Cost human get	weapon',		'人力交換兵器',			],		//03		
-	ElectricGroup :	['获得电力资源',			'獲得電力資源',				'Get electricity',				'電資源の獲得',			],		//03		
+	ManpowerGroup :	['获得人力资源',		'人資源の獲得',			'Get human resources',				],		//03		
+	ResourceGroup :	['使用人力兑换资金',	'人力交換資金',			'Cost human get money',				],		
+	ArmorGroup :	['使用人力兑换礼物',	'人力交換贈物',			'Cost human get	gift',				],		
+	PartGroup :		['使用人力兑换部件',	'人力交換部品',			'Cost human get	models',			],		
+	WeaponGroup :	['使用人力兑换武器',	'人力交換兵器',			'Cost human get	weapon',			],		//03		
+	ElectricGroup :	['获得电力资源',		'電資源の獲得',			'Get electricity',					],		//03		
 };
 
 // ---------------------------------------------
@@ -356,10 +360,10 @@ tbodyArray01.forEach(function(item){
 	item.forEach(function(data, index){
 		
 		// 项目名称
-		if(index ===  2){ powerTable_tbody_node01 += '<td style="height:40px;">'+ (ItemsNameList[item[3]][0]) +'</td>' }else 
+		if(index ===  2){ powerTable_tbody_node01 += '<td style="height:40px;">'+ (ItemsNameList[item[3]][xj2.lang.code]) +'</td>' }else 
 
 		// 文本描述
-		if(index === 12){ powerTable_tbody_node01 += '<td style="height:40px;">'+ DescriptionList[item[3]][0] +'</td>' }else 
+		if(index === 12){ powerTable_tbody_node01 += '<td style="height:40px;">'+ DescriptionList[item[3]][xj2.lang.code] +'</td>' }else 
 		
 		// 常规数据
 		if(index !==  0){ powerTable_tbody_node01 += '<td style="height:40px;">'+ data +'</td>' };
@@ -371,7 +375,9 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
+
+})();
 </script>
 
 
@@ -382,7 +388,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -406,7 +412,7 @@ buildPowerTable('powerTable01');
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

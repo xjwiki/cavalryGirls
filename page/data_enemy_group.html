@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>编队建制</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>编队建制</span><small>(搭配成群)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.编队建制); $('#pub_headText > a > small').text(xj2.i18n.搭配成群);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -125,19 +128,19 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 敌人基本上都会以某种特定的混编形式出现在战场上, 而下表就是所有可能出现的组合, 适配于不同的场景模式, 目前共 <code>438</code> 种; <br />
+	01. 敌人基本上都会以某种特定的混编形式出现在战场上, 而下表就是所有可能出现的组合, 适配于不同的场景模式, 目前共 <span class="code">438</span> 种; <br />
 	02. 可将这些敌人组合分为"剧情/无尽/挑战/潜入"四大类, 但有些组合在别的模式下也可能会出现, 所以就只是种粗略的场景划分而已; <br />
 	03. 实际上大多数的场景地图, 都拥有复数的组合选项, 遭遇后会从选项中随机选出某个来用, 所以即便是同个场景, 敌人也未必相同!; <br />
-	04. 某个场景具体会出什么敌人组合以及会出的数量, 均由场景数据控制, 例如想了解剧情模式下的敌人构成, 可查阅: <a href="./data_enemy_plot.html">剧情遭遇.html</a>; <br />
+	04. 某个场景具体会出什么敌人组合以及会出的数量, 均由场景数据控制, 例如想了解剧情模式下的敌人构成, 可查阅: <a href="./data_enemy_plot.html">剧情模式.html</a>; <br />
 </p>
 
 <table originalSort="0" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">组合序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">组合代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 78px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">组合注解<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">具体敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>组合序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>组合代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 78px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>组合注解</zh-i><jp-i>注釈</jp-i><en-i>Annotation</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>具体敌人</zh-i><jp-i>詳細</jp-i><en-i>Details</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -152,14 +155,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>装饰图片: 你可以已经发现了, 在敌人组合中有张奇怪的 None 图片, 就是没有敌人缩略图, 仅有深棕色的地面背景且带个白色的 X, 这个是 XJ 为了排版匀称美观而添加的装饰性图片, 实际上就只是个占位符而已, 并没有任何实质上的意义, 强迫症发作的产物罢了(T_T);</p>
 
-<p>特殊组合: 实际上组合代码为 <code>1000 ~ 1016</code> 和 <code>B4</code> 这共计有 <code>18</code> 个的选项, 它们都会根据场景数据的 <code>MapType</code> 和 <code>EnemyType</code> 属性进行变化, 当 <code>MapType</code> 属性不为空且 <code>EnemyType</code> 为 <code>A|B|C</code> 或 <code>A|B</code> 或 <code>A|C</code> 或 <code>B|C</code> 时, 具体敌人的代码就会在尾部加上 <code>A</code> 或 <code>B</code> 或 <code>C</code>, 直到遇见 <code>MapType</code> 属性为 <code>0</code> 或 <code>EnemyType</code> 属性为 <code>none</code> 或 <code>none|none</code> 为止, 总而言之就是这里的敌人存在三种可能性, 会根据场景数据而变化, 但这里放动态图会显得很不和谐, 所以最后表格只能暂时以 <code>A</code> 尾缀的敌人缩略图代替;</p>
+<p>特殊组合: 实际上组合代码为 <span class="code">1000 ~ 1016</span> 和 <span class="code">B4</span> 这共计有 <span class="code">18</span> 个的选项, 它们都会根据场景数据的 <span class="code">MapType</span> 和 <span class="code">EnemyType</span> 属性进行变化, 当 <span class="code">MapType</span> 属性不为空且 <span class="code">EnemyType</span> 为 <span class="code">A|B|C</span> 或 <span class="code">A|B</span> 或 <span class="code">A|C</span> 或 <span class="code">B|C</span> 时, 具体敌人的代码就会在尾部加上 <span class="code">A</span> 或 <span class="code">B</span> 或 <span class="code">C</span>, 直到遇见 <span class="code">MapType</span> 属性为 <span class="code">0</span> 或 <span class="code">EnemyType</span> 属性为 <span class="code">none</span> 或 <span class="code">none|none</span> 为止, 总而言之就是这里的敌人存在三种可能性, 会根据场景数据而变化, 但这里放动态图会显得很不和谐, 所以最后表格只能暂时以 <span class="code">A</span> 尾缀的敌人缩略图代替;</p>
 
 <hr />
 </section>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 
 #powerTable01 .hideTr{display:none;}
 
@@ -179,9 +182,10 @@ border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);poi
 
 
 
-<script>/* 数据注解 */
+<script>/* 脚本逻辑 */
+(function(){
 
-/*
+/* 数据注解
 
 */
 
@@ -726,353 +730,353 @@ let tbodyArray01 = [
 // 项目名称
 let ItemsNameList = {
 	
-	'-1' :				['None',					'None',						'None',										'None',							],		//02		
+	'-1' :				['None',					'None',							'None',										],		//02		
 	
-	'0' :				['长矛',					'長矛',						'Spear',									'槍',							],		
-	'1' :				['军刀',					'軍刀',						'Saber',									'セイバー',						],		
-	'3' :				['弯刃',					'彎刃',						'Curved Blade',								'カーブブレード',				],		
-	'2' :				['利剑',					'利劍',						'Sword',									'鋭い剣',						],		//02		
+	'0' :				['长矛',					'槍',							'Spear',									],		
+	'1' :				['军刀',					'セイバー',						'Saber',									],		
+	'3' :				['弯刃',					'カーブブレード',				'Curved Blade',								],		
+	'2' :				['利剑',					'鋭い剣',						'Sword',									],		//02		
 	
-	'8' :				['钢盾',					'鋼盾',						'Steel Shield',								'鋼の盾',						],		
-	'10' :				['胡蜂',					'胡蜂',						'Wasp',										'胡蜂',							],		
-	'9' :				['弹雨',					'彈雨',						'Bullet Rain',								'弾の雨',						],		
-	'11' :				['暴君',					'暴君',						'Tyrant',									'暴君',							],		//02		
+	'8' :				['钢盾',					'鋼の盾',						'Steel Shield',								],		
+	'10' :				['胡蜂',					'胡蜂',							'Wasp',										],		
+	'9' :				['弹雨',					'弾の雨',						'Bullet Rain',								],		
+	'11' :				['暴君',					'暴君',							'Tyrant',									],		//02		
 	
-	'4' :				['狙击者',					'狙擊者',					'Sniper',									'狙撃者',						],		
-	'5' :				['压制者',					'壓制者',					'Suppressor',								'制圧者',						],		
-	'6' :				['突破者',					'突破者',					'Breaker',									'突破者',						],		
-	'7' :				['倾泻者',					'傾瀉者',					'Pourer',									'火力手',						],		//02		
+	'4' :				['狙击者',					'狙撃者',						'Sniper',									],		
+	'5' :				['压制者',					'制圧者',						'Suppressor',								],		
+	'6' :				['突破者',					'突破者',						'Breaker',									],		
+	'7' :				['倾泻者',					'火力手',						'Pourer',									],		//02		
 	
-	'12' :				['歌利亚',					'歌利亞',					'Goliath',									'ゴリアテ',						],		
-	'13' :				['携带者',					'攜帶者',					'Carrier',									'携行者',						],		
-	'15' :				['践踏者',					'踐踏者',					'Trampler',									'トランプラー',					],		
-	'14' :				['铁浮屠',					'鐵浮屠',					'Iron Buddha',								'鉄甲兵',						],		//02		
+	'12' :				['歌利亚',					'ゴリアテ',						'Goliath',									],		
+	'13' :				['携带者',					'携行者',						'Carrier',									],		
+	'15' :				['践踏者',					'トランプラー',					'Trampler',									],		
+	'14' :				['铁浮屠',					'鉄甲兵',						'Iron Buddha',								],		//02		
 	
-	'17' :				['游击者',					'遊擊者',					'Guerrilla',								'遊撃者',						],		
-	'18' :				['刺杀者',					'刺殺者',					'Assassin',									'暗殺者',						],		
-	'16' :				['护卫者',					'護衛者',					'Guardian',									'守護者',						],		
-	'19' :				['割喉者',					'割喉者',					'Throat Cutter',							'喉笛切り',						],		//02		
+	'17' :				['游击者',					'遊撃者',						'Guerrilla',								],		
+	'18' :				['刺杀者',					'暗殺者',						'Assassin',									],		
+	'16' :				['护卫者',					'守護者',						'Guardian',									],		
+	'19' :				['割喉者',					'喉笛切り',						'Throat Cutter',							],		//02		
 	
-	'25' :				['冲击者',					'衝擊者',					'Assaulter',								'衝撃者',						],		
-	'24' :				['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
-	'27' :				['轰炸者',					'轟炸者',					'Bomber',									'爆撃者',						],		
-	'26' :				['分裂者',					'分裂者',					'Splitter',									'分裂者',						],		//02		
+	'25' :				['冲击者',					'衝撃者',						'Assaulter',								],		
+	'24' :				['干扰者',					'攪乱者',						'Disruptor',								],		
+	'27' :				['轰炸者',					'爆撃者',						'Bomber',									],		
+	'26' :				['分裂者',					'分裂者',						'Splitter',									],		//02		
 	
-	'22' :				['猎手',					'獵手',						'Hunter',									'ハンター',						],		
-	'23' :				['链锯',					'鏈鋸',						'Chain Saw',								'チェーンソー',					],		
-	'28' :				['棱镜',					'棱鏡',						'Prism',									'プリズム',						],		
-	'29' :				['圣光',					'聖光',						'Light',									'聖光',							],		
-	'33' :				['屠刀',					'屠刀',						'Butcher\'s Knife',							'スローターナイフ',				],		//02		
+	'22' :				['猎手',					'ハンター',						'Hunter',									],		
+	'23' :				['链锯',					'チェーンソー',					'Chain Saw',								],		
+	'28' :				['棱镜',					'プリズム',						'Prism',									],		
+	'29' :				['圣光',					'聖光',							'Light',									],		
+	'33' :				['屠刀',					'スローターナイフ',				'Butcher\'s Knife',							],		//02		
 	
-	'30' :				['致盲者',					'致盲者',					'Blinder',									'目潰し',						],		
-	'31' :				['肢解者',					'肢解者',					'Dissector',								'ミューティレーター',			],		
-	'32' :				['弑君者',					'弑君者',					'Regicide',									'キングスレイヤー',				],		
-	'20' :				['火法师',					'火法師',					'Fire Mage',								'火魔術師',						],		
-	'21' :				['冰法师',					'冰法師',					'Ice Mage',									'氷魔術師',						],		//02		
+	'30' :				['致盲者',					'目潰し',						'Blinder',									],		
+	'31' :				['肢解者',					'ミューティレーター',			'Dissector',								],		
+	'32' :				['弑君者',					'キングスレイヤー',				'Regicide',									],		
+	'20' :				['火法师',					'火魔術師',						'Fire Mage',								],		
+	'21' :				['冰法师',					'氷魔術師',						'Ice Mage',									],		//02		
 	
-	'101A' :			['装甲猎手',				'裝甲獵手',					'Armored Hunter',							'装甲ハンター',					],		
-	'102A' :			['装甲链锯',				'裝甲鏈鋸',					'Armored Chain Saw',						'装甲チェーンソー',				],		
-	'109A' :			['封喉冲车',				'封喉衝車',					'Executor',									'喉潰し',						],		
-	'103A' :			['埋葬者',					'埋葬者',					'Undertaker',								'埋葬者',						],		
-	'104A' :			['绞肉机',					'絞肉機',					'Meat Grinder',								'肉挽き器',						],		
-	'105A' :			['力法师',					'力法師',					'Force Mage',								'力の魔術師',					],		
-	'106A' :			['扭曲者',					'扭曲者',					'Twister',									'ツイスター',					],		
-	'107A' :			['角斗士',					'角鬥士',					'Gladiator',								'グラディエーター',				],		
-	'108A' :			['推进者',					'推進者',					'Pusher',									'推進者',						],		//02		
+	'101A' :			['装甲猎手',				'装甲ハンター',					'Armored Hunter',							],		
+	'102A' :			['装甲链锯',				'装甲チェーンソー',				'Armored Chain Saw',						],		
+	'109A' :			['封喉冲车',				'喉潰し',						'Executor',									],		
+	'103A' :			['埋葬者',					'埋葬者',						'Undertaker',								],		
+	'104A' :			['绞肉机',					'肉挽き器',						'Meat Grinder',								],		
+	'105A' :			['力法师',					'力の魔術師',					'Force Mage',								],		
+	'106A' :			['扭曲者',					'ツイスター',					'Twister',									],		
+	'107A' :			['角斗士',					'グラディエーター',				'Gladiator',								],		
+	'108A' :			['推进者',					'推進者',						'Pusher',									],		//02		
 	
-	'101B' :			['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
-	'108B' :			['执法队',					'執法隊',					'Enforcement Squad',						'執行部隊',						],		
-	'102B' :			['绞刑架',					'絞刑架',					'Gallows',									'絞首台',						],		
-	'103B' :			['食尸鬼',					'食屍鬼',					'Ghoul',									'グール',						],		
-	'105B' :			['开瓶器',					'開瓶器',					'Bottle Opener',							'ボトルオープナー',				],		
-	'107B' :			['膨胀者',					'膨脹者',					'Expander',									'膨張者',						],		
-	'106B' :			['楔形兵',					'楔形兵',					'Wedge Rifleman',							'楔コマンド',					],		
-	'109B' :			['方阵兵',					'方陣兵',					'Phalanx Soldier',							'ファランクス',					],		
-	'104B' :			['移动堡',					'移動堡',					'Moving Castle',							'移動城',						],		//02		
+	'101B' :			['干扰者',					'攪乱者',						'Disruptor',								],		
+	'108B' :			['执法队',					'執行部隊',						'Enforcement Squad',						],		
+	'102B' :			['绞刑架',					'絞首台',						'Gallows',									],		
+	'103B' :			['食尸鬼',					'グール',						'Ghoul',									],		
+	'105B' :			['开瓶器',					'ボトルオープナー',				'Bottle Opener',							],		
+	'107B' :			['膨胀者',					'膨張者',						'Expander',									],		
+	'106B' :			['楔形兵',					'楔コマンド',					'Wedge Rifleman',							],		
+	'109B' :			['方阵兵',					'ファランクス',					'Phalanx Soldier',							],		
+	'104B' :			['移动堡',					'移動城',						'Moving Castle',							],		//02		
 	
-	'101C' :			['靓蓝',					'靚藍',						'Indigo',									'インディゴ',					],		
-	'102C' :			['匕首',					'匕首',						'Dagger',									'ダガー',						],		
-	'106C' :			['骑士',					'騎士',						'Knight',									'騎士',							],		
-	'105C' :			['结晶体',					'結晶體',					'Crystal',									'結晶体',						],		
-	'108C' :			['镇暴队',					'鎮暴隊',					'Riot Squad',								'鎮圧隊',						],		
-	'109C' :			['圣骑士',					'聖騎士',					'Paladin',									'聖騎士',						],		
-	'103C' :			['十夫长',					'十夫長',					'Decurio',									'十人長',						],		
-	'104C' :			['百夫长',					'百夫長',					'Centurion',								'百人長',						],		
-	'107C' :			['狂轰者',					'狂轟者',					'Advanced Bomber',							'狂爆者',						],		//02		
+	'101C' :			['靓蓝',					'インディゴ',					'Indigo',									],		
+	'102C' :			['匕首',					'ダガー',						'Dagger',									],		
+	'106C' :			['骑士',					'騎士',							'Knight',									],		
+	'105C' :			['结晶体',					'結晶体',						'Crystal',									],		
+	'108C' :			['镇暴队',					'鎮圧隊',						'Riot Squad',								],		
+	'109C' :			['圣骑士',					'聖騎士',						'Paladin',									],		
+	'103C' :			['十夫长',					'十人長',						'Decurio',									],		
+	'104C' :			['百夫长',					'百人長',						'Centurion',								],		
+	'107C' :			['狂轰者',					'狂爆者',						'Advanced Bomber',							],		//02		
 	
-	'Boss2_' :			['增殖者',					'增殖者',					'Multiplier',								'増殖者',						],		
-	'Boss2' :			['精锐增殖者',				'精銳增殖者',				'Elite Multiplier',							'精鋭増殖者',					],		//02		
+	'Boss2_' :			['增殖者',					'増殖者',						'Multiplier',								],		
+	'Boss2' :			['精锐增殖者',				'精鋭増殖者',					'Elite Multiplier',							],		//02		
 	
-	'Boss3_' :			['百臂巨人',				'百臂巨人',					'Hundred-Armed Giant',						'百腕巨人',						],		
-	'Boss3' :			['精锐百臂巨人',			'精銳百臂巨人',				'Elite Hundred-Armed Giant',				'精鋭百腕巨人',					],		//02		
+	'Boss3_' :			['百臂巨人',				'百腕巨人',						'Hundred-Armed Giant',						],		
+	'Boss3' :			['精锐百臂巨人',			'精鋭百腕巨人',					'Elite Hundred-Armed Giant',				],		//02		
 	
-	'Boss4' :			['泰坦',					'泰坦',						'Titan',									'タイタン',						],		
-	'Boss5' :			['巨像',					'巨像',						'Colossus',									'コロッサス',					],		//02		
+	'Boss4' :			['泰坦',					'タイタン',						'Titan',									],		
+	'Boss5' :			['巨像',					'コロッサス',					'Colossus',									],		//02		
 	
-	'Boss10A' :			['装甲母体',				'裝甲母體',					'Armored Matrix',							'装甲母体',						],		
-	'Boss10B' :			['特战母体',				'特戰母體',					'Special Forces Matrix',					'特殊戦母体',					],		
-	'Boss10C' :			['圣盾母体',				'聖盾母體',					'Holy Shield Matrix',						'聖盾母体',						],		//02		
+	'Boss10A' :			['装甲母体',				'装甲母体',						'Armored Matrix',							],		
+	'Boss10B' :			['特战母体',				'特殊戦母体',					'Special Forces Matrix',					],		
+	'Boss10C' :			['圣盾母体',				'聖盾母体',						'Holy Shield Matrix',						],		//02		
 	
-	'Boss1_' :			['钢蛞蝓',					'鋼蛞蝓',					'Steel slug',								'スチールスラグ',				],		
-	'Boss1' :			['精锐钢蛞蝓',				'精銳鋼蛞蝓',				'Elite Steel slug',							'精鋭スチールスラグ',			],		
-	'Boss1a' :			['钢蛞蝓分身体01',			'鋼蛞蝓分身體01',			'Steel slug Clone 01',						'スチールスラグ分身体01',		],		
-	'Boss1b' :			['钢蛞蝓分身体02',			'鋼蛞蝓分身體02',			'Steel slug Clone 02',						'スチールスラグ分身体02',		],		
-	'Boss1c' :			['钢蛞蝓分身体03',			'鋼蛞蝓分身體03',			'Steel slug Clone 03',						'スチールスラグ分身体03',		],		//02		
+	'Boss1_' :			['钢蛞蝓',					'スチールスラグ',				'Steel slug',								],		
+	'Boss1' :			['精锐钢蛞蝓',				'精鋭スチールスラグ',			'Elite Steel slug',							],		
+	'Boss1a' :			['钢蛞蝓分身体01',			'スチールスラグ分身体01',		'Steel slug Clone 01',						],		
+	'Boss1b' :			['钢蛞蝓分身体02',			'スチールスラグ分身体02',		'Steel slug Clone 02',						],		
+	'Boss1c' :			['钢蛞蝓分身体03',			'スチールスラグ分身体03',		'Steel slug Clone 03',						],		//02		
 	
-	'EliteRanger' :		['游侠',					'遊俠',						'Ranger',									'ランジャ',						],		
-	'EliteRanger2' :	['高阶游侠',				'高階遊俠',					'Advanced Ranger',							'精鋭ランジャ',					],		//02		
+	'EliteRanger' :		['游侠',					'ランジャ',						'Ranger',									],		
+	'EliteRanger2' :	['高阶游侠',				'精鋭ランジャ',					'Advanced Ranger',							],		//02		
 	
-	'EliteSamurai' :	['足轻',					'足輕',						'Foot Soldier',								'アシガル',						],		
-	'EliteSamurai2' :	['高阶足轻',				'高階足輕',					'Elite Foot Soldier',						'精鋭アシガル',					],		//02		
+	'EliteSamurai' :	['足轻',					'アシガル',						'Foot Soldier',								],		
+	'EliteSamurai2' :	['高阶足轻',				'精鋭アシガル',					'Elite Foot Soldier',						],		//02		
 	
-	'EliteAshigaru' :	['武士',					'武士',						'Sumurai',									'サムライ',						],		
-	'EliteAshigaru2' :	['高阶武士',				'高階武士',					'Advanced Sumurai',							'精鋭サムライ',					],		//02		
+	'EliteAshigaru' :	['武士',					'サムライ',						'Sumurai',									],		
+	'EliteAshigaru2' :	['高阶武士',				'精鋭サムライ',					'Advanced Sumurai',							],		//02		
 	
-	'ElitePuppeteer' :	['傀儡师',					'傀儡師',					'Puppeteer',								'人形師',						],		
-	'EliteSamurai3' :	['傀儡足轻',				'傀儡足輕',					'Puppet Foot Soldier',						'人形師アシガル',				],		
-	'ElitePuppeteer2' :	['高阶傀儡师',				'高階傀儡師',				'Advanced Puppeteer',						'精鋭人形師',					],		
-	'EliteSamurai4' :	['高阶傀儡足轻',			'高階傀儡足輕',				'Advanced Puppet Foot Soldier',				'精鋭人形師アシガル',			],		//02		
+	'ElitePuppeteer' :	['傀儡师',					'人形師',						'Puppeteer',								],		
+	'EliteSamurai3' :	['傀儡足轻',				'人形師アシガル',				'Puppet Foot Soldier',						],		
+	'ElitePuppeteer2' :	['高阶傀儡师',				'精鋭人形師',					'Advanced Puppeteer',						],		
+	'EliteSamurai4' :	['高阶傀儡足轻',			'精鋭人形師アシガル',			'Advanced Puppet Foot Soldier',				],		//02		
 	
-	'A2' :				['教官',					'教官',						'Instructor',								'教官',							],		
-	'A1' :				['督战队',					'督戰隊',					'Overseer Squad',							'督戦隊',						],		//02		
+	'A2' :				['教官',					'教官',							'Instructor',								],		
+	'A1' :				['督战队',					'督戦隊',						'Overseer Squad',							],		//02		
 	
-	'Striker' :			['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
-	'Striker2' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
-	'StrikerRam' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		//02		
+	'Striker' :			['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		
+	'Striker2' :		['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		
+	'StrikerRam' :		['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		//02		
 	
-	'Door' :			['大门',					'大門',						'Gate',										'ゲート',						],		
-	'Door2' :			['大门',					'大門',						'Gate',										'ゲート',						],		//02		
+	'Door' :			['大门',					'ゲート',						'Gate',										],		
+	'Door2' :			['大门',					'ゲート',						'Gate',										],		//02		
 	
-	'Canon1' :			['基础炮台',				'基礎炮臺',					'Basic Turret',								'基礎砲塔',						],		
-	'Canon2' :			['狙击炮台',				'狙擊炮臺',					'Sniper Turret',							'狙撃砲塔',						],		
-	'Canon3' :			['重型炮台',				'重型炮臺',					'Heavy Turret',								'重型砲塔',						],		//02		
+	'Canon1' :			['基础炮台',				'基礎砲塔',						'Basic Turret',								],		
+	'Canon2' :			['狙击炮台',				'狙撃砲塔',						'Sniper Turret',							],		
+	'Canon3' :			['重型炮台',				'重型砲塔',						'Heavy Turret',								],		//02		
 	
-	'Hive1' :			['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
-	'Hive2' :			['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		
-	'HiveK' :			['帝国制造厂',				'帝国制造厂',				'Imperial Manufacturing Plant',				'帝国メーカー',					],		//02		
+	'Hive1' :			['制造厂',					'製造工場',						'Factory',									],		
+	'Hive2' :			['强制造厂',				'強製造工場',					'Advanced Factory',							],		
+	'HiveK' :			['帝国制造厂',				'帝国メーカー',					'Imperial Manufacturing Plant',				],		//02		
 	
-	'BuildingCanon0' :	['要塞炮',					'要塞炮',					'Stronghold Artillery',						'要塞砲',						],		
-	'BuildingCanon' :	['强要塞炮',				'強要塞炮',					'Advanced Stronghold Artillery',			'強要塞砲',						],		
-	'BuildingCanonC' :	['帝国要塞炮',				'帝國要塞炮',				'Imperial Fortress Cannon',					'帝国要塞砲',					],		//02		
+	'BuildingCanon0' :	['要塞炮',					'要塞砲',						'Stronghold Artillery',						],		
+	'BuildingCanon' :	['强要塞炮',				'強要塞砲',						'Advanced Stronghold Artillery',			],		
+	'BuildingCanonC' :	['帝国要塞炮',				'帝国要塞砲',					'Imperial Fortress Cannon',					],		//02		
 	
-	'Camp' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		
-	'CampC' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		//02		
+	'Camp' :			['营帐',					'キャンプサイト',				'Camp tent',								],		
+	'CampC' :			['营帐',					'キャンプサイト',				'Camp tent',								],		//02		
 	
-	'HiveCannon1' :		['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
-	'HiveCannon2' :		['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		//02		
+	'HiveCannon1' :		['制造厂',					'製造工場',						'Factory',									],		
+	'HiveCannon2' :		['强制造厂',				'強製造工場',					'Advanced Factory',							],		//02		
 	
-	'Car1' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
-	'Car2' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
-	'Car3' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		//02		
+	'Car1' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		
+	'Car2' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		
+	'Car3' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		//02		
 	
-	'RebelMecha1' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		
-	'RebelMecha2' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		//02		
+	'RebelMecha1' :		['帝国机甲',				'帝国機体',						'Empire mecha',								],		
+	'RebelMecha2' :		['帝国机甲',				'帝国機体',						'Empire mecha',								],		//02		
 	
-	'High11' :			['渗透型机甲',				'滲透型機甲',				'Infiltrator mecha',						'潜入型機体',					],		
-	'High12' :			['掷弹型机甲',				'擲彈型機甲',				'Grenade launcher mecha',					'擲弾型機体',					],		
-	'High13' :			['冲锋型机甲',				'衝鋒型機甲',				'Assault mecha',							'突撃型機体',					],		
-	'High14' :			['狙击型机甲',				'狙擊型機甲',				'Sniper mecha',								'狙撃型機体',					],		//02		
+	'High11' :			['渗透型机甲',				'潜入型機体',					'Infiltrator mecha',						],		
+	'High12' :			['掷弹型机甲',				'擲弾型機体',					'Grenade launcher mecha',					],		
+	'High13' :			['冲锋型机甲',				'突撃型機体',					'Assault mecha',							],		
+	'High14' :			['狙击型机甲',				'狙撃型機体',					'Sniper mecha',								],		//02		
 	
-	'High11a' :			['精锐渗透型机甲',			'精銳滲透型機甲',			'Elite Infiltrator mecha',					'精鋭潜入型機体',				],		
-	'High12a' :			['精锐掷弹型机甲',			'精銳擲彈型機甲',			'Elite Grenade launcher mecha',				'精鋭擲弾型機体',				],		
-	'High13a' :			['精锐冲锋型机甲',			'精銳衝鋒型機甲',			'Elite Assault mecha',						'精鋭突撃型機体',				],		
-	'High14a' :			['精锐狙击型机甲',			'精銳狙擊型機甲',			'Elite Sniper mecha',						'精鋭狙撃型機体',				],		//02		
+	'High11a' :			['精锐渗透型机甲',			'精鋭潜入型機体',				'Elite Infiltrator mecha',					],		
+	'High12a' :			['精锐掷弹型机甲',			'精鋭擲弾型機体',				'Elite Grenade launcher mecha',				],		
+	'High13a' :			['精锐冲锋型机甲',			'精鋭突撃型機体',				'Elite Assault mecha',						],		
+	'High14a' :			['精锐狙击型机甲',			'精鋭狙撃型機体',				'Elite Sniper mecha',						],		//02		
 	
-	'Mine' :			['地雷',					'地雷',						'A land mine.',								'地雷',							],		//02		
+	'Mine' :			['地雷',					'地雷',							'A land mine.',								],		//02		
 	
-	'EliteLord' :		['领主',					'領主',						'Lord',										'ロード',						],		
-	'EliteLord2' :		['高阶领主',				'高階領主',					'Advanced Lord',							'精鋭ロード',					],		
-	'LordChild' :		['领主辅助战机',			'領主輔助戰機',				'Lord Child Mech Drone',					'ロードの子機体',				],		
-	'TestDummy' :		['测试模型',				'測試模型',					'Test Dummy',								'測試モデル',					],		//02		
+	'EliteLord' :		['领主',					'ロード',						'Lord',										],		
+	'EliteLord2' :		['高阶领主',				'精鋭ロード',					'Advanced Lord',							],		
+	'LordChild' :		['领主辅助战机',			'ロードの子機体',				'Lord Child Mech Drone',					],		
+	'TestDummy' :		['测试模型',				'測試モデル',					'Test Dummy',								],		//02		
 	
-	'EliteGiant' :		['独眼巨人',				'獨眼巨人',					'One-Eyed Giant',							'サイクロプス',					],		
-	'EliteGiant2' :		['精锐独眼巨人',			'精銳獨眼巨人',				'Elite One-Eyed Giant',						'精鋭サイクロプス',				],		
-	'GiantCanon' :		['独眼巨人炮台',			'獨眼巨人炮臺',				'One-Eyed Giant Cannon',					'サイクロプス砲塔',				],		
-	'GiantCanon2' :		['精锐独眼巨人炮台',		'精锐獨眼巨人炮臺',			'Elite One-Eyed Giant Cannon',				'精鋭サイクロプス砲塔',			],		
-	'GiantChild' :		['巨人子战机',				'巨人子戰機',				'Elite One-Eyed Giant Child',				'サイクロプスの子戦機',			],		//02		
+	'EliteGiant' :		['独眼巨人',				'サイクロプス',					'One-Eyed Giant',							],		
+	'EliteGiant2' :		['精锐独眼巨人',			'精鋭サイクロプス',				'Elite One-Eyed Giant',						],		
+	'GiantCanon' :		['独眼巨人炮台',			'サイクロプス砲塔',				'One-Eyed Giant Cannon',					],		
+	'GiantCanon2' :		['精锐独眼巨人炮台',		'精鋭サイクロプス砲塔',			'Elite One-Eyed Giant Cannon',				],		
+	'GiantChild' :		['巨人子战机',				'サイクロプスの子戦機',			'Elite One-Eyed Giant Child',				],		//02		
 	
-	'Sandworm' :		['沙虫',					'沙蟲',						'Sandworm',									'サンドワーム',					],		
-	'Sandworm2' :		['灾厄沙虫',				'災厄沙蟲',					'Catastrophe Sandworm',						'災厄サンドワーム',				],		
-	'SandwormHead' :	['沙虫头部',				'沙蟲頭部',					'Sandworm Head',							'サンドワーム頭部',				],		
-	'SandwormBody' :	['沙虫身躯',				'沙蟲身軀',					'Sandworm Body',							'サンドワーム躯体',				],		
-	'SandwormTail' :	['沙虫尾部',				'沙蟲尾部',					'Sandworm Tail',							'サンドワーム尾部',				],		
-	'SandwormBody2' :	['灾厄沙虫身躯',			'灾厄沙虫身軀',				'Sandworm Body2',							'災厄サンドワーム躯体',			],		//02		
+	'Sandworm' :		['沙虫',					'サンドワーム',					'Sandworm',									],		
+	'Sandworm2' :		['灾厄沙虫',				'災厄サンドワーム',				'Catastrophe Sandworm',						],		
+	'SandwormHead' :	['沙虫头部',				'サンドワーム頭部',				'Sandworm Head',							],		
+	'SandwormBody' :	['沙虫身躯',				'サンドワーム躯体',				'Sandworm Body',							],		
+	'SandwormTail' :	['沙虫尾部',				'サンドワーム尾部',				'Sandworm Tail',							],		
+	'SandwormBody2' :	['灾厄沙虫身躯',			'災厄サンドワーム躯体',			'Sandworm Body2',							],		//02		
 	
-	'BossFinal' :		['主宰',					'主宰',						'Dominator',								'ドミネーター',					],		
-	'BFinalCanon1' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
-	'BFinalCanon2' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
-	'HiveBoss' :		['制造工厂',				'製造工廠',					'Factory',									'製造工場',						],		//02		
+	'BossFinal' :		['主宰',					'ドミネーター',					'Dominator',								],		
+	'BFinalCanon1' :	['主宰炮台',				'ドミネーター砲塔',				'Dominator Cannon',							],		
+	'BFinalCanon2' :	['主宰炮台',				'ドミネーター砲塔',				'Dominator Cannon',							],		
+	'HiveBoss' :		['制造工厂',				'製造工場',						'Factory',									],		//02		
 	
-	'High1' :			['黑骑兵号',				'黑騎兵號',					'Black Knight',								'黒騎兵号',						],		
-	'High2' :			['突骑兵号',				'突騎兵號',					'Charge Cavalry',							'突撃騎兵号',					],		
-	'High3' :			['烈驹号',					'烈駒號',					'Fierce Steed',								'烈馬号',						],		
-	'High4' :			['枪骑兵号',				'槍騎兵號',					'Spear Cavalry',							'槍騎兵号',						],		
-	'High5' :			['甲胄骑士号',				'甲胄騎士號',				'Armor Knight',								'甲冑騎士号',					],		//02		
+	'High1' :			['黑骑兵号',				'黒騎兵号',						'Black Knight',								],		
+	'High2' :			['突骑兵号',				'突撃騎兵号',					'Charge Cavalry',							],		
+	'High3' :			['烈驹号',					'烈馬号',						'Fierce Steed',								],		
+	'High4' :			['枪骑兵号',				'槍騎兵号',						'Spear Cavalry',							],		
+	'High5' :			['甲胄骑士号',				'甲冑騎士号',					'Armor Knight',								],		//02		
 	
-	'CCannon' :			['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon0' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon3' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon4' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	'CCannon' :			['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon0' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon3' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon4' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		//02		
 	
-	'ParCar1' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
-	'ParCar2' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
-	'ParCar3' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		//02		
+	'ParCar1' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		
+	'ParCar2' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		
+	'ParCar3' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		//02		
 	
-	'CanonRebel1' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CanonRebel2' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	'CanonRebel1' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CanonRebel2' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		//02		
 	
-	'Para1' :			['帝国轻型量产机甲',		'帝國輕型量產機甲',			'Empire light production mecha',			'帝国軽量産機甲',				],		
-	'Para2' :			['帝国中型量产机甲',		'帝國中型量產機甲',			'Empire mid size mass-produced mecha',		'帝国中型量産機甲',				],		//02		
+	'Para1' :			['帝国轻型量产机甲',		'帝国軽量産機甲',				'Empire light production mecha',			],		
+	'Para2' :			['帝国中型量产机甲',		'帝国中型量産機甲',				'Empire mid size mass-produced mecha',		],		//02		
 	
-	'Para3' :			['帝国重型量产机甲',		'帝國重型量產機甲',			'Empire heavy production mecha',			'帝国重型量産機甲',				],		
-	'Para3T' :			['帝国重型机甲',			'帝國重型機甲',				'Empire Heavy Mech',						'帝国重型機甲',					],		//02		
+	'Para3' :			['帝国重型量产机甲',		'帝国重型量産機甲',				'Empire heavy production mecha',			],		
+	'Para3T' :			['帝国重型机甲',			'帝国重型機甲',					'Empire Heavy Mech',						],		//02		
 	
-	'Pard' :			['帝国精锐量产机甲',		'帝國精銳量產型機甲',		'Empire\'s elite mass-produced mecha',		'帝国精鋭量産型機甲',			],		
-	'PardT' :			['帝国精锐机甲',			'帝國精銳機甲',				'Empire\'s elite mecha',					'帝国精鋭機甲',					],		//02		
+	'Pard' :			['帝国精锐量产机甲',		'帝国精鋭量産型機甲',			'Empire\'s elite mass-produced mecha',		],		
+	'PardT' :			['帝国精锐机甲',			'帝国精鋭機甲',					'Empire\'s elite mecha',					],		//02		
 	
-	'Parb1' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb1b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb2' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb2b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		//02		
+	'Parb1' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb1b' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb2' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb2b' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		//02		
 	
-	'Parc1' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		
-	'Parc1b' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		//02		
+	'Parc1' :			['帝国火力部队机甲',		'帝国火力部隊機甲',				'Imperial firepower mecha',					],		
+	'Parc1b' :			['帝国火力部队机甲',		'帝国火力部隊機甲',				'Imperial firepower mecha',					],		//02		
 	
-	'Pare' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		
-	'Pareb' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		//02		
+	'Pare' :			['帝国干扰部队机甲',		'帝国妨害部隊機甲',				'Empire Interference Force Mech',			],		
+	'Pareb' :			['帝国干扰部队机甲',		'帝国妨害部隊機甲',				'Empire Interference Force Mech',			],		//02		
 	
-	'Parf' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		
-	'Parfb' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		//02		
+	'Parf' :			['帝国战略部队机甲',		'帝国戦略部隊機甲',				'Imperial Strategic Force Mech',			],		
+	'Parfb' :			['帝国战略部队机甲',		'帝国戦略部隊機甲',				'Imperial Strategic Force Mech',			],		//02		
 	
-	'HighPar' :			['骠骑兵号(改)',			'驃騎兵號(改)',				'Hussar(Reform)',							'ユサール号(改)',				],		//02		
+	'HighPar' :			['骠骑兵号(改)',			'ユサール号(改)',				'Hussar(Reform)',							],		//02		
 	
-	'SupplyBox0' :		['补给箱(通用)',			'補給箱(通用)',				'Supply box-Universal',						'補給箱-汎用',					],		
-	'SupplyBox1' :		['补给箱(动力)',			'補給箱(動力)',				'Supply box-Power',							'補給箱-動力',					],		
-	'SupplyBox2' :		['补给箱(装甲)',			'補給箱(裝甲)',				'Supply box-Armor',							'補給箱-装甲',					],		
-	'SupplyBox3' :		['补给箱(弹头)',			'補給箱(彈頭)',				'Supply box-Warhead',						'補給箱-弾頭',					],		
-	'SupplyBox4' :		['补给箱(元素)',			'補給箱(元素)',				'Supply box-Elemental',						'補給箱-元素',					],		
-	'SupplyBox5' :		['补给箱(核心)',			'補給箱(核心)',				'Supply box-Core',							'補給箱-コア',					],		
-	'SupplyBox6' :		['补给箱(近战)',			'補給箱(近戰)',				'Supply box-Melee',							'補給箱-近接',					],		
-	'SupplyBox7' :		['补给箱(能量)',			'補給箱(能量)',				'Supply box-Energy',						'補給箱-エネルギー',			],		
-	'SupplyBox8' :		['补给箱(重武)',			'補給箱(重武)',				'Supply box-Heavy',							'補給箱-じゅうへいき',			],		//02		
+	'SupplyBox0' :		['补给箱(通用)',			'補給箱-汎用',					'Supply box-Universal',						],		
+	'SupplyBox1' :		['补给箱(动力)',			'補給箱-動力',					'Supply box-Power',							],		
+	'SupplyBox2' :		['补给箱(装甲)',			'補給箱-装甲',					'Supply box-Armor',							],		
+	'SupplyBox3' :		['补给箱(弹头)',			'補給箱-弾頭',					'Supply box-Warhead',						],		
+	'SupplyBox4' :		['补给箱(元素)',			'補給箱-元素',					'Supply box-Elemental',						],		
+	'SupplyBox5' :		['补给箱(核心)',			'補給箱-コア',					'Supply box-Core',							],		
+	'SupplyBox6' :		['补给箱(近战)',			'補給箱-近接',					'Supply box-Melee',							],		
+	'SupplyBox7' :		['补给箱(能量)',			'補給箱-エネルギー',			'Supply box-Energy',						],		
+	'SupplyBox8' :		['补给箱(重武)',			'補給箱-じゅうへいき',			'Supply box-Heavy',							],		//02		
 	
-	'Boss10'  :			['装甲母体/特战母体/圣盾母体',		'裝甲母體/特戰母體/聖盾母體',			'Armored Matrix/Special Forces Matrix/Holy Shield Matrix',		'装甲母体/特殊戦母体/聖盾母体',					],		//02		
+	'Boss10'  :			['装甲母体/特战母体/圣盾母体',			'装甲母体/特殊戦母体/聖盾母体',				'Armored Matrix/Special Forces Matrix/Holy Shield Matrix',		],		//02		
 	
-	'101' :				['装甲猎手/干扰者/靓蓝',			'裝甲獵手/干擾者/靚藍',					'Armored Hunter/Disruptor/Indigo',								'装甲ハンター/攪乱者/インディゴ',				],		
-	'102' :				['装甲链锯/绞刑架/匕首',			'裝甲鏈鋸/絞刑架/匕首',					'Armored Chain Saw/Gallows/Dagger',								'装甲チェーンソー/絞首台/ダガー',				],		
-	'103' :				['埋葬者/食尸鬼/十夫长',			'埋葬者/食屍鬼/十夫長',					'Undertaker/Ghoul/Decurio',										'埋葬者/グール/十人長',							],		//02		
+	'101' :				['装甲猎手/干扰者/靓蓝',				'装甲ハンター/攪乱者/インディゴ',			'Armored Hunter/Disruptor/Indigo',								],		
+	'102' :				['装甲链锯/绞刑架/匕首',				'装甲チェーンソー/絞首台/ダガー',			'Armored Chain Saw/Gallows/Dagger',								],		
+	'103' :				['埋葬者/食尸鬼/十夫长',				'埋葬者/グール/十人長',						'Undertaker/Ghoul/Decurio',										],		//02		
 	
-	'104' :				['绞肉机/移动堡/百夫长',			'絞肉機/移動堡/百夫長',					'Meat Grinder/Moving Castle/Centurion',							'肉挽き器/移動城/百人長',						],		
-	'105' :				['力法师/开瓶器/结晶体',			'力法師/開瓶器/結晶體',					'Force Mage/Opener/Crystal',									'力の魔術師/ボトルオープナー/結晶体',			],		
-	'106' :				['扭曲者/楔形兵/骑士',				'扭曲者/楔形兵/騎士',					'Twister/Wedge Rifleman/Knight',								'ツイスター/楔コマンド/騎士',					],		//02		
+	'104' :				['绞肉机/移动堡/百夫长',				'肉挽き器/移動城/百人長',					'Meat Grinder/Moving Castle/Centurion',							],		
+	'105' :				['力法师/开瓶器/结晶体',				'力の魔術師/ボトルオープナー/結晶体',		'Force Mage/Opener/Crystal',									],		
+	'106' :				['扭曲者/楔形兵/骑士',					'ツイスター/楔コマンド/騎士',				'Twister/Wedge Rifleman/Knight',								],		//02		
 	
-	'107' :				['角斗士/膨胀者/狂轰者',			'角鬥士/膨脹者/狂轟者',					'Gladiator/Expander/Advanced Bomber',							'グラディエーター/膨張者/狂爆者',				],		
-	'108' :				['推进者/执法队/镇暴队',			'推進者/執法隊/鎮暴隊',					'Pusher/Enforcement Squad/Riot Squad',							'推進者/執行部隊/鎮圧隊',						],		
-	'109' :				['封喉冲车/方阵兵/圣骑士',			'封喉衝車/方陣兵/聖騎士',				'Executor/Phalanx Soldier/Paladin',								'喉潰し/ファランクス/聖騎士',					],		//02		
+	'107' :				['角斗士/膨胀者/狂轰者',				'グラディエーター/膨張者/狂爆者',			'Gladiator/Expander/Advanced Bomber',							],		
+	'108' :				['推进者/执法队/镇暴队',				'推進者/執行部隊/鎮圧隊',					'Pusher/Enforcement Squad/Riot Squad',							],		
+	'109' :				['封喉冲车/方阵兵/圣骑士',				'喉潰し/ファランクス/聖騎士',				'Executor/Phalanx Soldier/Paladin',								],		//02		
 	
 };
 
 // 文本描述
 let DescriptionList = {
 	
-	'基础' : 								['基础',								'基礎',									'Basic',											'基本',										],		
-	'基础型' : 								['基础型',								'基礎型',								'Basic Type',										'基本',										],		
-	'高级基础' : 							['高级基础',							'高級基礎',								'Advanced Basic',									'高度な基礎',								],		
-	'狙击' : 								['狙击',								'狙擊',									'Sniper',											'スナイパータイプ',							],		
-	'特攻型' : 								['特攻型',								'特攻型',								'Special Attack',									'特別攻撃',									],		
-	'冰火元素' : 							['冰火元素',							'冰火元素',								'Ice and Fire',										'氷と火のエレメント',						],		
-	'近战' : 								['近战',								'近戰',									'Melee',											'近接攻撃',									],		
-	'盾卫型' : 								['盾卫型',								'盾衛型',								'Shield Guard',										'シールドガード',							],		
-	'步坦协同' : 							['步坦协同',							'步坦協同',								'Infantry and Tank',								'ブタンコラボ',								],		
-	'激光' : 								['激光',								'激光',									'Laser',											'レーザー',									],		
-	'轰炸型' : 								['轰炸型',								'轟炸型',								'Bombing',											'爆撃タイプ',								],		
-	'突击阵型' : 							['突击阵型',							'突擊陣型',								'Assault',											'突撃隊形',									],		
-	'集群' : 								['集群',								'集群',									'Cluster',											'クラスタ',									],		
-	'隐身型' : 								['隐身型',								'隱身型',								'Stealth',											'ステルス',									],		
-	'坦克集群' : 							['坦克集群',							'坦克集群',								'Tank Cluster',										'タンククラスター',							],		
-	'爆炸' : 								['爆炸',								'爆炸',									'Explosion',										'爆発する',									],		
-	'护盾' : 								['护盾',								'護盾',									'Shield',											'シールド',									],		
-	'重甲' : 								['重甲',								'重甲',									'Heavy Armor',										'重装甲',									],		
-	'电弧' : 								['电弧',								'電弧',									'Arc',												'アーク',									],		
-	'快攻' : 								['快攻',								'快攻',									'Quick',											'ファストブレイク',							],		
-	'特殊' : 								['特殊',								'特殊',									'Special',											'特別',										],		
-	'压制' : 								['压制',								'壓製',									'Suppression',										'抑制',										],		
-	'精英首领' : 							['精英首领',							'精英首領',								'Elite Leader',										'エリートリーダー',							],		
-	'下级首领' : 							['下级首领',							'下級首領',								'Under the Boss',									'下位リーダー',								],		
-	'挑战泰坦' : 							['挑战泰坦',							'挑戰泰坦',								'Challenge Titan',									'タイタンズへ挑戦',							],		
-	'挑战巨像' : 							['挑战巨像',							'挑戰巨像',								'Challenge Colossus',								'巨像に挑戦せよ',							],		
-	'挑战主宰' : 							['挑战主宰',							'挑戰主宰',								'Challenge Overlord',								'主に挑戦せよ',								],		
-	'首领护卫' : 							['首领护卫',							'首領護衛',								'Boss Guard',										'ヘッドガード',								],		
-	'进阶' : 								['进阶',								'進階',									'Advanced',											'高度な',									],		
-	'高阶' : 								['高阶',								'高階',									'High Level',										'高度な',									],		
-	'终阶' : 								['终阶',								'終階',									'Final Level',										'最終ステップ',								],		
-	'任务' : 								['任务',								'任務',									'Mission',											'タスク',									],		
-	'叛军' : 								['叛军',								'叛軍',									'Rebels',											'反乱者たち',								],		
+	'基础' : 								['基础',									'基本',										'Basic',											],		
+	'基础型' : 								['基础型',									'基本',										'Basic Type',										],		
+	'高级基础' : 							['高级基础',								'高度な基礎',								'Advanced Basic',									],		
+	'狙击' : 								['狙击',									'スナイパータイプ',							'Sniper',											],		
+	'特攻型' : 								['特攻型',									'特別攻撃',									'Special Attack',									],		
+	'冰火元素' : 							['冰火元素',								'氷と火のエレメント',						'Ice and Fire',										],		
+	'近战' : 								['近战',									'近接攻撃',									'Melee',											],		
+	'盾卫型' : 								['盾卫型',									'シールドガード',							'Shield Guard',										],		
+	'步坦协同' : 							['步坦协同',								'ブタンコラボ',								'Infantry and Tank',								],		
+	'激光' : 								['激光',									'レーザー',									'Laser',											],		
+	'轰炸型' : 								['轰炸型',									'爆撃タイプ',								'Bombing',											],		
+	'突击阵型' : 							['突击阵型',								'突撃隊形',									'Assault',											],		
+	'集群' : 								['集群',									'クラスタ',									'Cluster',											],		
+	'隐身型' : 								['隐身型',									'ステルス',									'Stealth',											],		
+	'坦克集群' : 							['坦克集群',								'タンククラスター',							'Tank Cluster',										],		
+	'爆炸' : 								['爆炸',									'爆発する',									'Explosion',										],		
+	'护盾' : 								['护盾',									'シールド',									'Shield',											],		
+	'重甲' : 								['重甲',									'重装甲',									'Heavy Armor',										],		
+	'电弧' : 								['电弧',									'アーク',									'Arc',												],		
+	'快攻' : 								['快攻',									'ファストブレイク',							'Quick',											],		
+	'特殊' : 								['特殊',									'特別',										'Special',											],		
+	'压制' : 								['压制',									'抑制',										'Suppression',										],		
+	'精英首领' : 							['精英首领',								'エリートリーダー',							'Elite Leader',										],		
+	'下级首领' : 							['下级首领',								'下位リーダー',								'Under the Boss',									],		
+	'挑战泰坦' : 							['挑战泰坦',								'タイタンズへ挑戦',							'Challenge Titan',									],		
+	'挑战巨像' : 							['挑战巨像',								'巨像に挑戦せよ',							'Challenge Colossus',								],		
+	'挑战主宰' : 							['挑战主宰',								'主に挑戦せよ',								'Challenge Overlord',								],		
+	'首领护卫' : 							['首领护卫',								'ヘッドガード',								'Boss Guard',										],		
+	'进阶' : 								['进阶',									'高度な',									'Advanced',											],		
+	'高阶' : 								['高阶',									'高度な',									'High Level',										],		
+	'终阶' : 								['终阶',									'最終ステップ',								'Final Level',										],		
+	'任务' : 								['任务',									'タスク',									'Mission',											],		
+	'叛军' : 								['叛军',									'反乱者たち',								'Rebels',											],		
 
-	'无尽模式<br />基础' : 					['无尽模式<br />基础',					'無儘模式<br />基礎',					'Endless Mode Basic',								'エンドレスモード 基本',					],		
-	'无尽模式<br />进阶' : 					['无尽模式<br />进阶',					'無儘模式<br />進階',					'Endless Mode Advanced',							'エンドレスモード アドバンス',				],		
-	'无尽模式<br />高阶' : 					['无尽模式<br />高阶',					'無儘模式<br />高階',					'Endless Mode High Level',							'エンドレスモード アドバンス',				],		
-	'无尽模式<br />终阶' : 					['无尽模式<br />终阶',					'無儘模式<br />終階',					'Endless Mode Final Level',							'エンドレスモード 最終',					],		
-	'无尽模式<br />基础 : B' : 				['无尽模式<br />基础 : B',				'無儘模式<br />基礎 : B',				'Endless Mode Basic : B',							'エンドレスモード ベーシック: B',			],		
-	'无尽模式<br />基础 : C' : 				['无尽模式<br />基础 : C',				'無儘模式<br />基礎 : C',				'Endless Mode Basic : C',							'エンドレスモード ベーシック: C',			],		
-	'无尽模式<br />基础 : D' : 				['无尽模式<br />基础 : D',				'無儘模式<br />基礎 : D',				'Endless Mode Basic : D',							'エンドレスモード ベーシック: D',			],		
-	'无尽模式<br />基础 : F' : 				['无尽模式<br />基础 : F',				'無儘模式<br />基礎 : F',				'Endless Mode Basic : F',							'エンドレスモード ベーシック: F',			],		
-	'无尽模式<br />基础 : G' : 				['无尽模式<br />基础 : G',				'無儘模式<br />基礎 : G',				'Endless Mode Basic : G',							'エンドレスモード ベーシック: G',			],		
-	'无尽模式<br />基础 : H' : 				['无尽模式<br />基础 : H',				'無儘模式<br />基礎 : H',				'Endless Mode Basic : H',							'エンドレスモード ベーシック: H',			],		
-	'无尽模式<br />基础<br />首领 : A' : 	['无尽模式<br />基础<br />首领 : A',	'無儘模式<br />基礎<br />首領 : A',		'Endless Mode Basic<br />Boss : A',					'エンドレスモード ベーシック ボス: A',		],		
-	'无尽模式<br />基础<br />首领 : B' : 	['无尽模式<br />基础<br />首领 : B',	'無儘模式<br />基礎<br />首領 : B',		'Endless Mode Basic<br />Boss : B',					'エンドレスモード ベーシック ボス: B',		],		
-	'无尽模式<br />基础<br />首领 : C' : 	['无尽模式<br />基础<br />首领 : C',	'無儘模式<br />基礎<br />首領 : C',		'Endless Mode Basic<br />Boss : C',					'エンドレスモード ベーシック ボス: C',		],		
-	'无尽模式<br />基础<br />首领 : D' : 	['无尽模式<br />基础<br />首领 : D',	'無儘模式<br />基礎<br />首領 : D',		'Endless Mode Basic<br />Boss : D',					'エンドレスモード ベーシック ボス: D',		],		
-	'无尽模式<br />进阶 : B' : 				['无尽模式<br />进阶 : B',				'無儘模式<br />進階 : B',				'Endless Mode Advanced : B',						'エンドレスモード 上級: B',					],		
-	'无尽模式<br />进阶 : C' : 				['无尽模式<br />进阶 : C',				'無儘模式<br />進階 : C',				'Endless Mode Advanced : C',						'エンドレスモード 上級: C',					],		
-	'无尽模式<br />进阶 : D' : 				['无尽模式<br />进阶 : D',				'無儘模式<br />進階 : D',				'Endless Mode Advanced: D',							'エンドレスモード 上級: D',					],		
-	'无尽模式<br />进阶 : F' : 				['无尽模式<br />进阶 : F',				'無儘模式<br />進階 : F',				'Endless Mode Advanced: F',							'エンドレスモード アドバンス: F',			],		
-	'无尽模式<br />进阶 : G' : 				['无尽模式<br />进阶 : G',				'無儘模式<br />進階 : G',				'Endless Mode Advanced: G',							'エンドレスモード アドバンス: G',			],		
-	'无尽模式<br />进阶 : H' : 				['无尽模式<br />进阶 : H',				'無儘模式<br />進階 : H',				'Endless Mode Advanced: H',							'エンドレスモード アドバンス: H',			],		
-	'无尽模式<br />进阶<br />首领 : A' : 	['无尽模式<br />进阶<br />首领 : A',	'無儘模式<br />進階<br />首領 : A',		'Endless Mode Advanced<br />Boss: A',				'エンドレスモード 上級 ボス: A',			],		
-	'无尽模式<br />进阶<br />首领 : B' : 	['无尽模式<br />进阶<br />首领 : B',	'無儘模式<br />進階<br />首領 : B',		'Endless Mode Advanced<br />Boss: B',				'エンドレスモード 上級 ボス: B',			],		
-	'无尽模式<br />进阶<br />首领 : C' : 	['无尽模式<br />进阶<br />首领 : C',	'無儘模式<br />進階<br />首領 : C',		'Endless Mode Advanced<br />Boss: C',				'エンドレスモード 上級 ボス: C',			],		
-	'无尽模式<br />进阶<br />首领 : D' : 	['无尽模式<br />进阶<br />首领 : D',	'無儘模式<br />進階<br />首領 : D',		'Endless Mode Advanced<br />Boss: D',				'エンドレスモード 上級 ボス: D',			],		
-	'无尽模式<br />高阶 : B' : 				['无尽模式<br />高阶 : B',				'無儘模式<br />高階 : B',				'Endless Mode High Level: B',						'エンドレスモード 上級: B',					],		
-	'无尽模式<br />高阶 : C' : 				['无尽模式<br />高阶 : C',				'無儘模式<br />高階 : C',				'Endless Mode High Level: C',						'エンドレスモード 上級: C',					],		
-	'无尽模式<br />高阶 : D' : 				['无尽模式<br />高阶 : D',				'無儘模式<br />高階 : D',				'Endless Mode High Level: D',						'エンドレスモード 上級: D',					],		
-	'无尽模式<br />高阶 : F' : 				['无尽模式<br />高阶 : F',				'無儘模式<br />高階 : F',				'Endless Mode High Level: F',						'エンドレスモード アドバンス: F',			],		
-	'无尽模式<br />高阶 : G' : 				['无尽模式<br />高阶 : G',				'無儘模式<br />高階 : G',				'Endless Mode High Level: G',						'エンドレスモード アドバンス: G',			],		
-	'无尽模式<br />高阶 : H' : 				['无尽模式<br />高阶 : H',				'無儘模式<br />高階 : H',				'Endless Mode High Level: H',						'エンドレスモード アドバンス: H',			],		
-	'无尽模式<br />高阶<br />首领 : A' :	['无尽模式<br />高阶<br />首领 : A',	'無儘模式<br />高階<br />首領 : A',		'Endless Mode High Level<br />Boss: A',				'エンドレスモード 上位 ボス: A',			],		
-	'无尽模式<br />高阶<br />首领 : B' :	['无尽模式<br />高阶<br />首领 : B',	'無儘模式<br />高階<br />首領 : B',		'Endless Mode High Level<br />Boss: B',				'エンドレスモード 上級 ボス: B',			],		
-	'无尽模式<br />高阶<br />首领 : C' :	['无尽模式<br />高阶<br />首领 : C',	'無儘模式<br />高階<br />首領 : C',		'Endless Mode High Level<br />Boss: C',				'エンドレスモード 上級 ボス: C',			],		
-	'无尽模式<br />高阶<br />首领 : D' :	['无尽模式<br />高阶<br />首领 : D',	'無儘模式<br />高階<br />首領 : D',		'Endless Mode High Level<br />Boss: D',				'エンドレスモード 上級 ボス: D',			],		
-	'无尽模式<br />终阶 : B' : 				['无尽模式<br />终阶 : B',				'無儘模式<br />終階 : B',				'Endless Mode Final Level: B',						'エンドレスモード 最終レベル: B',			],		
-	'无尽模式<br />终阶 : C' : 				['无尽模式<br />终阶 : C',				'無儘模式<br />終階 : C',				'Endless Mode Final Level: C',						'エンドレスモード 最終レベル: C',			],		
-	'无尽模式<br />终阶 : D' : 				['无尽模式<br />终阶 : D',				'無儘模式<br />終階 : D',				'Endless Mode Final Level: D',						'エンドレスモード 最終レベル: D',			],		
-	'无尽模式<br />终阶 : F' : 				['无尽模式<br />终阶 : F',				'無儘模式<br />終階 : F',				'Endless Mode Final Level: F',						'エンドレスモード 最終レベル: F',			],		
-	'无尽模式<br />终阶 : G' : 				['无尽模式<br />终阶 : G',				'無儘模式<br />終階 : G',				'Endless Mode Final Level: G',						'エンドレスモード 最終レベル: G',			],		
-	'无尽模式<br />终阶 : H' : 				['无尽模式<br />终阶 : H',				'無儘模式<br />終階 : H',				'Endless Mode Final Level: H',						'エンドレスモード 最終レベル: H',			],		
-	'无尽模式<br />终阶<br />首领 : A' : 	['无尽模式<br />终阶<br />首领 : A',	'無儘模式<br />終階<br />首領 : A',		'Endless Mode Final Level<br />Boss: A',			'エンドレスモード 最終レベル ボス: A',		],		
-	'无尽模式<br />终阶<br />首领 : B' : 	['无尽模式<br />终阶<br />首领 : B',	'無儘模式<br />終階<br />首領 : B',		'Endless Mode Final Level<br />Boss: B',			'エンドレスモード 最終レベル ボス: B',		],		
-	'无尽模式<br />终阶<br />首领 : C' : 	['无尽模式<br />终阶<br />首领 : C',	'無儘模式<br />終階<br />首領 : C',		'Endless Mode Final Level<br />Boss: C',			'エンドレスモード 最終レベル ボス: C',		],		
-	'无尽模式<br />终阶<br />首领 : D' : 	['无尽模式<br />终阶<br />首领 : D',	'無儘模式<br />終階<br />首領 : D',		'Endless Mode Final Stage<br />Boss: D',			'エンドレスモード 最終レベル ボス: D',		],		
+	'无尽模式<br />基础' : 					['无尽模式<br />基础',						'エンドレスモード 基本',					'Endless Mode Basic',								],		
+	'无尽模式<br />进阶' : 					['无尽模式<br />进阶',						'エンドレスモード アドバンス',				'Endless Mode Advanced',							],		
+	'无尽模式<br />高阶' : 					['无尽模式<br />高阶',						'エンドレスモード アドバンス',				'Endless Mode High Level',							],		
+	'无尽模式<br />终阶' : 					['无尽模式<br />终阶',						'エンドレスモード 最終',					'Endless Mode Final Level',							],		
+	'无尽模式<br />基础 : B' : 				['无尽模式<br />基础 : B',					'エンドレスモード ベーシック: B',			'Endless Mode Basic : B',							],		
+	'无尽模式<br />基础 : C' : 				['无尽模式<br />基础 : C',					'エンドレスモード ベーシック: C',			'Endless Mode Basic : C',							],		
+	'无尽模式<br />基础 : D' : 				['无尽模式<br />基础 : D',					'エンドレスモード ベーシック: D',			'Endless Mode Basic : D',							],		
+	'无尽模式<br />基础 : F' : 				['无尽模式<br />基础 : F',					'エンドレスモード ベーシック: F',			'Endless Mode Basic : F',							],		
+	'无尽模式<br />基础 : G' : 				['无尽模式<br />基础 : G',					'エンドレスモード ベーシック: G',			'Endless Mode Basic : G',							],		
+	'无尽模式<br />基础 : H' : 				['无尽模式<br />基础 : H',					'エンドレスモード ベーシック: H',			'Endless Mode Basic : H',							],		
+	'无尽模式<br />基础<br />首领 : A' : 	['无尽模式<br />基础<br />首领 : A',		'エンドレスモード ベーシック ボス: A',		'Endless Mode Basic<br />Boss : A',					],		
+	'无尽模式<br />基础<br />首领 : B' : 	['无尽模式<br />基础<br />首领 : B',		'エンドレスモード ベーシック ボス: B',		'Endless Mode Basic<br />Boss : B',					],		
+	'无尽模式<br />基础<br />首领 : C' : 	['无尽模式<br />基础<br />首领 : C',		'エンドレスモード ベーシック ボス: C',		'Endless Mode Basic<br />Boss : C',					],		
+	'无尽模式<br />基础<br />首领 : D' : 	['无尽模式<br />基础<br />首领 : D',		'エンドレスモード ベーシック ボス: D',		'Endless Mode Basic<br />Boss : D',					],		
+	'无尽模式<br />进阶 : B' : 				['无尽模式<br />进阶 : B',					'エンドレスモード 上級: B',					'Endless Mode Advanced : B',						],		
+	'无尽模式<br />进阶 : C' : 				['无尽模式<br />进阶 : C',					'エンドレスモード 上級: C',					'Endless Mode Advanced : C',						],		
+	'无尽模式<br />进阶 : D' : 				['无尽模式<br />进阶 : D',					'エンドレスモード 上級: D',					'Endless Mode Advanced: D',							],		
+	'无尽模式<br />进阶 : F' : 				['无尽模式<br />进阶 : F',					'エンドレスモード アドバンス: F',			'Endless Mode Advanced: F',							],		
+	'无尽模式<br />进阶 : G' : 				['无尽模式<br />进阶 : G',					'エンドレスモード アドバンス: G',			'Endless Mode Advanced: G',							],		
+	'无尽模式<br />进阶 : H' : 				['无尽模式<br />进阶 : H',					'エンドレスモード アドバンス: H',			'Endless Mode Advanced: H',							],		
+	'无尽模式<br />进阶<br />首领 : A' : 	['无尽模式<br />进阶<br />首领 : A',		'エンドレスモード 上級 ボス: A',			'Endless Mode Advanced<br />Boss: A',				],		
+	'无尽模式<br />进阶<br />首领 : B' : 	['无尽模式<br />进阶<br />首领 : B',		'エンドレスモード 上級 ボス: B',			'Endless Mode Advanced<br />Boss: B',				],		
+	'无尽模式<br />进阶<br />首领 : C' : 	['无尽模式<br />进阶<br />首领 : C',		'エンドレスモード 上級 ボス: C',			'Endless Mode Advanced<br />Boss: C',				],		
+	'无尽模式<br />进阶<br />首领 : D' : 	['无尽模式<br />进阶<br />首领 : D',		'エンドレスモード 上級 ボス: D',			'Endless Mode Advanced<br />Boss: D',				],		
+	'无尽模式<br />高阶 : B' : 				['无尽模式<br />高阶 : B',					'エンドレスモード 上級: B',					'Endless Mode High Level: B',						],		
+	'无尽模式<br />高阶 : C' : 				['无尽模式<br />高阶 : C',					'エンドレスモード 上級: C',					'Endless Mode High Level: C',						],		
+	'无尽模式<br />高阶 : D' : 				['无尽模式<br />高阶 : D',					'エンドレスモード 上級: D',					'Endless Mode High Level: D',						],		
+	'无尽模式<br />高阶 : F' : 				['无尽模式<br />高阶 : F',					'エンドレスモード アドバンス: F',			'Endless Mode High Level: F',						],		
+	'无尽模式<br />高阶 : G' : 				['无尽模式<br />高阶 : G',					'エンドレスモード アドバンス: G',			'Endless Mode High Level: G',						],		
+	'无尽模式<br />高阶 : H' : 				['无尽模式<br />高阶 : H',					'エンドレスモード アドバンス: H',			'Endless Mode High Level: H',						],		
+	'无尽模式<br />高阶<br />首领 : A' :	['无尽模式<br />高阶<br />首领 : A',		'エンドレスモード 上位 ボス: A',			'Endless Mode High Level<br />Boss: A',				],		
+	'无尽模式<br />高阶<br />首领 : B' :	['无尽模式<br />高阶<br />首领 : B',		'エンドレスモード 上級 ボス: B',			'Endless Mode High Level<br />Boss: B',				],		
+	'无尽模式<br />高阶<br />首领 : C' :	['无尽模式<br />高阶<br />首领 : C',		'エンドレスモード 上級 ボス: C',			'Endless Mode High Level<br />Boss: C',				],		
+	'无尽模式<br />高阶<br />首领 : D' :	['无尽模式<br />高阶<br />首领 : D',		'エンドレスモード 上級 ボス: D',			'Endless Mode High Level<br />Boss: D',				],		
+	'无尽模式<br />终阶 : B' : 				['无尽模式<br />终阶 : B',					'エンドレスモード 最終レベル: B',			'Endless Mode Final Level: B',						],		
+	'无尽模式<br />终阶 : C' : 				['无尽模式<br />终阶 : C',					'エンドレスモード 最終レベル: C',			'Endless Mode Final Level: C',						],		
+	'无尽模式<br />终阶 : D' : 				['无尽模式<br />终阶 : D',					'エンドレスモード 最終レベル: D',			'Endless Mode Final Level: D',						],		
+	'无尽模式<br />终阶 : F' : 				['无尽模式<br />终阶 : F',					'エンドレスモード 最終レベル: F',			'Endless Mode Final Level: F',						],		
+	'无尽模式<br />终阶 : G' : 				['无尽模式<br />终阶 : G',					'エンドレスモード 最終レベル: G',			'Endless Mode Final Level: G',						],		
+	'无尽模式<br />终阶 : H' : 				['无尽模式<br />终阶 : H',					'エンドレスモード 最終レベル: H',			'Endless Mode Final Level: H',						],		
+	'无尽模式<br />终阶<br />首领 : A' : 	['无尽模式<br />终阶<br />首领 : A',		'エンドレスモード 最終レベル ボス: A',		'Endless Mode Final Level<br />Boss: A',			],		
+	'无尽模式<br />终阶<br />首领 : B' : 	['无尽模式<br />终阶<br />首领 : B',		'エンドレスモード 最終レベル ボス: B',		'Endless Mode Final Level<br />Boss: B',			],		
+	'无尽模式<br />终阶<br />首领 : C' : 	['无尽模式<br />终阶<br />首领 : C',		'エンドレスモード 最終レベル ボス: C',		'Endless Mode Final Level<br />Boss: C',			],		
+	'无尽模式<br />终阶<br />首领 : D' : 	['无尽模式<br />终阶<br />首领 : D',		'エンドレスモード 最終レベル ボス: D',		'Endless Mode Final Stage<br />Boss: D',			],		
 	
-	'测试' : 								['测试',								'測試',									'Test',												'テスト',									],		
+	'测试' : 								['测试',									'テスト',									'Test',												],		
 	
-	'挑战模式<br />基础 : A' : 				['挑战模式<br />基础 : A',				'挑戰模式<br />基礎 : A',				'Challenge Mode<br />Basic: A',						'チャレンジモード ベーシック: A',			],		
-	'挑战模式<br />基础 : B' : 				['挑战模式<br />基础 : B',				'挑戰模式<br />基礎 : B',				'Challenge Mode<br />Basic: B',						'チャレンジモード ベーシック: B',			],		
-	'挑战模式<br />基础 : C' : 				['挑战模式<br />基础 : C',				'挑戰模式<br />基礎 : C',				'Challenge Mode<br />Basic: C',						'チャレンジモード ベーシック: C',			],		
-	'挑战模式<br />进阶 : D' : 				['挑战模式<br />进阶 : D',				'挑戰模式<br />進階 : D',				'Challenge Mode<br />Advanced: D',					'チャレンジモード 上級: D',					],		
-	'挑战模式<br />进阶 : E' : 				['挑战模式<br />进阶 : E',				'挑戰模式<br />進階 : E',				'Challenge Mode<br />Advanced: E',					'チャレンジモード 上級: E',					],		
-	'挑战模式<br />高阶 : F' : 				['挑战模式<br />高阶 : F',				'挑戰模式<br />高階 : F',				'Challenge Mode<br />Advanced: F',					'チャレンジモード 上級: F',					],		
-	'挑战模式<br />高阶 :FA' : 				['挑战模式<br />高阶 :FA',				'挑戰模式<br />高階 :FA',				'Challenge Mode<br />Advanced: FA',					'チャレンジモード アドバンスト: FA',		],		
-	'挑战模式<br />高阶 :FB' : 				['挑战模式<br />高阶 :FB',				'挑戰模式<br />高階 :FB',				'Challenge Mode<br />Advanced: FB',					'チャレンジモード アドバンスト: FB',		],		
-	'挑战模式<br />高阶 :FC' : 				['挑战模式<br />高阶 :FC',				'挑戰模式<br />高階 :FC',				'Challenge Mode<br />Advanced: FC',					'チャレンジモード アドバンスト: FC',		],		
-	'挑战模式<br />终阶 :GA' : 				['挑战模式<br />终阶 :GA',				'挑戰模式<br />終階 :GA',				'Challenge Mode<br />Final Stage: GA',				'チャレンジモード 最終レベル: GA',			],		
-	'挑战模式<br />终阶 :GB' : 				['挑战模式<br />终阶 :GB',				'挑戰模式<br />終階 :GB',				'Challenge Mode<br />Final Stage: GB',				'チャレンジモード 最終レベル: GB',			],		
-	'挑战模式<br />终阶 :GC' : 				['挑战模式<br />终阶 :GC',				'挑戰模式<br />終階 :GC',				'Challenge Mode<br />Final Stage: GC',				'チャレンジモード 最終レベル: GC',			],		
-	'挑战模式<br />终阶 : H' : 				['挑战模式<br />终阶 : H',				'挑戰模式<br />終階 : H',				'Challenge Mode<br />Final Stage: H',				'チャレンジモード 最終レベル: H',			],		
+	'挑战模式<br />基础 : A' : 				['挑战模式<br />基础 : A',					'チャレンジモード ベーシック: A',			'Challenge Mode<br />Basic: A',						],		
+	'挑战模式<br />基础 : B' : 				['挑战模式<br />基础 : B',					'チャレンジモード ベーシック: B',			'Challenge Mode<br />Basic: B',						],		
+	'挑战模式<br />基础 : C' : 				['挑战模式<br />基础 : C',					'チャレンジモード ベーシック: C',			'Challenge Mode<br />Basic: C',						],		
+	'挑战模式<br />进阶 : D' : 				['挑战模式<br />进阶 : D',					'チャレンジモード 上級: D',					'Challenge Mode<br />Advanced: D',					],		
+	'挑战模式<br />进阶 : E' : 				['挑战模式<br />进阶 : E',					'チャレンジモード 上級: E',					'Challenge Mode<br />Advanced: E',					],		
+	'挑战模式<br />高阶 : F' : 				['挑战模式<br />高阶 : F',					'チャレンジモード 上級: F',					'Challenge Mode<br />Advanced: F',					],		
+	'挑战模式<br />高阶 :FA' : 				['挑战模式<br />高阶 :FA',					'チャレンジモード アドバンスト: FA',		'Challenge Mode<br />Advanced: FA',					],		
+	'挑战模式<br />高阶 :FB' : 				['挑战模式<br />高阶 :FB',					'チャレンジモード アドバンスト: FB',		'Challenge Mode<br />Advanced: FB',					],		
+	'挑战模式<br />高阶 :FC' : 				['挑战模式<br />高阶 :FC',					'チャレンジモード アドバンスト: FC',		'Challenge Mode<br />Advanced: FC',					],		
+	'挑战模式<br />终阶 :GA' : 				['挑战模式<br />终阶 :GA',					'チャレンジモード 最終レベル: GA',			'Challenge Mode<br />Final Stage: GA',				],		
+	'挑战模式<br />终阶 :GB' : 				['挑战模式<br />终阶 :GB',					'チャレンジモード 最終レベル: GB',			'Challenge Mode<br />Final Stage: GB',				],		
+	'挑战模式<br />终阶 :GC' : 				['挑战模式<br />终阶 :GC',					'チャレンジモード 最終レベル: GC',			'Challenge Mode<br />Final Stage: GC',				],		
+	'挑战模式<br />终阶 : H' : 				['挑战模式<br />终阶 : H',					'チャレンジモード 最終レベル: H',			'Challenge Mode<br />Final Stage: H',				],		
 	
-	'潜入模式<br />基础' : 					['潜入模式<br />基础',					'潛入模式<br />基礎',					'Steal Mode<br />Basic',							'ステルスモード 基本',						],		
-	'潜入模式<br />进阶' : 					['潜入模式<br />进阶',					'潛入模式<br />進階',					'Steal Mode<br />Advanced',							'ステルスモード アドバンス',				],		
-	'潜入模式<br />首领' :					['潜入模式<br />首领',					'潛入模式<br />首領',					'Stealth Mode<br />Boss',							'ステルスモード ボス',						],		
+	'潜入模式<br />基础' : 					['潜入模式<br />基础',						'ステルスモード 基本',						'Steal Mode<br />Basic',							],		
+	'潜入模式<br />进阶' : 					['潜入模式<br />进阶',						'ステルスモード アドバンス',				'Steal Mode<br />Advanced',							],		
+	'潜入模式<br />首领' :					['潜入模式<br />首领',						'ステルスモード ボス',						'Stealth Mode<br />Boss',							],		
 };
 
 // ---------------------------------------------
@@ -1092,7 +1096,7 @@ tbodyArray01.forEach(function(item){
 	item.forEach(function(data, index){
 		
 		// 组合注解
-		if(index === 3){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[3]][0] +'</td>' }else 
+		if(index === 3){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[3]][xj2.lang.code] +'</td>' }else 
 		
 		// 具体敌人
 		if(index === 4){
@@ -1100,7 +1104,7 @@ tbodyArray01.forEach(function(item){
 			data.split('|').map(function(val){
 				let src = val, ext = '.jpg';
 				if(parArray[src] !== undefined){ src = parArray[src] }; if(pngArray.includes(val) === true){ ext = 'A.jpg' };
-				return '<span alt="'+ ('Code: ' + val + '&#xa;' + 'Name: ' + ItemsNameList[val][0]) +'"><img loading="lazy" alt="'+ val + '" src="../static/image/enemy/'+ src + ext + '" style="width:64px;height:64px;" /></span>';
+				return '<span alt="'+ ('Code: ' + val + '&#xa;' + 'Name: ' + ItemsNameList[val][xj2.lang.code]) +'"><img loading="lazy" alt="'+ val + '" src="../static/image/enemy/'+ src + ext + '" style="width:64px;height:64px;" /></span>';
 			}).join('')) +'</td>');
 		}else 
 		
@@ -1113,7 +1117,9 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
+
+})();
 </script>
 
 
@@ -1124,7 +1130,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -1144,7 +1150,7 @@ buildPowerTable('powerTable01');
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

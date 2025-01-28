@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>城防设施</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>城防设施</span><small>(防守装置)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.城防设施); $('#pub_headText > a > small').text(xj2.i18n.防守装置);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -125,30 +128,29 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 城防设施共有 <code>33</code> 种, 可被分为城防设施和作战单位(<code>19</code>/<code>14</code>)两大类, 除幸存模式外, 其他模式均可在整备城防界面布置它们; <br />
+	01. 城防设施共有 <span class="code">33</span> 种, 可被分为城防设施和作战单位(<span class="code">19</span>/<span class="code">14</span>)两大类, 除幸存模式外, 其他模式均可在整备城防界面布置它们; <br />
 	02. 在整备城防的界面里, 槽位被分成了"城防点"和"部署点"两大类, 前者可放置城防设施, 后者可放置作战单位, 它们之间并不通用; <br />
-	03. 大多数模式的城防都拥有 <code>8</code> 个部署点, 但没有思潮或忠诚度奖励的情况时, 最多只能同时安排两台主力机体和两台作战单元出战; <br />
+	03. 大多数模式的城防都拥有 <span class="code">8</span> 个部署点, 但没有思潮或忠诚度奖励的情况时, 最多只能同时安排两台主力机体和两台作战单元出战; <br />
 	04. 总的来讲, 投资城防设施的行为, 在大多数情况下, 都不如提升主力机体的战斗力, 不过放置沙袋还是能有效提升我方生存概率的; <br />
 </p>
 
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
-			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #f2d768 0%, #f2d768 75%, #f2d768 75%, #f2d768 75%, #f2d768 75%, #f2d768 100%);"></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备图片</zh-i><jp-i>画像</jp-i><en-i>Img</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>参考价格</zh-i><jp-i>価格</jp-i><en-i>Price</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>配件等级</zh-i><jp-i>レベル</jp-i><en-i>Level</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>默认排序</zh-i><jp-i>ソート</jp-i><en-i>Resolve</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>解锁天数</zh-i><jp-i>解除日数</jp-i><en-i>Unlock</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>物品类型</zh-i><jp-i>アイテムタイプ</jp-i><en-i>Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>归属种类</zh-i><jp-i>タグ</jp-i><en-i>Tag</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>原型研发</zh-i><jp-i>プロトタイプ</jp-i><en-i>Company</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>合成材料</zh-i><jp-i>合成素材</jp-i><en-i>CraftMaterials</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出现条件</zh-i><jp-i>出現条件</jp-i><en-i>NeedWeapon</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -161,35 +163,35 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>出战限制: 除幸存模式外, 其他模式初始可配置的驾驶员和作战单元数量, 上限都只有 <code>2</code>, 也就是说你最多只能同时放两台主力机体和两台作战单元出战(机枪炮塔无数量限制), 不过在某些 Boss 战时, 可配置驾驶员会临时 <code>+1</code>, 此外, LV3 的保守思潮以及赭石色 LV11 忠诚度奖励, 都可额外增加一个出战人数, LV3 的激进思潮会额外奖励一个作战单元的出战上限(但该奖励和保守思潮的奖励无法并存);</p>
+<p>出战限制: 除幸存模式外, 其他模式初始可配置的驾驶员和作战单元数量, 上限都只有 <span class="code">2</span>, 也就是说你最多只能同时放两台主力机体和两台作战单元出战(机枪炮塔无数量限制), 不过在某些 Boss 战时, 可配置驾驶员会临时 <span class="code">+1</span>, 此外, LV3 的保守思潮以及赭石色 LV11 忠诚度奖励, 都可额外增加一个出战人数, LV3 的激进思潮会额外奖励一个作战单元的出战上限(但该奖励和保守思潮的奖励无法并存);</p>
 
-<p>其他设施: 在整备城防的界面, 除了安装城防设施和部署作战单位之外, 你还可以为大门安装防御性装备(有些机体使用的主体强化装备, 大门也可以使用, 具体可查阅: <a href="./data_mecha_main.html">主体强化.html</a>), 大门默认拥有 <code>3</code> 个装备槽位, 可以通过解锁来得到更多(最大 <code>9</code> 槽位), 解锁大门新槽位的价格为 <code>15+N</code>, <code>N</code> 等于当前已经解锁的格子数量, 除此之外, 还可以配置战略武器(战略武器详情可查阅: <a href="./data_manage_strategy.html">战略支援.html</a>);</p>
+<p>其他设施: 在整备城防的界面, 除了安装城防设施和部署作战单位之外, 你还可以为大门安装防御性装备(有些机体使用的主体强化装备, 大门也可以使用, 具体可查阅: <a href="./data_mecha_main.html">主体强化.html</a>), 大门默认拥有 <span class="code">3</span> 个装备槽位, 可以通过解锁来得到更多(最大 <span class="code">9</span> 槽位), 解锁大门新槽位的价格为 <span class="code">15+N</span>, <span class="code">N</span> 等于当前已经解锁的格子数量, 除此之外, 还可以配置战略武器(战略武器详情可查阅: <a href="./data_manage_strategy.html">战略支援.html</a>);</p>
 
 <p>————</p>
 
-<p>剧情模式: 拥有 <code>10</code> 个城防点和 <code>8</code> 个部署点, 这些点会以两个半圆的形式围住大门, 驾驶员和作战单元的数量上限, 都分别是 <code>2</code>;</p>
+<p>剧情模式: 拥有 <span class="code">10</span> 个城防点和 <span class="code">8</span> 个部署点, 这些点会以两个半圆的形式围住大门, 驾驶员和作战单元的数量上限, 都分别是 <span class="code">2</span>;</p>
 
 <p>无尽模式: 城防条件和剧情模式完全相同, 但后期遭遇的敌人会比剧情模式下的更为强大, 因此需要考虑重点提升大门的 HP 和防御力;</p>
 
 <p>挑战模式: 城防条件和剧情模式基本相同, 但城防点和部署点是以两个同心圆的形式围住地图中心, 没有大门需要保护, 全歼敌人即可;</p>
 
-<p>潜入模式: 城防条件和剧情模式基本相同, 但城防点为 <code>0</code>, 无法安装任何城防设施, 并且大门也不止一个, 还是优先考虑绕后暗杀吧;</p>
+<p>潜入模式: 城防条件和剧情模式基本相同, 但城防点为 <span class="code">0</span>, 无法安装任何城防设施, 并且大门也不止一个, 还是优先考虑绕后暗杀吧;</p>
 
 <p>幸存模式: 幸存模式没有城防概念, 因为不需要保护大门, 所以该模式下并没有大门强化模块的槽位, 尽管在该模式下也能打开城防布局的界面, 但是你只能放置战略支援的设备, 它既没有城防点, 也没有部署点, 总而言之, 本页面的内容跟幸存模式都没什么关系就是了;</p>
 
 <p>————</p>
 
-<p>合成升级: 升级城防设施和配件相同, 都是两个低级合成一个高级, 但值得注意的是, 高能照明路灯是直接合成的, 并非 <code>照明路灯×2</code>;</p>
+<p>合成升级: 升级城防设施和配件相同, 都是两个低级合成一个高级, 但值得注意的是, 高能照明路灯是直接合成的, 并非 <span class="code">照明路灯×2</span>;</p>
 
-<p>路障许可: 路障是些立方体(有 <code>500</code> HP), 会吸引敌人火力, 战略支援的"空投路障"投下的就是它们(就相当于"路障许可+++", 15 个);</p>
+<p>路障许可: 路障是些立方体(有 <span class="code">500</span> HP), 会吸引敌人火力, 战略支援的"空投路障"投下的就是它们(就相当于"路障许可+++", 15 个);</p>
 
 <p>沙袋特性: 沙袋有正反面区别, 并且还拥有穿甲抵抗的属性, 当子弹从正面射来时, 如果无法实现穿甲, 则子弹会被完全吸收掉, 躲在沙袋后面的单位也就不会被伤到, 但从沙袋背后射出的子弹是不会触发穿甲判断的, 因此, 蹲在沙袋后面射击, 是种切实有效的防御手段;</p>
 
-<p>默认沙袋: 空的城防点会被安放默认沙袋(既上表中代码为 <code>3000</code> 的第一列数据), 默认沙袋都是场景地图自带的, 我们其实无法无法制造或拥有它们(也因此它们并没有缩略图), 有些城防设施安装后会代替它们(如地雷或铁墙), 有些则会与它们并存(如照明灯或铁丝网);</p>
+<p>默认沙袋: 空的城防点会被安放默认沙袋(既上表中代码为 <span class="code">3000</span> 的第一列数据), 默认沙袋都是场景地图自带的, 我们其实无法无法制造或拥有它们(也因此它们并没有缩略图), 有些城防设施安装后会代替它们(如地雷或铁墙), 有些则会与它们并存(如照明灯或铁丝网);</p>
 
 <p>铁墙许可: 从设定上来讲, 铁墙是无法被子弹穿过的, 但实际上如果机甲靠得够近, 且武器的最小射程又大于铁墙的判定范围, 那么此时开火, 子弹就可能不被挡住, 跟着在铁墙后被射出, 这其实是 BUG, 知道这点, 也许会有些妙用(高爆武器不要尝试, 失败会炸到自己);</p>
 
-<p>铁丝网许可: 敌我双方在穿过沙袋前面的铁丝网时, 机体速度都会被降低到原本的 <code>30%</code>, 但 AI 控制的我方机体, 速度会被降低到原本的 <code>40%</code>, 值得一提的是, 铁丝网并不会取消默认沙袋的防御效果, 默认沙袋和铁丝沙袋, 以及炮塔沙袋, 都会拥有 <code>30</code> 的穿甲抵抗;</p>
+<p>铁丝网许可: 敌我双方在穿过沙袋前面的铁丝网时, 机体速度都会被降低到原本的 <span class="code">30%</span>, 但 AI 控制的我方机体, 速度会被降低到原本的 <span class="code">40%</span>, 值得一提的是, 铁丝网并不会取消默认沙袋的防御效果, 默认沙袋和铁丝沙袋, 以及炮塔沙袋, 都会拥有 <span class="code">30</span> 的穿甲抵抗;</p>
 
 <p>照明设备分类: 如果没有安装任何照明设备, 那么夜晚作战时, 大门前默认就只有两盏微弱的探照灯, 稍微远些的地方就看不清了, 目前游戏共提供了四种照明设施, 可细分为全向灯和探照灯, 前者距离短但范围广, 后者距离长但范围窄, 值得一提的是, 两种全向灯, 也就是"照明路灯"和"高能照明路灯", 都是装在部署点而不是城防点上(如果夜晚真的看不清敌人, 可按 Tab 键, 从战略界面查看敌人动向);</p>
 
@@ -198,7 +200,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 #powerTable01 .hideTr{display:none;}
 
 /* 归属种类 */
@@ -232,8 +234,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解 */
-/*
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
 
 CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
 ColorPlus = Cluster = '', DebugHide = 0,
@@ -300,143 +304,143 @@ let tbodyArray01 = [
 // 项目名称
 let ItemsNameList = {
 	
-	3000 :	['默认沙袋',			'默認沙袋',			'Default Sandbag',							'デフォルトのサンドバッグ',		],		//02		
+	3000 :	['默认沙袋',			'デフォルトのサンドバッグ',		'Default Sandbag',							],		//02		
 	
-	3001 :	['路障许可',			'路障許可',			'Roadblock Permit',							'バリケード免許',				],		
-	3002 :	['路障许可+',			'路障許可+',		'Roadblock Permit+',						'バリケード免許+',				],		
-	3003 :	['路障许可++',			'路障許可++',		'Roadblock Permit++',						'バリケード免許++',				],		
-	3004 :	['路障许可+++',			'路障許可+++',		'Roadblock Permit+++',						'バリケード免許+++',			],		//02		
+	3001 :	['路障许可',			'バリケード免許',				'Roadblock Permit',							],		
+	3002 :	['路障许可+',			'バリケード免許+',				'Roadblock Permit+',						],		
+	3003 :	['路障许可++',			'バリケード免許++',				'Roadblock Permit++',						],		
+	3004 :	['路障许可+++',			'バリケード免許+++',			'Roadblock Permit+++',						],		//02		
 	
-	3005 :	['沙袋许可',			'沙袋許可',			'Sandbag Permit',							'土嚢免許',						],		
-	3006 :	['沙袋许可+',			'沙袋許可+',		'Sandbag Permit+',							'土嚢免許+',					],		
-	3007 :	['沙袋许可++',			'沙袋許可++',		'Sandbag Permit++',							'土嚢免許++',					],		//02		
+	3005 :	['沙袋许可',			'土嚢免許',						'Sandbag Permit',							],		
+	3006 :	['沙袋许可+',			'土嚢免許+',					'Sandbag Permit+',							],		
+	3007 :	['沙袋许可++',			'土嚢免許++',					'Sandbag Permit++',							],		//02		
 	
-	3008 :	['地雷许可',			'地雷許可',			'Land Mine Permit',							'地雷免許',						],		
-	3009 :	['地雷许可+',			'地雷許可+',		'Land Mine Permit+',						'地雷免許+',					],		
-	3010 :	['地雷许可++',			'地雷許可++',		'Land Mine Permit++',						'地雷免許++',					],		//02		
+	3008 :	['地雷许可',			'地雷免許',						'Land Mine Permit',							],		
+	3009 :	['地雷许可+',			'地雷免許+',					'Land Mine Permit+',						],		
+	3010 :	['地雷许可++',			'地雷免許++',					'Land Mine Permit++',						],		//02		
 	
-	3019 :	['定向照明路灯',		'定向照明路燈',		'Directional Streetlight',					'指向性照明街灯',				],		
-	3015 :	['定向照明工事',		'定向照明工事',		'Directional Lighting Installation',		'指向性照明設備',				],		
-	3016 :	['定向照明路灯',		'定向照明路燈',		'Directional Streetlight',					'指向性照明街灯',				],		//02		
+	3019 :	['定向照明路灯',		'指向性照明街灯',				'Directional Streetlight',					],		
+	3015 :	['定向照明工事',		'指向性照明設備',				'Directional Lighting Installation',		],		
+	3016 :	['定向照明路灯',		'指向性照明街灯',				'Directional Streetlight',					],		//02		
 	
-	3022 :	['铁墙许可',			'鐵牆許可',			'Iron Wall Permit',							'鉄壁免許',						],		
-	3020 :	['铁丝网许可',			'鐵絲網許可',		'Wire Mesh Permit',							'有刺鉄線免許',					],		
-	3021 :	['长铁丝网许可',		'長鐵絲網許可',		'Long Wire Mesh Permit',					'長有刺鉄線免許',				],		//02		
+	3022 :	['铁墙许可',			'鉄壁免許',						'Iron Wall Permit',							],		
+	3020 :	['铁丝网许可',			'有刺鉄線免許',					'Wire Mesh Permit',							],		
+	3021 :	['长铁丝网许可',		'長有刺鉄線免許',				'Long Wire Mesh Permit',					],		//02		
 	
-	3017 :	['照明路灯',			'照明路燈',			'Streetlight',								'照明街灯',						],		
-	3018 :	['高能照明路灯',		'高能照明路燈',		'High-Power Streetlight',					'高エネルギー照明街灯',			],		//02		
+	3017 :	['照明路灯',			'照明街灯',						'Streetlight',								],		
+	3018 :	['高能照明路灯',		'高エネルギー照明街灯',			'High-Power Streetlight',					],		//02		
 	
-	3011 :	['枪塔许可',			'槍塔許可',			'Machine Gun Turret Permit',				'機関銃砲塔免許',				],		
-	3012 :	['枪塔许可+',			'槍塔許可+',		'Machine Gun Turret Permit+',				'機関銃砲塔免許+',				],		//02		
+	3011 :	['枪塔许可',			'機関銃砲塔免許',				'Machine Gun Turret Permit',				],		
+	3012 :	['枪塔许可+',			'機関銃砲塔免許+',				'Machine Gun Turret Permit+',				],		//02		
 	
-	3013 :	['炮塔许可',			'炮塔許可',			'Turret Permit',							'砲塔免許',						],		
-	3014 :	['炮塔许可+',			'炮塔許可+',		'Turret Permit+',							'砲塔免許+',					],		//02		
+	3013 :	['炮塔许可',			'砲塔免許',						'Turret Permit',							],		
+	3014 :	['炮塔许可+',			'砲塔免許+',					'Turret Permit+',							],		//02		
 	
-	100 :	['玛　丽',				'瑪　麗',			'Mary',										'メアリー',						],		
-	101 :	['库罗库',				'庫羅庫',			'Kuroku',									'クロック',						],		
-	102 :	['桑/San',				'桑',				'San',										'サン',							],		
-	103 :	['赭石色',				'赭石色',			'Ocher',									'オーカー',						],		
-	104 :	['克莱尔',				'克萊爾',			'Claire',									'クレア',						],		//02		
+	100 :	['玛　丽',				'メアリー',						'Mary',										],		
+	101 :	['库罗库',				'クロック',						'Kuroku',									],		
+	102 :	['桑/San',				'サン',							'San',										],		
+	103 :	['赭石色',				'オーカー',						'Ocher',									],		
+	104 :	['克莱尔',				'クレア',						'Claire',									],		//02		
 	
-	301 :	['标准作战单元A',		'標準作戰單元A',	'Standard CSU A',							'制式戦闘ユニットA',			],		
-	302 :	['标准作战单元B',		'標準作戰單元B',	'Standard CSU B',							'制式戦闘ユニットB',			],		
-	303 :	['高速·作战单元',		'高速作戰單元',		'Fast CSU',									'高速戦闘ユニット',				],		
-	304 :	['火力·作战单元',		'火力作戰單元',		'Firepower CSU',							'火力戦闘ユニット',				],		
-	305 :	['重型·作战单元',		'重型作戰單元',		'Heavy CSU',								'重装甲戦闘ユニット',			],		//02		
+	301 :	['标准作战单元A',		'制式戦闘ユニットA',			'Standard CSU A',							],		
+	302 :	['标准作战单元B',		'制式戦闘ユニットB',			'Standard CSU B',							],		
+	303 :	['高速·作战单元',		'高速戦闘ユニット',				'Fast CSU',									],		
+	304 :	['火力·作战单元',		'火力戦闘ユニット',				'Firepower CSU',							],		
+	305 :	['重型·作战单元',		'重装甲戦闘ユニット',			'Heavy CSU',								],		//02		
 	
-	'-' : 			['-',			'-',			'-',			'-',		],
+	'-' : 			['-',			'-',			'-',		],
 	
-	'Special' :		['城防设施',		'城防設施',			'City Defense',		'シティディフェンス',			],
-	'Player' :		['作战单位',		'作戰單位',			'Combat unit',		'作戦ユニット',					],
+	'Special' :		['城防设施',		'シティディフェンス',		'City Defense',			],
+	'Player' :		['作战单位',		'作戦ユニット',				'Combat unit',			],
 	
-	'NotLimited' :	['没有数量限制',	'沒有數量限制',		'NotLimited',		'数量制限なし',					],
+	'NotLimited' :	['没有数量限制',	'数量制限なし',				'NotLimited',			],
 	
-	'Sub_4' :		['科尔第一集团公司',		'科爾第一集團公司',		'Cole First Group Company',						'コール第一グループ会社',		],
-	'Main2_1' :		['船舶集团有限公司',		'船舶集團有限公司',		'Shipbuilding Group Co., Ltd',					'船舶重工グループ株式会社',		],
-	'Main2_3' :		['总装备制造局',			'總裝備製造局',			'General Equipment Manufacturing Bureau',		'汎用設備製造局',				],
-	'Main2_7' :		['蓝天电子公司',			'藍天電子公司',			'Blue Sky Electronics Company',					'青空電子株式会社',				],
+	'Sub_4' :		['科尔第一集团公司',		'コール第一グループ会社',		'Cole First Group Company',						],
+	'Main2_1' :		['船舶集团有限公司',		'船舶重工グループ株式会社',		'Shipbuilding Group Co., Ltd',					],
+	'Main2_3' :		['总装备制造局',			'汎用設備製造局',				'General Equipment Manufacturing Bureau',		],
+	'Main2_7' :		['蓝天电子公司',			'青空電子株式会社',				'Blue Sky Electronics Company',					],
 	
-	40001 :	['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
-	40002 :	['废料',			'廢料',				'Waste Material',				'スクラップ',				],
-	40003 :	['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
-	40004 :	['弹头',			'彈頭',				'Warhead',						'弾頭',						],
-	40005 :	['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
-	40006 :	['齿轮',			'齒輪',				'Gear',							'ギア',						],
-	40007 :	['框架',			'框架',				'Frame',						'フレーム',					],
-	40008 :	['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
-	40009 :	['扳机',			'扳機',				'Trigger',						'トリガー',					],
-	40010 :	['雷管',			'雷管',				'Detonator',					'起爆装置',					],
-	40011 :	['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
-	40012 :	['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
-	40013 :	['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
-	40014 :	['透镜',			'透鏡',				'Lens',							'レンズ',					],
-	40015 :	['点火器',			'點火器',			'Igniter',						'イグナイター',				],
-	40016 :	['冷凝管',			'冷凝管',			'Condenser',					'復水管',					],
-	40017 :	['线圈',			'線圈',				'Coil',							'コイル',					],
-	40018 :	['电容',			'電容',				'Capacitor',					'コンデンサ',				],
-	40019 :	['电感',			'電感',				'Inductor',						'インダクター',				],
-	40020 :	['三极管',			'三極管',			'Transistor',					'三極管',					],
-	40021 :	['润滑油',			'潤滑油',			'Lubricating Oil',				'潤滑油',					],
-	40022 :	['火花塞',			'火花塞',			'Spark Plug',					'スパークプラグ',			],
-	40023 :	['冷冻剂',			'冷凍劑',			'Refrigerant',					'冷媒',						],
-	40024 :	['装甲',			'裝甲',				'Armor',						'装甲',						],
-	40025 :	['厚装甲',			'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
-	40026 :	['力场管',			'力場管',			'Force Field Generator',		'力場パイプ',				],
-	40027 :	['力场膜',			'力場膜',			'Force Field Membrane',			'力場膜',					],
-	40028 :	['共振器',			'共振器',			'Resonator',					'共振器',					],
-	40029 :	['刀片',			'刀片',				'Blade',						'ブレード',					],
-	40030 :	['振荡器',			'振盪器',			'Oscillator',					'発振回路',					],
-	40031 :	['涂层',			'塗層',				'Coating',						'コーティング',				],
-	40032 :	['核心',			'核心',				'Core',							'コア',						],
+	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',					],
+	40002 :	['废料',			'スクラップ',				'Waste Material',				],
+	40003 :	['弹壳',			'薬莢',						'Bullet Shell',					],
+	40004 :	['弹头',			'弾頭',						'Warhead',						],
+	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',			],
+	40006 :	['齿轮',			'ギア',						'Gear',							],
+	40007 :	['框架',			'フレーム',					'Frame',						],
+	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',					],
+	40009 :	['扳机',			'トリガー',					'Trigger',						],
+	40010 :	['雷管',			'起爆装置',					'Detonator',					],
+	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',			],
+	40012 :	['弹链',			'弾帯',						'Ammunition Belt',				],
+	40013 :	['棱镜',			'プリズム',					'Prism',						],
+	40014 :	['透镜',			'レンズ',					'Lens',							],
+	40015 :	['点火器',			'イグナイター',				'Igniter',						],
+	40016 :	['冷凝管',			'復水管',					'Condenser',					],
+	40017 :	['线圈',			'コイル',					'Coil',							],
+	40018 :	['电容',			'コンデンサ',				'Capacitor',					],
+	40019 :	['电感',			'インダクター',				'Inductor',						],
+	40020 :	['三极管',			'三極管',					'Transistor',					],
+	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',				],
+	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',					],
+	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',					],
+	40024 :	['装甲',			'装甲',						'Armor',						],
+	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',					],
+	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',		],
+	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',			],
+	40028 :	['共振器',			'共振器',					'Resonator',					],
+	40029 :	['刀片',			'ブレード',					'Blade',						],
+	40030 :	['振荡器',			'発振回路',					'Oscillator',					],
+	40031 :	['涂层',			'コーティング',				'Coating',						],
+	40032 :	['核心',			'コア',						'Core',							],
 	
 };
 
 // 文本描述
 let DescriptionList = {
 	
-	3000 :	[/*'默认沙袋',			BunkerSub:1,										*/'城防点默认安放的沙袋, 有概率拦截正面的子弹(抵抗为30)',															'默認沙袋',													'Default Sandbag',																									'デフォルトのサンドバッグ',															],		//03		
+	3000 :	[/*'默认沙袋',			BunkerSub:1,										*/'城防点默认安放的沙袋, 有概率拦截正面的子弹(抵抗为30)',															'デフォルトのサンドバッグ',															'Default Sandbag',																									],		//03		
 	
-	3001 :	[/*'路障许可',			Box:2,												*/'替换防御点的沙袋为少量路障(2 个立方体, 吸引敌方火力)',															'替換防禦點的沙袋為少量路障(會吸引敵方火力)',				'Replace sandbags at defense points with a small amount of roadblocks (which will attract enemy firepower)',		'防衛ポイントの土嚢を少量のバリケードに置き換える(敵の火力を引き付ける)',			],		
-	3002 :	[/*'路障许可+',			Box:4,												*/'替换防御点的沙袋为中量路障(4 个立方体, 吸引敌方火力)',															'替換防禦點的沙袋為中量路障(會吸引敵方火力)',				'Replace sandbags at defense points with a certain amount of roadblocks (which will attract enemy firepower)',		'防衛ポイントの土嚢を一定量のバリケードに置き換える(敵の火力を引き付ける)',			],		
-	3003 :	[/*'路障许可++',		Box:8,												*/'替换防御点的沙袋为大量路障(8 个立方体, 吸引敌方火力)',															'替換防禦點的沙袋為大量路障(會吸引敵方火力)',				'Replace sandbags at defense points with a large number of roadblocks (which will attract enemy firepower)',		'防衛ポイントの土嚢を大量のバリケードに置き換える(敵の火力を引き付ける)',			],		
-	3004 :	[/*'路障许可+++',		Box:15,												*/'替换防御点的沙袋为极多路障(15个立方体, 吸引敌方火力)',															'替換防禦點的沙袋為極多路障(會吸引敵方火力)',				'Replacing sandbags at defense points with numerous roadblocks (which will attract enemy firepower)',				'防衛ポイントの土嚢を莫大の量のバリケードに置き換える(敵の火力を引き付ける)',		],		//03		
+	3001 :	[/*'路障许可',			Box:2,												*/'替换防御点的沙袋为少量路障(2 个立方体, 吸引敌方火力)',															'防衛ポイントの土嚢を少量のバリケードに置き換える(敵の火力を引き付ける)',			'Replace sandbags at defense points with a small amount of roadblocks (which will attract enemy firepower)',		],		
+	3002 :	[/*'路障许可+',			Box:4,												*/'替换防御点的沙袋为中量路障(4 个立方体, 吸引敌方火力)',															'防衛ポイントの土嚢を一定量のバリケードに置き換える(敵の火力を引き付ける)',			'Replace sandbags at defense points with a certain amount of roadblocks (which will attract enemy firepower)',		],		
+	3003 :	[/*'路障许可++',		Box:8,												*/'替换防御点的沙袋为大量路障(8 个立方体, 吸引敌方火力)',															'防衛ポイントの土嚢を大量のバリケードに置き換える(敵の火力を引き付ける)',			'Replace sandbags at defense points with a large number of roadblocks (which will attract enemy firepower)',		],		
+	3004 :	[/*'路障许可+++',		Box:15,												*/'替换防御点的沙袋为极多路障(15个立方体, 吸引敌方火力)',															'防衛ポイントの土嚢を莫大の量のバリケードに置き換える(敵の火力を引き付ける)',		'Replacing sandbags at defense points with numerous roadblocks (which will attract enemy firepower)',				],		//03		
 	
-	3005 :	[/*'沙袋许可',			Bunker:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为　40)',															'升級防禦點的沙袋, 使沙袋變長',								'Upgrade sandbags at defense points to make sandbags longer',														'防御ポイントの土嚢をアップグレードし、土嚢を長くする',								],		
-	3006 :	[/*'沙袋许可+',			Bunker2:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为　70)',															'升級防禦點的沙袋, 使沙袋變長, 抵抗增加為70',				'Upgrade the sandbag at the defense point, making the sandbag longer and increasing resistance to 70',				'防御ポイントの土嚢をアップグレードし、土嚢を長くし、抵抗力を70に上げる',			],		
-	3007 :	[/*'沙袋许可++',		Bunker3:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为 100)',															'升級防禦點的沙袋, 使沙袋變長, 抵抗增加為100',				'Upgrade the sandbag at the defense point, making the sandbag longer and increasing resistance to 100',				'防御ポイントの土嚢をアップグレードし、土嚢を長くし、抵抗力を100に上げる',			],		//03		
+	3005 :	[/*'沙袋许可',			Bunker:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为　40)',															'防御ポイントの土嚢をアップグレードし、土嚢を長くする',								'Upgrade sandbags at defense points to make sandbags longer',														],		
+	3006 :	[/*'沙袋许可+',			Bunker2:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为　70)',															'防御ポイントの土嚢をアップグレードし、土嚢を長くし、抵抗力を70に上げる',			'Upgrade the sandbag at the defense point, making the sandbag longer and increasing resistance to 70',				],		
+	3007 :	[/*'沙袋许可++',		Bunker3:1,											*/'升级防御点的默认沙袋, 使沙袋变得更长(抵抗增加为 100)',															'防御ポイントの土嚢をアップグレードし、土嚢を長くし、抵抗力を100に上げる',			'Upgrade the sandbag at the defense point, making the sandbag longer and increasing resistance to 100',				],		//03		
 	
-	3008 :	[/*'地雷许可',			Mine:3,												*/'替换防御点的沙袋为少量地雷(安放 3 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'替換防禦點的沙袋為少量地雷',								'Replace sandbags at defense points with a small amount of land mines',												'防衛ポイントの土嚢を少量の地雷に置き換える',										],		
-	3009 :	[/*'地雷许可+',			Mine:8,												*/'替换防御点的沙袋为中量地雷(安放 8 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'替換防禦點的沙袋為一定數量地雷',							'Replace sandbags at defense points with a certain number of land mines',											'防衛ポイントの土嚢を一定量の地雷に置き換える',										],		
-	3010 :	[/*'地雷许可++',		Mine:15,											*/'替换防御点的沙袋为大量地雷(安放15 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'替換防禦點的沙袋為大量地雷',								'Replace sandbags at defense points with a large number of land mines',												'防衛ポイントの土嚢を大量の地雷に置き換える',										],		//03		
+	3008 :	[/*'地雷许可',			Mine:3,												*/'替换防御点的沙袋为少量地雷(安放 3 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'防衛ポイントの土嚢を少量の地雷に置き換える',										'Replace sandbags at defense points with a small amount of land mines',												],		
+	3009 :	[/*'地雷许可+',			Mine:8,												*/'替换防御点的沙袋为中量地雷(安放 8 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'防衛ポイントの土嚢を一定量の地雷に置き換える',										'Replace sandbags at defense points with a certain number of land mines',											],		
+	3010 :	[/*'地雷许可++',		Mine:15,											*/'替换防御点的沙袋为大量地雷(安放15 个地雷, 每个地雷可造成 900 点伤害并眩晕敌人)(友军踩中时并不会引爆它们)',		'防衛ポイントの土嚢を大量の地雷に置き換える',										'Replace sandbags at defense points with a large number of land mines',												],		//03		
 	
-	3019 :	[/*'定向照明路灯',		BunkerLight:1,										*/'在防御点的沙袋前添加一台定向照明灯(该设施已经被废弃)',															'替換防禦點的沙袋為一臺超大範圍的照明燈',					'Replace the sandbags at the defense point with a large-area light.',												'防衛拠点の土嚢を超大範囲の照明灯一基に置き換える',									],		
-	3015 :	[/*'定向照明工事',		BunkerLight:1,										*/'在防御点的沙袋前添加一台定向照明灯(照射前方, 远而窄)',															'為防禦點沙袋添加一臺定向照明燈',							'Add a directional light to the defense point sandbags',															'防衛ポイントの土嚢に指向性照明灯を一基追加する',									],		
-	3016 :	[/*'定向照明路灯',		SceneLightLong:1,									*/'将防御点的沙袋替换为超大范围照明灯(照射前方, 远而窄)',															'替換防禦點的沙袋為一臺超大範圍的照明燈',					'Replace the sandbags at the defense point with a large-area light.',												'防衛拠点の土嚢を超大範囲の照明灯一基に置き換える',									],		//03		
+	3019 :	[/*'定向照明路灯',		BunkerLight:1,										*/'在防御点的沙袋前添加一台定向照明灯(该设施已经被废弃)',															'防衛拠点の土嚢を超大範囲の照明灯一基に置き換える',									'Replace the sandbags at the defense point with a large-area light.',												],		
+	3015 :	[/*'定向照明工事',		BunkerLight:1,										*/'在防御点的沙袋前添加一台定向照明灯(照射前方, 远而窄)',															'防衛ポイントの土嚢に指向性照明灯を一基追加する',									'Add a directional light to the defense point sandbags',															],		
+	3016 :	[/*'定向照明路灯',		SceneLightLong:1,									*/'将防御点的沙袋替换为超大范围照明灯(照射前方, 远而窄)',															'防衛拠点の土嚢を超大範囲の照明灯一基に置き換える',									'Replace the sandbags at the defense point with a large-area light.',												],		//03		
 	
-	3022 :	[/*'铁墙许可',			Wall1:1,											*/'将防御点的沙袋替换为无敌铁墙(敌我双方子弹均无法穿过)',															'替換防禦點的沙袋為一面無敵牆',								'Replace the sandbag at the defense point with an invincible wall',													'防衛ポイントの土嚢を無敵壁に置き換える',											],		
-	3020 :	[/*'铁丝网许可',		BunkerTiesiSub:1,									*/'升级防御点的沙袋, 在沙袋前面添加拥有减速效果的铁丝网',															'升級防禦點沙袋, 添加一道擁有減速效果的鐵絲網',				'Upgrade defense sandbags and add a wire mesh with deceleration effect',											'防御ポイント土嚢をれアップグレードして、減速効果のある有刺鉄線を追加する',			],		
-	3021 :	[/*'长铁丝网许可',		BunkerTiesi:1,										*/'升级防御点的沙袋, 在沙袋前添加拥有减速效果的长铁丝网',															'升級防禦點沙袋, 添加一道擁有減速效果的長鐵絲網',			'Upgrade defense sandbags and add a long wire mesh with deceleration effect',										'防御ポイント土嚢をれアップグレードして、減速効果のある長い有刺鉄線を追加する',		],		//03		
+	3022 :	[/*'铁墙许可',			Wall1:1,											*/'将防御点的沙袋替换为无敌铁墙(敌我双方子弹均无法穿过)',															'防衛ポイントの土嚢を無敵壁に置き換える',											'Replace the sandbag at the defense point with an invincible wall',													],		
+	3020 :	[/*'铁丝网许可',		BunkerTiesiSub:1,									*/'升级防御点的沙袋, 在沙袋前面添加拥有减速效果的铁丝网',															'防御ポイント土嚢をれアップグレードして、減速効果のある有刺鉄線を追加する',			'Upgrade defense sandbags and add a wire mesh with deceleration effect',											],		
+	3021 :	[/*'长铁丝网许可',		BunkerTiesi:1,										*/'升级防御点的沙袋, 在沙袋前添加拥有减速效果的长铁丝网',															'防御ポイント土嚢をれアップグレードして、減速効果のある長い有刺鉄線を追加する',		'Upgrade defense sandbags and add a long wire mesh with deceleration effect',										],		//03		
 	
-	3017 :	[/*'照明路灯',			SceneLight:1,										*/'在部署点安放一盏路灯, 夜间作战会开启, 无法被破坏, 它并非高能照明路灯的合成材料',									'每日在防禦點添加一臺照明路燈',								'Add an illuminating streetlight to the defense point daily',														'毎日防衛ポイントに指向性照明街灯を一基追加する',									],		
-	3018 :	[/*'高能照明路灯',		SceneLight2:1,										*/'在部署点安放一盏路灯, 夜间作战会开启, 它不是两盏照明路灯升级来的, 只能直接合成',									'每日在防禦點添加一臺高能照明路燈',							'Add a high-power streetlight to the defense point daily',															'毎日防衛ポイントに高エネルギー照明街灯を一基追加する',								],		//03		
+	3017 :	[/*'照明路灯',			SceneLight:1,										*/'在部署点安放一盏路灯, 夜间作战会开启, 无法被破坏, 它并非高能照明路灯的合成材料',									'毎日防衛ポイントに指向性照明街灯を一基追加する',									'Add an illuminating streetlight to the defense point daily',														],		
+	3018 :	[/*'高能照明路灯',		SceneLight2:1,										*/'在部署点安放一盏路灯, 夜间作战会开启, 它不是两盏照明路灯升级来的, 只能直接合成',									'毎日防衛ポイントに高エネルギー照明街灯を一基追加する',								'Add a high-power streetlight to the defense point daily',															],		//03		
 	
-	3011 :	[/*'机枪塔许可',		CannonPlayer:1|Weapon:10001|TankType:101,			*/'每日在防御点添加一门枪炮塔',																						'每日在防禦點添加一門機槍炮塔',								'Adds a machine gun turret at the defense point daily.',															'毎日防御ポイントに機関銃砲塔を1基追加する',										],		
-	3012 :	[/*'机枪塔许可+',		CannonPlayerBunker:1|Weapon:10001|TankType:104,		*/'每日在防御点添加一门枪炮塔(可搭载槽位更多的强力武器)',															'每日在防禦點添加一門機槍炮塔(可搭載槽位更多的武器)',		'Adds a machine gun turret at the defense point daily.(Can be equiped with weapon with more slot)',					'毎日防御ポイントに機関銃砲塔を1基追加する(スロット数の多い武器を搭載可能)',		],		//03		
+	3011 :	[/*'机枪塔许可',		CannonPlayer:1|Weapon:10001|TankType:101,			*/'每日在防御点添加一门枪炮塔',																						'毎日防御ポイントに機関銃砲塔を1基追加する',										'Adds a machine gun turret at the defense point daily.',															],		
+	3012 :	[/*'机枪塔许可+',		CannonPlayerBunker:1|Weapon:10001|TankType:104,		*/'每日在防御点添加一门枪炮塔(可搭载槽位更多的强力武器)',															'毎日防御ポイントに機関銃砲塔を1基追加する(スロット数の多い武器を搭載可能)',		'Adds a machine gun turret at the defense point daily.(Can be equiped with weapon with more slot)',					],		//03		
 	
-	3013 :	[/*'炮塔许可',			CannonPlayer2:1|Weapon:10007|TankType:102,			*/'每日在防御点添加一门火炮塔',																						'每日在防禦點添加一門炮塔',									'Adds a turret at the defense point daily.',																		'毎日防御ポイントに砲塔を1基追加する',												],		
-	3014 :	[/*'炮塔许可+',			CannonPlayer2Bunker:1|Weapon:10007|TankType:105,	*/'每日在防御点添加一门火炮塔(可搭载槽位更多的强力武器)',															'每日在防禦點添加一門炮塔(可搭載槽位更多的武器)',			'Adds a turret at the defense point daily.(Can be equiped with weapon with more slot)',								'毎日防御ポイントに砲塔を1基追加する(スロット数の多い武器を搭載可能)',				],		//03		
+	3013 :	[/*'炮塔许可',			CannonPlayer2:1|Weapon:10007|TankType:102,			*/'每日在防御点添加一门火炮塔',																						'毎日防御ポイントに砲塔を1基追加する',												'Adds a turret at the defense point daily.',																		],		
+	3014 :	[/*'炮塔许可+',			CannonPlayer2Bunker:1|Weapon:10007|TankType:105,	*/'每日在防御点添加一门火炮塔(可搭载槽位更多的强力武器)',															'毎日防御ポイントに砲塔を1基追加する(スロット数の多い武器を搭載可能)',				'Adds a turret at the defense point daily.(Can be equiped with weapon with more slot)',								],		//03		
 	
-	100 :	[/*'玛　丽',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'光榮的帝國作戰士兵',										'Glorious Imperial Combat Soldiers',																				'輝かしい帝国の戦闘員兵士',															],		
-	101 :	[/*'库罗库',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'光榮的帝國作戰士兵',										'Glorious Imperial Combat Soldiers',																				'輝かしい帝国の戦闘員兵士',															],		
-	102 :	[/*'桑/San',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'光榮的帝國作戰士兵',										'Glorious Imperial Combat Soldiers',																				'輝かしい帝国の戦闘員兵士',															],		
-	103 :	[/*'赭石色',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'光榮的帝國作戰士兵',										'Glorious Imperial Combat Soldiers',																				'輝かしい帝国の戦闘員兵士',															],		
-	104 :	[/*'克莱尔',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'光榮的帝國作戰士兵',										'Glorious Imperial Combat Soldiers',																				'輝かしい帝国の戦闘員兵士',															],		//03		
+	100 :	[/*'玛　丽',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'輝かしい帝国の戦闘員兵士',															'Glorious Imperial Combat Soldiers',																				],		
+	101 :	[/*'库罗库',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'輝かしい帝国の戦闘員兵士',															'Glorious Imperial Combat Soldiers',																				],		
+	102 :	[/*'桑/San',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'輝かしい帝国の戦闘員兵士',															'Glorious Imperial Combat Soldiers',																				],		
+	103 :	[/*'赭石色',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'輝かしい帝国の戦闘員兵士',															'Glorious Imperial Combat Soldiers',																				],		
+	104 :	[/*'克莱尔',																*/'光荣的帝国作战士兵，关于驾驶员的能力, 可查看主角小队',															'輝かしい帝国の戦闘員兵士',															'Glorious Imperial Combat Soldiers',																				],		//03		
 	
-	301 :	[/*'标准作战单元A',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'普通的協同作戰單元',										'A regular Combat Support Unit',																					'通常の協同戦闘ユニット',															],		
-	302 :	[/*'标准作战单元B',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'普通的協同作戰單元',										'A regular Combat Support Unit',																					'通常の協同戦闘ユニット',															],		
-	303 :	[/*'高速·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'普通的協同作戰單元',										'A regular Combat Support Unit',																					'通常の協同戦闘ユニット',															],		
-	304 :	[/*'火力·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'普通的協同作戰單元',										'A regular Combat Support Unit',																					'通常の協同戦闘ユニット',															],		
-	305 :	[/*'重型·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'普通的協同作戰單元',										'A regular Combat Support Unit',																					'通常の協同戦闘ユニット',															],		//03		
+	301 :	[/*'标准作战单元A',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'通常の協同戦闘ユニット',															'A regular Combat Support Unit',																					],		
+	302 :	[/*'标准作战单元B',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'通常の協同戦闘ユニット',															'A regular Combat Support Unit',																					],		
+	303 :	[/*'高速·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'通常の協同戦闘ユニット',															'A regular Combat Support Unit',																					],		
+	304 :	[/*'火力·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'通常の協同戦闘ユニット',															'A regular Combat Support Unit',																					],		
+	305 :	[/*'重型·作战单元',															*/'普通的协同作战单元, 关于机体性能细节, 可查看机体详情',															'通常の協同戦闘ユニット',															'A regular Combat Support Unit',																					],		//03		
 	
 };
 
@@ -460,21 +464,21 @@ tbodyArray01.forEach(function(item){
 		+'" src="../static/image/defenses/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 武器名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 物品类型
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[data][0]) +'</td>' }else 
+		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[data][xj2.lang.code]) +'</td>' }else 
 		
 		// 归属种类
 		if(index === 10){
 			let result = data.split('|').map(
-			function(e){ return ItemsNameList[e][0] }).join(' | ');
+			function(e){ return ItemsNameList[e][xj2.lang.code] }).join(' | ');
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
 		// 原型研发
 		if(index === 11){
-			let result = ItemsNameList[data][0];
+			let result = ItemsNameList[data][xj2.lang.code];
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
@@ -484,7 +488,7 @@ tbodyArray01.forEach(function(item){
 			if(result != '-'){
 				result=data.split('|').map(function(string){
 					let [name, count,] = string.split('_');
-					return count + ItemsNameList[name][0];
+					return count + ItemsNameList[name][xj2.lang.code];
 				}).join(' + ');
 			};
 			powerTable_tbody_node01 += 
@@ -501,12 +505,12 @@ tbodyArray01.forEach(function(item){
 					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
 				};
 			});
-			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
+			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][xj2.lang.code] }).join(' | ') };
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
 		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -518,7 +522,9 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
+
+})();
 </script>
 
 
@@ -529,7 +535,7 @@ buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -549,7 +555,7 @@ buildPowerTable('powerTable01');
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

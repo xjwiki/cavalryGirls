@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>主角小队</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>主角小队</span><small>(履历档案)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.主角小队); $('#pub_headText > a > small').text(xj2.i18n.履历档案);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -126,8 +129,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>
 	01. 以下是我方角色的详情列表, 由于属性较多且复杂, 这里不好展开解释, 因此 XJ 在表格后面做了详细的描述, 请查阅 <a href="#heading03"># 属性解析</a>; <br />
-	02. 数据超过 <code>25</code> 项, 因此表格被拆成了二部分, 可点击表格右上角按钮或用键盘的左右或 AD 按键翻页, 数字键 1/2 也能实现定位; <br />
-	03. 角色共有 <code>10</code> 位, 可细分为人类和 AI 两类, AI 也没什么可看, 就是作战指令有些区别而已, 你也没法操控它们, 只能设置指令; <br />
+	02. 数据超过 <span class="code">25</span> 项, 因此表格被拆成了二部分, 可点击表格右上角按钮或用键盘的左右或 AD 按键翻页, 数字键 1/2 也能实现定位; <br />
+	03. 角色共有 <span class="code">10</span> 位, 可细分为人类和 AI 两类, AI 也没什么可看, 就是作战指令有些区别而已, 你也没法操控它们, 只能设置指令; <br />
 	04. 五位驾驶员的性格以及喜好都不同, 这也导致了他们的能力和作战方式都各有特色, 对此 XJ 也做了剖析, 详情请查阅 <a href="#heading04"># 额外拓展</a>; <br />
 </p>
 
@@ -135,9 +138,9 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<thead>
 		<tr>
 			
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">角色名称<i class="icon fa fa-sort" style="margin-left:00;"></i>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>角色图片</zh-i><jp-i>画像</jp-i><en-i>Img</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>角色序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 96px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>角色名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:00;"></i>
 			</span>
 				<div id="turnPart">
 					<button id="nextPart" type="button" title="Next Part"><i class="fas fa-arrow-right"></i></button>
@@ -146,30 +149,30 @@ function(){ FastClick.attach(document.body) }, false);</script>
 				</div>
 			</th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">射击散射<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">射击间隔<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装弹时间<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">武器维护<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">移动速度<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奔跑速度<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">登场年龄<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始技能<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">毕业院校<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">驾驶机体<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>默认排序</zh-i><jp-i>ソート</jp-i><en-i>Resolve</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>射击散射</zh-i><jp-i>最大散布</jp-i><en-i>AngleFloat</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>射击间隔</zh-i><jp-i>射撃間隔</jp-i><en-i>FireRate</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装弹时间</zh-i><jp-i>リロード時間</jp-i><en-i>ReloadSpeed</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>武器维护</zh-i><jp-i>武器メンテナンス</jp-i><en-i>Weapon<br />Maintenance</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>移动速度</zh-i><jp-i>移動速度影響</jp-i><en-i>Movement<br />Speed Effect</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>奔跑速度</zh-i><jp-i>走行速度</jp-i><en-i>Sprint Speed</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>登场年龄</zh-i><jp-i>年齢</jp-i><en-i>Age</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>初始技能</zh-i><jp-i>スキル</jp-i><en-i>Skill</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>毕业院校</zh-i><jp-i>卒業大学</jp-i><en-i>Institution</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>驾驶机体</zh-i><jp-i>機体</jp-i><en-i>Mecha</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">战斗风格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">第二指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">第三指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊指令<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">喜好物品<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">讨厌物品<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最爱礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">嫌弃礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">接受礼物<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>战斗风格</zh-i><jp-i>戦闘スタイル</jp-i><en-i>Fight Style</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>初始指令</zh-i><jp-i>初期コマンド</jp-i><en-i>Initial<br />Instruction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>第二指令</zh-i><jp-i>第2命令</jp-i><en-i>Second<br />Instruction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>第三指令</zh-i><jp-i>第3命令</jp-i><en-i>Third<br />Instruction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊指令</zh-i><jp-i>特別命令</jp-i><en-i>Special<br />Instruction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>喜好物品</zh-i><jp-i>物が好き</jp-i><en-i>Like Item</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>讨厌物品</zh-i><jp-i>物が嫌い</jp-i><en-i>Hate Item</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>最爱礼物</zh-i><jp-i>プレゼント大好き</jp-i><en-i>Love Gift</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>嫌弃礼物</zh-i><jp-i>贈り物を嫌う</jp-i><en-i>Hate Gift</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>接受礼物</zh-i><jp-i>プレゼント<br />を受け取る</jp-i><en-i>Accept Gift</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
 		</tr>
 	</thead>
@@ -193,15 +196,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <table originalSort="0" id="powerTable02" class="powerTable table-xs table-hover"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">指令代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">近战范围<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">防御时间<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">闪避时长<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">收缩临界<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">距离权重<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>指令序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>指令名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>指令代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>近战范围</zh-i><jp-i>接近戦範囲</jp-i><en-i>Melee<br />Range</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>防御时间</zh-i><jp-i>ガードタイム</jp-i><en-i>Defense<br />Time</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>闪避时长</zh-i><jp-i>フラッシュ時間</jp-i><en-i>Evasion<br />Duration</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>收缩临界</zh-i><jp-i>しゅうしゅく<br />りんかい</jp-i><en-i>Shrinkage<br />Critical</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>距离权重</zh-i><jp-i>距離ウェイト</jp-i><en-i>Distance<br />Weight</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -218,13 +221,13 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>————</p>
 
-<p class="p-unset">01. 射击散射: 此项能力最高值为 <code>-20%</code>, 每 1 个升级点能够 <code>-2%</code>, 可减少最大散射角度, 越小就意味着散弹类武器的子弹越集中;</p>
-<p class="p-unset">02. 射击间隔: 此项能力最高值为 <code>-10%</code>, 每 1 个升级点能够 <code>-2%</code>, 可降低射击间隔的时间, 越小就意味着开火的间隔时间会越短;</p>
-<p class="p-usual">03. 装弹时间: 此项能力最高值为 <code>-10%</code>, 每 1 个升级点能够 <code>-1%</code>, 可降低装弹的耗时百分比, 越小就意味着换弹的时候就会越快;</p>
+<p class="p-unset">01. 射击散射: 此项能力最高值为 <span class="code">-20%</span>, 每 1 个升级点能够 <span class="code">-2%</span>, 可减少最大散射角度, 越小就意味着散弹类武器的子弹越集中;</p>
+<p class="p-unset">02. 射击间隔: 此项能力最高值为 <span class="code">-10%</span>, 每 1 个升级点能够 <span class="code">-2%</span>, 可降低射击间隔的时间, 越小就意味着开火的间隔时间会越短;</p>
+<p class="p-usual">03. 装弹时间: 此项能力最高值为 <span class="code">-10%</span>, 每 1 个升级点能够 <span class="code">-1%</span>, 可降低装弹的耗时百分比, 越小就意味着换弹的时候就会越快;</p>
 
-<p class="p-unset">04. 武器维护: 此项能力最高值为 <code>+40%</code>, 每 1 个升级点能够 <code>+2%</code>, 可同时降低换弹老化和开火老化概率, 能节约维修和弹药费用;</p>
-<p class="p-unset">05. 移动速度: 此项能力最高值为 <code>+10%</code>, 每 1 个升级点能够 <code>+1%</code>, 可提升机体的速度, 蹲踞/行走/奔跑三种行动的速度都会提高;</p>
-<p class="p-usual">06. 奔跑速度: 此项能力最高值为 <code>+10%</code>, 每 1 个升级点能够 <code>+1%</code>, 可提升机体的奔跑速度, 但对蹲踞和行走的速度就没有影响了;</p>
+<p class="p-unset">04. 武器维护: 此项能力最高值为 <span class="code">+40%</span>, 每 1 个升级点能够 <span class="code">+2%</span>, 可同时降低换弹老化和开火老化概率, 能节约维修和弹药费用;</p>
+<p class="p-unset">05. 移动速度: 此项能力最高值为 <span class="code">+10%</span>, 每 1 个升级点能够 <span class="code">+1%</span>, 可提升机体的速度, 蹲踞/行走/奔跑三种行动的速度都会提高;</p>
+<p class="p-usual">06. 奔跑速度: 此项能力最高值为 <span class="code">+10%</span>, 每 1 个升级点能够 <span class="code">+1%</span>, 可提升机体的奔跑速度, 但对蹲踞和行走的速度就没有影响了;</p>
 
 <p class="p-unset">07. 登场年龄: 这只是设定, 当前对游戏并无实质影响, 传闻在最初设定里有未成年, 但被审核认为是炼铜, 因此最后年龄都被调高了;</p>
 <p class="p-usual">08. 初始技能: 初始自带的技能, 在战场使用的快捷键为 Z, 但会加脑负荷, 不能乱用, 关于技能更多信息, 可以查阅 <a href="./data_pilot_skill.html">战场技能.html</a>;</p>
@@ -235,14 +238,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <p>————</p>
 
 <p class="p-unset">11. 初始指令: 剧情模式下这些驾驶员默认采用的作战指令, 只有当忠诚度(好感度)到达 11 颗心(> 80), 才能够让他们接受任意指令;</p>
-<p class="p-unset">12. 第二指令: 当驾驶员的忠诚度 <code>> 20</code>, 也就是大约 4 颗心, 可让他采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受指令;</p>
-<p class="p-unset">13. 第三指令: 当驾驶员的忠诚度 <code>> 50</code>, 也就是大约 8 颗心, 可让他采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受指令;</p>
+<p class="p-unset">12. 第二指令: 当驾驶员的忠诚度 <span class="code">> 20</span>, 也就是大约 4 颗心, 可让他采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受指令;</p>
+<p class="p-unset">13. 第三指令: 当驾驶员的忠诚度 <span class="code">> 50</span>, 也就是大约 8 颗心, 可让他采用的作战指令, 如果忠诚度不达标, 则对方会拒绝接受指令;</p>
 <p class="p-usual">14. 特殊指令: 特殊模式下这些驾驶员默认采用的作战指令, 有些模式中不能改作战指令, 但可在战场按 Tab, 启用战略界面下达指令;</p>
 
-<p class="p-unset">15. 最爱礼物: 赠送最爱礼物额外 <code>+3</code> 忠诚度, 所有驾驶员都喜欢可乐和英雄勋章, 但没必要给队长送可乐, 因为队长没忠诚度概念;</p>
-<p class="p-usual">16. 嫌弃礼物: 赠送嫌弃礼物额外 <code>-1</code> 忠诚度, 所有驾驶员都嫌弃香烟以及营养膏, 香烟会永久的降低能力, 营养膏则可以喂给队长;</p>
+<p class="p-unset">15. 最爱礼物: 赠送最爱礼物额外 <span class="code">+3</span> 忠诚度, 所有驾驶员都喜欢可乐和英雄勋章, 但没必要给队长送可乐, 因为队长没忠诚度概念;</p>
+<p class="p-usual">16. 嫌弃礼物: 赠送嫌弃礼物额外 <span class="code">-1</span> 忠诚度, 所有驾驶员都嫌弃香烟以及营养膏, 香烟会永久的降低能力, 营养膏则可以喂给队长;</p>
 
-<p class="p-usual">17. 接受礼物: 赠送接受礼物额外 <code>+1</code> 忠诚度, 所有驾驶员都接受咖啡/标准勋章/便当, 关于礼物机制, 详情可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
+<p class="p-usual">17. 接受礼物: 赠送接受礼物额外 <span class="code">+1</span> 忠诚度, 所有驾驶员都接受咖啡/标准勋章/便当, 关于礼物机制, 详情可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>;</p>
 
 <p>————</p>
 
@@ -260,9 +263,9 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading04">04. 额外拓展</h2>
 
-<p>能力概述: 驾驶员的各项能力上限都是相同的, 如果队长的思潮偏向理智方向, 则能力上限可额外提升 <code>20% + 30% = 50%</code>, 除玛丽外, 其他驾驶员的各项初始能力都有高低差异, 但他们擅长的和不擅长的, 换算成升级点后在数值上几乎都会相互抵消, 也就相当于归零了, 以下三项, 射击散射(<code>Max: -20%</code>)/射击间隔(<code>Max: -10%</code>)/武器维护(<code>Max: +40%</code>), 都是 <code>1</code> 升级点兑换 <code>+2%</code> 或 <code>-2%</code> 的能力, 剩余三项, 装弹时间(<code>Max: -10%</code>)/移动速度(<code>Max: +10%</code>)/奔跑速度(<code>Max: +10%</code>), 都是 <code>1</code> 升级点兑换 <code>+1%</code> 或 <code>-1%</code> 的能力;</p>
+<p>能力概述: 驾驶员的各项能力上限都是相同的, 如果队长的思潮偏向理智方向, 则能力上限可额外提升 <span class="code">20% + 30% = 50%</span>, 除玛丽外, 其他驾驶员的各项初始能力都有高低差异, 但他们擅长的和不擅长的, 换算成升级点后在数值上几乎都会相互抵消, 也就相当于归零了, 以下三项, 射击散射(<span class="code">Max: -20%</span>)/射击间隔(<span class="code">Max: -10%</span>)/武器维护(<span class="code">Max: +40%</span>), 都是 <span class="code">1</span> 升级点兑换 <span class="code">+2%</span> 或 <span class="code">-2%</span> 的能力, 剩余三项, 装弹时间(<span class="code">Max: -10%</span>)/移动速度(<span class="code">Max: +10%</span>)/奔跑速度(<span class="code">Max: +10%</span>), 都是 <span class="code">1</span> 升级点兑换 <span class="code">+1%</span> 或 <span class="code">-1%</span> 的能力;</p>
 
-<p>升级点数: 升级点的获取, 主要源于赠送勋章(英雄勋章 <code>+4</code> / 标准勋章 <code>+2</code> / 量产勋章 <code>+1</code>)以及提升军衔(训练兵+0 / 列兵+0 / 预备上等兵+1 / 上等兵+1 / 预备下士+1 / 下士+2 / 预备中士+2 / 中士+3 / 预备上士+3 / 上士+4 / 士官长+4, 总共可 <code>+21</code> 点), 此外, 在会议室召开"作战会议"可随机让某个驾驶员升级点 <code>+1</code>, 但更推荐在会议室召开"作战总结会议", 可随机让某个驾驶员的随机某项能力直接提升 <code>2%</code> 或 <code>4%</code>, 这明显更为划算, 最重要的是, 召开作战总结会议所提升的能力, 可突破驾驶员的最大能力上限, 例如驾驶员武器维护能力为 <code>+40%</code>, 已经无法用升级点再次提升了, 但召开作战总结会议再 <code>+4%</code>, 那么此时这项能力就会变成 <code>+44%</code>;</p>
+<p>升级点数: 升级点的获取, 主要源于赠送勋章(英雄勋章 <span class="code">+4</span> / 标准勋章 <span class="code">+2</span> / 量产勋章 <span class="code">+1</span>)以及提升军衔(训练兵+0 / 列兵+0 / 预备上等兵+1 / 上等兵+1 / 预备下士+1 / 下士+2 / 预备中士+2 / 中士+3 / 预备上士+3 / 上士+4 / 士官长+4, 总共可 <span class="code">+21</span> 点), 此外, 在会议室召开"作战会议"可随机让某个驾驶员升级点 <span class="code">+1</span>, 但更推荐在会议室召开"作战总结会议", 可随机让某个驾驶员的随机某项能力直接提升 <span class="code">2%</span> 或 <span class="code">4%</span>, 这明显更为划算, 最重要的是, 召开作战总结会议所提升的能力, 可突破驾驶员的最大能力上限, 例如驾驶员武器维护能力为 <span class="code">+40%</span>, 已经无法用升级点再次提升了, 但召开作战总结会议再 <span class="code">+4%</span>, 那么此时这项能力就会变成 <span class="code">+44%</span>;</p>
 
 <p>加点策略: 除了无尽模式之外(假设你能坚守到百天以后), 在其他模式其实很难让所有驾驶员的能力都到达上限, 因此没那么多勋章和荣誉点(用于提升军衔)可用来兑换升级点, 因此就需要根据驾驶员的机体情况和武器战法, 选择性的优先提升某项能力, 例如使用易损的电弧类武器, 就可以选择提升武器维护的能力, 避免武器在战斗中频繁老化, 例如使用不准的散弹类武器, 就可以选择降低射击散射的能力, 使得分散的子弹更加集中到一点, 例如需要克莱尔出外勤, 就该提升移动速度和奔跑速度, 因为他的圣骑士号过于笨重, 迟缓的速度面对敏捷的敌人将会十分痛苦, 当然如果你实在不知道该如何加点, 也许雨露均沾的培养水桶号也是个不错的选择, 这样即使驾驶员没什么特别擅长的地方, 但起码也不会有某项能力缺陷, 如此在武器的选择上就会有更大的余地, 也可以更加游刃有余的应付多种不同的场景;</p>
 
@@ -272,14 +275,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>行为解析: 实际上 AI 的战场行为逻辑颇为复杂, 它们甚至会判断武器和地形等因素, XJ 对此的了解也十分有限, 这里只提供一些已经被确认的细节, 首先是, AI 的行为大致可分为冲刺/防御/收缩三种, 冲刺是尝试靠近敌人进行攻击, 防御是躲在沙袋后射击, 收缩则是退回大门前抵抗, 这三种状态的转换构成了 AI 的表现, 但冲刺只能由防御转化而来, 当 AI 设置的指令为紧随, 则它进入防御或收缩状态时, 都只会继续跟在目标身边, 而不会跑去蹲沙袋或守大门, 其次是, 如果 AI 在防御时, 所在区域被其他机体挤占, 那么它过段时间后会换个区域防守(这应该是为了避免被扎堆群伤), 最后是, 如果有队友在 AI 的防御圈内, 则 AI 会忽略身后目标(将后背交给战友);</p>
 
-<p>距离权重: 作战指令中的距离权重拥有四个数据, 它们其实是范围值, 用于生成四个同心圆, 并以机体正面为参照, 分为前后左右四个方向, 以防御的 <code>8|16|28|40</code> 举例, 当敌人在 <code>8</code> 范围内, 距离权重为 <code>2</code>, 当敌人在 <code>8~16</code> 范围内, 前/左/右方的距离权重为 <code>2</code>, 后方的距离权重为 <code>1</code>, 当敌人在 <code>16~28</code> 范围内, 前方的距离权重为 <code>2</code>, 左/右方的距离权重为 <code>1</code>, 后方的距离权重为 <code>0.5</code>, 当敌人在 <code>28~40</code> 范围内, 前方的距离权重为 <code>1</code>, 左/右/后方的距离权重为 <code>0.5</code>, 当敌人在 <code>40</code> 范围外, 所有距离的权重均为 <code>0</code>, AI 会优先考虑对付权重高的人, 但距离不是唯一的判断标准, 其实还有其他权重在影响, 例如机体用射线武器, 则对带盾敌人权重就会下降, 如果看不懂这部分内容, 那就随它去吧, 因为知道 AI 索敌的权重算法, 也没什么用, 战场上手忙脚乱的, 能顾好自己就不错了;</p>
+<p>距离权重: 作战指令中的距离权重拥有四个数据, 它们其实是范围值, 用于生成四个同心圆, 并以机体正面为参照, 分为前后左右四个方向, 以防御的 <span class="code">8|16|28|40</span> 举例, 当敌人在 <span class="code">8</span> 范围内, 距离权重为 <span class="code">2</span>, 当敌人在 <span class="code">8~16</span> 范围内, 前/左/右方的距离权重为 <span class="code">2</span>, 后方的距离权重为 <span class="code">1</span>, 当敌人在 <span class="code">16~28</span> 范围内, 前方的距离权重为 <span class="code">2</span>, 左/右方的距离权重为 <span class="code">1</span>, 后方的距离权重为 <span class="code">0.5</span>, 当敌人在 <span class="code">28~40</span> 范围内, 前方的距离权重为 <span class="code">1</span>, 左/右/后方的距离权重为 <span class="code">0.5</span>, 当敌人在 <span class="code">40</span> 范围外, 所有距离的权重均为 <span class="code">0</span>, AI 会优先考虑对付权重高的人, 但距离不是唯一的判断标准, 其实还有其他权重在影响, 例如机体用射线武器, 则对带盾敌人权重就会下降, 如果看不懂这部分内容, 那就随它去吧, 因为知道 AI 索敌的权重算法, 也没什么用, 战场上手忙脚乱的, 能顾好自己就不错了;</p>
 
 <hr />
 </section>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 
 #powerTable01 .hideTr{display:none;}
 
@@ -320,8 +323,10 @@ border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);poi
 
 
 
-<script>/* 数据注解 */
-/*
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
 
 数据由 items + TankType 两张表的内容合并而来, TankType 关于机体信息的那部分数据已经在 mecha_list 页面了, 所以这里就不再展示
 Tag = '', / Func = '', / Company = '', / Syns = '', / NeedWeapon = '', / ColorPlus = '', / Cluster = '',
@@ -360,14 +365,14 @@ let tbodyArray01 = [
 let tbodyArray02 = [
 	
 	//高亮,			指令序号,		指令名称,		指令代码,		近战范围,		防御时间,					闪避时长,				收缩临界,					距离权重,				文本描述,		],		
-	//Active,		Number,			Name,			AILogic,		DashRange,		OverHarmToShrinkTime,		DashToShrinkTime,		ShrinkHpThresholdRatio,		FindEnemyRange,			Description,	],		//02		
+	//Active,		Number,			Name,			AILogic,		DashRange,		OverHarmToShrinkTime,		DashToShrinkTime,		ShrinkHpThresholdRatio,		FindEnemyRange,			Description,	],		//01		
 	
 	[1,				'01',			'防御',			1,				4,				5,							2,						'0.15',						'8|16|28|40',			'-',			],		
 	[0,				'02',			'歼敌',			2,				5,				5,							2,						'0.20',						'8|16|40|160',			'-',			],		
 	[1,				'03',			'跟随',			3,				5,				5,							2,						'0.15',						'8|16|28|40',			'-',			],		
 	[0,				'04',			'死守',			4,				3,				1,							2,						'0.30',						'8|16|28|40',			'-',			],		
 	[1,				'05',			'冲锋',			5,				10,				3,							1,						'0.20',						'8|16|40|160',			'-',			],		
-	[0,				'06',			'紧随',			6,				4,				1,							1,						'0.10',						'8|16|28|40',			'-',			],		//02		
+	[0,				'06',			'紧随',			6,				4,				1,							1,						'0.10',						'8|16|28|40',			'-',			],		//01		
 	
 ];
 
@@ -375,129 +380,129 @@ let tbodyArray02 = [
 let ItemsNameList = {
 	
 	// 角色名称
-	'100_Name' :	['玛　丽',					'瑪麗',						'Mary',										'メアリー',						],
-	'101_Name' :	['库罗库',					'庫羅庫',					'Kuroku',									'クロック',						],
-	'102_Name' :	['桑/San',					'桑',						'San',										'サン',							],
-	'103_Name' :	['赭石色',					'赭石色',					'Ocher',									'オーカー',						],
-	'104_Name' :	['克莱尔',					'克萊爾',					'Claire',									'クレア',						],
-	'301_Name' :	['标准作战单元A',			'標準作戰單元A',			'Standard CSU A',							'制式戦闘ユニットA',			],
-	'302_Name' :	['标准作战单元B',			'標準作戰單元B',			'Standard CSU B',							'制式戦闘ユニットB',			],
-	'303_Name' :	['高速·作战单元',			'高速作戰單元',				'Fast CSU',									'高速戦闘ユニット',				],
-	'304_Name' :	['火力·作战单元',			'火力作戰單元',				'Firepower CSU',							'火力戦闘ユニット',				],
-	'305_Name' :	['重型·作战单元',			'重型作戰單元',				'Heavy CSU',								'重装甲戦闘ユニット',			],
+	'100_Name' :	['玛　丽',					'メアリー',						'Mary',										],		
+	'101_Name' :	['库罗库',					'クロック',						'Kuroku',									],		
+	'102_Name' :	['桑/San',					'サン',							'San',										],		
+	'103_Name' :	['赭石色',					'オーカー',						'Ocher',									],		
+	'104_Name' :	['克莱尔',					'クレア',						'Claire',									],		
+	'301_Name' :	['标准作战单元A',			'制式戦闘ユニットA',			'Standard CSU A',							],		
+	'302_Name' :	['标准作战单元B',			'制式戦闘ユニットB',			'Standard CSU B',							],		
+	'303_Name' :	['高速·作战单元',			'高速戦闘ユニット',				'Fast CSU',									],		
+	'304_Name' :	['火力·作战单元',			'火力戦闘ユニット',				'Firepower CSU',							],		
+	'305_Name' :	['重型·作战单元',			'重装甲戦闘ユニット',			'Heavy CSU',								],		//02		
 	
 	// 驾驶机体
-	'100_Mecha' :	['游骑兵号',				'遊騎兵號',					'Ranger',									'レンジャー号',					],
-	'101_Mecha' :	['骠骑兵号',				'驃騎兵號',					'Hussar',									'ユサール号',					],
-	'102_Mecha' :	['龙骑士号',				'龍騎士號',					'Dragoon',									'ドラグーン号',					],
-	'103_Mecha' :	['弓骑兵号',				'弓騎兵號',					'Horse Archer',								'弓騎兵号',						],
-	'104_Mecha' :	['圣骑士号',				'聖騎士號',					'Paladin',									'聖騎士号',						],
-	'301_Mecha' :	['标准作战单元A',			'標準作戰單元A',			'Standard CSU A',							'制式戦闘ユニットA',			],
-	'302_Mecha' :	['标准作战单元B',			'標準作戰單元B',			'Standard CSU B',							'制式戦闘ユニットB',			],
-	'303_Mecha' :	['高速·作战单元',			'高速作戰單元',				'Fast CSU',									'高速戦闘ユニット',				],
-	'304_Mecha' :	['火力·作战单元',			'火力作戰單元',				'Firepower CSU',							'火力戦闘ユニット',				],
-	'305_Mecha' :	['重型·作战单元',			'重型作戰單元',				'Heavy CSU',								'重装甲戦闘ユニット',			],
+	'100_Mecha' :	['游骑兵号',				'レンジャー号',					'Ranger',									],		
+	'101_Mecha' :	['骠骑兵号',				'ユサール号',					'Hussar',									],		
+	'102_Mecha' :	['龙骑士号',				'ドラグーン号',					'Dragoon',									],		
+	'103_Mecha' :	['弓骑兵号',				'弓騎兵号',						'Horse Archer',								],		
+	'104_Mecha' :	['圣骑士号',				'聖騎士号',						'Paladin',									],		
+	'301_Mecha' :	['标准作战单元A',			'制式戦闘ユニットA',			'Standard CSU A',							],		
+	'302_Mecha' :	['标准作战单元B',			'制式戦闘ユニットB',			'Standard CSU B',							],		
+	'303_Mecha' :	['高速·作战单元',			'高速戦闘ユニット',				'Fast CSU',									],		
+	'304_Mecha' :	['火力·作战单元',			'火力戦闘ユニット',				'Firepower CSU',							],		
+	'305_Mecha' :	['重型·作战单元',			'重装甲戦闘ユニット',			'Heavy CSU',								],		//02		
 	
 	// 初始技能
-	400 :			['专注透支',				'專注透支',					'Concentration overdraft',					'集中力過消耗',					],
-	401 :			['护盾过载',				'護盾超載',					'Shield overload',							'シールド過負荷',				],
-	402 :			['动力过载',				'動力超載',					'Power overload',							'動力過負荷',					],
-	403 :			['心灵震爆',				'心靈震爆',					'Soul Shock',								'マインドショック',				],
-	404 :			['护盾透支',				'護盾透支',					'Shield overdraft',							'シールド過消耗',				],
+	400 :			['专注透支',				'集中力過消耗',					'Concentration overdraft',					],		
+	401 :			['护盾过载',				'シールド過負荷',				'Shield overload',							],		
+	402 :			['动力过载',				'動力過負荷',					'Power overload',							],		
+	403 :			['心灵震爆',				'マインドショック',				'Soul Shock',								],		
+	404 :			['护盾透支',				'シールド過消耗',				'Shield overdraft',							],		//02		
 	
 	// 作战指令
-	1 :				['防御',					'防禦',						'Defense',									'防御',							],
-	2 :				['歼敌',					'殲敵',						'Annihilate',								'殲滅',							],
-	3 :				['跟随',					'跟隨',						'Follow',									'追従',							],
-	4 :				['死守',					'死守',						'Hold the line',							'死守',							],
-	5 :				['冲锋',					'衝鋒',						'Assault',									'突撃',							],
-	6 :				['紧随',					'緊隨',						'Stick with',								'密着',							],
-	7 :				['游击',					'遊擊',						'Guerrilla',								'遊撃',							],
+	1 :				['防御',					'防御',							'Defense',									],		
+	2 :				['歼敌',					'殲滅',							'Annihilate',								],		
+	3 :				['跟随',					'追従',							'Follow',									],		
+	4 :				['死守',					'死守',							'Hold the line',							],		
+	5 :				['冲锋',					'突撃',							'Assault',									],		
+	6 :				['紧随',					'密着',							'Stick with',								],		
+	7 :				['游击',					'遊撃',							'Guerrilla',								],		//02		
 	
 	// 毕业院校
-	'100_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
-	'101_School' :	['Ｘ�?Ｘ�?Ｘ�?',			'？？？？？？',				'???????????????????????',					'????????????,'					],
-	'102_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
-	'103_School' :	['皇家猎兵学院',			'皇家猎兵学院',				'Royal Hunter\'s College',					'王立猟兵学院',					],
-	'104_School' :	['帝国中央军事院校',		'帝国中央军事院校',			'Imperial Central Military Academy',		'帝国中央軍事大学',				],
+	'100_School' :	['帝国中央军事院校',		'帝国中央軍事大学',				'Imperial Central Military Academy',		],		
+	'101_School' :	['Ｘ�?Ｘ�?Ｘ�?',			'????????????',					'???????????????????????',					],		
+	'102_School' :	['帝国中央军事院校',		'帝国中央軍事大学',				'Imperial Central Military Academy',		],		
+	'103_School' :	['皇家猎兵学院',			'王立猟兵学院',					'Royal Hunter\'s College',					],		
+	'104_School' :	['帝国中央军事院校',		'帝国中央軍事大学',				'Imperial Central Military Academy',		],		//02		
 	
 	// 战斗风格
-	'100_Style' :	['跟随',					'跟隨',						'Follower',									'追従',							],
-	'101_Style' :	['跟屁虫',					'跟屁蟲',					'Follower',									'密着',							],
-	'102_Style' :	['冲锋',					'衝鋒',						'Charger',									'突撃',							],
-	'103_Style' :	['狙击手',					'狙擊手',					'Sniper',									'狙撃手',						],
-	'104_Style' :	['保守',					'保守',						'Conservative',								'保守的',						],
+	'100_Style' :	['跟随',					'追従',							'Follower',									],		
+	'101_Style' :	['跟屁虫',					'密着',							'Follower',									],		
+	'102_Style' :	['冲锋',					'突撃',							'Charger',									],		
+	'103_Style' :	['狙击手',					'狙撃手',						'Sniper',									],		
+	'104_Style' :	['保守',					'保守的',						'Conservative',								],		//02		
 	
 	// 喜好物品
-	'100_Like' :	['奖章咖啡',				'獎章和咖啡',				'Medals and coffee',						'メダルとコーヒー',				],
-	'101_Like' :	['玩具甜食',				'玩具和甜食',				'Toys and sweets',							'おもちゃと甘い物',				],
-	'102_Like' :	['时尚物品',				'時尚的東西',				'Fashionable items',						'ファッショナブルなもの',		],
-	'103_Like' :	['各式书籍',				'讀書',						'Books',									'読書',							],
-	'104_Like' :	['收藏物品',				'收藏品',					'Collectibles',								'収集品',						],
+	'100_Like' :	['奖章咖啡',				'メダルとコーヒー',				'Medals and coffee',						],		
+	'101_Like' :	['玩具甜食',				'おもちゃと甘い物',				'Toys and sweets',							],		
+	'102_Like' :	['时尚物品',				'ファッショナブルなもの',		'Fashionable items',						],		
+	'103_Like' :	['各式书籍',				'読書',							'Books',									],		
+	'104_Like' :	['收藏物品',				'収集品',						'Collectibles',								],		//02		
 	
 	// 讨厌物品
-	'100_Hate' :	['任意香烟',				'煙',						'Cigarettes',								'タバコ',						],
-	'101_Hate' :	['各种书籍',				'讀書',						'Books',									'読書',							],
-	'102_Hate' :	['老气玩意',				'老氣的東西',				'Old-fashioned items',						'古臭いもの',					],
-	'103_Hate' :	['轻浮事物',				'輕浮的事物',				'Frivolous things',							'軽薄なもの',					],
-	'104_Hate' :	['幼稚东西',				'幼稚的東西',				'Childish items',							'幼稚なもの',					],
+	'100_Hate' :	['任意香烟',				'タバコ',						'Cigarettes',								],		
+	'101_Hate' :	['各种书籍',				'読書',							'Books',									],		
+	'102_Hate' :	['老气玩意',				'古臭いもの',					'Old-fashioned items',						],		
+	'103_Hate' :	['轻浮事物',				'軽薄なもの',					'Frivolous things',							],		
+	'104_Hate' :	['幼稚东西',				'幼稚なもの',					'Childish items',							],		//02		
 	
 	// 礼物列表
-	'0_Gift' :		['口粮包',					'口糧包',					'Ration Pack',								'配給パック',					],
-	'1_Gift' :		['玩偶',					'玩偶',						'Doll',										'人形',							],
-	'2_Gift' :		['甜品',					'甜品',						'Dessert',									'デザート',						],
-	'3_Gift' :		['废旧报纸',				'廢舊報紙',					'Old Newspaper',							'古い新聞紙',					],
-	'4_Gift' :		['书本',					'書本',						'Book',										'本',							],
-	'5_Gift' :		['香烟',					'香菸',						'Cigarette',								'シガレット',					],
-	'6_Gift' :		['酒',						'酒',						'Liquor',									'酒',							],
-	'7_Gift' :		['咖啡',					'咖啡',						'Coffee',									'コーヒー',						],
-	'8_Gift' :		['时尚杂志',				'時尚雜誌',					'Fashion Magazine',							'ファッション誌',				],
-	'9_Gift' :		['漂亮衣服',				'漂亮衣服',					'Pretty Clothes',							'綺麗なお洋服',					],
-	'10_Gift' :		['弹壳',					'彈殼',						'Bullet Shell',								'薬莢',							],
-	'11_Gift' :		['唱片',					'唱片',						'Vinyl',									'レコード',						],
-	'12_Gift' :		['量产勋章',				'量產勳章',					'Mass-Produced Medal',						'量産メダル',					],
-	'13_Gift' :		['标准勋章',				'標準勳章',					'Standard Medal',							'制式メダル',					],
-	'14_Gift' :		['英雄勋章',				'英雄勳章',					'Hero Medal',								'英雄メダル',					],
-	'15_Gift' :		['干粮',					'乾糧',						'Field Rations',							'携行食',						],
-	'16_Gift' :		['营养膏',					'營養膏',					'Nutrition Paste',							'栄養クリーム',					],
-	'17_Gift' :		['便当',					'便當',						'Bento',									'お弁当',						],
-	'18_Gift' :		['可乐',					'可樂',						'Coke',										'コーラ',						],
-	'19_Gift' :		['罐头',					'罐頭',						'Canned food',								'缶詰',							],
-	'20_Gift' :		['压缩饼干',				'壓縮餅乾',					'Hardtack',									'圧縮ビスケット',				],
-	'30_Gift' :		['自制咖啡',				'自製咖啡',					'Homemade Coffee',							'自家製コーヒー',				],
-	'31_Gift' :		['手作饼干',				'手作餅乾',					'Homemade Biscuit',							'手作りビスケット',				],
-	'32_Gift' :		['首饰',					'首飾',						'Jewelry',									'装身具',						],
-	'33_Gift' :		['小说草稿',				'小說草稿',					'Novel Draft',								'小説の下書き',					],
-	'34_Gift' :		['旧奖章',					'舊獎章',					'Old Medal',								'古いメダル',					],
-	'35_Gift' :		['红茶',					'紅茶',						'Black Tea',								'紅茶',							],
-	'36_Gift' :		['香水',					'香水',						'Perfume',									'香水',							],
-	'37_Gift' :		['哲学巨著',				'哲學巨著',					'Philosophical masterpiece',				'哲学傑作',						],
-	'38_Gift' :		['子弹花',					'子彈花',					'Flowers of bullets',						'弾丸の花',						],
-	'99_Gift' :		['占位符',					'佔位符',					'Placeholder',								'プレースホルダー',				],
+	'0_Gift' :		['口粮包',					'配給パック',					'Ration Pack',								],		
+	'1_Gift' :		['玩偶',					'人形',							'Doll',										],		
+	'2_Gift' :		['甜品',					'デザート',						'Dessert',									],		
+	'3_Gift' :		['废旧报纸',				'古い新聞紙',					'Old Newspaper',							],		
+	'4_Gift' :		['书本',					'本',							'Book',										],		
+	'5_Gift' :		['香烟',					'シガレット',					'Cigarette',								],		
+	'6_Gift' :		['酒',						'酒',							'Liquor',									],		
+	'7_Gift' :		['咖啡',					'コーヒー',						'Coffee',									],		
+	'8_Gift' :		['时尚杂志',				'ファッション誌',				'Fashion Magazine',							],		
+	'9_Gift' :		['漂亮衣服',				'綺麗なお洋服',					'Pretty Clothes',							],		
+	'10_Gift' :		['弹壳',					'薬莢',							'Bullet Shell',								],		
+	'11_Gift' :		['唱片',					'レコード',						'Vinyl',									],		
+	'12_Gift' :		['量产勋章',				'量産メダル',					'Mass-Produced Medal',						],		
+	'13_Gift' :		['标准勋章',				'制式メダル',					'Standard Medal',							],		
+	'14_Gift' :		['英雄勋章',				'英雄メダル',					'Hero Medal',								],		
+	'15_Gift' :		['干粮',					'携行食',						'Field Rations',							],		
+	'16_Gift' :		['营养膏',					'栄養クリーム',					'Nutrition Paste',							],		
+	'17_Gift' :		['便当',					'お弁当',						'Bento',									],		
+	'18_Gift' :		['可乐',					'コーラ',						'Coke',										],		
+	'19_Gift' :		['罐头',					'缶詰',							'Canned food',								],		
+	'20_Gift' :		['压缩饼干',				'圧縮ビスケット',				'Hardtack',									],		
+	'30_Gift' :		['自制咖啡',				'自家製コーヒー',				'Homemade Coffee',							],		
+	'31_Gift' :		['手作饼干',				'手作りビスケット',				'Homemade Biscuit',							],		
+	'32_Gift' :		['首饰',					'装身具',						'Jewelry',									],		
+	'33_Gift' :		['小说草稿',				'小説の下書き',					'Novel Draft',								],		
+	'34_Gift' :		['旧奖章',					'古いメダル',					'Old Medal',								],		
+	'35_Gift' :		['红茶',					'紅茶',							'Black Tea',								],		
+	'36_Gift' :		['香水',					'香水',							'Perfume',									],		
+	'37_Gift' :		['哲学巨著',				'哲学傑作',						'Philosophical masterpiece',				],		
+	'38_Gift' :		['子弹花',					'弾丸の花',						'Flowers of bullets',						],		
+	'99_Gift' :		['占位符',					'プレースホルダー',				'Placeholder',								],		//02		
 	
 };
 
 // 文本描述
 let DescriptionList = {
 	
-	100 : [/*'玛　丽',			*/'成绩优异的军校毕业生, 与人相处时融洽温和, 但是在涉及原则的问题上毫不妥协',					'成績優異的軍校畢業生, 與人相處時融洽溫和, 但在原則問題上毫不妥協',		'A top student who graduated with honors, Amiable and gentle in social interactions, yet unyielding on matters of principle',		'成績優秀な軍学校卒業生, 他人に接するときは機転が利いて穏やかだが, 基本的に決して妥協しない',		],		
-	101 : [/*'库罗库',			*/'充满服从性的训练兵, 温和软弱待人友善',														'充滿服從性的訓練兵, 溫和軟弱, 待人友善',								'An obedient soldier, gentle and kind in interpersonal relationships',																'とても従順な訓練兵, 温和で弱気, 親しみやすい',														],		
-	102 : [/*'桑/San',			*/'大无畏的机甲驾驶员, 热情大方, 行事冲动(他尚未完成军校课程, 处于肄业状态)',					'大無畏的機甲駕駛員, 熱情大方, 行事有些衝動(肄业)',						'A fearless mecha pilot, enthusiastic and generous, acting a little impulsively(Dropout)',											'恐れ知らずのパイロット, 情熱的で大らかだが少々衝動的(中退)',										],		
-	103 : [/*'赭石色',			*/'循规蹈矩的士兵, 性格理性冷静不爱说话',														'循規蹈矩的士兵, 理性冷靜, 不愛說話',									'A well-behaved soldier, rational and calm, not talkative',																			'規律に忠実な兵士, 冷静沈着で口数が少ない',															],		
-	104 : [/*'克莱尔',			*/'饱经战斗的士兵, 成熟而稳重, 却又喜欢开玩笑, 在战场上的时候是值得依靠的人',					'飽經戰鬥的士兵, 成熟而穩重, 卻又喜歡開玩笑',							'A battle-hardened soldier, mature, and stable, but likes to joke',																	'戦闘慣れした兵士, 大人びていて穏やかだが, 冗談が好きな一面もある',									],		//03		
+	100 : [/*'玛　丽',			*/'成绩优异的军校毕业生, 与人相处时融洽温和, 但是在涉及原则的问题上毫不妥协',					'成績優秀な軍学校卒業生, 他人に接するときは機転が利いて穏やかだが, 基本的に決して妥協しない',																	'A top student who graduated with honors, Amiable and gentle in social interactions, yet unyielding on matters of principle',																					],		
+	101 : [/*'库罗库',			*/'充满服从性的训练兵, 温和软弱待人友善',														'とても従順な訓練兵, 温和で弱気, 親しみやすい',																													'An obedient soldier, gentle and kind in interpersonal relationships',																																			],		
+	102 : [/*'桑/San',			*/'大无畏的机甲驾驶员, 热情大方, 行事冲动(他尚未完成军校课程, 处于肄业状态)',					'恐れ知らずのパイロット, 情熱的で大らかだが少々衝動的(中退)',																									'A fearless mecha pilot, enthusiastic and generous, acting a little impulsively(Dropout)',																														],		
+	103 : [/*'赭石色',			*/'循规蹈矩的士兵, 性格理性冷静不爱说话',														'規律に忠実な兵士, 冷静沈着で口数が少ない',																														'A well-behaved soldier, rational and calm, not talkative',																																						],		
+	104 : [/*'克莱尔',			*/'饱经战斗的士兵, 成熟而稳重, 却又喜欢开玩笑, 在战场上的时候是值得依靠的人',					'戦闘慣れした兵士, 大人びていて穏やかだが, 冗談が好きな一面もある',																								'A battle-hardened soldier, mature, and stable, but likes to joke',																																				],		//03		
 	
-	301 : [/*'标准作战单元A',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
-	302 : [/*'标准作战单元B',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
-	303 : [/*'高速·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
-	304 : [/*'火力·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		
-	305 : [/*'重型·作战单元',	*/'普通的协同作战单元',																			'普通的協同作戰單元',													'A regular Combat Support Unit',																									'通常の協同戦闘ユニット',																			],		//03		
+	301 : [/*'标准作战单元A',	*/'普通的协同作战单元',																			'通常の協同戦闘ユニット',																																		'A regular Combat Support Unit',																																												],		
+	302 : [/*'标准作战单元B',	*/'普通的协同作战单元',																			'通常の協同戦闘ユニット',																																		'A regular Combat Support Unit',																																												],		
+	303 : [/*'高速·作战单元',	*/'普通的协同作战单元',																			'通常の協同戦闘ユニット',																																		'A regular Combat Support Unit',																																												],		
+	304 : [/*'火力·作战单元',	*/'普通的协同作战单元',																			'通常の協同戦闘ユニット',																																		'A regular Combat Support Unit',																																												],		
+	305 : [/*'重型·作战单元',	*/'普通的协同作战单元',																			'通常の協同戦闘ユニット',																																		'A regular Combat Support Unit',																																												],		//03		
 	
-	1 :   [/*'防御',			*/'较为保守的指令, 也会尝试寻敌发动攻击, 但敌人要靠的较近的时候才会选择近战',					'-',																	'-',																																'-',																								],		
-	2 :   [/*'歼敌',			*/'相对主动的指令, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高 ',					'-',																	'-',																																'-',																								],		
-	3 :   [/*'跟随',			*/'如果跟随的目标进行防守或收缩, 则自己也进行防守或收缩, 与防御指令类似 ',						'-',																	'-',																																'-',																								],		
-	4 :   [/*'死守',			*/'只有当敌人靠得很近才会选择近战, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',		'-',																	'-',																																'-',																								],		
-	5 :   [/*'冲锋',			*/'会非常积极的与敌人进行肉搏战, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高',		'-',																	'-',																																'-',																								],		
-	6 :   [/*'紧随',			*/'与跟随的对象防守同一个方向, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',			'-',																	'-',																																'-',																								],		//03		
+	1 :   [/*'防御',			*/'较为保守的指令, 也会尝试寻敌发动攻击, 但敌人要靠的较近的时候才会选择近战',					'保守的なコマンドでは、敵を探して攻撃を試みることもありますが、敵は近いうちに接近戦を選択する必要があります',													'More conservative commands may also attempt to locate enemies and launch attacks, but close combat will only be chosen when the enemy is close to them',														],		
+	2 :   [/*'歼敌',			*/'相对主动的指令, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高 ',					'積極的な指令に対して索敵範囲が広いため、敵を発見しやすく、積極的に出撃する傾向も高い',																			'Relatively proactive commands have a wider range of enemy reconnaissance, making it easier to detect enemies and have a higher tendency to take the initiative to attack',										],		
+	3 :   [/*'跟随',			*/'如果跟随的目标进行防守或收缩, 则自己也进行防守或收缩, 与防御指令类似 ',						'追従する目標が守備や収縮を行うと、自分も守備や収縮を行い、防御指令と類似している',																				'If the target being followed is defending or contracting, then one should also defend or contract themselves, similar to defensive commands',																	],		
+	4 :   [/*'死守',			*/'只有当敌人靠得很近才会选择近战, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',		'敵が近くに寄りかかってこそ接近戦を選択することができ、大量のダメージを受けてから回避戦防御する時間は非常に短く、すぐに戦闘に投入され続けることができる',		'Only when the enemy is very close will they choose melee combat. After receiving a lot of damage, the time for avoiding and defending is very short, and they will quickly continue to engage in combat',		],		
+	5 :   [/*'冲锋',			*/'会非常积极的与敌人进行肉搏战, 索敌范围更大, 所以更加容易发现敌人, 主动出击倾向也更高',		'非常に積極的に敵と肉弾戦を行い、索敵範囲が広いため、敵を発見しやすく、自発的に出撃する傾向も高い',																'Will actively engage in hand to hand combat with enemies, with a wider range of targets, making it easier to detect enemies and a higher tendency to take the initiative to attack',							],		
+	6 :   [/*'紧随',			*/'与跟随的对象防守同一个方向, 受到大量伤害后避战防御的时间非常短, 会很快继续投入战斗',			'追従する相手と同じ方向を守り、大量のダメージを受けてから回避戦防御する時間は非常に短く、すぐに戦闘に投入されます',												'Defend in the same direction as the following object, and after receiving a large amount of damage, the time for avoiding and defending is very short, and they will quickly continue to engage in combat',	],		//03		
 	
 };
 
@@ -522,43 +527,43 @@ tbodyArray01.forEach(function(item){
 		'" src="../static/image/04_mecha_list/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 角色名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]+'_Name'][0]) +'</td>' }else 
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]+'_Name'][xj2.lang.code]) +'</td>' }else 
 		
 		// ————————
 		
 		// 文本描述
-		if(index === 16){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4]][0] +'</td>' }else 
+		if(index === 16){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4]][xj2.lang.code] +'</td>' }else 
 		
 		// 初始技能 
-		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (item[13] === '-' ? '-' : ItemsNameList[item[13]][0]) +'</td>' }else 
+		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (item[13] === '-' ? '-' : ItemsNameList[item[13]][xj2.lang.code]) +'</td>' }else 
 		
 		// 毕业院校
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (item[14] === '-' ? '-' : ItemsNameList[item[14]+'_School'][0]) +'</td>' }else 
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (item[14] === '-' ? '-' : ItemsNameList[item[14]+'_School'][xj2.lang.code]) +'</td>' }else 
 		
 		// 驾驶机体
 		if(index === 15){ powerTable_tbody_node01 
-		+= '<td style="padding:2px;" alt="'+ (ItemsNameList[item[4]+'_Mecha'][0]) +'">'
+		+= '<td style="padding:2px;" alt="'+ (ItemsNameList[item[4]+'_Mecha'][xj2.lang.code]) +'">'
 		+ '<img loading="lazy" alt="'+ item[15] +'" src="../static/image/04_mecha_list/'+ item[15] +'.png" style="width:48px;height:48px;" /></td>' }else 
 		
 		// ————————
 		
 		// 战斗风格
-		if(index === 17){ powerTable_tbody_node01 += '<td>'+ (item[17] === '-' ? '-' : ItemsNameList[item[17]+'_Style'][0]) +'</td>' }else 
+		if(index === 17){ powerTable_tbody_node01 += '<td>'+ (item[17] === '-' ? '-' : ItemsNameList[item[17]+'_Style'][xj2.lang.code]) +'</td>' }else 
 		
 		// 喜好物品
-		if(index === 22){ powerTable_tbody_node01 += '<td>'+ (item[22] === '-' ? '-' : ItemsNameList[item[22]+'_Like' ][0]) +'</td>' }else 
+		if(index === 22){ powerTable_tbody_node01 += '<td>'+ (item[22] === '-' ? '-' : ItemsNameList[item[22]+'_Like' ][xj2.lang.code]) +'</td>' }else 
 		
 		// 讨厌物品
-		if(index === 23){ powerTable_tbody_node01 += '<td>'+ (item[23] === '-' ? '-' : ItemsNameList[item[23]+'_Hate' ][0]) +'</td>' }else 
+		if(index === 23){ powerTable_tbody_node01 += '<td>'+ (item[23] === '-' ? '-' : ItemsNameList[item[23]+'_Hate' ][xj2.lang.code]) +'</td>' }else 
 		
 		// 作战指令
 		if(index === 18 || index === 19 || index === 20 || index === 21){ powerTable_tbody_node01 
-		+= '<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return ItemsNameList[ele][0] }).join('<br />')) +'</td>' }else 
+		+= '<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return ItemsNameList[ele][xj2.lang.code] }).join('<br />')) +'</td>' }else 
 		
 		// 最爱礼物 / 嫌弃礼物 / 接受礼物
 		if(index === 24 || index === 25 || index === 26){ powerTable_tbody_node01 += 
-		'<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return '<span alt="'+ ItemsNameList[ele+'_Gift'][0] +'">'+
-		'<img loading="lazy" alt="'+ ItemsNameList[ele+'_Gift'][0] +'" src="../static/image/11_role_loyal/'+ ele +'.png" style="width:28px;height:28px;" /></span>' }).join('')) +'</td>' }else 
+		'<td>'+ (data === '-' ? '-' : data.split('|').map(function(ele){ return '<span alt="'+ ItemsNameList[ele+'_Gift'][xj2.lang.code] +'">'+
+		'<img loading="lazy" alt="'+ ItemsNameList[ele+'_Gift'][xj2.lang.code] +'" src="../static/image/11_role_loyal/'+ ele +'.png" style="width:28px;height:28px;" /></span>' }).join('')) +'</td>' }else 
 		
 		// ————————
 		
@@ -572,7 +577,7 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
 
 // ---------------------------------------------
 
@@ -589,7 +594,7 @@ tbodyArray02.forEach(function(item){
 	// 遍历出td
 	item.forEach(function(data, index){
 		
-		if(index === 9){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionList[item[3]][0] +'</td>' }else 
+		if(index === 9){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionList[item[3]][xj2.lang.code] +'</td>' }else 
 		
 		if(index !== 0){ powerTable_tbody_node02 += '<td style="height:40px;">'+ data +'</td>' };
 		
@@ -600,7 +605,7 @@ tbodyArray02.forEach(function(item){
 	
 });
 $('#powerTable02 tbody').html(powerTable_tbody_node02);
-buildPowerTable('powerTable02');
+xj2._buildPowerTable('powerTable02');
 
 // ---------------------------------------------
 
@@ -637,6 +642,8 @@ $(window).on('keyup', function(event){
 		if(event.key === '2'){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') };		// 2 / 小键盘或数字键盘都行
 	};
 });
+
+})();
 </script>
 
 
@@ -647,7 +654,7 @@ $(window).on('keyup', function(event){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -669,7 +676,7 @@ $(window).on('keyup', function(event){
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

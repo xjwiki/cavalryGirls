@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>问题合集</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>问题合集</span><small>(疑难杂症)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.问题合集); $('#pub_headText > a > small').text(xj2.i18n.疑难杂症);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -130,11 +133,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	02. Mod 保存的路径位置在哪里? <br />
-	<code>安装 Steam 的文件夹\Steam\steamapps\workshop\content\2055050</code>; <br />
+	<span class="code">安装 Steam 的文件夹\Steam\steamapps\workshop\content\2055050</span>; <br />
 </p>
 <p>
 	03. 存档文件的路径位置在哪里? <br />
-	<code>安装 Steam 的文件夹\Steam\steamapps\common\Cavalry Girls\CavalryGirls_Data\Save</code>; <br />
+	<span class="code">安装 Steam 的文件夹\Steam\steamapps\common\Cavalry Girls\CavalryGirls_Data\Save</span>; <br />
 </p>
 
 <hr />
@@ -173,7 +176,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	07. 脑负荷满了还能使用技能吗? <br />
-	答: 可以, 脑负荷的最大值是 <code>135</code>, 在达到这个上限之后, 继续使用技能也不会增加脑负荷了, 就相当于是没有成本, 所以随便用吧; <br /> 
+	答: 可以, 脑负荷的最大值是 <span class="code">135</span>, 在达到这个上限之后, 继续使用技能也不会增加脑负荷了, 就相当于是没有成本, 所以随便用吧; <br /> 
 </p>
 <p>
 	08. 武器为什么会出现自动换弹? <br />
@@ -181,7 +184,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	09. 怎样才能增加战场出战人数? <br />
-	答: Lv3 的保守思潮奖励, 和赭石色的 Lv11 忠诚奖励, 都可让出战人数 <code>+1</code>, LV3 的激进思潮奖励还可让作战单元的出战上限 <code>+1</code>; <br /> 
+	答: Lv3 的保守思潮奖励, 和赭石色的 Lv11 忠诚奖励, 都可让出战人数 <span class="code">+1</span>, LV3 的激进思潮奖励还可让作战单元的出战上限 <span class="code">+1</span>; <br /> 
 </p>
 <p>
 	10. 有办法跳过一些无聊战斗吗? <br />
@@ -192,11 +195,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>
 	11. 为什么会感觉射击间隔偏高? <br />
-	答: 武器的射击间隔其实受限于屏幕刷新率, 例如你的屏幕刷新率是 <code>60HZ</code> , 那么极限就是每秒射出 <code>60</code> 发子弹, 无法更快了, 如果你的机器性能较差, 游戏帧数甚至低于屏幕刷新率, 那么追求射击间隔的极限对你来讲就没有意义了, 当前游戏的最小射击间隔被设定为 <code>0.002</code> 秒, 也就是 <code>20</code> 毫秒可射出 <code>1</code> 发子弹, 既 <code>1</code> 秒可以射出 <code>500</code> 发子弹, 但大前提是你的机器真能达到每秒 <code>500</code> 帧; <br /> 
+	答: 武器的射击间隔其实受限于屏幕刷新率, 例如你的屏幕刷新率是 <span class="code">60HZ</span> , 那么极限就是每秒射出 <span class="code">60</span> 发子弹, 无法更快了, 如果你的机器性能较差, 游戏帧数甚至低于屏幕刷新率, 那么追求射击间隔的极限对你来讲就没有意义了, 当前游戏的最小射击间隔被设定为 <span class="code">0.002</span> 秒, 也就是 <span class="code">20</span> 毫秒可射出 <span class="code">1</span> 发子弹, 既 <span class="code">1</span> 秒可以射出 <span class="code">500</span> 发子弹, 但大前提是你的机器真能达到每秒 <span class="code">500</span> 帧; <br /> 
 </p>
 <p>
 	12. 如何在战场改变操控的机体? <br />
-	答: 在剧情模式和无尽模式下, 如果战场上有两台主力机体, 则按 <code>Tab</code> 键进入战略界面, 然后点击机体的"详情"按钮, 就可以切换操控模式, 既可以把机体委托给 AI, 也可以接管 AI 操控的机体, 但在挑战模式下, 就算战场上有两台主力机体, 你也只操作自己的机体, 虽然能给队友下达指令, 但无法切换操控模式, 而在生存模式和潜入模式下, 由于战场就只有一台机体, 所以只能手操, 无法委托给 AI; <br /> 
+	答: 在剧情模式和无尽模式下, 如果战场上有两台主力机体, 则按 <span class="code">Tab</span> 键进入战略界面, 然后点击机体的"详情"按钮, 就可以切换操控模式, 既可以把机体委托给 AI, 也可以接管 AI 操控的机体, 但在挑战模式下, 就算战场上有两台主力机体, 你也只操作自己的机体, 虽然能给队友下达指令, 但无法切换操控模式, 而在生存模式和潜入模式下, 由于战场就只有一台机体, 所以只能手操, 无法委托给 AI; <br /> 
 </p>
 
 <hr />
@@ -208,11 +211,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>
 	01. 怎样判断思潮数值是否满了? <br />
-	答: 当思潮满值时, 文本字体会被加粗, 值得一提的是, 思潮的范围介于 <code>-25 ~ +30</code> 之间, 但最高等级的奖励并不需要满值才能获得; <br /> 
+	答: 当思潮满值时, 文本字体会被加粗, 值得一提的是, 思潮的范围介于 <span class="code">-25 ~ +30</span> 之间, 但最高等级的奖励并不需要满值才能获得; <br /> 
 </p>
 <p>
 	02. 都有什么能改变思潮的方法? <br />
-	答: 在休息室看电视, 在议会室购入书籍并阅读, 在公共休息区找驾驶员聊天(聊对战争的看法, 四个驾驶员各加一种思潮), 让玛丽去处理跟叛军相关的外围阵地(回来后反思即可四项思潮 <code>+1</code>), 一些特殊事件的选项也可改变思潮(根据是否配合影响思潮趋向保守或激进); <br /> 
+	答: 在休息室看电视, 在议会室购入书籍并阅读, 在公共休息区找驾驶员聊天(聊对战争的看法, 四个驾驶员各加一种思潮), 让玛丽去处理跟叛军相关的外围阵地(回来后反思即可四项思潮 <span class="code">+1</span>), 一些特殊事件的选项也可改变思潮(根据是否配合影响思潮趋向保守或激进); <br /> 
 </p>
 <p>
 	03. 哪些思潮方向的收益会更好? <br />
@@ -220,14 +223,14 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	04. 思潮的奖励仅对玛丽有效吗? <br />
-	答: 思潮的奖励对所有驾驶员都会生效, 当思潮等级下降, 奖励将会无效化, 唯一的例外, 是理智思潮的 LV3 和 LV4 奖励, 这两个奖励总共可以提升驾驶员 <code>50%</code> 的能力上限, 如果当前驾驶员的能力已经超出原本的上限了, 当奖励失效时, 能力会保持原状, 并不会下降; <br /> 
+	答: 思潮的奖励对所有驾驶员都会生效, 当思潮等级下降, 奖励将会无效化, 唯一的例外, 是理智思潮的 LV3 和 LV4 奖励, 这两个奖励总共可以提升驾驶员 <span class="code">50%</span> 的能力上限, 如果当前驾驶员的能力已经超出原本的上限了, 当奖励失效时, 能力会保持原状, 并不会下降; <br /> 
 </p>
 
 <p>————</p>
 
 <p>
 	05. 如何提升整备阶段的行动点? <br />
-	答: 在思潮的奖励结果中, Lv2 的理智 / Lv3 的博爱 / Lv4 的激进, 都可以 <code>+1</code> 行动点, 所以极限情况下的行动点总数为 <code>2+3=5</code>; <br /> 
+	答: 在思潮的奖励结果中, Lv2 的理智 / Lv3 的博爱 / Lv4 的激进, 都可以 <span class="code">+1</span> 行动点, 所以极限情况下的行动点总数为 <span class="code">2+3=5</span>; <br /> 
 </p>
 <p>
 	06. 如何提升驾驶员的各项属性? <br />
@@ -235,11 +238,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	07. 驾驶员脑负荷太高了会怎样? <br />
-	答: 当驾驶员的脑负荷 <code>>= 100</code> 时将无法参加大门的防守战, 也无被委派去执行任何外勤任务, 甚至假日安排的各种任务也无法参加; <br /> 
+	答: 当驾驶员的脑负荷 <span class="code">>= 100</span> 时将无法参加大门的防守战, 也无被委派去执行任何外勤任务, 甚至假日安排的各种任务也无法参加; <br /> 
 </p>
 <p>
 	08. 驾驶员的脑负荷该如何降低? <br />
-	答: 在整备人员界面送礼, 使用通行卡送驾驶员进城娱乐, 于公共休息室对话并选择聊点开心的事(<code>-35</code> 脑负荷), 值得一提的是, 如果角色的忠诚度已经可以晋级了, 但你还没有回复他以触发奖励事件, 此时再增加忠诚度, 则溢出的忠诚度会 <code>×5</code> 换算成降低的脑负荷; <br /> 
+	答: 在整备人员界面送礼, 使用通行卡送驾驶员进城娱乐, 于公共休息室对话并选择聊点开心的事(<span class="code">-35</span> 脑负荷), 值得一提的是, 如果角色的忠诚度已经可以晋级了, 但你还没有回复他以触发奖励事件, 此时再增加忠诚度, 则溢出的忠诚度会 <span class="code">×5</span> 换算成降低的脑负荷; <br /> 
 </p>
 <p>
 	09. 家具从背包拉到宿舍没反应? <br />
@@ -247,18 +250,18 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	10. 怎样能查看拥有的所有物品? <br />
-	答: 在整备界面, 点击左上角的"田"按钮(介于[?]按钮和[BUG]按钮之间), 可以查看当前你拥有的所有物品(包括城市通行卡和书籍), 如果你想要某些物品(例如某本书籍), 可将物品拖到物品栏右下角的"回收"位置, 既可实现回收, 可以得到物品 <code>50%</code> 的价格(向下取整); <br />
+	答: 在整备界面, 点击左上角的"田"按钮(介于[?]按钮和[BUG]按钮之间), 可以查看当前你拥有的所有物品(包括城市通行卡和书籍), 如果你想要某些物品(例如某本书籍), 可将物品拖到物品栏右下角的"回收"位置, 既可实现回收, 可以得到物品 <span class="code">50%</span> 的价格(向下取整); <br />
 </p>
 
 <p>————</p>
 
 <p>
 	11. 怎样才能升级武器以及配件? <br />
-	答: 在剧情模式下, 升级装备需要等到工坊开启(要等到第 <code>16</code> 天才开启), 右键需要升级的装备, 放入需要的材料, 就能进行升级了; <br />
+	答: 在剧情模式下, 升级装备需要等到工坊开启(要等到第 <span class="code">16</span> 天才开启), 右键需要升级的装备, 放入需要的材料, 就能进行升级了; <br />
 </p>
 <p>
 	12. 怎样才能修复武器的耐久值? <br />
-	答: 在剧情模式下, 修复武器也需要等工坊开启(要等到第 <code>16</code> 天才开启), 修复可以用资金, 也可以用武器或配件作为修复的原材料; <br />
+	答: 在剧情模式下, 修复武器也需要等工坊开启(要等到第 <span class="code">16</span> 天才开启), 修复可以用资金, 也可以用武器或配件作为修复的原材料; <br />
 </p>
 <p>
 	13. 武器耐久度影响收回价格吗? <br />
@@ -285,7 +288,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	18. 无人执勤而防守战无法开始? <br />
-	答: 由于作战单元和机枪炮塔不能单独出战, 所以你起码需要在正面战场派出一台主力机体, 如果你的主力机体全部出外勤了, 可在整备机体的界面将机体快速召回, 这需要花 <code>100</code> 资金, 当玛丽的思潮为保守 LV3 时, 玛丽必须出战, 他的召回费用会降低为 <code>10</code> 资金; <br />
+	答: 由于作战单元和机枪炮塔不能单独出战, 所以你起码需要在正面战场派出一台主力机体, 如果你的主力机体全部出外勤了, 可在整备机体的界面将机体快速召回, 这需要花 <span class="code">100</span> 资金, 当玛丽的思潮为保守 LV3 时, 玛丽必须出战, 他的召回费用会降低为 <span class="code">10</span> 资金; <br />
+</p>
+<p>
+	19. 读档能改变采购部的物品吗? <br />
+	答: 不能, 采购部刷出物品的逻辑是, 从物品池中, 从前往后筛选出符合条件的物品, 而物品池里的物品的顺序是确定的, 所以读档并不会改变采购部刷出的结果, 唯一的一种例外, 是解锁了新的物品, 此时物品池里的顺序有所变化, 也许刷新的时候会出现新解锁的内容; <br />
+</p>
+<p>
+	20. 读档能改变武器融合结果吗? <br />
+	答: 不能, 融合结果跟天数, 以及武器与材料的价值之和(不计配件)有关, 想让结果发生变化, 可以换一天融合, 或让价值相等的其他武器先融合, 也可以尝试改变融合顺序, 例如重型狙先融合轻型狙再融合重机枪, 尽管两次融合的武器和材料的总价不同, 但不会影响随机数的结果, 不过改变融合的先后顺序, 融合结果的概率分配会发生变化, 也就是说, 虽然相关随机数没有变化, 但结果却可能会不一样; <br />
 </p>
 
 <hr />
@@ -297,11 +308,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>
 	01. 为什么会有那么多存档文件? <br />
-	答: 在剧情模式中, 故事难度和简单难度都有回档功能, 在整备界面点击顶部的"回档"按钮, 即可回到 <code>1/3/9</code> 天前, 游戏也会在符合某些条件时自动存档, 这样当存档出错的时候, 系统就会尝试读取早先的版本, 这样可以尽量降低烂档风险, 也因此你才会在存档文件夹中见到许多额外的文件, 你当然也可以手动删除一些多余的存档, 不过在操作之前, 请务必先将文件备份, 以免操作失误导致数据丢失; <br />
+	答: 在剧情模式中, 故事难度和简单难度都有回档功能, 在整备界面点击顶部的"回档"按钮, 即可回到 <span class="code">1/3/9</span> 天前, 游戏也会在符合某些条件时自动存档, 这样当存档出错的时候, 系统就会尝试读取早先的版本, 这样可以尽量降低烂档风险, 也因此你才会在存档文件夹中见到许多额外的文件, 你当然也可以手动删除一些多余的存档, 不过在操作之前, 请务必先将文件备份, 以免操作失误导致数据丢失; <br />
 </p>
 <p>
 	02. 有什么办法可修改存档文件? <br />
-	答: 没有办法, 铁骑少女的存档文件是经过加密的, 这对外行人来讲几乎没有修改的可能, 之所以不采用明文, 主要是因为过去有不少玩家胡乱修改存档, 出了问题就找开发团队, 有的态度还很差, 大家都深受其扰, 为了避免再次出现这种情况, 只能抬高门槛, 如果你懂编程, 了解 <code>IL2CPP</code> 技术, 那自然就能解决问题, 网上也流传着一些第三方的 CE 工具, 或许有用, 但也存在烂档的可能, 请务必慎重; <br />
+	答: 没有办法, 铁骑少女的存档文件是经过加密的, 这对外行人来讲几乎没有修改的可能, 之所以不采用明文, 主要是因为过去有不少玩家胡乱修改存档, 出了问题就找开发团队, 有的态度还很差, 大家都深受其扰, 为了避免再次出现这种情况, 只能抬高门槛, 如果你懂编程, 了解 <span class="code">IL2CPP</span> 技术, 那自然就能解决问题, 网上也流传着一些第三方的 CE 工具, 或许有用, 但也存在烂档的可能, 请务必慎重; <br />
 </p>
 <p>
 	03. 装卸模组会影响现有存档吗? <br />
@@ -321,11 +332,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 </p>
 <p>
 	07. 故事难度下无法添加某物品? <br />
-	在故事难度下, 点击位于整备界面左上角的"添加物品"按钮, 在输入栏搜索相关字符后, 即可添加想要的物品, 但是输入栏只能匹配当前设定的语言, 例如简体中文环境下, 输入栏就只能匹配 <code>散弹枪</code>, 而不会响应 <code>散彈槍</code> / <code>散弾銃</code> / <code>Shotgun</code> 或ID <code>10002</code>, 此外物品是否可被获取, 还取决于物品的 <code>DebugHide</code> 属性, 如果写入了相关字符但没弹出物品列表, 那大概率就是该属性被设置为了 <code>1</code>; <br />
+	在故事难度下, 点击位于整备界面左上角的"添加物品"按钮, 在输入栏搜索相关字符后, 即可添加想要的物品, 但是输入栏只能匹配当前设定的语言, 例如简体中文环境下, 输入栏就只能匹配 <span class="code">散弹枪</span>, 而不会响应 <span class="code">散彈槍</span> / <span class="code">散弾銃</span> / <span class="code">Shotgun</span> 或ID <span class="code">10002</span>, 此外物品是否可被获取, 还取决于物品的 <span class="code">DebugHide</span> 属性, 如果写入了相关字符但没弹出物品列表, 那大概率就是该属性被设置为了 <span class="code">1</span>; <br />
 </p>
 <p>
 	08. 游戏有什么能用的快捷按键? <br />
-	以下是游戏默认快捷键的列表, 你可以在任何时候, 按下 ESC 弹出控制面板, 然后点击"手柄"图标按钮, 自定义快捷键, 值得一提的是, 你还可以在"游戏性设置"的菜单中, 勾选"自动爆破建筑", 这样当你靠近建筑或物资箱的时候, 就会自动拾取, 而不需要按住快捷键 <code>F</code>, 实际上在潜入模式中, 暗杀的交互快捷键也是 <code>F</code>, 你最好是将这个功能开启, 否则一边移动一边还要按住快捷键, 操作难度会很大: <br />
+	以下是游戏默认快捷键的列表, 你可以在任何时候, 按下 ESC 弹出控制面板, 然后点击"手柄"图标按钮, 自定义快捷键, 值得一提的是, 你还可以在"游戏性设置"的菜单中, 勾选"自动爆破建筑", 这样当你靠近建筑或物资箱的时候, 就会自动拾取, 而不需要按住快捷键 <span class="code">F</span>, 实际上在潜入模式中, 暗杀的交互快捷键也是 <span class="code">F</span>, 你最好是将这个功能开启, 否则一边移动一边还要按住快捷键, 操作难度会很大: <br />
 </p>
 <table class="table-sm">
 	<thead>
@@ -365,6 +376,12 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
+*/
+
+})();
 </script>
 
 
@@ -375,7 +392,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -397,7 +414,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

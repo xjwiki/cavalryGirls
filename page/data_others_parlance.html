@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>术语提示</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>术语提示</span><small>(解析文本)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.术语提示); $('#pub_headText > a > small').text(xj2.i18n.解析文本);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -124,125 +127,125 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading01">01. 术语解析</h2>
 
-<p>00. 章节概述: 在游戏的整备阶段, 顶部有个问号按钮, 点击即可查看游戏中的名词解析, 本节既是展示那些内容, <code>HintBrief</code> 是名词的顺序, 如果为 <code>N</code>, 就表示不是游戏提供, 而是由 XJ 补充的, <code>Tag</code> 是触发的关键词, 如果某些装备或武器的名称或描述中有匹配的关键词, 那么解析的文本就会在装备详情中展示出来, <code>Weight</code> 是权重, 当关键词匹配到多个对象时, 权重高且顺序靠前的会优先展示;</p>
+<p>00. 章节概述: 在游戏的整备阶段, 顶部有个问号按钮, 点击即可查看游戏中的名词解析, 本节既是展示那些内容, <span class="code">HintBrief</span> 是名词的顺序, 如果为 <span class="code">N</span>, 就表示不是游戏提供, 而是由 XJ 补充的, <span class="code">Tag</span> 是触发的关键词, 如果某些装备或武器的名称或描述中有匹配的关键词, 那么解析的文本就会在装备详情中展示出来, <span class="code">Weight</span> 是权重, 当关键词匹配到多个对象时, 权重高且顺序靠前的会优先展示;</p>
 
 <p>————</p>
 
-<p>01. 属性加成: 装备的所有属性加成, 均为先计算总和, 再乘上原始值, 举例来说, 武器本身自带的穿甲值为 <code>10</code>, 配备 <code>+10%</code> 穿甲值和 <code>+20%</code> 穿甲值的两个配件, 那么武器最终的穿甲值就是 <code>10 × (1 + 10% + 20%) = 13</code>. HintBrief:<code>1</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>01. 属性加成: 装备的所有属性加成, 均为先计算总和, 再乘上原始值, 举例来说, 武器本身自带的穿甲值为 <span class="code">10</span>, 配备 <span class="code">+10%</span> 穿甲值和 <span class="code">+20%</span> 穿甲值的两个配件, 那么武器最终的穿甲值就是 <span class="code">10 × (1 + 10% + 20%) = 13</span>. HintBrief:<span class="code">1</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>02. 队友伤害: 电弧武器/射线武器/近战武器/链锯(机身挂件), 这些武器不会造成友伤, 需要特别注意的是, 动能武器的弹跳流弹对大门是有伤害的(尤其需要警惕高斯狙击步枪), 此外, 所有的爆炸均有友伤, 敌我双方皆是如此. HintBrief:<code>2</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>02. 队友伤害: 电弧武器/射线武器/近战武器/链锯(机身挂件), 这些武器不会造成友伤, 需要特别注意的是, 动能武器的弹跳流弹对大门是有伤害的(尤其需要警惕高斯狙击步枪), 此外, 所有的爆炸均有友伤, 敌我双方皆是如此. HintBrief:<span class="code">2</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>03. 忠诚等级: 在公共休息室开放后, 当驾驶员的忠诚度达到一定的值, 在娱乐室回复他们, 就能触发好感事件, 可提升忠诚等级, 如果未提升忠诚等级, 则忠诚度上限会被锁死, 将无法再提高忠诚度(额外的忠诚度会被转为降压). HintBrief:<code>3</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>————</p>
-
-<p>04. 老化: 在战场上, 武器每次的开火和换弹, 均有概率会降低武器的耐久(开火老化 <code>-1%</code>, 换弹老化 <code>-3%</code>), 当耐久低于 <code>90%</code>, 就有可能产生"哑弹"或"卡壳"的负面效果, 耐久越低, 这些负面效果的出现概率就越高. HintBrief:<code>4</code>, tag:<code>wear rate</code>, Weight:<code>1</code>;</p>
-
-<p>05. 哑弹: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 具体的算法为 <code>(DefaultBlockValue - 武器耐久度 ÷ 100) × 100</code>, 结果向下取整, <code>DefaultBlockValue</code> 默认为 <code>0.6</code>. HintBrief:<code>6</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>06. 卡壳: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 并且还会强制武器立即换弹, 具体的算法为 <code>哑弹率 ÷ BloackFailRate</code>, 结果向下取整, <code>BloackFailRate</code> 默认为 <code>5</code>. HintBrief:<code>7</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>07. 修理: 在工坊开放后, 右键武器既可对武器进行修理, 使用武器为材料进行修理, 效果最好, 使用其他物件为材料, 效果很差, 如果资金充裕, 也可以用资金维修, 细节可查阅 <a href="./data_manage_building.html#heading04">基地部门.html # 04.机体部门</a>. HintBrief:<code>5</code>, tag:<code>repaired|repairing</code>, Weight:<code>0</code>;</p>
+<p>03. 忠诚等级: 在公共休息室开放后, 当驾驶员的忠诚度达到一定的值, 在娱乐室回复他们, 就能触发好感事件, 可提升忠诚等级, 如果未提升忠诚等级, 则忠诚度上限会被锁死, 将无法再提高忠诚度(额外的忠诚度会被转为降压). HintBrief:<span class="code">3</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
 <p>————</p>
 
-<p>08. 异常状态: 特指"燃烧/寒冷/潮湿/高温/麻痹/油腻", 总共六项基础状态, 以及"冻结/融化", 总共两项叠加状态, 基础状态会都会持续一段时间, 如果期间内触发了其他基础状态, 就会造成冻结或融化等叠加状态, 但原本的基础状态就不会再生效了, 机体的"属性抵抗", 能够降低这些状态的持续时间和效果, 机体的"属性免疫", 有概率能无视这些状态的影响. HintBrief:<code>20</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+<p>04. 老化: 在战场上, 武器每次的开火和换弹, 均有概率会降低武器的耐久(开火老化 <span class="code">-1%</span>, 换弹老化 <span class="code">-3%</span>), 当耐久低于 <span class="code">90%</span>, 就有可能产生"哑弹"或"卡壳"的负面效果, 耐久越低, 这些负面效果的出现概率就越高. HintBrief:<span class="code">4</span>, tag:<span class="code">wear rate</span>, Weight:<span class="code">1</span>;</p>
 
-<p>09. 属性伤害: 特指由异常状态或叠加状态所造成的伤害, 一颗子弹能同时造成多种元素效果, 但触发元素效果需要媒介, 动能武器和喷射武器会被护盾挡住(不过投掷物可直接扔进护盾里), 如果打不到敌方机体或被免疫, 元素效果就无法触发, 由于元素伤害是固定值, 后期对敌人影响有限, 所以需要持续的火力触发, 攻击间隔太大或装弹时间过长的武器并不适合. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>05. 哑弹: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 具体的算法为 <span class="code">(DefaultBlockValue - 武器耐久度 ÷ 100) × 100</span>, 结果向下取整, <span class="code">DefaultBlockValue</span> 默认为 <span class="code">0.6</span>. HintBrief:<span class="code">6</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>————</p>
+<p>06. 卡壳: 武器在低耐久度时可能会出现的负面效果, 每次开火时均会判定, 表现为无法射出这轮的子弹, 并且还会强制武器立即换弹, 具体的算法为 <span class="code">哑弹率 ÷ BloackFailRate</span>, 结果向下取整, <span class="code">BloackFailRate</span> 默认为 <span class="code">5</span>. HintBrief:<span class="code">7</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>10. 燃烧: 造成每秒 <code>50</code> 的持续性伤害(玩家机体伤害会翻倍), 时长的算法为 <code>(基础 6.5 秒 + 子弹伤害 ÷ 100) × (1 - 属性抵抗)</code>, 通过喷火器/燃烧炸弹/火焰配件, 都可触发该效果. HintBrief:<code>12</code>, tag:<code>火炎|燃焼|fire|flame|flaming|burning</code>, Weight:<code>3</code>;</p>
-
-<p>11. 寒冷: 造成机体的移动速度和旋转速度 <code>-75%</code>, 时长算法与燃烧相同但基础为 <code>8</code> 秒, 使用寒冰喷雾可直接造成这种状态, 此外用寒冰炸弹或为武器配置冰冻配件也可触发, 冻住带盾敌人并绕后输出也是常见战术. HintBrief:<code>11</code>, tag:<code>冻结|colds</code>, Weight:<code>3</code>;</p>
-
-<p>12. 潮湿: 被子弹击中时受到暴击的概率翻倍, 时长算法与燃烧相同但基础为 <code>10</code> 秒, 在下雨天或某些漏水管道附近, 敌我双方会沾染该状态, 此外使用喷水器或喷水枪(子弹需破甲才行)或水炸弹, 也可给敌人附上该状态. HintBrief:<code>10</code>, tag:<code>湿|wet</code>, Weight:<code>3</code>;</p>
-
-<p>13. 高温: 会导致机体的爆炸抗性 <code>-80%</code>, 时长算法与燃烧相同但基础为 <code>7</code> 秒, 处于"炎热/烈日/暴晒"天气时, 敌我双方会自动沾染该状态, 镭射武器有 <code>45%</code> 概率让敌人附加该状态, 部分配件和融合也可能造成这种状态. HintBrief:<code>13</code>, tag:<code>'',</code>, Weight:<code>3</code>;</p>
-
-<p>14. 麻痹: 会导致护盾被破坏且机体无法开火, 时长算法与燃烧相同但基础为 <code>5</code> 秒, 在地图上的某些漏电管道附近, 敌我双方会自动沾染该状态, 电磁炸弹也可触发, 电弧武器有 <code>75%</code> 概率给敌人附上该状态. HintBrief:<code>14</code>, tag:<code>麻痺|paralyzing</code>, Weight:<code>3</code>;</p>
-
-<p>15. 油腻: 会导致开火速度和装弹速率 <code>-50%</code>, 时长算法与燃烧相同但基础为 <code>10</code> 秒, 在地图上的某些漏油管道附近, 敌我双方会自动沾染该状态, 使用喷油枪(喷射武器)或油炸弹(投掷物), 也可以给敌人附上该状态. HintBrief:<code>15</code>, tag:<code>油|greasy</code>, Weight:<code>3</code>;</p>
+<p>07. 修理: 在工坊开放后, 右键武器既可对武器进行修理, 使用武器为材料进行修理, 效果最好, 使用其他物件为材料, 效果很差, 如果资金充裕, 也可以用资金维修, 细节可查阅 <a href="./data_manage_building.html#heading04">基地部门.html # 04.机体部门</a>. HintBrief:<span class="code">5</span>, tag:<span class="code">repaired|repairing</span>, Weight:<span class="code">0</span>;</p>
 
 <p>————</p>
 
-<p>16. 冻结: 潮湿+寒冷 / 油腻+寒冷, 无法移动和开火(但似乎还可以放技能或丢炸弹), 默认持续 <code>10</code> 秒, 这个负面效果较为实用, 如果你实在不想装备喷水枪和寒冰喷雾, 也可以带上水炸弹和寒冰炸弹, 一同丢出以实现该效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>08. 异常状态: 特指"燃烧/寒冷/潮湿/高温/麻痹/油腻", 总共六项基础状态, 以及"冻结/融化", 总共两项叠加状态, 基础状态会都会持续一段时间, 如果期间内触发了其他基础状态, 就会造成冻结或融化等叠加状态, 但原本的基础状态就不会再生效了, 机体的"属性抵抗", 能够降低这些状态的持续时间和效果, 机体的"属性免疫", 有概率能无视这些状态的影响. HintBrief:<span class="code">20</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
 
-<p>17. 融化: 燃烧+寒冷, 机体穿甲抵抗 <code>-80%</code>, 默认持续 <code>10</code> 秒, 这种状态也被称之为"装甲融化", 是低穿甲武器对付重甲的常用手段, 由于动能武器有燃烧模块和冰冻模块的配件, 同时装备即可, 所以出现率颇高, 也很实用. HintBrief:<code>27</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
-
-<p>18. 蒸发: 潮湿+高温, 造成蒸发爆炸(<code>300</code> 点伤害), 蒸汽会遮蔽视野且爆炸会造成眩晕, 雨天的镭射武器特别容易触发, 高温天气下带喷水器或喷水枪也能触发, 所以是较为常见的叠加效果, 但毕竟伤害较低, 只能说聊胜于无. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>19. 蒸汽: 潮湿+燃烧 / 寒冷+高温, 造成小蒸汽爆炸(<code>600</code> 点伤害) / 造成大蒸汽爆炸(<code>900</code> 点伤害), 蒸汽爆炸会眩晕敌人, 并且产生类似烟雾的蒸汽, 蒸汽会遮蔽视野, AI 无法发现蒸汽中的敌人, 这对敌我双方都会有影响. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>20. 爆燃: 燃烧+高温, 造成火属性小爆炸(<code>100</code> 点伤害), 这种爆炸不会导致机体出现眩晕, 该效果在高温天气下很容易触发, 但伤害非常有限, 是属于看似可怕但其实没什么用处的情况, 伤害结果往往可能还不如放任火焰燃烧. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>21. 爆裂: 燃烧+油腻, 造成火属性大爆炸(<code>100</code> 点伤害), 这种爆炸不会导致机体出现眩晕, 它的范围比爆燃更大, 且会爆炸多次, 还会造成长达 <code>6</code> 秒的焚烧伤害(雷神焚天炮开火自带该效果), 每秒 <code>-30</code> HP(我方会加倍). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>22. 引爆: 高温+油腻 / 麻痹+油腻, 造成范围性多次爆炸, 首次爆炸所造成的伤害为 <code>900</code>, 后续爆炸所造成的伤害为 <code>600</code>, 后续爆炸可能出现多次(大约是 <code>2~3</code> 次), 所以伤害可能大于 <code>900+600=1500</code>, 且爆炸会导致眩晕. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>23. 清晰: 潮湿+油腻, 造成异常状态的无效化, 如果你的目的是杀伤, 那么水和油就只能二选一, 考虑到战场的天气状况是不可控的, 雨天也很常见, 所以油腻效果是众多效果之中最不可考的, 你或许得考虑因地制宜搭配装备了. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>24. 感电: 潮湿+麻痹, 造成电弧小伤害(<code>80</code> 点伤害), 电弧会在少数敌人间跳转(AOE 群伤). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>25. 超导: 寒冷+麻痹, 造成电弧大伤害(<code>80</code> 点伤害), 电弧会在多数敌人间跳转(AOE 群伤). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>26. 超载: 燃烧+麻痹, 造成电磁小爆炸(<code>50</code> 点伤害), 并且小范围内的敌人会获得麻痹效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>27. 雷暴: 高温+麻痹, 造成电磁大爆炸(<code>50</code> 点伤害), 并且大范围内的敌人会获得麻痹效果. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>09. 属性伤害: 特指由异常状态或叠加状态所造成的伤害, 一颗子弹能同时造成多种元素效果, 但触发元素效果需要媒介, 动能武器和喷射武器会被护盾挡住(不过投掷物可直接扔进护盾里), 如果打不到敌方机体或被免疫, 元素效果就无法触发, 由于元素伤害是固定值, 后期对敌人影响有限, 所以需要持续的火力触发, 攻击间隔太大或装弹时间过长的武器并不适合. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
 <p>————</p>
 
-<p>28. 穿甲: 每种子弹都有它的穿甲值, 每个单位都有它的抵抗值, 触发抵抗的概率为: <code>1-(穿甲值÷抵抗值)</code>, 触发抵抗后子弹就只能造成 <code>5%</code> 的伤害. HintBrief:<code>24</code>, tag:<code>'贯通|Armor-piercing|armor penetration|armor piercing|armor-piercing</code>, Weight:<code>2</code>;</p>
+<p>10. 燃烧: 造成每秒 <span class="code">50</span> 的持续性伤害(玩家机体伤害会翻倍), 时长的算法为 <span class="code">(基础 6.5 秒 + 子弹伤害 ÷ 100) × (1 - 属性抵抗)</span>, 通过喷火器/燃烧炸弹/火焰配件, 都可触发该效果. HintBrief:<span class="code">12</span>, tag:<span class="code">火炎|燃焼|fire|flame|flaming|burning</span>, Weight:<span class="code">3</span>;</p>
 
-<p>29. 抵抗: 每一个单位(敌人/自身)都有抵抗值, 可以在属性面板查看, 每一种子弹都有穿甲值, 亦可在武器面板查看, 触发抵抗的概率为 <code>1-(穿甲值÷抵抗值)</code>, 触发抵抗后, 子弹就只能造成 <code>5%</code> 的伤害. HintBrief:<code>16</code>, tag:<code>'resistance|resisted</code>, Weight:<code>2</code>;</p>
+<p>11. 寒冷: 造成机体的移动速度和旋转速度 <span class="code">-75%</span>, 时长算法与燃烧相同但基础为 <span class="code">8</span> 秒, 使用寒冰喷雾可直接造成这种状态, 此外用寒冰炸弹或为武器配置冰冻配件也可触发, 冻住带盾敌人并绕后输出也是常见战术. HintBrief:<span class="code">11</span>, tag:<span class="code">冻结|colds</span>, Weight:<span class="code">3</span>;</p>
 
-<p>30. 击穿: 其他抵抗物件(沙袋/房屋墙壁/外挂装甲)也都有抵抗值(敌人的外挂装甲通常默认为 <code>100</code>, 但仅部分敌人拥有外挂装甲), 触发击穿的概率为 <code>穿甲值÷抵抗值</code>, 如果子弹未击穿, 将会直接消失. HintBrief:<code>17</code>, tag:<code>'penetration|penetrate</code>, Weight:<code>2</code>;</p>
+<p>12. 潮湿: 被子弹击中时受到暴击的概率翻倍, 时长算法与燃烧相同但基础为 <span class="code">10</span> 秒, 在下雨天或某些漏水管道附近, 敌我双方会沾染该状态, 此外使用喷水器或喷水枪(子弹需破甲才行)或水炸弹, 也可给敌人附上该状态. HintBrief:<span class="code">10</span>, tag:<span class="code">湿|wet</span>, Weight:<span class="code">3</span>;</p>
 
-<p>31. 跳弹: 跳弹既子弹从装甲表面擦过, 表现为没有造成任何伤害, 只有蹲距的单位才可能触发跳弹, 基础概率为 <code>15%</code>, 主体强化中的斜面装甲和机体改造中的蹲据防护, 以及克莱尔的 LV12 忠诚度奖励, 都可提升蹲据弹跳率. HintBrief:<code>18</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+<p>13. 高温: 会导致机体的爆炸抗性 <span class="code">-80%</span>, 时长算法与燃烧相同但基础为 <span class="code">7</span> 秒, 处于"炎热/烈日/暴晒"天气时, 敌我双方会自动沾染该状态, 镭射武器有 <span class="code">45%</span> 概率让敌人附加该状态, 部分配件和融合也可能造成这种状态. HintBrief:<span class="code">13</span>, tag:<span class="code">'',</span>, Weight:<span class="code">3</span>;</p>
 
-<p>32. 过穿: 过穿既子弹穿过了机体(会在机体后方继续存在), 表现为只造成 <code>20%</code> 的伤害, 高穿甲武器打低抵抗单位, 过穿的触发概率会更高, 可为武器安装滞留弹降低过穿率. HintBrief:<code>19</code>, tag:<code>'transpiercing|overpenetration|Overpenetration'</code>, Weight:<code>2</code>;</p>
+<p>14. 麻痹: 会导致护盾被破坏且机体无法开火, 时长算法与燃烧相同但基础为 <span class="code">5</span> 秒, 在地图上的某些漏电管道附近, 敌我双方会自动沾染该状态, 电磁炸弹也可触发, 电弧武器有 <span class="code">75%</span> 概率给敌人附上该状态. HintBrief:<span class="code">14</span>, tag:<span class="code">麻痺|paralyzing</span>, Weight:<span class="code">3</span>;</p>
 
-<p>————</p>
-
-<p>33. 爆炸: 爆炸伤害无视穿甲抵抗和属性抵抗, 但可被爆抗削弱, 护盾虽然能防御高爆弹, 但如果爆炸发生于护盾内则无法起到保护机体的作用, 未触发爆抗的攻击将导致机体眩晕, 值得注意的是, 并非只有高爆弹会造成爆炸, 机体损毁后的爆炸也可能造成伤害, 不同机体爆炸后所造成的伤害值也不同(数百到上千的情况都有), 甚至部分敌人还会爆炸多次. HintBrief:<code>28</code>, tag:<code>explodes</code>, Weight:<code>3</code>;</p>
-
-<p>34. 标记: 在过去, 机体于 <code>0.2</code> 秒内只会受到一次爆炸伤害, 这就导致了一些能造成复数爆炸效果的武器, 伤害效果并不理想(比如榴散炮和集束炸弹), 现在机制被改为, 每次受到爆炸伤害, 就会在被命中的机体身上积累一个标记, 这个标记最多能同时存在 <code>6</code> 个, 当标记满了之后将不再受到爆炸伤害, 不过这个标记会按一定速度减少(每 <code>0.33</code> 秒减少一个). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
-
-<p>35. 爆抗: 触发爆炸抗性的概率, 触发爆抗后爆炸只能造成 <code>10%</code> 的伤害, 且机体不会因为爆炸而进入眩晕状态, 主体强化模块的防爆模块和防爆涂层可提高爆抗. HintBrief:<code>21</code>, tag:<code>爆炸抗性|爆発抵抗|critical resistance|explosive resistance</code>, Weight:<code>2</code>;</p>
-
-<p>36. 眩晕: 无法做出任何反应, 且触发抵抗的减伤会降低(<code>5% => 25%</code>), 眩晕单位被近战武器攻击时, 伤害会 <code>× 4</code>, 眩晕最多会持续 <code>5.5</code> 秒(相同条件下我方眩晕时长仅为敌军的 <code>1/3</code>), 可安装抗震头盔来降低眩晕时长. HintBrief:<code>26</code>, tag:<code>stun</code>, Weight:<code>3</code>;</p>
+<p>15. 油腻: 会导致开火速度和装弹速率 <span class="code">-50%</span>, 时长算法与燃烧相同但基础为 <span class="code">10</span> 秒, 在地图上的某些漏油管道附近, 敌我双方会自动沾染该状态, 使用喷油枪(喷射武器)或油炸弹(投掷物), 也可以给敌人附上该状态. HintBrief:<span class="code">15</span>, tag:<span class="code">油|greasy</span>, Weight:<span class="code">3</span>;</p>
 
 <p>————</p>
 
-<p>37. 散射: 散射既子弹的散布范围, 通常来说该值越低越好, 因为这意味着伤害集中(除非你需要扩大杀伤的面积), 散弹类的武器, 该项属性一般都会很高, 如果你能将它降下来, 将子弹集中到某个点, 则散弹武器可造成巨额伤害. HintBrief:<code>8</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+<p>16. 冻结: 潮湿+寒冷 / 油腻+寒冷, 无法移动和开火(但似乎还可以放技能或丢炸弹), 默认持续 <span class="code">10</span> 秒, 这个负面效果较为实用, 如果你实在不想装备喷水枪和寒冰喷雾, 也可以带上水炸弹和寒冰炸弹, 一同丢出以实现该效果. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>38. 偏移: 这是枪械连续开火后, 准星偏移中心点的速度, 尽管偏移后机体会自动帮你重新校准, 但校准速度一般都赶不上偏移速度, 所以连续扫射时子弹就会越来越偏, 因此为了确保精度, 推荐以点射为主, 毕竟射不中也没意义. HintBrief:<code>9</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+<p>17. 融化: 燃烧+寒冷, 机体穿甲抵抗 <span class="code">-80%</span>, 默认持续 <span class="code">10</span> 秒, 这种状态也被称之为"装甲融化", 是低穿甲武器对付重甲的常用手段, 由于动能武器有燃烧模块和冰冻模块的配件, 同时装备即可, 所以出现率颇高, 也很实用. HintBrief:<span class="code">27</span>, tag:<span class="code">''</span>, Weight:<span class="code">3</span>;</p>
 
-<p>39. 弹射: 既子弹击中后形成了跳弹, 跳弹能够弹跳的最大次数, 跳弹也是种群伤的手段, 但常规武器的跳弹是不可控的, 不一定能打到敌人(甚至可能会伤到队友和大门), 不过电弧类武器的弹射是特例, 它会自动索敌且没有友伤. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>18. 蒸发: 潮湿+高温, 造成蒸发爆炸(<span class="code">300</span> 点伤害), 蒸汽会遮蔽视野且爆炸会造成眩晕, 雨天的镭射武器特别容易触发, 高温天气下带喷水器或喷水枪也能触发, 所以是较为常见的叠加效果, 但毕竟伤害较低, 只能说聊胜于无. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>19. 蒸汽: 潮湿+燃烧 / 寒冷+高温, 造成小蒸汽爆炸(<span class="code">600</span> 点伤害) / 造成大蒸汽爆炸(<span class="code">900</span> 点伤害), 蒸汽爆炸会眩晕敌人, 并且产生类似烟雾的蒸汽, 蒸汽会遮蔽视野, AI 无法发现蒸汽中的敌人, 这对敌我双方都会有影响. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>20. 爆燃: 燃烧+高温, 造成火属性小爆炸(<span class="code">100</span> 点伤害), 这种爆炸不会导致机体出现眩晕, 该效果在高温天气下很容易触发, 但伤害非常有限, 是属于看似可怕但其实没什么用处的情况, 伤害结果往往可能还不如放任火焰燃烧. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>21. 爆裂: 燃烧+油腻, 造成火属性大爆炸(<span class="code">100</span> 点伤害), 这种爆炸不会导致机体出现眩晕, 它的范围比爆燃更大, 且会爆炸多次, 还会造成长达 <span class="code">6</span> 秒的焚烧伤害(雷神焚天炮开火自带该效果), 每秒 <span class="code">-30</span> HP(我方会加倍). HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>22. 引爆: 高温+油腻 / 麻痹+油腻, 造成范围性多次爆炸, 首次爆炸所造成的伤害为 <span class="code">900</span>, 后续爆炸所造成的伤害为 <span class="code">600</span>, 后续爆炸可能出现多次(大约是 <span class="code">2~3</span> 次), 所以伤害可能大于 <span class="code">900+600=1500</span>, 且爆炸会导致眩晕. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>23. 清晰: 潮湿+油腻, 造成异常状态的无效化, 如果你的目的是杀伤, 那么水和油就只能二选一, 考虑到战场的天气状况是不可控的, 雨天也很常见, 所以油腻效果是众多效果之中最不可靠的, 你或许得考虑因地制宜搭配装备了. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>24. 感电: 潮湿+麻痹, 造成电弧小伤害(<span class="code">80</span> 点伤害), 电弧会在少数敌人间跳转(AOE 群伤). HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>25. 超导: 寒冷+麻痹, 造成电弧大伤害(<span class="code">80</span> 点伤害), 电弧会在多数敌人间跳转(AOE 群伤). HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>26. 超载: 燃烧+麻痹, 造成电磁小爆炸(<span class="code">50</span> 点伤害), 并且小范围内的敌人会获得麻痹效果. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>27. 雷暴: 高温+麻痹, 造成电磁大爆炸(<span class="code">50</span> 点伤害), 并且大范围内的敌人会获得麻痹效果. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
 <p>————</p>
 
-<p>40. 护盾: 可代替机体受到伤害, 电弧对护盾的伤害只有 <code>20%</code>, 但可通过融合射线武器得到"电弧折返核心"来提升伤害, 射线对护盾的伤害只有 <code>33.33%</code>, 但可通过融合电弧武器得到"射线能量核心"来提升伤害. HintBrief:<code>23</code>, tag:<code>shileds|shielded</code>, Weight:<code>2</code>;</p>
+<p>28. 穿甲: 每种子弹都有它的穿甲值, 每个单位都有它的抵抗值, 触发抵抗的概率为: <span class="code">1-(穿甲值÷抵抗值)</span>, 触发抵抗后子弹就只能造成 <span class="code">5%</span> 的伤害. HintBrief:<span class="code">24</span>, tag:<span class="code">'贯通|Armor-piercing|armor penetration|armor piercing|armor-piercing</span>, Weight:<span class="code">2</span>;</p>
 
-<p>41. 沙袋: 沙袋相当于摆在地面上的装甲, 不同沙袋的抵抗值不同(低级 <code>40</code>, 中级 <code>70</code>, 高级 <code>100</code>), 它们有正面和背面的区别, 子弹如果是从正面射来的, 就有可能会被抵抗, 所以蹲在沙袋后面是降低伤害的好方法. HintBrief:<code>22</code>, tag:<code>sandbags</code>, Weight:<code>2</code>;</p>
+<p>29. 抵抗: 每一个单位(敌人/自身)都有抵抗值, 可以在属性面板查看, 每一种子弹都有穿甲值, 亦可在武器面板查看, 触发抵抗的概率为 <span class="code">1-(穿甲值÷抵抗值)</span>, 触发抵抗后, 子弹就只能造成 <span class="code">5%</span> 的伤害. HintBrief:<span class="code">16</span>, tag:<span class="code">'resistance|resisted</span>, Weight:<span class="code">2</span>;</p>
 
-<p>42. 电磁: 磁电冲锋枪和磁电狙击步枪能够射出电磁弹, 电磁弹对护盾有着较大的伤害加成(对护盾有双倍的伤害, 要注意, 这对敌人来说也一样的), 电磁弹还可以麻痹敌人, 不过需要成功击穿才能触发, 被抵抗则没有麻痹效果. HintBrief:<code>25</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
+<p>30. 击穿: 其他抵抗物件(沙袋/房屋墙壁/外挂装甲)也都有抵抗值(敌人的外挂装甲通常默认为 <span class="code">100</span>, 但仅部分敌人拥有外挂装甲), 触发击穿的概率为 <span class="code">穿甲值÷抵抗值</span>, 如果子弹未击穿, 将会直接消失. HintBrief:<span class="code">17</span>, tag:<span class="code">'penetration|penetrate</span>, Weight:<span class="code">2</span>;</p>
 
-<p>————</p>
+<p>31. 跳弹: 跳弹既子弹从装甲表面擦过, 表现为没有造成任何伤害, 只有蹲距的单位才可能触发跳弹, 基础概率为 <span class="code">15%</span>, 主体强化中的斜面装甲和机体改造中的蹲据防护, 以及克莱尔的 LV12 忠诚度奖励, 都可提升蹲据弹跳率. HintBrief:<span class="code">18</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
 
-<p>43. 连段: 近战武器在进行数次轻击后, 可打出连段攻击(一般弹夹最后那次攻击会变成连段, 在蹲距状态下可直接打出连段攻击), 这通常会带有特殊效果(例如打中可为机体回复能量), 不过武器在连段攻击时, 老化概率会更高. HintBrief:<code>29</code>, tag:<code>''</code>, Weight:<code>3</code>;</p>
-
-<p>44. 韧性: 每个单位都有韧性值(敌我双方都是 <code>100</code>, 但敌方 Boss 是 <code>300</code>), 单位在受到近战攻击时, 会降低韧性值, 尽管韧性值会慢慢的恢复至, 但当韧性归 <code>0</code> 时, 单位就会被强制眩晕(此时近战可造成 <code>4</code> 倍的伤害). HintBrief:<code>30</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
-
-<p>45. 削韧: 每种近战武器均有个削韧值(这取决于武器穿甲概率), 每次攻击都会按削韧值降低敌方的韧性(详见"韧性"术语), 韧性减少后会慢慢恢复至最大值, 当韧性归 <code>0</code>, 单位会被强制眩晕, 但眩晕状态中就无法被继续削韧. HintBrief:<code>31</code>, tag:<code>''</code>, Weight:<code>2</code>;</p>
+<p>32. 过穿: 过穿既子弹穿过了机体(会在机体后方继续存在), 表现为只造成 <span class="code">20%</span> 的伤害, 高穿甲武器打低抵抗单位, 过穿的触发概率会更高, 可为武器安装滞留弹降低过穿率. HintBrief:<span class="code">19</span>, tag:<span class="code">'transpiercing|overpenetration|Overpenetration'</span>, Weight:<span class="code">2</span>;</p>
 
 <p>————</p>
 
-<p>46. 蹲据: 武器散射降低 <code>66.67%</code>, 武器射程增加 <code>25%</code>, 子弹弹跳概率为 <code>15%</code>, 如果蹲在沙袋后则子弹弹跳率会上升到 <code>35%</code>, 但是对爆炸没有减伤, 也不会减少眩晕时间, 且移动速度会降低(只剩下常规移动速度的 <code>50%</code>). HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>33. 爆炸: 爆炸伤害无视穿甲抵抗和属性抵抗, 但可被爆抗削弱, 护盾虽然能防御高爆弹, 但如果爆炸发生于护盾内则无法起到保护机体的作用, 未触发爆抗的攻击将导致机体眩晕, 值得注意的是, 并非只有高爆弹会造成爆炸, 机体损毁后的爆炸也可能造成伤害, 不同机体爆炸后所造成的伤害值也不同(数百到上千的情况都有), 甚至部分敌人还会爆炸多次. HintBrief:<span class="code">28</span>, tag:<span class="code">explodes</span>, Weight:<span class="code">3</span>;</p>
 
-<p>47. 奔跑: 在移动时, 按住 Shift 即可实现奔跑, 奔跑速度与滑轮或履带等机体改造模块无关, 它的算法为 <code>移动速度 × BaseRunRate × 各种加成</code>, 其中的 <code>BaseRunRate</code> 是 Base.csv 表中的一个变量, 在默认的情况下为 <code>3</code>. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>34. 标记: 在过去, 机体于 <span class="code">0.2</span> 秒内只会受到一次爆炸伤害, 这就导致了一些能造成复数爆炸效果的武器, 伤害效果并不理想(比如榴散炮和集束炸弹), 现在机制被改为, 每次受到爆炸伤害, 就会在被命中的机体身上积累一个标记, 这个标记最多能同时存在 <span class="code">6</span> 个, 当标记满了之后将不再受到爆炸伤害, 不过这个标记会按一定速度减少(每 <span class="code">0.33</span> 秒减少一个). HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
-<p>48. 闪避: 在战场中, 按下 Space 既空格键就能实现闪避(该操作需要消耗奔跑能量), 它又可分为横跳和跳跃, 这跟机体的改造模块相关, 目前仅龙骑士号出场自带的弹力足可实现跳跃, 除了躲避子弹, 跳跃还能造成击退与眩晕. HintBrief:<code>N</code>, tag:<code>''</code>, Weight:<code>0</code>;</p>
+<p>35. 爆抗: 触发爆炸抗性的概率, 触发爆抗后爆炸只能造成 <span class="code">10%</span> 的伤害, 且机体不会因为爆炸而进入眩晕状态, 主体强化模块的防爆模块和防爆涂层可提高爆抗. HintBrief:<span class="code">21</span>, tag:<span class="code">爆炸抗性|爆発抵抗|critical resistance|explosive resistance</span>, Weight:<span class="code">2</span>;</p>
+
+<p>36. 眩晕: 无法做出任何反应, 且触发抵抗的减伤会降低(<span class="code">5% => 25%</span>), 眩晕单位被近战武器攻击时, 伤害会 <span class="code">× 4</span>, 眩晕最多会持续 <span class="code">5.5</span> 秒(相同条件下我方眩晕时长仅为敌军的 <span class="code">1/3</span>), 可安装抗震头盔来降低眩晕时长. HintBrief:<span class="code">26</span>, tag:<span class="code">stun</span>, Weight:<span class="code">3</span>;</p>
+
+<p>————</p>
+
+<p>37. 散射: 散射既子弹的散布范围, 通常来说该值越低越好, 因为这意味着伤害集中(除非你需要扩大杀伤的面积), 散弹类的武器, 该项属性一般都会很高, 如果你能将它降下来, 将子弹集中到某个点, 则散弹武器可造成巨额伤害. HintBrief:<span class="code">8</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
+
+<p>38. 偏移: 这是枪械连续开火后, 准星偏移中心点的速度, 尽管偏移后机体会自动帮你重新校准, 但校准速度一般都赶不上偏移速度, 所以连续扫射时子弹就会越来越偏, 因此为了确保精度, 推荐以点射为主, 毕竟射不中也没意义. HintBrief:<span class="code">9</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
+
+<p>39. 弹射: 既子弹击中后形成了跳弹, 跳弹能够弹跳的最大次数, 跳弹也是种群伤的手段, 但常规武器的跳弹是不可控的, 不一定能打到敌人(甚至可能会伤到队友和大门), 不过电弧类武器的弹射是特例, 它会自动索敌且没有友伤. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>————</p>
+
+<p>40. 护盾: 可代替机体受到伤害, 电弧对护盾的伤害只有 <span class="code">20%</span>, 但可通过融合射线武器得到"电弧折返核心"来提升伤害, 射线对护盾的伤害只有 <span class="code">33.33%</span>, 但可通过融合电弧武器得到"射线能量核心"来提升伤害. HintBrief:<span class="code">23</span>, tag:<span class="code">shileds|shielded</span>, Weight:<span class="code">2</span>;</p>
+
+<p>41. 沙袋: 沙袋相当于摆在地面上的装甲, 不同沙袋的抵抗值不同(低级 <span class="code">40</span>, 中级 <span class="code">70</span>, 高级 <span class="code">100</span>), 它们有正面和背面的区别, 子弹如果是从正面射来的, 就有可能会被抵抗, 所以蹲在沙袋后面是降低伤害的好方法. HintBrief:<span class="code">22</span>, tag:<span class="code">sandbags</span>, Weight:<span class="code">2</span>;</p>
+
+<p>42. 电磁: 磁电冲锋枪和磁电狙击步枪能够射出电磁弹, 电磁弹对护盾有着较大的伤害加成(对护盾有双倍的伤害, 要注意, 这对敌人来说也一样的), 电磁弹还可以麻痹敌人, 不过需要成功击穿才能触发, 被抵抗则没有麻痹效果. HintBrief:<span class="code">25</span>, tag:<span class="code">''</span>, Weight:<span class="code">3</span>;</p>
+
+<p>————</p>
+
+<p>43. 连段: 近战武器在进行数次轻击后, 可打出连段攻击(一般弹夹最后那次攻击会变成连段, 在蹲距状态下可直接打出连段攻击), 这通常会带有特殊效果(例如打中可为机体回复能量), 不过武器在连段攻击时, 老化概率会更高. HintBrief:<span class="code">29</span>, tag:<span class="code">''</span>, Weight:<span class="code">3</span>;</p>
+
+<p>44. 韧性: 每个单位都有韧性值(敌我双方都是 <span class="code">100</span>, 但敌方 Boss 是 <span class="code">300</span>), 单位在受到近战攻击时, 会降低韧性值, 尽管韧性值会慢慢的恢复至, 但当韧性归 <span class="code">0</span> 时, 单位就会被强制眩晕(此时近战可造成 <span class="code">4</span> 倍的伤害). HintBrief:<span class="code">30</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
+
+<p>45. 削韧: 每种近战武器均有个削韧值(这取决于武器穿甲概率), 每次攻击都会按削韧值降低敌方的韧性(详见"韧性"术语), 韧性减少后会慢慢恢复至最大值, 当韧性归 <span class="code">0</span>, 单位会被强制眩晕, 但眩晕状态中就无法被继续削韧. HintBrief:<span class="code">31</span>, tag:<span class="code">''</span>, Weight:<span class="code">2</span>;</p>
+
+<p>————</p>
+
+<p>46. 蹲据: 武器散射降低 <span class="code">66.67%</span>, 武器射程增加 <span class="code">25%</span>, 子弹弹跳概率为 <span class="code">15%</span>, 如果蹲在沙袋后则子弹弹跳率会上升到 <span class="code">35%</span>, 但是对爆炸没有减伤, 也不会减少眩晕时间, 且移动速度会降低(只剩下常规移动速度的 <span class="code">50%</span>). HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>47. 奔跑: 在移动时, 按住 Shift 即可实现奔跑, 奔跑速度与滑轮或履带等机体改造模块无关, 它的算法为 <span class="code">移动速度 × BaseRunRate × 各种加成</span>, 其中的 <span class="code">BaseRunRate</span> 是 Base.csv 表中的一个变量, 在默认的情况下为 <span class="code">3</span>. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
+
+<p>48. 闪避: 在战场中, 按下 Space 既空格键就能实现闪避(该操作需要消耗奔跑能量), 它又可分为横跳和跳跃, 这跟机体的改造模块相关, 目前仅龙骑士号出场自带的弹力足可实现跳跃, 除了躲避子弹, 跳跃还能造成击退与眩晕. HintBrief:<span class="code">N</span>, tag:<span class="code">''</span>, Weight:<span class="code">0</span>;</p>
 
 <hr />
 </section>
@@ -251,7 +254,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 提示文本</h2>
 
-<p>以下是剧情模式中, 初始的新手引导, 如果没有选择跳过教程, 则第 <code>0</code> 天就是教官于战场上指导我们如何操作机体(不要攻击教官, 那是反叛行为, 会导致游戏直接结束), 值得一提的是, <code>Toturial7</code> 提到"弹跳闪避子弹可以增加子弹时间", 子弹时间其实是玛丽初始自带的技能, 但由于技能需要等到第 <code>41</code> 天才解锁, 所以教程并没有涉及到技能, 且该行为是否真的可以增加子弹时间, 目前也是个谜;</p>
+<p>以下是剧情模式中, 初始的新手引导, 如果没有选择跳过教程, 则第 <span class="code">0</span> 天就是教官于战场上指导我们如何操作机体(不要攻击教官, 那是反叛行为, 会导致游戏直接结束), 值得一提的是, <span class="code">Toturial7</span> 提到"弹跳闪避子弹可以增加子弹时间", 子弹时间其实是玛丽初始自带的技能, 但由于技能需要等到第 <span class="code">41</span> 天才解锁, 所以教程并没有涉及到技能, 且该行为是否真的可以增加子弹时间, 目前也是个谜;</p>
 
 <p>
 	ToturialStart: 早上好啊; <br />
@@ -306,15 +309,15 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <p>————</p>
 
-<p>以下是战后结算界面会随机出现的各种游戏提示, 包括机制细节和玩法建议, 目前共有 <code>65</code> 条(最后几条是 XJ 自己加的), 这些提示都是随机出现的, 但它们有个特殊的 <code>Day</code> 属性, 意思是最早出现的天数限制, 例如 <code>Hint_25</code> 的值为 <code>10</code>, 这意味着这条提示在第十天开始才可能出现, 它告诉我们脑负荷会随天数而逐渐增加, 因为剧情模式下第十天才会开启人员整备界面, 也需要开始处理脑负荷了;</p>
+<p>以下是战后结算界面会随机出现的各种游戏提示, 包括机制细节和玩法建议, 目前共有 <span class="code">65</span> 条(最后几条是 XJ 自己加的), 这些提示都是随机出现的, 但它们有个特殊的 <span class="code">Day</span> 属性, 意思是最早出现的天数限制, 例如 <span class="code">Hint_25</span> 的值为 <span class="code">10</span>, 这意味着这条提示在第十天开始才可能出现, 它告诉我们脑负荷会随天数而逐渐增加, 因为剧情模式下第十天才会开启人员整备界面, 也需要开始处理脑负荷了;</p>
 
 <p>
 	Hint_0 (Day= 0): 机体的抵抗值越高, 被攻击后就越是容易触发抵抗效果; <br />
-	Hint_1 (Day= 0): 被抵抗了的攻击只会造成 <code>10%</code> 的伤害而已; <br />
+	Hint_1 (Day= 0): 被抵抗了的攻击只会造成 <span class="code">10%</span> 的伤害而已; <br />
 	Hint_2 (Day= 0): 抵抗值会被穿甲值抵消, 低穿甲的武器更容易触发抵抗的效果; <br />
-	Hint_3 (Day= 0): 触发抵抗的公式= <code>子弹穿甲值÷目标抵抗值</code>; <br />
+	Hint_3 (Day= 0): 触发抵抗的公式= <span class="code">子弹穿甲值÷目标抵抗值</span>; <br />
 	Hint_4 (Day= 0): 子弹即使被抵抗也可造成属性攻击, 低穿甲武器可考虑多加属性攻击; <br />
-	Hint_5 (Day= 0): 敌人所装备装甲, 一般都是 <code>100</code> 的抵抗值; <br />
+	Hint_5 (Day= 0): 敌人所装备装甲, 一般都是 <span class="code">100</span> 的抵抗值; <br />
 	Hint_6 (Day= 0): 近战攻击无视抵抗和护盾; <br />
 	Hint_7 (Day= 0): 爆炸/射线/电弧的伤害无视抵抗; <br />
 	Hint_8 (Day= 0): 同一发子弹可以触发多种属性攻击; <br />
@@ -333,10 +336,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	Hint_19(Day= 0): 武器散射越低就越准; <br />
 </p>
 <p>
-	Hint_20(Day= 0): 概率均为加乘, 例如 <code>+10%</code> 弹夹弹量和 <code>+20%</code> 弹夹弹量的模块配合一起用时, 最后的结果是 <code>+30%</code> 弹夹弹量; <br />
-	Hint_21(Day= 0): 不以百分号结尾的参数强化为直接加, 例如暴击率为 <code>50</code>, 装载了 <code>+25</code> 暴击的模块, 最终的暴击率为<code>75%</code>; <br />
-	Hint_22(Day= 0): 以百分号结尾的参数强化为计算比例, 例如穿甲为 <code>50</code>, 装载了 <code>+50%</code> 穿甲的模块, 最终的穿甲为 <code>75</code>; <br />
-	Hint_23(Day= 0): 模块强化为四舍五入, 例如穿甲 <code>8</code> 的武器 <code>+30%</code> 穿甲, 本应为 <code>10.4</code> 穿甲, 但是会折算成 <code>10</code>; <br />
+	Hint_20(Day= 0): 概率均为加乘, 例如 <span class="code">+10%</span> 弹夹弹量和 <span class="code">+20%</span> 弹夹弹量的模块配合一起用时, 最后的结果是 <span class="code">+30%</span> 弹夹弹量; <br />
+	Hint_21(Day= 0): 不以百分号结尾的参数强化为直接加, 例如暴击率为 <span class="code">50</span>, 装载了 <span class="code">+25</span> 暴击的模块, 最终的暴击率为<span class="code">75%</span>; <br />
+	Hint_22(Day= 0): 以百分号结尾的参数强化为计算比例, 例如穿甲为 <span class="code">50</span>, 装载了 <span class="code">+50%</span> 穿甲的模块, 最终的穿甲为 <span class="code">75</span>; <br />
+	Hint_23(Day= 0): 模块强化为四舍五入, 例如穿甲 <span class="code">8</span> 的武器 <span class="code">+30%</span> 穿甲, 本应为 <span class="code">10.4</span> 穿甲, 但是会折算成 <span class="code">10</span>; <br />
 	Hint_24(Day= 0): 榴散炮也是一种散弹, 所以也受散弹模块的加成影响; <br />
 	Hint_25(Day=10): 随着战局的持续, 每日增加的脑负荷也会逐渐的增加; <br />
 	Hint_26(Day=10): 在城防界面请尽量把队友安排在掩体(沙袋)后面, 这将极大提升他们在战场的生存率; <br />
@@ -345,8 +348,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	Hint_29(Day=10): 爱护你的队友, 因为在这个残酷的世界, 除了你没有人会关心他们了; <br />
 </p>
 <p>
-	Hint_30(Day=10): 忠诚度与受伤撤退的阈值相关, 如忠诚为 <code>50</code> 的队友, 会在受伤 <code>>= 50%</code> 时撤退; <br />
-	Hint_31(Day=10): 好好培养和队友的感情, 当好感达 <code>65</code> 以上时, 可能会有额外惊喜; <br />
+	Hint_30(Day=10): 忠诚度与受伤撤退的阈值相关, 如忠诚为 <span class="code">50</span> 的队友, 会在受伤 <span class="code">>= 50%</span> 时撤退; <br />
+	Hint_31(Day=10): 好好培养和队友的感情, 当好感达 <span class="code">65</span> 以上时, 可能会有额外惊喜; <br />
 	Hint_32(Day=10): 队友每天的首次送礼才会加忠诚度, 而自己则不限量; <br />
 	Hint_33(Day=10): 分裂模块和爆炸模块看似用处不大, 但配置得当也许会有惊人的效果; <br />
 	Hint_34(Day=10): 队友会尽量避免友伤(停火避免误伤), 但不排除意外, 尽量别站在队友的射击路线上; <br />
@@ -357,7 +360,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	Hint_39(Day=10): 驾驶员的每一种属性都存在着强化上限; <br />
 </p>
 <p>
-	Hint_40(Day=10): 招募完所有队友后, 会收到增加出战人数上限的申请(但是需要 <code>1000</code> 资金以及 <code>1000</code> 荣誉为代价); <br />
+	Hint_40(Day=10): 招募完所有队友后, 会收到增加出战人数上限的申请(但是需要 <span class="code">1000</span> 资金以及 <span class="code">1000</span> 荣誉为代价); <br />
 	Hint_41(Day=20): 即使敌人处于隐身状态, 也会在地上留下影子, 当然队友可能不一定能注意到这一点; <br />
 	Hint_42(Day=20): 部分敌方 Boss 会携带实体盾牌, 这些盾牌免疫子弹, 只能绕开攻击; <br />
 	Hint_43(Day=20): 炮弹无法穿过能量盾, 但是会在接触的那个位置爆炸; <br />
@@ -393,7 +396,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	Hint_XJ(Day= 0): 部分敌方 Boss 会携带实体盾牌, 实体盾牌免疫大多数远程武器, 除了绕后, 你还可以尝试用远距离的近战武器攻击; <br />
 </p>
 <p>
-	Hint_XJ(Day= 0): 敌人身上的携带的装甲, 默认抵抗值都是 <code>100</code>, 就像 LV3 复合装甲; <br />
+	Hint_XJ(Day= 0): 敌人身上的携带的装甲, 默认抵抗值都是 <span class="code">100</span>, 就像 LV3 复合装甲; <br />
 	Hint_XJ(Day= 0): 钢盾(id:8)/肢解者(id:31)/角斗士(id:107A)/方阵兵(id:109B)等敌人, 身上有携带装甲, 但仅部分部分方向有而已; <br />
 </p>
 
@@ -404,7 +407,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading03">03. 每日新闻</h2>
 
-<p>以下是战后结算界面会出现的背景新闻(仅剧情模式有), 根据事件设定, 每隔几天会选取同个 <code>NewsN_</code> 前缀的 <code>3</code> 条随机新闻显示(但不会重复), 如果同个 <code>NewsN_</code> 前缀的新闻都已经出现过, 则以 <code>XXXXXX</code> 代替, 从这些内容里, 我们能发现帝国的情况是逐步恶化的, 尽管新闻媒体尽量粉饰了帝国节节败退的实情, 但是战线不会骗人, 在这些新闻中, 我们也能了解到为什么玛丽他们的负担会越来越重;</p>
+<p>以下是战后结算界面会出现的背景新闻(仅剧情模式有), 根据事件设定, 每隔几天会选取同个 <span class="code">NewsN_</span> 前缀的 <span class="code">3</span> 条随机新闻显示(但不会重复), 如果同个 <span class="code">NewsN_</span> 前缀的新闻都已经出现过, 则以 <span class="code">XXXXXX</span> 代替, 从这些内容里, 我们能发现帝国的情况是逐步恶化的, 尽管新闻媒体尽量粉饰了帝国节节败退的实情, 但是战线不会骗人, 在这些新闻中, 我们也能了解到为什么玛丽他们的负担会越来越重;</p>
 
 <p>
 	News1_1:　在南方战场, 我方的战士再一次英勇击退了敌军; <br />
@@ -504,6 +507,12 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
+*/
+
+})();
 </script>
 
 
@@ -514,7 +523,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -535,7 +544,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

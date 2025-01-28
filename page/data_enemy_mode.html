@@ -45,12 +45,12 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
-<title>特殊模式</title>
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<title>特殊遭遇</title>
 </head>
 <body>
 
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -93,7 +96,8 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <div id="pub_wrap">
 <div id="pub_head">
-	<h1 id="pub_headText"><a class="a-unset" href=""><span>特殊模式</span><small>(别样玩法)</small></a></h1>
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>特殊遭遇</span><small>(别样玩法)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.特殊遭遇); $('#pub_headText > a > small').text(xj2.i18n.别样玩法);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -127,7 +130,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <p>
 	01. 以下是特殊模式的每日信息, 具体包括了: P01=无尽模式(Enl) / P02=潜入模式(KRK) / P03=挑战模式(Cha) / P04=幸存模式(Sur); <br />
 	02. 尽管特殊模式的玩法和需要坚守的天数并不同, 但是数据结构都是类似的, 所以就放到了一起展示, 细微差异可查阅: <a href="#heading02"># 额外拓展</a>; <br />
-	03. 由于特殊模式的所有数据属性和剧情模式基本一致, 因此本页面没有重复解析这些属性的含义, 如果想了解可查阅 <a href="./data_enemy_plot.html">剧情遭遇.html</a>; <br />
+	03. 由于特殊模式的所有数据属性和剧情模式基本一致, 因此本页面没有重复解析这些属性的含义, 如果想了解可查阅 <a href="./data_enemy_plot.html">剧情模式.html</a>; <br />
 	04. 你可以通过点击表格右上角的按钮切换不同模式, 也可用键盘的 A/D 字母键或左右方向键, 以及数字键盘的 1/2 和 3/4 实现切换; <br />
 </p>
 
@@ -135,7 +138,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	<thead>
 		<tr>
 			
-			<th sorttype="number" style="width:40px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">剧情天数<i class="icon fa fa-sort" style="margin-left:00;"></i>
+			<th sorttype="number" style="width:40px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>剧情天数</zh-i><jp-i>日数</jp-i><en-i>Days</en-i><i class="icon fa fa-sort" style="margin-left:00;"></i>
 			</span>
 				<div id="turnPart">
 					<button id="nextPart" type="button" title="Next Part"><i class="fas fa-arrow-right"></i></button>
@@ -144,99 +147,99 @@ function(){ FastClick.attach(document.body) }, false);</script>
 				</div>
 			</th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>资金奖励</zh-i><jp-i>資金インセンティブ</jp-i><en-i>Financial<br />Rewards</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>荣誉奖励</zh-i><jp-i>名誉奨励</jp-i><en-i>Honor<br />Award</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图类型</zh-i><jp-i>マップタイプ</jp-i><en-i>Map<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图预设</zh-i><jp-i>地図プリセット</jp-i><en-i>Map<br />Preset</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>天气状况</zh-i><jp-i>天候状況</jp-i><en-i>Weather<br />Condition</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>昼夜状态</zh-i><jp-i>昼夜状態</jp-i><en-i>Day Night<br />State</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊曲调</zh-i><jp-i>特殊な曲調</jp-i><en-i>Special<br />Tune</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌人选择</zh-i><jp-i>敵の選択</jp-i><en-i>Enemy<br />Selection</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>奖励系数</zh-i><jp-i>インセンティブ係数</jp-i><en-i>Reward<br />Coefficient</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤类型</zh-i><jp-i>外勤タイプ</jp-i><en-i>Field<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤数量</zh-i><jp-i>外勤数量</jp-i><en-i>Number Of<br />Field Operations</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤任务</zh-i><jp-i>外勤任務</jp-i><en-i>Field<br />Missions</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>假日安排</zh-i><jp-i>休日の予定</jp-i><en-i>Holiday<br />Arrangements</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>每组价值</zh-i><jp-i>グループ当たりの価値</jp-i><en-i>Value<br />Per Group</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>间隔因素</zh-i><jp-i>かんかくいんし</jp-i><en-i>Interval<br />Factor</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出敌加速</zh-i><jp-i>敵を出して加速する</jp-i><en-i>Accelerate From<br />The Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>来袭方向</zh-i><jp-i>襲来方向</jp-i><en-i>Attack<br />Direction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军上限</zh-i><jp-i>敵軍の上限</jp-i><en-i>Enemy<br />Limit</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>辅兵刷新</zh-i><jp-i>ふくへいリフレッシュ</jp-i><en-i>Auxiliary<br />Soldier Refresh</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊敌人</zh-i><jp-i>特殊な敵</jp-i><en-i>Special<br />Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军组合</zh-i><jp-i>敵軍の組み合わせ</jp-i><en-i>Enemy<br />Combination</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
-			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			<th sorttype="number" style="display:none;"><span><zh-i>剧情天数</zh-i><jp-i>日数</jp-i><en-i>Days</en-i><i class="icon fa fa-sort"></i></span></th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>资金奖励</zh-i><jp-i>資金インセンティブ</jp-i><en-i>Financial<br />Rewards</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>荣誉奖励</zh-i><jp-i>名誉奨励</jp-i><en-i>Honor<br />Award</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图类型</zh-i><jp-i>マップタイプ</jp-i><en-i>Map<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图预设</zh-i><jp-i>地図プリセット</jp-i><en-i>Map<br />Preset</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>天气状况</zh-i><jp-i>天候状況</jp-i><en-i>Weather<br />Condition</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>昼夜状态</zh-i><jp-i>昼夜状態</jp-i><en-i>Day Night<br />State</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊曲调</zh-i><jp-i>特殊な曲調</jp-i><en-i>Special<br />Tune</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌人选择</zh-i><jp-i>敵の選択</jp-i><en-i>Enemy<br />Selection</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>奖励系数</zh-i><jp-i>インセンティブ係数</jp-i><en-i>Reward<br />Coefficient</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤类型</zh-i><jp-i>外勤タイプ</jp-i><en-i>Field<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤数量</zh-i><jp-i>外勤数量</jp-i><en-i>Number Of<br />Field Operations</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤任务</zh-i><jp-i>外勤任務</jp-i><en-i>Field<br />Missions</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>假日安排</zh-i><jp-i>休日の予定</jp-i><en-i>Holiday<br />Arrangements</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>每组价值</zh-i><jp-i>グループ当たりの価値</jp-i><en-i>Value<br />Per Group</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>间隔因素</zh-i><jp-i>かんかくいんし</jp-i><en-i>Interval<br />Factor</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出敌加速</zh-i><jp-i>敵を出して加速する</jp-i><en-i>Accelerate From<br />The Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>来袭方向</zh-i><jp-i>襲来方向</jp-i><en-i>Attack<br />Direction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军上限</zh-i><jp-i>敵軍の上限</jp-i><en-i>Enemy<br />Limit</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>辅兵刷新</zh-i><jp-i>ふくへいリフレッシュ</jp-i><en-i>Auxiliary<br />Soldier Refresh</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊敌人</zh-i><jp-i>特殊な敵</jp-i><en-i>Special<br />Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军组合</zh-i><jp-i>敵軍の組み合わせ</jp-i><en-i>Enemy<br />Combination</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
-			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			<th sorttype="number" style="display:none;"><span><zh-i>剧情天数</zh-i><jp-i>日数</jp-i><en-i>Days</en-i><i class="icon fa fa-sort"></i></span></th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>资金奖励</zh-i><jp-i>資金インセンティブ</jp-i><en-i>Financial<br />Rewards</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>荣誉奖励</zh-i><jp-i>名誉奨励</jp-i><en-i>Honor<br />Award</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图类型</zh-i><jp-i>マップタイプ</jp-i><en-i>Map<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图预设</zh-i><jp-i>地図プリセット</jp-i><en-i>Map<br />Preset</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>天气状况</zh-i><jp-i>天候状況</jp-i><en-i>Weather<br />Condition</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>昼夜状态</zh-i><jp-i>昼夜状態</jp-i><en-i>Day Night<br />State</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊曲调</zh-i><jp-i>特殊な曲調</jp-i><en-i>Special<br />Tune</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌人选择</zh-i><jp-i>敵の選択</jp-i><en-i>Enemy<br />Selection</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>奖励系数</zh-i><jp-i>インセンティブ係数</jp-i><en-i>Reward<br />Coefficient</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤类型</zh-i><jp-i>外勤タイプ</jp-i><en-i>Field<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤数量</zh-i><jp-i>外勤数量</jp-i><en-i>Number Of<br />Field Operations</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤任务</zh-i><jp-i>外勤任務</jp-i><en-i>Field<br />Missions</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>假日安排</zh-i><jp-i>休日の予定</jp-i><en-i>Holiday<br />Arrangements</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>每组价值</zh-i><jp-i>グループ当たりの価値</jp-i><en-i>Value<br />Per Group</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>间隔因素</zh-i><jp-i>かんかくいんし</jp-i><en-i>Interval<br />Factor</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出敌加速</zh-i><jp-i>敵を出して加速する</jp-i><en-i>Accelerate From<br />The Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>来袭方向</zh-i><jp-i>襲来方向</jp-i><en-i>Attack<br />Direction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军上限</zh-i><jp-i>敵軍の上限</jp-i><en-i>Enemy<br />Limit</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>辅兵刷新</zh-i><jp-i>ふくへいリフレッシュ</jp-i><en-i>Auxiliary<br />Soldier Refresh</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊敌人</zh-i><jp-i>特殊な敵</jp-i><en-i>Special<br />Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军组合</zh-i><jp-i>敵軍の組み合わせ</jp-i><en-i>Enemy<br />Combination</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
-			<th sorttype="number" style="display:none;"><span>剧情天数<i class="icon fa fa-sort"></i></span></th>
+			<th sorttype="number" style="display:none;"><span><zh-i>剧情天数</zh-i><jp-i>日数</jp-i><en-i>Days</en-i><i class="icon fa fa-sort"></i></span></th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">资金奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">荣誉奖励<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">地图预设<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">天气状况<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">昼夜状态<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊曲调<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌人选择<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励系数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤数量<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">外勤任务<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">假日安排<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">每组价值<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">间隔因素<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出敌加速<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">来袭方向<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军上限<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">辅兵刷新<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">特殊敌人<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">敌军组合<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>资金奖励</zh-i><jp-i>資金インセンティブ</jp-i><en-i>Financial<br />Rewards</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>荣誉奖励</zh-i><jp-i>名誉奨励</jp-i><en-i>Honor<br />Award</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图类型</zh-i><jp-i>マップタイプ</jp-i><en-i>Map<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>地图预设</zh-i><jp-i>地図プリセット</jp-i><en-i>Map<br />Preset</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>天气状况</zh-i><jp-i>天候状況</jp-i><en-i>Weather<br />Condition</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>昼夜状态</zh-i><jp-i>昼夜状態</jp-i><en-i>Day Night<br />State</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊曲调</zh-i><jp-i>特殊な曲調</jp-i><en-i>Special<br />Tune</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌人选择</zh-i><jp-i>敵の選択</jp-i><en-i>Enemy<br />Selection</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>奖励系数</zh-i><jp-i>インセンティブ係数</jp-i><en-i>Reward<br />Coefficient</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤类型</zh-i><jp-i>外勤タイプ</jp-i><en-i>Field<br />Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤数量</zh-i><jp-i>外勤数量</jp-i><en-i>Number Of<br />Field Operations</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>外勤任务</zh-i><jp-i>外勤任務</jp-i><en-i>Field<br />Missions</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>假日安排</zh-i><jp-i>休日の予定</jp-i><en-i>Holiday<br />Arrangements</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>每组价值</zh-i><jp-i>グループ当たりの価値</jp-i><en-i>Value<br />Per Group</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>间隔因素</zh-i><jp-i>かんかくいんし</jp-i><en-i>Interval<br />Factor</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出敌加速</zh-i><jp-i>敵を出して加速する</jp-i><en-i>Accelerate From<br />The Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>来袭方向</zh-i><jp-i>襲来方向</jp-i><en-i>Attack<br />Direction</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军上限</zh-i><jp-i>敵軍の上限</jp-i><en-i>Enemy<br />Limit</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>辅兵刷新</zh-i><jp-i>ふくへいリフレッシュ</jp-i><en-i>Auxiliary<br />Soldier Refresh</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>特殊敌人</zh-i><jp-i>特殊な敵</jp-i><en-i>Special<br />Enemy</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>敌军组合</zh-i><jp-i>敵軍の組み合わせ</jp-i><en-i>Enemy<br />Combination</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 			
 		</tr>
 	</thead>
@@ -250,26 +253,26 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>无尽模式: P01 展示了无尽模式的数据, 它以 <code>40</code> 天为一个循环周期, 理论上来讲, 只要你想, 它便不会结束, 与其他模式相比, 它的特殊之处还在于多了一个 <code>OutMissionMaxLoop</code> 属性, 用于决定当天的外勤任务会被循环几次, 例如第六天的外勤任务只会被循环三次, 既第四次循环(第 120 天会开始第四次循环)就不会再触发了, 现在这个参数被放在了"外勤数量"的属性里(下划线后的第二个参数便是);</p>
+<p>无尽模式: P01 展示了无尽模式的数据, 它以 <span class="code">40</span> 天为一个循环周期, 理论上来讲, 只要你想, 它便不会结束, 与其他模式相比, 它的特殊之处还在于多了一个 <span class="code">OutMissionMaxLoop</span> 属性, 用于决定当天的外勤任务会被循环几次, 例如第六天的外勤任务只会被循环三次, 既第四次循环(第 120 天会开始第四次循环)就不会再触发了, 现在这个参数被放在了"外勤数量"的属性里(下划线后的第二个参数便是);</p>
 
-<p>潜入模式: P02 展示了潜入模式的数据, 它需要我们坚守 <code>39</code> 天, 但其实我们的主要任务都出外勤, 防守大门的情况反而是少数, 该模式提供了特别的暗杀操作, 这是种其他模式下无法执行的特殊行动, 可以对敌人实现秒杀(只要不被敌人发现), 值得一提的是, 虽然大多数任务都是破坏目标即可撤退, 但杀掉敌人会有额外的资金奖励(具体数值由敌人的特殊价值决定, 特殊价值可以参考: <a href="./data_enemy_info.html">敌军情报.html</a>);</p>
+<p>潜入模式: P02 展示了潜入模式的数据, 它需要我们坚守 <span class="code">39</span> 天, 但其实我们的主要任务都出外勤, 防守大门的情况反而是少数, 该模式提供了特别的暗杀操作, 这是种其他模式下无法执行的特殊行动, 可以对敌人实现秒杀(只要不被敌人发现), 值得一提的是, 虽然大多数任务都是破坏目标即可撤退, 但杀掉敌人会有额外的资金奖励(具体数值由敌人的特殊价值决定, 特殊价值可以参考: <a href="./data_enemy_info.html">敌军情报.html</a>);</p>
 
-<p>挑战模式: P03 展示了挑战模式的数据, 它要求我们坚守 <code>38</code> 天, 这个模式允许我们自行挑选两个角色, 并展开保卫大门的战斗, 该模式最重要的特色为, 它允许双人游玩, 尽管你需要一个手柄(和一个朋友)才能控制 Player2 的机体, 当然你也可以选择单人模式, 然后将 Player2 交由 AI 托管, 除此之外, 该模式的与其他模式的另外一个小区别为, 它是从第 <code>1</code> 天开始游戏, 而不是从第 <code>0</code> 天开始;</p>
+<p>挑战模式: P03 展示了挑战模式的数据, 它要求我们坚守 <span class="code">38</span> 天, 这个模式允许我们自行挑选两个角色, 并展开阵地防守的战斗, 该模式最重要的特色为, 它允许双人游玩, 尽管你需要一个手柄(和一个朋友)才能控制 Player2 的机体, 当然你也可以选择单人模式, 然后将 Player2 交由 AI 托管, 除此之外, 该模式的与其他模式的另外一个小区别为, 它是从第 <span class="code">1</span> 天开始游戏, 而不是从第 <span class="code">0</span> 天开始;</p>
 
-<p>幸存模式: P04 展示了幸存模式的数据, 它会让我们在场景中连续面对 <code>62</code> 波敌人, 每歼灭一波敌人就会给予我们装备奖励, 并允许我们进行机体的整备, 与其他模式相比, 幸存模式并没有太多运营的要素, 你不能购买装备, 也不能用废料合成, 只能用关卡有限的奖励去面对挑战, 在去除了冗余的运营操作之后, 剩下的就是不断打打打, 节奏很快但难度也高, 没有太多的容错空间, 大意就可以得重来了;</p>
+<p>幸存模式: P04 展示了幸存模式的数据, 它会让我们在场景中连续面对 <span class="code">62</span> 波敌人, 每歼灭一波敌人就会给予我们装备奖励, 并允许我们进行机体的整备, 与其他模式相比, 幸存模式并没有太多运营的要素, 你不能购买装备, 也不能用废料合成, 只能用关卡有限的奖励去面对挑战, 在去除了冗余的运营操作之后, 剩下的就是不断打打打, 节奏很快但难度也高, 没有太多的容错空间, 大意就可以得重来了;</p>
 
 <p>————</p>
 
-<p>无尽模式的间隔因素: 每批敌人的数量由"每组价值"所决定(小于"资金奖励"但大于"剧情价值"), 每个敌人出现的间隔为 <code>0.25</code> 秒, 而两批敌人出现的间隔时间就是"间隔因素"乘以这些敌人的"生成间隔"之和, 大于 20 秒则等于 20 秒(敌人的"生成间隔"可参阅 <a href="./data_enemy_info.html">敌军情报.html</a>), 在无尽模式中, 两批敌人出现的间隔时间还要除以循环次数(每 <code>40</code> 天为一循环), 既循环次数越多则敌人出现的间隔就越短;</p>
+<p>无尽模式的间隔因素: 每批敌人的数量由"每组价值"所决定(小于"资金奖励"但大于"剧情价值"), 每个敌人出现的间隔为 <span class="code">0.25</span> 秒, 而两批敌人出现的间隔时间就是"间隔因素"乘以这些敌人的"生成间隔"之和, 大于 20 秒则等于 20 秒(敌人的"生成间隔"可参阅 <a href="./data_enemy_info.html">敌军情报.html</a>), 在无尽模式中, 两批敌人出现的间隔时间还要除以循环次数(每 <span class="code">40</span> 天为一循环), 既循环次数越多则敌人出现的间隔就越短;</p>
 
-<p>幸存模式的关卡奖励: 幸存模式的关卡奖励数据被放在了"假日安排"的数据里, 当假日安排不为 <code>0</code>, 那么关卡的奖励就不是随机的, 而是从预设中挑选, 如果"外勤类型"为 <code>1</code>, 就表示执行一个假日安排中的函数, 如果"外勤类型"为 <code>2</code>, 就表示获得一个假日安排中的物品, 实际上随机的装备奖励也不是真的完全随机, 有的奖励还是需要低级装备才能解锁, 所以最好是一开始就决定好这回要玩什么武器;</p>
+<p>幸存模式的关卡奖励: 幸存模式的关卡奖励数据被放在了"假日安排"的数据里, 当假日安排不为 <span class="code">0</span>, 那么关卡的奖励就不是随机的, 而是从预设中挑选, 如果"外勤类型"为 <span class="code">1</span>, 就表示执行一个假日安排中的函数, 如果"外勤类型"为 <span class="code">2</span>, 就表示获得一个假日安排中的物品, 实际上随机的装备奖励也不是真的完全随机, 有的奖励还是需要低级装备才能解锁, 所以最好是一开始就决定好这回要玩什么武器;</p>
 
 <hr />
 </section>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 
 #powerTable01 .hideTr{display:none;}
 
@@ -370,8 +373,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解 */
-/*
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
 
 SpawnEnemies_Enl, 无尽模式, 40 天, 从第 0 天开始
 SpawnEnemies_KRK, 潜入模式, 39 天, 从第 0 天开始
@@ -380,6 +385,10 @@ SpawnEnemies_Sur, 幸存模式, 62 天, 从第 0 天开始
 
 OutMissionMaxLoop 属性是无尽模式独有的, 现在融合到 OutMissionCount 属性中了
 任务名称中的 14(罐头运输) 和 14(英雄勋章) 起冲突了, 于是把幸存模式下的 14 既英雄勋章奖励改成 142
+
+◆将数据改为竖向, 这样结构简单些, 翻页的 CSS 调整成控制 th 行数就行
+◆非休息日高亮, 休息日放白, 检测资金奖励和荣誉奖励为都0就是休息日了
+◆没法像剧情模式那样统一高亮, 只能在切换页面的时候单独判断并设置了
 
 */
 
@@ -468,215 +477,215 @@ let tbodyArray01 = [
 let ItemsNameList = {
 	
 	// 任务名称
-	1 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	2 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	3 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	4 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	5 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
-	6 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
-	7 :    ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	8 :    ['敌方炮击阵地',					'敵方炮擊陣地',					'Enemy Artillery Position Group',				'敵砲撃陣地',									],
-	9 :    ['敌方炮击阵地群',				'敵方炮擊陣地群',				'Enemy Artillery Position Stronghold',			'敵砲撃陣地群',									],
-	10 :   ['敌方炮击阵地据点',				'敵方炮擊陣地據點',				'Enemy Artillery Stronghold',					'敵砲撃陣地拠点',								],
-	11 :   ['敌方要塞炮阵地',				'敵方要塞炮陣地',				'Enemy Stronghold Artillery Position',			'敵要塞砲陣地',									],
-	12 :   ['敌方要塞炮据点',				'敵方要塞炮據點',				'Enemy Stronghold Artillery Stronghold',		'敵要塞砲拠点',									],
-	13 :   ['敌方武器补给线',				'敵方武器補給線',				'Enemy Weapon Supply Chain',					'敵兵器補給線',									],
-	14 :   ['敌方装甲补给线',				'敵方裝甲補給線',				'Enemy Armor Supply Chain',						'敵装甲補給線',									],
-	15 :   ['敌方兵员补给线',				'敵方兵員補給線',				'Enemy Soldiers Supply Chain',					'敵兵力補給線',									],
-	16 :   ['敌方建材物资补给线',			'敵方建材物資補給線',			'Enemy Building Materials Supply Chain',		'敵建材物資補給線',								],
-	17 :   ['敌方战略物资补给线',			'敵方戰略物資補給線',			'Enemy Strategic Materials Supply Chain',		'敵戦略物資補給線',								],
-	18 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
-	19 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
-	20 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
-	21 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
-	22 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
-	23 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
-	24 :   ['敌方大型工业区',				'敵方大型工業區',				'Enemy Large Industrial Zone',					'敵大型工業地帯',								],
-	25 :   ['叛军集结点',					'叛軍集結點',					'Rebel Assembly Point',							'反乱軍集結ポイント',							],
-	26 :   ['叛军示威区',					'叛軍示威區',					'Rebel Demonstration Area',						'反乱軍デモ',									],
-	27 :   ['叛军据点',						'叛軍據點',						'Rebel Strongholds',							'反乱軍拠点',									],
-	28 :   ['叛军基地',						'叛軍基地',						'Rebel Bases',									'反乱軍基地',									],
-	29 :   ['叛军防卫圈',					'叛軍防衛圈',					'Rebel Defense Circle',							'反乱軍防衛隊',									],
-	30 :   ['叛军总部',						'叛軍總部',						'Rebel Headquarters',							'反乱軍本部',									],
-	31 :   ['营救行动',						'營救行動',						'Operation Rescue',								'救出作戦',										],
-	32 :   ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
-	33 :   ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
-	34 :   ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
-	35 :   ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
-	36 :   ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット: 「ハンター」エール',				],
-	37 :   ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Grenadier', 				'ボスユニット: 「スロワー」BM500',				],
-	38 :   ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット: 「バーサーカー」レッドアイ',		],
-	39 :   ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット: 「首狩り」ブルー伯爵',			],
-	40 :   ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット: 「要塞」ホワイト将軍',			],
-	101 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	102 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	103 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	104 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	105 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	106 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	107 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	108 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	111 :  ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
-	112 :  ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
-	113 :  ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
-	114 :  ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
-	115 :  ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット:「ハンター」エール',				],
-	116 :  ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Thrower', 					'ボスユニット:「スロワー」BM500',				],
-	117 :  ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット:「バーサーカー」レッドアイ',		],
-	118 :  ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット:「首狩り」ブルー伯爵',			],
-	119 :  ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット:「要塞」ホワイト将軍',			],
+	1 :    ['敌方机体工厂',					'敵機体工場',									'Enemy Mecha Factory',							],
+	2 :    ['敌方机体工厂',					'敵機体工場',									'Enemy Mecha Factory',							],
+	3 :    ['敌方装甲工厂',					'敵装甲工場',									'Enemy Armor Factory',							],
+	4 :    ['敌方装甲工厂',					'敵装甲工場',									'Enemy Armor Factory',							],
+	5 :    ['敌方火炮工厂',					'敵砲兵工場',									'Enemy Artillery Factory',						],
+	6 :    ['敌方火炮工厂',					'敵砲兵工場',									'Enemy Artillery Factory',						],
+	7 :    ['敌方大型工厂',					'敵大型プラント',								'Enemy Large Factory',							],
+	8 :    ['敌方炮击阵地',					'敵砲撃陣地',									'Enemy Artillery Position Group',				],
+	9 :    ['敌方炮击阵地群',				'敵砲撃陣地群',									'Enemy Artillery Position Stronghold',			],
+	10 :   ['敌方炮击阵地据点',				'敵砲撃陣地拠点',								'Enemy Artillery Stronghold',					],
+	11 :   ['敌方要塞炮阵地',				'敵要塞砲陣地',									'Enemy Stronghold Artillery Position',			],
+	12 :   ['敌方要塞炮据点',				'敵要塞砲拠点',									'Enemy Stronghold Artillery Stronghold',		],
+	13 :   ['敌方武器补给线',				'敵兵器補給線',									'Enemy Weapon Supply Chain',					],
+	14 :   ['敌方装甲补给线',				'敵装甲補給線',									'Enemy Armor Supply Chain',						],
+	15 :   ['敌方兵员补给线',				'敵兵力補給線',									'Enemy Soldiers Supply Chain',					],
+	16 :   ['敌方建材物资补给线',			'敵建材物資補給線',								'Enemy Building Materials Supply Chain',		],
+	17 :   ['敌方战略物资补给线',			'敵戦略物資補給線',								'Enemy Strategic Materials Supply Chain',		],
+	18 :   ['敌方机体工业区',				'敵機体工業地帯',								'Enemy Mecha Industrial Zone',					],
+	19 :   ['敌方机体工业区',				'敵機体工業地帯',								'Enemy Mecha Industrial Zone',					],
+	20 :   ['敌方装甲工业区',				'敵装甲工業地帯',								'Enemy Armor Industrial Zone',					],
+	21 :   ['敌方装甲工业区',				'敵装甲工業地帯',								'Enemy Armor Industrial Zone',					],
+	22 :   ['敌方火炮工业区',				'敵砲兵工業地帯',								'Enemy Artillery Industrial Zone',				],
+	23 :   ['敌方火炮工业区',				'敵砲兵工業地帯',								'Enemy Artillery Industrial Zone',				],
+	24 :   ['敌方大型工业区',				'敵大型工業地帯',								'Enemy Large Industrial Zone',					],
+	25 :   ['叛军集结点',					'反乱軍集結ポイント',							'Rebel Assembly Point',							],
+	26 :   ['叛军示威区',					'反乱軍デモ',									'Rebel Demonstration Area',						],
+	27 :   ['叛军据点',						'反乱軍拠点',									'Rebel Strongholds',							],
+	28 :   ['叛军基地',						'反乱軍基地',									'Rebel Bases',									],
+	29 :   ['叛军防卫圈',					'反乱軍防衛隊',									'Rebel Defense Circle',							],
+	30 :   ['叛军总部',						'反乱軍本部',									'Rebel Headquarters',							],
+	31 :   ['营救行动',						'救出作戦',										'Operation Rescue',								],
+	32 :   ['精锐部队: 渗透小队',			'精鋭部隊: 潜入小隊',							'Elite Force: Infiltration Squad', 				],
+	33 :   ['精锐部队: 掷弹小队',			'精鋭部隊: 擲弾小隊',							'Elite Force: Grenade Squad', 					],
+	34 :   ['精锐部队: 冲锋小队',			'精鋭部隊: 突撃小隊',							'Elite Force: Charge Squad', 					],
+	35 :   ['精锐部队: 狙击小队',			'精鋭部隊: 狙撃小隊',							'Elite Force: Sniper Squad', 					],
+	36 :   ['首领: 埃尔: 猎杀者',			'ボスユニット: 「ハンター」エール',				'Boss Unit: El - Hunter', 						],
+	37 :   ['首领: BM500:投掷者',			'ボスユニット: 「スロワー」BM500',				'Boss Unit: BM500 - Grenadier', 				],
+	38 :   ['首领: 红目: 狂战士',			'ボスユニット: 「バーサーカー」レッドアイ',		'Boss Unit: Red Eyes - Berserker', 				],
+	39 :   ['首领: 蓝伯爵割喉者',			'ボスユニット: 「首狩り」ブルー伯爵',			'Boss Unit: Count Blue - Throat Cutter', 		],
+	40 :   ['首领: 白将军: 堡垒',			'ボスユニット: 「要塞」ホワイト将軍',			'Boss Unit: General Bai - Fortress', 			],
+	101 :  ['敌方机体工厂',					'敵機体工場',									'Enemy Mecha Factory',							],
+	102 :  ['敌方机体工厂',					'敵機体工場',									'Enemy Mecha Factory',							],
+	103 :  ['敌方装甲工厂',					'敵装甲工場',									'Enemy Armor Factory',							],
+	104 :  ['敌方装甲工厂',					'敵装甲工場',									'Enemy Armor Factory',							],
+	105 :  ['敌方大型工厂',					'敵大型プラント',								'Enemy Large Factory',							],
+	106 :  ['敌方大型工厂',					'敵大型プラント',								'Enemy Large Factory',							],
+	107 :  ['敌方大型工厂',					'敵大型プラント',								'Enemy Large Factory',							],
+	108 :  ['敌方大型工厂',					'敵大型プラント',								'Enemy Large Factory',							],
+	111 :  ['精锐部队: 渗透小队',			'精鋭部隊: 潜入小隊',							'Elite Force: Infiltration Squad', 				],
+	112 :  ['精锐部队: 掷弹小队',			'精鋭部隊: 擲弾小隊',							'Elite Force: Grenade Squad', 					],
+	113 :  ['精锐部队: 冲锋小队',			'精鋭部隊: 突撃小隊',							'Elite Force: Charge Squad', 					],
+	114 :  ['精锐部队: 狙击小队',			'精鋭部隊: 狙撃小隊',							'Elite Force: Sniper Squad', 					],
+	115 :  ['首领: 埃尔: 猎杀者',			'ボスユニット:「ハンター」エール',				'Boss Unit: El - Hunter', 						],
+	116 :  ['首领: BM500:投掷者',			'ボスユニット:「スロワー」BM500',				'Boss Unit: BM500 - Thrower', 					],
+	117 :  ['首领: 红目: 狂战士',			'ボスユニット:「バーサーカー」レッドアイ',		'Boss Unit: Red Eyes - Berserker', 				],
+	118 :  ['首领: 蓝伯爵割喉者',			'ボスユニット:「首狩り」ブルー伯爵',			'Boss Unit: Count Blue - Throat Cutter', 		],
+	119 :  ['首领: 白将军: 堡垒',			'ボスユニット:「要塞」ホワイト将軍',			'Boss Unit: General Bai - Fortress', 			],
 	
-	201 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	202 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	203 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	204 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	205 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	206 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	207 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	208 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	209 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	210 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	211 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	212 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	213 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	214 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	215 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	216 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	217 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	218 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	219 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	220 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	221 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	222 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	223 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	224 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	225 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	226 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	227 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	228 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	229 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	230 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	231 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	232 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	233 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	234 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	235 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	236 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	237 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	238 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	239 :  ['敌军要塞',						'敵軍要塞',						'Enemy Stronghold',								'敵軍の要塞',									],
-	240 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	241 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	242 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	243 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	201 :  ['火力部队',						'火力部隊',										'Suppression Force',							],
+	202 :  ['火力部队',						'火力部隊',										'Suppression Force',							],
+	203 :  ['火力部队',						'火力部隊',										'Suppression Force',							],
+	204 :  ['火力部队',						'火力部隊',										'Suppression Force',							],
+	205 :  ['火力部队',						'火力部隊',										'Suppression Force',							],
+	206 :  ['照射部队',						'照射部隊',										'Irradiation Force',							],
+	207 :  ['照射部队',						'照射部隊',										'Irradiation Force',							],
+	208 :  ['照射部队',						'照射部隊',										'Irradiation Force',							],
+	209 :  ['照射部队',						'照射部隊',										'Irradiation Force',							],
+	210 :  ['照射部队',						'照射部隊',										'Irradiation Force',							],
+	211 :  ['元素部队',						'特殊部隊',										'Special Forces',								],
+	212 :  ['元素部队',						'特殊部隊',										'Special Forces',								],
+	213 :  ['元素部队',						'特殊部隊',										'Special Forces',								],
+	214 :  ['元素部队',						'特殊部隊',										'Special Forces',								],
+	215 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	216 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	217 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	218 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	219 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	220 :  ['能量部队',						'エネルギー部隊',								'Energy Forces',								],
+	221 :  ['装甲部队',						'装甲部隊',										'Armored Force',								],
+	222 :  ['装甲部队',						'装甲部隊',										'Armored Force',								],
+	223 :  ['装甲部队',						'装甲部隊',										'Armored Force',								],
+	224 :  ['装甲部队',						'装甲部隊',										'Armored Force',								],
+	225 :  ['爆破部队',						'爆破部隊',										'EOD',											],
+	226 :  ['爆破部队',						'爆破部隊',										'EOD',											],
+	227 :  ['爆破部队',						'爆破部隊',										'EOD',											],
+	228 :  ['爆破部队',						'爆破部隊',										'EOD',											],
+	229 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	230 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	231 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	232 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	233 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	234 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	235 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	236 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	237 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	238 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	239 :  ['敌军要塞',						'敵軍の要塞',									'Enemy Stronghold',								],
+	240 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	241 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
+	242 :  ['精英部队',						'エリート部隊',									'Elite Force',									],
+	243 :  ['高阶精英部队',					'精鋭エリート部隊',								'Advanced Elite Force',							],
 	
-	1101 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1102 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1103 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1104 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1105 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1106 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1107 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1108 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1109 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1110 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
-	1111 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1112 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
-	1113 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
-	1131 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1132 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
-	1133 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1134 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1135 : ['叛军炮击阵地秘密破坏',			'叛軍炮擊陣地秘密破壞',			'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1136 : ['叛军补给设施秘密破坏',			'叛軍補給設施秘密破壞',			'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
-	1140 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
-	1141 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1142 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1151 : ['叛军总部歼灭',					'叛軍總部殲滅',					'Destruction of Rebel HQ',						'反乱軍本部の壊滅',								],
-	1152 : ['复仇之战',						'復仇之戰',						'Battle of f Revenge',							'復讐の戦い',									],
+	1101 : ['叛军炮击阵地秘密破坏',			'反乱軍砲撃陣地の潜入破壊',						'Secret destruction of rebel artillery ',		],
+	1102 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の潜入破壊',						'Secret destruction of rebel supplies',			],
+	1103 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の潜入破壊',						'Secret destruction of rebel supplies',			],
+	1104 : ['叛军据点渗透',					'反乱軍の拠点浸透',								'Infiltration of rebel strongholds',			],
+	1105 : ['叛军炮击阵地秘密破坏',			'反乱軍砲撃陣地の潜入破壊',						'Secret destruction of rebel artillery ',		],
+	1106 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の潜入破壊',						'Secret destruction of rebel supplies',			],
+	1107 : ['叛军据点渗透',					'反乱軍の拠点浸透',								'Infiltration of rebel strongholds',			],
+	1108 : ['叛军炮击阵地秘密破坏',			'反乱軍砲撃陣地の潜入破壊',						'Secret destruction of rebel artillery ',		],
+	1109 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の潜入破壊',						'Secret destruction of rebel supplies',			],
+	1110 : ['叛军要塞炮台渗透',				'反乱軍要塞砲浸透',								'Rebel fortress artillery infiltration',		],
+	1111 : ['叛军精英刺杀',					'反乱軍エリート暗殺',							'Assassination by rebel elites',				],
+	1112 : ['叛军要塞渗透',					'反乱軍要塞の浸透',								'Rebel fortress infiltration',					],
+	1113 : ['叛军要塞渗透',					'反乱軍要塞の浸透',								'Rebel fortress infiltration',					],
+	1131 : ['叛军炮击阵地秘密破坏',			'反乱軍砲撃陣地の潜入破壊',						'Secret destruction of rebel artillery ',		],
+	1132 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の秘密破壊',						'Secret destruction of rebel supplies',			],
+	1133 : ['叛军据点渗透',					'反乱軍の拠点浸透',								'Infiltration of rebel strongholds',			],
+	1134 : ['叛军据点渗透',					'反乱軍の拠点浸透',								'Infiltration of rebel strongholds',			],
+	1135 : ['叛军炮击阵地秘密破坏',			'反乱軍砲撃陣地の潜入破壊',						'Secret destruction of rebel artillery ',		],
+	1136 : ['叛军补给设施秘密破坏',			'反乱軍補給施設の秘密破壊',						'Secret destruction of rebel supplies',			],
+	1140 : ['叛军要塞炮台渗透',				'反乱軍要塞砲浸透',								'Rebel fortress artillery infiltration',		],
+	1141 : ['叛军精英刺杀',					'反乱軍エリート暗殺',							'Assassination by rebel elites',				],
+	1142 : ['叛军精英刺杀',					'反乱軍エリート暗殺',							'Assassination by rebel elites',				],
+	1151 : ['叛军总部歼灭',					'反乱軍本部の壊滅',								'Destruction of Rebel HQ',						],
+	1152 : ['复仇之战',						'復讐の戦い',									'Battle of f Revenge',							],
 	
 	// 任务描述
-	A :  ['敌方机体工厂, 很多建筑, 少量炮台',				'敵方機體工廠, 很多建築, 少量炮臺',					'Enemy mecha factories, a lot of buildings, a small number of turrets',				'敵の機体工場, 建物が多く、砲台は少ない',						],
-	B :  ['敌方炮击阵地, 目标坚固, 有严密的防御工事',		'敵方炮擊陣地, 目標堅固, 有嚴密的防禦工事',			'Enemy artillery positions, fortified targets, tight fortifications',				'敵の砲撃陣地, 標的は強固, 堅牢な防衛施設',						],
-	C :  ['敌方的补给线, 必须在敌方车辆通过之前摧毁',		'敵方的補給線, 必須在敵方車輛通過之前摧毀',			'Enemy supply chains, which must be destroyed before enemy vehicles can pass',		'敵の補給線, 敵の車両が通過する前に破壊する必要がある',			],
-	D :  ['叛军在此集结, 影响我们的工业产出',				'叛軍在此集結, 影響我們的工業產出',					'The rebels have amassed forces here, affecting our industrial output',				'反乱軍はここに集結し、我々の工業生産に影響を与えている',		],
-	E :  ['需要全歼敌方这些精锐部队',						'需要全殲敵方這些精銳部隊',							'Enemy Elite Force',																'敵軍精鋭部隊',													],
-	F :  ['歼灭委托, 歼灭这一批散兵',						'殲滅委託, 殲滅這一批散兵',							'Destroy a group of scattered soldiers',											'殲滅依頼, 一群の散兵を殲滅する',								],
-	G :  ['击败敌方首领单位',								'擊敗敵方首領單位',									'Enemy Boss units',																	'敵軍ボスユニット',												],
-	Ma : ['需要摧毁敌方运输车队完成营救行动',				'需要摧毀敵方運輸車隊完成營救行動',					'Destroy enemy transport convoys to complete rescue operation',						'敵輸送船団を撃破し、救出作戦を完了させる, ',					],
-	C0 : ['潜入任务, 秘密完成或消灭所有敌人',				'潛入任務, 秘密完成或消滅所有敵人',					'Infiltrate missions, secretly complete or eliminate all',							'潜入任務, 秘密裏に完遂、またはすべての人員を消滅させる',		],
+	A :  ['敌方机体工厂, 很多建筑, 少量炮台',				'敵の機体工場, 建物が多く、砲台は少ない',						'Enemy mecha factories, a lot of buildings, a small number of turrets',				],
+	B :  ['敌方炮击阵地, 目标坚固, 有严密的防御工事',		'敵の砲撃陣地, 標的は強固, 堅牢な防衛施設',						'Enemy artillery positions, fortified targets, tight fortifications',				],
+	C :  ['敌方的补给线, 必须在敌方车辆通过之前摧毁',		'敵の補給線, 敵の車両が通過する前に破壊する必要がある',			'Enemy supply chains, which must be destroyed before enemy vehicles can pass',		],
+	D :  ['叛军在此集结, 影响我们的工业产出',				'反乱軍はここに集結し、我々の工業生産に影響を与えている',		'The rebels have amassed forces here, affecting our industrial output',				],
+	E :  ['需要全歼敌方这些精锐部队',						'敵軍精鋭部隊',													'Enemy Elite Force',																],
+	F :  ['歼灭委托, 歼灭这一批散兵',						'殲滅依頼, 一群の散兵を殲滅する',								'Destroy a group of scattered soldiers',											],
+	G :  ['击败敌方首领单位',								'敵軍ボスユニット',												'Enemy Boss units',																	],
+	Ma : ['需要摧毁敌方运输车队完成营救行动',				'敵輸送船団を撃破し、救出作戦を完了させる, ',					'Destroy enemy transport convoys to complete rescue operation',						],
+	C0 : ['潜入任务, 秘密完成或消灭所有敌人',				'潜入任務, 秘密裏に完遂、またはすべての人員を消滅させる',		'Infiltrate missions, secretly complete or eliminate all',							],
 	
 	// 存在影响
-	DefaultMoneyMinus :				['每日基础工资减少',	'每日基礎工資減少',		'Lower basic salary',					'基本給低下: ',				],
-	DefaultManpowerMinus :			['基地建设人力减少',	'基地建設人力減少',		'Manpower consumption: -',				'インフラ人力: -',			],
-	EnemyStrengthen_Speed :			['敌方移动速度强化',	'敵方移動速度強化',		'Enemy Movement speed Enhancement',		'敵移動速度強化',			],
-	EnemyStrengthen_Life :			['敌方生命上限强化',	'敵方生命上限強化',		'Enemy HP Enhanced',					'敵HP強化',					],
-	EnemyStrengthen_FireRate :		['敌方射击间隔减少',	'敵方射擊間隔減少',		'Enemy Firing rate Enhancement',		'敵射撃間隔強化',			],
-	EnemyStrengthen_Armor :			['敌方穿甲抵抗强化',	'敵方穿甲抵抗強化',		'Enemy Resistance Enhanced',			'敵抵抗強化',				],
-	EnemyStrengthen_ReloadRate :	['敌方换弹时间减少',	'敵方換彈時間減少',		'Enemy Reload speed Enhancement',		'敵リロード時間強化',		],
-	EnemyStrengthen_RangePlus :		['敌方武器射程强化',	'敵方武器射程強化',		'Enemy Range Enhanced',					'敵射程強化',				],
-	EnemyStrengthen_DamagePlus :	['敌方武器伤害强化',	'敵方武器傷害強化',		'Enemy Damage Enhancement',				'敵ダメージ強化',			],
-	EnemyStrengthen_All :			['敌方全面属性强化',	'敵方全面屬性強化',		'Enemy All Stats Enhanced',				'敵全ステータス強化',		],
+	DefaultMoneyMinus :				['每日基础工资减少',		'基本給低下: ',				'Lower basic salary',					],
+	DefaultManpowerMinus :			['基地建设人力减少',		'インフラ人力: -',			'Manpower consumption: -',				],
+	EnemyStrengthen_Speed :			['敌方移动速度强化',		'敵移動速度強化',			'Enemy Movement speed Enhancement',		],
+	EnemyStrengthen_Life :			['敌方生命上限强化',		'敵HP強化',					'Enemy HP Enhanced',					],
+	EnemyStrengthen_FireRate :		['敌方射击间隔减少',		'敵射撃間隔強化',			'Enemy Firing rate Enhancement',		],
+	EnemyStrengthen_Armor :			['敌方穿甲抵抗强化',		'敵抵抗強化',				'Enemy Resistance Enhanced',			],
+	EnemyStrengthen_ReloadRate :	['敌方换弹时间减少',		'敵リロード時間強化',		'Enemy Reload speed Enhancement',		],
+	EnemyStrengthen_RangePlus :		['敌方武器射程强化',		'敵射程強化',				'Enemy Range Enhanced',					],
+	EnemyStrengthen_DamagePlus :	['敌方武器伤害强化',		'敵ダメージ強化',			'Enemy Damage Enhancement',				],
+	EnemyStrengthen_All :			['敌方全面属性强化',		'敵全ステータス強化',		'Enemy All Stats Enhanced',				],
 	
 	// 任务类型
-	OutMission :  ['外围阵地',		'週邊陣地',			'Perimeter Positions',				'外周陣地',		],
-	Elimination : ['歼灭委托',		'殲滅委託',			'Destruction Commission',			'殲滅依頼',		],
-	Assasin :     ['渗透刺杀',		'滲透刺殺',			'Penetration Assassination',		'浸透暗殺',		],
+	OutMission :  ['外围阵地',		'外周陣地',		'Perimeter Positions',				],
+	Elimination : ['歼灭委托',		'殲滅依頼',		'Destruction Commission',			],
+	Assasin :     ['渗透刺杀',		'浸透暗殺',		'Penetration Assassination',		],
 	
 	// 难度系数
-	Normal :   	['普通',	'普通',		'Normal',		'通常',				],
-	Hard :     	['较强',	'較強',		'Hard',			'やや強い',			],
-	UltraHard :	['极强',	'極強',		'Nightmare',	'非常に強い',		],
+	Normal :   	['普通',		'通常',				'Normal',			],
+	Hard :     	['较强',		'やや強い',			'Hard',				],
+	UltraHard :	['极强',		'非常に強い',		'Nightmare',		],
 	
 	// 任务奖励
-	reward_13 :	['标准勋章',		'標準勳章',			'Standard Medal',				'制式メダル',				],
-	reward_14 :	['英雄勋章',		'英雄勳章',			'Hero Medal',					'英雄メダル',				],
+	reward_13 :	['标准勋章',		'制式メダル',		'Standard Medal',				],
+	reward_14 :	['英雄勋章',		'英雄メダル',		'Hero Medal',					],
 	
-	reward_Honor : ['荣誉',			'榮譽',				'Honor',						'名誉ポイント',				],
-	reward_Money : ['资金',			'資金',				'Funding',						'資金',						],
+	reward_Honor : ['荣誉',			'名誉ポイント',		'Honor',						],
+	reward_Money : ['资金',			'資金',				'Funding',						],
 	
-	reward_40001 : ['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
-	reward_40002 : ['废料',			'廢料',				'Waste Material',				'スクラップ',				],
-	reward_40005 : ['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
-	reward_40006 : ['齿轮',			'齒輪',				'Gear',							'ギア',						],
-	reward_40007 : ['框架',			'框架',				'Frame',						'フレーム',					],
+	reward_40001 : ['废铁',			'スクラップアイロン',		'Scrap Iron',					],
+	reward_40002 : ['废料',			'スクラップ',				'Waste Material',				],
+	reward_40005 : ['接合物件',		'接続オブジェクト',			'Joining Component',			],
+	reward_40006 : ['齿轮',			'ギア',						'Gear',							],
+	reward_40007 : ['框架',			'フレーム',					'Frame',						],
 	
-	reward_40003 : ['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
-	reward_40008 : ['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
-	reward_40009 : ['扳机',			'扳機',				'Trigger',						'トリガー',					],
+	reward_40003 : ['弹壳',			'薬莢',						'Bullet Shell',					],
+	reward_40008 : ['铁管',			'鉄パイプ',					'Iron Pipe',					],
+	reward_40009 : ['扳机',			'トリガー',					'Trigger',						],
 	
-	reward_40021 : ['润滑油',		'潤滑油',			'Lubricating Oil',				'潤滑油',					],
-	reward_40022 : ['火花塞',		'火花塞',			'Spark Plug',					'スパークプラグ',			],
-	reward_40023 : ['冷冻剂',		'冷凍劑',			'Refrigerant',					'冷媒',						],
+	reward_40021 : ['润滑油',		'潤滑油',					'Lubricating Oil',				],
+	reward_40022 : ['火花塞',		'スパークプラグ',			'Spark Plug',					],
+	reward_40023 : ['冷冻剂',		'冷媒',						'Refrigerant',					],
 	
-	reward_40028 : ['共振器',		'共振器',			'Resonator',					'共振器',					],
-	reward_40029 : ['刀片',			'刀片',				'Blade',						'ブレード',					],
-	reward_40030 : ['振荡器',		'振盪器',			'Oscillator',					'発振回路',					],
+	reward_40028 : ['共振器',		'共振器',					'Resonator',					],
+	reward_40029 : ['刀片',			'ブレード',					'Blade',						],
+	reward_40030 : ['振荡器',		'発振回路',					'Oscillator',					],
 	
-	reward_40017 : ['线圈',			'線圈',				'Coil',							'コイル',					],
-	reward_40018 : ['电容',			'電容',				'Capacitor',					'コンデンサ',				],
-	reward_40019 : ['电感',			'電感',				'Inductor',						'インダクター',				],
+	reward_40017 : ['线圈',			'コイル',					'Coil',							],
+	reward_40018 : ['电容',			'コンデンサ',				'Capacitor',					],
+	reward_40019 : ['电感',			'インダクター',				'Inductor',						],
 	
-	reward_40026 : ['力场管',		'力場管',			'Force Field Generator',		'力場パイプ',				],
-	reward_40027 : ['力场膜',		'力場膜',			'Force Field Membrane',			'力場膜',					],
+	reward_40026 : ['力场管',		'力場パイプ',				'Force Field Generator',		],
+	reward_40027 : ['力场膜',		'力場膜',					'Force Field Membrane',			],
 	
-	reward_40013 : ['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
-	reward_40014 : ['透镜',			'透鏡',				'Lens',							'レンズ',					],
+	reward_40013 : ['棱镜',			'プリズム',					'Prism',						],
+	reward_40014 : ['透镜',			'レンズ',					'Lens',							],
 	
-	reward_40024 : ['装甲',			'裝甲',				'Armor',						'装甲',						],
-	reward_40025 : ['厚装甲',		'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
+	reward_40024 : ['装甲',			'装甲',						'Armor',						],
+	reward_40025 : ['厚装甲',		'厚い装甲',					'Heavy Armor',					],
 	
-	reward_40011 : ['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
+	reward_40011 : ['工业塑料',		'工業用プラスチック',		'Industrial Plastic',			],
 	
-	reward_40015 : ['点火器',		'點火器',			'Igniter',						'イグナイター',				],
-	reward_40016 : ['冷凝管',		'冷凝管',			'Condenser',					'復水管',					],
-	reward_40020 : ['三极管',		'三極管',			'Transistor',					'三極管',					],
+	reward_40015 : ['点火器',		'イグナイター',				'Igniter',						],
+	reward_40016 : ['冷凝管',		'復水管',					'Condenser',					],
+	reward_40020 : ['三极管',		'三極管',					'Transistor',					],
 	
-	reward_40004 : ['弹头',			'彈頭',				'Warhead',						'弾頭',						],
-	reward_40010 : ['雷管',			'雷管',				'Detonator',					'起爆装置',					],
-	reward_40031 : ['涂层',			'塗層',				'Coating',						'コーティング',				],
-	reward_40012 : ['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
-	reward_40032 : ['核心',			'核心',				'Core',							'コア',						],
+	reward_40004 : ['弹头',			'弾頭',						'Warhead',						],
+	reward_40010 : ['雷管',			'起爆装置',					'Detonator',					],
+	reward_40031 : ['涂层',			'コーティング',				'Coating',						],
+	reward_40012 : ['弹链',			'弾帯',						'Ammunition Belt',				],
+	reward_40032 : ['核心',			'コア',						'Core',							],
 	
 };
 
@@ -815,133 +824,133 @@ let outMissionsSrc = {
 // 任务名称
 let outMissionsStr = {
 	
-	1 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	2 :    ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	3 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	4 :    ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	5 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
-	6 :    ['敌方火炮工厂',					'敵方火炮工廠',					'Enemy Artillery Factory',						'敵砲兵工場',									],
-	7 :    ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	8 :    ['敌方炮击阵地',					'敵方炮擊陣地',					'Enemy Artillery Position Group',				'敵砲撃陣地',									],
-	9 :    ['敌方炮击阵地群',				'敵方炮擊陣地群',				'Enemy Artillery Position Stronghold',			'敵砲撃陣地群',									],
-	10 :   ['敌方炮击阵地据点',				'敵方炮擊陣地據點',				'Enemy Artillery Stronghold',					'敵砲撃陣地拠点',								],
-	11 :   ['敌方要塞炮阵地',				'敵方要塞炮陣地',				'Enemy Stronghold Artillery Position',			'敵要塞砲陣地',									],
-	12 :   ['敌方要塞炮据点',				'敵方要塞炮據點',				'Enemy Stronghold Artillery Stronghold',		'敵要塞砲拠点',									],
-	13 :   ['敌方武器补给线',				'敵方武器補給線',				'Enemy Weapon Supply Chain',					'敵兵器補給線',									],
-	14 :   ['敌方装甲补给线',				'敵方裝甲補給線',				'Enemy Armor Supply Chain',						'敵装甲補給線',									],
-	15 :   ['敌方兵员补给线',				'敵方兵員補給線',				'Enemy Soldiers Supply Chain',					'敵兵力補給線',									],
-	16 :   ['敌方建材物资补给线',			'敵方建材物資補給線',			'Enemy Building Materials Supply Chain',		'敵建材物資補給線',								],
-	17 :   ['敌方战略物资补给线',			'敵方戰略物資補給線',			'Enemy Strategic Materials Supply Chain',		'敵戦略物資補給線',								],
-	18 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
-	19 :   ['敌方机体工业区',				'敵方機體工業區',				'Enemy Mecha Industrial Zone',					'敵機体工業地帯',								],
-	20 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
-	21 :   ['敌方装甲工业区',				'敵方裝甲工業區',				'Enemy Armor Industrial Zone',					'敵装甲工業地帯',								],
-	22 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
-	23 :   ['敌方火炮工业区',				'敵方火炮工業區',				'Enemy Artillery Industrial Zone',				'敵砲兵工業地帯',								],
-	24 :   ['敌方大型工业区',				'敵方大型工業區',				'Enemy Large Industrial Zone',					'敵大型工業地帯',								],
-	25 :   ['叛军集结点',					'叛軍集結點',					'Rebel Assembly Point',							'反乱軍集結ポイント',							],
-	26 :   ['叛军示威区',					'叛軍示威區',					'Rebel Demonstration Area',						'反乱軍デモ',									],
-	27 :   ['叛军据点',						'叛軍據點',						'Rebel Strongholds',							'反乱軍拠点',									],
-	28 :   ['叛军基地',						'叛軍基地',						'Rebel Bases',									'反乱軍基地',									],
-	29 :   ['叛军防卫圈',					'叛軍防衛圈',					'Rebel Defense Circle',							'反乱軍防衛隊',									],
-	30 :   ['叛军总部',						'叛軍總部',						'Rebel Headquarters',							'反乱軍本部',									],
-	31 :   ['营救行动',						'營救行動',						'Operation Rescue',								'救出作戦',										],
-	32 :   ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
-	33 :   ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
-	34 :   ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
-	35 :   ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
-	36 :   ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット: 「ハンター」エール',				],
-	37 :   ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Grenadier', 				'ボスユニット: 「スロワー」BM500',				],
-	38 :   ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット: 「バーサーカー」レッドアイ',		],
-	39 :   ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット: 「首狩り」ブルー伯爵',			],
-	40 :   ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット: 「要塞」ホワイト将軍',			],
-	101 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	102 :  ['敌方机体工厂',					'敵方機體工廠',					'Enemy Mecha Factory',							'敵機体工場',									],
-	103 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	104 :  ['敌方装甲工厂',					'敵方裝甲工廠',					'Enemy Armor Factory',							'敵装甲工場',									],
-	105 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	106 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	107 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	108 :  ['敌方大型工厂',					'敵方大型工廠',					'Enemy Large Factory',							'敵大型プラント',								],
-	111 :  ['精锐部队: 渗透小队',			'精銳部隊: 滲透小隊',			'Elite Force: Infiltration Squad', 				'精鋭部隊: 潜入小隊',							],
-	112 :  ['精锐部队: 掷弹小队',			'精銳部隊: 擲彈小隊',			'Elite Force: Grenade Squad', 					'精鋭部隊: 擲弾小隊',							],
-	113 :  ['精锐部队: 冲锋小队',			'精銳部隊: 衝鋒小隊',			'Elite Force: Charge Squad', 					'精鋭部隊: 突撃小隊',							],
-	114 :  ['精锐部队: 狙击小队',			'精銳部隊: 狙擊小隊',			'Elite Force: Sniper Squad', 					'精鋭部隊: 狙撃小隊',							],
-	115 :  ['首领: 埃尔: 猎杀者',			'首領單位: 埃爾: 獵殺者',		'Boss Unit: El - Hunter', 						'ボスユニット:「ハンター」エール',				],
-	116 :  ['首领: BM500:投掷者',			'首領單位: BM500:投擲者',		'Boss Unit: BM500 - Thrower', 					'ボスユニット:「スロワー」BM500',				],
-	117 :  ['首领: 红目: 狂战士',			'首領單位: 紅目: 狂戰士',		'Boss Unit: Red Eyes - Berserker', 				'ボスユニット:「バーサーカー」レッドアイ',		],
-	118 :  ['首领: 蓝伯爵割喉者',			'首領單位: 藍伯爵割喉者',		'Boss Unit: Count Blue - Throat Cutter', 		'ボスユニット:「首狩り」ブルー伯爵',			],
-	119 :  ['首领: 白将军: 堡垒',			'首領單位: 白將軍: 堡壘',		'Boss Unit: General Bai - Fortress', 			'ボスユニット:「要塞」ホワイト将軍',			],
+	1 :    ['敌方机体工厂',					'敵機体工場',										'Enemy Mecha Factory',							],
+	2 :    ['敌方机体工厂',					'敵機体工場',										'Enemy Mecha Factory',							],
+	3 :    ['敌方装甲工厂',					'敵装甲工場',										'Enemy Armor Factory',							],
+	4 :    ['敌方装甲工厂',					'敵装甲工場',										'Enemy Armor Factory',							],
+	5 :    ['敌方火炮工厂',					'敵砲兵工場',										'Enemy Artillery Factory',						],
+	6 :    ['敌方火炮工厂',					'敵砲兵工場',										'Enemy Artillery Factory',						],
+	7 :    ['敌方大型工厂',					'敵大型プラント',									'Enemy Large Factory',							],
+	8 :    ['敌方炮击阵地',					'敵砲撃陣地',										'Enemy Artillery Position Group',				],
+	9 :    ['敌方炮击阵地群',				'敵砲撃陣地群',										'Enemy Artillery Position Stronghold',			],
+	10 :   ['敌方炮击阵地据点',				'敵砲撃陣地拠点',									'Enemy Artillery Stronghold',					],
+	11 :   ['敌方要塞炮阵地',				'敵要塞砲陣地',										'Enemy Stronghold Artillery Position',			],
+	12 :   ['敌方要塞炮据点',				'敵要塞砲拠点',										'Enemy Stronghold Artillery Stronghold',		],
+	13 :   ['敌方武器补给线',				'敵兵器補給線',										'Enemy Weapon Supply Chain',					],
+	14 :   ['敌方装甲补给线',				'敵装甲補給線',										'Enemy Armor Supply Chain',						],
+	15 :   ['敌方兵员补给线',				'敵兵力補給線',										'Enemy Soldiers Supply Chain',					],
+	16 :   ['敌方建材物资补给线',			'敵建材物資補給線',									'Enemy Building Materials Supply Chain',		],
+	17 :   ['敌方战略物资补给线',			'敵戦略物資補給線',									'Enemy Strategic Materials Supply Chain',		],
+	18 :   ['敌方机体工业区',				'敵機体工業地帯',									'Enemy Mecha Industrial Zone',					],
+	19 :   ['敌方机体工业区',				'敵機体工業地帯',									'Enemy Mecha Industrial Zone',					],
+	20 :   ['敌方装甲工业区',				'敵装甲工業地帯',									'Enemy Armor Industrial Zone',					],
+	21 :   ['敌方装甲工业区',				'敵装甲工業地帯',									'Enemy Armor Industrial Zone',					],
+	22 :   ['敌方火炮工业区',				'敵砲兵工業地帯',									'Enemy Artillery Industrial Zone',				],
+	23 :   ['敌方火炮工业区',				'敵砲兵工業地帯',									'Enemy Artillery Industrial Zone',				],
+	24 :   ['敌方大型工业区',				'敵大型工業地帯',									'Enemy Large Industrial Zone',					],
+	25 :   ['叛军集结点',					'反乱軍集結ポイント',								'Rebel Assembly Point',							],
+	26 :   ['叛军示威区',					'反乱軍デモ',										'Rebel Demonstration Area',						],
+	27 :   ['叛军据点',						'反乱軍拠点',										'Rebel Strongholds',							],
+	28 :   ['叛军基地',						'反乱軍基地',										'Rebel Bases',									],
+	29 :   ['叛军防卫圈',					'反乱軍防衛隊',										'Rebel Defense Circle',							],
+	30 :   ['叛军总部',						'反乱軍本部',										'Rebel Headquarters',							],
+	31 :   ['营救行动',						'救出作戦',											'Operation Rescue',								],
+	32 :   ['精锐部队: 渗透小队',			'精鋭部隊: 潜入小隊',								'Elite Force: Infiltration Squad', 				],
+	33 :   ['精锐部队: 掷弹小队',			'精鋭部隊: 擲弾小隊',								'Elite Force: Grenade Squad', 					],
+	34 :   ['精锐部队: 冲锋小队',			'精鋭部隊: 突撃小隊',								'Elite Force: Charge Squad', 					],
+	35 :   ['精锐部队: 狙击小队',			'精鋭部隊: 狙撃小隊',								'Elite Force: Sniper Squad', 					],
+	36 :   ['首领: 埃尔: 猎杀者',			'ボスユニット: 「ハンター」エール',					'Boss Unit: El - Hunter', 						],
+	37 :   ['首领: BM500:投掷者',			'ボスユニット: 「スロワー」BM500',					'Boss Unit: BM500 - Grenadier', 				],
+	38 :   ['首领: 红目: 狂战士',			'ボスユニット: 「バーサーカー」レッドアイ',			'Boss Unit: Red Eyes - Berserker', 				],
+	39 :   ['首领: 蓝伯爵割喉者',			'ボスユニット: 「首狩り」ブルー伯爵',				'Boss Unit: Count Blue - Throat Cutter', 		],
+	40 :   ['首领: 白将军: 堡垒',			'ボスユニット: 「要塞」ホワイト将軍',				'Boss Unit: General Bai - Fortress', 			],
+	101 :  ['敌方机体工厂',					'敵機体工場',										'Enemy Mecha Factory',							],
+	102 :  ['敌方机体工厂',					'敵機体工場',										'Enemy Mecha Factory',							],
+	103 :  ['敌方装甲工厂',					'敵装甲工場',										'Enemy Armor Factory',							],
+	104 :  ['敌方装甲工厂',					'敵装甲工場',										'Enemy Armor Factory',							],
+	105 :  ['敌方大型工厂',					'敵大型プラント',									'Enemy Large Factory',							],
+	106 :  ['敌方大型工厂',					'敵大型プラント',									'Enemy Large Factory',							],
+	107 :  ['敌方大型工厂',					'敵大型プラント',									'Enemy Large Factory',							],
+	108 :  ['敌方大型工厂',					'敵大型プラント',									'Enemy Large Factory',							],
+	111 :  ['精锐部队: 渗透小队',			'精鋭部隊: 潜入小隊',								'Elite Force: Infiltration Squad', 				],
+	112 :  ['精锐部队: 掷弹小队',			'精鋭部隊: 擲弾小隊',								'Elite Force: Grenade Squad', 					],
+	113 :  ['精锐部队: 冲锋小队',			'精鋭部隊: 突撃小隊',								'Elite Force: Charge Squad', 					],
+	114 :  ['精锐部队: 狙击小队',			'精鋭部隊: 狙撃小隊',								'Elite Force: Sniper Squad', 					],
+	115 :  ['首领: 埃尔: 猎杀者',			'ボスユニット:「ハンター」エール',					'Boss Unit: El - Hunter', 						],
+	116 :  ['首领: BM500:投掷者',			'ボスユニット:「スロワー」BM500',					'Boss Unit: BM500 - Thrower', 					],
+	117 :  ['首领: 红目: 狂战士',			'ボスユニット:「バーサーカー」レッドアイ',			'Boss Unit: Red Eyes - Berserker', 				],
+	118 :  ['首领: 蓝伯爵割喉者',			'ボスユニット:「首狩り」ブルー伯爵',				'Boss Unit: Count Blue - Throat Cutter', 		],
+	119 :  ['首领: 白将军: 堡垒',			'ボスユニット:「要塞」ホワイト将軍',				'Boss Unit: General Bai - Fortress', 			],
 	
-	201 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	202 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	203 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	204 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	205 :  ['火力部队',						'火力部隊',						'Suppression Force',							'火力部隊',										],
-	206 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	207 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	208 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	209 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	210 :  ['照射部队',						'照射部隊',						'Irradiation Force',							'照射部隊',										],
-	211 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	212 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	213 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	214 :  ['元素部队',						'元素部隊',						'Special Forces',								'特殊部隊',										],
-	215 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	216 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	217 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	218 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	219 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	220 :  ['能量部队',						'能量部隊',						'Energy Forces',								'エネルギー部隊',								],
-	221 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	222 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	223 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	224 :  ['装甲部队',						'裝甲部隊',						'Armored Force',								'装甲部隊',										],
-	225 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	226 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	227 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	228 :  ['爆破部队',						'爆破部隊',						'EOD',											'爆破部隊',										],
-	229 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	230 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	231 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	232 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	233 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	234 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	235 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	236 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	237 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	238 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	239 :  ['敌军要塞',						'敵軍要塞',						'Enemy Stronghold',								'敵軍の要塞',									],
-	240 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	241 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
-	242 :  ['精英部队',						'精英部隊',						'Elite Force',									'エリート部隊',									],
-	243 :  ['高阶精英部队',					'高階精英部隊',					'Advanced Elite Force',							'精鋭エリート部隊',								],
+	201 :  ['火力部队',						'火力部隊',											'Suppression Force',							],
+	202 :  ['火力部队',						'火力部隊',											'Suppression Force',							],
+	203 :  ['火力部队',						'火力部隊',											'Suppression Force',							],
+	204 :  ['火力部队',						'火力部隊',											'Suppression Force',							],
+	205 :  ['火力部队',						'火力部隊',											'Suppression Force',							],
+	206 :  ['照射部队',						'照射部隊',											'Irradiation Force',							],
+	207 :  ['照射部队',						'照射部隊',											'Irradiation Force',							],
+	208 :  ['照射部队',						'照射部隊',											'Irradiation Force',							],
+	209 :  ['照射部队',						'照射部隊',											'Irradiation Force',							],
+	210 :  ['照射部队',						'照射部隊',											'Irradiation Force',							],
+	211 :  ['元素部队',						'特殊部隊',											'Special Forces',								],
+	212 :  ['元素部队',						'特殊部隊',											'Special Forces',								],
+	213 :  ['元素部队',						'特殊部隊',											'Special Forces',								],
+	214 :  ['元素部队',						'特殊部隊',											'Special Forces',								],
+	215 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	216 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	217 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	218 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	219 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	220 :  ['能量部队',						'エネルギー部隊',									'Energy Forces',								],
+	221 :  ['装甲部队',						'装甲部隊',											'Armored Force',								],
+	222 :  ['装甲部队',						'装甲部隊',											'Armored Force',								],
+	223 :  ['装甲部队',						'装甲部隊',											'Armored Force',								],
+	224 :  ['装甲部队',						'装甲部隊',											'Armored Force',								],
+	225 :  ['爆破部队',						'爆破部隊',											'EOD',											],
+	226 :  ['爆破部队',						'爆破部隊',											'EOD',											],
+	227 :  ['爆破部队',						'爆破部隊',											'EOD',											],
+	228 :  ['爆破部队',						'爆破部隊',											'EOD',											],
+	229 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	230 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	231 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	232 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	233 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	234 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	235 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	236 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	237 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	238 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	239 :  ['敌军要塞',						'敵軍の要塞',										'Enemy Stronghold',								],
+	240 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	241 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
+	242 :  ['精英部队',						'エリート部隊',										'Elite Force',									],
+	243 :  ['高阶精英部队',					'精鋭エリート部隊',									'Advanced Elite Force',							],
 	
-	1100 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1101 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1102 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1103 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1104 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1105 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1106 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1107 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
-	1108 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1109 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の潜入破壊',						],
-	1110 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
-	1111 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1112 : ['叛军要塞渗透',					'叛軍要塞滲透',					'Rebel fortress infiltration',					'反乱軍要塞の浸透',								],
-	1113 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
-	1131 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1132 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
-	1133 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1134 : ['叛军据点渗透',					'叛軍據點滲透',					'Infiltration of rebel strongholds',			'反乱軍の拠点浸透',								],
-	1135 : ['叛军炮击阵破坏',				'叛軍炮擊陣破壞',				'Secret destruction of rebel artillery ',		'反乱軍砲撃陣地の潜入破壊',						],
-	1136 : ['叛军补给设施破坏',				'叛軍補給設施破壞',				'Secret destruction of rebel supplies',			'反乱軍補給施設の秘密破壊',						],
-	1140 : ['叛军要塞炮台渗透',				'叛軍要塞炮滲透',				'Rebel fortress artillery infiltration',		'反乱軍要塞砲浸透',								],
-	1141 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1142 : ['叛军精英刺杀',					'叛軍精英刺殺',					'Assassination by rebel elites',				'反乱軍エリート暗殺',							],
-	1151 : ['叛军总部歼灭',					'叛軍總部殲滅',					'Destruction of Rebel HQ',						'反乱軍本部の壊滅',								],
-	1152 : ['最终复仇之战',					'最終復仇之戰',					'Battle of f Revenge',							'復讐の戦い',									],
+	1100 : ['叛军据点渗透',					'反乱軍の拠点浸透',									'Infiltration of rebel strongholds',			],
+	1101 : ['叛军炮击阵破坏',				'反乱軍砲撃陣地の潜入破壊',							'Secret destruction of rebel artillery ',		],
+	1102 : ['叛军补给设施破坏',				'反乱軍補給施設の潜入破壊',							'Secret destruction of rebel supplies',			],
+	1103 : ['叛军补给设施破坏',				'反乱軍補給施設の潜入破壊',							'Secret destruction of rebel supplies',			],
+	1104 : ['叛军据点渗透',					'反乱軍の拠点浸透',									'Infiltration of rebel strongholds',			],
+	1105 : ['叛军炮击阵破坏',				'反乱軍砲撃陣地の潜入破壊',							'Secret destruction of rebel artillery ',		],
+	1106 : ['叛军补给设施破坏',				'反乱軍補給施設の潜入破壊',							'Secret destruction of rebel supplies',			],
+	1107 : ['叛军要塞渗透',					'反乱軍要塞の浸透',									'Rebel fortress infiltration',					],
+	1108 : ['叛军炮击阵破坏',				'反乱軍砲撃陣地の潜入破壊',							'Secret destruction of rebel artillery ',		],
+	1109 : ['叛军补给设施破坏',				'反乱軍補給施設の潜入破壊',							'Secret destruction of rebel supplies',			],
+	1110 : ['叛军要塞炮台渗透',				'反乱軍要塞砲浸透',									'Rebel fortress artillery infiltration',		],
+	1111 : ['叛军精英刺杀',					'反乱軍エリート暗殺',								'Assassination by rebel elites',				],
+	1112 : ['叛军要塞渗透',					'反乱軍要塞の浸透',									'Rebel fortress infiltration',					],
+	1113 : ['叛军要塞炮台渗透',				'反乱軍要塞砲浸透',									'Rebel fortress artillery infiltration',		],
+	1131 : ['叛军炮击阵破坏',				'反乱軍砲撃陣地の潜入破壊',							'Secret destruction of rebel artillery ',		],
+	1132 : ['叛军补给设施破坏',				'反乱軍補給施設の秘密破壊',							'Secret destruction of rebel supplies',			],
+	1133 : ['叛军据点渗透',					'反乱軍の拠点浸透',									'Infiltration of rebel strongholds',			],
+	1134 : ['叛军据点渗透',					'反乱軍の拠点浸透',									'Infiltration of rebel strongholds',			],
+	1135 : ['叛军炮击阵破坏',				'反乱軍砲撃陣地の潜入破壊',							'Secret destruction of rebel artillery ',		],
+	1136 : ['叛军补给设施破坏',				'反乱軍補給施設の秘密破壊',							'Secret destruction of rebel supplies',			],
+	1140 : ['叛军要塞炮台渗透',				'反乱軍要塞砲浸透',									'Rebel fortress artillery infiltration',		],
+	1141 : ['叛军精英刺杀',					'反乱軍エリート暗殺',								'Assassination by rebel elites',				],
+	1142 : ['叛军精英刺杀',					'反乱軍エリート暗殺',								'Assassination by rebel elites',				],
+	1151 : ['叛军总部歼灭',					'反乱軍本部の壊滅',									'Destruction of Rebel HQ',						],
+	1152 : ['最终复仇之战',					'復讐の戦い',										'Battle of f Revenge',							],
 	
 };
 
@@ -1045,99 +1054,99 @@ let holidayTaskSrc = {
 // 任务名称
 let holidayTaskStr = {
 	
-	0 :		['宿舍休息',			'宿舍休息',				'Dormitory Rest',								'寮休',									],
-	13 :	['生物质运输',			'生物質運輸',			'Biomass Transport',							'バイオマス輸送',						],
-	14 :	['罐头运输',			'罐頭運輸',				'Can Transport',								'缶詰輸送',								],
-	15 :	['食物运输',			'食物運輸',				'Food Transport',								'食料輸送',								],
-	16 :	['有机质运输',			'有機質運輸',			'Organic Compound Transport',					'有機質輸送',							],
-	17 :	['咖啡因运输',			'咖啡因運輸',			'Caffeine Transport',							'カフェイン輸送',						],
-	18 :	['甲醇运输',			'甲醇運輸',				'Methanol Transport',							'メタノール輸送',						],
-	19 :	['烟草运输',			'煙草運輸',				'Tobacco Transport',							'タバコ輸送',							],
-	20 :	['涤纶运输',			'滌綸運輸',				'Polyester Transport',							'ポリエステル輸送',						],
-	21 :	['纸制品运输',			'紙製品運輸',			'Paper Product Transport',						'紙製品輸送',							],
-	22 :	['赶制弹药',			'趕制彈藥',				'Craft Ammo',									'弾薬緊急作成',							],
-	23 :	['修补防线',			'修補防線',				'Defense Repair',								'防衛線修復',							],
-	24 :	['运送设备',			'運送設備',				'Equipment Transport',							'設備輸送',								],
-	25 :	['教育新兵',			'教育新兵',				'Recruit Training',								'新兵教育',								],
-	26 :	['慰问前线',			'慰問前線',				'Front Line Visitation',						'前線慰問',								],
-	27 :	['清洁指挥部',			'清潔指揮部',			'HQ Cleaning',									'指揮所清掃',							],
-	28 :	['参与宴会',			'參與宴會',				'Banquet Attendance',							'宴会参加',								],
-	29 :	['装修指挥部',			'裝修指揮部',			'HQ Renovation',								'指揮所工事',							],
-	30 :	['招待上级',			'招待上級',				'Hosting Superiors',							'上官歓待',								],
-	31 :	['领取补助',			'領取補助',				'Receive Subsidies',							'手当を受け取る',						],
-	32 :	['骗取补助',			'騙取補助',				'Defraud Subsidies',							'手当を騙し取る',						],
-	33 :	['偷取补助',			'偷取補助',				'Stealing Subsidies',							'手当を横領',							],
-	34 :	['哄抢枪械',			'哄搶槍械',				'Loot a firearm',								'銃器を一斉強奪する',					],
-	35 :	['抢夺枪械',			'搶奪槍械',				'Snatch a firearm',								'銃器を強奪する',						],
-	36 :	['督促工人',			'督促工人',				'Urge workers',									'労働者を催促する',						],
-	37 :	['压榨工人',			'壓榨工人',				'Squeezing workers',							'労働者を搾取する',						],
-	38 :	['剥削工人',			'剝削工人',				'Exploiting workers',							'労働者から搾り取る',					],
-	39 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	40 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	41 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	42 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	43 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	44 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	45 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	46 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	47 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	48 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
-	49 :	['补给战略武器',		'補給戰略武器',			'Supply of strategic weapons',					'戦略兵器を補給する',					],
+	0 :		['宿舍休息',			'寮休',									'Dormitory Rest',								],
+	13 :	['生物质运输',			'バイオマス輸送',						'Biomass Transport',							],
+	14 :	['罐头运输',			'缶詰輸送',								'Can Transport',								],
+	15 :	['食物运输',			'食料輸送',								'Food Transport',								],
+	16 :	['有机质运输',			'有機質輸送',							'Organic Compound Transport',					],
+	17 :	['咖啡因运输',			'カフェイン輸送',						'Caffeine Transport',							],
+	18 :	['甲醇运输',			'メタノール輸送',						'Methanol Transport',							],
+	19 :	['烟草运输',			'タバコ輸送',							'Tobacco Transport',							],
+	20 :	['涤纶运输',			'ポリエステル輸送',						'Polyester Transport',							],
+	21 :	['纸制品运输',			'紙製品輸送',							'Paper Product Transport',						],
+	22 :	['赶制弹药',			'弾薬緊急作成',							'Craft Ammo',									],
+	23 :	['修补防线',			'防衛線修復',							'Defense Repair',								],
+	24 :	['运送设备',			'設備輸送',								'Equipment Transport',							],
+	25 :	['教育新兵',			'新兵教育',								'Recruit Training',								],
+	26 :	['慰问前线',			'前線慰問',								'Front Line Visitation',						],
+	27 :	['清洁指挥部',			'指揮所清掃',							'HQ Cleaning',									],
+	28 :	['参与宴会',			'宴会参加',								'Banquet Attendance',							],
+	29 :	['装修指挥部',			'指揮所工事',							'HQ Renovation',								],
+	30 :	['招待上级',			'上官歓待',								'Hosting Superiors',							],
+	31 :	['领取补助',			'手当を受け取る',						'Receive Subsidies',							],
+	32 :	['骗取补助',			'手当を騙し取る',						'Defraud Subsidies',							],
+	33 :	['偷取补助',			'手当を横領',							'Stealing Subsidies',							],
+	34 :	['哄抢枪械',			'銃器を一斉強奪する',					'Loot a firearm',								],
+	35 :	['抢夺枪械',			'銃器を強奪する',						'Snatch a firearm',								],
+	36 :	['督促工人',			'労働者を催促する',						'Urge workers',									],
+	37 :	['压榨工人',			'労働者を搾取する',						'Squeezing workers',							],
+	38 :	['剥削工人',			'労働者から搾り取る',					'Exploiting workers',							],
+	39 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	40 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	41 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	42 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	43 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	44 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	45 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	46 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	47 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	48 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
+	49 :	['补给战略武器',		'戦略兵器を補給する',					'Supply of strategic weapons',					],
 	
-	142 :	['英雄勋章',			'英雄勳章',				'Hero Medal',									'英雄メダル',							],
+	142 :	['英雄勋章',			'英雄メダル',							'Hero Medal',									],
 	
-	217 :	['武器扩展槽A',			'武器擴展槽A',			'Weapon Expansion Slot A',						'武器拡張スロットA',					],
-	218 :	['武器扩展槽B',			'武器擴展槽B',			'Weapon Expansion Slot B',						'武器拡張スロットB',					],
-	226 :	['快速供弹匣',			'快速供彈匣',			'Quick Reload Magazine',						'高速マガジン',							],
-	227 :	['膛压过载器',			'膛壓超載器',			'Chamber Pressure Overloader',					'ボア圧力オーバーローダー',				],
+	217 :	['武器扩展槽A',			'武器拡張スロットA',					'Weapon Expansion Slot A',						],
+	218 :	['武器扩展槽B',			'武器拡張スロットB',					'Weapon Expansion Slot B',						],
+	226 :	['快速供弹匣',			'高速マガジン',							'Quick Reload Magazine',						],
+	227 :	['膛压过载器',			'ボア圧力オーバーローダー',				'Chamber Pressure Overloader',					],
 	
-	550 :	['资金 + 75',			'資金 + 75',			'Funding + 75',									'資金 + 75',							],
-	551 :	['荣誉点 + 75',			'榮譽點 + 75',			'Honor points + 75',							'名誉ポイント + 75',					],
-	552 :	['标准勋章 × 3',		'標準勳章 × 3',			'Standard Medal × 3',							'制式メダル × 3',						],
-	553 :	['维修机体 25%',		'維修機體 25%',			'Repair the mache body by 25%',					'ボディメンテナンス 25%',				],
-	554 :	['核心 × 3',			'核心 × 3',				'Core × 3',										'ける × 3',								],
-	555 :	['荣誉点 + 200',		'榮譽點 + 200',			'Honor points + 200',							'名誉ポイント + 200',					],
-	556 :	['英雄勋章 × 3',		'英雄勳章 × 3',			'Hero Medal × 3',								'英雄メダル × 3',						],
-	557 :	['维修机体 50%',		'維修機體 50%',			'Repair the mache body by 50%',					'ボディメンテナンス 50%',				],
+	550 :	['资金 + 75',			'資金 + 75',							'Funding + 75',									],
+	551 :	['荣誉点 + 75',			'名誉ポイント + 75',					'Honor points + 75',							],
+	552 :	['标准勋章 × 3',		'制式メダル × 3',						'Standard Medal × 3',							],
+	553 :	['维修机体 25%',		'ボディメンテナンス 25%',				'Repair the mache body by 25%',					],
+	554 :	['核心 × 3',			'ける × 3',								'Core × 3',										],
+	555 :	['荣誉点 + 200',		'名誉ポイント + 200',					'Honor points + 200',							],
+	556 :	['英雄勋章 × 3',		'英雄メダル × 3',						'Hero Medal × 3',								],
+	557 :	['维修机体 50%',		'ボディメンテナンス 50%',				'Repair the mache body by 50%',					],
 	
-	1210 :	['外挂弹夹舱',			'外掛彈艙',				'External Bomb Bay',							'外付け弾倉',							],
-	1213 :	['外挂液压机',			'外掛液壓機',			'External Hydraulic Press',						'外付け油圧プレス',						],
-	1216 :	['外挂传动器',			'外掛傳動器',			'External Drive',								'外付け伝動装置',						],
+	1210 :	['外挂弹夹舱',			'外付け弾倉',							'External Bomb Bay',							],
+	1213 :	['外挂液压机',			'外付け油圧プレス',						'External Hydraulic Press',						],
+	1216 :	['外挂传动器',			'外付け伝動装置',						'External Drive',								],
 	
-	1250 :	['肩扛火箭炮',			'肩扛式火箭炮',			'Shoulder-mounted Rocket Launcher',				'肩発射式ロケットランチャー',			],
-	1251 :	['重型肩扛火箭炮',		'重型肩扛式火箭炮',		'Heavy Shoulder-mounted Rocket Launcher',		'重装肩発射式ロケットランチャー',		],
-	1252 :	['肩扛火炮',			'肩扛式火炮',			'Shoulder-mounted Cannon',						'肩発射式火砲',							],
-	1253 :	['重型肩扛火炮',		'肩扛式重型火炮',		'Heavy Shoulder-mounted Cannon',				'肩発射式重火砲',						],
+	1250 :	['肩扛火箭炮',			'肩発射式ロケットランチャー',			'Shoulder-mounted Rocket Launcher',				],
+	1251 :	['重型肩扛火箭炮',		'重装肩発射式ロケットランチャー',		'Heavy Shoulder-mounted Rocket Launcher',		],
+	1252 :	['肩扛火炮',			'肩発射式火砲',							'Shoulder-mounted Cannon',						],
+	1253 :	['重型肩扛火炮',		'肩発射式重火砲',						'Heavy Shoulder-mounted Cannon',				],
 	
-	1300 :	['空袭扫射',			'空襲掃射',				'Air Raid',										'空襲掃射',								],
-	1301 :	['空袭破片炸弹',		'空襲破片炸彈',			'Aerial Frag Bombardment',						'空襲フラグ爆撃',						],
-	1302 :	['地毯式破片炸弹',		'地毯式破片炸彈',		'Carpet Frag Bombing',							'絨毯フラグ爆撃',						],
-	1303 :	['饱和破片炸弹',		'飽和破片炸彈',			'Saturation Frag Bombing',						'飽和フラグ爆撃',						],
-	1304 :	['空投路障',			'空投路障',				'Airdropped Roadblock',							'エアドロップバリケード',				],
-	1305 :	['空投地雷',			'空投地雷',				'Airdropped Land Mine',							'エアドロップ地雷',						],
-	1306 :	['空投云爆弹',			'空投雲爆彈',			'Airdropped Thermobaric Weapon',				'エアドロップクラウドボム',				],
-	1307 :	['空投汽油弹',			'空投汽油彈',			'Airdropped Napalm',							'エアドロップガソリン爆弾',				],
-	1308 :	['空投电磁炸弹',		'空投電磁炸彈',			'Airdropped Electromagnetic Bomb',				'エアドロップ電磁爆弾',					],
-	1309 :	['空投液氮炸弹',		'空投液氮炸彈',			'Airdropped Liquid Nitrogen Bomb',				'エアドロップ液体窒素爆弾',				],
-	1311 :	['空投烟雾弹',			'空投煙霧彈',			'Airdropped Smoke Bomb',						'エアドロップ煙幕弾',					],
-	1312 :	['空投照明弹',			'空投照明彈',			'Airdropped Flare',								'エアドロップフレア',					],
+	1300 :	['空袭扫射',			'空襲掃射',								'Air Raid',										],
+	1301 :	['空袭破片炸弹',		'空襲フラグ爆撃',						'Aerial Frag Bombardment',						],
+	1302 :	['地毯式破片炸弹',		'絨毯フラグ爆撃',						'Carpet Frag Bombing',							],
+	1303 :	['饱和破片炸弹',		'飽和フラグ爆撃',						'Saturation Frag Bombing',						],
+	1304 :	['空投路障',			'エアドロップバリケード',				'Airdropped Roadblock',							],
+	1305 :	['空投地雷',			'エアドロップ地雷',						'Airdropped Land Mine',							],
+	1306 :	['空投云爆弹',			'エアドロップクラウドボム',				'Airdropped Thermobaric Weapon',				],
+	1307 :	['空投汽油弹',			'エアドロップガソリン爆弾',				'Airdropped Napalm',							],
+	1308 :	['空投电磁炸弹',		'エアドロップ電磁爆弾',					'Airdropped Electromagnetic Bomb',				],
+	1309 :	['空投液氮炸弹',		'エアドロップ液体窒素爆弾',				'Airdropped Liquid Nitrogen Bomb',				],
+	1311 :	['空投烟雾弹',			'エアドロップ煙幕弾',					'Airdropped Smoke Bomb',						],
+	1312 :	['空投照明弹',			'エアドロップフレア',					'Airdropped Flare',								],
 	
-	2050 :	['速度模块',			'速度模組',				'Speed Module',									'速度モジュール',						],
-	2052 :	['高级速度模块',		'高級速度模組',			'Advanced Speed Module',						'上級速度モジュール',					],
-	2054 :	['转轴模块',			'轉軸模組',				'Rotating Shaft Module',						'回転軸モジュール',						],
-	2056 :	['高级转轴模块',		'高級轉軸模組',			'Advanced Rotating Shaft Module',				'上級回転軸モジュール',					],
-	2308 :	['功率放大器',			'功率放大器',			'Power Amplifier',								'出力増幅器',							],
-	2309 :	['功率放大器2',			'功率放大器2',			'Power Amplifier 2',							'出力増幅器2',							],
+	2050 :	['速度模块',			'速度モジュール',						'Speed Module',									],
+	2052 :	['高级速度模块',		'上級速度モジュール',					'Advanced Speed Module',						],
+	2054 :	['转轴模块',			'回転軸モジュール',						'Rotating Shaft Module',						],
+	2056 :	['高级转轴模块',		'上級回転軸モジュール',					'Advanced Rotating Shaft Module',				],
+	2308 :	['功率放大器',			'出力増幅器',							'Power Amplifier',								],
+	2309 :	['功率放大器2',			'出力増幅器2',							'Power Amplifier 2',							],
 	
-	2146 :	['对冲线圈1',			'對沖線圈1',			'Hedge coils 1',								'ヘッジコイル1',						],
-	2148 :	['对冲线圈3',			'對沖線圈3',			'Hedge coils 3',								'ヘッジコイル3',						],
+	2146 :	['对冲线圈1',			'ヘッジコイル1',						'Hedge coils 1',								],
+	2148 :	['对冲线圈3',			'ヘッジコイル3',						'Hedge coils 3',								],
 	
-	10004 :	['重型狙',				'重型狙',				'Heavy Sniper',									'重狙撃銃',								],
-	10013 :	['重机枪',				'重機槍',				'Heavy Machine Gun',							'重機関銃',								],
-	10014 :	['火神炮',				'火神炮',				'Vulcan Cannon',								'ガトリングガン',						],
-	10035 :	['治疗枪',				'治療槍',				'Healing Gun',									'治療銃',								],
-	10054 :	['电光斧',				'電光斧',				'Lightning Ax',									'電光斧',								],
-	10155 :	['高能电光斧M',			'高能電光斧M',			'High-Power Lightning Axe M',					'高エネルギー電光斧M',					],
+	10004 :	['重型狙',				'重狙撃銃',								'Heavy Sniper',									],
+	10013 :	['重机枪',				'重機関銃',								'Heavy Machine Gun',							],
+	10014 :	['火神炮',				'ガトリングガン',						'Vulcan Cannon',								],
+	10035 :	['治疗枪',				'治療銃',								'Healing Gun',									],
+	10054 :	['电光斧',				'電光斧',								'Lightning Ax',									],
+	10155 :	['高能电光斧M',			'高エネルギー電光斧M',					'High-Power Lightning Axe M',					],
 	
 };
 
@@ -1586,249 +1595,249 @@ let enemyTeam = {
 // 敌人名称
 let enemyName = {
 	
-	'-1' :				['None',					'None',						'None',										'None',							],		//02		
+	'-1' :				['None',					'None',							'None',										],		//02		
 	
-	'0' :				['长矛',					'長矛',						'Spear',									'槍',							],		
-	'1' :				['军刀',					'軍刀',						'Saber',									'セイバー',						],		
-	'3' :				['弯刃',					'彎刃',						'Curved Blade',								'カーブブレード',				],		
-	'2' :				['利剑',					'利劍',						'Sword',									'鋭い剣',						],		//02		
+	'0' :				['长矛',					'槍',							'Spear',									],		
+	'1' :				['军刀',					'セイバー',						'Saber',									],		
+	'3' :				['弯刃',					'カーブブレード',				'Curved Blade',								],		
+	'2' :				['利剑',					'鋭い剣',						'Sword',									],		//02		
 	
-	'8' :				['钢盾',					'鋼盾',						'Steel Shield',								'鋼の盾',						],		
-	'10' :				['胡蜂',					'胡蜂',						'Wasp',										'胡蜂',							],		
-	'9' :				['弹雨',					'彈雨',						'Bullet Rain',								'弾の雨',						],		
-	'11' :				['暴君',					'暴君',						'Tyrant',									'暴君',							],		//02		
+	'8' :				['钢盾',					'鋼の盾',						'Steel Shield',								],		
+	'10' :				['胡蜂',					'胡蜂',							'Wasp',										],		
+	'9' :				['弹雨',					'弾の雨',						'Bullet Rain',								],		
+	'11' :				['暴君',					'暴君',							'Tyrant',									],		//02		
 	
-	'4' :				['狙击者',					'狙擊者',					'Sniper',									'狙撃者',						],		
-	'5' :				['压制者',					'壓制者',					'Suppressor',								'制圧者',						],		
-	'6' :				['突破者',					'突破者',					'Breaker',									'突破者',						],		
-	'7' :				['倾泻者',					'傾瀉者',					'Pourer',									'火力手',						],		//02		
+	'4' :				['狙击者',					'狙撃者',						'Sniper',									],		
+	'5' :				['压制者',					'制圧者',						'Suppressor',								],		
+	'6' :				['突破者',					'突破者',						'Breaker',									],		
+	'7' :				['倾泻者',					'火力手',						'Pourer',									],		//02		
 	
-	'12' :				['歌利亚',					'歌利亞',					'Goliath',									'ゴリアテ',						],		
-	'13' :				['携带者',					'攜帶者',					'Carrier',									'携行者',						],		
-	'15' :				['践踏者',					'踐踏者',					'Trampler',									'トランプラー',					],		
-	'14' :				['铁浮屠',					'鐵浮屠',					'Iron Buddha',								'鉄甲兵',						],		//02		
+	'12' :				['歌利亚',					'ゴリアテ',						'Goliath',									],		
+	'13' :				['携带者',					'携行者',						'Carrier',									],		
+	'15' :				['践踏者',					'トランプラー',					'Trampler',									],		
+	'14' :				['铁浮屠',					'鉄甲兵',						'Iron Buddha',								],		//02		
 	
-	'17' :				['游击者',					'遊擊者',					'Guerrilla',								'遊撃者',						],		
-	'18' :				['刺杀者',					'刺殺者',					'Assassin',									'暗殺者',						],		
-	'16' :				['护卫者',					'護衛者',					'Guardian',									'守護者',						],		
-	'19' :				['割喉者',					'割喉者',					'Throat Cutter',							'喉笛切り',						],		//02		
+	'17' :				['游击者',					'遊撃者',						'Guerrilla',								],		
+	'18' :				['刺杀者',					'暗殺者',						'Assassin',									],		
+	'16' :				['护卫者',					'守護者',						'Guardian',									],		
+	'19' :				['割喉者',					'喉笛切り',						'Throat Cutter',							],		//02		
 	
-	'25' :				['冲击者',					'衝擊者',					'Assaulter',								'衝撃者',						],		
-	'24' :				['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
-	'27' :				['轰炸者',					'轟炸者',					'Bomber',									'爆撃者',						],		
-	'26' :				['分裂者',					'分裂者',					'Splitter',									'分裂者',						],		//02		
+	'25' :				['冲击者',					'衝撃者',						'Assaulter',								],		
+	'24' :				['干扰者',					'攪乱者',						'Disruptor',								],		
+	'27' :				['轰炸者',					'爆撃者',						'Bomber',									],		
+	'26' :				['分裂者',					'分裂者',						'Splitter',									],		//02		
 	
-	'22' :				['猎手',					'獵手',						'Hunter',									'ハンター',						],		
-	'23' :				['链锯',					'鏈鋸',						'Chain Saw',								'チェーンソー',					],		
-	'28' :				['棱镜',					'棱鏡',						'Prism',									'プリズム',						],		
-	'29' :				['圣光',					'聖光',						'Light',									'聖光',							],		
-	'33' :				['屠刀',					'屠刀',						'Butcher\'s Knife',							'スローターナイフ',				],		//02		
+	'22' :				['猎手',					'ハンター',						'Hunter',									],		
+	'23' :				['链锯',					'チェーンソー',					'Chain Saw',								],		
+	'28' :				['棱镜',					'プリズム',						'Prism',									],		
+	'29' :				['圣光',					'聖光',							'Light',									],		
+	'33' :				['屠刀',					'スローターナイフ',				'Butcher\'s Knife',							],		//02		
 	
-	'30' :				['致盲者',					'致盲者',					'Blinder',									'目潰し',						],		
-	'31' :				['肢解者',					'肢解者',					'Dissector',								'ミューティレーター',			],		
-	'32' :				['弑君者',					'弑君者',					'Regicide',									'キングスレイヤー',				],		
-	'20' :				['火法师',					'火法師',					'Fire Mage',								'火魔術師',						],		
-	'21' :				['冰法师',					'冰法師',					'Ice Mage',									'氷魔術師',						],		//02		
+	'30' :				['致盲者',					'目潰し',						'Blinder',									],		
+	'31' :				['肢解者',					'ミューティレーター',			'Dissector',								],		
+	'32' :				['弑君者',					'キングスレイヤー',				'Regicide',									],		
+	'20' :				['火法师',					'火魔術師',						'Fire Mage',								],		
+	'21' :				['冰法师',					'氷魔術師',						'Ice Mage',									],		//02		
 	
-	'101A' :			['装甲猎手',				'裝甲獵手',					'Armored Hunter',							'装甲ハンター',					],		
-	'102A' :			['装甲链锯',				'裝甲鏈鋸',					'Armored Chain Saw',						'装甲チェーンソー',				],		
-	'109A' :			['封喉冲车',				'封喉衝車',					'Executor',									'喉潰し',						],		
-	'103A' :			['埋葬者',					'埋葬者',					'Undertaker',								'埋葬者',						],		
-	'104A' :			['绞肉机',					'絞肉機',					'Meat Grinder',								'肉挽き器',						],		
-	'105A' :			['力法师',					'力法師',					'Force Mage',								'力の魔術師',					],		
-	'106A' :			['扭曲者',					'扭曲者',					'Twister',									'ツイスター',					],		
-	'107A' :			['角斗士',					'角鬥士',					'Gladiator',								'グラディエーター',				],		
-	'108A' :			['推进者',					'推進者',					'Pusher',									'推進者',						],		//02		
+	'101A' :			['装甲猎手',				'装甲ハンター',					'Armored Hunter',							],		
+	'102A' :			['装甲链锯',				'装甲チェーンソー',				'Armored Chain Saw',						],		
+	'109A' :			['封喉冲车',				'喉潰し',						'Executor',									],		
+	'103A' :			['埋葬者',					'埋葬者',						'Undertaker',								],		
+	'104A' :			['绞肉机',					'肉挽き器',						'Meat Grinder',								],		
+	'105A' :			['力法师',					'力の魔術師',					'Force Mage',								],		
+	'106A' :			['扭曲者',					'ツイスター',					'Twister',									],		
+	'107A' :			['角斗士',					'グラディエーター',				'Gladiator',								],		
+	'108A' :			['推进者',					'推進者',						'Pusher',									],		//02		
 	
-	'101B' :			['干扰者',					'干擾者',					'Disruptor',								'攪乱者',						],		
-	'108B' :			['执法队',					'執法隊',					'Enforcement Squad',						'執行部隊',						],		
-	'102B' :			['绞刑架',					'絞刑架',					'Gallows',									'絞首台',						],		
-	'103B' :			['食尸鬼',					'食屍鬼',					'Ghoul',									'グール',						],		
-	'105B' :			['开瓶器',					'開瓶器',					'Bottle Opener',							'ボトルオープナー',				],		
-	'107B' :			['膨胀者',					'膨脹者',					'Expander',									'膨張者',						],		
-	'106B' :			['楔形兵',					'楔形兵',					'Wedge Rifleman',							'楔コマンド',					],		
-	'109B' :			['方阵兵',					'方陣兵',					'Phalanx Soldier',							'ファランクス',					],		
-	'104B' :			['移动堡',					'移動堡',					'Moving Castle',							'移動城',						],		//02		
+	'101B' :			['干扰者',					'攪乱者',						'Disruptor',								],		
+	'108B' :			['执法队',					'執行部隊',						'Enforcement Squad',						],		
+	'102B' :			['绞刑架',					'絞首台',						'Gallows',									],		
+	'103B' :			['食尸鬼',					'グール',						'Ghoul',									],		
+	'105B' :			['开瓶器',					'ボトルオープナー',				'Bottle Opener',							],		
+	'107B' :			['膨胀者',					'膨張者',						'Expander',									],		
+	'106B' :			['楔形兵',					'楔コマンド',					'Wedge Rifleman',							],		
+	'109B' :			['方阵兵',					'ファランクス',					'Phalanx Soldier',							],		
+	'104B' :			['移动堡',					'移動城',						'Moving Castle',							],		//02		
 	
-	'101C' :			['靓蓝',					'靚藍',						'Indigo',									'インディゴ',					],		
-	'102C' :			['匕首',					'匕首',						'Dagger',									'ダガー',						],		
-	'106C' :			['骑士',					'騎士',						'Knight',									'騎士',							],		
-	'105C' :			['结晶体',					'結晶體',					'Crystal',									'結晶体',						],		
-	'108C' :			['镇暴队',					'鎮暴隊',					'Riot Squad',								'鎮圧隊',						],		
-	'109C' :			['圣骑士',					'聖騎士',					'Paladin',									'聖騎士',						],		
-	'103C' :			['十夫长',					'十夫長',					'Decurio',									'十人長',						],		
-	'104C' :			['百夫长',					'百夫長',					'Centurion',								'百人長',						],		
-	'107C' :			['狂轰者',					'狂轟者',					'Advanced Bomber',							'狂爆者',						],		//02		
+	'101C' :			['靓蓝',					'インディゴ',					'Indigo',									],		
+	'102C' :			['匕首',					'ダガー',						'Dagger',									],		
+	'106C' :			['骑士',					'騎士',							'Knight',									],		
+	'105C' :			['结晶体',					'結晶体',						'Crystal',									],		
+	'108C' :			['镇暴队',					'鎮圧隊',						'Riot Squad',								],		
+	'109C' :			['圣骑士',					'聖騎士',						'Paladin',									],		
+	'103C' :			['十夫长',					'十人長',						'Decurio',									],		
+	'104C' :			['百夫长',					'百人長',						'Centurion',								],		
+	'107C' :			['狂轰者',					'狂爆者',						'Advanced Bomber',							],		//02		
 	
-	'Boss2_' :			['增殖者',					'增殖者',					'Multiplier',								'増殖者',						],		
-	'Boss2' :			['精锐增殖者',				'精銳增殖者',				'Elite Multiplier',							'精鋭増殖者',					],		//02		
+	'Boss2_' :			['增殖者',					'増殖者',						'Multiplier',								],		
+	'Boss2' :			['精锐增殖者',				'精鋭増殖者',					'Elite Multiplier',							],		//02		
 	
-	'Boss3_' :			['百臂巨人',				'百臂巨人',					'Hundred-Armed Giant',						'百腕巨人',						],		
-	'Boss3' :			['精锐百臂巨人',			'精銳百臂巨人',				'Elite Hundred-Armed Giant',				'精鋭百腕巨人',					],		//02		
+	'Boss3_' :			['百臂巨人',				'百腕巨人',						'Hundred-Armed Giant',						],		
+	'Boss3' :			['精锐百臂巨人',			'精鋭百腕巨人',					'Elite Hundred-Armed Giant',				],		//02		
 	
-	'Boss4' :			['泰坦',					'泰坦',						'Titan',									'タイタン',						],		
-	'Boss5' :			['巨像',					'巨像',						'Colossus',									'コロッサス',					],		//02		
+	'Boss4' :			['泰坦',					'タイタン',						'Titan',									],		
+	'Boss5' :			['巨像',					'コロッサス',					'Colossus',									],		//02		
 	
-	'Boss10A' :			['装甲母体',				'裝甲母體',					'Armored Matrix',							'装甲母体',						],		
-	'Boss10B' :			['特战母体',				'特戰母體',					'Special Forces Matrix',					'特殊戦母体',					],		
-	'Boss10C' :			['圣盾母体',				'聖盾母體',					'Holy Shield Matrix',						'聖盾母体',						],		//02		
+	'Boss10A' :			['装甲母体',				'装甲母体',						'Armored Matrix',							],		
+	'Boss10B' :			['特战母体',				'特殊戦母体',					'Special Forces Matrix',					],		
+	'Boss10C' :			['圣盾母体',				'聖盾母体',						'Holy Shield Matrix',						],		//02		
 	
-	'Boss1_' :			['钢蛞蝓',					'鋼蛞蝓',					'Steel slug',								'スチールスラグ',				],		
-	'Boss1' :			['精锐钢蛞蝓',				'精銳鋼蛞蝓',				'Elite Steel slug',							'精鋭スチールスラグ',			],		
-	'Boss1a' :			['钢蛞蝓分身体01',			'鋼蛞蝓分身體01',			'Steel slug Clone 01',						'スチールスラグ分身体01',		],		
-	'Boss1b' :			['钢蛞蝓分身体02',			'鋼蛞蝓分身體02',			'Steel slug Clone 02',						'スチールスラグ分身体02',		],		
-	'Boss1c' :			['钢蛞蝓分身体03',			'鋼蛞蝓分身體03',			'Steel slug Clone 03',						'スチールスラグ分身体03',		],		//02		
+	'Boss1_' :			['钢蛞蝓',					'スチールスラグ',				'Steel slug',								],		
+	'Boss1' :			['精锐钢蛞蝓',				'精鋭スチールスラグ',			'Elite Steel slug',							],		
+	'Boss1a' :			['钢蛞蝓分身体01',			'スチールスラグ分身体01',		'Steel slug Clone 01',						],		
+	'Boss1b' :			['钢蛞蝓分身体02',			'スチールスラグ分身体02',		'Steel slug Clone 02',						],		
+	'Boss1c' :			['钢蛞蝓分身体03',			'スチールスラグ分身体03',		'Steel slug Clone 03',						],		//02		
 	
-	'EliteRanger' :		['游侠',					'遊俠',						'Ranger',									'ランジャ',						],		
-	'EliteRanger2' :	['高阶游侠',				'高階遊俠',					'Advanced Ranger',							'精鋭ランジャ',					],		//02		
+	'EliteRanger' :		['游侠',					'ランジャ',						'Ranger',									],		
+	'EliteRanger2' :	['高阶游侠',				'精鋭ランジャ',					'Advanced Ranger',							],		//02		
 	
-	'EliteSamurai' :	['足轻',					'足輕',						'Foot Soldier',								'アシガル',						],		
-	'EliteSamurai2' :	['高阶足轻',				'高階足輕',					'Elite Foot Soldier',						'精鋭アシガル',					],		//02		
+	'EliteSamurai' :	['足轻',					'アシガル',						'Foot Soldier',								],		
+	'EliteSamurai2' :	['高阶足轻',				'精鋭アシガル',					'Elite Foot Soldier',						],		//02		
 	
-	'EliteAshigaru' :	['武士',					'武士',						'Sumurai',									'サムライ',						],		
-	'EliteAshigaru2' :	['高阶武士',				'高階武士',					'Advanced Sumurai',							'精鋭サムライ',					],		//02		
+	'EliteAshigaru' :	['武士',					'サムライ',						'Sumurai',									],		
+	'EliteAshigaru2' :	['高阶武士',				'精鋭サムライ',					'Advanced Sumurai',							],		//02		
 	
-	'ElitePuppeteer' :	['傀儡师',					'傀儡師',					'Puppeteer',								'人形師',						],		
-	'EliteSamurai3' :	['傀儡足轻',				'傀儡足輕',					'Puppet Foot Soldier',						'人形師アシガル',				],		
-	'ElitePuppeteer2' :	['高阶傀儡师',				'高階傀儡師',				'Advanced Puppeteer',						'精鋭人形師',					],		
-	'EliteSamurai4' :	['高阶傀儡足轻',			'高階傀儡足輕',				'Advanced Puppet Foot Soldier',				'精鋭人形師アシガル',			],		//02		
+	'ElitePuppeteer' :	['傀儡师',					'人形師',						'Puppeteer',								],		
+	'EliteSamurai3' :	['傀儡足轻',				'人形師アシガル',				'Puppet Foot Soldier',						],		
+	'ElitePuppeteer2' :	['高阶傀儡师',				'精鋭人形師',					'Advanced Puppeteer',						],		
+	'EliteSamurai4' :	['高阶傀儡足轻',			'精鋭人形師アシガル',			'Advanced Puppet Foot Soldier',				],		//02		
 	
-	'A2' :				['教官',					'教官',						'Instructor',								'教官',							],		
-	'A1' :				['督战队',					'督戰隊',					'Overseer Squad',							'督戦隊',						],		//02		
+	'A2' :				['教官',					'教官',							'Instructor',								],		
+	'A1' :				['督战队',					'督戦隊',						'Overseer Squad',							],		//02		
 	
-	'Striker' :			['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
-	'Striker2' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		
-	'StrikerRam' :		['空指部',					'空指部',					'Air Force Command',						'空中戦闘指揮所',				],		//02		
+	'Striker' :			['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		
+	'Striker2' :		['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		
+	'StrikerRam' :		['空指部',					'空中戦闘指揮所',				'Air Force Command',						],		//02		
 	
-	'Door' :			['大门',					'大門',						'Gate',										'ゲート',						],		
-	'Door2' :			['大门',					'大門',						'Gate',										'ゲート',						],		//02		
+	'Door' :			['大门',					'ゲート',						'Gate',										],		
+	'Door2' :			['大门',					'ゲート',						'Gate',										],		//02		
 	
-	'Canon1' :			['基础炮台',				'基礎炮臺',					'Basic Turret',								'基礎砲塔',						],		
-	'Canon2' :			['狙击炮台',				'狙擊炮臺',					'Sniper Turret',							'狙撃砲塔',						],		
-	'Canon3' :			['重型炮台',				'重型炮臺',					'Heavy Turret',								'重型砲塔',						],		//02		
+	'Canon1' :			['基础炮台',				'基礎砲塔',						'Basic Turret',								],		
+	'Canon2' :			['狙击炮台',				'狙撃砲塔',						'Sniper Turret',							],		
+	'Canon3' :			['重型炮台',				'重型砲塔',						'Heavy Turret',								],		//02		
 	
-	'Hive1' :			['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
-	'Hive2' :			['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		
-	'HiveK' :			['帝国制造厂',				'帝国制造厂',				'Imperial Manufacturing Plant',				'帝国メーカー',					],		//02		
+	'Hive1' :			['制造厂',					'製造工場',						'Factory',									],		
+	'Hive2' :			['强制造厂',				'強製造工場',					'Advanced Factory',							],		
+	'HiveK' :			['帝国制造厂',				'帝国メーカー',					'Imperial Manufacturing Plant',				],		//02		
 	
-	'BuildingCanon0' :	['要塞炮',					'要塞炮',					'Stronghold Artillery',						'要塞砲',						],		
-	'BuildingCanon' :	['强要塞炮',				'強要塞炮',					'Advanced Stronghold Artillery',			'強要塞砲',						],		
-	'BuildingCanonC' :	['帝国要塞炮',				'帝國要塞炮',				'Imperial Fortress Cannon',					'帝国要塞砲',					],		//02		
+	'BuildingCanon0' :	['要塞炮',					'要塞砲',						'Stronghold Artillery',						],		
+	'BuildingCanon' :	['强要塞炮',				'強要塞砲',						'Advanced Stronghold Artillery',			],		
+	'BuildingCanonC' :	['帝国要塞炮',				'帝国要塞砲',					'Imperial Fortress Cannon',					],		//02		
 	
-	'Camp' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		
-	'CampC' :			['营帐',					'營帳',						'Camp tent',								'キャンプサイト',				],		//02		
+	'Camp' :			['营帐',					'キャンプサイト',				'Camp tent',								],		
+	'CampC' :			['营帐',					'キャンプサイト',				'Camp tent',								],		//02		
 	
-	'HiveCannon1' :		['制造厂',					'製造廠',					'Factory',									'製造工場',						],		
-	'HiveCannon2' :		['强制造厂',				'強製造廠',					'Advanced Factory',							'強製造工場',					],		//02		
+	'HiveCannon1' :		['制造厂',					'製造工場',						'Factory',									],		
+	'HiveCannon2' :		['强制造厂',				'強製造工場',					'Advanced Factory',							],		//02		
 	
-	'Car1' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
-	'Car2' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		
-	'Car3' :			['帝国装甲车',				'帝國裝甲車',				'Empire Armored Vehicle',					'帝国装甲車両',					],		//02		
+	'Car1' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		
+	'Car2' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		
+	'Car3' :			['帝国装甲车',				'帝国装甲車両',					'Empire Armored Vehicle',					],		//02		
 	
-	'RebelMecha1' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		
-	'RebelMecha2' :		['帝国机甲',				'帝國機甲',					'Empire mecha',								'帝国機体',						],		//02		
+	'RebelMecha1' :		['帝国机甲',				'帝国機体',						'Empire mecha',								],		
+	'RebelMecha2' :		['帝国机甲',				'帝国機体',						'Empire mecha',								],		//02		
 	
-	'High11' :			['渗透型机甲',				'滲透型機甲',				'Infiltrator mecha',						'潜入型機体',					],		
-	'High12' :			['掷弹型机甲',				'擲彈型機甲',				'Grenade launcher mecha',					'擲弾型機体',					],		
-	'High13' :			['冲锋型机甲',				'衝鋒型機甲',				'Assault mecha',							'突撃型機体',					],		
-	'High14' :			['狙击型机甲',				'狙擊型機甲',				'Sniper mecha',								'狙撃型機体',					],		//02		
+	'High11' :			['渗透型机甲',				'潜入型機体',					'Infiltrator mecha',						],		
+	'High12' :			['掷弹型机甲',				'擲弾型機体',					'Grenade launcher mecha',					],		
+	'High13' :			['冲锋型机甲',				'突撃型機体',					'Assault mecha',							],		
+	'High14' :			['狙击型机甲',				'狙撃型機体',					'Sniper mecha',								],		//02		
 	
-	'High11a' :			['精锐渗透型机甲',			'精銳滲透型機甲',			'Elite Infiltrator mecha',					'精鋭潜入型機体',				],		
-	'High12a' :			['精锐掷弹型机甲',			'精銳擲彈型機甲',			'Elite Grenade launcher mecha',				'精鋭擲弾型機体',				],		
-	'High13a' :			['精锐冲锋型机甲',			'精銳衝鋒型機甲',			'Elite Assault mecha',						'精鋭突撃型機体',				],		
-	'High14a' :			['精锐狙击型机甲',			'精銳狙擊型機甲',			'Elite Sniper mecha',						'精鋭狙撃型機体',				],		//02		
+	'High11a' :			['精锐渗透型机甲',			'精鋭潜入型機体',				'Elite Infiltrator mecha',					],		
+	'High12a' :			['精锐掷弹型机甲',			'精鋭擲弾型機体',				'Elite Grenade launcher mecha',				],		
+	'High13a' :			['精锐冲锋型机甲',			'精鋭突撃型機体',				'Elite Assault mecha',						],		
+	'High14a' :			['精锐狙击型机甲',			'精鋭狙撃型機体',				'Elite Sniper mecha',						],		//02		
 	
-	'Mine' :			['地雷',					'地雷',						'A land mine.',								'地雷',							],		//02		
+	'Mine' :			['地雷',					'地雷',							'A land mine.',								],		//02		
 	
-	'EliteLord' :		['领主',					'領主',						'Lord',										'ロード',						],		
-	'EliteLord2' :		['高阶领主',				'高階領主',					'Advanced Lord',							'精鋭ロード',					],		
-	'LordChild' :		['领主辅助战机',			'領主輔助戰機',				'Lord Child Mech Drone',					'ロードの子機体',				],		
-	'TestDummy' :		['测试模型',				'測試模型',					'Test Dummy',								'測試モデル',					],		//02		
+	'EliteLord' :		['领主',					'ロード',						'Lord',										],		
+	'EliteLord2' :		['高阶领主',				'精鋭ロード',					'Advanced Lord',							],		
+	'LordChild' :		['领主辅助战机',			'ロードの子機体',				'Lord Child Mech Drone',					],		
+	'TestDummy' :		['测试模型',				'測試モデル',					'Test Dummy',								],		//02		
 	
-	'EliteGiant' :		['独眼巨人',				'獨眼巨人',					'One-Eyed Giant',							'サイクロプス',					],		
-	'EliteGiant2' :		['精锐独眼巨人',			'精銳獨眼巨人',				'Elite One-Eyed Giant',						'精鋭サイクロプス',				],		
-	'GiantCanon' :		['独眼巨人炮台',			'獨眼巨人炮臺',				'One-Eyed Giant Cannon',					'サイクロプス砲塔',				],		
-	'GiantCanon2' :		['精锐独眼巨人炮台',		'精锐獨眼巨人炮臺',			'Elite One-Eyed Giant Cannon',				'精鋭サイクロプス砲塔',			],		
-	'GiantChild' :		['巨人子战机',				'巨人子戰機',				'Elite One-Eyed Giant Child',				'サイクロプスの子戦機',			],		//02		
+	'EliteGiant' :		['独眼巨人',				'サイクロプス',					'One-Eyed Giant',							],		
+	'EliteGiant2' :		['精锐独眼巨人',			'精鋭サイクロプス',				'Elite One-Eyed Giant',						],		
+	'GiantCanon' :		['独眼巨人炮台',			'サイクロプス砲塔',				'One-Eyed Giant Cannon',					],		
+	'GiantCanon2' :		['精锐独眼巨人炮台',		'精鋭サイクロプス砲塔',			'Elite One-Eyed Giant Cannon',				],		
+	'GiantChild' :		['巨人子战机',				'サイクロプスの子戦機',			'Elite One-Eyed Giant Child',				],		//02		
 	
-	'Sandworm' :		['沙虫',					'沙蟲',						'Sandworm',									'サンドワーム',					],		
-	'Sandworm2' :		['灾厄沙虫',				'災厄沙蟲',					'Catastrophe Sandworm',						'災厄サンドワーム',				],		
-	'SandwormHead' :	['沙虫头部',				'沙蟲頭部',					'Sandworm Head',							'サンドワーム頭部',				],		
-	'SandwormBody' :	['沙虫身躯',				'沙蟲身軀',					'Sandworm Body',							'サンドワーム躯体',				],		
-	'SandwormTail' :	['沙虫尾部',				'沙蟲尾部',					'Sandworm Tail',							'サンドワーム尾部',				],		
-	'SandwormBody2' :	['灾厄沙虫身躯',			'灾厄沙虫身軀',				'Sandworm Body2',							'災厄サンドワーム躯体',			],		//02		
+	'Sandworm' :		['沙虫',					'サンドワーム',					'Sandworm',									],		
+	'Sandworm2' :		['灾厄沙虫',				'災厄サンドワーム',				'Catastrophe Sandworm',						],		
+	'SandwormHead' :	['沙虫头部',				'サンドワーム頭部',				'Sandworm Head',							],		
+	'SandwormBody' :	['沙虫身躯',				'サンドワーム躯体',				'Sandworm Body',							],		
+	'SandwormTail' :	['沙虫尾部',				'サンドワーム尾部',				'Sandworm Tail',							],		
+	'SandwormBody2' :	['灾厄沙虫身躯',			'災厄サンドワーム躯体',			'Sandworm Body2',							],		//02		
 	
-	'BossFinal' :		['主宰',					'主宰',						'Dominator',								'ドミネーター',					],		
-	'BFinalCanon1' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
-	'BFinalCanon2' :	['主宰炮台',				'主宰炮臺',					'Dominator Cannon',							'ドミネーター砲塔',				],		
-	'HiveBoss' :		['制造工厂',				'製造工廠',					'Factory',									'製造工場',						],		//02		
+	'BossFinal' :		['主宰',					'ドミネーター',					'Dominator',								],		
+	'BFinalCanon1' :	['主宰炮台',				'ドミネーター砲塔',				'Dominator Cannon',							],		
+	'BFinalCanon2' :	['主宰炮台',				'ドミネーター砲塔',				'Dominator Cannon',							],		
+	'HiveBoss' :		['制造工厂',				'製造工場',						'Factory',									],		//02		
 	
-	'High1' :			['黑骑兵号',				'黑騎兵號',					'Black Knight',								'黒騎兵号',						],		
-	'High2' :			['突骑兵号',				'突騎兵號',					'Charge Cavalry',							'突撃騎兵号',					],		
-	'High3' :			['烈驹号',					'烈駒號',					'Fierce Steed',								'烈馬号',						],		
-	'High4' :			['枪骑兵号',				'槍騎兵號',					'Spear Cavalry',							'槍騎兵号',						],		
-	'High5' :			['甲胄骑士号',				'甲胄騎士號',				'Armor Knight',								'甲冑騎士号',					],		//02		
+	'High1' :			['黑骑兵号',				'黒騎兵号',						'Black Knight',								],		
+	'High2' :			['突骑兵号',				'突撃騎兵号',					'Charge Cavalry',							],		
+	'High3' :			['烈驹号',					'烈馬号',						'Fierce Steed',								],		
+	'High4' :			['枪骑兵号',				'槍騎兵号',						'Spear Cavalry',							],		
+	'High5' :			['甲胄骑士号',				'甲冑騎士号',					'Armor Knight',								],		//02		
 	
-	'CCannon' :			['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon0' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon3' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CCannon4' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	'CCannon' :			['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon0' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon3' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CCannon4' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		//02		
 	
-	'ParCar1' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
-	'ParCar2' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		
-	'ParCar3' :			['帝国装甲车',				'帝國裝甲車',				'Imperial Armored Vehicle',					'帝国装甲車',					],		//02		
+	'ParCar1' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		
+	'ParCar2' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		
+	'ParCar3' :			['帝国装甲车',				'帝国装甲車',					'Imperial Armored Vehicle',					],		//02		
 	
-	'CanonRebel1' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		
-	'CanonRebel2' :		['帝国炮台',				'帝國炮臺',					'Empire Turret',							'帝国砲塔',						],		//02		
+	'CanonRebel1' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		
+	'CanonRebel2' :		['帝国炮台',				'帝国砲塔',						'Empire Turret',							],		//02		
 	
-	'Para1' :			['帝国轻型量产机甲',		'帝國輕型量產機甲',			'Empire light production mecha',			'帝国軽量産機甲',				],		
-	'Para2' :			['帝国中型量产机甲',		'帝國中型量產機甲',			'Empire mid size mass-produced mecha',		'帝国中型量産機甲',				],		//02		
+	'Para1' :			['帝国轻型量产机甲',		'帝国軽量産機甲',				'Empire light production mecha',			],		
+	'Para2' :			['帝国中型量产机甲',		'帝国中型量産機甲',				'Empire mid size mass-produced mecha',		],		//02		
 	
-	'Para3' :			['帝国重型量产机甲',		'帝國重型量產機甲',			'Empire heavy production mecha',			'帝国重型量産機甲',				],		
-	'Para3T' :			['帝国重型机甲',			'帝國重型機甲',				'Empire Heavy Mech',						'帝国重型機甲',					],		//02		
+	'Para3' :			['帝国重型量产机甲',		'帝国重型量産機甲',				'Empire heavy production mecha',			],		
+	'Para3T' :			['帝国重型机甲',			'帝国重型機甲',					'Empire Heavy Mech',						],		//02		
 	
-	'Pard' :			['帝国精锐量产机甲',		'帝國精銳量產型機甲',		'Empire\'s elite mass-produced mecha',		'帝国精鋭量産型機甲',			],		
-	'PardT' :			['帝国精锐机甲',			'帝國精銳機甲',				'Empire\'s elite mecha',					'帝国精鋭機甲',					],		//02		
+	'Pard' :			['帝国精锐量产机甲',		'帝国精鋭量産型機甲',			'Empire\'s elite mass-produced mecha',		],		
+	'PardT' :			['帝国精锐机甲',			'帝国精鋭機甲',					'Empire\'s elite mecha',					],		//02		
 	
-	'Parb1' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb1b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb2' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		
-	'Parb2b' :			['帝国支援部队机甲',		'帝國支援部隊機甲',			'Imperial Support Force Mech',				'帝国支援部隊機甲',				],		//02		
+	'Parb1' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb1b' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb2' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		
+	'Parb2b' :			['帝国支援部队机甲',		'帝国支援部隊機甲',				'Imperial Support Force Mech',				],		//02		
 	
-	'Parc1' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		
-	'Parc1b' :			['帝国火力部队机甲',		'帝國火力部隊機甲',			'Imperial firepower mecha',					'帝国火力部隊機甲',				],		//02		
+	'Parc1' :			['帝国火力部队机甲',		'帝国火力部隊機甲',				'Imperial firepower mecha',					],		
+	'Parc1b' :			['帝国火力部队机甲',		'帝国火力部隊機甲',				'Imperial firepower mecha',					],		//02		
 	
-	'Pare' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		
-	'Pareb' :			['帝国干扰部队机甲',		'帝國干擾部隊機甲',			'Empire Interference Force Mech',			'帝国妨害部隊機甲',				],		//02		
+	'Pare' :			['帝国干扰部队机甲',		'帝国妨害部隊機甲',				'Empire Interference Force Mech',			],		
+	'Pareb' :			['帝国干扰部队机甲',		'帝国妨害部隊機甲',				'Empire Interference Force Mech',			],		//02		
 	
-	'Parf' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		
-	'Parfb' :			['帝国战略部队机甲',		'帝國戰略部隊機甲',			'Imperial Strategic Force Mech',			'帝国戦略部隊機甲',				],		//02		
+	'Parf' :			['帝国战略部队机甲',		'帝国戦略部隊機甲',				'Imperial Strategic Force Mech',			],		
+	'Parfb' :			['帝国战略部队机甲',		'帝国戦略部隊機甲',				'Imperial Strategic Force Mech',			],		//02		
 	
-	'HighPar' :			['骠骑兵号(改)',			'驃騎兵號(改)',				'Hussar(Reform)',							'ユサール号(改)',				],		//02		
+	'HighPar' :			['骠骑兵号(改)',			'ユサール号(改)',				'Hussar(Reform)',							],		//02		
 	
-	'SupplyBox0' :		['补给箱(通用)',			'補給箱(通用)',				'Supply box-Universal',						'補給箱-汎用',					],		
-	'SupplyBox1' :		['补给箱(动力)',			'補給箱(動力)',				'Supply box-Power',							'補給箱-動力',					],		
-	'SupplyBox2' :		['补给箱(装甲)',			'補給箱(裝甲)',				'Supply box-Armor',							'補給箱-装甲',					],		
-	'SupplyBox3' :		['补给箱(弹头)',			'補給箱(彈頭)',				'Supply box-Warhead',						'補給箱-弾頭',					],		
-	'SupplyBox4' :		['补给箱(元素)',			'補給箱(元素)',				'Supply box-Elemental',						'補給箱-元素',					],		
-	'SupplyBox5' :		['补给箱(核心)',			'補給箱(核心)',				'Supply box-Core',							'補給箱-コア',					],		
-	'SupplyBox6' :		['补给箱(近战)',			'補給箱(近戰)',				'Supply box-Melee',							'補給箱-近接',					],		
-	'SupplyBox7' :		['补给箱(能量)',			'補給箱(能量)',				'Supply box-Energy',						'補給箱-エネルギー',			],		
-	'SupplyBox8' :		['补给箱(重武)',			'補給箱(重武)',				'Supply box-Heavy',							'補給箱-じゅうへいき',			],		//02		
+	'SupplyBox0' :		['补给箱(通用)',			'補給箱-汎用',					'Supply box-Universal',						],		
+	'SupplyBox1' :		['补给箱(动力)',			'補給箱-動力',					'Supply box-Power',							],		
+	'SupplyBox2' :		['补给箱(装甲)',			'補給箱-装甲',					'Supply box-Armor',							],		
+	'SupplyBox3' :		['补给箱(弹头)',			'補給箱-弾頭',					'Supply box-Warhead',						],		
+	'SupplyBox4' :		['补给箱(元素)',			'補給箱-元素',					'Supply box-Elemental',						],		
+	'SupplyBox5' :		['补给箱(核心)',			'補給箱-コア',					'Supply box-Core',							],		
+	'SupplyBox6' :		['补给箱(近战)',			'補給箱-近接',					'Supply box-Melee',							],		
+	'SupplyBox7' :		['补给箱(能量)',			'補給箱-エネルギー',			'Supply box-Energy',						],		
+	'SupplyBox8' :		['补给箱(重武)',			'補給箱-じゅうへいき',			'Supply box-Heavy',							],		//02		
 	
-	'Boss10'  :			['装甲母体/特战母体/圣盾母体',		'裝甲母體/特戰母體/聖盾母體',			'Armored Matrix/Special Forces Matrix/Holy Shield Matrix',		'装甲母体/特殊戦母体/聖盾母体',					],		//02		
+	'Boss10'  :			['装甲母体/特战母体/圣盾母体',		'装甲母体/特殊戦母体/聖盾母体',				'Armored Matrix/Special Forces Matrix/Holy Shield Matrix',		],		//02		
 	
-	'101' :				['装甲猎手/干扰者/靓蓝',			'裝甲獵手/干擾者/靚藍',					'Armored Hunter/Disruptor/Indigo',								'装甲ハンター/攪乱者/インディゴ',				],		
-	'102' :				['装甲链锯/绞刑架/匕首',			'裝甲鏈鋸/絞刑架/匕首',					'Armored Chain Saw/Gallows/Dagger',								'装甲チェーンソー/絞首台/ダガー',				],		
-	'103' :				['埋葬者/食尸鬼/十夫长',			'埋葬者/食屍鬼/十夫長',					'Undertaker/Ghoul/Decurio',										'埋葬者/グール/十人長',							],		//02		
+	'101' :				['装甲猎手/干扰者/靓蓝',			'装甲ハンター/攪乱者/インディゴ',			'Armored Hunter/Disruptor/Indigo',								],		
+	'102' :				['装甲链锯/绞刑架/匕首',			'装甲チェーンソー/絞首台/ダガー',			'Armored Chain Saw/Gallows/Dagger',								],		
+	'103' :				['埋葬者/食尸鬼/十夫长',			'埋葬者/グール/十人長',						'Undertaker/Ghoul/Decurio',										],		//02		
 	
-	'104' :				['绞肉机/移动堡/百夫长',			'絞肉機/移動堡/百夫長',					'Meat Grinder/Moving Castle/Centurion',							'肉挽き器/移動城/百人長',						],		
-	'105' :				['力法师/开瓶器/结晶体',			'力法師/開瓶器/結晶體',					'Force Mage/Opener/Crystal',									'力の魔術師/ボトルオープナー/結晶体',			],		
-	'106' :				['扭曲者/楔形兵/骑士',				'扭曲者/楔形兵/騎士',					'Twister/Wedge Rifleman/Knight',								'ツイスター/楔コマンド/騎士',					],		//02		
+	'104' :				['绞肉机/移动堡/百夫长',			'肉挽き器/移動城/百人長',					'Meat Grinder/Moving Castle/Centurion',							],		
+	'105' :				['力法师/开瓶器/结晶体',			'力の魔術師/ボトルオープナー/結晶体',		'Force Mage/Opener/Crystal',									],		
+	'106' :				['扭曲者/楔形兵/骑士',				'ツイスター/楔コマンド/騎士',				'Twister/Wedge Rifleman/Knight',								],		//02		
 	
-	'107' :				['角斗士/膨胀者/狂轰者',			'角鬥士/膨脹者/狂轟者',					'Gladiator/Expander/Advanced Bomber',							'グラディエーター/膨張者/狂爆者',				],		
-	'108' :				['推进者/执法队/镇暴队',			'推進者/執法隊/鎮暴隊',					'Pusher/Enforcement Squad/Riot Squad',							'推進者/執行部隊/鎮圧隊',						],		
-	'109' :				['封喉冲车/方阵兵/圣骑士',			'封喉衝車/方陣兵/聖騎士',				'Executor/Phalanx Soldier/Paladin',								'喉潰し/ファランクス/聖騎士',					],		//02		
+	'107' :				['角斗士/膨胀者/狂轰者',			'グラディエーター/膨張者/狂爆者',			'Gladiator/Expander/Advanced Bomber',							],		
+	'108' :				['推进者/执法队/镇暴队',			'推進者/執行部隊/鎮圧隊',					'Pusher/Enforcement Squad/Riot Squad',							],		
+	'109' :				['封喉冲车/方阵兵/圣骑士',			'喉潰し/ファランクス/聖騎士',				'Executor/Phalanx Soldier/Paladin',								],		//02		
 	
 };
 
@@ -1885,8 +1894,8 @@ tbodyArray01.forEach(function(item){
 			let itemLength = data.split('|').length, flexWidth = 540;
 			if(itemLength === 1){ flexWidth = 144 }else if(itemLength === 2){ flexWidth = 276 }else if(itemLength === 3){ flexWidth = 408 };
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? data : ('<span>'+ data +'</span>' + '<span style="width:'+flexWidth+'px;">' + 
-				data.split('|').map(function(e){ return '<span><img alt="'+ outMissionsStr[e][0] +'" src="../static/image/mission/'+ outMissionsSrc[e] 
-				+ '.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />'+ e +' '+ outMissionsStr[e][0] +'</span>' }).join('') + '</span>'
+				data.split('|').map(function(e){ return '<span><img alt="'+ outMissionsStr[e][xj2.lang.code] +'" src="../static/image/mission/'+ outMissionsSrc[e] 
+				+ '.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />'+ e +' '+ outMissionsStr[e][xj2.lang.code] +'</span>' }).join('') + '</span>'
 			)) + '</td>'
 		}else 
 		
@@ -1895,8 +1904,8 @@ tbodyArray01.forEach(function(item){
 			let itemLength = data.split('|').length, flexWidth = 540;
 			if(itemLength === 1){ flexWidth = 144 }else if(itemLength === 2){ flexWidth = 276 }else if(itemLength === 3){ flexWidth = 408 };
 			powerTable_tbody_node01 += '<td>'+ ((data === '-' || data === '0') ? data : ('<span>' + data + '</span>' + '<span style="width:'+flexWidth+'px;">' + 
-				data.split('|').map(function(e){ return '<span><img alt="'+ holidayTaskStr[e][0] +'" src="../static/image/'+ (index !== 80 ? 'holiday/' : 'survival/')
-				+ holidayTaskSrc[e] +'.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />' + e + ' ' + holidayTaskStr[e][0] + '</span>' }).join('') + '</span>'
+				data.split('|').map(function(e){ return '<span><img alt="'+ holidayTaskStr[e][xj2.lang.code] +'" src="../static/image/'+ (index !== 80 ? 'holiday/' : 'survival/')
+				+ holidayTaskSrc[e] +'.jpg" style="width:128px;height:64px;margin-bottom:4px;" /><br />' + e + ' ' + holidayTaskStr[e][xj2.lang.code] + '</span>' }).join('') + '</span>'
 			)) + '</td>'
 		}else 
 		
@@ -1920,8 +1929,8 @@ tbodyArray01.forEach(function(item){
 							if(src === 'Parb1b'){ src = 'Parb1' }else if(src === 'Parb2b'){ src = 'Parb2' }
 							else if(src === 'Pareb'){ src = 'Pare' }else if(src === 'Parfb'){ src = 'Parf' };
 							
-							result += '<span><img alt="'+ enemyName[e02][0] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
-							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][0] +'</span>';
+							result += '<span><img alt="'+ enemyName[e02][xj2.lang.code] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
+							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][xj2.lang.code] +'</span>';
 							
 						});
 					result += '</span>';
@@ -1954,8 +1963,8 @@ tbodyArray01.forEach(function(item){
 							if(src === 'Parb1b'){ src = 'Parb1' }else if(src === 'Parb2b'){ src = 'Parb2' }
 							else if(src === 'Pareb'){ src = 'Pare' }else if(src === 'Parfb'){ src = 'Parf' };
 							
-							result += '<span><img alt="'+ enemyName[e02][0] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
-							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][0] +'</span>';
+							result += '<span><img alt="'+ enemyName[e02][xj2.lang.code] + '" src="../static/image/enemy/'+ (isSpecialEnemy 
+							? 'z' : '') + src + (isSpecialEnemy ? '.png' : '.jpg') + '" style="width:64px;height:64px;margin-bottom:4px;" /><br />'+ enemyName[e02][xj2.lang.code] +'</span>';
 							
 						});
 					result += '</span>';
@@ -1982,7 +1991,7 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
 
 // 动画同步
 jqi_powerTable01.find('tbody > tr > td:nth-of-type(21), tbody > tr > td:nth-of-type(22), '
@@ -2036,6 +2045,8 @@ $(window).on('keyup', function(event){
 		if(event.key === '4'){ jqi_powerTable01.removeClass('showPart01 showPart02 showPart03').addClass('showPart04'), jqi_textPart.text('P04') };		// 4 / 小键盘或数字键盘都行
 	};
 });
+
+})();
 </script>
 
 
@@ -2046,7 +2057,7 @@ $(window).on('keyup', function(event){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -2066,7 +2077,7 @@ $(window).on('keyup', function(event){
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 

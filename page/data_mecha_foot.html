@@ -45,11 +45,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <link rel="stylesheet" href="../static/plugin/xjDir/0.2.0/dist/xjDir.min.css" />
 <script src="../static/plugin/xjDir/0.2.0/dist/xjDir.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2024-11-28T02:38:24UTC+8" />
-<script src="../static/cjs/_global.js?time=2024-11-28T02:38:24UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-01-28T08:30:09UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-01-28T08:30:09UTC+8"></script>
 
-<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ." />
-<meta name="kyewords" content="铁骑少女, 鐵騎少女, Cavalry Girls, 鉄騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
+<meta name="description" content="这是铁骑少女这款 PC 游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获. これは鉄騎少女という PC ゲームの攻略百科で, ゲームの遊び方や様々なデータが含まれており, 初心者でもベテランでも, ここでは収穫があるはずだ. This is a guide encyclopedia for the PC game Cavalry Girls, which includes gameplay and various data, whether you are a novice player or a seasoned expert, you should be able to gain something from here. 這是鐵騎少女這款 PC 遊戲的攻略百科, 包含了遊戲玩法和各種數據, 無論你是新手玩家或資深大佬, 在這裡都應該能夠有所收穫." />
+<meta name="kyewords" content="铁骑少女, 鉄騎少女, Cavalry Girls, 鐵騎少女, 攻略, 百科, encyclopedia, guide, wiki, xjwiki" />
 <title>足部强化</title>
 </head>
 <body>
@@ -62,30 +62,33 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 <div id="pub_side">
-	<div class="xjScroll" id="xjScroll01" xjScroll="{manual:true, native:true, barsShow:false, barsHide:0, 
-		resizeCallbackType:'none', operateAfter:setDirPositionY, scrollCallback:getDirPositionY, }" style="width:100%;">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
 		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
 			<ul>
-				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png"></i></a></li>
+				<li><a href="../index.html"><i class="xjDir-icon"><img style="display:inline-block;vertical-align:top;height:54px;border:0;" src="../static/icon/logo01.png" /></i></a></li>
 				<script>
-				// jQuery 的 :contains 筛选是模糊匹配的, 所以它也会匹配到包目标含文本参数的其他节点
-				// 为了更精准, 所以这里改成使用 filter() 方法进行过滤, 以实现全匹配才选中节点的效果
-				dirRepeatAnchor.find('a').filter(function(){ return (this.textContent.trim
-				() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(dirRepeatAnchor);
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				document.title = xj2.i18n[document.title];
+				xj2._dirRepeatAnchor.find('.xjDir-text').filter(function(){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirRepeatAnchor);
 				</script>
 			</ul>
 		</div>
 	</div>
 	<script>
-	let ele_pub_size = document.getElementById('pub_size');
-	let isMobile = /Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent);
-	let setDirMinHeight = function(){ $('#xjScroll01').css('height', ele_pub_size.clientHeight) };
-	$(window).on('resize', function(){ setDirMinHeight() }); if(isMobile === true){ $(window).on('scroll', setDirMinHeight) };
-	setDirMinHeight();
-	let setDirPositionY = function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } };
-	let getDirPositionY = function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) };
-	$('#xjScroll01').xjScroll({});
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
 	</script>
 </div>
 
@@ -94,6 +97,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <div id="pub_wrap">
 <div id="pub_head">
 	<h1 id="pub_headText"><a class="a-unset" href=""><span>足部强化</span><small>(速度提升)</small></a></h1>
+	<script>$('#pub_headText > a > span').text(xj2.i18n.足部强化); $('#pub_headText > a > small').text(xj2.i18n.速度提升);</script>
 	
 	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="https://github.com/xjwiki/cavalryGirls/search">
 		<input id="pub_headFormText" class="input-plain" type="search" name="q" autocomplete="off" placeholder="Search" value="" />
@@ -106,12 +110,11 @@ function(){ FastClick.attach(document.body) }, false);</script>
 	
 	<span id="pub_headLang">
 		<button id="pub_headLangIcon" type="button" 
-		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-globe"></i></button>
+		title="Select Your Adept Lang" onclick="this.focus()"><i class="fas fa-earth-asia"></i></button>
 		<div id="pub_headLangMenu">
-			<a class="a-unset" href="">简体中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">繁體中文</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">English</a>
-			<a class="a-unset" href="javascript:void(0)" style="opacity:0.5;cursor:not-allowed;">日本語</a>
+			<a class="a-unset" href="?lang=zh">简体中文</a>
+			<a class="a-unset" href="?lang=en">English</a>
+			<a class="a-unset" href="?lang=jp">日本語</a>
 		</div>
 	</span>
 </div>
@@ -125,33 +128,45 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 足部强化装备不能重复安装, 但不同等级的同类装备可以并存, 数量取决于 <code>足部强化模块槽位上限</code>, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
-	02. 以下是足部强化的装备列表, 共 <code>30</code> 种 / 分 <code>10</code> 类, 这些装备大多是用于提升移动速度或炮台转速, 有助于增强机体的敏捷性; <br />
+	01. 足部强化装备不能重复安装, 但不同等级的同类装备可以并存, 数量取决于 <span class="code">足部强化模块槽位上限</span>, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
+	02. 以下是足部强化的装备列表, 共 <span class="code">30</span> 种 / 分 <span class="code">10</span> 类, 这些装备大多是用于提升移动速度或炮台转速, 有助于增强机体的敏捷性; <br />
 	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 额外拓展</a>; <br />
 	04. 你可以借助筛选工具进行精确查找, 值得一提的是, 尽管枪塔&炮塔不能移动, 但也有足部强化槽位, 只是并非所有的装备都能适配; <br />
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
-	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">配件等级: </span><select id="attrSelect01" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
-	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">物品类型: </span><select id="attrSelect02" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
-	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">归属种类: </span><select id="attrSelect03" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
-	<label style="display:inline-flex;flex:0 0 auto;width:228px;"><span style="flex:0 0 auto;width:80px">原型研发: </span><select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select></label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;"><zh-b style="font-size:16px;line-height:24px;">配件等级: </zh-b><jp-b style="font-size:12px;line-height:12px;">アイテムレベル: </jp-b><en-b style="font-size:12px;line-height:12px;">Item Level: </en-b></span>
+		<select id="attrSelect01" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;"><zh-b style="font-size:16px;line-height:24px;">物品类型: </zh-b><jp-b style="font-size:12px;line-height:12px;">アイテムタイプ: </jp-b><en-b style="font-size:12px;line-height:12px;">Item Type: </en-b></span>
+		<select id="attrSelect02" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;"><zh-b style="font-size:16px;line-height:24px;">归属种类: </zh-b><jp-b style="font-size:12px;line-height:12px;">アイテムソート: </jp-b><en-b style="font-size:12px;line-height:12px;">Item Sort: </en-b></span>
+		<select id="attrSelect03" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;"><zh-b style="font-size:16px;line-height:24px;">原型研发: </zh-b><jp-b style="font-size:12px;line-height:12px;">プロトタイプ</jp-b><en-b style="font-size:12px;line-height:12px;">Prototype By: </en-b></span>
+		<select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+	</label>
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
 	
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
-		<span style="flex:0 0 auto;width:80px">名称描述: </span>
-		<input id="nameInput01" class="input-unset" type="text" style="flex:1 1 auto;width:116px;" placeholder="空" />
-		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;"><i class="fas fa-magnifying-glass"></i></button>
+		<span style="flex:0 0 auto;align-self:center;width:80px;"><zh-b style="font-size:16px;line-height:24px;">名称描述: </zh-b><jp-b style="font-size:12px;line-height:12px;">アイテムの名前: </jp-b><en-b style="font-size:12px;line-height:12px;">Item Names: </en-b></span>
+		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;order:1;"><i class="fas fa-magnifying-glass"></i></button>
+		<input id="nameInput01" class="input-unset" type="text" style="flex:1 1 auto;width:116px;" placeholder="None" />
 	</label>
 	
-	<span style="display:inline-flex;flex:0 0 auto;width:472px;color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
+	<span style="display:inline-flex;flex:0 0 auto;width:472px;color:#999;">(<zh-i>可以搜索名称或描述, 多关键词用空格隔开</zh-i><jp-i>検索名前または説明, 複数キーワードをスペースで区切る</jp-i><en-i>Name/Description, Separate Multiple Keywords With Spaces</en-i>)</span>
 	
 	<span style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;color:#999;">│</span>
-		<button style="flex:0 0 auto;width:74px;margin-left:auto;order:1;" 
-		id="resetButton" class="button-unset" type="button" xj-focus="{ontabAlways:true}">清空</button>
+		<button style="flex:0 0 auto;width:74px;margin-left:auto;order:1;" id="resetButton" 
+		class="button-unset" type="button" xj-focus="{ontabAlways:true}"><zh-b>清空</zh-b><jp-b>パージ</jp-b><en-b>CleanUp</en-b></button>
 	</span>
 	
 </p>
@@ -159,21 +174,20 @@ function(){ FastClick.attach(document.body) }, false);</script>
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01"style="width:960px;line-height:14px;">
 	<thead>
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fa fa-sort" style="margin-left:0;"></i></span><span 
-			style="position:absolute;top:0;bottom:2px;left:0;width:5px;background-image:linear-gradient(180deg, #6991e7 0%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 100%);"></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备图片</zh-i><jp-i>画像</jp-i><en-i>Img</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备序号</zh-i><jp-i>番号</jp-i><en-i>Hash</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>装备名称</zh-i><jp-i>名前</jp-i><en-i>Name</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>项目代码</zh-i><jp-i>コード</jp-i><en-i>Code</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>参考价格</zh-i><jp-i>価格</jp-i><en-i>Price</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>配件等级</zh-i><jp-i>レベル</jp-i><en-i>Level</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>默认排序</zh-i><jp-i>ソート</jp-i><en-i>Resolve</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>解锁天数</zh-i><jp-i>解除日数</jp-i><en-i>Unlock</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>物品类型</zh-i><jp-i>アイテムタイプ</jp-i><en-i>Type</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>归属种类</zh-i><jp-i>タグ</jp-i><en-i>Tag</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>原型研发</zh-i><jp-i>プロトタイプ</jp-i><en-i>Company</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>合成材料</zh-i><jp-i>合成素材</jp-i><en-i>CraftMaterials</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>出现条件</zh-i><jp-i>出現条件</jp-i><en-i>NeedWeapon</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><zh-i>文本描述</zh-i><jp-i>説明</jp-i><en-i>Description</en-i><i class="icon fa fa-sort" style="margin-left:0;"></i></span></th>
 		</tr>
 	</thead>
 	<tbody></tbody>
@@ -186,7 +200,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>重复安装: 尽管机体不能安装相同的足部模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是可以并存的, 只要描述没有明确提起说不能叠加(目前足部模块并没有任何不能叠加的装备), 那么这些同类的模块增益都会以累加的形式存在, 例如扭力转换器1和扭力转换器2和扭力转换器3, 它们并存, 合计会增加 <code>20%+30%+50%=100%</code> 的转向速度, 但同时也会降低 <code>5%+10%+15%=30%</code> 的机体速度;</p>
+<p>重复安装: 尽管机体不能安装相同的足部模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是可以并存的, 只要描述没有明确提起说不能叠加(目前足部模块并没有任何不能叠加的装备), 那么这些同类的模块增益都会以累加的形式存在, 例如扭力转换器1和扭力转换器2和扭力转换器3, 它们并存, 合计会增加 <span class="code">20%+30%+50%=100%</span> 的转向速度, 但同时也会降低 <span class="code">5%+10%+15%=30%</span> 的机体速度;</p>
 
 <p>————</p>
 
@@ -209,7 +223,7 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<style>/* 表格样式 */
+<style>/* 样式设置 */
 #powerTable01 .hideTr{display:none;}
 
 /* 归属种类 */
@@ -243,8 +257,10 @@ function(){ FastClick.attach(document.body) }, false);</script>
 
 
 
-<script>/* 数据注解 */
-/*
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
 
 CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
 MaxPile = 1, ColorPlus = Cluster = '-',
@@ -303,146 +319,146 @@ let tbodyArray01 = [
 // 项目名称
 let ItemsNameList = {
 	
-	2050 : ['速度模块',				'速度模組',				'Speed Module',							'速度モジュール',				],		
-	2051 : ['速度模块+',			'速度模組+',			'Speed Module+',						'速度モジュール+',				],		
-	2052 : ['高级速度模块',			'高級速度模組',			'Advanced Speed Module',				'上級速度モジュール',			],		
-	2053 : ['制式速度模块',			'制式速度模組',			'Standard Speed Module',				'制式速度モジュール',			],		//02		
-
-	2054 : ['转轴模块',				'轉軸模組',				'Rotating Shaft Module',				'回転軸モジュール',				],		
-	2055 : ['转轴模块+',			'轉軸模組+',			'Rotating Shaft Module+',				'回転軸モジュール+',			],		
-	2056 : ['高级转轴模块',			'高級轉軸模組',			'Advanced Rotating Shaft Module',		'上級回転軸モジュール',			],		
-	2057 : ['制式转轴模块',			'制式轉軸模組',			'Standard Rotating Shaft Module',		'制式回転軸モジュール',			],		//02		
-
-	2301 : ['关节润滑模块',			'關節潤滑模組',			'Joint Lubr. Module',					'関節潤滑モジュール',			],		
-	2302 : ['关节润滑模块+',		'關節潤滑模組+',		'Joint Lubr. Module+',					'関節潤滑モジュール+',			],		//02		
-
-	2303 : ['动力电容',				'動力電容',				'Power Capacitor',						'パワーコンデンサ',				],		
-	2304 : ['动力电容+',			'動力電容+',			'Power Capacitor+',						'パワーコンデンサ+',			],		//02		
-
-	2308 : ['功率放大器',			'功率放大器',			'Power Amplifier',						'出力増幅器',					],		
-	2309 : ['功率放大器2',			'功率放大器2',			'Power Amplifier 2',					'出力増幅器2',					],		
-	2310 : ['功率放大器3',			'功率放大器3',			'Power Amplifier 3',					'出力増幅器3',					],		//02		
-
-	2305 : ['扭力转换器',			'扭力轉換器',			'Torque Converter',						'トルクコンバーター',			],		
-	2306 : ['扭力转换器2',			'扭力轉換器2',			'Torque Converter 2',					'トルクコンバーター2',			],		
-	2307 : ['扭力转换器3',			'扭力轉換器3',			'Torque Converter 3',					'トルクコンバーター3',			],		//02		
-
-	2323 : ['脚爪模块',				'腳爪模組',				'Claw Module',							'フットクローモジュール',		],		
-	2324 : ['脚爪模块+',			'腳爪模組+',			'Claw Module+',							'フットクローモジュール+',		],		//02		
-
-	2325 : ['奔跑过载器',			'奔跑超載器',			'Sprint Overloader',					'走行オーバーローダー',			],		
-	2326 : ['奔跑过载器2',			'奔跑超載器2',			'Sprint Overloader 2',					'走行オーバーローダー2',		],		
-	2327 : ['奔跑过载器3',			'奔跑超載器3',			'Sprint Overloader 3',					'走行オーバーローダー3',		],		//02		
-
-	2328 : ['奔跑模块',				'奔跑模組',				'Sprint Module',						'走行モジュール',				],		
-	2329 : ['奔跑模块+',			'奔跑模組+',			'Sprint Module+',						'走行モジュール+',				],		
-	2330 : ['高级奔跑模块',			'高級奔跑模組',			'Advanced Sprint Module',				'上級走行モジュール',			],		
-	2331 : ['制式奔跑模块',			'制式奔跑模組',			'Standard Sprint Module',				'制式走行モジュール',			],		//02		
-
-	2401 : ['液压足',				'液壓足',				'Hydraulic foot',						'ハイドロリックフット',			],		
-	2402 : ['液压足+',				'液壓足+',				'Hydraulic foot+',						'ハイドロリックフット+',		],		
-	2403 : ['液压足++',				'液壓足++',				'Hydraulic foot++',						'ハイドロリックフット++',		],		//02		
+	2050 : ['速度模块',				'速度モジュール',				'Speed Module',							],		
+	2051 : ['速度模块+',			'速度モジュール+',				'Speed Module+',						],		
+	2052 : ['高级速度模块',			'上級速度モジュール',			'Advanced Speed Module',				],		
+	2053 : ['制式速度模块',			'制式速度モジュール',			'Standard Speed Module',				],		//02		
 	
+	2054 : ['转轴模块',				'回転軸モジュール',				'Rotating Shaft Module',				],		
+	2055 : ['转轴模块+',			'回転軸モジュール+',			'Rotating Shaft Module+',				],		
+	2056 : ['高级转轴模块',			'上級回転軸モジュール',			'Advanced Rotating Shaft Module',		],		
+	2057 : ['制式转轴模块',			'制式回転軸モジュール',			'Standard Rotating Shaft Module',		],		//02		
+	
+	2301 : ['关节润滑模块',			'関節潤滑モジュール',			'Joint Lubr. Module',					],		
+	2302 : ['关节润滑模块+',		'関節潤滑モジュール+',			'Joint Lubr. Module+',					],		//02		
+	
+	2303 : ['动力电容',				'パワーコンデンサ',				'Power Capacitor',						],		
+	2304 : ['动力电容+',			'パワーコンデンサ+',			'Power Capacitor+',						],		//02		
+	
+	2308 : ['功率放大器',			'出力増幅器',					'Power Amplifier',						],		
+	2309 : ['功率放大器2',			'出力増幅器2',					'Power Amplifier 2',					],		
+	2310 : ['功率放大器3',			'出力増幅器3',					'Power Amplifier 3',					],		//02		
+	
+	2305 : ['扭力转换器',			'トルクコンバーター',			'Torque Converter',						],		
+	2306 : ['扭力转换器2',			'トルクコンバーター2',			'Torque Converter 2',					],		
+	2307 : ['扭力转换器3',			'トルクコンバーター3',			'Torque Converter 3',					],		//02		
+	
+	2323 : ['脚爪模块',				'フットクローモジュール',		'Claw Module',							],		
+	2324 : ['脚爪模块+',			'フットクローモジュール+',		'Claw Module+',							],		//02		
+	
+	2325 : ['奔跑过载器',			'走行オーバーローダー',			'Sprint Overloader',					],		
+	2326 : ['奔跑过载器2',			'走行オーバーローダー2',		'Sprint Overloader 2',					],		
+	2327 : ['奔跑过载器3',			'走行オーバーローダー3',		'Sprint Overloader 3',					],		//02		
+	
+	2328 : ['奔跑模块',				'走行モジュール',				'Sprint Module',						],		
+	2329 : ['奔跑模块+',			'走行モジュール+',				'Sprint Module+',						],		
+	2330 : ['高级奔跑模块',			'上級走行モジュール',			'Advanced Sprint Module',				],		
+	2331 : ['制式奔跑模块',			'制式走行モジュール',			'Standard Sprint Module',				],		//02		
+	
+	2401 : ['液压足',				'ハイドロリックフット',			'Hydraulic foot',						],		
+	2402 : ['液压足+',				'ハイドロリックフット+',		'Hydraulic foot+',						],		
+	2403 : ['液压足++',				'ハイドロリックフット++',		'Hydraulic foot++',						],		//02		
+		
 };
 
 // 文本描述
 let DescriptionList = {
 	
-	2050 : [/*'速度模块',			AddSpeed:20,						*/'机体速度 +20%, 仅抵消惩罚',				'移動速度+<Description>%\n(僅抵消懲罰)',						'Increases movement speed by <Description>%.\n(neglects punishment only)',								'移動速度+<Description>%\n(ペナルティ相殺用のみ)',				],
-	2051 : [/*'速度模块+',			AddSpeed:35,						*/'机体速度 +35%, 仅抵消惩罚',				'移動速度+<Description>%\n(僅抵消懲罰)',						'Increases movement speed by <Description>%.\n(neglects punishment only)',								'移動速度+<Description>%\n(ペナルティ相殺用のみ)',				],
-	2052 : [/*'高级速度模块',		AddSpeed:55,						*/'机体速度 +55%, 仅抵消惩罚',				'移動速度+<Description>%\n(僅抵消懲罰)',						'Increases movement speed by <Description>%.\n(neglects punishment only)',								'移動速度+<Description>%\n(ペナルティ相殺用のみ)',				],
-	2053 : [/*'制式速度模块',		AddSpeed:75,						*/'机体速度 +75%, 仅抵消惩罚',				'移動速度+<Description>%\n(僅抵消懲罰)',						'Increases movement speed by <Description>%.\n(neglects punishment only)',								'移動速度+<Description>%\n(ペナルティ相殺用のみ)',				],		//03		
+	2050 : [/*'速度模块',			AddSpeed:20,						*/'机体速度 +20%, 仅抵消惩罚',				'移動速度 +20%(ペナルティ相殺用のみ)',				'Increases movement speed b +20%(neglects punishment only)',					],
+	2051 : [/*'速度模块+',			AddSpeed:35,						*/'机体速度 +35%, 仅抵消惩罚',				'移動速度 +35%(ペナルティ相殺用のみ)',				'Increases movement speed b +35%(neglects punishment only)',					],
+	2052 : [/*'高级速度模块',		AddSpeed:55,						*/'机体速度 +55%, 仅抵消惩罚',				'移動速度 +55%(ペナルティ相殺用のみ)',				'Increases movement speed b +55%(neglects punishment only)',					],
+	2053 : [/*'制式速度模块',		AddSpeed:75,						*/'机体速度 +75%, 仅抵消惩罚',				'移動速度 +75%(ペナルティ相殺用のみ)',				'Increases movement speed b +75%(neglects punishment only)',					],		//03		
 	
-	2054 : [/*'转轴模块',			AddRotSpeed:15,						*/'转向速度 +15%, 仅抵消惩罚',				'炮塔旋轉速度+<Description>%\n(僅抵消懲罰)',					'Increases turret rotational speed by <Description>%.\n(neglects punishment only)',						'砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)',			],
-	2055 : [/*'转轴模块+',			AddRotSpeed:25,						*/'转向速度 +25%, 仅抵消惩罚',				'炮塔旋轉速度+<Description>%\n(僅抵消懲罰)',					'Increases turret rotational speed by <Description>%.\n(neglects punishment only)',						'砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)',			],
-	2056 : [/*'高级转轴模块',		AddRotSpeed:40,						*/'转向速度 +40%, 仅抵消惩罚',				'炮塔旋轉速度+<Description>%\n(僅抵消懲罰)',					'Increases turret rotational speed by <Description>%.\n(neglects punishment only)',						'砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)',			],
-	2057 : [/*'制式转轴模块',		AddRotSpeed:60,						*/'转向速度 +60%, 仅抵消惩罚',				'炮塔旋轉速度+<Description>%\n(僅抵消懲罰)',					'Increases turret rotational speed by <Description>%.\n(neglects punishment only)',						'砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)',			],		//03		
+	2054 : [/*'转轴模块',			AddRotSpeed:15,						*/'转向速度 +15%, 仅抵消惩罚',				'砲塔旋回速度 +15%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +15%(neglects punishment only)',			],
+	2055 : [/*'转轴模块+',			AddRotSpeed:25,						*/'转向速度 +25%, 仅抵消惩罚',				'砲塔旋回速度 +25%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +25%(neglects punishment only)',			],
+	2056 : [/*'高级转轴模块',		AddRotSpeed:40,						*/'转向速度 +40%, 仅抵消惩罚',				'砲塔旋回速度 +40%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +40%(neglects punishment only)',			],
+	2057 : [/*'制式转轴模块',		AddRotSpeed:60,						*/'转向速度 +60%, 仅抵消惩罚',				'砲塔旋回速度 +60%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +60%(neglects punishment only)',			],		//03		
 	
-	2301 : [/*'关节润滑模块',		RunStrength:-12,					*/'奔跑能耗 -12%',							'奔跑能量消耗<Description>%',									'Reduces sprint energy consumption by <Description>%.',													'走行エネルギー消費<Description>%',								],
-	2302 : [/*'关节润滑模块+',		RunStrength:-20,					*/'奔跑能耗 -20%',							'奔跑能量消耗<Description>%',									'Reduces sprint energy consumption by <Description>%.',													'走行エネルギー消費<Description>%',								],		//03		
+	2301 : [/*'关节润滑模块',		RunStrength:-12,					*/'奔跑能耗 -12%',							'走行エネルギー消費 -12%',							'Reduces sprint energy consumption by -12%',									],
+	2302 : [/*'关节润滑模块+',		RunStrength:-20,					*/'奔跑能耗 -20%',							'走行エネルギー消費 -20%',							'Reduces sprint energy consumption by -20%',									],		//03		
 	
-	2303 : [/*'动力电容',			RunRecover:12,						*/'能耗恢复 +12%',							'奔跑能量回復+<Description>%',									'Increases sprint energy regeneration by <Description>%.',												'走行エネルギー回復+<Description>%',							],
-	2304 : [/*'动力电容+',			RunRecover:20,						*/'能耗恢复 +20%',							'奔跑能量回復+<Description>%',									'Increases sprint energy regeneration by <Description>%.',												'走行エネルギー回復+<Description>%',							],		//03		
+	2303 : [/*'动力电容',			RunRecover:12,						*/'能耗恢复 +12%',							'走行エネルギー回復 +12%',							'Increases sprint energy regeneration by +12%',									],
+	2304 : [/*'动力电容+',			RunRecover:20,						*/'能耗恢复 +20%',							'走行エネルギー回復 +20%',							'Increases sprint energy regeneration by +20%',									],		//03		
 	
-	2308 : [/*'功率放大器',			AddPower:15,						*/'起步马力 +15%',							'起步馬力+<Description>%',										'Starting horsepower +<Description>%',																	'始動馬力+<Description>%',										],
-	2309 : [/*'功率放大器2',		AddPower:25,						*/'起步马力 +25%',							'起步馬力+<Description>%',										'Starting horsepower +<Description>%',																	'始動馬力+<Description>%',										],
-	2310 : [/*'功率放大器3',		AddPower:40,						*/'起步马力 +40%',							'起步馬力+<Description>%',										'Starting horsepower +<Description>%',																	'始動馬力+<Description>%',										],		//03		
+	2308 : [/*'功率放大器',			AddPower:15,						*/'起步马力 +15%',							'始動馬力 +15%',									'Starting horsepower +15%',														],
+	2309 : [/*'功率放大器2',		AddPower:25,						*/'起步马力 +25%',							'始動馬力 +25%',									'Starting horsepower +25%',														],
+	2310 : [/*'功率放大器3',		AddPower:40,						*/'起步马力 +40%',							'始動馬力 +40%',									'Starting horsepower +40%',														],		//03		
 	
-	2305 : [/*'扭力转换器',			AddRotSpeedLimit:20|AddSpeed:-5,	*/'转向速度 +20%<br />机体速度 - 5%',		'炮塔旋轉速度+<Description:0>%, 移動速度<Description:1>%',		'Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.',		'砲塔旋回速度+<Description:0>%、移動速度<Description:1>%',		],
-	2306 : [/*'扭力转换器2',		AddRotSpeedLimit:30|AddSpeed:-10,	*/'转向速度 +30%<br />机体速度 -10%',		'炮塔旋轉速度+<Description:0>%, 移動速度<Description:1>%',		'Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.',		'砲塔旋回速度+<Description:0>%、移動速度<Description:1>%',		],
-	2307 : [/*'扭力转换器3',		AddRotSpeedLimit:50|AddSpeed:-15,	*/'转向速度 +50%<br />机体速度 -15%',		'炮塔旋轉速度+<Description:0>%, 移動速度<Description:1>%',		'Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.',		'砲塔旋回速度+<Description:0>%、移動速度<Description:1>%',		],		//03		
+	2305 : [/*'扭力转换器',			AddRotSpeedLimit:20|AddSpeed:-5,	*/'转向速度 +20%<br />机体速度 - 5%',		'砲塔旋回速度 +20%、移動速度 - 5%',					'Increases turret rotational speed by +20% and movement speed by - 5%',			],
+	2306 : [/*'扭力转换器2',		AddRotSpeedLimit:30|AddSpeed:-10,	*/'转向速度 +30%<br />机体速度 -10%',		'砲塔旋回速度 +30%、移動速度 -10%',					'Increases turret rotational speed by +30% and movement speed by -10%',			],
+	2307 : [/*'扭力转换器3',		AddRotSpeedLimit:50|AddSpeed:-15,	*/'转向速度 +50%<br />机体速度 -15%',		'砲塔旋回速度 +50%、移動速度 -15%',					'Increases turret rotational speed by +50% and movement speed by -15%',			],		//03		
 	
-	2323 : [/*'脚爪模块',			BackMass:-30,						*/'开火受力 -30%',							'開火後坐力<Description>%',										'Recoil <Description>%.',																				'発砲反動<Description>%',										],
-	2324 : [/*'脚爪模块+',			BackMass:-60,						*/'开火受力 -60%',							'開火後坐力<Description>%',										'Recoil <Description>%.',																				'発砲反動<Description>%',										],		//03		
+	2323 : [/*'脚爪模块',			BackMass:-30,						*/'开火受力 -30%',							'発砲反動 -30%',									'Recoil -30%',																	],
+	2324 : [/*'脚爪模块+',			BackMass:-60,						*/'开火受力 -60%',							'発砲反動 -60%',									'Recoil -60%',																	],		//03		
 	
-	2325 : [/*'奔跑过载器',			RunSpeed:20|AddSpeed:-10,			*/'奔跑速度 +20%<br />机体速度 -10%',		'奔跑速度+<Description:0>%, 移動速度<Description:1>%',			'Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.',					'走行速度+<Description:0>%、移動速度<Description:1>%',			],
-	2326 : [/*'奔跑过载器2',		RunSpeed:30|AddSpeed:-15,			*/'奔跑速度 +30%<br />机体速度 -15%',		'奔跑速度+<Description:0>%, 移動速度<Description:1>%',			'Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.',					'走行速度+<Description:0>%、移動速度<Description:1>%',			],
-	2327 : [/*'奔跑过载器3',		RunSpeed:40|AddSpeed:-20,			*/'奔跑速度 +40%<br />机体速度 -20%',		'奔跑速度+<Description:0>%, 移動速度<Description:1>%',			'Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.',					'走行速度+<Description:0>%、移動速度<Description:1>%',			],		//03		
+	2325 : [/*'奔跑过载器',			RunSpeed:20|AddSpeed:-10,			*/'奔跑速度 +20%<br />机体速度 -10%',		'走行速度 +20%、移動速度 -10%',						'Increases sprint speed by +20% and movement speed by -10%',					],
+	2326 : [/*'奔跑过载器2',		RunSpeed:30|AddSpeed:-15,			*/'奔跑速度 +30%<br />机体速度 -15%',		'走行速度 +30%、移動速度 -15%',						'Increases sprint speed by +30% and movement speed by -15%',					],
+	2327 : [/*'奔跑过载器3',		RunSpeed:40|AddSpeed:-20,			*/'奔跑速度 +40%<br />机体速度 -20%',		'走行速度 +40%、移動速度 -20%',						'Increases sprint speed by +40% and movement speed by -20%',					],		//03		
 	
-	2328 : [/*'奔跑模块',			RunSpeed:10,						*/'奔跑速度 +10%',							'奔跑速度+<Description>%',										'Increases sprint speed by <Description>%.',															'走行速度+<Description>%',										],
-	2329 : [/*'奔跑模块+',			RunSpeed:15,						*/'奔跑速度 +15%',							'奔跑速度+<Description>%',										'Increases sprint speed by <Description>%.',															'走行速度+<Description>%',										],
-	2330 : [/*'高级奔跑模块',		RunSpeed:20,						*/'奔跑速度 +20%',							'奔跑速度+<Description>%',										'Increases sprint speed by <Description>%.',															'走行速度+<Description>%',										],
-	2331 : [/*'制式奔跑模块',		RunSpeed:25,						*/'奔跑速度 +25%',							'奔跑速度+<Description>%',										'Increases sprint speed by <Description>%.',															'走行速度+<Description>%',										],		//03		
+	2328 : [/*'奔跑模块',			RunSpeed:10,						*/'奔跑速度 +10%',							'走行速度 +10%',									'Increases sprint speed by +10%',												],
+	2329 : [/*'奔跑模块+',			RunSpeed:15,						*/'奔跑速度 +15%',							'走行速度 +15%',									'Increases sprint speed by +15%',												],
+	2330 : [/*'高级奔跑模块',		RunSpeed:20,						*/'奔跑速度 +20%',							'走行速度 +20%',									'Increases sprint speed by +20%',												],
+	2331 : [/*'制式奔跑模块',		RunSpeed:25,						*/'奔跑速度 +25%',							'走行速度 +25%',									'Increases sprint speed by +25%',												],		//03		
 	
-	2401 : [/*'液压足',				SeatMoveSpeed:18,					*/'蹲踞移速 +18%',							'蹲踞移動速度+<Description>%',									'Increases Moving Speed when crouched by <Description>%.',												'しゃがむ中移動速度+<Description>%',							],
-	2402 : [/*'液压足+',			SeatMoveSpeed:30,					*/'蹲踞移速 +30%',							'蹲踞移動速度+<Description>%',									'Increases Moving Speed when crouched by <Description>%.',												'しゃがむ中移動速度+<Description>%',							],
-	2403 : [/*'液压足++',			SeatMoveSpeed:50,					*/'蹲踞移速 +50%',							'蹲踞移動速度+<Description>%',									'Increases Moving Speed when crouched by <Description>%.',												'しゃがむ中移動速度+<Description>%',							],		//03		
+	2401 : [/*'液压足',				SeatMoveSpeed:18,					*/'蹲踞移速 +18%',							'しゃがむ中移動速度 +18%',							'Increases Moving Speed when crouched by +18%',									],
+	2402 : [/*'液压足+',			SeatMoveSpeed:30,					*/'蹲踞移速 +30%',							'しゃがむ中移動速度 +30%',							'Increases Moving Speed when crouched by +30%',									],
+	2403 : [/*'液压足++',			SeatMoveSpeed:50,					*/'蹲踞移速 +50%',							'しゃがむ中移動速度 +50%',							'Increases Moving Speed when crouched by +50%',									],		//03		
 	
 };
 
 // 物品类型
 let TypeList = {
-	BuffModelFoot :	['足部强化', '足部強化', 'Foot enhancement module', '脚部強化モジュール', ],
+	BuffModelFoot :	['足部强化', '脚部強化モジュール', 'Foot enhancement module', ],
 };
 
 // 归属种类
 let TagList = {
-	BuffModel :		['足部',		'足部',			'Foot enhancement module',			'脚部強化モジュール',		],
-	Cannon :		['炮塔',		'炮塔',			'Turret enhancement module',		'砲塔強化モジュール',		],
+	BuffModel :		['足部',	'脚部強化モジュール',	'Foot enhancement module',		],
+	Cannon :		['炮塔',	'砲塔強化モジュール',	'Turret enhancement module',	],
 };
 
 // 原型研发
 let CompanyList = {
-	Main2_2 :				['航空集团有限公司',		'航空集團有限公司',			'Aviation Group Co., Ltd',					'航空グループ株式会社',			],
-	Main2_4 :				['苏尔发动机制造局',		'蘇爾發動機製造局',			'Sul Engine Manufacturing Bureau',			'スールエンジン製造局',			],
-	Main2_6 :				['布尔发动机公司',			'布爾發動機公司',			'Boolean Engine Company',					'ブールエンジン株式会社',		],
-	TankType_PlayerName_1 :	['库罗库',					'庫羅庫',					'Kuroku',									'クロック',						],
+	Main2_2 :				['航空集团有限公司',		'航空グループ株式会社',			'Aviation Group Co., Ltd',						],
+	Main2_4 :				['苏尔发动机制造局',		'スールエンジン製造局',			'Sul Engine Manufacturing Bureau',				],
+	Main2_6 :				['布尔发动机公司',			'ブールエンジン株式会社',		'Boolean Engine Company',						],
+	TankType_PlayerName_1 :	['库罗库',					'クロック',						'Kuroku',										],
 };
 
 // 合成材料
 let ScrapList = {
-	40001 :	['废铁',			'廢鐵',				'Scrap Iron',					'スクラップアイロン',		],
-	40002 :	['废料',			'廢料',				'Waste Material',				'スクラップ',				],
-	40003 :	['弹壳',			'彈殼',				'Bullet Shell',					'薬莢',						],
-	40004 :	['弹头',			'彈頭',				'Warhead',						'弾頭',						],
-	40005 :	['接合物件',		'接合物件',			'Joining Component',			'接続オブジェクト',			],
-	40006 :	['齿轮',			'齒輪',				'Gear',							'ギア',						],
-	40007 :	['框架',			'框架',				'Frame',						'フレーム',					],
-	40008 :	['铁管',			'鐵管',				'Iron Pipe',					'鉄パイプ',					],
-	40009 :	['扳机',			'扳機',				'Trigger',						'トリガー',					],
-	40010 :	['雷管',			'雷管',				'Detonator',					'起爆装置',					],
-	40011 :	['工业塑料',		'工業塑膠',			'Industrial Plastic',			'工業用プラスチック',		],
-	40012 :	['弹链',			'彈鏈',				'Ammunition Belt',				'弾帯',						],
-	40013 :	['棱镜',			'稜鏡',				'Prism',						'プリズム',					],
-	40014 :	['透镜',			'透鏡',				'Lens',							'レンズ',					],
-	40015 :	['点火器',			'點火器',			'Igniter',						'イグナイター',				],
-	40016 :	['冷凝管',			'冷凝管',			'Condenser',					'復水管',					],
-	40017 :	['线圈',			'線圈',				'Coil',							'コイル',					],
-	40018 :	['电容',			'電容',				'Capacitor',					'コンデンサ',				],
-	40019 :	['电感',			'電感',				'Inductor',						'インダクター',				],
-	40020 :	['三极管',			'三極管',			'Transistor',					'三極管',					],
-	40021 :	['润滑油',			'潤滑油',			'Lubricating Oil',				'潤滑油',					],
-	40022 :	['火花塞',			'火花塞',			'Spark Plug',					'スパークプラグ',			],
-	40023 :	['冷冻剂',			'冷凍劑',			'Refrigerant',					'冷媒',						],
-	40024 :	['装甲',			'裝甲',				'Armor',						'装甲',						],
-	40025 :	['厚装甲',			'厚裝甲',			'Heavy Armor',					'厚い装甲',					],
-	40026 :	['力场管',			'力場管',			'Force Field Generator',		'力場パイプ',				],
-	40027 :	['力场膜',			'力場膜',			'Force Field Membrane',			'力場膜',					],
-	40028 :	['共振器',			'共振器',			'Resonator',					'共振器',					],
-	40029 :	['刀片',			'刀片',				'Blade',						'ブレード',					],
-	40030 :	['振荡器',			'振盪器',			'Oscillator',					'発振回路',					],
-	40031 :	['涂层',			'塗層',				'Coating',						'コーティング',				],
-	40032 :	['核心',			'核心',				'Core',							'コア',						],
+	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',				],
+	40002 :	['废料',			'スクラップ',				'Waste Material',			],
+	40003 :	['弹壳',			'薬莢',						'Bullet Shell',				],
+	40004 :	['弹头',			'弾頭',						'Warhead',					],
+	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',		],
+	40006 :	['齿轮',			'ギア',						'Gear',						],
+	40007 :	['框架',			'フレーム',					'Frame',					],
+	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',				],
+	40009 :	['扳机',			'トリガー',					'Trigger',					],
+	40010 :	['雷管',			'起爆装置',					'Detonator',				],
+	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',		],
+	40012 :	['弹链',			'弾帯',						'Ammunition Belt',			],
+	40013 :	['棱镜',			'プリズム',					'Prism',					],
+	40014 :	['透镜',			'レンズ',					'Lens',						],
+	40015 :	['点火器',			'イグナイター',				'Igniter',					],
+	40016 :	['冷凝管',			'復水管',					'Condenser',				],
+	40017 :	['线圈',			'コイル',					'Coil',						],
+	40018 :	['电容',			'コンデンサ',				'Capacitor',				],
+	40019 :	['电感',			'インダクター',				'Inductor',					],
+	40020 :	['三极管',			'三極管',					'Transistor',				],
+	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',			],
+	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',				],
+	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',				],
+	40024 :	['装甲',			'装甲',						'Armor',					],
+	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',				],
+	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',	],
+	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',		],
+	40028 :	['共振器',			'共振器',					'Resonator',				],
+	40029 :	['刀片',			'ブレード',					'Blade',					],
+	40030 :	['振荡器',			'発振回路',					'Oscillator',				],
+	40031 :	['涂层',			'コーティング',				'Coating',					],
+	40032 :	['核心',			'コア',						'Core',						],
 };
 
 // ---------------------------------------------
@@ -465,21 +481,21 @@ tbodyArray01.forEach(function(item){
 		+'" src="../static/image/06_mecha_foot/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
 		
 		// 武器名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
+		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 物品类型
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][0]) +'</td>' }else 
+		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][xj2.lang.code]) +'</td>' }else 
 		
 		// 归属种类
 		if(index === 10){
 			let result = data.split('|').map(
-			function(e){ return TagList[e][0] }).join(' | ');
+			function(e){ return TagList[e][xj2.lang.code] }).join(' | ');
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
 		// 原型研发
 		if(index === 11){
-			let result = CompanyList[data][0];
+			let result = CompanyList[data][xj2.lang.code];
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
@@ -489,8 +505,8 @@ tbodyArray01.forEach(function(item){
 			if(result != '-'){
 				result=data.split('|').map(function(string){
 					let [name, count, ] = string.split('_');
-					if(name.charAt(0) === '4'){ return count + ScrapList[name][0] }
-					else if(name.charAt(0) === '1'){ return count + ItemsNameList[name][0] }
+					if(name.charAt(0) === '4'){ return count + ScrapList[name][xj2.lang.code] }
+					else if(name.charAt(0) === '1'){ return count + ItemsNameList[name][xj2.lang.code] }
 				}).join(' + ');
 			};
 			powerTable_tbody_node01 += 
@@ -507,12 +523,12 @@ tbodyArray01.forEach(function(item){
 					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
 				};
 			});
-			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
+			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][xj2.lang.code] }).join(' | ') };
 			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
 		}else 
 		
 		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][xj2.lang.code]) +'</td>' }else 
 		
 		// 常规数据
 		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
@@ -524,50 +540,50 @@ tbodyArray01.forEach(function(item){
 	
 });
 $('#powerTable01 tbody').html(powerTable_tbody_node01);
-buildPowerTable('powerTable01');
+xj2._buildPowerTable('powerTable01');
 
 // ---------------------------------------------
 
 // 配件等级
 let attrSelect01Option = [
-	{value: '1',	text: ['Level +1',						'Level +1',						'Level +1',						'Level +1',						],		},
-	{value: '2',	text: ['Level +2',						'Level +2',						'Level +2',						'Level +2',						],		},
-	{value: '3',	text: ['Level +3',						'Level +3',						'Level +3',						'Level +3',						],		},
-	{value: '-1',	text: ['Level -1(满级)',				'Level -1(滿級)',				'Level -1(Full)',				'Level -1(最高)',				],		},
-	{value: '-2',	text: ['Level -2(不可升级)',			'Level -2(不可升級)',			'Level -2(AntiGoUp)',			'Level -2(進階不可)',			],		},
-	{value: '-3',	text: ['Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		],		},
+	{value: '1',	text: ['Level +1',						'Level +1',						'Level +1',						][xj2.lang.code],		},
+	{value: '2',	text: ['Level +2',						'Level +2',						'Level +2',						][xj2.lang.code],		},
+	{value: '3',	text: ['Level +3',						'Level +3',						'Level +3',						][xj2.lang.code],		},
+	{value: '-1',	text: ['Level -1(满级)',				'Level -1(最高)',				'Level -1(Full)',				][xj2.lang.code],		},
+	{value: '-2',	text: ['Level -2(不可升级)',			'Level -2(進階不可)',			'Level -2(AntiGoUp)',			][xj2.lang.code],		},
+	{value: '-3',	text: ['Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		][xj2.lang.code],		},
 ];
 
 // 物品类型
 let attrSelect02Option = [
-	{value: 'BuffModelFoot',	text: ['足部强化',		'足部強化',			'Foot enhancement module',			'脚部強化モジュール',		],		},
+	{value: 'BuffModelFoot',	text: ['足部强化',		'脚部強化モジュール',		'Foot enhancement module',			][xj2.lang.code],		},
 ];
 
 // 归属种类
 let attrSelect03Option = [
-	{value: 'BuffModel',	text: ['足部',		'足部',		'Foot enhancement module',			'脚部強化モジュール',		],		},
-	{value: 'Cannon',		text: ['炮塔',		'炮塔',		'Turret enhancement module',		'砲塔強化モジュール',		],		},
+	{value: 'BuffModel',	text: ['足部',		'脚部強化モジュール',		'Foot enhancement module',			][xj2.lang.code],		},
+	{value: 'Cannon',		text: ['炮塔',		'砲塔強化モジュール',		'Turret enhancement module',		][xj2.lang.code],		},
 ];
 
 // 原型研发
 let attrSelect04Option = [
-	{value: 'Main2_2',					text: ['航空集团有限公司',			'航空集團有限公司',				'Aviation Group Co., Ltd',					'航空グループ株式会社',				],		},
-	{value: 'Main2_4',					text: ['苏尔发动机制造局',			'蘇爾發動機製造局',				'Sul Engine Manufacturing Bureau',			'スールエンジン製造局',				],		},
-	{value: 'Main2_6',					text: ['布尔发动机公司',			'布爾發動機公司',				'Boolean Engine Company',					'ブールエンジン株式会社',			],		},
-	{value: 'TankType_PlayerName_1',	text: ['库罗库',					'庫羅庫',						'Kuroku',									'クロック',							],		},
+	{value: 'Main2_2',					text: ['航空集团有限公司',			'航空グループ株式会社',				'Aviation Group Co., Ltd',				][xj2.lang.code],		},
+	{value: 'Main2_4',					text: ['苏尔发动机制造局',			'スールエンジン製造局',				'Sul Engine Manufacturing Bureau',		][xj2.lang.code],		},
+	{value: 'Main2_6',					text: ['布尔发动机公司',			'ブールエンジン株式会社',			'Boolean Engine Company',				][xj2.lang.code],		},
+	{value: 'TankType_PlayerName_1',	text: ['库罗库',					'クロック',							'Kuroku',								][xj2.lang.code],		},
 ];
 
 // 创建空值
-let attrSelect01Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
-let attrSelect02Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
-let attrSelect03Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
-let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">空</option>';
+let attrSelect01Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
+let attrSelect02Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
+let attrSelect03Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
+let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
 
 // 生成结构
-attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
-attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
-attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
-attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text[0] +'</option>' });
+attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
 
 // 创建元素
 let jqi_attrSelect01 = $('#attrSelect01').html(attrSelect01Html);
@@ -617,8 +633,8 @@ let filterFunction = function(event){
 	jqi_nameInput01.val().trim().split(/ {1,}/)
 	.forEach(function(text, index01){
 		tbodyArray01.forEach(function(item, index02){
-			if(item[3].indexOf(text) >= 0 
-			|| DescriptionList[item[1]][0].indexOf(text) >= 0){
+			if(ItemsNameList[item[4]][xj2.lang.code].includes(text)
+			|| DescriptionList[item[4]][xj2.lang.code].includes(text)){
 				
 				// if(jqi_attrSelect01_value !== 'empty' 
 				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
@@ -672,6 +688,8 @@ jqi_resetButton.on('click', function(){
 	jqi_table01_tbody_tr.removeClass('hideTr');
 	jqi_empty_result_tr.remove();
 });
+
+})();
 </script>
 
 
@@ -682,7 +700,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.1.5</div>
 </div>
 </div>
 </div>
@@ -702,7 +720,7 @@ jqi_resetButton.on('click', function(){
 
 
 
-<script>if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c,d,e,f,g){a[e]=a[e]||function(){(a[e].a=a[e].a||[]).push(arguments)},a[e].l=1*new Date;for(var h=0;h<document.scripts.length;h++)if(document.scripts[h].src===d)return;f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(97880532,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0});<\/script><noscript><div><img src="https://mc.yandex.ru/watch/97880532" style="position:absolute;left:-9999px;" /></div></noscript>`) };</script>
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
 </body>
 </html>
 
