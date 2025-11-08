@@ -17,29 +17,18 @@ if(!xj.storageOption){ xj.storageOption = {} };
 xj.storageConfig['0.2.2'] = {};
 xj.storageOption['0.2.2'] = {};
 
-// xj.operate
-if(!xj.operateConfig){ xj.operateConfig = {} };
-if(!xj.operateOption){ xj.operateOption = {} };
-xj.operateConfig['0.6.0'] = {};
-xj.operateOption['0.6.0'] = {};
-
 // xj.ripple
 if(!xj.rippleConfig){ xj.rippleConfig = {} };
 if(!xj.rippleOption){ xj.rippleOption = {} };
-xj.rippleConfig['0.5.0'] = { defaultSelector : '.xj-ripple, .xj-ripple-out, .xjButton, button, .button', };
-xj.rippleOption['0.5.0'] = {};
+xj.rippleConfig['0.5.1'] = { classTarget: null, existClass: '', defaultSelector: 
+'.xj-ripple, .xj-ripple-out, button, .button', };
+xj.rippleOption['0.5.1'] = {};
 
-// xj.focus
-if(!xj.focusConfig){ xj.focusConfig = {} };
-if(!xj.focusOption){ xj.focusOption = {} };
-xj.focusConfig['0.4.0'] = {};
-xj.focusOption['0.4.0'] = {};
-
-// xj.base
-if(!xj.baseConfig){ xj.baseConfig = {} };
-if(!xj.baseOption){ xj.baseOption = {} };
-xj.baseConfig['0.4.0'] = {};
-xj.baseOption['0.4.0'] = {};
+// xj.basic
+if(!xj.basicConfig){ xj.basicConfig = {} };
+if(!xj.basicOption){ xj.basicOption = {} };
+xj.basicConfig['0.5.0'] = {};
+xj.basicOption['0.5.0'] = {};
 
 // xjArrive
 if(!xj.Arrive){ xj.Arrive = {} };
@@ -53,7 +42,7 @@ if(!xj.Demo){ xj.Demo = {} };
 if(!xj.Demo.config){ xj.Demo.config = {} };
 if(!xj.Demo.option){ xj.Demo.option = {} };
 xj.Demo.config['0.1.0'] = {};
-xj.Demo.option['0.1.0'] = { tab2space : (/MSIE|Trident|EDGE/i.test(navigator.userAgent) === true ? 4:0), };
+xj.Demo.option['0.1.0'] = {};
 
 // xjScroll
 if(!xj.Scroll){ xj.Scroll = {} };
@@ -66,15 +55,16 @@ xj.Scroll.option['0.4.0'] = {};
 if(!xj.Dir){ xj.Dir = {} };
 if(!xj.Dir.config){ xj.Dir.config = {} };
 if(!xj.Dir.option){ xj.Dir.option = {} };
-xj.Dir.config['0.2.0'] = {};
-xj.Dir.option['0.2.0'] = {};
+xj.Dir.config['0.2.1'] = {};
+xj.Dir.option['0.2.1'] = {};
 
-// xjButton
-if(!xj.Button){ xj.Button = {} };
-if(!xj.Button.config){ xj.Button.config = {} };
-if(!xj.Button.option){ xj.Button.option = {} };
-xj.Button.config['0.4.0'] = {};
-xj.Button.option['0.4.0'] = {};
+// xjTip : 这是旧式写法, 插件有待更新
+window.xj||(xj={}),xj.config||(xj.config={}),xj.config.xjTip={
+	maxWidth: '480px', maxHeight: '640px', 
+	ctrlEvent: 'click', duration: '0',  
+	size: 'lg', clickClose: false, 
+	// followMouse : false, //
+};
 
 })();
 

@@ -4,47 +4,22 @@
 /* xj.base 默认字体并不是等间距的，但做文档还是等间距字体更好，所以在这里重新设置一次 Iosevka */
 /* 黑白主题的内容还不完善，不少插件有待改进就暂不启用了，把文本打散换行在移动端小屏幕会好看些 */
 
-@font-face{font-family:Iosevka;font-weight:normal;font-style:normal; src:url("../font/iosevka/30.2.0/IosevkaFixed-Regular.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:bold;  font-style:normal; src:url("../font/iosevka/30.2.0/IosevkaFixed-Bold.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:normal;font-style:oblique;src:url("../font/iosevka/30.2.0/IosevkaFixed-Oblique.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:bold;  font-style:oblique;src:url("../font/iosevka/30.2.0/IosevkaFixed-BoldOblique.woff2") format('woff2');}
+@font-face{font-family:Iosevka;font-weight:normal;font-style:normal; src:url("../font/iosevka/33.2.2/IosevkaFixed-Regular.woff2") format('woff2');}
+@font-face{font-family:Iosevka;font-weight:bold;  font-style:normal; src:url("../font/iosevka/33.2.2/IosevkaFixed-Bold.woff2") format('woff2');}
+@font-face{font-family:Iosevka;font-weight:normal;font-style:oblique;src:url("../font/iosevka/33.2.2/IosevkaFixed-Oblique.woff2") format('woff2');}
+@font-face{font-family:Iosevka;font-weight:bold;  font-style:oblique;src:url("../font/iosevka/33.2.2/IosevkaFixed-BoldOblique.woff2") format('woff2');}
+
+.xj-basic-white{
+--xj-bodyGradient:rgba(204,204,204,0.5);
+}
+.xj-basic-black{
+--xj-bodyGradient:rgba(102,102,102,0.5);
+}
 
 html{overflow-x:auto;overflow-y:scroll;}
+html:is([lang|="zh"]){word-break:break-all;line-break:anywhere;}
 body{background-repeat:no-repeat;background-position:center left, center right;background-size:4px 100%, 4px 100%;}
-html:not([class*="xj-base"]) body{background-color:#f0f0f0;background-image:linear-gradient(90deg, rgba(204,204,204,0.5) 0%, transparent 100%), linear-gradient(90deg, transparent 0%, rgba(204,204,204,0.5) 100%);}
-
-/* 仅对中文用等宽的 Iosevka */
-html[lang^="zh"]{font-family:Iosevka,"Microsoft YaHei","Hiragino Sans GB",Monospace;}
-html[lang^="zh"] body{word-break:break-all;line-break:anywhere;}
-
-/* 适配 Edge 翻译之后的字体 */
-[_msthash]{font-family:"-apple-system", "Segoe UI", "Roboto", 
-"Hiragino Sans GB", "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;}
-
-/* 自定义中日韩英文控制标签 */
-
-zh-i, jp-i, ko-i, en-i{display:inline;}
-zh-b, jp-b, ko-b, en-b{display:block;}
-zh-t, jp-t, ko-t, en-t{display:table;}
-zh-f, jp-f, ko-f, en-f{display:flex;}
-zh-g, jp-g, ko-g, en-g{display:grid;}
-
-zh-ib, jp-ib, ko-ib, en-ib{display:inline-block;}
-zh-it, jp-it, ko-it, en-it{display:inline-table;}
-zh-if, jp-if, ko-if, en-if{display:inline-flex;}
-zh-ig, jp-ig, ko-ig, en-ig{display:inline-grid;}
-
-html:not(.lang-zh) zh-i, html:not(.lang-zh) zh-b, html:not(.lang-zh) zh-ib, html:not(.lang-zh) zh-t, html:not(.lang-zh) zh-it, 
-html:not(.lang-zh) zh-f, html:not(.lang-zh) zh-if, html:not(.lang-zh) zh-g, html:not(.lang-zh) zh-ig{display:none;}
-
-html:not(.lang-jp) jp-i, html:not(.lang-jp) jp-b, html:not(.lang-jp) jp-ib, html:not(.lang-jp) jp-t, html:not(.lang-jp) jp-it, 
-html:not(.lang-jp) jp-f, html:not(.lang-jp) jp-if, html:not(.lang-jp) jp-g, html:not(.lang-jp) jp-ig{display:none;}
-
-html:not(.lang-ko) ko-i, html:not(.lang-ko) ko-b, html:not(.lang-ko) ko-ib, html:not(.lang-ko) ko-t, html:not(.lang-ko) ko-it, 
-html:not(.lang-ko) ko-f, html:not(.lang-ko) ko-if, html:not(.lang-ko) ko-g, html:not(.lang-ko) ko-ig{display:none;}
-
-html:not(.lang-en) en-i, html:not(.lang-en) en-b, html:not(.lang-en) en-ib, html:not(.lang-en) en-t, html:not(.lang-en) en-it, 
-html:not(.lang-en) en-f, html:not(.lang-en) en-if, html:not(.lang-en) en-g, html:not(.lang-en) en-ig{display:none;}
+body{background-color:var(--xj-f0f0f0);background-image:linear-gradient(90deg, var(--xj-bodyGradient) 0%, transparent 100%), linear-gradient(90deg, transparent 0%, var(--xj-bodyGradient) 100%);}
 
 
 
@@ -53,14 +28,16 @@ html:not(.lang-en) en-f, html:not(.lang-en) en-if, html:not(.lang-en) en-g, html
 /* 左边的侧边栏 */
 #pub_pack{display:flex;margin:0 auto;width:1280px;}
 
+#pub_lang{position:fixed;top:0;left:0;display:flex;opacity:0;pointer-events:none;}
+
 #pub_side{flex:0 0 auto;position:sticky;
-top:0px;align-self:flex-start;width:240px;background-color:#fff;}
-#pub_wrap{display:flex;flex-direction:column;flex:0 0 auto;margin-left:16px;width:1024px;}
+top:0px;align-self:flex-start;width:240px;background-color:var(--xj-fff);}
+#pub_wrap{display:flex;flex-direction:column;flex:0 0 auto;margin-left:16px;width:1024px;gap:16px;}
 
 
 
 /* 顶部的导航栏 */
-#pub_head{display:flex;align-items:center;flex:0 0 auto;padding:0 32px;height:64px;background-color:#fff;}
+#pub_head{display:flex;align-items:center;flex:0 0 auto;padding:0 32px;height:64px;background-color:var(--xj-fff);}
 
 #pub_headText{flex:1 1 auto;margin-bottom:0;font-weight:normal;line-height:1;}
 #pub_headText a{display:inline-block;}
@@ -70,27 +47,20 @@ top:0px;align-self:flex-start;width:240px;background-color:#fff;}
 #pub_headForm{position:relative;flex:0 0 auto;margin-left:8px;width:200px;height:40px;}
 #pub_headFormText{width:200px;}
 #pub_headFormIcon{position:absolute;top:0;right:0;z-index:40;width:40px;
-padding:0;color:#999;}
+padding:0;color:var(--xj-999);}
 
-#pub_headCode{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:#999;}
-
-#pub_headLang{position:relative;flex:0 0 auto;margin-left:8px;}
-#pub_headLangIcon{padding:0;width:40px;color:#999;}
-#pub_headLangMenu{position:absolute;top:48px;right:0;z-index:40;visibility:hidden;padding:4px;width:88px;border:1px solid #ccc;border-radius:4px;background-color:#fff;box-shadow:0 4px 8px rgba(0,0,0,0.5);font-size:14px;line-height:24px;opacity:0;transition:all 250ms;}
-#pub_headLangMenu:before{position:absolute;top:-8px;right:10px;width:0;height:0;border:8px solid transparent;border-top:0;border-bottom-color:#ccc;content:"";}
-#pub_headLangMenu:after{position:absolute;top:-6px;right:12px;width:0;height:0;border:6px solid transparent;border-top:0;border-bottom-color:#fff;content:"";}
-#pub_headLangMenu a{display:block;padding:8px 0;text-align:center;}
-#pub_headLangMenu a:hover{background-color:#f0f0f0;}
-#pub_headLang:hover #pub_headLangMenu, 
-#pub_headLangIcon:focus ~ #pub_headLangMenu{visibility:visible;opacity:1;}
+#pub_headCode{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:var(--xj-999);}
+#pub_headBulb{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:var(--xj-999);}
 
 
 
 /* 中间主体部分 */
-#pub_main{flex:1 1 auto;margin:16px 0;background-color:#fff;padding:32px;}
+#pub_main{flex:1 1 auto;display:flex;flex-direction:column;gap:16px;}
 
-#pub_main > section:not(:last-of-type) > hr:last-of-type{margin:32px 0;}
-#pub_main > section:last-of-type > hr:last-of-type{margin:32px 0 0;}
+#pub_main > section{flex:0 0 auto;
+padding:32px 32px 16px;background-color:var(--xj-fff);}
+
+#pub_main > section:last-of-type{flex:1 1 auto;}
 
 #pub_main h2{font-weight:normal;}
 #pub_main h3{font-weight:normal;}
@@ -101,7 +71,7 @@ padding:0;color:#999;}
 
 
 /* 最后面的注脚 */
-#pub_foot{flex:0 0 auto;height:64px;background-color:#fff;line-height:20px;padding:12px 32px;}
+#pub_foot{flex:0 0 auto;padding:12px 32px;height:64px;line-height:20px;background-color:var(--xj-fff);}
 
 
 
@@ -109,32 +79,22 @@ padding:0;color:#999;}
 #pub_tool{position:fixed;bottom:0;left:0;z-index:40;width:100%;height:4px;background-color:transparent;}
 #pub_toolPack{position:relative;margin:0 auto;max-width:1280px;height:4px;background-color:transparent;}
 
-#pub_toolBackToTop{position:absolute;bottom:12px;padding:0;width:40px;right:80px;box-shadow:0 4px 8px rgba(0,0,0,0.5);color:#999;}
-#pub_toolNavigated{position:absolute;bottom:12px;padding:0;width:40px;right:32px;box-shadow:0 4px 8px rgba(0,0,0,0.5);color:#999;}
+#pub_toolBackToTop{position:absolute;bottom:12px;padding:0;width:40px;right:80px;box-shadow:0 4px 8px rgba(0,0,0,0.5);color:var(--xj-999);}
+#pub_toolNavigated{position:absolute;bottom:12px;padding:0;width:40px;right:32px;box-shadow:0 4px 8px rgba(0,0,0,0.5);color:var(--xj-999);}
 
-#pub_toolAnchorTip{position:absolute;right:32px;bottom:60px;padding:4px;min-width:88px;border:1px solid #ccc;border-radius:4px;background-color:#fff;box-shadow:0 4px 8px rgba(0,0,0,0.5);font-size:12px;line-height:16px;transition:all 250ms;opacity:0.5;}
-#pub_toolAnchorTip:before{position:absolute;right:10px;bottom:-8px;width:0;height:0;border:8px solid transparent;border-top-color:#ccc;border-bottom:0;content:"";}
-#pub_toolAnchorTip:after{position:absolute;right:12px;bottom:-6px;width:0;height:0;border:6px solid transparent;border-top-color:#fff;border-bottom:0;content:"";}
+#pub_toolAnchorTip{position:absolute;right:32px;bottom:60px;padding:4px;min-width:88px;border:1px solid var(--xj-ccc);border-radius:4px;background-color:var(--xj-fff);box-shadow:0 4px 8px rgba(0,0,0,0.5);font-size:12px;line-height:16px;opacity:0.5;}
+#pub_toolAnchorTip:before{position:absolute;right:10px;bottom:-8px;width:0;height:0;border:8px solid transparent;border-top-color:var(--xj-ccc);border-bottom:0;content:"";}
+#pub_toolAnchorTip:after{position:absolute;right:12px;bottom:-6px;width:0;height:0;border:6px solid transparent;border-top-color:var(--xj-fff);border-bottom:0;content:"";}
 #pub_toolAnchorTip:hover{opacity:1;}
 
-#pub_toolAnchorTip a{display:block;padding:4px 2px;text-align:right;transition:all 250ms;}
-#pub_toolAnchorTip a:hover{background-color:#f0f0f0;}
+#pub_toolAnchorTip a{display:block;padding:4px 2px;text-align:right;}
+#pub_toolAnchorTip a:hover{background-color:var(--xj-f0f0f0);}
 
 
 
 /* 全局宽高尺寸 */
 #pub_size{position:fixed;top:0;right:0;bottom:0;left:0;
-z-index:-1;background-color:#ccc;box-shadow:0 0 0 10px #f00 inset;font-size:36px;opacity:0;pointer-events:none;}
-
-
-
-/*--------------------------------------------------------------------------------------------*/
-
-/* 在 xj.theme 的基础上为 table 增加 sm 和 xs 尺寸 */
-.table-sm{font-size:14px;}
-.table-sm th{padding:6px;} .table-sm td{padding:6px;}
-.table-xs{font-size:12px;}
-.table-xs th{padding:4px;} .table-xs td{padding:4px;}
+z-index:-1;background-color:var(--xj-ccc);box-shadow:0 0 0 10px #f00 inset;font-size:36px;opacity:0;pointer-events:none;}
 
 
 
@@ -146,10 +106,11 @@ z-index:-1;background-color:#ccc;box-shadow:0 0 0 10px #f00 inset;font-size:36px
 /* summary 使用 flex 布局, 以便换行时小三角能够垂直居中, summary 此时就只能有单个直接子元素了 */
 /* 如果没有明文设置 summary, 浏览器也会自动帮忙补上, 但样式可能就不生效了, 所以千万不要这样做 */
 /* 内容复杂时在 summary 后面用 div 包裹内容, 因为使用了通配符 * 所以用单个 p 标签放内容也可以 */
+
 details{display:block;margin:0px 0px 16px 0px;}
 
-details > summary{display:flex;list-style:none;counter-increment:none;padding:8px;cursor:pointer;box-shadow:0 0 0 1px #ccc inset;}
-details[open] > summary{background-color:#f0f0f0;}
+details > summary{display:flex;list-style:none;counter-increment:none;padding:8px;cursor:pointer;box-shadow:0 0 0 1px var(--xj-ccc) inset;}
+details[open] > summary{background-color:var(--xj-f0f0f0);}
 details > summary > *{margin-bottom:0;}
 
 details > summary::marker{display:none;}
@@ -157,12 +118,12 @@ details > summary::before{flex:0 0 24px;content:" ";background-position:left cen
 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23999' d='M4 14V2l8 6z'/%3E%3C/svg%3E");}
 details[open] > summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23999' d='M2 4h12l-6 8-6-8z'/%3E%3C/svg%3E");}
 
-details > content{display:block;margin-top:-1px;padding:16px;box-shadow:0 0 0 1px #ccc inset;}
+details > content{display:block;margin-top:-1px;padding:16px;box-shadow:0 0 0 1px var(--xj-ccc) inset;}
 details > content > *:last-child{margin-bottom:0;}
 
-/* 紧凑模式, 用 div 容器包裹, 就无须每个标签都添加类名了, xj.theme 其他标签包裹也改用 pack 吧 */
-.details-pack{padding-top:1px;margin-bottom:16px;}
-.details-pack > details{margin-top:-1px;margin-bottom:0;}
+/* 紧凑模式, 用 div 容器包裹, 就无须每个标签都添加类名了, xj.theme 其他标签包裹也改用 wrap 吧 */
+.details-wrap{padding-top:1px;margin-bottom:16px;}
+.details-wrap > details{margin-top:-1px;margin-bottom:0;}
 
 /* 也许全部改成 revert, 具体等 xj.theme 重构再决定吧 */
 .details-unset{margin-bottom:0;}
@@ -181,36 +142,70 @@ details > content > *:last-child{margin-bottom:0;}
 /* IE11- 和 Edge15- 完全不支持 sticky 属性 */
 /* Safari V12.1- 的 sticky 属性值需要添加 -webkit- 前缀 */
 /* Chrome V56~90 和 Edge V16~18, 只支持 th 标签实现 sticky 属性值定位 */
-/* 但是 th 只有内容会实现跟随滚动, 边框是不会跟着动的, 所以往下滚的时候显示的边框是 td 的边框 */
-/* 这也就导致当 td 中有什么内容是悬浮的时候, 会通过间隙边框漏出来, 还是得用 JS 写个表格插件啊 */
-/* .powerTable{width:1248px;} */
-.powerTable thead th:before{position:absolute;bottom:-1px;left:0;width:100%;height:3px;background-color:#ccc;content:"";}
-.powerTable thead th:after{position:absolute;top:-1px;left:0;width:100%;height:1px;background-color:#ccc;content:"";}
-.powerTable thead th{position:sticky;top:0;padding-bottom:10px;background-color:#fff;cursor:pointer;z-index:32;}
-.powerTable thead th .icon{margin-left:2px;color:#ccc;}
+
+/* 必须为 th 设置背景色, 否则往下滚后, 内容会重叠, 但 Chrome 的背景色会覆盖掉边框, 得另想办法 */
+/* 最后发现可以使用 border-collapse:separate 让边框不折叠, 再单独设置表格的边框, 就能解决问题 */
+
+.powerTable{border-collapse:separate;}
+
+.powerTable thead th{position:sticky;top:0;z-index:32;background-color:var(--xj-fff);cursor:pointer;}
+.powerTable thead th .icon{color:var(--xj-ccc);}
+.powerTable thead th .icon.fa-sort-up{color:#39f;}
+.powerTable thead th .icon.fa-sort-down{color:#39f;}
 .powerTable thead th span{display:inline-block;vertical-align:middle;}
-.powerTable thead th .fa-sort-down, .powerTable thead th .fa-sort-up{color:#39f;}
 
-.powerTable tbody td{vertical-align:middle;}
+.powerTable thead th{border:none;border-right:1px solid var(--xj-ccc);border-bottom:3px solid var(--xj-ccc);border-top:1px solid var(--xj-ccc);}
+.powerTable thead th:first-child{border-left:1px solid var(--xj-ccc);}
 
-.powerTable.table-sm thead th{padding-bottom:8px;}
-.powerTable.table-xs thead th{padding-bottom:6px;}
+.powerTable tbody td{border:none;border-right:1px solid var(--xj-ccc);border-bottom:1px solid var(--xj-ccc);vertical-align:middle;}
+.powerTable tbody td:first-child{border-left:1px solid var(--xj-ccc);}
 
-/* Firefox 的 table 使用 sticky 会导致边框失踪, 可借助 box-shadow 解决 */
-/* 更多信息可参考 : https://bugzilla.mozilla.org/show_bug.cgi?id=1658119 */
-/* 但是最后发现 box-shadow 并不工整, 所以使用了伪元素生成边框来解决这个问题 */
-/* 得清掉在 .table-scrollable 中的表格的最后那个 th 的边框, 否则有横向滚动条 */
-/*
-@supports (-moz-appearance:none){
-	.powerTable thead th span:after{position:absolute;
-	top:0;right:-1px;width:1px;height:calc(100% + 1px);background-color:#ccc;content:"";}
-	.table-scrollable .powerTable thead th:last-of-type span:after{right:0;opacity:0.00;}
-}
-*/
+/* 翻译后表头不要加粗, 也不要拉大字母间距 */
+html:not([lang|="zh"]) .powerTable thead th span b{letter-spacing:0px!important;font-weight:normal!important;}
+.powerTable thead th span b[_msttexthash][_msthash]{letter-spacing:0px!important;font-weight:normal!important;}
 
-/* Edge15- & IE11- 并不支持 sticky 布局, 而且伪元素还会制造多余的错误边框, 所以这里直接隐藏掉 */
-@supports (-ms-ime-align:auto) and (not (position:sticky)){ 
-	.powerTable thead th:before, .powerTable thead th:after{display:none;} }
-_:-ms-input-placeholder, .powerTable thead th:before, .powerTable thead th:after{display:none;}
+/* document.getElementById('trLength01').textContent = trShowIndexArray.length;
+<tfoot><tr><td>项目统计</td><td id="trLength01" colSpan="99"></td></tr></tfoot>
+.powerTable tfoot td{border:none;border-right:1px solid var(--xj-ccc);border-bottom:1px solid var(--xj-ccc);background-color:var(--xj-fff);box-shadow:0 -1px 0 var(--xj-ccc);}
+.powerTable tfoot td{vertical-align:middle;height:28px;position:sticky;bottom:0;z-index:32;color:var(--xj-999);}
+.powerTable tfoot td:first-child{border-left:1px solid var(--xj-ccc);text-align:center;}*/
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+/* 自定义中日韩英控制标签, 留着一份原生中文不设置 lang="xx" translate="no" 属性, 方便机翻处理 */
+
+zh-hans-i, zh-hant-i, ja-i, ko-i, en-i, ud-i{display:inline;}
+zh-hans-b, zh-hant-b, ja-b, ko-b, en-b, ud-b{display:block;}
+zh-hans-t, zh-hant-t, ja-t, ko-t, en-t, ud-t{display:table;}
+zh-hans-f, zh-hant-f, ja-f, ko-f, en-f, ud-f{display:flex;}
+zh-hans-g, zh-hant-g, ja-g, ko-g, en-g, ud-g{display:grid;}
+
+zh-hans-ib, zh-hant-ib, ja-ib, ko-ib, en-ib, ud-ib{display:inline-block;}
+zh-hans-it, zh-hant-it, ja-it, ko-it, en-it, ud-it{display:inline-table;}
+zh-hans-if, zh-hant-if, ja-if, ko-if, en-if, ud-if{display:inline-flex;}
+zh-hans-ig, zh-hant-ig, ja-ig, ko-ig, en-ig, ud-ig{display:inline-grid;}
+
+html:not([lang="zh-hans"]) :is(zh-hans-i, zh-hans-b, zh-hans-t, zh-hans-f, 
+zh-hans-g, zh-hans-ib, zh-hans-it, zh-hans-if, zh-hans-ig){display:none;}
+
+html:not([lang="zh-hant"]) :is(zh-hant-i, zh-hant-b, zh-hant-t, zh-hant-f, 
+zh-hant-g, zh-hant-ib, zh-hant-it, zh-hant-if, zh-hant-ig){display:none;}
+
+html:not([lang="zh"]) :is(zh-i, zh-b, zh-t, zh-f, zh-g, zh-ib, zh-it, zh-if, zh-ig){display:none;}
+html:not([lang="ja"]) :is(ja-i, ja-b, ja-t, ja-f, ja-g, ja-ib, ja-it, ja-if, ja-ig){display:none;}
+html:not([lang="ko"]) :is(ko-i, ko-b, ko-t, ko-f, ko-g, ko-ib, ko-it, ko-if, ko-ig){display:none;}
+
+html:not([lang="en"]) :is(en-i, en-b, en-t, en-f, en-g, en-ib, en-it, en-if, en-ig){display:none;}
+html:not([lang="ud"]) :is(ud-i, ud-b, ud-t, ud-f, ud-g, ud-ib, ud-it, ud-if, ud-ig){display:none;}
+
+/* 使用自定义 c 标签代替 code, 一方面输入更短, 另一方面浏览器翻译的时候也不会当作代码而不翻译 */
+
+c{padding:0 0.5em;color:#f39;vertical-align:bottom;font-family:var(--xj-codeText);background-color:var(--xj-f0f0f0);}
+
+/* 使用自定义 h 标签代替 <span style="display:none"></span> 和 <i hidden></i>, 尽量让文本更短 */
+
+h{display:none!important;}
 
 
