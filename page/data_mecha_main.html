@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-08T23:59:59UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-08T23:59:59UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-08T23:59:59UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,69 +118,70 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 主体强化装备不能重复安装, 但不同等级的同类装备可以并存, 数量取决于 <c>主体强化模块槽位上限</c>, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
-	02. 以下是主体强化的装备列表, 共 <c>72</c> 种 / 分 <c>17</c> 类, 这些装备大多是用于增强机体防御或抵抗性的, 有助于提升战场生存能力; <br />
-	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 额外拓展</a>; <br />
-	04. 你可以借助筛选工具进行精确查找, 值得一提的是, 尽管机枪炮塔&大门也有主体强化槽位, 但并非所有的主体强化装备都能被使用; <br />
+	01. 主体强化的装备不能被重复安装, 但不同等级的同类装备能并存, 数量取决于 <c>主体强化</c> 的槽位上限, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a><br />
+	02. 以下是主体强化的装备列表, 共 <c>72</c> 种, 分 <c>17</c> 类, 这些装备大多是用于增强机体防御或抵抗性的, 有助于提升战场的生存能力<br />
+	03. 需要注意的是, 尽管炮塔和大门也有主体强化槽位, 但并非所有的主体强化装备都能被使用, 可借助"归属种类"的筛选工具查看细节<br />
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">配件等级: </span>
-		<select id="attrSelect01" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect01" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">物品类型: </span>
-		<select id="attrSelect02" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect02" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">归属种类: </span>
-		<select id="attrSelect03" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect03" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">原型研发: </span>
-		<select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect04" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
-	
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">名称描述: </span>
-		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;order:1;"><i class="fas fa-magnifying-glass"></i></button>
-		<input id="nameInput01" class="input-unset" type="text" style="flex:1 1 auto;width:116px;" placeholder="None" />
+		<input id="nameInput01" class="input-unset" type="search" style="flex:1 1 auto;width:116px;" placeholder="None" />
+		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;"><i class="fas fa-magnifying-glass"></i></button>
 	</label>
-	
-	<span style="display:inline-flex;flex:0 0 auto;width:472px;color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
-	
+	<span style="display:inline-flex;flex:0 0 auto;width:472px;
+	color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
 	<span style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;color:#999;">│</span>
-		<button style="flex:0 0 auto;width:74px;margin-left:auto;order:1;" id="resetButton" 
-		class="button-unset" type="button" xj-focus="{ontabAlways:true}">清空</button>
+		<button id="resetButton" class="button-unset" type="button" 
+		style="flex:0 0 auto;width:74px;margin-left:auto;order:1;">清空</button>
 	</span>
-	
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>原型研发</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>合成材料</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>出现条件</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -189,64 +190,68 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>重复安装: 尽管机体不能安装相同的主体模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是可以并存的, 只要描述没有明确提起说不能叠加(目前除了护盾模块无法生成多个护盾之外其余的基本都能叠加), 那么这些同类的模块增益都会以累加的形式存在, 例如高级耐久模块3和高级耐久模块4, 它们并存, 合计会增加 <c>60%+80%=140%</c> 的生命上限, 但同时也会降低 <c>12%+18%=30%</c> 的机体速度;</p>
+<p>重复安装: 尽管机体不能安装相同的主体模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是能并存的, 只要描述没有明确提起不能叠加(目前除了护盾模块无法生成多个护盾之外其余的基本都能叠加), 则这些同类的模块增益都会以累加的形式存在, 例如高级耐久模块3和高级耐久模块4, 它们如果并存, 合计会增加 <c>60% + 80% = 140%</c> 生命上限, 但机体速度同时也会降低 <c>12% + 18% = 30%</c></p>
 
 <p>————</p>
 
-<p>护盾模块: 护盾模块可以在机体周围生成一个护盾, 在护盾被完全打爆之前, 机体不会直接受到伤害(射线和电弧类武器对护盾无法造成全额伤害, 但近战攻击则无视护盾), 尽管重复安装护盾模块无法生成多个护盾, 但是可增加护盾生命值, 例如当机体安装了护盾模块+2和护盾模块+3, 可以分别使得护盾生命值 <c>+80%</c> 和 <c>+100%</c>, 合计便是 <c>180%</c>, 那么此时的护盾生命值既为 <c>2500*(1+0.8+1)=7000</c>;</p>
+<p>护盾模块: 护盾模块可在机体周围生成一个护盾, 在护盾被打爆之前, 机体不会受到直接伤害, 等离子武器无法对护盾造成伤害, 射线类和电弧类武器无法造成全额伤害, 但近战则无视护盾, 尽管重复安装护盾模块无法生成多个护盾, 但可增加护盾生命值, 例如安装了护盾模块05和护盾模块06, 可以使得护盾生命值 [<c>+80%</c>/<c>+100%</c>], 合计便是 <c>180%</c>, 那么此时的护盾生命值就是 <c>2500×(1+0.8+1)=7000</c></p>
 
-<p>护盾恢复模块: 当存在护盾时, 一旦护盾受到伤害, 将会缓慢恢复护盾生命, 它 <c>0.02</c> 秒会计算一次, 既每秒会计算 <c>50</c> 次, 而等级为 1/2/3/4/5 的模块, 每次恢复的数值分别为 <c>2/4/6/9/12</c>, 既每秒会恢复 <c>100/200/300/450/600</c>, 当安装多个护盾回复模块时, 恢复的数值就是简单的累加, 例如同时装备了护盾恢复模块4和护盾恢复模块5, 它们每秒恢复 <c>450</c> 和 <c>600</c>, 合计为 <c>450+600=1050</c>;</p>
+<p>护盾恢复模块: 当存在护盾时, 一旦护盾受到伤害, 将会缓慢恢复护盾生命, 它 <c>0.02</c> 秒会计算一次, 既每秒会计算 <c>50</c> 次, 而等级为[1/2/3/4/5]的模块, 每次恢复的数值分别为[<c>2/4/6/9/12</c>], 既每秒会恢复[<c>100/200/300/450/600</c>], 当安装了多个护盾回复模块时, 恢复的数值就是简单的累加, 例如同时装备了护盾恢复模块04和护盾恢复模块05, 每秒恢复 <c>450</c> 和 <c>600</c>, 合计为 <c>450+600=1050</c></p>
 
-<p>护盾再构模块: 当存在护盾时, 一旦护盾遭到破坏, 而机体又安装了护盾再构模块, 将会进入恢复倒计时, 时间到就重启护盾, 护盾的重启时间总为 <c>45</c> 秒, 但是护盾再构模块可以减少倒计时的时间, 当安装了多个护盾再构模块时, 倒计时的事件会直接累加, 例如我们安装了护盾再构模块+1和护盾再构模块+2, 它们的护盾再生时间分别为 <c>-20%</c> 和 <c>-25%</c>, 则最终再生时间为 <c>45*(0.20+0.25)=20.25</c>;</p>
-
-<p>————</p>
-
-<p>光学隐身模块: 隐身的过程就是将 <c>Invisible</c> 值从 <c>1</c> 降为 <c>0</c> 的过程, 它 <c>0.02</c> 秒会计算一次, 既每秒会计算 <c>50</c> 次, 四个等级的模块, 每次降低 <c>0.001/0.003/0.01/0.03</c>, 既 <c>20/7/2/0.7</c> 秒就能从 <c>1</c> 变成 <c>0</c>, 当安装了多个光学隐身模块时, 就是简单的累加, 例如安装了高级光学隐身模块和制式光学隐身模块, 每次降低 <c>0.01+0.03=0.04</c>, 则 <c>1/(50*0.04)=0.5</c> 秒即可实现隐身;</p>
-
-<p>防爆模块&防爆涂层&瓷金装甲: 防爆模块&防爆涂层都可提升爆炸抗性, 或者说抗暴能力, 一旦成功抵御爆炸, 则爆炸只会造成 <c>10%</c> 的伤害, 并且不会造成眩晕的效果, 瓷金装甲可以降低爆炸导致的伤害, 但它是否有助于减少眩晕时间, 目前尚不清楚, 有待进一步确认;</p>
-
-<p>斜面装甲: 可在机体蹲踞的时候提升子弹弹跳率, 子弹弹跳既子弹从装甲表面擦过, 表现为没有造成伤害, 通常只有蹲距的单位才会触发, 这和触发抵抗不同, 触发抵抗是子弹没能穿甲, 但还是会造成 <c>5%</c> 的伤害, 关于蹲踞弹跳抵抗, 更多细节可以查阅 <a href="./data_others_parlance.html">术语提示.html</a>;</p>
-
-<p>无人机强化模块: 唯一可用于增强无人机的模块, 赭石色跟无人机的提升有密切关系, 更多细节可查阅 <a href="data_mecha_list.html#heading02">机体详情.html # 02.无人战机</a>;</p>
+<p>护盾再构模块: 当存在护盾时, 一旦护盾遭到破坏, 而机体又安装了护盾再构模块, 将会进入恢复倒计时, 时间到就重启护盾, 护盾的重启时间为 <c>45</c> 秒, 但是护盾再构模块可以减少这个倒计时的时间, 当安装了多个护盾再构模块时, 倒计时的事件会直接累加, 例如我们安装了护盾再构模块04和护盾再构模块05, 它们的护盾再生时间分别为 <c>-20%</c> 和 <c>-25%</c>, 则最终再生时间为 <c>45×(0.20+0.25)=20.25</c></p>
 
 <p>————</p>
 
-<p>拆卸代价: 主体模块的安装是免费的, 但是当主体模块的价格 <c>>=30</c> 的时候, 拆卸就需要支付一定的费用, 这被称为拆卸损耗, 费用为主体模块价值的 <c>1/10</c>, 向下取整, 如高级耐久模块的价格为 <c>75</c>, 则耗费为 <c>Floor(75/10)=7</c>, 但挪移模块在槽位中的顺序不计费;</p>
+<p>光学隐身模块: 隐身的过程就是将 <c>Invisible</c> 值从 <c>1</c> 降为 <c>0</c> 的过程, 它 <c>0.02</c> 秒会算一次, 既每秒算 <c>1÷0.02=50</c> 次, 四个等级的模块, 每次降低 [<c>0.0025/0.004/0.0065/0.09</c>] 既 [<c>8/5/3/0.2</c>] 秒就能从 <c>1</c> 变成 <c>0</c>, 当安装了多个光学隐身模块时, 就直接累加, 例如安装了光学隐身模块03和光学隐身模块04, 每次降低 <c>0.0065+0.09=0.0965</c>, 则 <c>1÷(50×0.0965)=0.2</c> 秒即可实现隐身</p>
+
+<p>防爆模块&防爆涂层&瓷金装甲: 防爆模块&防爆涂层都可提升爆炸抗性, 或者说抗暴能力, 一旦成功抵御爆炸, 则爆炸只会造成 <c>10%</c> 的伤害, 并且不会造成眩晕的效果, 瓷金装甲则可以降低爆炸导致的伤害, 由于眩晕时间跟爆炸造成的伤害有关, 所以也能减少眩晕的时间</p>
+
+<p>斜面装甲: 可在机体蹲踞的时候提升子弹弹跳率, 子弹弹跳既子弹从装甲表面擦过, 表现为没有造成伤害, 通常只有蹲距的单位才会触发, 这和触发抵抗不同, 触发抵抗是子弹没能穿甲, 但还是会造成 <c>5%</c> 的伤害, 关于蹲踞的弹跳抵抗, 更多细节可以查阅 <a href="./data_others_parlance.html">术语提示.html</a></p>
+
+<p>无人机强化模块: 唯一可用于增强无人机的模块, 赭石色跟无人机的提升有密切关系, 更多细节可以查阅 <a href="data_mecha_list.html#heading02">机体详情.html # 02.无人战机</a></p>
+
+<p>————</p>
+
+<p>拆卸代价: 主体模块的安装是免费的, 但是当主体模块的价格 <c>>=20</c> 的时候, 拆卸就需要支付一定的费用, 这被称为拆卸损耗, 费用为主体模块价值的 <c>1/10</c> 且向下取整, 如高级耐久模块的价格为 <c>75</c>, 则耗费为 <c>Floor(75÷10)=7</c>, 但挪移模块在槽位中的顺序不计费</p>
+
+<!--◇
+05. 机体的奔跑能量要恢复到多少, 按住 Shift 才能再次奔跑?
+5. 奔跑能量有白色和红色两种状态，只有白色状态下能奔跑，白色状态下奔跑能量耗光会进入红色状态，回满后进入白色状态；简单来说，能量耗光后要回满才能再奔跑，其他情况的想跑就能跑
+◇-->
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
 
-/* 归属种类 */
-#powerTable01 tr > td:nth-of-type(10){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(10):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(10):active > span:nth-of-type(2){display:block;}
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 
-/* 原形研发 */
-#powerTable01 tr > td:nth-of-type(11){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(11):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(11):active > span:nth-of-type(2){display:block;}
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
 
-/* 合成材料 */
-#powerTable01 tr > td:nth-of-type(12){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(12):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(12):active > span:nth-of-type(2){display:block;}
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
 
-/* 出现条件 */
-#powerTable01 tr > td:nth-of-type(13){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(13):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(13):active > span:nth-of-type(2){display:block;}
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -256,584 +261,855 @@
 
 /* 数据注解
 
-CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
-MaxPile = 1, ColorPlus = Cluster = '-',
-debugHide = 0,
+Func 是函数, 已经和 description 既描述结合起来, 这部分的数据没意义, 就删掉了
+MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1 的并没有意义, 所以删掉了
+
+DebugHide: 控制台是否要隐藏该项目(隐藏则无法在控制台调出入手), 武器都是 false, 似乎也不需要
+ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
+
+CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是配件槽位和融合槽位的数据, 只有武器才有, 其它的物品没有任何意义, 所以删掉了
+Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属性, 用于判断升级改造或者同类配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
 
 */
 
-// 项目数据
-let tbodyArray01 = [
-	
-	// 高亮,	装备图片,	装备序号,	装备名称,				项目代码,	参考价格,	配件等级,	默认排序,	解锁天数,	物品类型,			归属种类,						原型研发,						合成材料,											出现条件,										文本描述,				],		
-	// Active,	Image,		Number,		Name,					Items,		Price,		Level,		ResolveID,	Day,		Type,				Tag,							Company,						Syns,												NeedWeapon,										Description,			],		//01		
-	
-	[1,			2042,		'01',		'耐久模块1',			2042,		10,			1,			440,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'40001_1|40007_1|40024_3',							'-',											'-',					],		
-	[1,			2043,		'02',		'耐久模块2',			2043,		20,			2,			441,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2042_2049',									'-',					],		
-	[1,			2044,		'03',		'耐久模块3',			2044,		30,			3,			442,		36,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2042_2049',									'-',					],		
-	[1,			2045,		'04',		'耐久模块4',			2045,		40,			-1,			443,		64,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2042_2049',									'-',					],		//01		
-	
-	[0,			2046,		'05',		'高级耐久模块1',		2046,		60,			1,			444,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'40006_5|40007_5|40025_3',							'2043_2049',									'-',					],		
-	[0,			2047,		'06',		'高级耐久模块2',		2047,		75,			2,			445,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2046_2049',									'-',					],		
-	[0,			2048,		'07',		'高级耐久模块3',		2048,		90,			3,			446,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2046_2049',									'-',					],		
-	[0,			2049,		'08',		'高级耐久模块4',		2049,		120,		-1,			447,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2046_2049',									'-',					],		//01		
-	
-	[1,			2058,		'09',		'抵抗模块1',			2058,		10,			1,			456,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'40001_1|40007_1|40024_3',							'-',											'-',					],		
-	[1,			2059,		'10',		'抵抗模块2',			2059,		20,			2,			457,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2058_2065',									'-',					],		
-	[1,			2060,		'11',		'抵抗模块3',			2060,		40,			3,			458,		36,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2058_2065',									'-',					],		
-	[1,			2061,		'12',		'抵抗模块4',			2061,		75,			-1,			459,		64,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2058_2065',									'-',					],		//01		
-	
-	[0,			2062,		'13',		'高级装甲模块1',		2062,		90,			1,			460,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'40001_10|40002_10|40006_5|40007_5|40025_4',		'2060_2065',									'-',					],		
-	[0,			2063,		'14',		'高级装甲模块2',		2063,		160,		2,			461,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2062_2065',									'-',					],		
-	[0,			2064,		'15',		'高级装甲模块3',		2064,		225,		3,			462,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2062_2065',									'-',					],		
-	[0,			2065,		'16',		'高级装甲模块4',		2065,		350,		-1,			463,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_1',						'-',												'2062_2065',									'-',					],		//01		
-	
-	[1,			2126,		'17',		'护盾模块1',			2126,		30,			1,			468,		37,			'BuffModel',		'BuffModel',					'Main2_7',						'40006_1|40007_2|40026_2|40027_3',					'-',											'-',					],		
-	[1,			2127,		'18',		'护盾模块2',			2127,		50,			2,			469,		45,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131',									'-',					],		
-	[1,			2128,		'19',		'护盾模块3',			2128,		80,			3,			470,		65,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131',									'-',					],		
-	[1,			2129,		'20',		'护盾模块+1',			2129,		150,		4,			471,		75,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131',									'-',					],		
-	[1,			2130,		'21',		'护盾模块+2',			2130,		250,		5,			472,		57,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131',									'-',					],		
-	[1,			2131,		'22',		'护盾模块+3',			2131,		450,		-1,			473,		62,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131',									'-',					],		//01		
-	
-	[0,			2132,		'23',		'护盾回复模块1',		2132,		30,			1,			474,		39,			'BuffModel',		'BuffModel',					'Main2_7',						'40006_1|40026_1|40027_1',							'2126_2131|2132_2136',							'-',					],		
-	[0,			2133,		'24',		'护盾回复模块2',		2133,		50,			2,			475,		44,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2132_2136',							'-',					],		
-	[0,			2134,		'25',		'护盾回复模块3',		2134,		80,			3,			476,		55,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2132_2136',							'-',					],		
-	[0,			2135,		'26',		'护盾回复模块4',		2135,		150,		4,			477,		66,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2132_2136',							'-',					],		
-	[0,			2136,		'27',		'护盾回复模块5',		2136,		250,		-1,			478,		77,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2132_2136',							'-',					],		//01		
-	
-	[1,			2137,		'28',		'护盾再构模块1',		2137,		30,			1,			479,		41,			'BuffModel',		'BuffModel',					'Main2_7',						'40006_1|40026_1|40027_1',							'2126_2131|2137_2141',							'-',					],		
-	[1,			2138,		'29',		'护盾再构模块2',		2138,		50,			2,			480,		57,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2137_2141',							'-',					],		
-	[1,			2139,		'30',		'护盾再构模块3',		2139,		80,			3,			481,		68,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2137_2141',							'-',					],		
-	[1,			2140,		'31',		'护盾再构模块+1',		2140,		150,		4,			482,		80,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2137_2141',							'-',					],		
-	[1,			2141,		'32',		'护盾再构模块+2',		2141,		250,		-1,			483,		0,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2126_2131|2137_2141',							'-',					],		//01		
-	
-	[0,			2146,		'33',		'对冲线圈1',			2146,		10,			1,			488,		29,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_7',						'40001_1|40002_3|40006_2',							'-',											'-',					],		
-	[0,			2147,		'34',		'对冲线圈2',			2147,		25,			2,			489,		32,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_7',						'-',												'2147_2150',									'-',					],		
-	[0,			2148,		'35',		'对冲线圈3',			2148,		80,			3,			490,		35,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_7',						'-',												'2147_2150',									'-',					],		
-	[0,			2149,		'36',		'对冲线圈4',			2149,		150,		4,			491,		43,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_7',						'-',												'2147_2150',									'-',					],		
-	[0,			2150,		'37',		'对冲线圈5',			2150,		280,		-1,			492,		52,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_7',						'-',												'2147_2150',									'-',					],		//01		
-	
-	[1,			2122,		'38',		'光学隐身模块',			2122,		50,			1,			464,		11,			'BuffModel',		'BuffModel',					'Main2_7',						'40006_2|40007_3|40031_7',							'-',											'-',					],		
-	[1,			2123,		'39',		'光学隐身模块+',		2123,		100,		2,			465,		22,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2122_2125',									'-',					],		
-	[1,			2124,		'40',		'高级光学隐身模块',		2124,		200,		3,			466,		44,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2122_2125',									'-',					],		
-	[1,			2125,		'41',		'制式光学隐身模块',		2125,		400,		-1,			467,		66,			'BuffModel',		'BuffModel',					'Main2_7',						'-',												'2122_2125',									'-',					],		//01		
-	
-	[0,			2142,		'42',		'机体肾上腺素',			2142,		10,			1,			484,		30,			'BuffModel',		'BuffModel',					'Main2_5',						'40001_1|40002_3|40006_2',							'-',											'-',					],		
-	[0,			2143,		'43',		'机体肾上腺素+',		2143,		25,			2,			485,		35,			'BuffModel',		'BuffModel',					'Main2_5',						'-',												'2142_2145',									'-',					],		
-	[0,			2144,		'44',		'高级机体肾上腺素',		2144,		80,			3,			486,		40,			'BuffModel',		'BuffModel',					'Main2_5',						'-',												'2142_2145',									'-',					],		
-	[0,			2145,		'45',		'制式机体肾上腺素',		2145,		150,		-1,			487,		60,			'BuffModel',		'BuffModel',					'Main2_5',						'-',												'2142_2145',									'-',					],		//01		
-	
-	[1,			2151,		'46',		'防爆模块',				2151,		20,			1,			493,		18,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_3',						'40010_1|40031_1',									'-',											'-',					],		
-	[1,			2152,		'47',		'防爆模块+',			2152,		40,			2,			494,		36,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_3',						'-',												'2151_2154',									'-',					],		
-	[1,			2153,		'48',		'高级防爆模块',			2153,		80,			3,			495,		54,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_3',						'-',												'2151_2154',									'-',					],		
-	[1,			2154,		'49',		'制式防爆模块',			2154,		120,		-1,			496,		72,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_3',						'-',												'2151_2154',									'-',					],		//01		
-	
-	[0,			2311,		'50',		'防爆涂层',				2311,		10,			1,			507,		9,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'40010_1|40031_1',									'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2312,		'51',		'防爆涂层+',			2312,		25,			2,			508,		18,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2313,		'52',		'高级防爆涂层',			2313,		80,			3,			509,		27,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2314,		'53',		'制式防爆涂层',			2314,		150,		-1,			510,		0,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		//01		
-	
-	[1,			2315,		'54',		'斜面装甲',				2315,		30,			1,			511,		3,			'BuffModel',		'BuffModel',					'Main2_3',						'40001_4|40007_2|40025_2',							'-',											'-',					],		
-	[1,			2316,		'55',		'斜面装甲2',			2316,		70,			2,			512,		36,			'BuffModel',		'BuffModel',					'Main2_3',						'-',												'2316|2317',									'-',					],		
-	[1,			2317,		'56',		'斜面装甲3',			2317,		150,		-1,			513,		54,			'BuffModel',		'BuffModel',					'Main2_3',						'-',												'2316|2317',									'-',					],		//01		
-	
-	[0,			2318,		'57',		'瓷金装甲',				2318,		30,			1,			514,		18,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'40001_4|40007_2|40025_1|40010_2',					'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2319,		'58',		'瓷金装甲2',			2319,		70,			2,			515,		36,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2320,		'59',		'瓷金装甲3',			2320,		150,		-1,			516,		54,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		//01		
-	
-	[1,			2332,		'60',		'动力臂模块',			2332,		15,			1,			528,		9,			'BuffModel',		'BuffModel',					'Main2_6',						'40001_6|40006_3',									'1101_1116',									'-',					],		
-	[1,			2333,		'61',		'动力臂模块2',			2333,		35,			2,			529,		18,			'BuffModel',		'BuffModel',					'Main2_6',						'-',												'1101_1116',									'-',					],		
-	[1,			2334,		'62',		'动力臂模块3',			2334,		75,			-1,			530,		40,			'BuffModel',		'BuffModel',					'Main2_6',						'-',												'1101_1116',									'-',					],		//01		
-	
-	[0,			2321,		'63',		'反应装甲',				2321,		30,			1,			517,		18,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'40001_4|40007_2|40025_1|40010_2',					'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		
-	[0,			2322,		'64',		'反应装甲+',			2322,		60,			-1,			518,		36,			'BuffModel',		'BuffModel|Door|Cannon',		'Main2_5',						'-',												'2321|2322|2318_2320|2151_2154|2311_2314',		'-',					],		//01		
-	
-	[1,			2110,		'65',		'无人机强化模块1',		2110,		12,			1,			531,		12,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'40002_6|40006_3',									'-',											'-',					],		
-	[1,			2111,		'66',		'无人机强化模块2',		2111,		20,			2,			532,		24,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2112,		'67',		'无人机强化模块3',		2112,		40,			3,			533,		36,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2113,		'68',		'无人机强化模块4',		2113,		75,			4,			534,		48,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2114,		'69',		'无人机强化模块5',		2114,		150,		5,			535,		60,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2115,		'70',		'无人机强化模块6',		2115,		280,		6,			536,		72,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2116,		'71',		'无人机强化模块7',		2116,		550,		7,			537,		80,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		
-	[1,			2117,		'72',		'无人机强化模块8',		2117,		1000,		-1,			538,		90,			'BuffModel',		'BuffModel',					'TankType_PlayerName_3',		'-',												'-',											'-',					],		//01		
-	
-];
+let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-// 项目名称
-let ItemsNameList = {
-	
-	2042 : ['耐久模块1',				'耐久力モジュール1',						'Durability Module 1',							],		
-	2043 : ['耐久模块2',				'耐久力モジュール2',						'Durability Module 2',							],		
-	2044 : ['耐久模块3',				'耐久力モジュール3',						'Durability Module 3',							],		
-	2045 : ['耐久模块4',				'耐久力モジュール4',						'Durability Module 4',							],		//02		
-	
-	2046 : ['高级耐久模块1',			'上級耐久力モジュール1',					'Advanced Durability Module 1',					],		
-	2047 : ['高级耐久模块2',			'上級耐久力モジュール2',					'Advanced Durability Module 2',					],		
-	2048 : ['高级耐久模块3',			'上級耐久力モジュール3',					'Advanced Durability Module 3',					],		
-	2049 : ['高级耐久模块4',			'上級耐久力モジュール4',					'Advanced Durability Module 4',					],		//02		
-	
-	2058 : ['抵抗模块1',				'抵抗モジュール1',							'Resistance Module 1',							],		
-	2059 : ['抵抗模块2',				'抵抗モジュール2',							'Resistance Module 2',							],		
-	2060 : ['抵抗模块3',				'抵抗モジュール3',							'Resistance Module 3',							],		
-	2061 : ['抵抗模块4',				'抵抗モジュール4',							'Resistance Module 4',							],		//02		
-	
-	2062 : ['高级装甲模块1',			'上級装甲モジュール1',						'Advanced Armor Module 1',						],		
-	2063 : ['高级装甲模块2',			'上級装甲モジュール2',						'Advanced Armor Module 2',						],		
-	2064 : ['高级装甲模块3',			'上級装甲モジュール3',						'Advanced Armor Module 3',						],		
-	2065 : ['高级装甲模块4',			'上級装甲モジュール4',						'Advanced Armor Module 4',						],		//02		
-	
-	2126 : ['护盾模块1',				'シールドモジュール1',						'Shield Module 1',								],		
-	2127 : ['护盾模块2',				'シールドモジュール2',						'Shield Module 2',								],		
-	2128 : ['护盾模块3',				'シールドモジュール3',						'Shield Module 3',								],		
-	2129 : ['护盾模块+1',				'シールドモジュール+1',						'Shield Module +1',								],		
-	2130 : ['护盾模块+2',				'シールドモジュール+2',						'Shield Module +2',								],		
-	2131 : ['护盾模块+3',				'シールドモジュール+3',						'Shield Module +3',								],		//02		
-	
-	2132 : ['护盾回复模块1',			'シールド回復モジュール1',					'Shield Regeneration Module 1',					],		
-	2133 : ['护盾回复模块2',			'シールド回復モジュール2',					'Shield Regeneration Module 2',					],		
-	2134 : ['护盾回复模块3',			'シールド回復モジュール3',					'Shield Regeneration Module 3',					],		
-	2135 : ['护盾回复模块4',			'シールド回復モジュール4',					'Shield Regeneration Module 4',					],		
-	2136 : ['护盾回复模块5',			'シールド回復モジュール5',					'Shield Regeneration Module 5',					],		//02		
-	
-	2137 : ['护盾再构模块1',			'シールド再構築モジュール1',				'Shield Reconstruction Module 1',				],		
-	2138 : ['护盾再构模块2',			'シールド再構築モジュール2',				'Shield Reconstruction Module 2',				],		
-	2139 : ['护盾再构模块3',			'シールド再構築モジュール3',				'Shield Reconstruction Module 3',				],		
-	2140 : ['护盾再构模块+1',			'シールド再構築モジュール+1',				'Shield Reconstruction Module +1',				],		
-	2141 : ['护盾再构模块+2',			'シールド再構築モジュール+2',				'Shield Reconstruction Module +2',				],		//02		
-	
-	2146 : ['对冲线圈1',				'ヘッジコイル1',							'Hedge coils 1',								],		
-	2147 : ['对冲线圈2',				'ヘッジコイル2',							'Hedge coils 2',								],		
-	2148 : ['对冲线圈3',				'ヘッジコイル3',							'Hedge coils 3',								],		
-	2149 : ['对冲线圈4',				'ヘッジコイル4',							'Hedge coils 4',								],		
-	2150 : ['对冲线圈5',				'ヘッジコイル5',							'Hedge coils 5',								],		//02		
-	
-	2122 : ['光学隐身模块',				'光学ステルスモジュール',					'Optical Invisibility Module',					],		
-	2123 : ['光学隐身模块+',			'光学ステルスモジュール+',					'Optical Invisibility Module+',					],		
-	2124 : ['高级光学隐身模块',			'上級光学ステルスモジュール',				'Advanced Optical Invisibility Module',			],		
-	2125 : ['制式光学隐身模块',			'制式光学ステルスモジュール',				'Standard Optical Invisibility Module',			],		//02		
-	
-	2142 : ['机体肾上腺素',				'機体アドレナリン',							'Mecha Adrenaline',								],		
-	2143 : ['机体肾上腺素+',			'機体アドレナリン+',						'Mecha Adrenaline+',							],		
-	2144 : ['高级机体肾上腺素',			'上級機体アドレナリン',						'Advanced Mecha Adrenaline',					],		
-	2145 : ['制式机体肾上腺素',			'制式機体アドレナリン',						'Standard Mecha Adrenaline',					],		//02		
-	
-	2151 : ['防爆模块',					'防爆モジュール',							'Explosion Protection Module',					],		
-	2152 : ['防爆模块+',				'防爆モジュール+',							'Explosion Protection Module+',					],		
-	2153 : ['高级防爆模块',				'上級防爆モジュール',						'Advanced Explosion Protection Module',			],		
-	2154 : ['制式防爆模块',				'制式防爆モジュール',						'Standard Explosion Protection Module',			],		//02		
-	
-	2311 : ['防爆涂层',					'防爆コーティング',							'Explosion Protection Coating',					],		
-	2312 : ['防爆涂层+',				'防爆コーティング+',						'Explosion Protection Coating+',				],		
-	2313 : ['高级防爆涂层',				'上級防爆コーティング',						'Advanced Explosion Protection Coating',		],		
-	2314 : ['制式防爆涂层',				'制式防爆コーティング',						'Standard Explosion Protection Coating',		],		//02		
-	
-	2315 : ['斜面装甲',					'傾斜装甲',									'Sloped Armor',									],		
-	2316 : ['斜面装甲2',				'傾斜装甲2',								'Sloped Armor 2',								],		
-	2317 : ['斜面装甲3',				'傾斜装甲3',								'Sloped Armor 3',								],		//02		
-	
-	2318 : ['瓷金装甲',					'磁器合金装甲',								'Cermet Armor',									],		
-	2319 : ['瓷金装甲2',				'磁器合金装甲2',							'Cermet Armor 2',								],		
-	2320 : ['瓷金装甲3',				'磁器合金装甲3',							'Cermet Armor 3',								],		//02		
-	
-	2332 : ['动力臂模块',				'パワーアームモジュール',					'Power Arm Module',								],		
-	2333 : ['动力臂模块2',				'パワーアームモジュール2',					'Power Arm Module 2',							],		
-	2334 : ['动力臂模块3',				'パワーアームモジュール3',					'Power Arm Module 3',							],		//02		
-	
-	2321 : ['反应装甲',					'反応装甲',									'Reactive Armor',								],		
-	2322 : ['反应装甲+',				'反応装甲+',								'Reactive Armor+',								],		//02		
-	
-	2110 : ['无人机强化模块1',			'ドローン強化モジュール1',					'Drone Enhancement Module 1',					],		
-	2111 : ['无人机强化模块2',			'ドローン強化モジュール2',					'Drone Enhancement Module 2',					],		
-	2112 : ['无人机强化模块3',			'ドローン強化モジュール3',					'Drone Enhancement Module 3',					],		
-	2113 : ['无人机强化模块4',			'ドローン強化モジュール4',					'Drone Enhancement Module 4',					],		
-	2114 : ['无人机强化模块5',			'ドローン強化モジュール5',					'Drone Enhancement Module 5',					],		
-	2115 : ['无人机强化模块6',			'ドローン強化モジュール6',					'Drone Enhancement Module 6',					],		
-	2116 : ['无人机强化模块7',			'ドローン強化モジュール7',					'Drone Enhancement Module 7',					],		
-	2117 : ['无人机强化模块8',			'ドローン強化モジュール8',					'Drone Enhancement Module 8',					],		//02		
-	
-	1101 : ['手榴弹',					'グレネード',								'Grenade',										],
-	1102 : ['集束炸弹',					'集束爆弾',									'Cluster Bomb',									],
-	1103 : ['高级集束炸弹',				'上級集束爆弾',								'Advanced Cluster Bomb',						],
-	1104 : ['杀伤手雷',					'殺傷グレネード',							'Fatality Grenade',								],
-	1105 : ['寒冰炸弹',					'氷爆弾',									'Ice Bomb',										],
-	1108 : ['集束寒冰炸弹',				'集束氷爆弾',								'Cluster Ice Bomb',								],
-	1106 : ['燃烧炸弹',					'焼夷弾',									'Flaming Bomb',									],
-	1109 : ['集束燃烧炸弹',				'集束焼夷弾',								'Cluster Flaming Bomb',							],
-	1118 : ['电磁炸弹',					'電磁爆弾',									'Electromagnetic Bomb',							],
-	1122 : ['集束电磁炸弹',				'集束電磁爆弾',								'Cluster Electromagnetic Bomb',					],
-	1111 : ['破片手雷',					'フラググレネード',							'Frag Grenade',									],
-	1112 : ['穿甲破片手雷',				'徹甲フラググレネード',						'Armor Penetration Frag Grenade',				],
-	1113 : ['烟雾弹',					'煙幕弾',									'Smoke Bomb',									],
-	1114 : ['长效烟雾弹',				'長持ち煙幕弾',								'Long-Lasting Smoke Bomb',						],
-	1115 : ['照明弹',					'フレア',									'Flare',										],
-	1116 : ['长效照明弹',				'長持ちフレア',								'Long-Lasting Flare',							],
-	1117 : ['水炸弹',					'水爆弾',									'Water Bomb',									],
-	1119 : ['油炸弹',					'オイル爆弾',								'Oil Bomb',										],
-	1120 : ['干扰弹',					'ぼうがい弾',								'Interference bomb',							],
-	1121 : ['投掷式地雷',				'投擲地雷',									'Throwing landmines',							],
-	1107 : ['震撼弹',					'衝撃爆弾',									'Shock Bomb',									],
-	1110 : ['集束震撼弹',				'集束衝撃爆弾',								'Cluster Shock Bomb',							],
-	1124 : ['护盾破坏装置',				'シールド破壊装置',							'Shield destruction device',					],
-	1125 : ['反隐形装置',				'アンチステルス装置',						'Anti stealth device',							],
-	
-};
+2042,#耐久模块1,2042,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:10|AddSpeed:-2,Company_2042,10,0,1,0,0,0,0,,40001_1|40007_1|40024_3,,,572,
+2043,#耐久模块2,2043,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:15|AddSpeed:-3,Company_2042,20,0,2,0,0,0,0,,,2042_2049,,573,
+2044,#耐久模块3,2044,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:20|AddSpeed:-4,Company_2042,30,36,3,0,0,0,0,,,2042_2049,,574,
+2045,#耐久模块4,2045,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:25|AddSpeed:-5,Company_2042,40,64,-1,0,0,0,0,,,2042_2049,,575,
 
-// 文本描述
-let DescriptionList = {
-	
-	2042 : [/*'耐久模块1',			AddHp:10|AddSpeed:-2,			*/'生命上限 +10%<br />机体速度 - 2%',																				'HP上限 +10%、機体速度 - 2%',																																										'Increases max HP by +10% and movement speed by - 2%',																																														],		
-	2043 : [/*'耐久模块2',			AddHp:15|AddSpeed:-3,			*/'生命上限 +15%<br />机体速度 - 3%',																				'HP上限 +15%、機体速度 - 3%',																																										'Increases max HP by +15% and movement speed by - 3%',																																														],		
-	2044 : [/*'耐久模块3',			AddHp:20|AddSpeed:-4,			*/'生命上限 +20%<br />机体速度 - 4%',																				'HP上限 +20%、機体速度 - 4%',																																										'Increases max HP by +20% and movement speed by - 4%',																																														],		
-	2045 : [/*'耐久模块4',			AddHp:25|AddSpeed:-5,			*/'生命上限 +25%<br />机体速度 - 5%',																				'HP上限 +25%、機体速度 - 5%',																																										'Increases max HP by +25% and movement speed by - 5%',																																														],		// 03		
-	
-	2046 : [/*'高级耐久模块1',		AddHp:40|AddSpeed:-8,			*/'生命上限 +40%<br />机体速度 - 8%',																				'HP上限 +40%、機体速度 - 8%',																																										'Increases max HP by +40% and movement speed by - 8%',																																														],		
-	2047 : [/*'高级耐久模块2',		AddHp:50|AddSpeed:-10,			*/'生命上限 +50%<br />机体速度 -10%',																				'HP上限 +50%、機体速度 -10%',																																										'Increases max HP by +50% and movement speed by -10%',																																														],		
-	2048 : [/*'高级耐久模块3',		AddHp:60|AddSpeed:-12,			*/'生命上限 +60%<br />机体速度 -12%',																				'HP上限 +60%、機体速度 -12%',																																										'Increases max HP by +60% and movement speed by -12%',																																														],		
-	2049 : [/*'高级耐久模块4',		AddHp:80|AddSpeed:-18,			*/'生命上限 +80%<br />机体速度 -18%',																				'HP上限 +80%、機体速度 -18%',																																										'Increases max HP by +80% and movement speed by -18%',																																														],		// 03		
-	
-	2058 : [/*'抵抗模块1',			AddArmor:5|AddSpeed:-2,			*/'穿甲抵抗 + 5P<br />机体速度 - 2%',																				'抵抗 + 5P、機体速度 - 2%',																																											'Increases resistance by + 5P and movement speed by - 2%',																																													],		
-	2059 : [/*'抵抗模块2',			AddArmor:9|AddSpeed:-4,			*/'穿甲抵抗 + 9P<br />机体速度 - 4%',																				'抵抗 + 9P、機体速度 - 4%',																																											'Increases resistance by + 9P and movement speed by - 4%',																																													],		
-	2060 : [/*'抵抗模块3',			AddArmor:15|AddSpeed:-7,		*/'穿甲抵抗 +15P<br />机体速度 - 7%',																				'抵抗 +15P、機体速度 - 7%',																																											'Increases resistance by +15P and movement speed by - 7%',																																													],		
-	2061 : [/*'抵抗模块4',			AddArmor:25|AddSpeed:-8,		*/'穿甲抵抗 +25P<br />机体速度 - 8%',																				'抵抗 +25P、機体速度 - 8%',																																											'Increases resistance by +25P and movement speed by - 8%',																																													],		// 03		
-	
-	2062 : [/*'高级装甲模块1',		AddArmor:30|AddSpeed:-10,		*/'穿甲抵抗 +30P<br />机体速度 -10%',																				'抵抗 +30P、機体速度 -10%',																																											'Increases resistance by +30P and movement speed by -10%',																																													],		
-	2063 : [/*'高级装甲模块2',		AddArmor:50|AddSpeed:-10,		*/'穿甲抵抗 +50P<br />机体速度 -10%',																				'抵抗 +50P、機体速度 -10%',																																											'Increases resistance by +50P and movement speed by -10%',																																													],		
-	2064 : [/*'高级装甲模块3',		AddArmor:75|AddSpeed:-12,		*/'穿甲抵抗 +75P<br />机体速度 -12%',																				'抵抗 +75P、機体速度 -12%',																																											'Increases resistance by +75P and movement speed by -12%',																																													],		
-	2065 : [/*'高级装甲模块4',		AddArmor:100|AddSpeed:-12,		*/'穿甲抵抗+100P<br />机体速度 -12%',																				'抵抗+100P、機体速度 -12%',																																											'Increases resistance by+100P and movement speed by -12%',																																													],		// 03		
-	
-	2126 : [/*'护盾模块1',			shiledLife:10,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 + 10%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP + 10%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  + 10%(effect can stack)',																																		],		
-	2127 : [/*'护盾模块2',			shiledLife:25,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 + 25%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP + 25%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  + 25%(effect can stack)',																																		],		
-	2128 : [/*'护盾模块3',			shiledLife:45,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 + 45%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP + 45%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  + 45%(effect can stack)',																																		],
-	2129 : [/*'护盾模块+1',			shiledLife:60,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 + 60%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP + 60%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  + 60%(effect can stack)',																																		],		
-	2130 : [/*'护盾模块+2',			shiledLife:80,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 + 80%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP + 80%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  + 80%(effect can stack)',																																		],		
-	2131 : [/*'护盾模块+3',			shiledLife:100,					*/'生成一个护盾(HP: 2500), 护盾效果不可叠加, 护盾生命值额外 +100%(该效果可以叠加)',									'機体にHP2500のシールドを生成する(効果は重ねることができない), シールドHP +100%(効果は重ねることができる)',																							'Generates a 2000 HP shield on the mecha (effect does not stack), Shield HP  +100%(effect can stack)',																																		],		// 03		
-	
-	2132 : [/*'护盾回复模块1',		shiledRecover:2,				*/'使护盾持续回复(每秒 + 100), 如果重复装备护盾恢复模块模块, 那么护盾回复少量增加',									'機体にシールドモジュールが装備されている場合、シールドを回復し続ける, このタイプのモジュールを複数装備すると、シールド回復がわずかに増加する',														'Restores shields continuously if the mecha has equipped a shield module, Equipping the same type of modules increases shield regeneration.',																								],		
-	2133 : [/*'护盾回复模块2',		shiledRecover:4,				*/'使护盾持续回复(每秒 + 200), 如果重复装备护盾恢复模块模块, 那么护盾回复少量增加',									'機体にシールドモジュールが装備されている場合、シールドを回復し続ける, このタイプのモジュールを複数装備すると、シールド回復がわずかに増加する',														'Restores shields continuously if the mecha has equipped a shield module, Equipping the same type of modules increases shield regeneration.',																								],		
-	2134 : [/*'护盾回复模块3',		shiledRecover:6,				*/'使护盾持续回复(每秒 + 300), 如果重复装备护盾恢复模块模块, 那么护盾回复少量增加',									'機体にシールドモジュールが装備されている場合、シールドを回復し続ける, このタイプのモジュールを複数装備すると、シールド回復がわずかに増加する',														'Restores shields continuously if the mecha has equipped a shield module, Equipping the same type of modules increases shield regeneration.',																								],		
-	2135 : [/*'护盾回复模块4',		shiledRecover:9,				*/'使护盾持续回复(每秒 + 450), 如果重复装备护盾恢复模块模块, 那么护盾回复少量增加',									'機体にシールドモジュールが装備されている場合、シールドを回復し続ける, このタイプのモジュールを複数装備すると、シールド回復がわずかに増加する',														'Restores shields continuously if the mecha has equipped a shield module, Equipping the same type of modules increases shield regeneration.',																								],		
-	2136 : [/*'护盾回复模块5',		shiledRecover:12,				*/'使护盾持续回复(每秒 + 600), 如果重复装备护盾恢复模块模块, 那么护盾回复少量增加',									'機体にシールドモジュールが装備されている場合、シールドを回復し続ける, このタイプのモジュールを複数装備すると、シールド回復がわずかに増加する',														'Restores shields continuously if the mecha has equipped a shield module, Equipping the same type of modules increases shield regeneration.',																								],		// 03		
-	
-	2137 : [/*'护盾再构模块1',		shiledRegen:-5,					*/'护盾被破坏, 将在 45 秒后自动修复, 重复安装时, 护盾再生成时间 -　5%(效果可叠加)',									'機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する(効果は重ねることができない), シールド再生時間 -　5%(効果は重ねることができる)',					'Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack), Shield regeneration time -　5% (effect can stack).',													],		
-	2138 : [/*'护盾再构模块2',		shiledRegen:-10,				*/'护盾被破坏, 将在 45 秒后自动修复, 重复安装时, 护盾再生成时间 - 10%(效果可叠加)',									'機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する(効果は重ねることができない), シールド再生時間 - 10%(効果は重ねることができる)',					'Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack), Shield regeneration time - 10% (effect can stack).',													],		
-	2139 : [/*'护盾再构模块3',		shiledRegen:-15,				*/'护盾被破坏, 将在 45 秒后自动修复, 重复安装时, 护盾再生成时间 - 15%(效果可叠加)',									'機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する(効果は重ねることができない), シールド再生時間 - 15%(効果は重ねることができる)',					'Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack), Shield regeneration time - 15% (effect can stack).',													],		
-	2140 : [/*'护盾再构模块+1',		shiledRegen:-20,				*/'护盾被破坏, 将在 45 秒后自动修复, 重复安装时, 护盾再生成时间 - 20%(效果可叠加)',									'機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する(効果は重ねることができない), シールド再生時間 - 20%(効果は重ねることができる)',					'Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack), Shield regeneration time - 20% (effect can stack).',													],		
-	2141 : [/*'护盾再构模块+2',		shiledRegen:-25,				*/'护盾被破坏, 将在 45 秒后自动修复, 重复安装时, 护盾再生成时间 - 25%(效果可叠加)',									'機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する(効果は重ねることができない), シールド再生時間 - 25%(効果は重ねることができる)',					'Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack), Shield regeneration time - 25% (effect can stack).',													],		// 03		
-	
-	2146 : [/*'对冲线圈1',			Resist:10|Immune:5,				*/'机体异常状态持续时间 - 10%<br />机体免疫异常效果概率 +　5P',														'異常状態持続時間 - 10%、異常効果免疫確率 +　5P',																																					'Abnormal state duration - 10%, abnormal effect immunity rate +　5P',																																										],		
-	2147 : [/*'对冲线圈2',			Resist:20|Immune:10,			*/'机体异常状态持续时间 - 20%<br />机体免疫异常效果概率 + 10P',														'異常状態持続時間 - 20%、異常効果免疫確率 + 10P',																																					'Abnormal state duration - 20%, abnormal effect immunity rate + 10P',																																										],		
-	2148 : [/*'对冲线圈3',			Resist:30|Immune:15,			*/'机体异常状态持续时间 - 30%<br />机体免疫异常效果概率 + 15P',														'異常状態持続時間 - 30%、異常効果免疫確率 + 15P',																																					'Abnormal state duration - 30%, abnormal effect immunity rate + 15P',																																										],		
-	2149 : [/*'对冲线圈4',			Resist:40|Immune:20,			*/'机体异常状态持续时间 - 40%<br />机体免疫异常效果概率 + 20P',														'異常状態持続時間 - 40%、異常効果免疫確率 + 20P',																																					'Abnormal state duration - 40%, abnormal effect immunity rate + 20P',																																										],		
-	2150 : [/*'对冲线圈5',			Resist:50|Immune:25,			*/'机体异常状态持续时间 - 50%<br />机体免疫异常效果概率 + 25P',														'異常状態持続時間 - 50%、異常効果免疫確率 + 25P',																																					'Abnormal state duration - 50%, abnormal effect immunity rate + 25P',																																										],		// 03		
-	
-	2122 : [/*'光学隐身模块',		Invisible:0.001,				*/'蹲踞后机体会隐身(耗时 20S), 隐身后换弹时间减半, 开火会消除隐身, 重复装备这类型模块, 隐身速度会少量的加快',		'しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される, ステルス時のリロードが速くなる, このタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる',		'Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility, Faster reload speed while in invisibility, If multiple modules of this type are equipped,  the speed of invisibility will slightly increase.',		],		
-	2123 : [/*'光学隐身模块+',		Invisible:0.003,				*/'蹲踞后机体会隐身(耗时　7S), 隐身后换弹时间减半, 开火会消除隐身, 重复装备这类型模块, 隐身速度会少量的加快',		'しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される, ステルス時のリロードが速くなる, このタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる',		'Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility, Faster reload speed while in invisibility, If multiple modules of this type are equipped,  the speed of invisibility will slightly increase.',		],		
-	2124 : [/*'高级光学隐身模块',	Invisible:0.01,					*/'蹲踞后机体会隐身(耗时　2S), 隐身后换弹时间减半, 开火会消除隐身, 重复装备这类型模块, 隐身速度会少量的加快',		'しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される, ステルス時のリロードが速くなる, このタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる',		'Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility, Faster reload speed while in invisibility, If multiple modules of this type are equipped,  the speed of invisibility will slightly increase.',		],		
-	2125 : [/*'制式光学隐身模块',	Invisible:0.03,					*/'蹲踞后机体会隐身(耗时0.7S), 隐身后换弹时间减半, 开火会消除隐身, 重复装备这类型模块, 隐身速度会少量的加快',		'しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される, ステルス時のリロードが速くなる, このタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる',		'Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility, Faster reload speed while in invisibility, If multiple modules of this type are equipped,  the speed of invisibility will slightly increase.',		],		// 03		
-	
-	2142 : [/*'机体肾上腺素',		LowLifePlusRate:10,				*/'HP < 50%, 射速和移速 + 10%',																						'機体のHPが50%以下の時、発射速度と移動速度 + 10%',																																					'Increases firing speed and movement speed by + 10% when mecha HP is below 50%.',																																							],		
-	2143 : [/*'机体肾上腺素+',		LowLifePlusRate:25,				*/'HP < 50%, 射速和移速 + 25%',																						'機体のHPが50%以下の時、発射速度と移動速度 + 25%',																																					'Increases firing speed and movement speed by + 25% when mecha HP is below 50%.',																																							],		
-	2144 : [/*'高级机体肾上腺素',	LowLifePlusRate:40,				*/'HP < 50%, 射速和移速 + 40%',																						'機体のHPが50%以下の時、発射速度と移動速度 + 40%',																																					'Increases firing speed and movement speed by + 40% when mecha HP is below 50%.',																																							],		
-	2145 : [/*'制式机体肾上腺素',	LowLifePlusRate:50,				*/'HP < 50%, 射速和移速 + 50%',																						'機体のHPが50%以下の時、発射速度と移動速度 + 50%',																																					'Increases firing speed and movement speed by + 50% when mecha HP is below 50%.',																																							],		// 03		
-	
-	2151 : [/*'防爆模块',			ExploResist:10,					*/'爆炸抗性 + 10P, 抗暴成功将不会眩晕, 且爆炸伤害 - 90%',															'爆発耐性 + 10P',																																													'Increases Explosive Resistance by + 10P',																																																	],		
-	2152 : [/*'防爆模块+',			ExploResist:15,					*/'爆炸抗性 + 15P, 抗暴成功将不会眩晕, 且爆炸伤害 - 90%',															'爆発耐性 + 15P',																																													'Increases Explosive Resistance by + 15P',																																																	],		
-	2153 : [/*'高级防爆模块',		ExploResist:20,					*/'爆炸抗性 + 20P, 抗暴成功将不会眩晕, 且爆炸伤害 - 90%',															'爆発耐性 + 20P',																																													'Increases Explosive Resistance by + 20P',																																																	],		
-	2154 : [/*'制式防爆模块',		ExploResist:30,					*/'爆炸抗性 + 30P, 抗暴成功将不会眩晕, 且爆炸伤害 - 90%',															'爆発耐性 + 30P',																																													'Increases Explosive Resistance by + 30P',																																																	],		// 03		
-	
-	2311 : [/*'防爆涂层',			ExploResist:6|AddArmor:-6,		*/'爆炸抗性 +　6P, 安装此模块会导致机体的穿甲抵抗 -　6P',															'爆発耐性 +　6P, 抵抗 -　6P',																																										'Increases Explosive Resistance by +　6P and resistance by -　6P',																																											],		
-	2312 : [/*'防爆涂层+',			ExploResist:12|AddArmor:-12,	*/'爆炸抗性 + 12P, 安装此模块会导致机体的穿甲抵抗 - 12P',															'爆発耐性 + 12P, 抵抗 - 12P',																																										'Increases Explosive Resistance by + 12P and resistance by - 12P',																																											],		
-	2313 : [/*'高级防爆涂层',		ExploResist:24|AddArmor:-24,	*/'爆炸抗性 + 24P, 安装此模块会导致机体的穿甲抵抗 - 24P',															'爆発耐性 + 24P, 抵抗 - 24P',																																										'Increases Explosive Resistance by + 24P and resistance by - 24P',																																											],		
-	2314 : [/*'制式防爆涂层',		ExploResist:40|AddArmor:-40,	*/'爆炸抗性 + 40P, 安装此模块会导致机体的穿甲抵抗 - 40P',															'爆発耐性 + 40P, 抵抗 - 40P',																																										'Increases Explosive Resistance by + 40P and resistance by - 40P',																																											],		// 03		
-	
-	2315 : [/*'斜面装甲',			AngleArmor:8,					*/'机体蹲踞时子弹跳弹率 +　8%(子弹弹跳则对机体毫无伤害)',															'しゃがむ中跳弾確率 +　8%',																																											'Increases Ricochet rate when crouched by +　8%',																																															],		
-	2316 : [/*'斜面装甲2',			AngleArmor:16,					*/'机体蹲踞时子弹跳弹率 + 16%(子弹弹跳则对机体毫无伤害)',															'しゃがむ中跳弾確率 + 16%',																																											'Increases Ricochet rate when crouched by + 16%',																																															],		
-	2317 : [/*'斜面装甲3',			AngleArmor:24,					*/'机体蹲踞时子弹跳弹率 + 24%(子弹弹跳则对机体毫无伤害)',															'しゃがむ中跳弾確率 + 24%',																																											'Increases Ricochet rate when crouched by + 24%',																																															],		// 03		
-	
-	2318 : [/*'瓷金装甲',			ExplodeInmue:10,				*/'爆炸伤害 -10%(减眩晕时间?)',																						'爆発ダメージ軽減 -10%',																																											'Explosion damage reduction -10%',																																																			],		
-	2319 : [/*'瓷金装甲2',			ExplodeInmue:20,				*/'爆炸伤害 -20%(减眩晕时间?)',																						'爆発ダメージ軽減 -20%',																																											'Explosion damage reduction -20%',																																																			],		
-	2320 : [/*'瓷金装甲3',			ExplodeInmue:35,				*/'爆炸伤害 -35%(减眩晕时间?)',																						'爆発ダメージ軽減 -35%',																																											'Explosion damage reduction -35%',																																																			],		// 03		
-	
-	2332 : [/*'动力臂模块',			ThrowDistance:25,				*/'投掷距离 +25%(默认距离 15)',																						'投擲距離 +25%',																																													'Increases throwing distance by +25%',																																																		],		
-	2333 : [/*'动力臂模块2',		ThrowDistance:50,				*/'投掷距离 +50%(默认距离 15)',																						'投擲距離 +50%',																																													'Increases throwing distance by +50%',																																																		],		
-	2334 : [/*'动力臂模块3',		ThrowDistance:100,				*/'投掷距离+100%(默认距离 15)',																						'投擲距離+100%',																																													'Increases throwing distance by+100%',																																																		],		// 03		
-	
-	2321 : [/*'反应装甲',			ReactArmor:50,					*/'命中的炮弹　50% 概率不爆炸',																						'直撃した砲弾が　50% の確率で爆発しない確',																																							'When hit directly by a cannon ball,  there is a　50% chance that it does not explode.',																																					],		
-	2322 : [/*'反应装甲+',			ReactArmor:100,					*/'命中的炮弹 100% 概率不爆炸',																						'直撃した砲弾が 100% の確率で爆発しない確',																																							'When hit directly by a cannon ball,  there is a 100% chance that it does not explode.',																																					],		// 03		
-	
-	2110 : [/*'无人机强化模块1',	DroneBuff:280|AddHp:-6,			*/'主机 HP -06%, 无人机: 换弹老化-10%, 最大散射-05%, 偏移角度-05%, 常规射程 +05%, 喷射射程+05%, 射线射程+05%',		'ドローン小幅強化(レベル1)、HP上限 -06%',																																							'Drone Minor Enhancement (Lv.1),  max HP -06%',																																																],		
-	2111 : [/*'无人机强化模块2',	DroneBuff:281|AddHp:-12,		*/'主机 HP -12%, 无人机: 换弹老化-20%, 最大散射-08%, 偏移角度-08%, 常规射程 +08%, 喷射射程+08%, 射线射程+08%',		'ドローン小幅強化(レベル2)、HP上限 -12%',																																							'Drone Minor Enhancement (Lv.2),  max HP -12%',																																																],		
-	2112 : [/*'无人机强化模块3',	DroneBuff:282|AddHp:-18,		*/'主机 HP -18%, 无人机: 换弹老化-30%, 最大散射-12%, 偏移角度-10%, 常规射程 +12%, 喷射射程+10%, 射线射程+10%',		'ドローン小幅強化(レベル3)、HP上限 -18%',																																							'Drone Minor Enhancement (Lv.3),  max HP -18%',																																																],		
-	2113 : [/*'无人机强化模块4',	DroneBuff:283|AddHp:-24,		*/'主机 HP -24%, 无人机: 换弹老化-40%, 最大散射-15%, 偏移角度-12%, 常规射程 +15%, 喷射射程+12%, 射线射程+12%',		'ドローン中幅強化(レベル1)、HP上限 -24%',																																							'Drone Medium Enhancement (Lv.1),  max HP -24%',																																															],		
-	2114 : [/*'无人机强化模块5',	DroneBuff:284|AddHp:-27,		*/'主机 HP -27%, 无人机: 换弹老化-45%, 最大散射-18%, 偏移角度-15%, 常规射程 +18%, 喷射射程+15%, 射线射程+15%',		'ドローン中幅強化(レベル2)、HP上限 -27%',																																							'Drone Medium Enhancement (Lv.2),  max HP -27%',																																															],		
-	2115 : [/*'无人机强化模块6',	DroneBuff:285|AddHp:-30,		*/'主机 HP -30%, 无人机: 换弹老化-50%, 最大散射-20%, 偏移角度-16%, 常规射程 +20%, 喷射射程+16%, 射线射程+16%',		'ドローン中幅強化(レベル3)、HP上限 -30%',																																							'Drone Medium Enhancement (Lv.3),  max HP -30%',																																															],		
-	2116 : [/*'无人机强化模块7',	DroneBuff:286|AddHp:-35,		*/'主机 HP -35%, 无人机: 换弹老化-55%, 最大散射-25%, 偏移角度-18%, 常规射程 +25%, 喷射射程+18%, 射线射程+18%',		'ドローン大幅強化(レベル1)、HP上限 -35%',																																							'Drone Significant Enhancement (Lv.1),  max HP -35%',																																														],		
-	2117 : [/*'无人机强化模块8',	DroneBuff:287|AddHp:-35,		*/'主机 HP -35%, 无人机: 换弹老化-60%, 最大散射-30%, 偏移角度-20%, 常规射程 +30%, 喷射射程+20%, 射线射程+20%',		'ドローン大幅強化(レベル2)、HP上限 -35%',																																							'Drone Significant Enhancement (Lv.2),  max HP -35%',																																														],		// 03		
-	
-};
+2046,#高级耐久模块1,2046,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:40|AddSpeed:-8,Main2_1,60,0,1,0,0,0,0,,40006_5|40007_5|40025_3,2043_2049,,576,
+2047,#高级耐久模块2,2047,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:50|AddSpeed:-10,Main2_1,75,0,2,0,0,0,0,,,2046_2049,,577,
+2048,#高级耐久模块3,2048,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:60|AddSpeed:-12,Company_2049,90,0,3,0,0,0,0,,,2046_2049,,578,
+2049,#高级耐久模块4,2049,BuffModel,#生命上限+<Description:0>%，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddHp:80|AddSpeed:-18,Company_2049,120,0,-1,0,0,0,0,,,2046_2049,,579,
 
-// 物品类型
-let TypeList = {
-	BuffModel :	['主体强化',	'メイン強化モジュール',		'Main enhancement module',		],
-};
+2058,#抵抗模块1,2058,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:5|AddSpeed:-2,Main2_1,10,0,1,0,0,0,0,,40001_1|40007_1|40024_3,,,588,
+2059,#抵抗模块2,2059,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:9|AddSpeed:-4,Main2_1,20,0,2,0,0,0,0,,,2058_2065,,589,
+2060,#抵抗模块3,2060,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:15|AddSpeed:-7,Main2_1,40,36,3,0,0,0,0,,,2058_2065,,590,
+2061,#抵抗模块4,2061,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:25|AddSpeed:-8,Main2_1,75,64,-1,0,0,0,0,,,2058_2065,,591,
 
-// 归属种类
-let TagList = {
-	BuffModel :	['主体',		'メイン強化モジュール',		'Main enhancement module',				],
-	Cannon :	['炮塔',		'砲塔強化モジュール',		'Turret enhancement module',			],
-	Door :		['大门',		'ゲートモジュール',			'Gate module',							],
-};
+2062,#高级装甲模块1,2062,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:30|AddSpeed:-10,Main2_1,90,0,1,0,0,0,0,,40001_10|40002_10|40006_5|40007_5|40025_4,2060_2065,,592,
+2063,#高级装甲模块2,2063,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:50|AddSpeed:-10,Main2_1,160,0,2,0,0,0,0,,,2062_2065,,593,
+2064,#高级装甲模块3,2064,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:75|AddSpeed:-12,Main2_1,225,0,3,0,0,0,0,,,2062_2065,,594,
+2065,#高级装甲模块4,2065,BuffModel,#抵抗+<Description:0>，机体速度<Description:1>%,BuffModel|Door|Cannon,1,AddArmor:100|AddSpeed:-12,Main2_1,350,0,-1,0,0,0,0,,,2062_2065,,595,
 
-// 原型研发
-let CompanyList = {
-	TankType_PlayerName_3 :	['赭石色',				'オーカー',						'Ocher',										],
-	Main2_5 :				['风神公司',			'風神公司',						'Hermes Company',								],
-	Main2_7 :				['蓝天电子公司',		'青空電子株式会社',				'Blue Sky Electronics Company',					],
-	Main2_1 :				['船舶集团有限公司',	'船舶重工グループ株式会社',		'Shipbuilding Group Co., Ltd',					],
-	Main2_6 :				['布尔发动机公司',		'ブールエンジン株式会社',		'Boolean Engine Company',						],
-	Main2_3 :				['总装备制造局',		'汎用設備製造局',				'General Equipment Manufacturing Bureau',		],
-};
+2110,#无人机强化模块1,2110,BuffModel,#无人机小幅强化（1级）,BuffModel|CantGen,1,DroneBuff:280|AddHp:-6,Company_2117,12,12,1,0,0,0,0,,40002_6|40006_3,,,663,
+2111,#无人机强化模块2,2111,BuffModel,#无人机小幅强化（2级）,BuffModel|CantGen,1,DroneBuff:281|AddHp:-12,Company_2117,20,24,2,0,0,0,0,,,,,664,
+2112,#无人机强化模块3,2112,BuffModel,#无人机小幅强化（3级）,BuffModel,1,DroneBuff:282|AddHp:-18,Company_2117,40,36,3,0,0,0,0,,,,,665,
+2113,#无人机强化模块4,2113,BuffModel,#无人机中幅强化（1级）,BuffModel,1,DroneBuff:283|AddHp:-24,Company_2117,75,48,4,0,0,0,0,,,,,666,
+2114,#无人机强化模块5,2114,BuffModel,#无人机中幅强化（2级）,BuffModel,1,DroneBuff:284|AddHp:-27,Company_2117,150,60,5,0,0,0,0,,,,,667,
+2115,#无人机强化模块6,2115,BuffModel,#无人机中幅强化（3级）,BuffModel,1,DroneBuff:285|AddHp:-30,Company_2117,280,72,6,0,0,0,0,,,,,668,
+2116,#无人机强化模块7,2116,BuffModel,#无人机大幅强化（1级）,BuffModel,1,DroneBuff:286|AddHp:-35,Company_2117,550,80,7,0,0,0,0,,,,,669,
+2117,#无人机强化模块8,2117,BuffModel,#无人机大幅强化（2级）,BuffModel,1,DroneBuff:287|AddHp:-35,Company_2117,1000,90,-1,0,0,0,0,,,,,670,
 
-// 合成材料
-let ScrapList = {
-	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',						],
-	40002 :	['废料',			'スクラップ',				'Waste Material',					],
-	40003 :	['弹壳',			'薬莢',						'Bullet Shell',						],
-	40004 :	['弹头',			'弾頭',						'Warhead',							],
-	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',				],
-	40006 :	['齿轮',			'ギア',						'Gear',								],
-	40007 :	['框架',			'フレーム',					'Frame',							],
-	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',						],
-	40009 :	['扳机',			'トリガー',					'Trigger',							],
-	40010 :	['雷管',			'起爆装置',					'Detonator',						],
-	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',				],
-	40012 :	['弹链',			'弾帯',						'Ammunition Belt',					],
-	40013 :	['棱镜',			'プリズム',					'Prism',							],
-	40014 :	['透镜',			'レンズ',					'Lens',								],
-	40015 :	['点火器',			'イグナイター',				'Igniter',							],
-	40016 :	['冷凝管',			'復水管',					'Condenser',						],
-	40017 :	['线圈',			'コイル',					'Coil',								],
-	40018 :	['电容',			'コンデンサ',				'Capacitor',						],
-	40019 :	['电感',			'インダクター',				'Inductor',							],
-	40020 :	['三极管',			'三極管',					'Transistor',						],
-	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',					],
-	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',						],
-	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',						],
-	40024 :	['装甲',			'装甲',						'Armor',							],
-	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',						],
-	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',			],
-	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',				],
-	40028 :	['共振器',			'共振器',					'Resonator',						],
-	40029 :	['刀片',			'ブレード',					'Blade',							],
-	40030 :	['振荡器',			'発振回路',					'Oscillator',						],
-	40031 :	['涂层',			'コーティング',				'Coating',							],
-	40032 :	['核心',			'コア',						'Core',								],
+2122,#光学隐身模块,2122,BuffModel,#使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，少量加快隐身时间,BuffModel|CantGen,1,Invisible:0.0025,Company_2124,50,11,1,0,0,0,0,,40006_2|40007_3|40031_7,,,596,
+2123,#光学隐身模块+,2123,BuffModel,#使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，少量加快隐身时间,BuffModel|CantGen,1,Invisible:0.004,Company_2124,100,22,2,0,0,0,0,,,2122_2125,,597,
+2124,#高级光学隐身模块,2124,BuffModel,#使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，少量加快隐身时间,BuffModel,1,Invisible:0.0065,Company_2124,200,44,3,0,0,0,0,,,2122_2125,,598,
+2125,#制式光学隐身模块,2125,BuffModel,#使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，少量加快隐身时间,BuffModel,1,Invisible:0.09,Company_2124,400,66,-1,0,0,0,0,,,2122_2125,,599,
+
+2142,#机体肾上腺素,2142,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:10,Main2_5,10,30,1,0,0,0,0,,40001_1|40002_3|40006_2,,,616,
+2143,#机体肾上腺素+,2143,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:25,Main2_5,25,35,2,0,0,0,0,,,2142_2145,,617,
+2144,#高级机体肾上腺素,2144,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:40,Main2_5,80,40,3,0,0,0,0,,,2142_2145,,618,
+2145,#制式机体肾上腺素,2145,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:50,Main2_5,150,60,-1,0,0,0,0,,,2142_2145,,619,
+
+2151,#防爆模块,2151,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:10,Main2_3,20,18,1,0,0,0,0,,40010_1|40031_1,,,625,
+2152,#防爆模块+,2152,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:15,Main2_3,40,36,2,0,0,0,0,,,2151_2154,,626,
+2153,#高级防爆模块,2153,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:20,Main2_3,80,54,3,0,0,0,0,,,2151_2154,,627,
+2154,#制式防爆模块,2154,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:30,Main2_3,120,72,-1,0,0,0,0,,,2151_2154,,628,
+
+2311,#防爆涂层,2311,BuffModel,#爆炸抗性+<Description:0>，抵抗<Description:1>,BuffModel|Door|Cannon,1,ExploResist:6|AddArmor:-6,Main2_5,10,9,1,0,0,0,0,,40010_1|40031_1,2321|2322|2318_2320|2151_2154|2311_2314,,639,
+2312,#防爆涂层+,2312,BuffModel,#爆炸抗性+<Description:0>，抵抗<Description:1>,BuffModel|Door|Cannon,1,ExploResist:12|AddArmor:-12,Main2_5,25,18,2,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,640,
+2313,#高级防爆涂层,2313,BuffModel,#爆炸抗性+<Description:0>，抵抗<Description:1>,BuffModel|Door|Cannon,1,ExploResist:24|AddArmor:-24,Main2_5,80,27,3,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,641,
+2314,#制式防爆涂层,2314,BuffModel,#爆炸抗性+<Description:0>，抵抗<Description:1>,BuffModel|Door|Cannon,1,ExploResist:40|AddArmor:-40,Main2_5,150,0,-1,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,642,
+
+2318,#瓷金装甲,2318,BuffModel,#爆炸减伤+<Description>%,BuffModel|Door|Cannon,1,ExplodeInmue:10,Main2_5,30,18,1,0,0,0,0,,40001_4|40007_2|40025_1|40010_2,2321|2322|2318_2320|2151_2154|2311_2314,,646,
+2319,#瓷金装甲2,2319,BuffModel,#爆炸减伤+<Description>%,BuffModel|Door|Cannon,1,ExplodeInmue:20,Main2_5,70,36,2,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,647,
+2320,#瓷金装甲3,2320,BuffModel,#爆炸减伤+<Description>%,BuffModel|Door|Cannon,1,ExplodeInmue:35,Main2_5,150,54,-1,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,648,
+
+2315,#斜面装甲,2315,BuffModel,#蹲踞时子弹跳弹概率+<Description>%,BuffModel,1,AngleArmor:8,Main2_3,30,3,1,0,0,0,0,,40001_4|40007_2|40025_2,,,643,
+2316,#斜面装甲2,2316,BuffModel,#蹲踞时子弹跳弹概率+<Description>%,BuffModel,1,AngleArmor:16,Main2_3,70,36,2,0,0,0,0,,,2316|2317,,644,
+2317,#斜面装甲3,2317,BuffModel,#蹲踞时子弹跳弹概率+<Description>%,BuffModel,1,AngleArmor:24,Main2_3,150,54,-1,0,0,0,0,,,2316|2317,,645,
+
+2126,#护盾模块1,2126,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:10,Company_2126,30,37,1,0,0,0,0,,40006_1|40007_2|40026_2|40027_3,,,600,
+2127,#护盾模块2,2127,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:25,Company_2126,50,45,2,0,0,0,0,,,2126_2131,,601,
+2128,#护盾模块3,2128,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:45,Company_2126,80,65,3,0,0,0,0,,,2126_2131,,602,
+2129,#护盾模块+1,2129,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:60,Company_2126,150,75,4,0,0,0,0,,,2126_2131,,603,
+2130,#护盾模块+2,2130,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:80,Company_2126,250,57,5,0,0,0,0,,,2126_2131,,604,
+2131,#护盾模块+3,2131,BuffModel,#使机体生成一个生命值2000的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledLife:100,Company_2126,450,62,-1,0,0,0,0,,,2126_2131,,605,
+
+2132,#护盾回复模块1,2132,BuffModel,#如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,BuffModel|Cannon,1,shiledRecover:2,Company_2126,30,39,1,0,0,0,0,,40006_1|40026_1|40027_1,2126_2131|2132_2136,,606,
+2133,#护盾回复模块2,2133,BuffModel,#如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,BuffModel|Cannon,1,shiledRecover:4,Company_2126,50,44,2,0,0,0,0,,,2126_2131|2132_2136,,607,
+2134,#护盾回复模块3,2134,BuffModel,#如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,BuffModel|Cannon,1,shiledRecover:6,Company_2126,80,55,3,0,0,0,0,,,2126_2131|2132_2136,,608,
+2135,#护盾回复模块4,2135,BuffModel,#如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,BuffModel|Cannon,1,shiledRecover:9,Company_2126,150,66,4,0,0,0,0,,,2126_2131|2132_2136,,609,
+2136,#护盾回复模块5,2136,BuffModel,#如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,BuffModel|Cannon,1,shiledRecover:12,Company_2126,250,77,-1,0,0,0,0,,,2126_2131|2132_2136,,610,
+
+2137,#护盾再构模块1,2137,BuffModel,#如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledRegen:-5,Company_2126,30,41,1,0,0,0,0,,40006_1|40026_1|40027_1,2126_2131|2137_2141,,611,
+2138,#护盾再构模块2,2138,BuffModel,#如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledRegen:-10,Company_2126,50,57,2,0,0,0,0,,,2126_2131|2137_2141,,612,
+2139,#护盾再构模块3,2139,BuffModel,#如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledRegen:-15,Company_2126,80,68,3,0,0,0,0,,,2126_2131|2137_2141,,613,
+2140,#护盾再构模块+1,2140,BuffModel,#如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledRegen:-20,Company_2126,150,80,4,0,0,0,0,,,2126_2131|2137_2141,,614,
+2141,#护盾再构模块+2,2141,BuffModel,#如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,BuffModel|Cannon,1,shiledRegen:-25,Company_2126,250,0,-1,0,0,0,0,,,2126_2131|2137_2141,,615,
+
+2146,#对冲线圈1,2146,BuffModel,#负面状态持续时间-<Description:0>%，负面效果免疫概率+<Description:1>%,BuffModel|Door|Cannon,1,Resist:10|Immune:5,Main2_7,10,29,1,0,0,0,0,,40001_1|40002_3|40006_2,,,620,
+2147,#对冲线圈2,2147,BuffModel,#负面状态持续时间-<Description:0>%，负面效果免疫概率+<Description:1>%,BuffModel|Door|Cannon,1,Resist:20|Immune:10,Main2_7,25,32,2,0,0,0,0,,,2147_2150,,621,
+2148,#对冲线圈3,2148,BuffModel,#负面状态持续时间-<Description:0>%，负面效果免疫概率+<Description:1>%,BuffModel|Door|Cannon,1,Resist:30|Immune:15,Main2_7,80,35,3,0,0,0,0,,,2147_2150,,622,
+2149,#对冲线圈4,2149,BuffModel,#负面状态持续时间-<Description:0>%，负面效果免疫概率+<Description:1>%,BuffModel|Door|Cannon,1,Resist:40|Immune:20,Main2_7,150,43,4,0,0,0,0,,,2147_2150,,623,
+2150,#对冲线圈5,2150,BuffModel,#负面状态持续时间-<Description:0>%，负面效果免疫概率+<Description:1>%,BuffModel|Door|Cannon,1,Resist:50|Immune:25,Main2_7,280,52,-1,0,0,0,0,,,2147_2150,,624,
+
+2332,#动力臂模块,2332,BuffModel,#投掷距离+<Description>%,BuffModel,1,ThrowDistance:25,Main2_6,15,9,1,0,0,0,0,,40001_6|40006_3,1101_1116,,660,
+2333,#动力臂模块2,2333,BuffModel,#投掷距离+<Description>%,BuffModel,1,ThrowDistance:50,Main2_6,35,18,2,0,0,0,0,,,1101_1116,,661,
+2334,#动力臂模块3,2334,BuffModel,#投掷距离+<Description>%,BuffModel,1,ThrowDistance:100,Main2_6,75,40,-1,0,0,0,0,,,1101_1116,,662,
+
+2321,#反应装甲,2321,BuffModel,#直接命中的炮弹有<Description>%概率不爆炸,BuffModel|Door|Cannon,1,ReactArmor:50,Main2_5,30,18,1,0,0,0,0,,40001_4|40007_2|40025_1|40010_2,2321|2322|2318_2320|2151_2154|2311_2314,,649,
+2322,#反应装甲+,2322,BuffModel,#直接命中的炮弹有<Description>%概率不爆炸,BuffModel|Door|Cannon,1,ReactArmor:100,Main2_5,60,36,-1,0,0,0,0,,,2321|2322|2318_2320|2151_2154|2311_2314,,650,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
+	
+	项目名称 : {
+	
+	2042 : `耐久模块01`					+ ` # 耐久模块1,耐久模組1,Durability Module 1,耐久力モジュール1`, 
+	2043 : `耐久模块02`					+ ` # 耐久模块2,耐久模組2,Durability Module 2,耐久力モジュール2`, 
+	2044 : `耐久模块03`					+ ` # 耐久模块3,耐久模組3,Durability Module 3,耐久力モジュール3`, 
+	2045 : `耐久模块04`					+ ` # 耐久模块4,耐久模組4,Durability Module 4,耐久力モジュール4`, 
+	
+	2046 : `高级耐久模块01`				+ ` # 高级耐久模块1,高級耐久模組1,Advanced Durability Module 1,上級耐久力モジュール1`, 
+	2047 : `高级耐久模块02`				+ ` # 高级耐久模块2,高級耐久模組2,Advanced Durability Module 2,上級耐久力モジュール2`, 
+	2048 : `高级耐久模块03`				+ ` # 高级耐久模块3,高級耐久模組3,Advanced Durability Module 3,上級耐久力モジュール3`, 
+	2049 : `高级耐久模块04`				+ ` # 高级耐久模块4,高級耐久模組4,Advanced Durability Module 4,上級耐久力モジュール4`, 
+	
+	2058 : `抵抗模块01`					+ ` # 抵抗模块1,抵抗模組1,Resistance Module 1,抵抗モジュール1`, 
+	2059 : `抵抗模块02`					+ ` # 抵抗模块2,抵抗模組2,Resistance Module 2,抵抗モジュール2`, 
+	2060 : `抵抗模块03`					+ ` # 抵抗模块3,抵抗模組3,Resistance Module 3,抵抗モジュール3`, 
+	2061 : `抵抗模块04`					+ ` # 抵抗模块4,抵抗模組4,Resistance Module 4,抵抗モジュール4`, 
+	
+	2062 : `高级抵抗模块01`				+ ` # 高级装甲模块1,高級裝甲模組1,Advanced Armor Module 1,上級装甲モジュール1`, 
+	2063 : `高级抵抗模块02`				+ ` # 高级装甲模块2,高級裝甲模組2,Advanced Armor Module 2,上級装甲モジュール2`, 
+	2064 : `高级抵抗模块03`				+ ` # 高级装甲模块3,高級裝甲模組3,Advanced Armor Module 3,上級装甲モジュール3`, 
+	2065 : `高级抵抗模块04`				+ ` # 高级装甲模块4,高級裝甲模組4,Advanced Armor Module 4,上級装甲モジュール4`, 
+	
+	2110 : `无人机 -<br />强化模块01`	+ ` # 无人机强化模块1,無人機強化模組1,Drone Enhancement Module 1,ドローン強化モジュール1`,
+	2111 : `无人机 -<br />强化模块02`	+ ` # 无人机强化模块2,無人機強化模組2,Drone Enhancement Module 2,ドローン強化モジュール2`,
+	2112 : `无人机 -<br />强化模块03`	+ ` # 无人机强化模块3,無人機強化模組3,Drone Enhancement Module 3,ドローン強化モジュール3`,
+	2113 : `无人机 -<br />强化模块04`	+ ` # 无人机强化模块4,無人機強化模組4,Drone Enhancement Module 4,ドローン強化モジュール4`,
+	2114 : `无人机 -<br />强化模块05`	+ ` # 无人机强化模块5,無人機強化模組5,Drone Enhancement Module 5,ドローン強化モジュール5`,
+	2115 : `无人机 -<br />强化模块06`	+ ` # 无人机强化模块6,無人機強化模組6,Drone Enhancement Module 6,ドローン強化モジュール6`,
+	2116 : `无人机 -<br />强化模块07`	+ ` # 无人机强化模块7,無人機強化模組7,Drone Enhancement Module 7,ドローン強化モジュール7`,
+	2117 : `无人机 -<br />强化模块08`	+ ` # 无人机强化模块8,無人機強化模組8,Drone Enhancement Module 8,ドローン強化モジュール8`,
+	
+	2122 : `光学隐身模块01`				+ ` # 光学隐身模块,光學隱身模組,Optical Invisibility Module,光学ステルスモジュール`, 
+	2123 : `光学隐身模块02`				+ ` # 光学隐身模块+,光學隱身模組+,Optical Invisibility Module+,光学ステルスモジュール+`, 
+	2124 : `光学隐身模块03`				+ ` # 高级光学隐身模块,高級光學隱身模組,Advanced Optical Invisibility Module,上級光学ステルスモジュール`, 
+	2125 : `光学隐身模块04`				+ ` # 制式光学隐身模块,制式光學隱身模組,Standard Optical Invisibility Module,制式光学ステルスモジュール`, 
+	
+	2142 : `机体肾上腺素01`				+ ` # 机体肾上腺素,機體腎上腺素,Mecha Adrenaline,機体アドレナリン`, 
+	2143 : `机体肾上腺素02`				+ ` # 机体肾上腺素+,機體腎上腺素+,Mecha Adrenaline+,機体アドレナリン+`, 
+	2144 : `机体肾上腺素03`				+ ` # 高级机体肾上腺素,高級機體腎上腺素,Advanced Mecha Adrenaline,上級機体アドレナリン`, 
+	2145 : `机体肾上腺素04`				+ ` # 制式机体肾上腺素,制式機體腎上腺素,Standard Mecha Adrenaline,制式機体アドレナリン`, 
+	
+	2151 : `防爆模块01`					+ ` # 防爆模块,防爆模組,Explosion Protection Module,防爆モジュール`, 
+	2152 : `防爆模块02`					+ ` # 防爆模块+,防爆模組+,Explosion Protection Module+,防爆モジュール+`, 
+	2153 : `防爆模块03`					+ ` # 高级防爆模块,高級防爆模組,Advanced Explosion Protection Module,上級防爆モジュール`, 
+	2154 : `防爆模块04`					+ ` # 制式防爆模块,制式防爆模組,Standard Explosion Protection Module,制式防爆モジュール`, 
+	
+	2311 : `防爆涂层01`					+ ` # 防爆涂层,防爆塗層,Explosion Protection Coating,防爆コーティング`, 
+	2312 : `防爆涂层02`					+ ` # 防爆涂层+,防爆塗層+,Explosion Protection Coating+,防爆コーティング+`, 
+	2313 : `防爆涂层03`					+ ` # 高级防爆涂层,高級防爆塗層,Advanced Explosion Protection Coating,上級防爆コーティング`, 
+	2314 : `防爆涂层04`					+ ` # 制式防爆涂层,制式防爆塗層,Standard Explosion Protection Coating,制式防爆コーティング`, 
+	
+	2318 : `瓷金装甲01`					+ ` # 瓷金装甲,瓷金裝甲,Cermet Armor,磁器合金装甲`, 
+	2319 : `瓷金装甲02`					+ ` # 瓷金装甲2,瓷金裝甲2,Cermet Armor 2,磁器合金装甲2`, 
+	2320 : `瓷金装甲03`					+ ` # 瓷金装甲3,瓷金裝甲3,Cermet Armor 3,磁器合金装甲3`, 
+	
+	2315 : `斜面装甲01`					+ ` # 斜面装甲,斜面裝甲,Sloped Armor,傾斜装甲`, 
+	2316 : `斜面装甲02`					+ ` # 斜面装甲2,斜面裝甲2,Sloped Armor 2,傾斜装甲2`, 
+	2317 : `斜面装甲03`					+ ` # 斜面装甲3,斜面裝甲3,Sloped Armor 3,傾斜装甲3`, 
+	
+	2126 : `护盾模块01`					+ ` # 护盾模块1,護盾模組1,Shield Module 1,シールドモジュール1`, 
+	2127 : `护盾模块02`					+ ` # 护盾模块2,護盾模組2,Shield Module 2,シールドモジュール2`, 
+	2128 : `护盾模块03`					+ ` # 护盾模块3,護盾模組3,Shield Module 3,シールドモジュール3`, 
+	2129 : `护盾模块04`					+ ` # 护盾模块+1,護盾模組+1,Shield Module +1,シールドモジュール+1`, 
+	2130 : `护盾模块05`					+ ` # 护盾模块+2,護盾模組+2,Shield Module +2,シールドモジュール+2`, 
+	2131 : `护盾模块06`					+ ` # 护盾模块+3,護盾模組+3,Shield Module +3,シールドモジュール+3`, 
+	
+	2132 : `回复模块01`					+ ` # 护盾回复模块1,護盾回復模組1,Shield Regeneration Module 1,シールド回復モジュール1`, 
+	2133 : `回复模块02`					+ ` # 护盾回复模块2,護盾回復模組2,Shield Regeneration Module 2,シールド回復モジュール2`, 
+	2134 : `回复模块03`					+ ` # 护盾回复模块3,護盾回復模組3,Shield Regeneration Module 3,シールド回復モジュール3`, 
+	2135 : `回复模块04`					+ ` # 护盾回复模块4,護盾回復模組4,Shield Regeneration Module 4,シールド回復モジュール4`, 
+	2136 : `回复模块05`					+ ` # 护盾回复模块5,護盾回復模組5,Shield Regeneration Module 5,シールド回復モジュール5`, 
+	
+	2137 : `再构模块01`					+ ` # 护盾再构模块1,護盾再構模組1,Shield Reconstruction Module 1,シールド再構築モジュール1`, 
+	2138 : `再构模块02`					+ ` # 护盾再构模块2,護盾再構模組2,Shield Reconstruction Module 2,シールド再構築モジュール2`, 
+	2139 : `再构模块03`					+ ` # 护盾再构模块3,護盾再構模組3,Shield Reconstruction Module 3,シールド再構築モジュール3`, 
+	2140 : `再构模块04`					+ ` # 护盾再构模块+1,護盾再構模組+1,Shield Reconstruction Module +1,シールド再構築モジュール+1`, 
+	2141 : `再构模块05`					+ ` # 护盾再构模块+2,護盾再構模組+2,Shield Reconstruction Module +2,シールド再構築モジュール+2`, 
+	
+	2146 : `对冲线圈01`					+ ` # 对冲线圈1,對沖線圈1,Hedge coils 1,ヘッジコイル1`, 
+	2147 : `对冲线圈02`					+ ` # 对冲线圈2,對沖線圈2,Hedge coils 2,ヘッジコイル2`, 
+	2148 : `对冲线圈03`					+ ` # 对冲线圈3,對沖線圈3,Hedge coils 3,ヘッジコイル3`, 
+	2149 : `对冲线圈04`					+ ` # 对冲线圈4,對沖線圈4,Hedge coils 4,ヘッジコイル4`, 
+	2150 : `对冲线圈05`					+ ` # 对冲线圈5,對沖線圈5,Hedge coils 5,ヘッジコイル5`, 
+	
+	2332 : `弹射模块01`					+ ` # 动力弹射模块,動力彈射模組,Power Ejection Module,ダイナミックエジェクションモジュール`,
+	2333 : `弹射模块02`					+ ` # 动力弹射模块2,動力彈射模組2,Power Ejection Module 2,ダイナミックエジェクションモジュール2`,
+	2334 : `弹射模块03`					+ ` # 动力弹射模块3,動力彈射模組3,Power Ejection Module 3,ダイナミックエジェクションモジュール3`,
+	
+	2321 : `反应装甲01`					+ ` # 反应装甲,反應裝甲,Reactive Armor,反応装甲`, 
+	2322 : `反应装甲02`					+ ` # 反应装甲+,反應裝甲+,Reactive Armor+,反応装甲+`, 
+	
+	// 投掷物品
+	
+	1101 : `手榴弹`				+ ` # 手榴弹,手榴彈,Grenade,グレネード`,
+	1102 : `集束炸弹`			+ ` # 集束炸弹,集束炸彈,Cluster Bomb,集束爆弾`,
+	1103 : `大集束炸弹`			+ ` # 高级集束炸弹,高級集束炸彈,Advanced Cluster Bomb,上級集束爆弾`,
+	
+	1105 : `寒冰炸弹`			+ ` # 寒冰炸弹,寒冰炸彈,Ice Bomb,氷爆弾`,
+	1106 : `集束寒冰炸弹`		+ ` # 集束寒冰炸弹,集束寒冰炸彈,Cluster Ice Bomb,集束氷爆弾`,
+	
+	1107 : `燃烧炸弹`			+ ` # 燃烧炸弹,燃燒炸彈,Flaming Bomb,焼夷弾`,
+	1108 : `集束燃烧炸弹`		+ ` # 集束燃烧炸弹,集束燃燒炸彈,Cluster Flaming Bomb,集束焼夷弾`,
+	
+	1109 : `电磁炸弹`			+ ` # 电磁炸弹,電磁炸彈,Electromagnetic Bomb,電磁爆弾`,
+	1110 : `集束电磁炸弹`		+ ` # 集束电磁炸弹,集束電磁炸彈,Cluster Electromagnetic Bomb,集束電磁爆弾`,
+	
+	1122 : `震撼炸弹`			+ ` # 震撼弹,震撼彈,Shock Bomb,衝撃爆弾`,
+	1123 : `集束震撼炸弹`		+ ` # 集束震撼弹,集束震撼彈,Cluster Shock Bomb,集束衝撃爆弾`,
+	
+	1111 : `破片手雷`			+ ` # 破片手雷,破片手雷,Frag Grenade,フラググレネード`,
+	1112 : `穿甲破片手雷`		+ ` # 穿甲破片手雷,穿甲破片手雷,Armor Penetration Frag Grenade,徹甲フラググレネード`,
+	
+	1113 : `烟雾弹`				+ ` # 烟雾弹,煙霧彈,Smoke Bomb,煙幕弾`,
+	1114 : `长效烟雾弹`			+ ` # 长效烟雾弹,長效煙霧彈,Long-Lasting Smoke Bomb,長持ち煙幕弾`,
+	
+	1115 : `照明弹`				+ ` # 照明弹,照明彈,Flare,フレア`,
+	1116 : `长效照明弹`			+ ` # 长效照明弹,長效照明彈,Long-Lasting Flare,長持ちフレア`,
+	
+	1120 : `干扰弹`				+ ` # 干扰弹,干擾彈,Interference bomb,ぼうがい弾`,
+	1104 : `杀伤手雷`			+ ` # 杀伤手雷,殺傷手雷,Fatality Grenade,殺傷グレネード`,
+	1121 : `投掷式地雷`			+ ` # 投掷式地雷,投擲式地雷,Throwing landmines,投擲地雷`,
+	
+	1126 : `重力炸弹`			+ ` # 重力炸弹,重力炸彈,Gravity Bomb,重力爆弾`,
+	1125 : `反隐形装置`			+ ` # 反隐形装置,反隱形裝置,Anti stealth device,アンチステルス装置`,
+	1124 : `盾雷破坏装置`		+ ` # 护盾/地雷破坏装置,護盾/地雷破壞裝置,Shield/Mine destruction device,シールド/地雷破壊装置`,
+	
+	1117 : `水炸弹`				+ ` # 水炸弹,水炸彈,Water Bomb,水爆弾`,
+	1119 : `油炸弹`				+ ` # 油炸弹,油炸彈,Oil Bomb,オイル爆弾`,
+	
+	// 合成材料
+	
+	40001 : `废铁`		+ ` # 废铁,廢鐵,Scrap Iron,くず鉄`,
+	40002 : `废料`		+ ` # 废料,廢料,Waste Material,スクラップ`,
+	40005 : `接合物件`	+ ` # 接合物件,接合物件,Joining Component,接続オブジェクト`,
+	40006 : `齿轮`		+ ` # 齿轮,齒輪,Gear,ギア`,
+	40007 : `框架`		+ ` # 框架,框架,Frame,フレーム`,
+	
+	40003 : `弹壳`		+ ` # 弹壳,彈殼,Bullet Shell,薬莢`,
+	40008 : `铁管`		+ ` # 铁管,鐵管,Iron Pipe,鉄パイプ`,
+	40009 : `扳机`		+ ` # 扳机,扳機,Trigger,トリガー`,
+	
+	40021 : `润滑油`	+ ` # 润滑油,潤滑油,Lubricating Oil,潤滑油`,
+	40022 : `火花塞`	+ ` # 火花塞,火花塞,Spark Plug,スパークプラグ`,
+	40023 : `冷冻剂`	+ ` # 冷冻剂,冷凍劑,Refrigerant,冷媒`,
+	
+	40028 : `共振器`	+ ` # 共振器,共振器,Resonator,共振器`,
+	40029 : `刀片`		+ ` # 刀片,刀片,Blade,ブレード`,
+	40030 : `振荡器`	+ ` # 振荡器,振盪器,Oscillator,発振回路`,
+	
+	40017 : `线圈`		+ ` # 线圈,線圈,Coil,コイル`,
+	40018 : `电容`		+ ` # 电容,電容,Capacitor,コンデンサ`,
+	40019 : `电感`		+ ` # 电感,電感,Inductor,インダクター`,
+	
+	40013 : `棱镜`		+ ` # 棱镜,稜鏡,Prism,プリズム`,
+	40014 : `透镜`		+ ` # 透镜,透鏡,Lens,レンズ`,
+	
+	40024 : `装甲`		+ ` # 装甲,裝甲,Armor,装甲`,
+	40025 : `厚装甲`	+ ` # 厚装甲,厚裝甲,Heavy Armor,厚い装甲`,
+	
+	40026 : `力场管`	+ ` # 力场管,力場管,Force Field Generator,力場パイプ`,
+	40027 : `力场膜`	+ ` # 力场膜,力場膜,Force Field Membrane,力場膜`,
+	
+	40034 : `螺旋桨`	+ ` # 螺旋桨,螺旋槳,Propeller,プロペラ`,
+	40033 : `飞行单元`	+ ` # 飞行单元,飛行單元,Flight unit,飛行ユニット`,
+	
+	40011 : `工业塑料`	+ ` # 工业塑料,工業塑膠,Industrial Plastic,工業用プラスチック`,
+	
+	40015 : `点火器`	+ ` # 点火器,點火器,Igniter,イグナイター`,
+	40016 : `冷凝管`	+ ` # 冷凝管,冷凝管,Condenser,復水管`,
+	40020 : `三极管`	+ ` # 三极管,三極管,Transistor,三極管`,
+	
+	40004 : `弹头`		+ ` # 弹头,彈頭,Warhead,弾頭`,
+	40010 : `雷管`		+ ` # 雷管,雷管,Detonator,起爆装置`,
+	40031 : `涂层`		+ ` # 涂层,塗層,Coating,コーティング`,
+	40012 : `弹链`		+ ` # 弹链,彈鏈,Ammunition Belt,弾帯`,
+	40032 : `核心`		+ ` # 核心,核心,Core,コア`,
+	
+	},
+	
+	文本描述 : {
+	
+	2042 : `生命上限 +10%, 机体速度 - 2%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2043 : `生命上限 +15%, 机体速度 - 3%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2044 : `生命上限 +20%, 机体速度 - 4%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2045 : `生命上限 +25%, 机体速度 - 5%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	
+	2046 : `生命上限 +40%, 机体速度 - 8%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2047 : `生命上限 +50%, 机体速度 -10%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2048 : `生命上限 +60%, 机体速度 -12%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	2049 : `生命上限 +80%, 机体速度 -18%`									+ ` # 生命上限+<Description:0>%，机体速度<Description:1>%,生命上限+<Description:0>%，機體速度<Description:1>%,Increases max HP by <Description:0>% and movement speed by <Description:1>%.,HP上限+<Description:0>%、機体速度<Description:1>%`,
+	
+	2058 : `穿甲抵抗 + 5P, 机体速度 - 2%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2059 : `穿甲抵抗 + 9P, 机体速度 - 4%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2060 : `穿甲抵抗 +15P, 机体速度 - 7%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2061 : `穿甲抵抗 +25P, 机体速度 - 8%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	
+	2062 : `穿甲抵抗 +30P, 机体速度 -10%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2063 : `穿甲抵抗 +50P, 机体速度 -10%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2064 : `穿甲抵抗 +75P, 机体速度 -12%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	2065 : `穿甲抵抗+100P, 机体速度 -12%`									+ ` # 抵抗+<Description:0>，机体速度<Description:1>%,抵抗+<Description:0>，機體速度<Description:1>%,Increases resistance by <Description:0> and movement speed by <Description:1>%.,抵抗+<Description:0>、機体速度<Description:1>%`,
+	
+	2110 : `主机体 - 6% 生命上限, 无人机: 最大散射 - 5%, 偏移角度 - 5%<br />换弹老化 -10%, 常规射程 + 5%, 喷射射程 + 5%, 射线射程 + 5%`		+ ` # 无人机小幅强化（1级），主机体生命上限<Description:1>%,無人機小幅強化（1級），主機體生命上限<Description:1>%,Drone Minor Enhancement (Lv.1)， max HP <Description:1>%,ドローン小幅強化（レベル1）、HP上限<Description:1>%`,
+	2111 : `主机体 -12% 生命上限, 无人机: 最大散射 - 8%, 偏移角度 - 8%<br />换弹老化 -20%, 常规射程 + 8%, 喷射射程 + 8%, 射线射程 + 8%`		+ ` # 无人机小幅强化（2级），主机体生命上限<Description:1>%,無人機小幅強化（2級），主機體生命上限<Description:1>%,Drone Minor Enhancement (Lv.2)， max HP <Description:1>%,ドローン小幅強化（レベル2）、HP上限<Description:1>%`,
+	2112 : `主机体 -18% 生命上限, 无人机: 最大散射 -12%, 偏移角度 -10%<br />换弹老化 -30%, 常规射程 +12%, 喷射射程 +10%, 射线射程 +10%`		+ ` # 无人机小幅强化（3级），主机体生命上限<Description:1>%,無人機小幅強化（3級），主機體生命上限<Description:1>%,Drone Minor Enhancement (Lv.3)， max HP <Description:1>%,ドローン小幅強化（レベル3）、HP上限<Description:1>%`,
+	2113 : `主机体 -24% 生命上限, 无人机: 最大散射 -15%, 偏移角度 -12%<br />换弹老化 -40%, 常规射程 +15%, 喷射射程 +12%, 射线射程 +12%`		+ ` # 无人机中幅强化（1级），主机体生命上限<Description:1>%,無人機中幅強化（1級），主機體生命上限<Description:1>%,Drone Medium Enhancement (Lv.1)， max HP <Description:1>%,ドローン中幅強化（レベル1）、HP上限<Description:1>%`,
+	2114 : `主机体 -27% 生命上限, 无人机: 最大散射 -18%, 偏移角度 -15%<br />换弹老化 -45%, 常规射程 +18%, 喷射射程 +15%, 射线射程 +15%`		+ ` # 无人机中幅强化（2级），主机体生命上限<Description:1>%,無人機中幅強化（2級），主機體生命上限<Description:1>%,Drone Medium Enhancement (Lv.2)， max HP <Description:1>%,ドローン中幅強化（レベル2）、HP上限<Description:1>%`,
+	2115 : `主机体 -30% 生命上限, 无人机: 最大散射 -20%, 偏移角度 -16%<br />换弹老化 -50%, 常规射程 +20%, 喷射射程 +16%, 射线射程 +16%`		+ ` # 无人机中幅强化（3级），主机体生命上限<Description:1>%,無人機中幅強化（3級），主機體生命上限<Description:1>%,Drone Medium Enhancement (Lv.3)， max HP <Description:1>%,ドローン中幅強化（レベル3）、HP上限<Description:1>%`,
+	2116 : `主机体 -35% 生命上限, 无人机: 最大散射 -25%, 偏移角度 -18%<br />换弹老化 -55%, 常规射程 +25%, 喷射射程 +18%, 射线射程 +18%`		+ ` # 无人机大幅强化（1级），主机体生命上限<Description:1>%,無人機大幅強化（1級），主機體生命上限<Description:1>%,Drone Significant Enhancement (Lv.1)， max HP <Description:1>%,ドローン大幅強化（レベル1）、HP上限<Description:1>%`,
+	2117 : `主机体 -35% 生命上限, 无人机: 最大散射 -30%, 偏移角度 -20%<br />换弹老化 -60%, 常规射程 +30%, 喷射射程 +20%, 射线射程 +20%`		+ ` # 无人机大幅强化（2级），主机体生命上限<Description:1>%,無人機大幅強化（2級），主機體生命上限<Description:1>%,Drone Significant Enhancement (Lv.2)， max HP <Description:1>%,ドローン大幅強化（レベル2）、HP上限<Description:1>%`,
+	
+	2122 : `机体蹲踞后隐身(耗时 8.0 秒), 开火隐身会失效<br />隐身后换弹时间 -50%, 重复装备时速度可以累加`		+ ` # 蹲踞后使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，隐身速度会少量加快,蹲踞後使機體緩慢隱身，開火會消除隱身效果\n隱身狀態下換彈速度加快\n如果重複裝備這一類型模組，隱身速度會少量加快,Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility.\nFaster reload speed while in invisibility.\nIf multiple modules of this type are equipped， the speed of invisibility will slightly increase.,しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される\nステルス時のリロードが速くなる \nこのタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる`,
+	2123 : `机体蹲踞后隐身(耗时 5.0 秒), 开火隐身会失效<br />隐身后换弹时间 -50%, 重复装备时速度可以累加`		+ ` # 蹲踞后使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，隐身速度会少量加快,蹲踞後使機體緩慢隱身，開火會消除隱身效果\n隱身狀態下換彈速度加快\n如果重複裝備這一類型模組，隱身速度會少量加快,Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility.\nFaster reload speed while in invisibility.\nIf multiple modules of this type are equipped， the speed of invisibility will slightly increase.,しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される\nステルス時のリロードが速くなる \nこのタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる`,
+	2124 : `机体蹲踞后隐身(耗时 3.0 秒), 开火隐身会失效<br />隐身后换弹时间 -50%, 重复装备时速度可以累加`		+ ` # 蹲踞后使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，隐身速度会少量加快,蹲踞後使機體緩慢隱身，開火會消除隱身效果\n隱身狀態下換彈速度加快\n如果重複裝備這一類型模組，隱身速度會少量加快,Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility.\nFaster reload speed while in invisibility.\nIf multiple modules of this type are equipped， the speed of invisibility will slightly increase.,しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される\nステルス時のリロードが速くなる \nこのタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる`,
+	2125 : `机体蹲踞后隐身(耗时 0.2 秒), 开火隐身会失效<br />隐身后换弹时间 -50%, 重复装备时速度可以累加`		+ ` # 蹲踞后使机体缓慢隐身，开火会消除隐身效果\n隐身状态下换弹速度加快\n如果重复装备这一类型模块，隐身速度会少量加快,蹲踞後使機體緩慢隱身，開火會消除隱身效果\n隱身狀態下換彈速度加快\n如果重複裝備這一類型模組，隱身速度會少量加快,Slowly turns the mecha invisible after Crouching. Opening fire cancels invisibility.\nFaster reload speed while in invisibility.\nIf multiple modules of this type are equipped， the speed of invisibility will slightly increase.,しゃがむ中機体はゆっくりとステルス状態になり、発砲するとステルス効果が解除される\nステルス時のリロードが速くなる \nこのタイプのモジュールを重複装備すると、ステルスに入る速度が少し速くなる`,
+	
+	2142 : `当机体的生命值 <= 50% 的时候<br />射击间隔 -10%, 移动速度 +10%`		+ ` # 当机体生命值低于50%, 射速和移动速度+<Description>%,當機體生命值低於50%，射速和移動速度+<Description>%,Increases firing speed and movement speed by <Description>% when mecha HP is below 50%.,機体のHPが50%以下の時、発射速度と移動速度+<Description>%`,
+	2143 : `当机体的生命值 <= 50% 的时候<br />射击间隔 -25%, 移动速度 +25%`		+ ` # 当机体生命值低于50%, 射速和移动速度+<Description>%,當機體生命值低於50%，射速和移動速度+<Description>%,Increases firing speed and movement speed by <Description>% when mecha HP is below 50%.,機体のHPが50%以下の時、発射速度と移動速度+<Description>%`,
+	2144 : `当机体的生命值 <= 50% 的时候<br />射击间隔 -40%, 移动速度 +40%`		+ ` # 当机体生命值低于50%, 射速和移动速度+<Description>%,當機體生命值低於50%，射速和移動速度+<Description>%,Increases firing speed and movement speed by <Description>% when mecha HP is below 50%.,機体のHPが50%以下の時、発射速度と移動速度+<Description>%`,
+	2145 : `当机体的生命值 <= 50% 的时候<br />射击间隔 -50%, 移动速度 +50%`		+ ` # 当机体生命值低于50%, 射速和移动速度+<Description>%,當機體生命值低於50%，射速和移動速度+<Description>%,Increases firing speed and movement speed by <Description>% when mecha HP is below 50%.,機体のHPが50%以下の時、発射速度と移動速度+<Description>%`,
+	
+	2151 : `爆炸抗性 +10P`													+ ` # 爆炸抗性+<Description>,爆炸抗性+<Description>,Increases Explosive Resistance by <Description>.,爆発耐性+<Description>`,
+	2152 : `爆炸抗性 +15P`													+ ` # 爆炸抗性+<Description>,爆炸抗性+<Description>,Increases Explosive Resistance by <Description>.,爆発耐性+<Description>`,
+	2153 : `爆炸抗性 +20P`													+ ` # 爆炸抗性+<Description>,爆炸抗性+<Description>,Increases Explosive Resistance by <Description>.,爆発耐性+<Description>`,
+	2154 : `爆炸抗性 +30P`													+ ` # 爆炸抗性+<Description>,爆炸抗性+<Description>,Increases Explosive Resistance by <Description>.,爆発耐性+<Description>`,
+	
+	2311 : `爆炸抗性 + 6P, 穿甲抵抗 - 6P`									+ ` # 爆炸抗性+<Description:0>，抵抗<Description:1>,爆炸抗性+<Description:0>，抵抗<Description:1>,Increases Explosive Resistance by <Description:0> and resistance by <Description:1>.,爆発耐性+<Description:0>、抵抗<Description:1>`,
+	2312 : `爆炸抗性 +12P, 穿甲抵抗 -12P`									+ ` # 爆炸抗性+<Description:0>，抵抗<Description:1>,爆炸抗性+<Description:0>，抵抗<Description:1>,Increases Explosive Resistance by <Description:0> and resistance by <Description:1>.,爆発耐性+<Description:0>、抵抗<Description:1>`,
+	2313 : `爆炸抗性 +24P, 穿甲抵抗 -24P`									+ ` # 爆炸抗性+<Description:0>，抵抗<Description:1>,爆炸抗性+<Description:0>，抵抗<Description:1>,Increases Explosive Resistance by <Description:0> and resistance by <Description:1>.,爆発耐性+<Description:0>、抵抗<Description:1>`,
+	2314 : `爆炸抗性 +40P, 穿甲抵抗 -40P`									+ ` # 爆炸抗性+<Description:0>，抵抗<Description:1>,爆炸抗性+<Description:0>，抵抗<Description:1>,Increases Explosive Resistance by <Description:0> and resistance by <Description:1>.,爆発耐性+<Description:0>、抵抗<Description:1>`,
+	
+	2318 : `爆炸减伤 +10%`													+ ` # 爆炸减伤+<Description>%,爆炸減傷+<Description>%,Explosion damage reduction +<Description>%,爆発ダメージ軽減+<Description>%`,
+	2319 : `爆炸减伤 +20%`													+ ` # 爆炸减伤+<Description>%,爆炸減傷+<Description>%,Explosion damage reduction +<Description>%,爆発ダメージ軽減+<Description>%`,
+	2320 : `爆炸减伤 +35%`													+ ` # 爆炸减伤+<Description>%,爆炸減傷+<Description>%,Explosion damage reduction +<Description>%,爆発ダメージ軽減+<Description>%`,
+	
+	2315 : `机体蹲踞时 + 8% 子弹跳弹概率`									+ ` # 蹲踞时子弹跳弹概率+<Description>%,蹲踞時子彈跳彈概率+<Description>%,Increases Ricochet rate when crouched by <Description>%.,しゃがむ中跳弾確率+<Description>%`,
+	2316 : `机体蹲踞时 +16% 子弹跳弹概率`									+ ` # 蹲踞时子弹跳弹概率+<Description>%,蹲踞時子彈跳彈概率+<Description>%,Increases Ricochet rate when crouched by <Description>%.,しゃがむ中跳弾確率+<Description>%`,
+	2317 : `机体蹲踞时 +24% 子弹跳弹概率`									+ ` # 蹲踞时子弹跳弹概率+<Description>%,蹲踞時子彈跳彈概率+<Description>%,Increases Ricochet rate when crouched by <Description>%.,しゃがむ中跳弾確率+<Description>%`,
+	
+	2126 : `生成一个护盾(HP:2500), 护盾的生命值 +10%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	2127 : `生成一个护盾(HP:2500), 护盾的生命值 +25%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	2128 : `生成一个护盾(HP:2500), 护盾的生命值 +45%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	2129 : `生成一个护盾(HP:2500), 护盾的生命值 +60%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	2130 : `生成一个护盾(HP:2500), 护盾的生命值 +80%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	2131 : `生成一个护盾(HP:2500), 护盾的生命值+100%(该效果可以被叠加)`		+ ` # 使机体生成一个生命值2500的护盾（效果不叠加）\n护盾生命值+<Description>%（效果可叠加）,使機體生成一個生命值2500的護盾（效果不疊加）\n護盾生命值增加<Description>%（效果可疊加）,Generates a 2，000 HP shield on the mecha (effect does not stack).\nShield HP +<Description>% (effect can stack).,機体にHP2500のシールドを生成する（効果は重ねることができない）\nシールドHP+<Description>%（効果は重ねることができる）`,
+	
+	2132 : `若装备了护盾模块, 可使护盾每秒 HP +100, 重复装备效果可累加`		+ ` # 如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,如果機體裝備了護盾模組，使護盾持續回復\n如果重複裝備這一類型模組，護盾回復少量增加,Restores shields continuously if the mecha has equipped a shield module.\nEquipping the same type of modules increases shield regeneration.,機体にシールドモジュールが装備されている場合、シールドを回復し続ける\nこのタイプのモジュールを複数装備すると、シールド回復がわずかに増加する`,
+	2133 : `若装备了护盾模块, 可使护盾每秒 HP +200, 重复装备效果可累加`		+ ` # 如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,如果機體裝備了護盾模組，使護盾持續回復\n如果重複裝備這一類型模組，護盾回復少量增加,Restores shields continuously if the mecha has equipped a shield module.\nEquipping the same type of modules increases shield regeneration.,機体にシールドモジュールが装備されている場合、シールドを回復し続ける\nこのタイプのモジュールを複数装備すると、シールド回復がわずかに増加する`,
+	2134 : `若装备了护盾模块, 可使护盾每秒 HP +300, 重复装备效果可累加`		+ ` # 如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,如果機體裝備了護盾模組，使護盾持續回復\n如果重複裝備這一類型模組，護盾回復少量增加,Restores shields continuously if the mecha has equipped a shield module.\nEquipping the same type of modules increases shield regeneration.,機体にシールドモジュールが装備されている場合、シールドを回復し続ける\nこのタイプのモジュールを複数装備すると、シールド回復がわずかに増加する`,
+	2135 : `若装备了护盾模块, 可使护盾每秒 HP +450, 重复装备效果可累加`		+ ` # 如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,如果機體裝備了護盾模組，使護盾持續回復\n如果重複裝備這一類型模組，護盾回復少量增加,Restores shields continuously if the mecha has equipped a shield module.\nEquipping the same type of modules increases shield regeneration.,機体にシールドモジュールが装備されている場合、シールドを回復し続ける\nこのタイプのモジュールを複数装備すると、シールド回復がわずかに増加する`,
+	2136 : `若装备了护盾模块, 可使护盾每秒 HP +600, 重复装备效果可累加`		+ ` # 如果机体装备了护盾模块，使护盾持续回复\n如果重复装备这一类型模块，护盾回复少量增加,如果機體裝備了護盾模組，使護盾持續回復\n如果重複裝備這一類型模組，護盾回復少量增加,Restores shields continuously if the mecha has equipped a shield module.\nEquipping the same type of modules increases shield regeneration.,機体にシールドモジュールが装備されている場合、シールドを回復し続ける\nこのタイプのモジュールを複数装備すると、シールド回復がわずかに増加する`,
+	
+	2137 : `若装备了护盾模块, 护盾被毁后 45S 再生成, 时间 - 5%(可叠加)`		+ ` # 如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,如果機體裝備了護盾模組，在護盾被破壞後45秒重新生成一個新的護盾（效果不疊加）\n護盾再生成時間<Description>%（效果可疊加）,Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack).\nShield regeneration time <Description>% (effect can stack).,機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する（効果は重ねることができない）\nシールド再生時間<Description>%（効果は重ねることができる）`,
+	2138 : `若装备了护盾模块, 护盾被毁后 45S 再生成, 时间 -10%(可叠加)`		+ ` # 如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,如果機體裝備了護盾模組，在護盾被破壞後45秒重新生成一個新的護盾（效果不疊加）\n護盾再生成時間<Description>%（效果可疊加）,Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack).\nShield regeneration time <Description>% (effect can stack).,機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する（効果は重ねることができない）\nシールド再生時間<Description>%（効果は重ねることができる）`,
+	2139 : `若装备了护盾模块, 护盾被毁后 45S 再生成, 时间 -15%(可叠加)`		+ ` # 如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,如果機體裝備了護盾模組，在護盾被破壞後45秒重新生成一個新的護盾（效果不疊加）\n護盾再生成時間<Description>%（效果可疊加）,Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack).\nShield regeneration time <Description>% (effect can stack).,機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する（効果は重ねることができない）\nシールド再生時間<Description>%（効果は重ねることができる）`,
+	2140 : `若装备了护盾模块, 护盾被毁后 45S 再生成, 时间 -20%(可叠加)`		+ ` # 如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,如果機體裝備了護盾模組，在護盾被破壞後45秒重新生成一個新的護盾（效果不疊加）\n護盾再生成時間<Description>%（效果可疊加）,Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack).\nShield regeneration time <Description>% (effect can stack).,機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する（効果は重ねることができない）\nシールド再生時間<Description>%（効果は重ねることができる）`,
+	2141 : `若装备了护盾模块, 护盾被毁后 45S 再生成, 时间 -25%(可叠加)`		+ ` # 如果机体装备了护盾模块，在护盾被破坏后45s重新生成一个新的护盾（效果不叠加）\n护盾再生成时间<Description>%（效果可叠加）,如果機體裝備了護盾模組，在護盾被破壞後45秒重新生成一個新的護盾（效果不疊加）\n護盾再生成時間<Description>%（效果可疊加）,Regenerates a new shield 45s after the current one is destroyed if the mecha has equipped a shield module. (effect does not stack).\nShield regeneration time <Description>% (effect can stack).,機体にシールドモジュールが装備されている場合、シールドが破壊された45秒後に新しいシールドを生成する（効果は重ねることができない）\nシールド再生時間<Description>%（効果は重ねることができる）`,
+	
+	2146 : `机体遭遇异常效果时, 免疫概率 + 5%, 异常状态持续的时间 -10%`		+ ` # 异常状态持续时间-<Description:0>%，异常效果免疫概率+<Description:1>%,異常狀態持續時間-<Description:0>%，異常效果免疫概率+<Description:1>%,Abnormal state duration -<Description:0>%， abnormal effect immunity rate +<Description:1>%,異常状態持続時間-<Description:0>%、異常効果免疫確率+<Description:1>%`,
+	2147 : `机体遭遇异常效果时, 免疫概率 +10%, 异常状态持续的时间 -20%`		+ ` # 异常状态持续时间-<Description:0>%，异常效果免疫概率+<Description:1>%,異常狀態持續時間-<Description:0>%，異常效果免疫概率+<Description:1>%,Abnormal state duration -<Description:0>%， abnormal effect immunity rate +<Description:1>%,異常状態持続時間-<Description:0>%、異常効果免疫確率+<Description:1>%`,
+	2148 : `机体遭遇异常效果时, 免疫概率 +15%, 异常状态持续的时间 -30%`		+ ` # 异常状态持续时间-<Description:0>%，异常效果免疫概率+<Description:1>%,異常狀態持續時間-<Description:0>%，異常效果免疫概率+<Description:1>%,Abnormal state duration -<Description:0>%， abnormal effect immunity rate +<Description:1>%,異常状態持続時間-<Description:0>%、異常効果免疫確率+<Description:1>%`,
+	2149 : `机体遭遇异常效果时, 免疫概率 +20%, 异常状态持续的时间 -40%`		+ ` # 异常状态持续时间-<Description:0>%，异常效果免疫概率+<Description:1>%,異常狀態持續時間-<Description:0>%，異常效果免疫概率+<Description:1>%,Abnormal state duration -<Description:0>%， abnormal effect immunity rate +<Description:1>%,異常状態持続時間-<Description:0>%、異常効果免疫確率+<Description:1>%`,
+	2150 : `机体遭遇异常效果时, 免疫概率 +25%, 异常状态持续的时间 -50%`		+ ` # 异常状态持续时间-<Description:0>%，异常效果免疫概率+<Description:1>%,異常狀態持續時間-<Description:0>%，異常效果免疫概率+<Description:1>%,Abnormal state duration -<Description:0>%， abnormal effect immunity rate +<Description:1>%,異常状態持続時間-<Description:0>%、異常効果免疫確率+<Description:1>%`,
+	
+	2332 : `机体投掷手雷的最大距离 + 25%`									+ ` # 投掷距离+<Description>%,投擲距離+<Description>%,Increases throwing distance by <Description>%.,投擲距離＋<Description>%`,
+	2333 : `机体投掷手雷的最大距离 + 50%`									+ ` # 投掷距离+<Description>%,投擲距離+<Description>%,Increases throwing distance by <Description>%.,投擲距離＋<Description>%`,
+	2334 : `机体投掷手雷的最大距离 +100%`									+ ` # 投掷距离+<Description>%,投擲距離+<Description>%,Increases throwing distance by <Description>%.,投擲距離＋<Description>%`,
+	
+	2321 : `击中的炮弹不爆炸的概率 + 50%`									+ ` # 直接命中的炮弹有<Description>%概率不爆炸,直接命中的炮彈有<Description>%概率不爆炸,When hit directly by a cannon ball， there is a <Description>% chance that it does not explode.,直撃した砲弾が<Description>%の確率で爆発しない確`,
+	2322 : `击中的炮弹不爆炸的概率 +100%`									+ ` # 直接命中的炮弹有<Description>%概率不爆炸,直接命中的炮彈有<Description>%概率不爆炸,When hit directly by a cannon ball， there is a <Description>% chance that it does not explode.,直撃した砲弾が<Description>%の確率で爆発しない確`,
+	
+	},
+	
+	物品类型 : {
+	
+	BuffModel		: `主体强化`		, // + ` # 主强化模块,主強化模組,Main enhancement module,メイン強化モジュール`,
+	
+	},
+	
+	归属种类 : {
+	
+	BuffModel		: `主体强化`		, // + ` # 主强化模块,主強化模組,Main enhancement module,メイン強化モジュール`,
+	Cannon			: `炮塔强化`		, // + ` # 炮塔强化模块,炮塔強化模組,Turret enhancement module,砲塔強化モジュール`,
+	Door			: `大门强化`		, // + ` # 大门模块,大門模組,Gate module,ゲートモジュール`,
+	
+	},
+	
+	原型研发 : {
+	
+	Main2_1			: `船舶集团有限公司`			, // + ` # 船舶集团有限公司,船舶集團有限公司,Shipbuilding Group Co.， Ltd,船舶重工グループ株式会社`,
+	Main2_2			: `航空集团有限公司`			, // + ` # 航空集团有限公司,航空集團有限公司,Aviation Group Co.， Ltd,航空グループ株式会社`,
+	Main2_3			: `总装备制造局`				, // + ` # 总装备制造局,總裝備製造局,General Equipment Manufacturing Bureau,汎用設備製造局`,
+	Main2_4			: `苏尔发动机制造局`			, // + ` # 苏尔发动机制造局,蘇爾發動機製造局,Sul Engine Manufacturing Bureau,スールエンジン製造局`,
+	Main2_5			: `风神公司`					, // + ` # 风神公司,風神公司,Hermes Company,風神公司`,
+	Main2_6			: `布尔发动机公司`				, // + ` # 布尔发动机公司,布爾發動機公司,Boolean Engine Company,ブールエンジン株式会社`,
+	Main2_7			: `蓝天电子公司`				, // + ` # 蓝天电子公司,藍天電子公司,Blue Sky Electronics Company,青空電子株式会社`,
+	Main2_8			: `首都兵工厂`					, // + ` # 首都兵工厂,首都兵工廠,Capital Arsenal,首都兵器工場`,
+	Main2_9			: `帝国火炮集团`				, // + ` # 帝国火炮集团,帝國火炮集團,Imperial Artillery Group,帝国火砲集団`,
+	Main2_10		: `格罗姆钢管厂`				, // + ` # 格罗姆钢管厂,格羅姆鋼管廠,Grom Steel Pipe Factory,グロム鋼管工場`,
+	Main2_11		: `弹头总装部`					, // + ` # 弹头总装部,彈頭總裝部,Bullet Assembly Department,弾頭総装填部`,
+	Main2_12		: `帝国仪器厂`					, // + ` # 帝国仪器厂,帝國儀器廠,Imperial Instrument Factory,帝国計器工場`,
+	
+	Company_2017	: `黎明工业`					, // + ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
+	Company_2042	: `Valesworn. Inc`				, // + ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
+	Company_2049	: `堡垒防务集团`				, // + ` # 堡垒防务集团,堡壘防務集團,Bastion Defence Group,砦防衛グループ`,
+	Company_2053	: `滞后产品制造`				, // + ` # 滞后产品制造,滯後產品製造,Lagging Products,ラッギング製品`,
+	Company_2077	: `西金川工业公司`				, // + ` # 西金川工业公司,西金川工業公司,West Jinchuan Industrial Company,西金川工業公司`,
+	Company_2100	: `触手研究所`					, // + ` # 触手研究所,觸手研究所,Tentacle research institute,触手研究所`,
+	Company_2117	: `中微子科技`					, // + ` # 中微子科技,中微子科技,Neutrino technology,ニュートリノテクノロジー`,
+	Company_2124	: `提西亚电子公司`				, // + ` # 提西亚电子公司,提西亞電子公司,Tecia Electronics Company,ティシア電子`,
+	Company_2126	: `CMF护盾技术`					, // + ` # CMF护盾技术,CMF護盾技術,CMF's Shield TECH,CMFシールド技術`,
+	Company_2158	: `水雷部纯氧鱼类研发中心`		, // + ` # 水雷部纯氧鱼类研发中心,水雷部純氧魚類研發中心,Pure Oxygen Fish Research and Development Center of the Mine Department,機雷部純酸素魚類研究開発センター`,
+	Company_2398	: `箱崎重工`					, // + ` # 箱崎重工,箱崎重工,Hakozaki heavy industry,箱崎重工`,
+	Company_2399	: `施罗斯防务兵工厂`			, // + ` # 施罗斯防务兵工厂,施羅斯防務兵工廠,Defense weapons arsenal,シュロース防衛兵器工廠`,
+	
+	TankType_PlayerName_0 : `玛　丽`				, // + ` # 玛丽,瑪麗,Mary,メアリー`,
+	TankType_PlayerName_1 : `库罗库`				, // + ` # 库罗库,庫羅庫,Kuroku,クロック`,
+	TankType_PlayerName_2 : `桑/San`				, // + ` # 桑,桑,San,サン`,
+	TankType_PlayerName_3 : `赭石色`				, // + ` # 赭石色,赭石色,Ocher,オーカー`,
+	TankType_PlayerName_4 : `克莱尔`				, // + ` # 克莱尔,克萊爾,Claire,クレア`,
+	
+	},
+	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
-
-// 生成表格
-tbodyArray01.forEach(function(item){
-	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
-	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 武器图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/05_mecha_main/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
-		
-		// 武器名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
-		
-		// 物品类型
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][0]) +'</td>' }else 
-		
-		// 归属种类
-		if(index === 10){
-			let result = data.split('|').map(
-			function(e){ return TagList[e][0] }).join(' | ');
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 原型研发
-		if(index === 11){
-			let result = CompanyList[data][0];
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 合成材料
-		if(index === 12){
-			let result = data;
-			if(result != '-'){
-				result=data.split('|').map(function(string){
-					let [name, count, ] = string.split('_');
-					if(name.charAt(0) === '4'){ return count + ScrapList[name][0] }
-					else if(name.charAt(0) === '1'){ return count + ItemsNameList[name][0] }
-				}).join(' + ');
-			};
-			powerTable_tbody_node01 += 
-			'<td>'+ (result === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>'
-		}else 
-		
-		// 出现条件
-		if(index === 13){
-			let result = '';
-			let dataList = [];
-			data.split('|').forEach(function(code){
-				if(code.indexOf('_') === -1){ dataList.push(code) }else{
-					let [start, end, ] = code.split('_');
-					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
-				};
-			});
-			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
-		
-		// 常规数据
-		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
-	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
-	
-});
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
-xj2._buildPowerTable('powerTable01');
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
 
 // ---------------------------------------------
 
-// 配件等级
-let attrSelect01Option = [
-	{value: '1',	text: ['Level +1',						'Level +1',						'Level +1',						][0],		},
-	{value: '2',	text: ['Level +2',						'Level +2',						'Level +2',						][0],		},
-	{value: '3',	text: ['Level +3',						'Level +3',						'Level +3',						][0],		},
-	{value: '4',	text: ['Level +4',						'Level +4',						'Level +4',						][0],		},
-	{value: '5',	text: ['Level +5',						'Level +5',						'Level +5',						][0],		},
-	{value: '6',	text: ['Level +6',						'Level +6',						'Level +6',						][0],		},
-	{value: '7',	text: ['Level +7',						'Level +7',						'Level +7',						][0],		},
-	{value: '-1',	text: ['Level -1(满级)',				'Level -1(最高)',				'Level -1(Full)',				][0],		},
-	{value: '-2',	text: ['Level -2(不可升级)',			'Level -2(進階不可)',			'Level -2(AntiGoUp)',			][0],		},
-	{value: '-3',	text: ['Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		][0],		},
+// 生成表格
+csv0.forEach(function(item, index){
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	
+	// -----------------------------------------
+	
+	// 空行处理
+	if(item === 'blankRow'){
+		if(csv0[index+1] !== 'blankRow'){
+		powerTable01_group+=1};
+		return;
+	}else{
+		powerTable01_index +=1;
+	};
+	
+	// -----------------------------------------
+	
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.物品类型.text = textList.物品类型[item[3]];
+	item.原型研发.text = textList.原型研发[item[8]];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){	// 直接合并
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){	// 替换变量
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.解锁天数.text = (function(){	// 转换变量
+		
+		if(item.解锁天数.code === '$StrategyOpenDay'){ 
+		return (item.解锁天数.code = '22') }; 
+		
+		if(item.解锁天数.code === '$NightOpenDay'){ 
+		return (item.解锁天数.code = '65') };
+		
+		if(item.解锁天数.code === '$AirOpenDay'){ 
+		return (item.解锁天数.code = '47') };
+		
+		return (item.解锁天数.code);
+		
+	})();
+	
+	item.归属种类.text = (function(){	// 处理空值
+		
+		let result = item.归属种类.code.split('|');
+		
+		result = result.filter(function(value){ 
+			return (value === 'CantGen') ? false : true });
+		if(result.length === 1 && result[0] === ''){ result = [ ] };
+		
+		if(result.length === 0){
+			if(item.物品类型.code === 'WeaponModel'){ result.push('RangedWeapon') }else
+			if(item.物品类型.code === 'CloseWeaponModel'){ result.push('MeeleeWeapon') }else
+			if(item.物品类型.code === 'HangShoulderModel'){ result.push('ShoulderWeapon') };
+		};
+		
+		item.归属种类.code = result;
+		return result.map(function(value){ return textList.归属种类[value] }).join('<br />');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	let 合成材料_text = '';
+	let 合成材料_html = '';
+	item.合成材料.code.split('|').forEach(function(value,index,array){
+		
+		let id = '', length = '0';
+		let itemName = '无法合成';
+		let imageName = 'x', folderName = '.';
+		if(value === ''){ 合成材料_text = 'Unmake' }else{
+			
+			[id, length, ] = value.split('_');
+			
+			imageName = id;
+			itemName = textList.项目名称[id].replace(/(\s)#(.+)/,'');
+			合成材料_text = (合成材料_text + itemName +'×'+ length + (index + 1 < array.length ? ' + ' : ''));
+			
+			if(id.startsWith('4')){ folderName = 'material' }else 
+			if(id === '1101'){ folderName = '09_mecha_frag' }; // 仅有一个特殊材料
+			
+		};
+		
+		合成材料_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>×${(length.length>=2?'':' ')+length}</span>
+				<span>${itemName}</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	合成材料_html = `<div class='itemFlex'>`+ 合成材料_html +`</div>`;
+	
+	let 出现条件_text = '';
+	let 出现条件_html = '';
+	item.出现条件.code.split('|').map(function(number){
+		
+		// 将范围值展开成具体的 id 列表
+		
+		if(number.includes('_') !== true){ return number };
+		let [start,end,] = number.split('_'), result = [ ];
+		
+		start = Number(start), end = Number(end);
+		while(start <= end){ 
+			result.push(String(start));
+			start = start+1;
+		};
+		
+		return result;
+		
+	}).flat()
+	.map(function(value){
+		
+		// 对武器用 id 最后两位进行排序
+		if(value === ''){ return '' }else 
+		if(value.length <= 4){ return '00#'+value }else 
+		if(value.length >= 5){ return value.slice(-2) + '#' + value };
+		
+	}).sort()
+	.map(function(value){
+		
+		// 排序后去掉上步为了排序的前缀
+		return value.replace(/..#/,'');
+		
+	})
+	.filter(function(value, index, array){
+		
+		// 同类的也显示, 但重复的不显示
+		let flag = true;
+		if(index >= 1 && value === array[index-1]){ flag = false }
+		return flag; //
+		
+	})
+	.forEach(function(value, index, array){
+		
+		let folderName = '.';
+		let imageName = 'x';
+		let itemName = '自动解锁'
+		if(value === ''){ 出现条件_text = 'Unlock' }else{
+			
+			if((Number(value) >= 10000 && Number(value) <= 19999) || (Number(value) >= 1250 && Number(value) <= 1262)){ folderName = '01_weapon_list' }else 
+			if(Number(value) >= 1101 && Number(value) <= 1126){ folderName = '09_mecha_frag' }
+			else{ folderName = '05_mecha_main' };
+			imageName = value;
+			
+			itemName =  textList.项目名称[value].replace(/(\s)#(.+)/,'');
+			出现条件_text += itemName + (index+1< array.length? ',': '');
+			
+		};
+		
+		出现条件_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>→</span><span>${ itemName }</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	出现条件_html = `<div class='itemFlex'>`+ 出现条件_html +`</div>`;
+	
+	// -----------------------------------------
+	
+	item.物品类型.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.物品类型.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.物品类型.text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.归属种类.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.归属种类.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.归属种类.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.原型研发.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.原型研发.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.原型研发.text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.合成材料.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${合成材料_html}">
+		<div class="ellipsis-1" style="width:30px;">${合成材料_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.出现条件.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${出现条件_html}">
+		<div class="ellipsis-1" style="width:30px;">${出现条件_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/05_mecha_main/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/05_mecha_main/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable01_tbody_html += item.物品类型.text;
+	powerTable01_tbody_html += item.归属种类.text;
+	powerTable01_tbody_html += item.原型研发.text;
+	powerTable01_tbody_html += item.合成材料.text;
+	powerTable01_tbody_html += item.出现条件.text;
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
+xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+
+// ---------------------------------------------
+
+// 装备等级
+let attrSelect01_Option = [
+	['1',				'Level +1',					],
+	['2',				'Level +2',					],
+	['3',				'Level +3',					],
+	['4',				'Level +4',					],
+	['5',				'Level +5',					],
+	['6',				'Level +6',					],
+	['7',				'Level +7',					],
+	['-1',				'Level -1(满级)',			],
+	['-2',				'Level -2(不可升级)',		],
+	['-3',				'Level -3(-1 + -2 = -3)',	],
 ];
 
 // 物品类型
-let attrSelect02Option = [
-	{value: 'BuffModel',	text: ['主体强化',		'メイン強化モジュール',			'Main enhancement module',				][0],		},
+let attrSelect02_Option = [
+	['BuffModel',		'主体强化',					],
 ];
 
 // 归属种类
-let attrSelect03Option = [
-	{value: 'BuffModel',	text: ['主体',			'メイン強化モジュール',			'Main enhancement module',				][0],		},
-	{value: 'Cannon',		text: ['炮塔',			'砲塔強化モジュール',			'Turret enhancement module',			][0],		},
-	{value: 'Door',			text: ['大门',			'ゲートモジュール',				'Gate module',							][0],		},
+let attrSelect03_Option = [
+	['BuffModel',		'主体强化',					],
+	['Cannon',			'炮塔强化',					],
+	['Door',			'大门强化',					],
 ];
 
 // 原型研发
-let attrSelect04Option = [
-	{value:'TankType_PlayerName_3',		text: ['赭石色',				'オーカー',						'Ocher',										][0],		},
-	{value:'Main2_5',					text: ['风神公司',				'風神公司',						'Hermes Company',								][0],		},
-	{value:'Main2_7',					text: ['蓝天电子公司',			'青空電子株式会社',				'Blue Sky Electronics Company',					][0],		},
-	{value:'Main2_1',					text: ['船舶集团有限公司',		'船舶重工グループ株式会社',		'Shipbuilding Group Co., Ltd',					][0],		},
-	{value:'Main2_6',					text: ['布尔发动机公司',		'ブールエンジン株式会社',		'Boolean Engine Company',						][0],		},
-	{value:'Main2_3',					text: ['总装备制造局',			'汎用設備製造局',				'General Equipment Manufacturing Bureau',		][0],		},
+let attrSelect04_Option = [
+	['Main2_1',			`船舶集团有限公司`,			],
+	['Main2_2',			`航空集团有限公司`,			],
+	['Main2_3',			`总装备制造局`,				],
+	['Main2_4',			`苏尔发动机制造局`,			],
+	['Main2_5',			`风神公司`,					],
+	['Main2_6',			`布尔发动机公司`,			],
+	['Main2_7',			`蓝天电子公司`,				],
+	['Main2_8',			`首都兵工厂`,				],
+	['Main2_9',			`帝国火炮集团`,				],
+	['Main2_10',		`格罗姆钢管厂`,				],
+	['Main2_11',		`弹头总装部`,				],
+	['Main2_12',		`帝国仪器厂`,				],
+	['Company_2017',	`黎明工业`,					],
+	['Company_2042',	`Valesworn. Inc`,			],
+	['Company_2049',	`堡垒防务集团`,				],
+	['Company_2053',	`滞后产品制造`,				],
+	['Company_2077',	`西金川工业公司`,			],
+	['Company_2100',	`触手研究所`,				],
+	['Company_2117',	`中微子科技`,				],
+	['Company_2124',	`提西亚电子公司`,			],
+	['Company_2126',	`CMF护盾技术`,				],
+	['Company_2158',	`水雷部纯氧鱼类研发中心`,	],
+	['Company_2398',	`箱崎重工`,					],
+	['Company_2399',	`施罗斯防务兵工厂`,			],
+	['TankType_PlayerName_0', `玛　丽`,				],
+	['TankType_PlayerName_1', `库罗库`,				],
+	['TankType_PlayerName_2', `桑/San`,				],
+	['TankType_PlayerName_3', `赭石色`,				],
+	['TankType_PlayerName_4', `克莱尔`,				],
 ];
 
-// 创建空值
-let attrSelect01Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect02Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect03Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-
-// 生成结构
-attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+// 获取对象
+let jqi_nameInput01 = $('#nameInput01'), jqi_nameCheck01 = $('#nameCheck01'), jqi_resetButton = $('#resetButton');
+let str_emptyOption = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
 
 // 创建元素
-let jqi_attrSelect01 = $('#attrSelect01').html(attrSelect01Html);
-let jqi_attrSelect02 = $('#attrSelect02').html(attrSelect02Html);
-let jqi_attrSelect03 = $('#attrSelect03').html(attrSelect03Html);
-let jqi_attrSelect04 = $('#attrSelect04').html(attrSelect04Html);
-
-// 其余元素
-let jqi_nameInput01 = $('#nameInput01');
-let jqi_nameCheck01 = $('#nameCheck01');
-let jqi_resetButton = $('#resetButton');
+let jqi_attrSelect01 = $('#attrSelect01').html(str_emptyOption + attrSelect01_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect02 = $('#attrSelect02').html(str_emptyOption + attrSelect02_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect03 = $('#attrSelect03').html(str_emptyOption + attrSelect03_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect04 = $('#attrSelect04').html(str_emptyOption + attrSelect04_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
 
 // ---------------------------------------------
 
 // 获取 tbody 和 tr
 let jqi_table01_tbody = $('#powerTable01 tbody'), jqi_table01_tbody_tr = jqi_table01_tbody.find('tr');
 
-// 创建无结果 tr 行
-let jqi_empty_result_tr = $(/*html*/`
-<tr class="emptyTr tr-active" style="position:relative;"><td colSpan="99" style="text-align:center;height:64px;"><span>没有任何匹配的结果
-<br />There Are No Matching Results</span><span style="position:absolute;top:0;bottom:1px;left:0;width:5px;background-image:linear-gradient(180deg, #6991e7 0%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 100%);"></span></td></tr>`);
+// 创建无结果的节点
+let jqi_empty_result_tr = $(/*html*/`<tr index="-1" group="-1" style="height: 65px;" class="emptyTr">
+<td colSpan="99"><span>没有任何匹配的结果!<br />There Are No Any Matching Results!</span></td></tr>`);
 
 // 创建总筛选的函数
-let filterFunction = function(event){
+let filterFunction = function(){
 	
-	// 要显示的 tr 列表
+	// 将要展示的tr合集
 	let trShowIndexArray = [];
 	
-	// 下拉菜单当前的值
+	// 表单元素当前的值
 	let jqi_attrSelect01_value = jqi_attrSelect01.val();
 	let jqi_attrSelect02_value = jqi_attrSelect02.val();
 	let jqi_attrSelect03_value = jqi_attrSelect03.val();
 	let jqi_attrSelect04_value = jqi_attrSelect04.val();
 	
-	// 没筛选则直接返回
-	if(jqi_nameInput01.val() === ''
-	&& jqi_attrSelect01_value === 'empty'
-	&& jqi_attrSelect02_value === 'empty'
-	&& jqi_attrSelect03_value === 'empty'
-	&& jqi_attrSelect04_value === 'empty'){
-		jqi_table01_tbody_tr.removeClass('hideTr');
-		jqi_empty_result_tr.remove();
-		return undefined;
-	};
-	
 	// 获取匹配项的索引
-	jqi_nameInput01.val().trim().split(/ {1,}/)
-	.forEach(function(text, index01){
-		tbodyArray01.forEach(function(item, index02){
-			if(ItemsNameList[item[4]][0].includes(text)
-			|| DescriptionList[item[4]][0].includes(text)){
+	jqi_nameInput01.val().trim()
+	.split(/ {1,}/).forEach(function(text){
+		csv0.forEach(function(item){
+			if(item !== 'blankRow' && (item.项目名称.text.
+			includes(text) === true || item.文本描述.text.includes(text) === true)){
 				
-				// if(jqi_attrSelect01_value !== 'empty' 
-				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
+				// 装备等级
 				if(jqi_attrSelect01_value !== 'empty'){
 					if(jqi_attrSelect01_value !== '-3' 
-					&& jqi_attrSelect01_value !== String(item[6])){ return }else 
-					if(jqi_attrSelect01_value === '-3' && String(item[6]) !== '-1' && String(item[6]) !== '-2'){ return };
+					&& jqi_attrSelect01_value !== String(item.装备等级.code)){ return }else 
+					if(jqi_attrSelect01_value === '-3' && String(item.装备等级.code) !== '-1' && String(item.装备等级.code) !== '-2'){ return };
 				};
 				
 				// 物品类型
-				if(jqi_attrSelect02_value !== 'empty' 
-				&& jqi_attrSelect02_value !== item[ 9]){ return };
+				if(jqi_attrSelect02_value !== 'empty' && jqi_attrSelect02_value !== item.物品类型.code){ return };
 				
 				// 归属种类
 				if(jqi_attrSelect03_value !== 'empty' 
-				&& item[10].indexOf(jqi_attrSelect03_value) === -1){ return };
+				&& item.归属种类.code.includes(jqi_attrSelect03_value) === false){ return };
 				
 				// 原型研发
 				if(jqi_attrSelect04_value !== 'empty' 
-				&& jqi_attrSelect04_value !== item[11]){ return };
+				&& jqi_attrSelect04_value !== item.原型研发.code){ return };
 				
 				// 符合条件
-				trShowIndexArray.push(index02);
+				trShowIndexArray
+				.push(String(item.项目序号));
 				
 			};
 		});
@@ -842,28 +1118,35 @@ let filterFunction = function(event){
 	// 根据结果显示隐藏
 	if(trShowIndexArray.length === 0){
 		jqi_table01_tbody_tr.addClass('hideTr');
+		jqi_empty_result_tr.removeClass('hideTr' );
 		jqi_table01_tbody.append(jqi_empty_result_tr);
 	}else{
 		jqi_empty_result_tr.remove();
-		jqi_table01_tbody_tr.addClass('hideTr');
-		trShowIndexArray.forEach(function(value){ 
-		jqi_table01_tbody_tr.eq(value).removeClass('hideTr') });
+		jqi_table01_tbody_tr.each(function(index, value){
+			if(trShowIndexArray.includes(value.getAttribute('index')) 
+			=== true){ value.classList.remove('hideTr') }else{ value.classList.add('hideTr') };
+		});
 	};
+	
+	// 合并同类设置高亮
+	xj2._groupedSet(jqi_powerTable01);
 	
 };
 
 // 绑定表单控件操作
-[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(jqi){ jqi.on('change', function(event){ filterFunction(event) }) });
-jqi_nameInput01.on('keyup', function(event){ if(event.keyCode === 13){ filterFunction(event) } });
-jqi_nameInput01.on('blur' , function(event){ filterFunction(event) });
-jqi_nameCheck01.on('click', function(event){ filterFunction(event) });
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+jqi_select){ jqi_select.on('change', function(){ filterFunction() }) });
+jqi_nameInput01.on('input', function(){ filterFunction() });
 jqi_resetButton.on('click', function(){
 	jqi_nameInput01.val('');
-	[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04,].
-	forEach(function(jqi){ jqi.find('option:first').prop('selected', true) });
-	jqi_table01_tbody_tr.removeClass('hideTr');
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+	jqi_select){ jqi_select.find('option:first').prop('selected', true) });
 	jqi_empty_result_tr.remove();
+	filterFunction();
 });
+
+// 自动执行一次筛选
+filterFunction();
 
 })();
 </script>
@@ -876,7 +1159,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.0</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
 </div>
 </div>
 </div>

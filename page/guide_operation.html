@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-08T23:59:59UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-08T23:59:59UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-08T23:59:59UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -166,6 +166,24 @@
 
 <p>备注信息: 首先, 在整备阶段, 驾驶员们总会随机出现在某个部门里, 不过只有当他们位于生活部门时, 才能执行交互的操作, 其次, 当驾驶员的忠诚度到达一定阶段后, 你需要娱乐室里回复他们, 以触发忠诚度奖励事件, 才能进一步推进忠诚度的增长, 最后, 你甚至可以制定"行动计划", 快速安排每个行动点的用处, 以免去频繁打开公共休息区的麻烦, 更多的细节可查阅 <a href="./data_manage_building.html#heading02">基地部门.html # 02.生活部门</a>;</p>
 
+<!--◇
+◆ 行动点可以积累, 默认的最大上限为 10 点
+◆ 不同操作所需的行动点数量不一样了, 不再是以前总是 1 点
+◆ 团队派对和召开作战总结会议, 需求的行动点会随着队伍人数增加而增加
+◆ 团队派 -15 脑负荷 
+
+现在买书是在商店刷一批书籍出来(固定为4项), 也就是同时可以买多本, 不过行动点耗费从 1 变成 3 了
+
+◆ 召开作战会议: 所有角色升级点 +1, 某个随机角色随机一项能力得到提升, 提升的幅度相当于在这项能力上投入 2 个技能点, 如果这个角色的这项能力已经到达上限, 那么增加的数值可以突破这项能力上限, 例如玛丽的移动速度为 +10%, 随机提升的能力也是移动速度, 由于移动速度每投入一个升级点 +0.5%, 所以玛丽的移动速度会变成 10%+(0.5%×2)=11%
+
+现在家具可以被合成了, 但是需要家具相关的零件, 这种零件只能通过解体"家具补给箱", 而这种补给箱只能在外围阵地捡到, 或者在生活区>休息室>制作家具, 通过在商店里专门刷新家具物品也可能买到
+
+克莱尔忠诚度奖励, 烹饪得到价值最大的物品, 既进行烹饪料理的操作时, 只会出现蛋糕和咖啡这两个选项, 不会再出现其他低价值物品
+购买工艺品, 现在的逻辑和原本的不一样了, 商店里会刷新礼物, 但不单工艺品, 各种食物, 烟酒都可能出现, 得重新调查结果选项
+购买家具, 在采购部门会刷出各种家具, 必定包括一个"家具补给箱"?
+购买烟酒, 在采购部门会刷出烟酒(固定为4项)
+◇-->
+
 </section>
 
 
@@ -224,6 +242,11 @@
 <p>————</p>
 
 <p>备注信息: 首先, 给同个驾驶员送礼时, 每天只有首次送礼会增加忠诚度, 更多的细节可查阅 <a href="./data_pilot_loyal.html">忠诚好感.html</a>, 其次, 给驾驶员晋升军衔时, 其他驾驶员的等级不能高于队长, 更多的细节可查阅 <a href="./data_pilot_level.html">军衔等级.html</a>, 再者, 给驾驶员解锁技能时, 需求的荣誉点会随着解锁技能的增多而逐步提升, 更多的细节可查阅 <a href="./data_pilot_skill.html">战场技能.html</a>, 最后, 你可以花费荣誉点解锁更多饰品槽位, 更多的细节可查阅 <a href="./data_pilot_jewel.html">饰品装备.html</a>;</p>
+
+<!--◇
+◆在进城界面可以花 100 荣誉点买 2 张通行卡, 且现在可选择不同的策略, 随心共处没有特殊效果, 
+培养感情是放弃脑负荷而增加忠诚度收益, 尽情娱乐是放弃忠诚度而增加脑负荷减益
+◇-->
 
 </section>
 
@@ -300,7 +323,7 @@
 	<img style="flex:0 0 auto;width:240px;height:144px;box-shadow:-1px 0 0 #999;" loading="lazy" src="../static/image/guide/RoomBG/11.jpg" />
 </p>
 
-<p>城防部门是安排防御和战场支援的地方, 你可以在这里整备战略武器/对大门进行强化/部署铁骑和各种城防设施, 值得一提的是, 在默认状态下你最多只能派遣 2 台主力机体和 1 台作战单元上场(可以靠思潮奖励提升上限), 而机枪炮塔则没有部署的数量上限, 不过大门前可供作战单位部署的点总共也就只有 8 个, 所以最好别想着依靠炮塔阵列来防御啦, 更多的细节可查阅 <a href="./data_manage_building.html#heading06">基地部门.html # 06.其他机构</a>;</p>
+<p>城防部门是安排防御和战场支援的地方, 你可以在这里整备战略武器/对大门进行强化/部署铁骑和各种城防设施, 值得一提的是, 在默认状态下你最多只能派遣 2 台载人主机和 1 台作战单元上场(可以靠思潮奖励提升上限), 而机枪炮塔则没有部署的数量上限, 不过大门前可供作战单位部署的点总共也就只有 8 个, 所以最好别想着依靠炮塔阵列来防御啦, 更多的细节可查阅 <a href="./data_manage_building.html#heading06">基地部门.html # 06.其他机构</a>;</p>
 
 </section>
 
@@ -335,7 +358,7 @@
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.0</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
 </div>
 </div>
 </div>

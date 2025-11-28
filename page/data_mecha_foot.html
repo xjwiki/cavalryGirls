@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-08T23:59:59UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-08T23:59:59UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-08T23:59:59UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,69 +118,69 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 足部强化装备不能重复安装, 但不同等级的同类装备可以并存, 数量取决于 <c>足部强化模块槽位上限</c>, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a>; <br />
-	02. 以下是足部强化的装备列表, 共 <c>30</c> 种 / 分 <c>10</c> 类, 这些装备大多是用于提升移动速度或炮台转速, 有助于增强机体的敏捷性; <br />
-	03. 某些装备的效果描述是比较模糊的, 可能会存在一些理解的问题, 如果想要了解更多细节或者具体算法, 可查阅后面的 <a href="#heading02"># 额外拓展</a>; <br />
-	04. 你可以借助筛选工具进行精确查找, 值得一提的是, 尽管枪塔&炮塔不能移动, 但也有足部强化槽位, 只是并非所有的装备都能适配; <br />
+	01. 足部强化的装备不能被重复安装, 但不同等级的同类装备能并存, 数量取决于 <c>足部强化</c> 的槽位上限, 具体可参阅 <a href="data_mecha_list.html">机体详情.html</a><br />
+	02. 以下是足部强化的装备列表, 共 <c>35</c> 种, 分 <c>13</c> 类, 这些装备大多是用于提升移动速度或炮台转速, 增强机体的敏捷性和灵活性<br />
+	03. 需要注意的是, 尽管炮塔也有足部强化槽位, 但并非所有的足部强化装备都能被炮塔所使用, 可借助"归属种类"的筛选工具查看细节<br />
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">配件等级: </span>
-		<select id="attrSelect01" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect01" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">物品类型: </span>
-		<select id="attrSelect02" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect02" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">归属种类: </span>
-		<select id="attrSelect03" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect03" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">原型研发: </span>
-		<select id="attrSelect04" class="needsclick select-unset" xj-focus="{ontabAlways:true}" style="flex:1 1 auto;width:148px;"></select>
+		<select id="attrSelect04" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
 	</label>
 </p>
 
 <p style="display:flex;justify-content:space-between;align-items:center;">
-	
 	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;align-self:center;width:80px;">名称描述: </span>
-		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;order:1;"><i class="fas fa-magnifying-glass"></i></button>
-		<input id="nameInput01" class="input-unset" type="text" style="flex:1 1 auto;width:116px;" placeholder="None" />
+		<input id="nameInput01" class="input-unset" type="search" style="flex:1 1 auto;width:116px;" placeholder="None" />
+		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;"><i class="fas fa-magnifying-glass"></i></button>
 	</label>
-	
-	<span style="display:inline-flex;flex:0 0 auto;width:472px;color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
-	
+	<span style="display:inline-flex;flex:0 0 auto;width:472px;
+	color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
 	<span style="display:inline-flex;flex:0 0 auto;width:228px;">
 		<span style="flex:0 0 auto;color:#999;">│</span>
-		<button style="flex:0 0 auto;width:74px;margin-left:auto;order:1;" id="resetButton" 
-		class="button-unset" type="button" xj-focus="{ontabAlways:true}">清空</button>
+		<button id="resetButton" class="button-unset" type="button" 
+		style="flex:0 0 auto;width:74px;margin-left:auto;order:1;">清空</button>
 	</span>
-	
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>原型研发</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>合成材料</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>出现条件</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -189,58 +189,57 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>重复安装: 尽管机体不能安装相同的足部模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是可以并存的, 只要描述没有明确提起说不能叠加(目前足部模块并没有任何不能叠加的装备), 那么这些同类的模块增益都会以累加的形式存在, 例如扭力转换器1和扭力转换器2和扭力转换器3, 它们并存, 合计会增加 <c>20%+30%+50%=100%</c> 的转向速度, 但同时也会降低 <c>5%+10%+15%=30%</c> 的机体速度;</p>
+<p>重复安装: 尽管机体不能安装相同的足部模块, 但不同等级的同类模块(图片相同但右下角罗马数字不同)是能并存的, 只要描述没有明确提起说不能叠加(目前足部模块并没有任何不能叠加的装备), 那么这些同类的模块增益都会以累加的形式存在, 例如扭力转换器01和扭力转换器02和扭力转换器03, 它们并存, 合计可以增加 <c>20%+30%+50%=100%</c> 的炮塔转速, 但同时也会降低 <c>5%+10%+15%=30%</c> 的机体移速</p>
+
+<p>拆卸代价: 无论足部模块的参考价格是多少, 装卸都不会产生费用(也许可以理解为, 足部模块都是制式物品, 装卸方便就无需额外付费)</p>
 
 <p>————</p>
 
-<p>速度模块 & 转轴模块: 它们的增益只能抵消装备带来的负面惩罚, 有不少的装备在安装后都会有负面 Debuff, 最常见的情况就是安装武器会降低机体的移速和转速, 这很好理解, 毕竟武器都有重量, 对动力自然会造成损耗, 此时安装这两个模块, 就可以消掉负面影响了;</p>
+<p>蹲据状态: 在战场中按 <kbd>Ctrl</kbd> 可让机体蹲据(不少重型武器在开火前也会强制机体蹲踞), 此时机体的移动速度会变慢(约为行走的一半), 但武器散射 <c>-2/3</c>, 且武器射程 <c>+25%</c>, 触发子弹弹跳的概率 <c>+15%</c>, 如果蹲在沙袋后面则子弹弹跳的概率会上升到 <c>+35%</c>, 总之, 这是种牺牲机动性而提升机体其他属性的方法, 在防守时特别有用, 如果你在打阵地战(例如剧情模式下守城), 蹲据攻击是不错的选择</p>
 
-<p>关节润滑模块 & 动力电容: 降低奔跑能耗和提升能耗恢复, 都能让我们的机体在战场上变得更具机动性, 值得一提的是, 不同机体的最大奔跑能量不同, 但不同机体进入奔跑状态后, 每秒所损耗的奔跑能量是一样的, 更多机体细节可查阅: <a href="data_mecha_list.html#heading03">机体详情.html # 03.属性解析</a>;</p>
+<p>奔跑状态: 在战场中按住 <kbd>Shift</kbd> 再移动, 可让机体奔跑起来, 奔跑速度是走动速度的 <c>3</c> 倍左右, 需要注意的是, 机体有"奔跑能量"的设定, 不同机体, 最大奔跑能量不同, 但进入奔跑状态后, 不同机体每秒所损耗的奔跑能量是一样的, 当你把奔跑能量耗尽, 就会进入"力竭状态", 此时机体上方的能量条会变成红色, 在能量条自动回满之前, 都无法再次奔跑了, 所以最好是张弛有度, 避免陷入力竭状态</p>
 
-<p>————</p>
-
-<p>奔跑过载器 & 奔跑模块: 机体奔跑时的移动速度是机体常规速度的两倍, 机体蹲踞的时的移动速度是机体常规速度的一半, 因此增加机体速度, 对机体所有形式的移动速度均有所提升, 但这两个模块仅增加机体的奔跑速度, 那么对机体的常规移速和蹲踞移速就没有影响;</p>
-
-<p>液压足: 机体默认是站立状态(少数机体可进行长距离跳跃, 例如桑的龙骑士号), 按 Ctrl 可让机体蹲下, 此时的状态被称为蹲踞(不少重型武器需蹲踞后才能开火), 此时开火后坐力会变小, 且能触发子弹弹跳, 但移速仅剩站立的一半, 更多细节可查阅: <a href="./data_others_parlance.html">术语提示.html</a>;</p>
+<p>飞行状态: 当机体安装了"飞行器模块", 奔跑就会变成飞行, 速度是走动的 <c>10</c> 倍左右, 但这只是理论值, 由于算法因素, 实际上奔跑和飞行都很难到达速度的理论上限, 飞行状态的机体难以被武器瞄准(需要考虑防空精度), 飞行速度越快则射程越远(最多可以 <c>+50%</c>), 飞行每秒所损耗的能量和奔跑相同, 如果能量耗尽便会自动降落, 若在飞行状态下进入麻痹或眩晕状态, 则会坠落(坠落固定 <c>-100</c> HP)</p>
 
 <p>————</p>
 
-<p>拆卸代价: 无论足部模块的价格是多少, 装卸都不会产生任何费用(也许可以理解为足部模块都是制式物品, 装卸方便就无需额外付费?);</p>
+<p>速度模块和转轴模块: 它们的增益只能抵消装备带来的负面惩罚, 有不少装备在安装后都会有负面的影响, 最常见的情况, 就是安装武器会降低机体移速和炮塔转速, 这很好理解, 毕竟武器都有重量, 对机体动力自然会造成损耗, 此时安装这两个模块, 就能消掉负面影响了, 而原型速度模块和原型转轴模块, 这两个模块不会在采购部门售卖, 只是在重铸操作中, 作为保底物品出现, 除此之外也没其他意义了</p>
+
+<p>奔跑过载器和奔跑模块: 提升机体移速, 对机体的[蹲据/奔跑/飞行]速度均有所提升, 但增加奔跑速度的模块, 就只影响奔跑和飞行速度</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
 
-/* 归属种类 */
-#powerTable01 tr > td:nth-of-type(10){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(10):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(10):active > span:nth-of-type(2){display:block;}
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 
-/* 原形研发 */
-#powerTable01 tr > td:nth-of-type(11){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(11):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(11):active > span:nth-of-type(2){display:block;}
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
 
-/* 合成材料 */
-#powerTable01 tr > td:nth-of-type(12){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(12):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(12):active > span:nth-of-type(2){display:block;}
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
 
-/* 出现条件 */
-#powerTable01 tr > td:nth-of-type(13){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(13):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(13):active > span:nth-of-type(2){display:block;}
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -250,402 +249,687 @@
 
 /* 数据注解
 
-CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
-MaxPile = 1, ColorPlus = Cluster = '-',
-debugHide = 0,
+Func 是函数, 已经和 description 既描述结合起来, 这部分的数据没意义, 就删掉了
+MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1 的并没有意义, 所以删掉了
+
+DebugHide: 控制台是否要隐藏该项目(隐藏则无法在控制台调出入手), 武器都是 false, 似乎也不需要
+ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
+
+CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是配件槽位和融合槽位的数据, 只有武器才有, 其它的物品没有任何意义, 所以删掉了
+Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属性, 用于判断升级改造或者同类配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
 
 */
 
-// 项目数据
-let tbodyArray01 = [
-	
-	// 高亮,	装备图片,	装备序号,	装备名称,				项目代码,	参考价格,	配件等级,	默认排序,	解锁天数,	物品类型,				归属种类,					原型研发,						合成材料,											出现条件,								文本描述,			],		
-	// Active,	Image,		Number,		Name,					Items,		Price,		Level,		ResolveID,	Day,		Type,					Tag,						Company,						Syns,												NeedWeapon,								Description,		],		//01		
-	
-	[1,			2050,		'01',		'速度模块',				2050,		15,			1,			448,		0,			'BuffModelFoot',		'BuffModel',				'Main2_4',						'40002_3|40006_2|40022_2',							'-',									'-',				],		
-	[1,			2051,		'02',		'速度模块+',			2051,		40,			2,			449,		0,			'BuffModelFoot',		'BuffModel',				'Main2_4',						'-',												'2050_2053',							'-',				],		
-	[1,			2052,		'03',		'高级速度模块',			2052,		120,		3,			450,		36,			'BuffModelFoot',		'BuffModel',				'Main2_4',						'-',												'2050_2053',							'-',				],		
-	[1,			2053,		'04',		'制式速度模块',			2053,		200,		-1,			451,		64,			'BuffModelFoot',		'BuffModel',				'Main2_4',						'-',												'2050_2053',							'-',				],		//01		
-	
-	[0,			2054,		'05',		'转轴模块',				2054,		10,			1,			452,		0,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_4',						'40002_3|40005_2|40023_2',							'-',									'-',				],		
-	[0,			2055,		'06',		'转轴模块+',			2055,		25,			2,			453,		0,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_4',						'-',												'2054_2056',							'-',				],		
-	[0,			2056,		'07',		'高级转轴模块',			2056,		80,			3,			454,		36,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_4',						'-',												'2054_2056',							'-',				],		
-	[0,			2057,		'08',		'制式转轴模块',			2057,		150,		-1,			455,		64,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_4',						'-',												'2054_2056',							'-',				],		//01		
-	
-	[1,			2301,		'09',		'关节润滑模块',			2301,		30,			1,			497,		0,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'40002_4|40006_2|40022_2|40023_3',					'2050_2053|2308_2310|2301_2304',		'-',				],		
-	[1,			2302,		'10',		'关节润滑模块+',		2302,		60,			-1,			498,		50,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'-',												'2050_2053|2308_2310|2301_2304',		'-',				],		//01		
-	
-	[0,			2303,		'11',		'动力电容',				2303,		30,			1,			499,		0,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'40002_4|40006_2|40022_2|40023_3',					'2050_2053|2308_2310|2301_2304',		'-',				],		
-	[0,			2304,		'12',		'动力电容+',			2304,		60,			-1,			500,		50,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'-',												'2050_2053|2308_2310|2301_2304',		'-',				],		//01		
-	
-	[1,			2308,		'13',		'功率放大器',			2308,		15,			1,			504,		0,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'40001_4|40007_1|40022_1|40023_4',					'2050_2053|2308_2310|2301_2304',		'-',				],		
-	[1,			2309,		'14',		'功率放大器2',			2309,		35,			2,			505,		16,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'-',												'2050_2053|2308_2310|2301_2304',		'-',				],		
-	[1,			2310,		'15',		'功率放大器3',			2310,		75,			-1,			506,		32,			'BuffModelFoot',		'BuffModel',				'Main2_2',						'-',												'2050_2053|2308_2310|2301_2304',		'-',				],		//01		
-	
-	[0,			2305,		'16',		'扭力转换器',			2305,		15,			1,			501,		9,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_2',						'40006_2|40021_3',									'2054_2057',							'-',				],		
-	[0,			2306,		'17',		'扭力转换器2',			2306,		35,			2,			502,		18,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_2',						'-',												'2054_2057',							'-',				],		
-	[0,			2307,		'18',		'扭力转换器3',			2307,		75,			-1,			503,		27,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_2',						'-',												'2054_2057',							'-',				],		//01		
-	
-	[1,			2323,		'19',		'脚爪模块',				2323,		8,			1,			519,		6,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_6',						'40002_6|40007_3',									'-',									'-',				],		
-	[1,			2324,		'20',		'脚爪模块+',			2324,		15,			-1,			520,		12,			'BuffModelFoot',		'BuffModel|Cannon',			'Main2_6',						'-',												'2323|2324',							'-',				],		//01		
-	
-	[0,			2325,		'21',		'奔跑过载器',			2325,		30,			1,			521,		9,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'40001_4|40007_2|40022_2|40023_3',					'2301_2304|2325_2327',					'-',				],		
-	[0,			2326,		'22',		'奔跑过载器2',			2326,		70,			2,			522,		18,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'-',												'2301_2304|2325_2327',					'-',				],		
-	[0,			2327,		'23',		'奔跑过载器3',			2327,		150,		-1,			523,		51,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'-',												'2301_2304|2325_2327',					'-',				],		//01		
-	
-	[1,			2328,		'24',		'奔跑模块',				2328,		10,			1,			524,		9,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'40001_4|40007_2|40022_2|40023_3',					'2301_2304|2328_2331',					'-',				],		
-	[1,			2329,		'25',		'奔跑模块+',			2329,		25,			2,			525,		18,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'-',												'2301_2304|2328_2331',					'-',				],		
-	[1,			2330,		'26',		'高级奔跑模块',			2330,		80,			3,			526,		27,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'-',												'2301_2304|2328_2331',					'-',				],		
-	[1,			2331,		'27',		'制式奔跑模块',			2331,		150,		-1,			527,		60,			'BuffModelFoot',		'BuffModel',				'Main2_6',						'-',												'2301_2304|2328_2331',					'-',				],		//01		
-	
-	[0,			2401,		'28',		'液压足',				2401,		25,			1,			539,		18,			'BuffModelFoot',		'BuffModel',				'TankType_PlayerName_1',		'-',												'-',									'-',				],		
-	[0,			2402,		'29',		'液压足+',				2402,		45,			2,			540,		35,			'BuffModelFoot',		'BuffModel',				'TankType_PlayerName_1',		'-',												'-',									'-',				],		
-	[0,			2403,		'30',		'液压足++',				2403,		80,			-1,			541,		57,			'BuffModelFoot',		'BuffModel',				'TankType_PlayerName_1',		'-',												'-',									'-',				],		//01		
-	
-];
+let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-// 项目名称
-let ItemsNameList = {
-	
-	2050 : ['速度模块',				'速度モジュール',				'Speed Module',							],		
-	2051 : ['速度模块+',			'速度モジュール+',				'Speed Module+',						],		
-	2052 : ['高级速度模块',			'上級速度モジュール',			'Advanced Speed Module',				],		
-	2053 : ['制式速度模块',			'制式速度モジュール',			'Standard Speed Module',				],		//02		
-	
-	2054 : ['转轴模块',				'回転軸モジュール',				'Rotating Shaft Module',				],		
-	2055 : ['转轴模块+',			'回転軸モジュール+',			'Rotating Shaft Module+',				],		
-	2056 : ['高级转轴模块',			'上級回転軸モジュール',			'Advanced Rotating Shaft Module',		],		
-	2057 : ['制式转轴模块',			'制式回転軸モジュール',			'Standard Rotating Shaft Module',		],		//02		
-	
-	2301 : ['关节润滑模块',			'関節潤滑モジュール',			'Joint Lubr. Module',					],		
-	2302 : ['关节润滑模块+',		'関節潤滑モジュール+',			'Joint Lubr. Module+',					],		//02		
-	
-	2303 : ['动力电容',				'パワーコンデンサ',				'Power Capacitor',						],		
-	2304 : ['动力电容+',			'パワーコンデンサ+',			'Power Capacitor+',						],		//02		
-	
-	2308 : ['功率放大器',			'出力増幅器',					'Power Amplifier',						],		
-	2309 : ['功率放大器2',			'出力増幅器2',					'Power Amplifier 2',					],		
-	2310 : ['功率放大器3',			'出力増幅器3',					'Power Amplifier 3',					],		//02		
-	
-	2305 : ['扭力转换器',			'トルクコンバーター',			'Torque Converter',						],		
-	2306 : ['扭力转换器2',			'トルクコンバーター2',			'Torque Converter 2',					],		
-	2307 : ['扭力转换器3',			'トルクコンバーター3',			'Torque Converter 3',					],		//02		
-	
-	2323 : ['脚爪模块',				'フットクローモジュール',		'Claw Module',							],		
-	2324 : ['脚爪模块+',			'フットクローモジュール+',		'Claw Module+',							],		//02		
-	
-	2325 : ['奔跑过载器',			'走行オーバーローダー',			'Sprint Overloader',					],		
-	2326 : ['奔跑过载器2',			'走行オーバーローダー2',		'Sprint Overloader 2',					],		
-	2327 : ['奔跑过载器3',			'走行オーバーローダー3',		'Sprint Overloader 3',					],		//02		
-	
-	2328 : ['奔跑模块',				'走行モジュール',				'Sprint Module',						],		
-	2329 : ['奔跑模块+',			'走行モジュール+',				'Sprint Module+',						],		
-	2330 : ['高级奔跑模块',			'上級走行モジュール',			'Advanced Sprint Module',				],		
-	2331 : ['制式奔跑模块',			'制式走行モジュール',			'Standard Sprint Module',				],		//02		
-	
-	2401 : ['液压足',				'ハイドロリックフット',			'Hydraulic foot',						],		
-	2402 : ['液压足+',				'ハイドロリックフット+',		'Hydraulic foot+',						],		
-	2403 : ['液压足++',				'ハイドロリックフット++',		'Hydraulic foot++',						],		//02		
-		
-};
+2050,#速度模块,2050,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:20,Main2_4,15,0,1,0,0,0,0,,40002_3|40006_2|40022_2,,,580,
+2051,#速度模块+,2051,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:35,Main2_4,40,0,2,0,0,0,0,,,2050_2053,,581,
+2052,#高级速度模块,2052,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:55,Company_2053,120,36,3,0,0,0,0,,,2050_2053,,582,
+2053,#制式速度模块,2053,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:75,Company_2053,200,64,-1,0,0,0,0,,,2050_2053,,583,
 
-// 文本描述
-let DescriptionList = {
-	
-	2050 : [/*'速度模块',			AddSpeed:20,						*/'机体速度 +20%, 仅抵消惩罚',				'移動速度 +20%(ペナルティ相殺用のみ)',				'Increases movement speed b +20%(neglects punishment only)',					],
-	2051 : [/*'速度模块+',			AddSpeed:35,						*/'机体速度 +35%, 仅抵消惩罚',				'移動速度 +35%(ペナルティ相殺用のみ)',				'Increases movement speed b +35%(neglects punishment only)',					],
-	2052 : [/*'高级速度模块',		AddSpeed:55,						*/'机体速度 +55%, 仅抵消惩罚',				'移動速度 +55%(ペナルティ相殺用のみ)',				'Increases movement speed b +55%(neglects punishment only)',					],
-	2053 : [/*'制式速度模块',		AddSpeed:75,						*/'机体速度 +75%, 仅抵消惩罚',				'移動速度 +75%(ペナルティ相殺用のみ)',				'Increases movement speed b +75%(neglects punishment only)',					],		//03		
-	
-	2054 : [/*'转轴模块',			AddRotSpeed:15,						*/'转向速度 +15%, 仅抵消惩罚',				'砲塔旋回速度 +15%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +15%(neglects punishment only)',			],
-	2055 : [/*'转轴模块+',			AddRotSpeed:25,						*/'转向速度 +25%, 仅抵消惩罚',				'砲塔旋回速度 +25%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +25%(neglects punishment only)',			],
-	2056 : [/*'高级转轴模块',		AddRotSpeed:40,						*/'转向速度 +40%, 仅抵消惩罚',				'砲塔旋回速度 +40%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +40%(neglects punishment only)',			],
-	2057 : [/*'制式转轴模块',		AddRotSpeed:60,						*/'转向速度 +60%, 仅抵消惩罚',				'砲塔旋回速度 +60%(ペナルティ相殺用のみ)',			'Increases turret rotational speed by +60%(neglects punishment only)',			],		//03		
-	
-	2301 : [/*'关节润滑模块',		RunStrength:-12,					*/'奔跑能耗 -12%',							'走行エネルギー消費 -12%',							'Reduces sprint energy consumption by -12%',									],
-	2302 : [/*'关节润滑模块+',		RunStrength:-20,					*/'奔跑能耗 -20%',							'走行エネルギー消費 -20%',							'Reduces sprint energy consumption by -20%',									],		//03		
-	
-	2303 : [/*'动力电容',			RunRecover:12,						*/'能耗恢复 +12%',							'走行エネルギー回復 +12%',							'Increases sprint energy regeneration by +12%',									],
-	2304 : [/*'动力电容+',			RunRecover:20,						*/'能耗恢复 +20%',							'走行エネルギー回復 +20%',							'Increases sprint energy regeneration by +20%',									],		//03		
-	
-	2308 : [/*'功率放大器',			AddPower:15,						*/'起步马力 +15%',							'始動馬力 +15%',									'Starting horsepower +15%',														],
-	2309 : [/*'功率放大器2',		AddPower:25,						*/'起步马力 +25%',							'始動馬力 +25%',									'Starting horsepower +25%',														],
-	2310 : [/*'功率放大器3',		AddPower:40,						*/'起步马力 +40%',							'始動馬力 +40%',									'Starting horsepower +40%',														],		//03		
-	
-	2305 : [/*'扭力转换器',			AddRotSpeedLimit:20|AddSpeed:-5,	*/'转向速度 +20%<br />机体速度 - 5%',		'砲塔旋回速度 +20%、移動速度 - 5%',					'Increases turret rotational speed by +20% and movement speed by - 5%',			],
-	2306 : [/*'扭力转换器2',		AddRotSpeedLimit:30|AddSpeed:-10,	*/'转向速度 +30%<br />机体速度 -10%',		'砲塔旋回速度 +30%、移動速度 -10%',					'Increases turret rotational speed by +30% and movement speed by -10%',			],
-	2307 : [/*'扭力转换器3',		AddRotSpeedLimit:50|AddSpeed:-15,	*/'转向速度 +50%<br />机体速度 -15%',		'砲塔旋回速度 +50%、移動速度 -15%',					'Increases turret rotational speed by +50% and movement speed by -15%',			],		//03		
-	
-	2323 : [/*'脚爪模块',			BackMass:-30,						*/'开火受力 -30%',							'発砲反動 -30%',									'Recoil -30%',																	],
-	2324 : [/*'脚爪模块+',			BackMass:-60,						*/'开火受力 -60%',							'発砲反動 -60%',									'Recoil -60%',																	],		//03		
-	
-	2325 : [/*'奔跑过载器',			RunSpeed:20|AddSpeed:-10,			*/'奔跑速度 +20%<br />机体速度 -10%',		'走行速度 +20%、移動速度 -10%',						'Increases sprint speed by +20% and movement speed by -10%',					],
-	2326 : [/*'奔跑过载器2',		RunSpeed:30|AddSpeed:-15,			*/'奔跑速度 +30%<br />机体速度 -15%',		'走行速度 +30%、移動速度 -15%',						'Increases sprint speed by +30% and movement speed by -15%',					],
-	2327 : [/*'奔跑过载器3',		RunSpeed:40|AddSpeed:-20,			*/'奔跑速度 +40%<br />机体速度 -20%',		'走行速度 +40%、移動速度 -20%',						'Increases sprint speed by +40% and movement speed by -20%',					],		//03		
-	
-	2328 : [/*'奔跑模块',			RunSpeed:10,						*/'奔跑速度 +10%',							'走行速度 +10%',									'Increases sprint speed by +10%',												],
-	2329 : [/*'奔跑模块+',			RunSpeed:15,						*/'奔跑速度 +15%',							'走行速度 +15%',									'Increases sprint speed by +15%',												],
-	2330 : [/*'高级奔跑模块',		RunSpeed:20,						*/'奔跑速度 +20%',							'走行速度 +20%',									'Increases sprint speed by +20%',												],
-	2331 : [/*'制式奔跑模块',		RunSpeed:25,						*/'奔跑速度 +25%',							'走行速度 +25%',									'Increases sprint speed by +25%',												],		//03		
-	
-	2401 : [/*'液压足',				SeatMoveSpeed:18,					*/'蹲踞移速 +18%',							'しゃがむ中移動速度 +18%',							'Increases Moving Speed when crouched by +18%',									],
-	2402 : [/*'液压足+',			SeatMoveSpeed:30,					*/'蹲踞移速 +30%',							'しゃがむ中移動速度 +30%',							'Increases Moving Speed when crouched by +30%',									],
-	2403 : [/*'液压足++',			SeatMoveSpeed:50,					*/'蹲踞移速 +50%',							'しゃがむ中移動速度 +50%',							'Increases Moving Speed when crouched by +50%',									],		//03		
-	
-};
+2054,#转轴模块,2054,BuffModelFoot,#炮塔旋转速度+<Description>%\n（仅抵消惩罚）,BuffModel|Cannon,1,AddRotSpeed:15,Company_2053,10,0,1,0,0,0,0,,40002_3|40005_2|40023_2,,,584,
+2055,#转轴模块+,2055,BuffModelFoot,#炮塔旋转速度+<Description>%\n（仅抵消惩罚）,BuffModel|Cannon,1,AddRotSpeed:25,Company_2053,25,0,2,0,0,0,0,,,2054_2056,,585,
+2056,#高级转轴模块,2056,BuffModelFoot,#炮塔旋转速度+<Description>%\n（仅抵消惩罚）,BuffModel|Cannon,1,AddRotSpeed:40,Main2_4,80,36,3,0,0,0,0,,,2054_2056,,586,
+2057,#制式转轴模块,2057,BuffModelFoot,#炮塔旋转速度+<Description>%\n（仅抵消惩罚）,BuffModel|Cannon,1,AddRotSpeed:60,Main2_4,150,64,-1,0,0,0,0,,,2054_2056,,587,
 
-// 物品类型
-let TypeList = {
-	BuffModelFoot :	['足部强化', '脚部強化モジュール', 'Foot enhancement module', ],
-};
+2308,#功率放大器,2308,BuffModelFoot,#起步功率+<Description>%,BuffModel,1,AddPower:15,Main2_2,15,0,1,0,0,0,0,,40001_4|40007_1|40022_1|40023_4,2050_2053|2308_2310|2301_2304,,636,
+2309,#功率放大器,2309,BuffModelFoot,#起步功率+<Description>%,BuffModel,1,AddPower:25,Main2_2,35,16,2,0,0,0,0,,,2050_2053|2308_2310|2301_2304,,637,
+2310,#功率放大器,2310,BuffModelFoot,#起步功率+<Description>%,BuffModel,1,AddPower:40,Main2_2,75,32,-1,0,0,0,0,,,2050_2053|2308_2310|2301_2304,,638,
 
-// 归属种类
-let TagList = {
-	BuffModel :		['足部',	'脚部強化モジュール',	'Foot enhancement module',		],
-	Cannon :		['炮塔',	'砲塔強化モジュール',	'Turret enhancement module',	],
-};
+2305,#扭力转换器,2305,BuffModelFoot,#炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,BuffModel|Cannon,1,AddRotSpeedLimit:20|AddSpeed:-5,Main2_2,15,9,1,0,0,0,0,,40006_2|40021_3,2054_2057,,633,
+2306,#扭力转换器2,2306,BuffModelFoot,#炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,BuffModel|Cannon,1,AddRotSpeedLimit:30|AddSpeed:-10,Main2_2,35,18,2,0,0,0,0,,,2054_2057,,634,
+2307,#扭力转换器3,2307,BuffModelFoot,#炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,BuffModel|Cannon,1,AddRotSpeedLimit:50|AddSpeed:-15,Main2_2,75,27,-1,0,0,0,0,,,2054_2057,,635,
 
-// 原型研发
-let CompanyList = {
-	Main2_2 :				['航空集团有限公司',		'航空グループ株式会社',			'Aviation Group Co., Ltd',						],
-	Main2_4 :				['苏尔发动机制造局',		'スールエンジン製造局',			'Sul Engine Manufacturing Bureau',				],
-	Main2_6 :				['布尔发动机公司',			'ブールエンジン株式会社',		'Boolean Engine Company',						],
-	TankType_PlayerName_1 :	['库罗库',					'クロック',						'Kuroku',										],
-};
+2401,#液压足,2401,BuffModelFoot,#蹲踞移动速度+<Description>%,BuffModel|CantGen,1,SeatMoveSpeed:18,TankType_PlayerName_1,25,18,1,0,0,0,0,,,,,671,
+2402,#液压足+,2402,BuffModelFoot,#蹲踞移动速度+<Description>%,BuffModel,1,SeatMoveSpeed:30,TankType_PlayerName_1,45,35,2,0,0,0,0,,,,,672,
+2403,#液压足++,2403,BuffModelFoot,#蹲踞移动速度+<Description>%,BuffModel,1,SeatMoveSpeed:50,TankType_PlayerName_1,80,57,-1,0,0,0,0,,,,,673,
 
-// 合成材料
-let ScrapList = {
-	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',				],
-	40002 :	['废料',			'スクラップ',				'Waste Material',			],
-	40003 :	['弹壳',			'薬莢',						'Bullet Shell',				],
-	40004 :	['弹头',			'弾頭',						'Warhead',					],
-	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',		],
-	40006 :	['齿轮',			'ギア',						'Gear',						],
-	40007 :	['框架',			'フレーム',					'Frame',					],
-	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',				],
-	40009 :	['扳机',			'トリガー',					'Trigger',					],
-	40010 :	['雷管',			'起爆装置',					'Detonator',				],
-	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',		],
-	40012 :	['弹链',			'弾帯',						'Ammunition Belt',			],
-	40013 :	['棱镜',			'プリズム',					'Prism',					],
-	40014 :	['透镜',			'レンズ',					'Lens',						],
-	40015 :	['点火器',			'イグナイター',				'Igniter',					],
-	40016 :	['冷凝管',			'復水管',					'Condenser',				],
-	40017 :	['线圈',			'コイル',					'Coil',						],
-	40018 :	['电容',			'コンデンサ',				'Capacitor',				],
-	40019 :	['电感',			'インダクター',				'Inductor',					],
-	40020 :	['三极管',			'三極管',					'Transistor',				],
-	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',			],
-	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',				],
-	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',				],
-	40024 :	['装甲',			'装甲',						'Armor',					],
-	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',				],
-	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',	],
-	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',		],
-	40028 :	['共振器',			'共振器',					'Resonator',				],
-	40029 :	['刀片',			'ブレード',					'Blade',					],
-	40030 :	['振荡器',			'発振回路',					'Oscillator',				],
-	40031 :	['涂层',			'コーティング',				'Coating',					],
-	40032 :	['核心',			'コア',						'Core',						],
+2325,#奔跑过载器,2325,BuffModelFoot,#奔跑速度+<Description:0>%，移动速度<Description:1>%,BuffModel,1,RunSpeed:20|AddSpeed:-10,Main2_6,30,9,1,0,0,0,0,,40001_4|40007_2|40022_2|40023_3,2301_2304|2325_2327,,653,
+2326,#奔跑过载器2,2326,BuffModelFoot,#奔跑速度+<Description:0>%，移动速度<Description:1>%,BuffModel,1,RunSpeed:30|AddSpeed:-15,Main2_6,70,18,2,0,0,0,0,,,2301_2304|2325_2327,,654,
+2327,#奔跑过载器3,2327,BuffModelFoot,#奔跑速度+<Description:0>%，移动速度<Description:1>%,BuffModel,1,RunSpeed:40|AddSpeed:-20,Main2_6,150,51,-1,0,0,0,0,,,2301_2304|2325_2327,,655,
+
+2404,#飞行模块1,2404,BuffModelFoot,#将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,BuffModel|CantGen,1,flying:0.25,Main2_2,70,$AirOpenDay,1,0,0,0,0,,40002_3|40022_4|40023_4|40034_3|40033_2,,,674,
+2405,#飞行模块2,2405,BuffModelFoot,#将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,BuffModel,1,flying:0.4,Main2_2,120,50,2,0,0,0,0,,,,,675,
+2406,#飞行模块3,2406,BuffModelFoot,#将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,BuffModel,1,flying:0.75,Main2_2,220,80,-1,0,0,0,0,,,,,676,
+
+2301,#关节润滑模块,2301,BuffModelFoot,#奔跑能量消耗<Description>%,BuffModel,1,RunStrength:-12,Main2_2,30,0,1,0,0,0,0,,40002_4|40006_2|40022_2|40023_3,2050_2053|2308_2310|2301_2304,,629,
+2302,#关节润滑模块+,2302,BuffModelFoot,#奔跑能量消耗<Description>%,BuffModel,1,RunStrength:-20,Main2_2,60,50,-1,0,0,0,0,,,2050_2053|2308_2310|2301_2304,,630,
+
+2303,#动力电容,2303,BuffModelFoot,#奔跑能量回复+<Description>%,BuffModel,1,RunRecover:12,Main2_2,30,0,1,0,0,0,0,,40002_4|40006_2|40022_2|40023_3,2050_2053|2308_2310|2301_2304,,631,
+2304,#动力电容+,2304,BuffModelFoot,#奔跑能量回复+<Description>%,BuffModel,1,RunRecover:20,Main2_2,60,50,-1,0,0,0,0,,,2050_2053|2308_2310|2301_2304,,632,
+
+2323,#践踏足,2323,BuffModelFoot,#全速奔跑状态下撞击房屋造成<Description>伤害\n效果可叠加,BuffModel|CantGen,1,RunningBuildingDamage:5000,Main2_6,25,15,1,0,0,0,0,,40002_6|40007_3,,,651,
+2324,#践踏足+,2324,BuffModelFoot,#全速奔跑状态下撞击房屋造成<Description>伤害,BuffModel|CantGen,1,RunningBuildingDamage:10000,Main2_6,45,33,-1,0,0,0,0,,,2323|2324,,652,
+
+2399,#原型动力单元,2399,BuffModelFoot,#最原始的动力单元，不能升级、强化、合成\n移动速度+<Description:0>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:10,Company_2399,7,0,-2,0,0,0,0,,,,,570,
+2400,#原型扭力单元,2398,BuffModelFoot,#最原始的动力单元，不能升级、强化、合成\n移动速度+<Description:0>%\n（仅抵消惩罚）,BuffModel|Cannon,1,AddRotSpeed:10,Company_2398,7,0,-2,0,0,0,0,,,,,571,
+
+2328,#奔跑模块,2328,BuffModelFoot,#奔跑速度+<Description>%,BuffModel,1,RunSpeed:10,Main2_6,10,9,1,0,0,0,0,,40001_4|40007_2|40022_2|40023_3,2301_2304|2328_2331,,656,
+2329,#奔跑模块+,2329,BuffModelFoot,#奔跑速度+<Description>%,BuffModel,1,RunSpeed:15,Main2_6,25,18,2,0,0,0,0,,,2301_2304|2328_2331,,657,
+2330,#高级奔跑模块,2330,BuffModelFoot,#奔跑速度+<Description>%,BuffModel,1,RunSpeed:20,Main2_6,80,27,3,0,0,0,0,,,2301_2304|2328_2331,,658,
+2331,#制式奔跑模块,2331,BuffModelFoot,#奔跑速度+<Description>%,BuffModel,1,RunSpeed:25,Main2_6,150,60,-1,0,0,0,0,,,2301_2304|2328_2331,,659,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
+	
+	项目名称 : {
+	
+	2050 : `速度模块01`			+ ` # 速度模块,速度模組,Speed Module,速度モジュール`,
+	2051 : `速度模块02`			+ ` # 速度模块+,速度模組+,Speed Module+,速度モジュール+`,
+	2052 : `速度模块03`			+ ` # 高级速度模块,高級速度模組,Advanced Speed Module,上級速度モジュール`,
+	2053 : `速度模块04`			+ ` # 制式速度模块,制式速度模組,Standard Speed Module,制式速度モジュール`,
+	
+	2054 : `转轴模块01`			+ ` # 转轴模块,轉軸模組,Rotating Shaft Module,回転軸モジュール`,
+	2055 : `转轴模块02`			+ ` # 转轴模块+,轉軸模組+,Rotating Shaft Module+,回転軸モジュール+`,
+	2056 : `转轴模块03`			+ ` # 高级转轴模块,高級轉軸模組,Advanced Rotating Shaft Module,上級回転軸モジュール`,
+	2057 : `转轴模块04`			+ ` # 制式转轴模块,制式轉軸模組,Standard Rotating Shaft Module,制式回転軸モジュール`,
+	
+	2305 : `扭力转换器01`		+ ` # 扭力转换器,扭力轉換器,Torque Converter,トルクコンバーター`,
+	2306 : `扭力转换器02`		+ ` # 扭力转换器2,扭力轉換器2,Torque Converter 2,トルクコンバーター2`,
+	2307 : `扭力转换器03`		+ ` # 扭力转换器3,扭力轉換器3,Torque Converter 3,トルクコンバーター3`,
+	
+	2308 : `功率放大器01`		+ ` # 功率放大器,功率放大器,Power Amplifier,出力増幅器`,
+	2309 : `功率放大器02`		+ ` # 功率放大器2,功率放大器2,Power Amplifier 2,出力増幅器2`,
+	2310 : `功率放大器03`		+ ` # 功率放大器3,功率放大器3,Power Amplifier 3,出力増幅器3`,
+	
+	2401 : `液压足模块01`		+ ` # 液压足,液壓足,Hydraulic foot,ハイドロリックフット`,
+	2402 : `液压足模块02`		+ ` # 液压足+,液壓足+,Hydraulic foot+,ハイドロリックフット+`,
+	2403 : `液压足模块03`		+ ` # 液压足++,液壓足++,Hydraulic foot++,ハイドロリックフット++`,
+	
+	2325 : `奔跑过载器01`		+ ` # 奔跑过载器,奔跑超載器,Sprint Overloader,走行オーバーローダー`,
+	2326 : `奔跑过载器02`		+ ` # 奔跑过载器2,奔跑超載器2,Sprint Overloader 2,走行オーバーローダー2`,
+	2327 : `奔跑过载器03`		+ ` # 奔跑过载器3,奔跑超載器3,Sprint Overloader 3,走行オーバーローダー3`,
+	
+	2404 : `飞行器模块01`		+ ` # 飞行模块1,飛行模組1,Flight module 1,飛行モジュール1`,
+	2405 : `飞行器模块02`		+ ` # 飞行模块2,飛行模組2,Flight module 2,飛行モジュール2`,
+	2406 : `飞行器模块03`		+ ` # 飞行模块3,飛行模組3,Flight module 3,飛行モジュール3`,
+	
+	2301 : `关节润滑模块`		+ ` # 关节润滑模块,關節潤滑模組,Joint Lubr. Module,関節潤滑モジュール`,
+	2302 : `关节润滑模块+`		+ ` # 关节润滑模块+,關節潤滑模組+,Joint Lubr. Module+,関節潤滑モジュール+`,
+	
+	2303 : `动力电容模块`		+ ` # 动力电容,動力電容,Power Capacitor,パワーコンデンサ`,
+	2304 : `动力电容模块+`		+ ` # 动力电容+,動力電容+,Power Capacitor+,パワーコンデンサ+`,
+	
+	2323 : `践踏足部模块`		+ ` # 践踏足,踐踏足,Trample claw,踏みにじるフットクロ`,
+	2324 : `践踏足部模块+`		+ ` # 践踏足+,踐踏足+,Trample claw+,踏みにじるフットクロ+`,
+	
+	2399 : `原型速度模块`		+ ` # 原型速度模块,原型速度模組,Prototype speed Module,プロトタイプ速度モジュール`,
+	2400 : `原型转轴模块`		+ ` # 原型转轴模块,原型轉軸模組,Prototype rotating Shaft Module,プロトタイプ回転軸モジュール`,
+	
+	2328 : `奔跑模块01`			+ ` # 奔跑模块,奔跑模組,Sprint Module,走行モジュール`,
+	2329 : `奔跑模块02`			+ ` # 奔跑模块+,奔跑模組+,Sprint Module+,走行モジュール+`,
+	2330 : `奔跑模块03`			+ ` # 高级奔跑模块,高級奔跑模組,Advanced Sprint Module,上級走行モジュール`,
+	2331 : `奔跑模块04`			+ ` # 制式奔跑模块,制式奔跑模組,Standard Sprint Module,制式走行モジュール`,
+	
+	// 合成材料
+	
+	40001 : `废铁`		+ ` # 废铁,廢鐵,Scrap Iron,くず鉄`,
+	40002 : `废料`		+ ` # 废料,廢料,Waste Material,スクラップ`,
+	40005 : `接合物件`	+ ` # 接合物件,接合物件,Joining Component,接続オブジェクト`,
+	40006 : `齿轮`		+ ` # 齿轮,齒輪,Gear,ギア`,
+	40007 : `框架`		+ ` # 框架,框架,Frame,フレーム`,
+	
+	40003 : `弹壳`		+ ` # 弹壳,彈殼,Bullet Shell,薬莢`,
+	40008 : `铁管`		+ ` # 铁管,鐵管,Iron Pipe,鉄パイプ`,
+	40009 : `扳机`		+ ` # 扳机,扳機,Trigger,トリガー`,
+	
+	40021 : `润滑油`	+ ` # 润滑油,潤滑油,Lubricating Oil,潤滑油`,
+	40022 : `火花塞`	+ ` # 火花塞,火花塞,Spark Plug,スパークプラグ`,
+	40023 : `冷冻剂`	+ ` # 冷冻剂,冷凍劑,Refrigerant,冷媒`,
+	
+	40028 : `共振器`	+ ` # 共振器,共振器,Resonator,共振器`,
+	40029 : `刀片`		+ ` # 刀片,刀片,Blade,ブレード`,
+	40030 : `振荡器`	+ ` # 振荡器,振盪器,Oscillator,発振回路`,
+	
+	40017 : `线圈`		+ ` # 线圈,線圈,Coil,コイル`,
+	40018 : `电容`		+ ` # 电容,電容,Capacitor,コンデンサ`,
+	40019 : `电感`		+ ` # 电感,電感,Inductor,インダクター`,
+	
+	40013 : `棱镜`		+ ` # 棱镜,稜鏡,Prism,プリズム`,
+	40014 : `透镜`		+ ` # 透镜,透鏡,Lens,レンズ`,
+	
+	40024 : `装甲`		+ ` # 装甲,裝甲,Armor,装甲`,
+	40025 : `厚装甲`	+ ` # 厚装甲,厚裝甲,Heavy Armor,厚い装甲`,
+	
+	40026 : `力场管`	+ ` # 力场管,力場管,Force Field Generator,力場パイプ`,
+	40027 : `力场膜`	+ ` # 力场膜,力場膜,Force Field Membrane,力場膜`,
+	
+	40034 : `螺旋桨`	+ ` # 螺旋桨,螺旋槳,Propeller,プロペラ`,
+	40033 : `飞行单元`	+ ` # 飞行单元,飛行單元,Flight unit,飛行ユニット`,
+	
+	40011 : `工业塑料`	+ ` # 工业塑料,工業塑膠,Industrial Plastic,工業用プラスチック`,
+	
+	40015 : `点火器`	+ ` # 点火器,點火器,Igniter,イグナイター`,
+	40016 : `冷凝管`	+ ` # 冷凝管,冷凝管,Condenser,復水管`,
+	40020 : `三极管`	+ ` # 三极管,三極管,Transistor,三極管`,
+	
+	40004 : `弹头`		+ ` # 弹头,彈頭,Warhead,弾頭`,
+	40010 : `雷管`		+ ` # 雷管,雷管,Detonator,起爆装置`,
+	40031 : `涂层`		+ ` # 涂层,塗層,Coating,コーティング`,
+	40012 : `弹链`		+ ` # 弹链,彈鏈,Ammunition Belt,弾帯`,
+	40032 : `核心`		+ ` # 核心,核心,Core,コア`,
+	
+	},
+	
+	文本描述 : {
+	
+	2050 : `机体移速 +20%(仅能抵消惩罚!)`						+ ` # 移动速度+<Description>%\n（仅抵消惩罚）,移動速度+<Description>%\n（僅抵消懲罰）,Increases movement speed by <Description>%.\n(neglects punishment only),移動速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2051 : `机体移速 +35%(仅能抵消惩罚!)`						+ ` # 移动速度+<Description>%\n（仅抵消惩罚）,移動速度+<Description>%\n（僅抵消懲罰）,Increases movement speed by <Description>%.\n(neglects punishment only),移動速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2052 : `机体移速 +55%(仅能抵消惩罚!)`						+ ` # 移动速度+<Description>%\n（仅抵消惩罚）,移動速度+<Description>%\n（僅抵消懲罰）,Increases movement speed by <Description>%.\n(neglects punishment only),移動速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2053 : `机体移速 +75%(仅能抵消惩罚!)`						+ ` # 移动速度+<Description>%\n（仅抵消惩罚）,移動速度+<Description>%\n（僅抵消懲罰）,Increases movement speed by <Description>%.\n(neglects punishment only),移動速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	
+	2054 : `炮塔转速 +15%(仅能抵消惩罚!)`						+ ` # 炮塔旋转速度+<Description>%\n（仅抵消惩罚）,炮塔旋轉速度+<Description>%\n（僅抵消懲罰）,Increases turret rotational speed by <Description>%.\n(neglects punishment only),砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2055 : `炮塔转速 +25%(仅能抵消惩罚!)`						+ ` # 炮塔旋转速度+<Description>%\n（仅抵消惩罚）,炮塔旋轉速度+<Description>%\n（僅抵消懲罰）,Increases turret rotational speed by <Description>%.\n(neglects punishment only),砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2056 : `炮塔转速 +40%(仅能抵消惩罚!)`						+ ` # 炮塔旋转速度+<Description>%\n（仅抵消惩罚）,炮塔旋轉速度+<Description>%\n（僅抵消懲罰）,Increases turret rotational speed by <Description>%.\n(neglects punishment only),砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2057 : `炮塔转速 +60%(仅能抵消惩罚!)`						+ ` # 炮塔旋转速度+<Description>%\n（仅抵消惩罚）,炮塔旋轉速度+<Description>%\n（僅抵消懲罰）,Increases turret rotational speed by <Description>%.\n(neglects punishment only),砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	
+	2308 : `起步马力 +15%`										+ ` # 起步马力+<Description>%,起步馬力+<Description>%,Starting horsepower +<Description>%,始動馬力+<Description>%`,
+	2309 : `起步马力 +25%`										+ ` # 起步马力+<Description>%,起步馬力+<Description>%,Starting horsepower +<Description>%,始動馬力+<Description>%`,
+	2310 : `起步马力 +40%`										+ ` # 起步马力+<Description>%,起步馬力+<Description>%,Starting horsepower +<Description>%,始動馬力+<Description>%`,
+	
+	2305 : `炮塔转速 +20%, 机体移速 - 5%`						+ ` # 炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,炮塔旋轉速度+<Description:0>%，移動速度<Description:1>%,Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.,砲塔旋回速度+<Description:0>%、移動速度<Description:1>%`,
+	2306 : `炮塔转速 +30%, 机体移速 -10%`						+ ` # 炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,炮塔旋轉速度+<Description:0>%，移動速度<Description:1>%,Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.,砲塔旋回速度+<Description:0>%、移動速度<Description:1>%`,
+	2307 : `炮塔转速 +50%, 机体移速 -15%`						+ ` # 炮塔旋转速度+<Description:0>%，移动速度<Description:1>%,炮塔旋轉速度+<Description:0>%，移動速度<Description:1>%,Increases turret rotational speed by <Description:0>% and movement speed by <Description:1>%.,砲塔旋回速度+<Description:0>%、移動速度<Description:1>%`,
+	
+	2401 : `蹲踞移速 +18%`										+ ` # 蹲踞移动速度+<Description>%,蹲踞移動速度+<Description>%,Increases Moving Speed when crouched by <Description>%.,しゃがむ中移動速度+<Description>%`,
+	2402 : `蹲踞移速 +30%`										+ ` # 蹲踞移动速度+<Description>%,蹲踞移動速度+<Description>%,Increases Moving Speed when crouched by <Description>%.,しゃがむ中移動速度+<Description>%`,
+	2403 : `蹲踞移速 +50%`										+ ` # 蹲踞移动速度+<Description>%,蹲踞移動速度+<Description>%,Increases Moving Speed when crouched by <Description>%.,しゃがむ中移動速度+<Description>%`,
+	
+	2325 : `奔跑速度 +20%, 机体移速 -10%`						+ ` # 奔跑速度+<Description:0>%，移动速度<Description:1>%,奔跑速度+<Description:0>%，移動速度<Description:1>%,Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.,走行速度+<Description:0>%、移動速度<Description:1>%`,
+	2326 : `奔跑速度 +30%, 机体移速 -15%`						+ ` # 奔跑速度+<Description:0>%，移动速度<Description:1>%,奔跑速度+<Description:0>%，移動速度<Description:1>%,Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.,走行速度+<Description:0>%、移動速度<Description:1>%`,
+	2327 : `奔跑速度 +40%, 机体移速 -20%`						+ ` # 奔跑速度+<Description:0>%，移动速度<Description:1>%,奔跑速度+<Description:0>%，移動速度<Description:1>%,Increases sprint speed by <Description:0>% and movement speed by <Description:1>%.,走行速度+<Description:0>%、移動速度<Description:1>%`,
+	
+	2404 : `奔跑替换为飞行(装备同类模块则起飞速度 +25%)`		+ ` # 将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,將機甲的奔跑功能替換為飛行（重複裝備同類模組，增加起飛速度）,Replace the running function of the body with flying (if equipped with similar modules repeatedly， increase takeoff speed),機体の走行機能を飛行に置き換える（同種のモジュールを繰り返し装備して離陸速度を上げる場合）`,
+	2405 : `奔跑替换为飞行(装备同类模块则起飞速度 +40%)`		+ ` # 将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,將機甲的奔跑功能替換為飛行（重複裝備同類模組，增加起飛速度）,Replace the running function of the body with flying (if equipped with similar modules repeatedly， increase takeoff speed),機体の走行機能を飛行に置き換える（同種のモジュールを繰り返し装備して離陸速度を上げる場合）`,
+	2406 : `奔跑替换为飞行(装备同类模块则起飞速度 +75%)`		+ ` # 将机甲的奔跑功能替换为飞行（重复装备同类模块，增加起飞速度）,將機甲的奔跑功能替換為飛行（重複裝備同類模組，增加起飛速度）,Replace the running function of the body with flying (if equipped with similar modules repeatedly， increase takeoff speed),機体の走行機能を飛行に置き換える（同種のモジュールを繰り返し装備して離陸速度を上げる場合）`,
+	
+	2301 : `奔跑能耗 -12%`										+ ` # 奔跑能量消耗<Description>%,奔跑能量消耗<Description>%,Reduces sprint energy consumption by <Description>%.,走行エネルギー消費<Description>%`,
+	2302 : `奔跑能耗 -20%`										+ ` # 奔跑能量消耗<Description>%,奔跑能量消耗<Description>%,Reduces sprint energy consumption by <Description>%.,走行エネルギー消費<Description>%`,
+	
+	2303 : `能耗恢复 +12%`										+ ` # 奔跑能量回复+<Description>%,奔跑能量回復+<Description>%,Increases sprint energy regeneration by <Description>%.,走行エネルギー回復+<Description>%`,
+	2304 : `能耗恢复 +20%`										+ ` # 奔跑能量回复+<Description>%,奔跑能量回復+<Description>%,Increases sprint energy regeneration by <Description>%.,走行エネルギー回復+<Description>%`,
+	
+	2323 : `全速奔跑撞击房屋可造成 5 k 伤害(效果可叠加)`		+ ` # 全速奔跑状态下撞击房屋造成<Description>伤害（效果可叠加）,全速奔跑狀態下撞擊房屋造成<Description>傷害（效果可疊加）,Running at full speed and colliding with a house can cause <Description> damage(effect can stack),全速力で走った状態でけんちくぶつに衝突すると<Description>ダメージを与える（効果は重ねることができる）`,
+	2324 : `全速奔跑撞击房屋可造成 10k 伤害(效果可叠加)`		+ ` # 全速奔跑状态下撞击房屋造成<Description>伤害（效果可叠加）,全速奔跑狀態下撞擊房屋造成<Description>傷害（效果可疊加）,Running at full speed and colliding with a house can cause <Description> damage(effect can stack),全速力で走った状態でけんちくぶつに衝突すると<Description>ダメージを与える（効果は重ねることができる）`,
+	
+	2399 : `机体移速 +10%(仅能抵消惩罚, 重铸的保底物品)`		+ ` # 移动速度+<Description>%\n（仅抵消惩罚）,移動速度+<Description>%\n（僅抵消懲罰）,Increases movement speed by <Description>%.\n(neglects punishment only),移動速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	2400 : `炮塔转速 +10%(仅能抵消惩罚, 重铸的保底物品)`		+ ` # 炮塔旋转速度+<Description>%\n（仅抵消惩罚）,炮塔旋轉速度+<Description>%\n（僅抵消懲罰）,Increases turret rotational speed by <Description>%.\n(neglects punishment only),砲塔旋回速度+<Description>%\n(ペナルティ相殺用のみ)`,
+	
+	2328 : `奔跑速度 +10%`										+ ` # 奔跑速度+<Description>%,奔跑速度+<Description>%,Increases sprint speed by <Description>%.,走行速度+<Description>%`,
+	2329 : `奔跑速度 +15%`										+ ` # 奔跑速度+<Description>%,奔跑速度+<Description>%,Increases sprint speed by <Description>%.,走行速度+<Description>%`,
+	2330 : `奔跑速度 +20%`										+ ` # 奔跑速度+<Description>%,奔跑速度+<Description>%,Increases sprint speed by <Description>%.,走行速度+<Description>%`,
+	2331 : `奔跑速度 +25%`										+ ` # 奔跑速度+<Description>%,奔跑速度+<Description>%,Increases sprint speed by <Description>%.,走行速度+<Description>%`,
+	
+	},
+	
+	物品类型 : {
+	
+	BuffModelFoot	: `足部强化`		, // + ` # 足部强化模块,足部強化模組,Foot enhancement module,脚部強化モジュール`,
+	
+	},
+	
+	归属种类 : {
+	
+	BuffModel		: `足部强化`		, // + ` # 主强化模块,主強化模組,Main enhancement module,メイン強化モジュール`,
+	Cannon			: `炮塔强化`		, // + ` # 炮塔强化模块,炮塔強化模組,Turret enhancement module,砲塔強化モジュール`,
+	Door			: `大门强化`		, // + ` # 大门模块,大門模組,Gate module,ゲートモジュール`,
+	
+	},
+	
+	原型研发 : {
+	
+	Main2_1			: `船舶集团有限公司`			, // + ` # 船舶集团有限公司,船舶集團有限公司,Shipbuilding Group Co.， Ltd,船舶重工グループ株式会社`,
+	Main2_2			: `航空集团有限公司`			, // + ` # 航空集团有限公司,航空集團有限公司,Aviation Group Co.， Ltd,航空グループ株式会社`,
+	Main2_3			: `总装备制造局`				, // + ` # 总装备制造局,總裝備製造局,General Equipment Manufacturing Bureau,汎用設備製造局`,
+	Main2_4			: `苏尔发动机制造局`			, // + ` # 苏尔发动机制造局,蘇爾發動機製造局,Sul Engine Manufacturing Bureau,スールエンジン製造局`,
+	Main2_5			: `风神公司`					, // + ` # 风神公司,風神公司,Hermes Company,風神公司`,
+	Main2_6			: `布尔发动机公司`				, // + ` # 布尔发动机公司,布爾發動機公司,Boolean Engine Company,ブールエンジン株式会社`,
+	Main2_7			: `蓝天电子公司`				, // + ` # 蓝天电子公司,藍天電子公司,Blue Sky Electronics Company,青空電子株式会社`,
+	Main2_8			: `首都兵工厂`					, // + ` # 首都兵工厂,首都兵工廠,Capital Arsenal,首都兵器工場`,
+	Main2_9			: `帝国火炮集团`				, // + ` # 帝国火炮集团,帝國火炮集團,Imperial Artillery Group,帝国火砲集団`,
+	Main2_10		: `格罗姆钢管厂`				, // + ` # 格罗姆钢管厂,格羅姆鋼管廠,Grom Steel Pipe Factory,グロム鋼管工場`,
+	Main2_11		: `弹头总装部`					, // + ` # 弹头总装部,彈頭總裝部,Bullet Assembly Department,弾頭総装填部`,
+	Main2_12		: `帝国仪器厂`					, // + ` # 帝国仪器厂,帝國儀器廠,Imperial Instrument Factory,帝国計器工場`,
+	
+	Company_2017	: `黎明工业`					, // + ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
+	Company_2042	: `Valesworn. Inc`				, // + ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
+	Company_2049	: `堡垒防务集团`				, // + ` # 堡垒防务集团,堡壘防務集團,Bastion Defence Group,砦防衛グループ`,
+	Company_2053	: `滞后产品制造`				, // + ` # 滞后产品制造,滯後產品製造,Lagging Products,ラッギング製品`,
+	Company_2077	: `西金川工业公司`				, // + ` # 西金川工业公司,西金川工業公司,West Jinchuan Industrial Company,西金川工業公司`,
+	Company_2100	: `触手研究所`					, // + ` # 触手研究所,觸手研究所,Tentacle research institute,触手研究所`,
+	Company_2117	: `中微子科技`					, // + ` # 中微子科技,中微子科技,Neutrino technology,ニュートリノテクノロジー`,
+	Company_2124	: `提西亚电子公司`				, // + ` # 提西亚电子公司,提西亞電子公司,Tecia Electronics Company,ティシア電子`,
+	Company_2126	: `CMF护盾技术`					, // + ` # CMF护盾技术,CMF護盾技術,CMF's Shield TECH,CMFシールド技術`,
+	Company_2158	: `水雷部纯氧鱼类研发中心`		, // + ` # 水雷部纯氧鱼类研发中心,水雷部純氧魚類研發中心,Pure Oxygen Fish Research and Development Center of the Mine Department,機雷部純酸素魚類研究開発センター`,
+	Company_2398	: `箱崎重工`					, // + ` # 箱崎重工,箱崎重工,Hakozaki heavy industry,箱崎重工`,
+	Company_2399	: `施罗斯防务兵工厂`			, // + ` # 施罗斯防务兵工厂,施羅斯防務兵工廠,Defense weapons arsenal,シュロース防衛兵器工廠`,
+	
+	TankType_PlayerName_0 : `玛　丽`				, // + ` # 玛丽,瑪麗,Mary,メアリー`,
+	TankType_PlayerName_1 : `库罗库`				, // + ` # 库罗库,庫羅庫,Kuroku,クロック`,
+	TankType_PlayerName_2 : `桑/San`				, // + ` # 桑,桑,San,サン`,
+	TankType_PlayerName_3 : `赭石色`				, // + ` # 赭石色,赭石色,Ocher,オーカー`,
+	TankType_PlayerName_4 : `克莱尔`				, // + ` # 克莱尔,克萊爾,Claire,クレア`,
+	
+	},
+	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
-
-// 生成表格
-tbodyArray01.forEach(function(item){
-	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
-	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 武器图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/06_mecha_foot/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
-		
-		// 武器名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
-		
-		// 物品类型
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (TypeList[data][0]) +'</td>' }else 
-		
-		// 归属种类
-		if(index === 10){
-			let result = data.split('|').map(
-			function(e){ return TagList[e][0] }).join(' | ');
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 原型研发
-		if(index === 11){
-			let result = CompanyList[data][0];
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 合成材料
-		if(index === 12){
-			let result = data;
-			if(result != '-'){
-				result=data.split('|').map(function(string){
-					let [name, count, ] = string.split('_');
-					if(name.charAt(0) === '4'){ return count + ScrapList[name][0] }
-					else if(name.charAt(0) === '1'){ return count + ItemsNameList[name][0] }
-				}).join(' + ');
-			};
-			powerTable_tbody_node01 += 
-			'<td>'+ (result === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>'
-		}else 
-		
-		// 出现条件
-		if(index === 13){
-			let result = '';
-			let dataList = [];
-			data.split('|').forEach(function(code){
-				if(code.indexOf('_') === -1){ dataList.push(code) }else{
-					let [start, end, ] = code.split('_');
-					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
-				};
-			});
-			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
-		
-		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
-		
-		// 常规数据
-		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
-	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
-	
-});
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
-xj2._buildPowerTable('powerTable01');
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
 
 // ---------------------------------------------
 
-// 配件等级
-let attrSelect01Option = [
-	{value: '1',	text: ['Level +1',						'Level +1',						'Level +1',						][0],		},
-	{value: '2',	text: ['Level +2',						'Level +2',						'Level +2',						][0],		},
-	{value: '3',	text: ['Level +3',						'Level +3',						'Level +3',						][0],		},
-	{value: '-1',	text: ['Level -1(满级)',				'Level -1(最高)',				'Level -1(Full)',				][0],		},
-	{value: '-2',	text: ['Level -2(不可升级)',			'Level -2(進階不可)',			'Level -2(AntiGoUp)',			][0],		},
-	{value: '-3',	text: ['Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		'Level -3(-1 + -2 = -3)',		][0],		},
+// 生成表格
+csv0.forEach(function(item, index){
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	
+	// -----------------------------------------
+	
+	// 空行处理
+	if(item === 'blankRow'){
+		if(csv0[index+1] !== 'blankRow'){
+		powerTable01_group+=1};
+		return;
+	}else{
+		powerTable01_index +=1;
+	};
+	
+	// -----------------------------------------
+	
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.物品类型.text = textList.物品类型[item[3]];
+	item.原型研发.text = textList.原型研发[item[8]];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){	// 直接合并
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){	// 替换变量
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.解锁天数.text = (function(){	// 转换变量
+		
+		if(item.解锁天数.code === '$StrategyOpenDay'){ 
+		return (item.解锁天数.code = '22') }; 
+		
+		if(item.解锁天数.code === '$NightOpenDay'){ 
+		return (item.解锁天数.code = '65') };
+		
+		if(item.解锁天数.code === '$AirOpenDay'){ 
+		return (item.解锁天数.code = '47') };
+		
+		return (item.解锁天数.code);
+		
+	})();
+	
+	item.归属种类.text = (function(){	// 处理空值
+		
+		let result = item.归属种类.code.split('|');
+		
+		result = result.filter(function(value){ 
+			return (value === 'CantGen') ? false : true });
+		if(result.length === 1 && result[0] === ''){ result = [ ] };
+		
+		if(result.length === 0){
+			if(item.物品类型.code === 'WeaponModel'){ result.push('RangedWeapon') }else
+			if(item.物品类型.code === 'CloseWeaponModel'){ result.push('MeeleeWeapon') }else
+			if(item.物品类型.code === 'HangShoulderModel'){ result.push('ShoulderWeapon') };
+		};
+		
+		item.归属种类.code = result;
+		return result.map(function(value){ return textList.归属种类[value] }).join('<br />');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	let 合成材料_text = '';
+	let 合成材料_html = '';
+	item.合成材料.code.split('|').forEach(function(value,index,array){
+		
+		let id = '', length = '0';
+		let itemName = '无法合成';
+		let imageName = 'x', folderName = '.';
+		if(value === ''){ 合成材料_text = 'Unmake' }else{
+			
+			[id, length, ] = value.split('_');
+			
+			imageName = id;
+			itemName = textList.项目名称[id].replace(/(\s)#(.+)/,'');
+			合成材料_text = (合成材料_text + itemName +'×'+ length + (index + 1 < array.length ? ' + ' : ''));
+			
+			if(id.startsWith('4')){ folderName = 'material' }else 
+			if(id === '1101'){ folderName = '09_mecha_frag' }; // 仅有一个特殊材料
+			
+		};
+		
+		合成材料_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>×${(length.length>=2?'':' ')+length}</span>
+				<span>${itemName}</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	合成材料_html = `<div class='itemFlex'>`+ 合成材料_html +`</div>`;
+	
+	let 出现条件_text = '';
+	let 出现条件_html = '';
+	item.出现条件.code.split('|').map(function(number){
+		
+		// 将范围值展开成具体的 id 列表
+		
+		if(number.includes('_') !== true){ return number };
+		let [start,end,] = number.split('_'), result = [ ];
+		
+		start = Number(start), end = Number(end);
+		while(start <= end){ 
+			result.push(String(start));
+			start = start+1;
+		};
+		
+		return result;
+		
+	}).flat()
+	.map(function(value){
+		
+		// 对武器用 id 最后两位进行排序
+		if(value === ''){ return '' }else 
+		if(value.length <= 4){ return '00#'+value }else 
+		if(value.length >= 5){ return value.slice(-2) + '#' + value };
+		
+	}).sort()
+	.map(function(value){
+		
+		// 排序后去掉上步为了排序的前缀
+		return value.replace(/..#/,'');
+		
+	})
+	.filter(function(value, index, array){
+		
+		// 同类的也显示, 但重复的不显示
+		let flag = true;
+		if(index >= 1 && value === array[index-1]){ flag = false }
+		return flag; //
+		
+	})
+	.forEach(function(value, index, array){
+		
+		let folderName = '.';
+		let imageName = 'x';
+		let itemName = '自动解锁'
+		if(value === ''){ 出现条件_text = 'Unlock' }else{
+			
+			if((Number(value) >= 10000 && Number(value) <= 19999) || (Number(value) >= 1250 && Number(value) <= 1262)){ folderName = '01_weapon_list' }else 
+			if(Number(value) >= 1101 && Number(value) <= 1126){ folderName = '09_mecha_frag' }
+			else{ folderName = '06_mecha_foot' };
+			imageName = value;
+			
+			itemName =  textList.项目名称[value].replace(/(\s)#(.+)/,'');
+			出现条件_text += itemName + (index+1< array.length? ',': '');
+			
+		};
+		
+		出现条件_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>→</span><span>${ itemName }</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	出现条件_html = `<div class='itemFlex'>`+ 出现条件_html +`</div>`;
+	
+	// -----------------------------------------
+	
+	item.物品类型.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.物品类型.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.物品类型.text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.归属种类.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.归属种类.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.归属种类.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.原型研发.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.原型研发.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.原型研发.text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.合成材料.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${合成材料_html}">
+		<div class="ellipsis-1" style="width:30px;">${合成材料_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.出现条件.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${出现条件_html}">
+		<div class="ellipsis-1" style="width:30px;">${出现条件_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/06_mecha_foot/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/06_mecha_foot/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable01_tbody_html += item.物品类型.text;
+	powerTable01_tbody_html += item.归属种类.text;
+	powerTable01_tbody_html += item.原型研发.text;
+	powerTable01_tbody_html += item.合成材料.text;
+	powerTable01_tbody_html += item.出现条件.text;
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
+	
+});
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
+xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+
+// ---------------------------------------------
+
+// 装备等级
+let attrSelect01_Option = [
+	['1',				'Level +1',					],
+	['2',				'Level +2',					],
+	['3',				'Level +3',					],
+	['-1',				'Level -1(满级)',			],
+	['-2',				'Level -2(不可升级)',		],
+	['-3',				'Level -3(-1 + -2 = -3)',	],
 ];
 
 // 物品类型
-let attrSelect02Option = [
-	{value: 'BuffModelFoot',	text: ['足部强化',		'脚部強化モジュール',		'Foot enhancement module',			][0],		},
+let attrSelect02_Option = [
+	['BuffModelFoot',	'足部强化',					],
 ];
 
 // 归属种类
-let attrSelect03Option = [
-	{value: 'BuffModel',	text: ['足部',		'脚部強化モジュール',		'Foot enhancement module',			][0],		},
-	{value: 'Cannon',		text: ['炮塔',		'砲塔強化モジュール',		'Turret enhancement module',		][0],		},
+let attrSelect03_Option = [
+	['BuffModel',		'足部强化',					],
+	['Cannon',			'炮塔强化',					],
+	['Door',			'大门强化',					],
 ];
 
 // 原型研发
-let attrSelect04Option = [
-	{value: 'Main2_2',					text: ['航空集团有限公司',			'航空グループ株式会社',				'Aviation Group Co., Ltd',				][0],		},
-	{value: 'Main2_4',					text: ['苏尔发动机制造局',			'スールエンジン製造局',				'Sul Engine Manufacturing Bureau',		][0],		},
-	{value: 'Main2_6',					text: ['布尔发动机公司',			'ブールエンジン株式会社',			'Boolean Engine Company',				][0],		},
-	{value: 'TankType_PlayerName_1',	text: ['库罗库',					'クロック',							'Kuroku',								][0],		},
+let attrSelect04_Option = [
+	['Main2_1',			`船舶集团有限公司`,			],
+	['Main2_2',			`航空集团有限公司`,			],
+	['Main2_3',			`总装备制造局`,				],
+	['Main2_4',			`苏尔发动机制造局`,			],
+	['Main2_5',			`风神公司`,					],
+	['Main2_6',			`布尔发动机公司`,			],
+	['Main2_7',			`蓝天电子公司`,				],
+	['Main2_8',			`首都兵工厂`,				],
+	['Main2_9',			`帝国火炮集团`,				],
+	['Main2_10',		`格罗姆钢管厂`,				],
+	['Main2_11',		`弹头总装部`,				],
+	['Main2_12',		`帝国仪器厂`,				],
+	['Company_2017',	`黎明工业`,					],
+	['Company_2042',	`Valesworn. Inc`,			],
+	['Company_2049',	`堡垒防务集团`,				],
+	['Company_2053',	`滞后产品制造`,				],
+	['Company_2077',	`西金川工业公司`,			],
+	['Company_2100',	`触手研究所`,				],
+	['Company_2117',	`中微子科技`,				],
+	['Company_2124',	`提西亚电子公司`,			],
+	['Company_2126',	`CMF护盾技术`,				],
+	['Company_2158',	`水雷部纯氧鱼类研发中心`,	],
+	['Company_2398',	`箱崎重工`,					],
+	['Company_2399',	`施罗斯防务兵工厂`,			],
+	['TankType_PlayerName_0', `玛　丽`,				],
+	['TankType_PlayerName_1', `库罗库`,				],
+	['TankType_PlayerName_2', `桑/San`,				],
+	['TankType_PlayerName_3', `赭石色`,				],
+	['TankType_PlayerName_4', `克莱尔`,				],
 ];
 
-// 创建空值
-let attrSelect01Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect02Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect03Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-let attrSelect04Html = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
-
-// 生成结构
-attrSelect01Option.forEach(function(obj){ attrSelect01Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect02Option.forEach(function(obj){ attrSelect02Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect03Option.forEach(function(obj){ attrSelect03Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
-attrSelect04Option.forEach(function(obj){ attrSelect04Html += '<option value="'+ obj.value +'">'+ obj.text +'</option>' });
+// 获取对象
+let jqi_nameInput01 = $('#nameInput01'), jqi_nameCheck01 = $('#nameCheck01'), jqi_resetButton = $('#resetButton');
+let str_emptyOption = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
 
 // 创建元素
-let jqi_attrSelect01 = $('#attrSelect01').html(attrSelect01Html);
-let jqi_attrSelect02 = $('#attrSelect02').html(attrSelect02Html);
-let jqi_attrSelect03 = $('#attrSelect03').html(attrSelect03Html);
-let jqi_attrSelect04 = $('#attrSelect04').html(attrSelect04Html);
-
-// 其余元素
-let jqi_nameInput01 = $('#nameInput01');
-let jqi_nameCheck01 = $('#nameCheck01');
-let jqi_resetButton = $('#resetButton');
+let jqi_attrSelect01 = $('#attrSelect01').html(str_emptyOption + attrSelect01_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect02 = $('#attrSelect02').html(str_emptyOption + attrSelect02_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect03 = $('#attrSelect03').html(str_emptyOption + attrSelect03_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect04 = $('#attrSelect04').html(str_emptyOption + attrSelect04_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
 
 // ---------------------------------------------
 
 // 获取 tbody 和 tr
 let jqi_table01_tbody = $('#powerTable01 tbody'), jqi_table01_tbody_tr = jqi_table01_tbody.find('tr');
 
-// 创建无结果 tr 行
-let jqi_empty_result_tr = $(/*html*/`
-<tr class="emptyTr tr-active" style="position:relative;"><td colSpan="99" style="text-align:center;height:64px;"><span>没有任何匹配的结果
-<br />There Are No Matching Results</span><span style="position:absolute;top:0;bottom:1px;left:0;width:5px;background-image:linear-gradient(180deg, #6991e7 0%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 75%, #6991e7 100%);"></span></td></tr>`);
+// 创建无结果的节点
+let jqi_empty_result_tr = $(/*html*/`<tr index="-1" group="-1" style="height: 65px;" class="emptyTr">
+<td colSpan="99"><span>没有任何匹配的结果!<br />There Are No Any Matching Results!</span></td></tr>`);
 
 // 创建总筛选的函数
-let filterFunction = function(event){
+let filterFunction = function(){
 	
-	// 要显示的 tr 列表
+	// 将要展示的tr合集
 	let trShowIndexArray = [];
 	
-	// 下拉菜单当前的值
+	// 表单元素当前的值
 	let jqi_attrSelect01_value = jqi_attrSelect01.val();
 	let jqi_attrSelect02_value = jqi_attrSelect02.val();
 	let jqi_attrSelect03_value = jqi_attrSelect03.val();
 	let jqi_attrSelect04_value = jqi_attrSelect04.val();
 	
-	// 没筛选则直接返回
-	if(jqi_nameInput01.val() === ''
-	&& jqi_attrSelect01_value === 'empty'
-	&& jqi_attrSelect02_value === 'empty'
-	&& jqi_attrSelect03_value === 'empty'
-	&& jqi_attrSelect04_value === 'empty'){
-		jqi_table01_tbody_tr.removeClass('hideTr');
-		jqi_empty_result_tr.remove();
-		return undefined;
-	};
-	
 	// 获取匹配项的索引
-	jqi_nameInput01.val().trim().split(/ {1,}/)
-	.forEach(function(text, index01){
-		tbodyArray01.forEach(function(item, index02){
-			if(ItemsNameList[item[4]][0].includes(text)
-			|| DescriptionList[item[4]][0].includes(text)){
+	jqi_nameInput01.val().trim()
+	.split(/ {1,}/).forEach(function(text){
+		csv0.forEach(function(item){
+			if(item !== 'blankRow' && (item.项目名称.text.
+			includes(text) === true || item.文本描述.text.includes(text) === true)){
 				
-				// if(jqi_attrSelect01_value !== 'empty' 
-				// && jqi_attrSelect01_value !== String(item[6])){ return }; // 配件等级
+				// 装备等级
 				if(jqi_attrSelect01_value !== 'empty'){
 					if(jqi_attrSelect01_value !== '-3' 
-					&& jqi_attrSelect01_value !== String(item[6])){ return }else 
-					if(jqi_attrSelect01_value === '-3' && String(item[6]) !== '-1' && String(item[6]) !== '-2'){ return };
+					&& jqi_attrSelect01_value !== String(item.装备等级.code)){ return }else 
+					if(jqi_attrSelect01_value === '-3' && String(item.装备等级.code) !== '-1' && String(item.装备等级.code) !== '-2'){ return };
 				};
 				
 				// 物品类型
-				if(jqi_attrSelect02_value !== 'empty' 
-				&& jqi_attrSelect02_value !== item[ 9]){ return };
+				if(jqi_attrSelect02_value !== 'empty' && jqi_attrSelect02_value !== item.物品类型.code){ return };
 				
 				// 归属种类
 				if(jqi_attrSelect03_value !== 'empty' 
-				&& item[10].indexOf(jqi_attrSelect03_value) === -1){ return };
+				&& item.归属种类.code.includes(jqi_attrSelect03_value) === false){ return };
 				
 				// 原型研发
 				if(jqi_attrSelect04_value !== 'empty' 
-				&& jqi_attrSelect04_value !== item[11]){ return };
+				&& jqi_attrSelect04_value !== item.原型研发.code){ return };
 				
 				// 符合条件
-				trShowIndexArray.push(index02);
+				trShowIndexArray
+				.push(String(item.项目序号));
 				
 			};
 		});
@@ -654,28 +938,35 @@ let filterFunction = function(event){
 	// 根据结果显示隐藏
 	if(trShowIndexArray.length === 0){
 		jqi_table01_tbody_tr.addClass('hideTr');
+		jqi_empty_result_tr.removeClass('hideTr' );
 		jqi_table01_tbody.append(jqi_empty_result_tr);
 	}else{
 		jqi_empty_result_tr.remove();
-		jqi_table01_tbody_tr.addClass('hideTr');
-		trShowIndexArray.forEach(function(value){ 
-		jqi_table01_tbody_tr.eq(value).removeClass('hideTr') });
+		jqi_table01_tbody_tr.each(function(index, value){
+			if(trShowIndexArray.includes(value.getAttribute('index')) 
+			=== true){ value.classList.remove('hideTr') }else{ value.classList.add('hideTr') };
+		});
 	};
+	
+	// 合并同类设置高亮
+	xj2._groupedSet(jqi_powerTable01);
 	
 };
 
 // 绑定表单控件操作
-[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(jqi){ jqi.on('change', function(event){ filterFunction(event) }) });
-jqi_nameInput01.on('keyup', function(event){ if(event.keyCode === 13){ filterFunction(event) } });
-jqi_nameInput01.on('blur' , function(event){ filterFunction(event) });
-jqi_nameCheck01.on('click', function(event){ filterFunction(event) });
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+jqi_select){ jqi_select.on('change', function(){ filterFunction() }) });
+jqi_nameInput01.on('input', function(){ filterFunction() });
 jqi_resetButton.on('click', function(){
 	jqi_nameInput01.val('');
-	[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04,].
-	forEach(function(jqi){ jqi.find('option:first').prop('selected', true) });
-	jqi_table01_tbody_tr.removeClass('hideTr');
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+	jqi_select){ jqi_select.find('option:first').prop('selected', true) });
 	jqi_empty_result_tr.remove();
+	filterFunction();
 });
+
+// 自动执行一次筛选
+filterFunction();
 
 })();
 </script>
@@ -688,7 +979,7 @@ jqi_resetButton.on('click', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.0</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
 </div>
 </div>
 </div>

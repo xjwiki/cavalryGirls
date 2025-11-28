@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-08T23:59:59UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-08T23:59:59UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-08T23:59:59UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -123,6 +123,10 @@
 	03. 目前仅剧情模式和无尽模式会开放宿舍, 此时采购部有概率出售家具, 也可以选择在休息室耗费 <c>1</c> 行动点来制作一个随机的家具; <br />
 	04. 由于宿舍空间有限, 因此家具的选择与摆放也颇有讲究, 需尽量选体积小而价格高的并合理规划布局, 更多细节可查阅 <a href="#heading02"># 额外拓展</a>; <br />
 </p>
+
+<!--◇
+◆现在家具可以被合成了, 但是需要家具相关的零件, 这种零件只能通过解体"家具补给箱", 而这种补给箱只能在外围阵地捡到, 或者在生活区>休息室>制作家具, 通过在商店里专门刷新家具物品也可能买到
+◇-->
 
 <table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
 	<thead>
@@ -209,19 +213,19 @@ let tbodyArray01 = [
 	// 高亮,			项目图片,		项目序号,		项目名称,		项目代码,		参考价格,		默认排序,		项目类型,		归属种类,		解锁天数,		舒适程度,		原型研发,					文本描述,			],		
 	// Active,			Image,			Number,			Name,			Items,			Price,			ResolveID,		Type,			Tag,			Day,			AddComfort,		Company,					Description,		],		//01		
 	
-	[1,					4001,			01,				'杂物篮',		4001,			8,				954,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		
-	[1,					4008,			02,				'杂物箱',		4008,			8,				961,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		//01		
+	[1,					4001,			'01',			'杂物篮',		4001,			8,				954,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		
+	[1,					4008,			'02',			'杂物箱',		4008,			8,				961,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		//01		
 	
-	[0,					4002,			03,				'无靠背椅',		4002,			12,				955,			'Furniture',	'Normal',		15,				'+3',			'Sub_8',					'-',				],		
-	[0,					4004,			04,				'白色椅子',		4004,			8,				957,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		//01		
+	[0,					4002,			'03',			'无靠背椅',		4002,			12,				955,			'Furniture',	'Normal',		15,				'+3',			'Sub_8',					'-',				],		
+	[0,					4004,			'04',			'白色椅子',		4004,			8,				957,			'Furniture',	'Normal',		15,				'+2',			'Sub_8',					'-',				],		//01		
 	
-	[1,					4015,			05,				'一盆绿植',		4015,			12,				968,			'Furniture',	'Normal',		15,				'+3',			'Sub_8',					'-',				],		
-	[1,					4014,			06,				'很多绿植',		4014,			24,				967,			'Furniture',	'Normal',		15,				'+6',			'Sub_8',					'-',				],		//01		
+	[1,					4015,			'05',			'一盆绿植',		4015,			12,				968,			'Furniture',	'Normal',		15,				'+3',			'Sub_8',					'-',				],		
+	[1,					4014,			'06',			'很多绿植',		4014,			24,				967,			'Furniture',	'Normal',		15,				'+6',			'Sub_8',					'-',				],		//01		
 	
-	[0,					4003,			07,				'简易行军床',	4003,			16,				956,			'Furniture',	'Normal',		15,				'+4',			'Sub_8',					'-',				],		
-	[0,					4011,			08,				'很舒服的床',	4011,			32,				964,			'Furniture',	'Normal',		15,				'+8',			'Sub_8',					'-',				],		//01		
+	[0,					4003,			'07',			'简易行军床',	4003,			16,				956,			'Furniture',	'Normal',		15,				'+4',			'Sub_8',					'-',				],		
+	[0,					4011,			'08',			'很舒服的床',	4011,			32,				964,			'Furniture',	'Normal',		15,				'+8',			'Sub_8',					'-',				],		//01		
 	
-	[1,					4020,			09,				'顶灯',			4020,			40,				973,			'Furniture',	'Normal',		20,				'+4',			'Sub_7',					'-',				],		
+	[1,					4020,			'09',			'顶灯',			4020,			40,				973,			'Furniture',	'Normal',		20,				'+4',			'Sub_7',					'-',				],		
 	[1,					4013,			10,				'台灯',			4013,			20,				966,			'Furniture',	'Normal',		15,				'+5',			'Sub_8',					'-',				],		//01		
 	
 	[0,					4019,			11,				'挂画',			4019,			18,				972,			'Furniture',	'Normal',		15,				'+3',			'Sub_8',					'-',				],		
@@ -529,7 +533,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.0</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
 </div>
 </div>
 </div>

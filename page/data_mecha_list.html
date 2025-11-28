@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-08T23:59:59UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-08T23:59:59UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-08T23:59:59UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,19 +118,18 @@
 <section><h2 id="heading01">01. 机甲列表</h2>
 
 <p>
-	01. 以下是机体的详情列表, 由于属性比较多且复杂, 这里不好展开解释, 因此 XJ 在表格的后面做了详细的描述, 请查阅 <a href="#heading03"># 属性解析</a>; <br />
-	02. 数据超过 <c>40</c> 项, 因此表格被拆成了三部分, 可点击表格右上角按钮或用键盘的左右或 AD 按键翻页, 数字键 123 也能实现定位; <br />
-	03. 机体共有 <c>17</c> 台, 可细分为五大类: 主力机体(5)/作战单元(5)/机枪炮塔(5)/无人战机(1)/大门(1), 它们是对抗敌人的基本单位; <br />
-	04. 每个类型的机体都有自己的特色, 甚至是其中的无人战机, 还存在着更多细分状态, 对此 XJ 也做了剖析, 详情请查阅 <a href="#heading04"># 额外拓展</a>; <br />
+	01. 以下是机体的详情列表, 由于属性项较多(40+), 这里不好展开解释, 因此 XJ 在表格的后面做了具体描述, 详情请查阅 <a href="#heading03"># 属性解析</a><br />
+	02. 机体共有 <c>17</c> 台, 可细分为[载人主机(5)/作战单元(5)/机枪炮塔(5)/无人机(1)/大门(1)] <c>5</c> 大类, 它们是对抗敌人的基本单位<br />
+	03. 每个类型的机体都有自己的特色, 甚至是其中的无人战机, 还存在着更多的细分状态, XJ 对此也做了剖析, 详情请查阅 <a href="#heading02"># 无人战机</a><br />
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
 			
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">机体图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">机体序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;z-index:36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">机体名称<i class="icon fas fa-sort" style="margin-left:00;"></i>
+			<th sorttype="string" class="showPart00" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart00" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart00" style="width: 96px;padding-top:6px;z-index: 36;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i>
 			</span>
 				<div id="turnPart">
 					<button id="nextPart" type="button" title="Next Part"><i class="fas fa-arrow-right"></i></button>
@@ -139,50 +138,50 @@
 				</div>
 			</th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始血量<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奔跑能量<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">起步马力<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大移速<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">炮台转速<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">穿甲抵抗<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">爆炸抗性<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">属性抗性<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">属性免疫<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">无人机数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">机数上限<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">投掷距离<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">操控机师<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始血量</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>奔跑能量</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>起步马力</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大移速</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>炮台转速</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>穿甲抵抗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>爆炸抗性</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>属性免疫</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>属性抗性</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>投掷距离</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>机体重量</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>原型研发</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>操控机师</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
 			
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">左手远程<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">右手远程<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">左手近战<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">右手近战<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">主体强化<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">主体上限<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">足部强化<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">足部上限<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">投掷强化<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">投掷上限<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">挂件槽位<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">改造槽位<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">无人机槽<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">机体重量<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>左远槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>右远槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>左近槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>右近槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>主体槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>主体上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>足部槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>足部上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>投掷槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>投掷上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>挂件槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>改造槽位</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>无人机槽</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart02" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>无人机数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart02" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>特别注释</b><i class="icon fas fa-sort"></i></span></th>
 			
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">左手<br />远程<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">右手<br />远程<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">左手<br />近战<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">右手<br />近战<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">机体<br />改造<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">主体<br />强化<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">投掷<br />物品<br />初始<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
-			<th sorttype="number" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-no;letter-spacing:2px;">挑战<br />模式<br />自带<br />装备<br /><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>左远装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>右远装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>左近装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>右近装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>挂件装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>投掷装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>改造装备</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart03" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>自带装备</b><i class="icon fas fa-sort"></i></span></th>
 			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -192,29 +191,32 @@
 <section><h2 id="heading02">02. 无人战机</h2>
 
 <p>
-	01. 以下是无人战机的属性详情列表, 剧情模式下到得第 7 天才会解锁无人机, 并且只有主力机体才能搭载无人机, 其余的机体都不行; <br />
-	02. 在没有增益的情况下无人机的作用相当有限, 因为它们的射程(Range)衰减严重, 即使给它们配备了好武器, 它们也很少有出手机会; <br />
-	03. 当赭石色的忠诚度分别到达 <c>2/5/7/12</c>, 会触发无人的机属性改进事件, 增强无人机的模块增益会在这个改进后的基础上进行计算; <br />
-	04. 所有主力机体的无人机上限都是 <c>6</c>, 前三台需分别需要 <c>0/50/100</c> 的资金进行解锁, 后三台分别需要 <c>1/4/7</c> 的核心进行解锁; <br />
+	01. 以下是无人机的属性详情列表, 在剧情模式下, 得到第七天才会解锁无人机, 并且只有载人主机才能搭载无人机, 其余的机体都不行<br />
+	02. 当赭石色的忠诚度分别到达 <c>[2/5/7/12]</c> 时, 都会触发无人的机改进事件, 增强无人机的模块增益, 会在改进的基础上再进行计算<br />
+	03. 所有载人主机的无人机数量上限都是 <c>6</c> 台, 前三台需要 <c>[0/50/100]</c> 的资金进行解锁, 后三台需要 <c>[1/4/7]</c> 个核心进行解锁<br />
 </p>
 
-<table originalSort="0" id="powerTable02" class="powerTable table-xs table-hover" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="0" id="powerTable02" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">换弹老化<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大散射<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">偏移角度<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">常规射程<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">喷射射程<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 56px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">射线射程<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>换弹老化</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大散射</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>偏移角度</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>常规射程</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>喷射射程</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>射线射程</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -223,67 +225,73 @@
 
 <section><h2 id="heading03">03. 属性解析</h2>
 
-<p>由于排版和理解等因素, 所以上面列表中的各项属性与游戏内部描述并不完全一致, 而下面的这些内容, 就是关于这些属性的具体解析;</p>
+<p class="p-unset">00. 项目图片: 这些是机体在战场中的俯视图, 其中的高级枪塔和高级炮塔在现阶段已经不再自带沙包了(这些截图是游戏很早期的内容)</p>
+<p class="p-unset">01. 项目序号: 既机体列表的默认排序, 这里没有用数据表的默认排序, 而是根据机体的相关性进行了自定义的排序, 这样可视性会更好</p>
+<p class="p-usual">02. 项目名称: 枪塔和炮塔的在游戏中的准确称呼为[机枪炮塔/机枪炮塔+/炮塔/炮塔+], XJ 认为不太工整, 因此对这些名称进行了微调</p>
 
 <p>————</p>
 
-<p class="p-unset">00. 机体图片: 这是机体在实际战场中的俯视图, 由于 XJ 一时找不到无人机和大门的图片, 因此自己临时做了几张文本图片进行代替;</p>
-<p class="p-unset">01. 机体序号: 既机体列表的默认排序, 这里没用数据表的默认排序, 而是根据机体的相关性进行了自定义的排序, 这样可视性会更好;</p>
-<p class="p-usual">02. 机体名称: 枪塔和炮塔的在游戏中的准确称呼为: 机枪炮塔/机枪炮塔+/炮塔/炮塔+, XJ 认为不太工整, 因此就对它们进行了微调;</p>
+<p class="p-unset">03. 项目代码: 也就是机体在游戏中的代号, 这对普通玩家而言并没有什么意义, 但如果你想制作机体模组, 最好仔细检查, 以避免重复</p>
+<p class="p-usual">04. 初始血量: 也就是机体的 HP 值, 由于单元格空间有限, 大门十万的值会导致换行, 因此这里对数值采用了 k 单位计数法(1k=1000)</p>
+
+<p class="p-unset">05. 奔跑能量: 机体能在战场上能奔跑多久, 取决于奔跑能量总值, 奔跑能量在消耗后会缓慢恢复(不同机体奔跑时消耗的能量是相同的)</p>
+<p class="p-usual">06. 起步马力: 机体在奔跑时, 并不是一开始就能到达最高速度的, 它有个加速的过程, 而起步马力越高, 到达最高速度的过程就会越短</p>
+
+<p class="p-unset">07. 最大移速: 既机体在奔跑时能到达的最高速度, 机体的奔跑速度是行走速度的三倍左右, 机体的蹲踞移速是行走速度的二分之一左右</p>
+<p class="p-usual">08. 炮台转速: 既瞄准器的转动速度, 如果一次性转动角度过大, 会因为惯性出现漂移现象, 转速过慢在对付多方位敌人时将会非常致命</p>
+
+<p class="p-unset">09. 穿甲抵抗: 各种武器的穿甲概率都不同, 穿甲的具体算法为 <c>1-(穿甲概率÷抵抗概率)</c>, 如果抵抗成功, 子弹就只能造成 <c>5%</c> 伤害</p>
+<p class="p-usual">10. 爆炸抗性: 爆炸伤害将无视抵抗和护盾, 如果机体抗暴成功, 伤害就只剩 <c>10%</c>, 如果机体抗暴失败, 将受到全额爆炸伤害并且眩晕</p>
+
+<p class="p-unset">11. 属性免疫: 避免受到元素伤害或被附上各种元素 Debuff 的概率, 跟"属性抗性"属性相比, 该属性是完全免疫元素伤害或影响的概率</p>
+<p class="p-usual">12. 属性抗性: 该属性可以减少机体受到的元素伤害百分比, 如果是 HP 的伤害就是减少伤害值, 如果是 Debuff 就是减少受影响的时间</p>
+
+<p class="p-unset">13. 投掷距离: 既机体丢手榴弹和烟雾弹等投掷物的最大距离, 目前仅载人主机和作战单元能携带投掷物, 投掷的距离都介于 <c>15 ~ 20</c></p>
+<p class="p-usual">14. 机体重量: 既机体的吨位(虽然游戏中没写明, 但推测单位应该是吨), 重量越大, 起步马力就越低, 但是开枪的后坐力影响也会越小</p>
+
+<p class="p-unset">15. 原型研发: 既这台机体的初始研发者究竟是谁, 目前的研发单位仅仅只是文本设定, 并没有什么实际意义, 所以这个属性也并不重要</p>
+<p class="p-unset">16. 操控机师: 既机体的驾驶员, 只有载人主机是人类驾驶员, 其他的都是人工智能, 作为玩家, 我们也只能操控人类驾驶员所在的机体</p>
+<p class="p-usual">17. 文本描述: 使用文字简单的概述机体特点, 关于"推荐配置", 你也可以无视, 按照自己喜好来, 也许胡乱搭配后, 也会很强也不一定</p>
 
 <p>————</p>
 
-<p class="p-unset">03. 项目代码: 也就是机体在游戏中的真实代号, 这对普通玩家来讲并没有意义, 但如果想你制作机体模组, 最好仔细检查以避免重复;</p>
-<p class="p-unset">04. 初始血量: 既机体的 HP 值, 由于单元格空间有限, 大门十万的数值会导致换行, 因此 XJ 对数值采用了 k 单位计数法(1k=1000);</p>
-<p class="p-unset">05. 奔跑能量: 机体能在战场上奔跑多久, 取决于奔跑能量总值, 奔跑能量在消耗后会缓慢恢复, 不同机体奔跑时消耗的能量是相同的;</p>
-<p class="p-unset">06. 起步马力: 机体在奔跑时, 并不是一开始就能到达最高速度的, 它有个提速的过程, 而起步马力越高, 到达最高速度的过程就越短;</p>
-<p class="p-unset">07. 最大移速: 既机体在奔跑时能到达的最高速度, 机体的常规移速只有最大移速的一半, 而机体的蹲踞移速则是最大移速的四分之一;</p>
-<p class="p-usual">08. 炮台转速: 既瞄准器转动速度, 如果一次性转动角度过大, 会因为惯性出现漂移现象, 转速过慢在对付多方位敌人时将会非常致命;</p>
+<p class="p-unset">18. 左远槽位: 既"左手远程装备槽位"的缩写, 当武器需要的槽位大于单手槽位时, 也可以选择双持, 此时槽位数就是左右手槽位之和了</p>
+<p class="p-usual">19. 右远槽位: 既"右手远程装备槽位"的缩写, 可通过安装拓展槽位的机体改造配件, 进一步增加槽位数量, 左右手均可额外 <c>+3</c> 槽位</p>
 
-<p class="p-unset">09. 穿甲抵抗: 各种武器的穿甲概率都不同, 穿甲算法为 <c>1 - 穿甲概率 ÷ 抵抗概率</c>, 如果抵抗成功, 子弹就只能造成 <c>5%</c> 的伤害;</p>
-<p class="p-unset">10. 爆炸抗性: 爆炸伤害将无视抵抗和护盾, 如果机体抗暴成功, 伤害就只有 <c>10%</c>, 如果抗暴失败则会受到全额爆炸伤害并进入眩晕;</p>
-<p class="p-unset">11. 属性抗性: 该属性可以减少机体受到的元素伤害百分比, 如果是 HP 伤害就是减少伤害值, 如果是 Debuff 就是减少受影响的时间;</p>
-<p class="p-usual">12. 属性免疫: 避免受到元素伤害或被附上各种元素 Debuff 的概率, 跟属性抗性属性相比, 该属性是完全免疫元素伤害或影响的概率;</p>
+<p class="p-unset">20. 左近槽位: 既"左手近战装备槽位"的缩写, 左右手槽位在过去是需要逐步升级才能到达上限的, 但现在已经取消了, 直接就是最大值</p>
+<p class="p-usual">21. 右近槽位: 既"右手近战装备槽位"的缩写, 机枪炮塔和无人机都只有"左手远程装备槽位", 所以它们不能使用近战武器, 也不能双持</p>
 
-<p class="p-unset">13. 无人机数: 既机体初始搭载的无人机数量, 实际上只有主角小队操控的主力机体能搭载无人机, 作战单元和机枪炮塔都没有这功能;</p>
-<p class="p-usual">14. 机数上限: 既机体能够搭载的无人机数量上限, 主力机体最多都可以搭载六台无人机, 但需要资金或核心作为构建新无人机的代价;</p>
+<p class="p-unset">22. 主体槽位: 既"主体强化模块槽位"的缩写, 主体强化模块大多是一些提高 HP 上限和防御力的模块, 具体详情可查阅 <a href="./data_mecha_main.html">主体强化.html</a></p>
+<p class="p-usual">23. 主体上限: 既"主体强化槽位上限"的缩写, 解锁更多主体强化槽位的花费算法是 <c>15+当前槽位数</c>, 如解锁第 4 个槽位的花费是 18</p>
 
-<p class="p-unset">15. 投掷距离: 既机体丢手榴弹和烟雾弹等投掷物的距离, 目前只能主力机体和作战单元能携带投掷物, 并且它们的投掷距离都是十五;</p>
-<p class="p-unset">16. 操控机师: 既机体的驾驶员, 只有主力机体是人类驾驶员, 其他都是人工智能, 作为玩家, 我们也只能操控人类驾驶员所在的机体;</p>
-<p class="p-usual">17. 文本描述: 使用文字简单的概述机体特点, 关于"推荐配置", 你也可以无视, 按照自己喜好来, 也许胡乱搭配下也会很强也不一定;</p>
+<p class="p-unset">24. 足部槽位: 既"足部强化模块槽位"的缩写, 足部强化模块大多是一些提高移动力和炮塔转速的模块, 具体详情可查阅 <a href="./data_mecha_foot.html">足部强化.html</a></p>
+<p class="p-usual">25. 足部上限: 既"足部强化槽位上限"的缩写, 解锁槽位的花费和主体强化槽位相同, 但无人机和大门没这种槽位, 也不能装备这类配件</p>
 
-<p>————</p>
+<p class="p-unset">26. 投掷槽位: 既"投掷强化模块槽位"的缩写, 投掷强化模块大多是一些手榴弹和烟雾弹这类的消耗品, 具体详情可查阅 <a href="./data_mecha_frag.html">投掷物品.html</a></p>
+<p class="p-usual">27. 投掷上限: 既"投掷强化槽位上限"的缩写, 解锁槽位的花费和主体强化槽位相同, 但机枪炮塔/无人机/大门没这种槽位, 也不能投掷</p>
 
-<p class="p-unset">18. 左手远程: 既"左手远程装备槽位"的缩写, 当武器需要的槽位大于单手槽位时, 也可以选择双持, 此时槽位就是左右手槽位之和了;</p>
-<p class="p-unset">19. 右手远程: 既"右手远程装备槽位"的缩写, 主力机体有主机改造槽位, 你可以通过安装拓展槽位的配件, 来进一步增加槽位的数量;</p>
-<p class="p-unset">20. 左手近战: 既"左手近战装备槽位"的缩写, 左右手槽位在过去是需要逐步升级才能到达上限的, 但现在已经取消, 直接就是最大值;</p>
-<p class="p-usual">21. 右手近战: 既"右手近战装备槽位"的缩写, 机枪炮塔和无人机都是只有左手远程装备槽位, 所以它们不能用近战武器, 也不能双持;</p>
+<p class="p-unset">28. 挂件槽位: 既"机身挂件槽位上限"的缩写, 槽位还可以被细分成 8 个机身槽位以及 2 个头部槽位, 具体详情可查阅 <a href="./data_mecha_hang.html">机身挂件.html</a></p>
+<p class="p-usual">29. 改造槽位: 既"机体改造槽位上限"的缩写, 某些机体出场时, 会自带一些不可拆卸的机体改造模块, 具体详情可查阅 <a href="./data_mecha_mend.html">机体改造.html</a></p>
 
-<p class="p-unset">22. 主体强化: 既"主体强化模块槽位"的缩写, 主体强化模块多是一些提高 HP 上限和防御力的模块, 具体详情可查阅 <a href="./data_mecha_main.html">主体强化.html</a>;</p>
-<p class="p-unset">23. 主体上限: 既"主体强化模块槽位上限"的缩写, 解锁更多槽位的花费算法是 <c>15 + 当前槽位数</c>, 如解锁第 4 个槽位的花费是 18;</p>
-<p class="p-unset">24. 足部强化: 既"足部强化模块槽位"的缩写, 足部强化模块多是一些提高移动力和炮塔转速的模块, 具体详情可查阅 <a href="./data_mecha_foot.html">足部强化.html</a>;</p>
-<p class="p-unset">25. 足部上限: 既"足部强化模块槽位上限"的缩写, 解锁槽位的花费和主体强化相同, 无人机和大门没这种槽位, 也不能装备这类配件;</p>
-<p class="p-unset">26. 投掷强化: 既"投掷强化模块槽位"的缩写, 投掷强化模块多是一些手榴弹和烟雾弹这类的消耗品, 具体详情可查阅 <a href="./data_mecha_frag.html">投掷物品.html</a>;</p>
-<p class="p-usual">27. 投掷上限: 既"投掷强化模块槽位上限"的缩写, 解锁槽位的花费和主体强化相同, 机枪炮塔/无人机/大门没这种槽位, 也不能投掷;</p>
+<p class="p-unset">30. 无人机槽: 既"无人机的左远槽位"的缩写, 无人机和机枪炮塔一样, 只有"左手远程装备槽位", 它们不能装备近战武器, 也不能双持</p>
+<p class="p-usual">31. 无人机数: 既机体初始搭载的无人机数量, 仅载人主机拥有无人机, 可以通过使用资金或核心, 增加搭载的无人机上限(最多为六台)</p>
 
-<p class="p-unset">28. 挂件槽位: 既"机身挂件装备槽位上限"的缩写, 槽位还可被细分成 8 个机身槽位以及 2 个头部槽位, 详情可查阅 <a href="./data_mecha_hang.html">机身挂件.html</a>;</p>
-<p class="p-usual">29. 改造槽位: 既"机体改造装备槽位上限"的缩写, 只有主力机体有这种槽位, 且自带某些模块不可拆卸, 详情可查阅 <a href="./data_mecha_mend.html">机体改造.html</a>;</p>
-
-<p class="p-unset">30. 无人机槽: 既"无人机左手远程装备槽位"的缩写, 无人机和机枪炮塔一样, 只有左手远程装备槽位, 不能装备近战武器也不能双持;</p>
-<p class="p-unset">31. 机体重量: 既机体的吨位(虽然游戏中没写明, 但推测单位应该是吨), 重量越大, 起步马力就越低, 但开枪的后坐力影响也会越小;</p>
-<p class="p-usual">32. 原型研发: 既这台机体的初始研发者究竟是谁, 目前的研发单位仅仅只是文本设定, 并没有什么实际意义, 所以这个属性并不重要;</p>
+<p class="p-usual">32. 特别注释: 如果你拥有 DLC, 那么在剧情模式的机体整备界面, 右侧存在一个"DLC内容"的按钮, 点击即可领取 DLC 额外的奖励装备</p>
 
 <p>————</p>
 
-<p class="p-unset">33. 左手远程初始装备: 既机体登场时, 初始自带的左手远程武器, 如果从价格的角度上来看, 圣骑士号自带的轻机枪是最好的($:60);</p>
-<p class="p-unset">34. 右手远程初始装备: 既机体登场时, 初始自带的右手远程武器, 由于机枪炮塔和无人机都只有左手远程槽位, 因此它们没有这武器;</p>
-<p class="p-unset">35. 左手近战初始装备: 既机体登场时, 初始自带的左手近战武器, 尽管作战单元可以装备近战武器, 但是初始登场时它们并没有装备;</p>
-<p class="p-usual">36. 右手近战初始装备: 既机体登场时, 初始自带的右手近战武器, 由于机枪炮塔和无人机都没近战槽位, 因此它们也就没有近战武器;</p>
+<p class="p-unset">33. 左远装备: 既机体登场时, 初始就自带的左手远程武器, 如果单从价格的角度来看, 克莱尔的圣骑兵号自带的轻机枪是最好的($:60)</p>
+<p class="p-usual">34. 右远装备: 既机体登场时, 初始就自带的右手远程武器, 由于机枪炮塔和无人机都只有左手远程装备槽位, 因此它们没有右手的武器</p>
 
-<p class="p-unset">37. 机体改造初始装备: 既机体登场时, 初始自带的机体改造装备, 尽管有两台作战单元自带"滑轮"模块, 但实际上它们是不可拆卸的;</p>
-<p class="p-unset">38. 主体强化初始装备: 既机体登场时, 初始自带的主体强化装备, 除了玛丽的机体既游骑兵号没有, 其他的主力机体都会自带些模块;</p>
-<p class="p-unset">39. 投掷物品初始装备: 既机体登场时, 初始自带的主体强化装备, 除了库罗库的骠骑兵号有自带一颗手榴弹, 其他机体都没有这东西;</p>
-<p class="p-usual">40. 特殊模式自带装备: 在特殊模式下(含挑战模式/无尽模式/幸存模式)初始附赠的装备, 但这些物品其实作用有限, 只能说聊胜于无;</p>
+<p class="p-unset">35. 左近装备: 既机体登场时, 初始就自带的左手近战武器, 在过去的版本, 作战单元初始登场时并不会自带近战装备(但现在都带上了)</p>
+<p class="p-usual">36. 右近装备: 既机体登场时, 初始就自带的右手近战武器, 由于机枪炮塔和无人机都没有近战装备的槽位, 因此它们也就没有近战武器</p>
+
+<p class="p-unset">37. 挂件装备: 既机体登场时, 初始就自带的机身挂件装备, 除了玛丽的机体既游骑兵号没有带之外, 其他的载人主机都会带些护甲模块</p>
+<p class="p-usual">38. 投掷装备: 既机体登场时, 初始就自带的主体强化装备, 除了库罗库的机体既骠骑兵号自带一颗手榴弹之外, 其他机体都没有这东西</p>
+
+<p class="p-usual">39. 改造装备: 既机体登场时, 初始就自带的机体改造装备, 自带的改造装备大部分是不可拆卸的, 所以它们的存在会一直占据改造槽位</p>
+
+<p class="p-usual">40. 自带装备: 在特殊模式下, 例如[无尽/挑战/幸存]模式, 选择角色后初始会附赠的装备, 但这些物品其实作用有限, 只能说聊胜于无</p>
 
 </section>
 
@@ -291,24 +299,25 @@
 
 <section><h2 id="heading04">04. 额外拓展</h2>
 
-<!--◇
-01. 等离子抗性在机体整备界面的"机体参数"并没有显示, 它是和爆炸抗性共用一个属性的吗? 还是说只是忘记写进去了而已?
-01. 角色没有等离子抗性，因为现在没有使用等离子武器的敌人
-◇-->
+<p>载人主机: 主角小队所驾驶的五台铁骑, 它们存在所有的槽位类型, 因此论实力上限, 肯定是优于其他类型机体的, 但是不同的型号之间, 特长和操控手感也不同, 这也很难用简单的几句话概况, 如果想了解区别, 最好的方法, 就是在"幸存模式"中亲自操控一番, 总的来讲, 桑的龙骑兵号操控手感最佳, 可惜远程的上限太低且机甲很脆, 克莱尔的圣骑兵号操控手感是最差的, 剩下三台机体则介于这两者之间</p>
 
-<p>槽位分类: 槽位可被分为左手右手(远程近战各有四种)/无人战机/主体强化/足部强化/投掷强化/机身挂件/机体改造, 总共 <c>10</c> 大类, 槽位类型的有无和数量的多寡对机体影响非常大, 因为槽位决定着各种装备是否有被安装可能性, 而各种装备又决定着机体的最终强度;</p>
+<p>作战单元: 作战单元不能搭载无人战机, 肩扛武器也只能装备一把而已, 它们也拥有机体改造槽位, 但高速作战单元和火力作战单元自带"履带"的机体改造模块(弓骑兵号和圣骑兵号也是使用履带), 由于履带无法拆卸, 就相当于它们仅剩一个机体改造槽位, 尽管如此, 它们在战场的表现也是值得信赖的, 如果仅用于防守, 这里比较推荐重型作战单元和火力作战单元, 这是因为它们的槽位较多, 上限也就更高, 值得一提的是, 高速作战单元的起步马力是 200, 移动速度也是 200, 这就意味着这台机体非常灵敏, 奔跑时能很快到达移动速度上限</p>
 
-<p>主力机体: 我们主角小队所驾驶的五台铁骑, 它们拥有所有的槽位类型, 因此论实力上限, 肯定是优于其他类型机体的, 但不同的型号之间, 特长和操控手感也不同, 这也很难用简单的几句话概况, 如果你想了解区别, 最好的方法, 就是在"幸存模式"中亲自操控一番, 总的来讲, 桑的龙骑士号操控手感最佳, 可惜远程上限太低且机甲很脆, 克莱尔的圣骑士号操控手感最差, 剩下三台机体则介于这两者之间;</p>
+<p>机枪炮塔: 机枪炮塔只有[左手远程/主体强化/足部强化]三种槽位, 这就意味着它们没法装备近战武器(也不能实现双持), 虽然它们也有足部强化槽位, 但其实它们并不能自主移动(但可被其他机体推着走), 在打防守战的时候, 机枪炮塔可以帮忙解决一些漏网的敌人, 尤其是针对一些移动迅猛的小型机体(毕竟它们是 AI 控制, 精准度很高), 这还是很有帮助的, 但其他场合下它们的作用就非常有限了, 毕竟毫无机动性可言, 在强度方面, 由于炮塔的槽位更多, 上限也就更高, 你可以在合成界面, 使用两台初级枪塔合成一台高级枪塔, 或者用两台初级炮塔合成一台高级炮塔, 机枪炮塔可在整备城防的界面进行回收(载人主机和作战单元无法被回收, 拖曳到回收栏会提示"达咩")</p>
 
-<p>作战单元: 作战单元不能搭载无人战机, 肩扛武器也只能装备一件而已, 且完全没有机体改造槽位, 尽管高速作战单元和火力作战单元具有"履带"的机体改造模块(弓骑兵号和圣骑士号也是使用履带), 但它们并不能拆卸或安装更多机体改造模块, 因此也相当于没有机体改造槽位, 尽管如此, 它们在战场的表现也是值得信赖的, 如果仅用于防守, 比较推荐重型作战单元和火力作战单元, 因为它们的槽位较多, 上限也就更高, 值得一提的是, 高速作战单元的起步马力是 200, 移动速度也是 200, 这意味着容易起步, 能够很快到达移动速度上限;</p>
+<p>无人机: 无人机是载人主机上搭载的辅助机体, 它们仅有左手远程槽位, 并且槽位的数量也只有 5 或 6 个, 这就导致能装备的武器强度上限较低, 在没有任何改进或增益之前, 这些机体使用武器还有很大的 Debuff 减成, 因此在初期, 它们能发挥的作用较为有限, 除非是跟敌人靠的很近, 否则由于射程衰减, 它们甚至都很少有出手的机会(当然装备治疗枪给载人主机回血倒是不用考虑射程), 但是当实现了改进和增益, 并且数量足够的时候, 无人机的输出也许会比主机更猛(毕竟它们由 AI 控制, 十分精准), 但这应该是后期的时候了, 值得一提的是, 尽管表格里显示无人机 HP = 2000, 但目前它们并不会在战斗中受损, 也就是说只要主机不被打爆, 它们就是无敌状态, 因此该属性没什么意义, 在表格里显示无人机的最大移速是 500, 但实际上它们并不会自主移动, 只是绕着主机转圈, 因此这个移速也没意义</p>
 
-<p>机枪炮塔: 机枪炮塔只有左手远程/主体强化/足部强化这三种槽位, 这就意味着它们没法装备近战武器, 也没法实现双持, 虽然它们有足部强化的槽位, 但其实它们并不能自主移动(但可被其他机体推着走), 在打防守战的时候, 机枪炮塔可以帮忙解决一些漏网的敌人, 尤其是针对一些移动迅猛的小型机体(毕竟它们是 AI 控制, 精准度很高), 这还是很有帮助的, 但其他场合下它们的作用就非常有限了, 毕竟毫无机动性可言, 在强度方面, 由于炮塔的槽位更多, 上限也就更高, 你可以在合成界面, 使用两台初级枪塔合成一台高级枪塔, 或者两台初级炮塔合成一台高级炮塔, 机枪炮塔也可在整备城防的界面进行回收(主力机体和作战单元无法被回收, 拖曳到回收栏会提示:达咩);</p>
+<p>大门: 大门其实也是种机体, 只不过不能移动, 也没有攻击手段(假如城防空投不算的话), 它只有主体强化槽位, 可以在整备城防的界面为它安装一些减伤的护甲模块(机体的主体强化装备对它而言是通用的), 它只在剧情模式和无限模式的守城战里出现, 被打爆则游戏结束</p>
 
-<p>无人机: 无人(战)机是主力机体上搭载的辅助机体, 它们仅有左手远程槽位, 并且槽位数量也只有 5 或 6 个, 这就导致能装备的武器强度上限较低, 在没有任何改进或增益之前, 这些机体使用武器还有很大的 Debuff 减成, 因此在初期, 它们能发挥的作用较为有限, 你除非跟敌人靠的很近, 否则由于射程衰减, 它们甚至都很少有出手的机会(当然装备治疗枪给主力机体回血倒是不用考虑射程), 但是当实现了改进和增益, 并且数量足够的时候, 无人机的输出也许会比主机更猛(毕竟它们由 AI 控制, 十分精准), 但这应该是后期的时候了, 值得一提的是, 尽管列表显示无人机 HP = 2000, 但目前它们并不会在战斗中受损, 也就是说只要主机不被打爆, 它们就是无敌状态, 因此 HP 没什么意义, 在代码中显示无人机的最大移速是 500, 但实际上它们并不会自主移动, 只是绕着主机转圈, 因此这个移速也没有意义;</p>
+<p>空投枪塔: 这种枪塔是由战略武器既"空投机枪塔"往战场中投递的支援机体, 它的装备无法被改变, 各项属性与初级枪塔也没区别, 但是它初始自带的武器并非"制式步枪", 而是威力更强的"轻机枪", 除此之外, 它初始还会自带"转轴模块01"或"转轴模块02"(自动随机2选1)</p>
 
-<p>大门: 大门其实也是种机体, 只不过不能移动, 也没有攻击手段(假如城防空投不算的话), 它只有主体强化槽位, 可以在整备城防的界面为它安装一些减伤的护甲模块(机体的主体强化装备对它而言是通用的), 它只在剧情模式和无限模式的守城战出现, 被打爆则游戏结束;</p>
+<p>————</p>
 
-<p>空投枪塔: 这种枪塔是由战略武器既"空投机枪塔"往战场中投递的支援机体, 我们无法改变它的任何装备, 它的各项属性与基础枪塔几乎没区别, 只不过它初始自带的武器并非"制式步枪", 而是威力更强的"轻机枪", 除此之外, 它还初始自带了"转轴模块"以及"转轴模块+";</p>
+<p>槽位分类: 槽位可被分为[左手右手(远程近战各有四种)/主体强化/足部强化/投掷物品/机身挂件/机体改造/无人战机], 总共 <c>10</c> 大类, 槽位类型的有无和数量的多寡对机体影响非常大, 因为槽位决定着各种装备是否有被安装可能性, 而各种装备又决定着机体的最终强度</p>
+
+<p>离子抗性: 在当下的版本中, 我方机体并不存在"等离子抗性"这项属性, 这是因为, 在当下版本并没有任何敌人会使用等离子相关的武器</p>
+
+<p>加速过程: 机体的移动和旋转都有个加速过程, 一旦被敌人打中(击穿), 速度就会往下掉, 需要重新加速(具体的影响和子弹的伤害有关)</p>
 
 </section>
 
@@ -316,33 +325,43 @@
 
 <style>/* 样式设置 */
 
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
 
-#powerTable01.showPart01 tr > *:nth-child(n+19):nth-child(-n+41){display:none;}
-#powerTable01.showPart02 tr > *:nth-child(n+ 4):nth-child(-n+18){display:none;}
-#powerTable01.showPart02 tr > *:nth-child(n+34):nth-child(-n+41){display:none;}
-#powerTable01.showPart03 tr > *:nth-child(n+ 4):nth-child(-n+33){display:none;}
+/* 翻页显示 */
+#powerTable01:not(.showPart01) .showPart01{display:none;}
+#powerTable01:not(.showPart02) .showPart02{display:none;}
+#powerTable01:not(.showPart03) .showPart03{display:none;}
+#powerTable01:not(.showPart04) .showPart04{display:none;}
 
-#turnPart{position:absolute;top:-1px;bottom:1px;right:-767px;display:flex;flex-direction:column;}
-#textPart{flex:0 0 auto;height:20px;border:1px solid #ccc;border-top:0;border-bottom:0;text-align:center;line-height:20px;cursor:default;}
-
+/* 翻页按钮 */
+#turnPart{position:absolute;top:-1px;bottom:-1px;right:-767px;display:flex;flex-direction:column;}
+#textPart{flex:0 0 auto;border:1px solid var(--xj-ccc);border-top:0;border-bottom:0;
+height:20px;text-align:center;line-height:20px;cursor:default;}
 #nextPart{flex:1 1 auto;}
 #prevPart{flex:1 1 auto;}
 
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 装备对齐 */
+html:is([lang|="zh"]) .justify-48px{text-align-last:justify;width:48px;}
+
+/* 血量单位 */
 #powerTable01 .letterK:after{content:"k";}
-
-/* 标签样式 */
-
-#powerTable01 td:nth-of-type(17){position:relative;cursor:default;}
-
-#powerTable01 td:nth-of-type(17)::before{position:absolute;top:50%;right:100%;visibility:hidden;min-width:96px;padding:8px;border-radius:4px;background-color:rgba(0,0,0,0.75);color:#fff;
-content:attr(alt);text-align:center;white-space:pre;transform:translate(-8px, -50%);pointer-events:none;}
-#powerTable01 td:nth-of-type(17):hover::before{visibility:visible;}
-
-#powerTable01 td:nth-of-type(17)::after{position:absolute;top:50%;right:100%;visibility:hidden;width:0;height:0;border:8px solid transparent;border-right:0;
-border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);pointer-events:none;}
-#powerTable01 td:nth-of-type(17):hover::after{visibility:visible;}
 </style>
+
 
 
 
@@ -351,14 +370,27 @@ border-left-color:rgba(0,0,0,0.75);content:"";transform:translate(0px, -50%);poi
 
 /* 数据注解
 
+ModelID : 0 // 模型代码, 仅是载人主机有, 所以这个值就不用了
 Price : 0 // 项目价格, 都是 0 既无价状态, 所以这个值就不用了
-InitState : 0 // 初始状态, 都是 0 既无状态, 所以这个值就不用了
 
-HalfLowAngleFloat : 0 // 准心在 2/3 射程内时武器的散射, 参数都是 0, 这个属性就不放了
-HalfHighAngleFloat : 0 // 准心在 2/3 射程外时武器的散射, 参数都是 0, 这个属性就不放了
+HalfLowAngleFloat : 0 // 内部散射, 准心在 2/3 射程内时武器散射, 都是 0, 所以就不放了
+HalfHighAngleFloat : 0 // 外部散射, 准心在 2/3 射程外时武器散射, 都是 0, 所以就不放了
 
-IsHuman : 1/0 // 是否有人驾驶, 主力机体都是1, 作战单元和机枪炮塔都是0, 无人战机和大门也是0, 这个属性就不放了
-IsPerson : 1/0 // 是否有人驾驶, 主力机体都是1, 作战单元和机枪炮塔都是0, 无人战机和大门也是0, 这个属性就不放了
+IsHuman : 1/0 // 人类操作, 载人主机都是 1, 作战单元和机枪炮塔都是 0, 无人战机和大门也是 0, 这个属性就不放了
+IsPerson : 1/0 // 人类驾驶, 载人主机都是 1, 作战单元和机枪炮塔都是 0, 无人战机和大门也是 0, 这个属性就不放了
+
+————
+
+Params : 特殊参数, 目前只是记录低脑负荷出战可获得战后报告, 这个可以放到主角小队的页面去, 所以这个属性没必要显示
+
+PlayerAngleMinus,PlayerShotRateMinus,PlayerReloadSpeedMinus,PlayerMovePlus,PlayerMaintain,PlayerRunRate
+射击散射,射击间隔,装弹时间,移动速度,武器维护,奔跑速度, 都是角色属性, 也放到主角小队的页面去, 没必要显示
+
+InitAI,InitAI_Chan,SecondaryAi,LastAi,PlayerDescription, 初始指令,特殊指令,第二指令,第三指令,文本描述,
+PlayerPerfect,PlayerLike,PlayerNormal,PlayerHate, 最爱礼物,接受礼物,还行礼物,嫌弃礼物
+以上这些属性也都是角色相关的内容, 也放到主角小队的页面去, 没必要显示
+
+Skill : 初始技能, 这个属性在主角小队的页面和驾驶员的数据放在一起了, 所以不需要
 
 ————
 
@@ -366,7 +398,7 @@ InitDrone : 1|3|6 // 初始无人机数|免核心解锁无人机数|最大无人
 拆分成了: 无人机数/机数上限, 免核心解锁都是 3, 所以这个就不需要了
 
 InitBattery 和 MaxBattery 分别记录了机体的各种初始槽位和最大槽位, 按照顺序我们将其拆分成了: 
-左远槽位/右远槽位/左近槽位/右近槽位/无人机槽/主体槽位/足部槽位/投掷槽位 和 主体极限/足部极限/投掷极限
+左远槽位/右远槽位/左近槽位/右近槽位/无人机槽/主体槽位/足部槽位/投掷槽位 和 主体上限/足部上限/投掷上限
 在以前, 左右手的远近槽位和无人机初始槽位也是需要逐个开槽的, 但是现在已经不用了, 因此只保留了还需要升级的三项 Max
 
 MaxHp : 初始血量 // 无人机似乎是不损的, 所以默认的 2000 血量就没有意义, 因此改成 Inf, 但后来发现没法解决排序问题
@@ -375,355 +407,859 @@ MaxHp : 初始血量 // 无人机似乎是不损的, 所以默认的 2000 血量
 
 MaxMoveSpeed : 最大移速 // 无人机的最大移速是 500, 但绕着主机转感觉也没那么快啊, 反正速度也是固定的, 就改为 0 了
 
-————
-
-<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr
-;letter-spacing:2px;">双手槽位<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr
-;letter-spacing:2px;">双手槽位<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-
-双远槽位, MaxCargo, 20, 18, 11, 23, 24, 12, 12, 12, 16, 20, '-', '-', '-', '-', '-', '-',
-双近槽位, MaxCargo, 10, 17, 24, 10, 13,  8, 14, 20,  8, 10, '-', '-', '-', '-', '-', '-',
+InitState : 自带模块, DLCContent : 附赠装备, 这 2 个属性比较混乱, 所以统合成"特别注释", 并用文本代替, 就不转换了
 
 ————
 
-Type:None, Tag:'', MaxPile:1, Company:'', Price:0, Day:999, Level:1, Syns:'', NeedWeapon:'', 
-ColorPlus:'', Cluster:'', CargoPiles:0, CargoPilesMax:0, CargoPilesFusion:0, CargoPilesFusionMax:0,
-BulletRange 是常规武器射程, SplitRange 是喷射武器射程, AddLaserRange 是镭射武器射程, 三种射程是分开计算的
-DebugHide:1
+3种射程增益是分开计算的
+SplitRange 是喷射武器射程
+BulletRange 是常规武器射程
+AddLaserRange 是镭射武器射程
 
 */
 
-// 机体数据
-let tbodyArray01 = [
-	
-	//高亮,		机体图片,	机体序号,	|	机体名称,			项目代码,	初始血量,	奔跑能量,	起步马力,	最大移速,		炮台转速,		穿甲抵抗,	爆炸抗性,		属性抗性,	属性免疫,	无人机数,	机数上限,	投掷距离,	操控机师,	文本描述,		|	左手远程,	右手远程,	左手近战,	右手近战,		主体强化,	主体上限,	足部强化,	足部上限,	投掷强化,	投掷上限,		挂件槽位,	改造槽位,		无人机槽,	机体重量,	原型研发,	|	左远装备,		右远装备,		左近装备,		右近装备,		机体改造,		主体强化,	投掷物品,	无尽装备,				],
-	//Active,	Image,		Number,		|	Name,				ModelID,	MaxHp,		Strength,	MovePower,	MaxMoveSpeed,	RotateSpeed,	Armor,		ExploResist,	Resist,		Immune,		InitDrone,	InitDrone,	ThrowDis,	PlayerName,	Description,	|	MaxCargo,	MaxCargo,	MaxCargo,	MaxCargo,		InitCargo,	MaxCargo,	InitCargo,	MaxCargo,	InitCargo,	MaxCargo,		HangCargo,	RemodelCargo,	MaxCargo,	Mass,		Company,	|	FirstWeapon,	SecondWeapon,	CloseWeapon,	CloseWeapon2,	MechEffect,		Hang,		Throw,		InitCargo,				],		//01		
-	
-	[1,			'01_00',	'01',			'游骑兵号',			0,			'18',		1500,		60,			200,			'1.25',			15,			10,				0,			5,			1,			6,			15,			'02_00',	'-',				10,			10,			5,			5,				4,			12,			3,			8,			2,			3,				10,			6,				6,			5,			'Main_6',		'10001',		'10000',		'10050',		'10050',		'200|211',		'0',		'0',		'2074|1200|1101',		],
-	[1,			'01_01',	'02',			'骠骑兵号',			1,			'15',		1750,		125,		225,			'1.50',			10,			20,				10,			0,			2,			6,			15,			'02_01',	'-',				12,			6,			12,			5,				3,			10,			2,			12,			5,			6,				10,			6,				5,			5,			'Main_6',		'10001',		'10018',		'10050',		'10050',		'201|215',		'1200',		'1101',		'2074|1101|1101',		],
-	[1,			'01_02',	'03',			'龙骑士号',			2,			'8',		2500,		75,			250,			'3.00',			20,			25,				25,			15,			1,			6,			15,			'02_02',	'-',				6,			5,			12,			12,				4,			11,			3,			11,			2,			4,				10,			6,				5,			5,			'Main_5',		'10006',		'10017',		'10052',		'10052',		'202|212',		'1209',		'0',		'2074|1111|1200',		],
-	[1,			'01_03',	'04',			'弓骑兵号',			3,			'12',		1750,		40,			150,			'1.75',			5,			5,				0,			5,			3,			6,			15,			'02_03',	'-',				18,			5,			5,			5,				3,			14,			3,			8,			2,			3,				10,			6,				6,			5,			'Main_1',		'10115',		'10022',		'10050',		'10050',		'203|213',		'1203',		'0',		'2075|1101|10006',		],
-	[1,			'01_04',	'05',			'圣骑士号',			4,			'30',		4500,		36,			300,			'1.20',			30,			30,				15,			25,			1,			6,			15,			'02_04',	'-',				12,			12,			8,			5,				4,			12,			4,			12,			2,			4,				10,			6,				6,			15,			'Main_1',		'10024',		'10016',		'10051',		'10051',		'203|214',		'1201',		'0',		'2074|2074|2054',		],		//01		
-	
-	[0,			'01_05',	'06',			'标准作战单元A',	'-',		'10',		1500,		60,			150,			'1.50',			30,			30,				0,			0,			0,			0,			15,			'02_05',	'-',				4,			8,			4,			4,				3,			5,			2,			5,			1,			3,				10,			'-',			'-',		5,			'Main_6',		'10019',		'10000',		'10050',		'10050',		'0',			'-',		'-',		'-',					],
-	[0,			'01_06',	'07',			'标准作战单元B',	'-',		'10',		1500,		60,			150,			'1.50',			30,			30,				0,			0,			0,			0,			15,			'02_06',	'-',				4,			8,			10,			4,				3,			5,			2,			5,			3,			6,				10,			'-',			'-',		5,			'Main_6',		'10019',		'10000',		'10050',		'10050',		'0',			'-',		'-',		'-',					],
-	[0,			'01_07',	'08',			'高速·作战单元',	'-',		'8',		1500,		200,		200,			'2.00',			50,			50,				0,			0,			0,			0,			15,			'02_07',	'-',				6,			6,			10,			10,				1,			8,			4,			4,			1,			3,				10,			'-',			'-',		5,			'Main_5',		'10006',		'10001',		'10050',		'10050',		'203',			'-',		'-',		'-',					],
-	[0,			'01_08',	'09',			'火力·作战单元',	'-',		'8',		1500,		50,			120,			'4.00',			20,			30,				0,			0,			0,			0,			15,			'02_08',	'-',				4,			12,			4,			4,				3,			6,			3,			6,			1,			3,				10,			'-',			'-',		5,			'Main_1',		'10019',		'10115',		'10050',		'10050',		'203',			'-',		'-',		'-',					],
-	[0,			'01_09',	'10',			'重型·作战单元',	'-',		'12',		1500,		30,			200,			'1.00',			40,			30,				0,			0,			0,			0,			15,			'02_09',	'-',				10,			10,			6,			4,				4,			7,			4,			7,			2,			4,				10,			'-',			'-',		10,			'Main_1',		'10002',		'10003',		'10050',		'10050',		'0',			'-',		'-',		'-',					],		//01		
-	
-	[1,			'01_10',	'11',			'初级枪塔',			'-',		'5',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_10',	'-',				6,			'-',		'-',		'-',			2,			4,			2,			4,			'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10001',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],
-	[1,			'01_11',	'12',			'高级枪塔',			'-',		'7.5',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_11',	'-',				9,			'-',		'-',		'-',			2,			6,			2,			6,			'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10001',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],
-	[1,			'01_12',	'13',			'初级炮塔',			'-',		'10',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_12',	'-',				8,			'-',		'-',		'-',			3,			7,			3,			7,			'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10007',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],
-	[1,			'01_13',	'14',			'高级炮塔',			'-',		'15',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_13',	'-',				11,			'-',		'-',		'-',			3,			10,			3,			10,			'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10007',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],		
-	[1,			'01_14',	'15',			'空投枪塔',			'-',		'5',		'-',		'-',		'-',			'0.40',			15,			10,				0,			0,			'-',		'-',		'-',		'02_14',	'-',				0,			'-',		'-',		'-',			0,			0,			'-',		'-',		'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10024',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],		//01		
-	
-	[0,			'01_15',	'16',			'无人机',			'-',		'2',		'-',		'-',		'-',			'1.00',			0,			0,				0,			0,			'-',		'-',		'-',		'02_15',	'-',				0,			'-',		'-',		'-',			0,			0,			'-',		'-',		'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'10000',		'-',			'-',			'-',			'-',			'-',		'-',		'-',					],
-	[0,			'01_16',	'17',			'大门',				'-',		'100',		'-',		'-',		'-',			'0.00',			30,			40,				0,			0,			'-',		'-',		'-',		'02_16',	'-',				0,			'-',		'-',		'-',			3,			9,			'-',		'-',		'-',		'-',			'-',		'-',			'-',		1,			'Main_2',		'0',			'-',			'-',			'-',			'-',			'-',		'-',		'-',					],		//01		
-	
-];
+let csv0 = (String.raw`// TankType,Name,Company,ModelID,MaxHp,Mass,Strength,MaxMoveSpeed,MovePower,RotateSpeed,FirstWeapon,SecondWeapon,CloseWeapon,CloseWeapon2,Armor,InitDrone,InitBattery,MaxBattery,InitState,Hang,Throw,Skill,ExploResist,ThrowDis,Immune,Resist,HalfHighAngleFloat,HalfLowAngleFloat,DLCContent,InitCargo,MechEffect,Price,IsHuman,IsPerson,Description,PlayerName,PlayerNameEn,InitAI,InitAI_Chan,SecondaryAi,LastAi,PlayerDescription,PlayerPerfect,PlayerLike,PlayerNormal,PlayerHate,PlayerAngleMinus,PlayerShotRateMinus,PlayerReloadSpeedMinus,PlayerMovePlus,PlayerMaintain,PlayerRunRate,Params
 
-// 无机数据
-let tbodyArray02 = [
-	
-	//高亮,			项目序号,		项目名称,				项目代码,		默认排序,		换弹老化,		最大散射,		偏移角度,		常规射程,		喷射射程,		镭射射程,		文本描述																],		
-	//Active,		Number,			Name,					Items,			ResolveID,		BrokePos,		AngleFloat,		UpStable,		BulletRange,	SplitRange,		SplitRange,		Description,															],		//01		
-	
-	[1,				'00',			'初始无人机00',			299,			1077,			'+100%', 		'+ 50%', 		'+ 35%', 		'- 50%', 		'- 40%',		'- 40%',		'无人机初始状态, 在未升级时, 对武器的多项属性都是呈现降低效果的',		],		//01		
+0,#游骑兵号,Company_TankType1,0,18000,5,1500,200,60,2,10001,10000,10050,10050,15,1|3|6,4|3|4|3|2|2|2|3,12|8|10|10|5|5|3|6,,,,400,10,16,5,0,0,0,,2074|1101|1200,200|211,0,1,1,#帝国制式装甲，没什么特色也没什么明显的缺点。拥有奔跑时可以跨过障碍的长动力足。\n【推荐配置】与队长机体相似,#玛丽,Mary,1,1,1|3,2|5,#优异成绩毕业的优等生\n年龄：15\n战斗风格：跟随。\n喜欢：奖章和咖啡\n讨厌：烟,Pres0|14|18|7,Pres1|Pres2|Pres3|Pres4|13|17,15|19|20,5|6|16,0,0,0,0,0,0,LowPressureBattleGetItem:21
+1,#骠骑兵号,Company_100,1,15000,5,1750,225,125,2.5,10001,10018,10050,10050,10,2|3|6,3|2|4|3|2|2|5|3,10|12|12|6|12|5|6|5,,1200,1101,401,20,18,0,10,0,0,Kuroku:10265+1114_2122,2074|1101|1101,201|215,0,1,1,#帝国制式装甲2型，拆卸了部分强化模块，增加了投掷物上限。对膝关节进行改造，使得可以进行蹲踞射击\n【推荐配置】与队长机体相似,#库罗库,Kuroku,6,3,3,2|5,#充满服从性的士兵\n年龄：15\n战斗风格：跟屁虫。\n喜欢：玩具和甜食\n讨厌：读书,Pres1|14|18,Pres2|Pres4|13|17,15|19|20,5|6|16|Pres3,0,0,0,0,-5,10,LowPressureBattleGetItem:22
+2,#龙骑兵号,MainAct,2,8000,5,2500,250,75,4,10017,10006,10052,10052,20,1|3|6,4|3|4|1|7|7|2|1,11|11|6|5|12|12|4|5,,1209,,402,25,15,15,25,0,0,Song:10066_10067_10068_10069_10070_10072,2074|1111|1200,202|212,0,1,1,#近战特化机体，近战武器强化空间极大，但是拆卸了部分武器强化空间。拥有极高的速度，缺点是耐久不高。\n【推荐配置】速射或散射武器，重甲,#桑,Song,5,2,2,1|4,#大无畏的机甲驾驶员\n年龄：19\n战斗风格：冲锋。\n喜欢：时尚的东西\n讨厌：老气的东西,Pres2|14|18,Pres1|Pres3|13|17,15|19|20,5|6|16|Pres4,0,-6,3,5,-20,5,LowPressureBattleGetItem:23
+3,#弓骑兵号,Main_1,3,12000,5,1750,150,40,2,10115,10022,10050,10050,5,3|3|6,3|3|7|2|2|2|2|2,14|8|18|5|5|5|3|6,,1203,,403,5,20,5,0,0,0,,2075|1101|10006,203|213,0,1,1,#装备有狙击武器，炮塔旋转快，几乎没有装甲，耐久度很低，移速略慢但是转速极快。\n【推荐配置】狙击武器，轻甲,#赭石色,Ocher,4,4,1,2|5,#循规蹈矩的士兵，不爱说话。\n年龄：17\n战斗风格：狙击手\n喜欢：读书\n讨厌：轻浮的事物,Pres3|14|18,Pres1|Pres4|13|17,15|19|20,5|6|16|Pres2,-10,0,5,0,10,-5,LowPressureBattleGetItem:24
+4,#圣骑士号,Main_1,4,30000,15,4500,300,36,1.5,10024,10016,10051,10051,30,1|3|6,4|4|6|6|1|1|2|4,12|12|12|12|8|5|4|6,,1201,,404,30,20,25,15,0,0,,2074|2074|2054,203|214,0,1,1,#重型机体，拥有较好的防护以及较慢的速度。\n【推荐配置】散射武器，提速,#克莱尔,Claire,4,4,1,2|5,#饱经战斗的士兵。成熟而稳重，却又喜欢开玩笑\n年龄：25\n战斗风格：保守\n喜欢：收藏品\n讨厌：幼稚的东西,Pres4|14|18,Pres2|Pres3|13|17,15|19|20,5|6|16|Pres1,-4,-4,-2,-10,10,0,LowPressureBattleGetItem:25
 
-	[0,				'01',			'改进无人机01',			298,			1076,			'+ 80%', 		'+ 40%', 		'+ 25%', 		'- 40%', 		'- 30%',		'- 30%',		'赭石色到达 02 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',		],		
-	[0,				'02',			'改进无人机02',			297,			1075,			'+ 60%', 		'+ 30%', 		'+ 15%', 		'- 30%', 		'- 25%',		'- 25%',		'赭石色到达 05 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',		],		
-	[0,				'03',			'改进无人机03',			296,			1074,			'+ 50%', 		'+ 20%', 		'+ 05%', 		'- 20%', 		'- 18%',		'- 18%',		'赭石色到达 07 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',		],		
-	[0,				'04',			'改进无人机04',			295,			1073,			'+ 40%', 		'+ 10%', 		'+ 00%', 		'- 10%', 		'- 12%',		'- 12%',		'赭石色到达 12 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',		],		//01		
+201,#标准作战单元A,Main_6,,10000,5,1500,150,60,2,10019,10000,10050,10050,30,0|0|0,3|2|2|4|0|0|1|0,5|5|4|8|4|4|3|0,,,,,30,15,0,0,0,0,,,,0,0,0,#无人协同作战单元。各项属性均衡,#标准作战单元A,Cooperative Unit A,1,1,0,0,,0,0,,0,0,0,0,0,0,0,
+202,#标准作战单元B,Main_6,,10000,5,1500,150,60,2,10019,10000,10050,10050,30,0|0|0,3|2|2|4|0|0|3|0,5|5|4|8|10|4|6|0,,,,,30,15,0,0,0,0,,,,0,0,0,#无人协同作战单元。各项属性均衡,#标准作战单元B,Cooperative Unit A,1,1,0,0,,0,0,,0,0,0,0,0,0,0,
+203,#高速作战单元,Main_5,,8000,5,1500,200,200,4,10006,10001,10050,10050,50,0|0|0,1|4|3|3|0|0|1|0,8|4|6|6|10|10|3|0,,,,,50,15,0,0,0,0,,,203,0,0,0,#无人协同作战单元。武器搭载量较小，但是机动性高,#高速作战单元,Cooperative Unit A,3,3,0,0,,0,0,,0,0,0,0,0,0,0,
+204,#火力作战单元,Main_1,,8000,5,1500,120,50,3,10019,10115,10050,10050,20,0|0|0,3|3|4|12|0|0|1|0,6|6|4|12|4|4|3|0,,,,,30,15,0,0,0,0,,,203,0,0,0,#无人协同作战单元。武器搭载量大，但是机动性差,#火力作战单元,Cooperative Unit A,4,4,0,0,,0,0,,0,0,0,0,0,0,0,
+205,#重型作战单元,Main_1,,12000,10,1500,200,30,1,10002,10003,10050,10050,40,0|0|0,4|4|5|5|0|0|2|0,7|7|10|10|6|4|4|0,,,,,30,15,0,0,0,0,,,,0,0,0,#无人协同作战单元。武器搭载量大，但是机动性差,#重型作战单元,Cooperative Unit A,4,4,0,0,,0,0,,0,0,0,0,0,0,0,
 
-	[1,				'05',			'增强无人机01',			280,			1065,			'- 10%', 		'- 05%', 		'- 05%', 		'+ 05%', 		'+ 05%',		'+ 05%',		'安装"无人机强化模块1"后提升的性能(该模块将导致主机降低 06% HP)',		],		
-	[1,				'06',			'增强无人机02',			281,			1066,			'- 20%', 		'- 08%', 		'- 08%', 		'+ 08%', 		'+ 08%',		'+ 08%',		'安装"无人机强化模块2"后提升的性能(该模块将导致主机降低 12% HP)',		],		
-	[1,				'07',			'增强无人机03',			282,			1067,			'- 30%', 		'- 12%', 		'- 10%', 		'+ 12%', 		'+ 10%',		'+ 10%',		'安装"无人机强化模块3"后提升的性能(该模块将导致主机降低 18% HP)',		],		
-	[1,				'08',			'增强无人机04',			283,			1068,			'- 40%', 		'- 15%', 		'- 12%', 		'+ 15%', 		'+ 12%',		'+ 12%',		'安装"无人机强化模块4"后提升的性能(该模块将导致主机降低 24% HP)',		],		
-	[1,				'09',			'增强无人机05',			284,			1069,			'- 45%', 		'- 18%', 		'- 15%', 		'+ 18%', 		'+ 15%',		'+ 15%',		'安装"无人机强化模块5"后提升的性能(该模块将导致主机降低 27% HP)',		],		
-	[1,				'10',			'增强无人机06',			285,			1070,			'- 50%', 		'- 20%', 		'- 16%', 		'+ 20%', 		'+ 16%',		'+ 16%',		'安装"无人机强化模块6"后提升的性能(该模块将导致主机降低 30% HP)',		],		
-	[1,				'11',			'增强无人机07',			286,			1071,			'- 55%', 		'- 25%', 		'- 18%', 		'+ 25%', 		'+ 18%',		'+ 18%',		'安装"无人机强化模块7"后提升的性能(该模块将导致主机降低 35% HP)',		],		
-	[1,				'12',			'增强无人机08',			287,			1072,			'- 60%', 		'- 30%', 		'- 20%', 		'+ 30%', 		'+ 20%',		'+ 20%',		'安装"无人机强化模块8"后提升的性能(该模块将导致主机降低 35% HP)',		],		//01		
-	
-];
+101,#机枪炮塔,Main_2,,5000,25,0,0,0,1,0,0,0,0,15,,2,4|6,,,,,10,15,0,0,0,0,,,,0,0,0,#机枪炮塔,,,101,101,0,0,,0,0,,0,0,0,0,0,0,0,
+104,#高级机枪炮塔,Main_2,,7500,25,0,0,0,1,0,0,0,0,15,,2,6|9,,,,,10,15,0,0,0,0,,,,0,0,0,#高级机枪炮塔,,,101,101,0,0,,0,0,,0,0,0,0,0,0,0,
+102,#炮塔,Main_2,,10000,25,0,0,0,1,0,0,0,0,15,,3,7|8,,,,,10,15,0,0,0,0,,,,0,0,0,#炮塔,,,101,101,0,0,,0,0,,0,0,0,0,0,0,0,
+105,#高级炮塔,Main_2,,15000,25,0,0,0,1,0,0,0,0,15,,3,10|11,,,,,10,15,0,0,0,0,,,,0,0,0,#高级炮塔,,,101,101,0,0,,0,0,,0,0,0,0,0,0,0,
+106,空袭炮台,Main_2,,5000,25,0,0,0,1,10024,0,0,0,15,,,,2054_2055,,,,10,15,0,0,0,0,,,,0,0,0,,,,101,101,0,0,,0,0,,0,0,0,0,0,0,0,
 
-// 项目名称
-let ItemsNameList = {
-	
-	0 :			['游骑兵号',				'レンジャー号',					'Ranger',							],		
-	1 :			['骠骑兵号',				'ユサール号',					'Hussar',							],		
-	2 :			['龙骑士号',				'ドラグーン号',					'Dragoon',							],		
-	3 :			['弓骑兵号',				'弓騎兵号',						'Horse Archer',						],		
-	4 :			['圣骑士号',				'聖騎士号',						'Paladin',							],		//02		
-	
-	'01_05' :	['标准作战单元A',			'制式戦闘ユニットA',			'Standard CSU A',					],		
-	'01_06' :	['标准作战单元B',			'制式戦闘ユニットB',			'Standard CSU B',					],		
-	'01_07' :	['高速·作战单元',			'高速戦闘ユニット',				'Fast CSU',							],		
-	'01_08' :	['火力·作战单元',			'火力戦闘ユニット',				'Firepower CSU',					],		
-	'01_09' :	['重型·作战单元',			'重装甲戦闘ユニット',			'Heavy CSU',						],		//02		
-	
-	'01_10' :	['初级枪塔',				'機関銃砲塔',					'A machine gun turret',				],		
-	'01_11' :	['高级枪塔',				'機関銃砲塔+',					'A machine gun turret +',			],		
-	'01_12' :	['初级炮塔',				'砲塔',							'A turret',							],		
-	'01_13' :	['高级炮塔',				'砲塔+',						'A turret +',						],		
-	'01_14' :	['空投枪塔',				'エアドロップ機関銃砲塔',		'Airdropped Machine Gun Turret',	],		//02		
-	
-	'01_15' :	['无人机',					'ドローン',						'Drone',							],		
-	'01_16' :	['大门',					'ゲート',						'Gate',								],		//02		
-	
-	299 :		['初始无人机00',			'初始ドローン 00',				'Initial Drone 00',					],		//02		
-	
-	298 :		['改进无人机01',			'改進ドローン 01',				'improve Drone 01',					],		
-	297 :		['改进无人机02',			'改進ドローン 02',				'improve Drone 02',					],		
-	296 :		['改进无人机03',			'改進ドローン 03',				'improve Drone 03',					],		
-	295 :		['改进无人机04',			'改進ドローン 04',				'improve Drone 04',					],		//02		
-	
-	280 :		['增强无人机01',			'增強ドローン 01',				'enhance Drone 01',					],		
-	281 :		['增强无人机02',			'增強ドローン 02',				'enhance Drone 02',					],		
-	282 :		['增强无人机03',			'增強ドローン 03',				'enhance Drone 03',					],		
-	283 :		['增强无人机04',			'增強ドローン 04',				'enhance Drone 04',					],		
-	284 :		['增强无人机05',			'增強ドローン 05',				'enhance Drone 05',					],		
-	285 :		['增强无人机06',			'增強ドローン 06',				'enhance Drone 06',					],		
-	286 :		['增强无人机07',			'增強ドローン 07',				'enhance Drone 07',					],		
-	287 :		['增强无人机08',			'增強ドローン 08',				'enhance Drone 08',					],		//02		
-	
-};
+100,#无人机,Main_2,,2000,1,0,500,0,5,10000,0,0,0,30,,,主 足部 主武器 副武器 近战 近战 投掷物 无人机,,,,,0,15,0,0,0,0,,,,0,0,0,#作战无人机,#无人机核心,,100,100,0,0,,0,0,,0,0,0,0,0,0,0,
+103,#大门,Main_2,,100000,10000,0,0,0,0,0,0,0,0,30,,,,,,,,40,0,0,0,0,0,,,,0,0,0,#最后的防线，不能被破坏,#大门,,,,0,0,,0,0,,0,0,0,0,0,0,0,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.replace('2074|1101|1200','2074|1200|1101') // 修改游骑兵号的自带装备顺序
+.replace('主 足部 主武器 副武器 近战 近战 投掷物 无人机','') // 删掉位于无人机属性的注释
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
-// 文本描述
-let DescriptionList = {
-	
-	0 :			[/*'游骑兵号',		*/'帝国制式装甲, 尽管没特色, 但也没什么缺点, 拥有奔跑时可跨过障碍的长动力足, 推荐配置: 各种武器均可',		'帝国軍の制式的な装甲で、特徴はほとんどなく、目立った欠点もない, 走行時に障害物を越えることができる長いパワーフットを持つ, 【推奨装備】あらゆる種類の武器が利用可能です',						'Standard empire armor with no distinctive features of glaring flaws, equipped with a pair of lengthened power feet, capable of leaping over obstacles when sprinting.Recommended setup: All kinds of weapons are available.',								],		
-	1 :			[/*'骠骑兵号',		*/'帝国制式装甲II型, 拆卸了部分强化模块, 增加了投掷物上限, 推荐配置: 轻型或元素武器, 投掷武器, 重甲',		'帝国軍制式装甲2式、強化モジュールの一部を取り外し、投擲物の上限を増加した, 膝関節はしゃがむ中の射撃ができるように改造された【推奨装備】軽武器またはエレメンタル武器、投擲武器、重装甲',		'Standard empire armor Type 2 with some enhancement modules removed and a higher capacity of thrown ordnance. The start was fast, but the armor was slightly weaker.Recommended setup: Light or elemental weapons, thrown ordnance, heavy armor.',			],		
-	2 :			[/*'龙骑士号',		*/'近战特化形机体, 近战武器强化空间极大, 拥有极高的速度, 但耐久不高, 推荐配置: 速射或散射武器, 重甲',		'近接特化機体、近接武器強化の余地が大きいが、武器強化スペースの一部が取り外された, 速度が非常に速いが、耐久性が高くないのが欠点, 【推奨装備】連射または散弾武器、重装甲',						'A specialized melee mecha with a lot of room for melee weapon enhancements and less for other weapon types. Its high movement speed is balanced by its low durability.Recommended setup: Rapid-firing or spreadshot weapons, heavy armor.',				],		
-	3 :			[/*'弓骑兵号',		*/'装备狙击武器, 几乎没有装甲, 耐久度很低, 机体移速也较慢, 但炮塔转速极快, 推荐配置: 狙击武器, 轻甲',		'狙撃兵器を装備し、砲塔の回転が速く、装甲がほとんどなく、耐久性が低く、速度はやや遅いが旋回速度は非常に速い, 【推奨装備】狙撃兵器、軽装甲',														'Equipped with a sniper rifle and features a quick-turn turret and almost no armor, resulting in low durability, slightly slow movement speed, and high rotational speed.Recommended setup: Sniper weapon, light armor.',									],		
-	4 :			[/*'圣骑士号',		*/'重型机体, 拥有较好的防护力, 不过机体速度较慢, 比起突击, 更适合打防守战, 推荐配置: 散射武器, 提速',		'重装機体、防御力が高い、速度が遅い, 【推奨武器】散弾兵器、速度上昇',																															'A heavy mecha with adequate defense and slow speed.Recommended setup: Spreadshot weapon, speed enhancement.',																																				],		//03		
-	
-	'01_05' :	[/*'标准作战单元A',	*/'无人协同作战单元, 各项属性较为均衡, 没什么突出点, 但也没什么缺陷',										'無人協同戦闘ユニット各ステータスでバランスが取れている',																																		'An unmanned Combat Support Unit with balanced stats.',																																																		],		
-	'01_06' :	[/*'标准作战单元B',	*/'无人协同作战单元, 各项属性较为均衡, 没什么突出点, 但也没什么缺陷',										'無人協同戦闘ユニット各ステータスでバランスが取れている',																																		'An unmanned Combat Support Unit with balanced stats.',																																																		],		
-	'01_07' :	[/*'高速·作战单元',	*/'无人协同作战单元, 武器的搭载量较小, 但是机动性高, 擅长于贴身近战',										'無人協同戦闘ユニット武器の搭載数は少ないが機動力は高い',																																		'A highly mobile unmanned Combat Support Unit that carries a small amount of weapons.',																																										],		
-	'01_08' :	[/*'火力·作战单元',	*/'无人协同作战单元, 武器的搭载量较大, 因此火力威猛, 代价是机动性差',										'無人協同戦闘ユニット武器は搭載数が多いが機動力が悪い',																																			'An unmanned Combat Support Unit with poor mobility that carries a large amount of weapons.',																																								],		
-	'01_09' :	[/*'重型·作战单元',	*/'无人协同作战单元, 武器的搭载量较大, 因此火力威猛, 代价是机动性差',										'無人協同戦闘ユニット武器は搭載数が多いが機動力が悪い',																																			'An unmanned Combat Support Unit with poor mobility that carries a large amount of weapons.',																																								],		//03		
-	
-	'01_10' :	[/*'初级枪塔',		*/'基础的机枪塔, 站桩输出, 不能移动',																		'機関銃砲塔',																																													'A machine gun turret.',																																																									],		
-	'01_11' :	[/*'高级枪塔',		*/'武器搭载量更大的机枪塔, 不能移动',																		'機関銃砲塔',																																													'A machine gun turret.',																																																									],		
-	'01_12' :	[/*'初级炮塔',		*/'基础的火炮塔, 站桩输出, 不能移动',																		'砲塔',																																															'A turret.',																																																												],		
-	'01_13' :	[/*'高级炮塔',		*/'武器搭载量更大的火炮塔, 不能移动',																		'砲塔',																																															'A turret.',																																																												],		
-	'01_14' :	[/*'空投枪塔',		*/'空中投递的机枪塔, 与基础枪塔类似',																		'機関銃砲塔',																																													'A machine gun turret.',																																																									],		//03		
-	
-	'01_15' :	[/*'无人机',		*/'在主力机体上搭载的小型作战无人机',																		'戦闘ドローン',																																													'A combat drone.',																																																											],		
-	'01_16' :	[/*'大门',			*/'这是我们不能被敌人破坏最后的防线',																		'最後の防衛線、破壊されてはならない',																																							'The last line of defense that must not be destroyed.',																																																		],		//03		
-	
-	299 :		[/*'初始无人机00',	*/'无人机初始状态, 在未升级时, 对武器的多项属性都是呈现降低效果的',											'ドローンの初期状態, 不合理な場合, 武器の複数の属性が減少して効果を減らす',																														'Initial of the drone, at the time of unliked, many attributes of weapons are reduced effect',																																								],		//03		
-	
-	298 :		[/*'改进无人机01',	*/'赭石色到达 02 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',											'オーカー02の忠実度に達すると, ストーリーイベントがトリガーされ, ドローンの性能が向上する',																										'Royalty level of Ocher is 02, dispatch polt event, improve the performance of drones',																																										],		
-	297 :		[/*'改进无人机02',	*/'赭石色到达 05 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',											'オーカー05の忠実度に達すると, ストーリーイベントがトリガーされ, ドローンの性能が向上する',																										'Royalty level of Ocher is 05, dispatch polt event, improve the performance of drones',																																										],		
-	296 :		[/*'改进无人机03',	*/'赭石色到达 07 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',											'オーカー07の忠実度に達すると, ストーリーイベントがトリガーされ, ドローンの性能が向上する',																										'Royalty level of Ocher is 07, dispatch polt event, improve the performance of drones',																																										],		
-	295 :		[/*'改进无人机04',	*/'赭石色到达 12 心忠诚度后触发剧情事件, 无人机的性能便可得到提升',											'オーカー12の忠実度に達すると, ストーリーイベントがトリガーされ, ドローンの性能が向上する',																										'Royalty level of Ocher is 12, dispatch polt event, improve the performance of drones',																																										],		//03		
-	
-	280 :		[/*'增强无人机01',	*/'安装"无人机强化模块1"后提升的性能(该模块将导致主机降低 06% HP)',											'ドローン強化モジュール 1 を設置した後に向上した性能(このモジュールはホストを 06% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 1" (will cause the host to decrease by 06% HP)',																																			],		
-	281 :		[/*'增强无人机02',	*/'安装"无人机强化模块2"后提升的性能(该模块将导致主机降低 12% HP)',											'ドローン強化モジュール 2 を設置した後に向上した性能(このモジュールはホストを 12% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 2" (will cause the host to decrease by 12% HP)',																																			],		
-	282 :		[/*'增强无人机03',	*/'安装"无人机强化模块3"后提升的性能(该模块将导致主机降低 18% HP)',											'ドローン強化モジュール 3 を設置した後に向上した性能(このモジュールはホストを 18% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 3" (will cause the host to decrease by 18% HP)',																																			],		
-	283 :		[/*'增强无人机04',	*/'安装"无人机强化模块4"后提升的性能(该模块将导致主机降低 24% HP)',											'ドローン強化モジュール 4 を設置した後に向上した性能(このモジュールはホストを 24% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 4" (will cause the host to decrease by 24% HP)',																																			],		
-	284 :		[/*'增强无人机05',	*/'安装"无人机强化模块5"后提升的性能(该模块将导致主机降低 27% HP)',											'ドローン強化モジュール 5 を設置した後に向上した性能(このモジュールはホストを 27% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 5" (will cause the host to decrease by 27% HP)',																																			],		
-	285 :		[/*'增强无人机06',	*/'安装"无人机强化模块6"后提升的性能(该模块将导致主机降低 30% HP)',											'ドローン強化モジュール 6 を設置した後に向上した性能(このモジュールはホストを 30% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 6" (will cause the host to decrease by 30% HP)',																																			],		
-	286 :		[/*'增强无人机07',	*/'安装"无人机强化模块7"后提升的性能(该模块将导致主机降低 35% HP)',											'ドローン強化モジュール 7 を設置した後に向上した性能(このモジュールはホストを 35% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 7" (will cause the host to decrease by 35% HP)',																																			],		
-	287 :		[/*'增强无人机08',	*/'安装"无人机强化模块8"后提升的性能(该模块将导致主机降低 35% HP)',											'ドローン強化モジュール 8 を設置した後に向上した性能(このモジュールはホストを 35% HP 低下させる)',																								'Improved performance after install the "Drone Enhancement Module 8" (will cause the host to decrease by 35% HP)',																																			],		//03		
-	
-};
+let csv1 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-// 机师名称
-let PlayerNameList = {
-	'02_00' :	['玛丽',					'メアリー',						'Mary',								],
-	'02_01' :	['库罗库',					'クロック',						'Kuroku',							],
-	'02_02' :	['桑',						'サン',							'San',								],
-	'02_03' :	['赭石色',					'オーカー',						'Ocher',							],
-	'02_04' :	['克莱尔',					'クレア',						'Claire',							],
-	'02_05' :	['标准作战单元A',			'制式戦闘ユニットA',			'Standard CSU A',					],
-	'02_06' :	['标准作战单元B',			'制式戦闘ユニットB',			'Standard CSU B',					],
-	'02_07' :	['高速·作战单元',			'高速戦闘ユニット',				'Fast CSU',							],
-	'02_08' :	['火力·作战单元',			'火力戦闘ユニット',				'Firepower CSU',					],
-	'02_09' :	['重型·作战单元',			'重装甲戦闘ユニット',			'Heavy CSU',						],
-	'02_10' :	['初级枪塔',				'機関銃砲塔',					'A machine gun turret',				],
-	'02_11' :	['高级枪塔',				'機関銃砲塔+',					'A machine gun turret +',			],
-	'02_12' :	['初级炮塔',				'砲塔',							'A turret',							],
-	'02_13' :	['高级炮塔',				'砲塔+',						'A turret +',						],
-	'02_14' :	['空投枪塔',				'エアドロップ機関銃砲塔',		'Airdropped Machine Gun Turret',	],
-	'02_15' :	['无人机',					'ドローン',						'Drone',							],
-	'02_16' :	['大门',					'ゲート',						'Gate',								],
-};
+299,无人机,299,None,无人机,,1,BulletRange:-50|BrokePos:100|AngleFloat:50|UpStable:35|SplitRange:-40|AddLaserRange:-40,,0,999,1,0,0,0,0,,,,,1296,1
 
-// 装备名称
-let EquipNameList = {
-	0 :			['None',				'None',							'None',								],
-	200 :		['弹力足',				'弾力足',						'Elastic Feet',						],
-	201 :		['轮滑',				'ローラースケート',				'Roller Skates',					],
-	202 :		['跳跃足',				'跳躍足',						'Jumping Feet',						],
-	203 :		['履带',				'キャタピラー',					'Tracks',							],
-	211 :		['蹲踞防护',			'しゃがむ防御',					'Crouch Protection',				],
-	212 :		['塑钢装甲',			'プラスチックスチール装甲',		'Plastic steel armor',				],
-	213 :		['狙击手',				'狙撃手',						'Sniper',							],
-	214 :		['炮台',				'砲塔',							'Turret',							],
-	215 :		['掷弹装置',			'擲弾デバイス',					'Grenade Launcher',					],
-	1101 :		['手榴弹',				'グレネード',					'Grenade',							],
-	1111 :		['破片手雷',			'フラググレネード',				'Frag Grenade',						],
-	1200 :		['轻型护甲',			'軽アーマー',					'Light Vest',						],
-	1201 :		['中型护甲',			'中アーマー',					'Medium Vest',						],
-	1203 :		['轻型装甲',			'軽装甲',						'Light Armor',						],
-	1209 :		['链锯',				'チェーンソー',					'Chain Saw',						],
-	2054 :		['转轴模块',			'回転軸モジュール',				'Rotating Shaft Module',			],
-	2074 :		['穿甲模块1',			'装甲貫通モジュール1',			'ArP Module 1',						],
-	2075 :		['穿甲模块2',			'装甲貫通モジュール2',			'ArP Module 2',						],
-	10000 :		['老式步枪',			'旧式小銃',						'Antique Rifle',					],
-	10001 :		['制式步枪',			'制式小銃',						'Service Rifle',					],
-	10002 :		['散弹枪',				'散弾銃',						'Shotgun',							],
-	10003 :		['泵动炮',				'ポンプガン',					'Pump-Action Shotgun',				],
-	10006 :		['冲锋枪',				'短機関銃',						'Submachine Gun',					],
-	10007 :		['加农炮',				'カノン砲',						'Cannon',							],
-	10016 :		['制式步枪B2',			'制式小銃B2',					'Service Rifle B2',					],
-	10017 :		['制式步枪B1',			'制式小銃B1',					'Service Rifle B1',					],
-	10018 :		['制式步枪A3',			'制式小銃A3',					'Service Rifle A3',					],
-	10019 :		['老式步枪A1',			'旧式小銃A1',					'Antique Rifle A1',					],
-	10022 :		['冲锋枪A2',			'短機関銃A2',					'Submachine Gun A2',				],
-	10024 :		['轻机枪',				'軽機関銃',						'Light Machine Gun',				],
-	10050 :		['动力拳',				'パワーナックル',				'Power Gloves',						],
-	10051 :		['高能拳套',			'高エネルギーナックル',			'High-Power Gloves',				],
-	10052 :		['光剑',				'光の剣',						'Lightsaber',						],
-	10115 :		['轻型狙M',				'軽狙撃銃M',					'Light Sniper M',					],
-};
+298,无人机,298,None,无人机,,1,BulletRange:-40|BrokePos:80|AngleFloat:40|UpStable:25|SplitRange:-30|AddLaserRange:-30,,0,999,1,0,0,0,0,,,,,1295,1
+297,无人机,297,None,无人机,,1,BulletRange:-30|BrokePos:60|AngleFloat:30|UpStable:15|SplitRange:-25|AddLaserRange:-25,,0,999,1,0,0,0,0,,,,,1294,1
+296,无人机,296,None,无人机,,1,BulletRange:-20|BrokePos:50|AngleFloat:20|UpStable:5|SplitRange:-18|AddLaserRange:-18,,0,999,1,0,0,0,0,,,,,1293,1
+295,无人机,295,None,无人机,,1,BulletRange:-10|BrokePos:40|AngleFloat:10|UpStable:0|SplitRange:-12|AddLaserRange:-12,,0,999,1,0,0,0,0,,,,,1292,1
 
-// 原型研发
-let CompanyList = {
-	Main_1 : ['帝国重工',				'帝国重工',				'Imperial Heavy Industries',				],
-	Main_3 : ['依热夫兵工厂',			'Irevアーセナル',		'Irev Arsenal',								],
-	Main_4 : ['帝国兵器集团',			'帝国兵器集団',			'Imperial Weapon Group',					],
-	Main_5 : ['皇家军械公司',			'王立武器会社',			'Royal Ordnance Company',					],
-	Main_2 : ['帝国武器制造总局',		'帝国兵器製造局',		'Imperial Weapon Manufacturing Bureau',		],
-	Main_6 : ['帝国铁骑制造总局',		'帝国鉄騎製造総局',		'mperial Cavalry Manufacturing Bureau',		],
+280,无人机,280,None,无人机,,1,BulletRange:5|BrokePos:-10|AngleFloat:-5|UpStable:-5|SplitRange:5|AddLaserRange:5,,0,999,1,0,0,0,0,,,,,1284,1
+281,无人机,281,None,无人机,,1,BulletRange:8|BrokePos:-20|AngleFloat:-8|UpStable:-8|SplitRange:8|AddLaserRange:8,,0,999,1,0,0,0,0,,,,,1285,1
+282,无人机,282,None,无人机,,1,BulletRange:12|BrokePos:-30|AngleFloat:-12|UpStable:-10|SplitRange:10|AddLaserRange:10,,0,999,1,0,0,0,0,,,,,1286,1
+283,无人机,283,None,无人机,,1,BulletRange:15|BrokePos:-40|AngleFloat:-15|UpStable:-12|SplitRange:12|AddLaserRange:12,,0,999,1,0,0,0,0,,,,,1287,1
+284,无人机,284,None,无人机,,1,BulletRange:18|BrokePos:-45|AngleFloat:-18|UpStable:-15|SplitRange:15|AddLaserRange:15,,0,999,1,0,0,0,0,,,,,1288,1
+285,无人机,285,None,无人机,,1,BulletRange:20|BrokePos:-50|AngleFloat:-20|UpStable:-16|SplitRange:16|AddLaserRange:16,,0,999,1,0,0,0,0,,,,,1289,1
+286,无人机,286,None,无人机,,1,BulletRange:25|BrokePos:-55|AngleFloat:-25|UpStable:-18|SplitRange:18|AddLaserRange:18,,0,999,1,0,0,0,0,,,,,1290,1
+287,无人机,287,None,无人机,,1,BulletRange:30|BrokePos:-60|AngleFloat:-30|UpStable:-20|SplitRange:20|AddLaserRange:20,,0,999,1,0,0,0,0,,,,,1291,1
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
+	
+	项目名称 : {
+	
+	0		: `游骑兵号`			+ ` # 游骑兵号,遊騎兵號,Ranger,レンジャー号`,
+	1		: `骠骑兵号`			+ ` # 骠骑兵号,驃騎兵號,Hussar,ユサール号`,
+	2		: `龙骑兵号`			+ ` # 龙骑兵号,龍騎兵號,Dragoon,ドラグーン号`,
+	3		: `弓骑兵号`			+ ` # 弓骑兵号,弓騎兵號,Horse Archer,弓騎兵号`,
+	4		: `圣骑兵号`			+ ` # 圣骑士号,聖騎士號,Paladin,聖騎士号`,
+	
+	201		: `标准作战单元A`		+ ` # 标准作战单元A,標準作戰單元A,Standard CSU A,制式戦闘ユニットA`,
+	202		: `标准作战单元B`		+ ` # 标准作战单元B,標準作戰單元B,Standard CSU B,制式戦闘ユニットB`,
+	203		: `高速·作战单元`		+ ` # 高速作战单元,高速作戰單元,Fast CSU,高速戦闘ユニット`,
+	204		: `火力·作战单元`		+ ` # 火力作战单元,火力作戰單元,Firepower CSU,火力戦闘ユニット`,
+	205		: `重型·作战单元`		+ ` # 重型作战单元,重型作戰單元,Heavy CSU,重装甲戦闘ユニット`,
+	
+	101		: `初级枪塔`			+ ` # 机枪炮塔,機槍炮塔,A machine gun turret,機関銃砲塔`,
+	104		: `高级枪塔`			+ ` # 机枪炮塔+,機槍炮塔+,A machine gun turret +,機関銃砲塔+`,
+	102		: `初级炮塔`			+ ` # 炮塔,炮塔,A turret,砲塔`,
+	105		: `高级炮塔`			+ ` # 炮塔+,炮塔+,A turret +,砲塔+`,
+	106		: `空投枪塔`			+ ` # 空投机枪塔,空投機槍塔,Airdropped Machine Gun Turret,エアドロップ機関銃砲塔`,
+	
+	100		: `无人机`				+ ` # 无人机,無人機,Drone,ドローン`,
+	103		: `大门`				+ ` # 大门,大門,Gate,ゲート`,
+	
+	299		: `初始无人机00`		+ ` # 初始无人机00,初始無人機00,Initial Drone 00,初始ドローン00`,
+	
+	298		: `改进无人机01`		+ ` # 改进无人机01,改進無人機01,improve Drone 01,改進ドローン01`,
+	297		: `改进无人机02`		+ ` # 改进无人机02,改進無人機02,improve Drone 02,改進ドローン02`,
+	296		: `改进无人机03`		+ ` # 改进无人机03,改進無人機03,improve Drone 03,改進ドローン03`,
+	295		: `改进无人机04`		+ ` # 改进无人机04,改進無人機04,improve Drone 04,改進ドローン04`,
+	
+	280		: `增强无人机01`		+ ` # 增强无人机01,增強無人機01,enhance Drone 01,增強ドローン01`,
+	281		: `增强无人机02`		+ ` # 增强无人机02,增強無人機02,enhance Drone 02,增強ドローン02`,
+	282		: `增强无人机03`		+ ` # 增强无人机03,增強無人機03,enhance Drone 03,增強ドローン03`,
+	283		: `增强无人机04`		+ ` # 增强无人机04,增強無人機04,enhance Drone 04,增強ドローン04`,
+	284		: `增强无人机05`		+ ` # 增强无人机05,增強無人機05,enhance Drone 05,增強ドローン05`,
+	285		: `增强无人机06`		+ ` # 增强无人机06,增強無人機06,enhance Drone 06,增強ドローン06`,
+	286		: `增强无人机07`		+ ` # 增强无人机07,增強無人機07,enhance Drone 07,增強ドローン07`,
+	287		: `增强无人机08`		+ ` # 增强无人机08,增強無人機08,enhance Drone 08,增強ドローン08`,
+	
+	},
+	
+	文本描述 : {
+	
+	0		: `帝国制式装甲, 尽管没特色, 但也没什么缺点, 拥有奔跑时可以跨过障碍的弹力足, 推荐配置: 各种武器均可`		+ ` # 帝国制式装甲，没什么特色也没什么明显的缺点。拥有奔跑时可以跨过障碍的长动力足。\n【推荐配置】各种武器均可,帝國制式裝甲，沒什麼特色也沒什麼明顯的缺點。擁有奔跑時可以跨過障礙的長動力足。\n【推薦配置】各種武器均可,Standard empire armor with no distinctive features of glaring flaws， equipped with a pair of lengthened power feet， capable of leaping over obstacles when sprinting.\nRecommended setup: All kinds of weapons are available.,帝国軍の制式的な装甲で、特徴はほとんどなく、目立った欠点もない。走行時に障害物を越えることができる長いパワーフットを持つ。\n【推奨装備】あらゆる種類の武器が利用可能です`,
+	1		: `帝国制式装甲II型, 拆卸了部分强化模块, 增加了投掷物上限, 推荐配置: 轻型或元素武器, 投掷武器, 重甲`		+ ` # 帝国制式装甲2型，拆卸了部分强化模块，增加了投掷物上限。起步很快，但装甲稍弱。\n【推荐配置】轻型或元素武器，投掷武器，重甲,帝國制式裝甲2型，拆卸了部分強化模組，增加了投擲物上限。起步很快，但裝甲稍弱。\n【推薦配置】與隊長機體相似,Standard empire armor Type 2 with some enhancement modules removed and a higher capacity of thrown ordnance. The start was fast， but the armor was slightly weaker.\nRecommended setup: Light or elemental weapons， thrown ordnance， heavy armor.,帝国軍制式装甲2式、強化モジュールの一部を取り外し、投擲物の上限を増加した。膝関節はしゃがむ中の射撃ができるように改造された\n【推奨装備】軽武器またはエレメンタル武器、投擲武器、重装甲`,
+	2		: `近战特化形机体, 近战武器强化空间极大, 拥有极高的速度, 但耐久很低, 推荐配置: 速射或散射武器, 重甲`		+ ` # 近战特化机体，近战武器强化空间极大，但是拆卸了部分武器强化空间。拥有极高的速度，缺点是耐久不高。\n【推荐配置】速射或散射武器，重甲,近戰特化機體，近戰武器強化空間極大，但是拆卸了部分武器強化空間。擁有極高的速度，缺點是耐久不高。\n【推薦配置】速射或散射武器，重甲,A specialized melee mecha with a lot of room for melee weapon enhancements and less for other weapon types. Its high movement speed is balanced by its low durability.\nRecommended setup: Rapid-firing or spreadshot weapons， heavy armor.,近接特化機体、近接武器強化の余地が大きいが、武器強化スペースの一部が取り外された。速度が非常に速いが、耐久性が高くないのが欠点。\n【推奨装備】連射または散弾武器、重装甲`,
+	3		: `装备狙击武器, 几乎没装甲, 耐久度较低, 机体移速也较慢, 但主体强化上限高, 推荐配置: 狙击武器, 轻甲`		+ ` # 装备有狙击武器，炮塔旋转快，几乎没有装甲，耐久度很低，移速略慢但是转速极快。\n【推荐配置】狙击武器，轻甲,裝備有狙擊武器，炮塔旋轉快，幾乎沒有裝甲，耐久度很低，移速略慢但是轉速極快。\n【推薦配置】狙擊武器，輕甲,Equipped with a sniper rifle and features a quick-turn turret and almost no armor， resulting in low durability， slightly slow movement speed， and high rotational speed.\nRecommended setup: Sniper weapon， light armor.,狙撃兵器を装備し、砲塔の回転が速く、装甲がほとんどなく、耐久性が低く、速度はやや遅いが旋回速度は非常に速い。\n【推奨装備】狙撃兵器、軽装甲`,
+	4		: `重型机体, 拥有较好的防护力, 不过机体速度较慢, 比起突击, 更适合于防守战, 推荐配置: 散射武器, 提速`		+ ` # 重型机体，拥有较好的防护以及较慢的速度。\n【推荐配置】散射武器，提速,重型機體，擁有較好的防護以及較慢的速度。\n【推薦配置】散射武器，提速,A heavy mecha with adequate defense and slow speed.\nRecommended setup: Spreadshot weapon， speed enhancement.,重装機体、防御力が高い、速度が遅い。\n【推奨武器】散弾兵器、速度上昇`,
+	
+	201		: `无人协同作战单元, 各项属性较均衡, 没有什么突出点, 但也没什么缺陷`										+ ` # 无人协同作战单元。各项属性均衡,無人協同作戰單元。各項屬性均衡,An unmanned Combat Support Unit with balanced stats.,無人協同戦闘ユニット各ステータスでバランスが取れている`,
+	202		: `无人协同作战单元, 各项属性较均衡, 没有什么突出点, 但也没什么缺陷`										+ ` # 无人协同作战单元。各项属性均衡,無人協同作戰單元。各項屬性均衡,An unmanned Combat Support Unit with balanced stats.,無人協同戦闘ユニット各ステータスでバランスが取れている`,
+	203		: `无人协同作战单元, 武器搭载量较小, 但是机动性很高, 擅长于贴身近战`										+ ` # 无人协同作战单元。武器搭载量较小，但是机动性高,無人協同作戰單元。武器搭載量較小，但是機動性高,A highly mobile unmanned Combat Support Unit that carries a small amount of weapons.,無人協同戦闘ユニット武器の搭載数は少ないが機動力は高い`,
+	204		: `无人协同作战单元, 武器搭载量较大, 因此火力较威猛, 代价是机动性差`										+ ` # 无人协同作战单元。武器搭载量大，但是机动性差,無人協同作戰單元。武器搭載量大，但是機動性差,An unmanned Combat Support Unit with poor mobility that carries a large amount of weapons.,無人協同戦闘ユニット武器は搭載数が多いが機動力が悪い`,
+	205		: `无人协同作战单元, 武器搭载量较大, 因此火力较威猛, 代价是机动性差`										+ ` # 无人协同作战单元。武器搭载量大，但是机动性差,無人協同作戰單元。武器搭載量大，但是機動性差,An unmanned Combat Support Unit with poor mobility that carries a large amount of weapons.,無人協同戦闘ユニット武器は搭載数が多いが機動力が悪い`,
+	
+	101		: `基础的机枪塔, 站桩输出, 不能移动`																		+ ` # 机枪炮塔,機槍炮塔,A machine gun turret,機関銃砲塔`,
+	104		: `武器搭载量更大的机枪塔, 不能移动`																		+ ` # 机枪炮塔,機槍炮塔,A machine gun turret,機関銃砲塔`,
+	102		: `基础的火炮塔, 站桩输出, 不能移动`																		+ ` # 炮塔,炮塔,A turret,砲塔`,
+	105		: `武器搭载量更大的火炮塔, 不能移动`																		+ ` # 炮塔,炮塔,A turret,砲塔`,
+	106		: `空中投递的机枪塔, 与基础枪塔类似`																		+ ` # 空投机枪炮塔,空投機槍炮塔,Airdrop A machine gun turret,空中投下機関銃砲塔`,
+	
+	100		: `在载人主机上搭载的小型作战无人机`																		+ ` # 作战无人机,作戰無人機,A combat drone.,戦闘ドローン`,
+	103		: `不能被破坏的防线(失守则游戏结束)`																		+ ` # 最后的防线，不能被破坏,最後的防線，不能被破壞,The last line of defense that must not be destroyed.,最後の防衛線、破壊されてはならない`,
+	
+	299		: `无人机的初始状态, 在未升级时, 对武器的多项属性都是呈现降低效果的`										+` # 无人机的初始状态，在未升级时，对武器的多项属性都是呈现降低效果的,無人機的初始狀態，在未升級時，對武器的多項屬性都是呈現降低效果的,Initial of the drone，at the time of unliked，many attributes of weapons are reduced effect,ドローンの初期状態，不合理な場合，武器の複数の属性が減少して効果を減らす`,
+	298		: `赭石色到达 02 心忠诚度后, 会触发剧情事件, 无人机的性能将得到提升`										+` # 赭石色到达 02 心忠诚度后，会触发剧情事件，无人机的性能将得到提升,赭石色到達 02 心忠誠度後，會觸發劇情事件，無人機的性能將得到提升,Royalty level of Ocher is 02，dispatch polt event，improve the performance of drones,オーカー02の忠実度に達すると，ストーリーイベントがトリガーされ，ドローンの性能が向上する`,
+	297		: `赭石色到达 05 心忠诚度后, 会触发剧情事件, 无人机的性能将得到提升`										+` # 赭石色到达 05 心忠诚度后，会触发剧情事件，无人机的性能将得到提升,赭石色到達 05 心忠誠度後，會觸發劇情事件，無人機的性能將得到提升,Royalty level of Ocher is 05，dispatch polt event，improve the performance of drones,オーカー05の忠実度に達すると，ストーリーイベントがトリガーされ，ドローンの性能が向上する`,
+	296		: `赭石色到达 07 心忠诚度后, 会触发剧情事件, 无人机的性能将得到提升`										+` # 赭石色到达 07 心忠诚度后，会触发剧情事件，无人机的性能将得到提升,赭石色到達 07 心忠誠度後，會觸發劇情事件，無人機的性能將得到提升,Royalty level of Ocher is 07，dispatch polt event，improve the performance of drones,オーカー07の忠実度に達すると，ストーリーイベントがトリガーされ，ドローンの性能が向上する`,
+	295		: `赭石色到达 12 心忠诚度后, 会触发剧情事件, 无人机的性能将得到提升`										+` # 赭石色到达 12 心忠诚度后，会触发剧情事件，无人机的性能将得到提升,赭石色到達 12 心忠誠度後，會觸發劇情事件，無人機的性能將得到提升,Royalty level of Ocher is 12，dispatch polt event，improve the performance of drones,オーカー12の忠実度に達すると，ストーリーイベントがトリガーされ，ドローンの性能が向上する`,
+	280		: `安装"无人机强化模块01"后提升的性能(该模块同时将导致主机 -06% HP)`										+` # 安装"无人机强化模块01"后提升的性能(该模块同时将导致主机 -06% HP),安裝"無人機強化模組01"後提升的性能(該模組同時將導致主機 -06% HP),Improved performance after install the "Drone Enhancement Module 1" (will cause the host to decrease by 06% HP),ドローン強化モジュール 1 を設置した後に向上した性能(このモジュールはホストを 06% HP 低下させる)`,
+	281		: `安装"无人机强化模块02"后提升的性能(该模块同时将导致主机 -12% HP)`										+` # 安装"无人机强化模块02"后提升的性能(该模块同时将导致主机 -12% HP),安裝"無人機強化模組02"後提升的性能(該模組同時將導致主機 -12% HP),Improved performance after install the "Drone Enhancement Module 2" (will cause the host to decrease by 12% HP),ドローン強化モジュール 2 を設置した後に向上した性能(このモジュールはホストを 12% HP 低下させる)`,
+	282		: `安装"无人机强化模块03"后提升的性能(该模块同时将导致主机 -18% HP)`										+` # 安装"无人机强化模块03"后提升的性能(该模块同时将导致主机 -18% HP),安裝"無人機強化模組03"後提升的性能(該模組同時將導致主機 -18% HP),Improved performance after install the "Drone Enhancement Module 3" (will cause the host to decrease by 18% HP),ドローン強化モジュール 3 を設置した後に向上した性能(このモジュールはホストを 18% HP 低下させる)`,
+	283		: `安装"无人机强化模块04"后提升的性能(该模块同时将导致主机 -24% HP)`										+` # 安装"无人机强化模块04"后提升的性能(该模块同时将导致主机 -24% HP),安裝"無人機強化模組04"後提升的性能(該模組同時將導致主機 -24% HP),Improved performance after install the "Drone Enhancement Module 4" (will cause the host to decrease by 24% HP),ドローン強化モジュール 4 を設置した後に向上した性能(このモジュールはホストを 24% HP 低下させる)`,
+	284		: `安装"无人机强化模块05"后提升的性能(该模块同时将导致主机 -27% HP)`										+` # 安装"无人机强化模块05"后提升的性能(该模块同时将导致主机 -27% HP),安裝"無人機強化模組05"後提升的性能(該模組同時將導致主機 -27% HP),Improved performance after install the "Drone Enhancement Module 5" (will cause the host to decrease by 27% HP),ドローン強化モジュール 5 を設置した後に向上した性能(このモジュールはホストを 27% HP 低下させる)`,
+	285		: `安装"无人机强化模块06"后提升的性能(该模块同时将导致主机 -30% HP)`										+` # 安装"无人机强化模块06"后提升的性能(该模块同时将导致主机 -30% HP),安裝"無人機強化模組06"後提升的性能(該模組同時將導致主機 -30% HP),Improved performance after install the "Drone Enhancement Module 6" (will cause the host to decrease by 30% HP),ドローン強化モジュール 6 を設置した後に向上した性能(このモジュールはホストを 30% HP 低下させる)`,
+	286		: `安装"无人机强化模块07"后提升的性能(该模块同时将导致主机 -35% HP)`										+` # 安装"无人机强化模块07"后提升的性能(该模块同时将导致主机 -35% HP),安裝"無人機強化模組07"後提升的性能(該模組同時將導致主機 -35% HP),Improved performance after install the "Drone Enhancement Module 7" (will cause the host to decrease by 35% HP),ドローン強化モジュール 7 を設置した後に向上した性能(このモジュールはホストを 35% HP 低下させる)`,
+	287		: `安装"无人机强化模块08"后提升的性能(该模块同时将导致主机 -35% HP)`										+` # 安装"无人机强化模块08"后提升的性能(该模块同时将导致主机 -35% HP),安裝"無人機強化模組08"後提升的性能(該模組同時將導致主機 -35% HP),Improved performance after install the "Drone Enhancement Module 8" (will cause the host to decrease by 35% HP),ドローン強化モジュール 8 を設置した後に向上した性能(このモジュールはホストを 35% HP 低下させる)`,
+	
+	},
+	
+	装备名称 : {
+	
+	10000	: `老式步枪`			+ ` # 老式步枪,老式步槍,Antique Rifle,旧式小銃`,
+	10001	: `制式步枪`			+ ` # 制式步枪,制式步槍,Service Rifle,制式小銃`,
+	10016	: `制式步枪B2`			+ ` # 制式步枪B2,制式步槍B2,Service Rifle B2,制式小銃B2`,
+	10017	: `制式步枪B1`			+ ` # 制式步枪B1,制式步槍B1,Service Rifle B1,制式小銃B1`,
+	10018	: `制式步枪A3`			+ ` # 制式步枪A3,制式步槍A3,Service Rifle A3,制式小銃A3`,
+	10019	: `老式步枪A1`			+ ` # 老式步枪A1,老式步槍A1,Antique Rifle A1,旧式小銃A1`,
+	10002	: `散弹枪`				+ ` # 散弹枪,散彈槍,Shotgun,散弾銃`,
+	10003	: `泵动炮`				+ ` # 泵动炮,泵動炮,Pump-Action Shotgun,ポンプガン`,
+	10006	: `冲锋枪`				+ ` # 冲锋枪,衝鋒槍,Submachine Gun,短機関銃`,
+	10022	: `冲锋枪A2`			+ ` # 冲锋枪A2,衝鋒槍A2,Submachine Gun A2,短機関銃A2`,
+	10024	: `轻机枪`				+ ` # 轻机枪,輕機槍,Light Machine Gun,軽機関銃`,
+	10115	: `轻型狙M1`			+ ` # 轻型狙M,輕型狙M,Light Sniper M,軽狙撃銃M`,
+	10007	: `加农炮`				+ ` # 加农炮,加農炮,Cannon,カノン砲`,
+	10050	: `动力拳套`			+ ` # 动力拳套,動力拳套,Power Gloves,パワーナックル`,
+	10051	: `高能拳套`			+ ` # 高能拳套,高能拳套,High-Power Gloves,高エネルギーナックル`,
+	10052	: `光剑`				+ ` # 光剑,光劍,Lightsaber,光の剣`,
+	10265	: `割喉电子匕首`		+ ` # 割喉电子匕首,割喉電子匕首,Throat-Cut Electric Dagger,喉切りー電子ダガー`,
+	10066	: `龙骑变形刀`			+ ` # 龙骑变形刀,龍騎變形刀,Dragoon Morphblade,ドラグーントランスブレード`,
+	10067	: `龙骑大剑`			+ ` # 龙骑大剑,龍騎大劍,Dragoon Greatsword,ドラグーングレートソード`,
+	10068	: `龙骑剑盾`			+ ` # 龙骑剑盾,龍騎劍盾,Dragoon Sword & Shield,ドラグーンソード＆シールド`,
+	10069	: `龙骑双剑`			+ ` # 龙骑双剑,龍騎雙劍,Dragoon Twinblades,ドラグーンツインブレード`,
+	10070	: `龙骑枪盾`			+ ` # 龙骑枪盾,龍騎槍盾,Dragoon Gun & Shield,ドラグーンランス＆シールド`,
+	10071	: `龙骑钛斧`			+ ` # 龙骑钛斧,龍騎鈦斧,Dragoon Titan Axe,ドラグーンアックス`,
+	10072	: `龙骑巨镰`			+ ` # 龙骑巨镰,龍騎巨鐮,Dragoon Great Scythe,ドラグーンサイズ`,
+	
+	2074	: `穿甲模块01`			+ ` # 穿甲模块1,穿甲模組1,ArP Module 1,装甲貫通モジュール1`,
+	2075	: `穿甲模块02`			+ ` # 穿甲模块2,穿甲模組2,ArP Module 2,装甲貫通モジュール2`,
+	
+	2122	: `光学隐身模块01`		+ ` # 光学隐身模块,光學隱身模組,Optical Invisibility Module,光学ステルスモジュール`, 
+	
+	2054	: `转轴模块01`			+ ` # 转轴模块,轉軸模組,Rotating Shaft Module,回転軸モジュール`,
+	2055	: `转轴模块02`			+ ` # 转轴模块+,轉軸模組+,Rotating Shaft Module+,回転軸モジュール+`,
+	
+	1200	: `轻型护甲`			+ ` # 轻型护甲,輕型護甲,Light Vest,軽アーマー`,
+	1201	: `中型护甲`			+ ` # 中型护甲,中型護甲,Medium Vest,中アーマー`,
+	1203	: `轻型装甲`			+ ` # 轻型装甲,輕型裝甲,Light Armor,軽装甲`,
+	1209	: `近战链锯`			+ ` # 链锯,鏈鋸,Chain Saw,チェーンソー`,
+	
+	200		: `弹力足`				+ ` # 弹力足,彈力足,Elastic Feet,弾力足`,
+	201		: `轮滑足`				+ ` # 轮滑,輪滑,Roller Skates,ローラースケート`,
+	202		: `跳跃足`				+ ` # 跳跃足,跳躍足,Jumping Feet,跳躍足`,
+	203		: `履带足`				+ ` # 履带,履帶,Tracks,キャタピラー`,
+	211		: `蹲踞防护`			+ ` # 蹲踞防护,蹲踞防護,Crouch Protection,しゃがむ防御`,
+	212		: `塑钢装甲`			+ ` # 塑钢装甲,塑鋼裝甲,Plastic steel armor,プラスチックスチール装甲`,
+	213		: `狙击模组`			+ ` # 狙击手,狙擊手,Sniper,狙撃手`,
+	214		: `炮台模块`			+ ` # 炮台,炮臺,Turret,砲塔`,
+	215		: `掷弹装置`			+ ` # 掷弹装置,擲彈裝置,Grenade Launcher,擲弾デバイス`,
+	
+	1101	: `手榴弹`				+ ` # 手榴弹,手榴彈,Grenade,グレネード`,
+	1111	: `破片手雷`			+ ` # 破片手雷,破片手雷,Frag Grenade,フラググレネード`,
+	1114	: `长效烟雾弹`			+ ` # 长效烟雾弹,長效煙霧彈,Long-Lasting Smoke Bomb,長持ち煙幕弾`,
+	
+	},
+	
+	操控机师 : {
+	
+	0		: `玛　丽`				, // + ` # 玛丽,瑪麗,Mary,メアリー`,
+	1		: `库罗库`				, // + ` # 库罗库,庫羅庫,Kuroku,クロック`,
+	2		: `桑/San`				, // + ` # 桑,桑,San,サン`,
+	3		: `赭石色`				, // + ` # 赭石色,赭石色,Ocher,オーカー`,
+	4		: `克莱尔`				, // + ` # 克莱尔,克萊爾,Claire,クレア`,
+	
+	201		: `标准作战单元A`		, // + ` # 标准作战单元A,標準作戰單元A,Standard CSU A,制式戦闘ユニットA`,
+	202		: `标准作战单元B`		, // + ` # 标准作战单元B,標準作戰單元B,Standard CSU B,制式戦闘ユニットB`,
+	203		: `高速·作战单元`		, // + ` # 高速作战单元,高速作戰單元,Fast CSU,高速戦闘ユニット`,
+	204		: `火力·作战单元`		, // + ` # 火力作战单元,火力作戰單元,Firepower CSU,火力戦闘ユニット`,
+	205		: `重型·作战单元`		, // + ` # 重型作战单元,重型作戰單元,Heavy CSU,重装甲戦闘ユニット`,
+	
+	101		: `初级枪塔`			, // + ` # 机枪炮塔,機槍炮塔,A machine gun turret,機関銃砲塔`,
+	104		: `高级枪塔`			, // + ` # 机枪炮塔+,機槍炮塔+,A machine gun turret +,機関銃砲塔+`,
+	102		: `初级炮塔`			, // + ` # 炮塔,炮塔,A turret,砲塔`,
+	105		: `高级炮塔`			, // + ` # 炮塔+,炮塔+,A turret +,砲塔+`,
+	106		: `空投枪塔`			, // + ` # 空投机枪塔,空投機槍塔,Airdropped Machine Gun Turret,エアドロップ機関銃砲塔`,
+	
+	100		: `无人机`				, // + ` # 无人机,無人機,Drone,ドローン`,
+	103		: `大门`				, // + ` # 大门,大門,Gate,ゲート`,
+	
+	},
+	
+	原型研发 : {
+	
+	Main_1				: `帝国重工`				, // + ` # 帝国重工,帝國重工,Imperial Heavy Industries,帝国重工`,
+	Main_2				: `帝国武器制造总局`		, // + ` # 帝国武器制造总局,帝國武器製造總局,Imperial Weapon Manufacturing Bureau,帝国兵器製造局`,
+	Main_3				: `依热夫兵工厂`			, // + ` # 依热夫兵工厂,依熱夫兵工廠,Irev Arsenal,Irevアーセナル`,
+	Main_4				: `帝国兵器集团`			, // + ` # 帝国兵器集团,帝國兵器集團,Imperial Weapon Group,帝国兵器集団`,
+	Main_5				: `皇家军械公司`			, // + ` # 皇家军械公司,皇家軍械公司,Royal Ordnance Company,王立武器会社`,
+	Main_6				: `帝国铁骑制造总局`		, // + ` # 帝国铁骑制造总局,帝國鐵騎製造總局,mperial Cavalry Manufacturing Bureau,帝国鉄騎製造総局`,
+	
+	Company_TankType1	: `大河重工`				, // + ` # 大河重工,大河重工,Taiga Heavy Industry,大河重工`,
+	Company_100			: `翼骑兵工业`				, // + ` # 翼骑兵工业,翼騎兵工業,Winged Hussars Industries,ウィングドフサーズ・インダストリーズ`,
+	MainAct				: `龙骑兵设计局`			, // + ` # 龙骑兵设计局,龍騎兵設計局,Dragoon Design Bureau,ドラグーン設計局`,
+	
+	},
+	
+	特别注释 : {
+	
+	1		: `DLC 四叶草奖励: (长效烟雾弹/光学隐身模块01 ? 2选1)+ 割喉电子匕首`,
+	2		: `DLC 红莲花奖励: (龙骑变形刀/龙骑剑盾/枪盾/双剑/大剑/巨镰 ? 6选1)`,
+	
+	106		: `枪塔被投入战场自带: (转轴模块01/转轴模块02 ? 系统会随机自动2选1)`,
+	
+	},
+	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv0.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		TankType,					0,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#游骑兵号,
+	item.原型研发 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 原型研发		Company,					Company_TankType1,
+	item.模型代码 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 模型代码		ModelID,					0,
+	item.初始血量 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 初始血量		MaxHp,						18000,
+	item.机体重量 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 机体重量		Mass,						5,
+	item.奔跑能量 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 奔跑能量		Strength,					1500,
+	item.最大移速 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 最大移速		MaxMoveSpeed,				200,
+	item.起步马力 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 起步马力		MovePower,					60,
+	item.炮台转速 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 炮台转速		RotateSpeed,				2,
+	item.左远装备 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 左远装备		FirstWeapon,				10001,
+	item.右远装备 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 右远装备		SecondWeapon,				10000,
+	item.左近装备 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 左近装备		CloseWeapon,				10050,
+	item.右近装备 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 右近装备		CloseWeapon2,				10050,
+	item.穿甲抵抗 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 穿甲抵抗		Armor,						15,
+	item.无人机值 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 无人机值		InitDrone,					1|3|6,
+	item.初始槽位 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 初始槽位		InitBattery,				4|3|4|3|2|2|2|3,
+	item.最大槽位 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 最大槽位		MaxBattery,					12|8|10|10|5|5|3|6,
+	item.自带模块 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 自带模块		InitState,					,
+	item.挂件装备 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 挂件装备		Hang,						,
+	item.投掷装备 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 投掷装备		Throw,						,
+	item.初始技能 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 初始技能		Skill,						400,
+	item.爆炸抗性 = {code:item[22], text:item[22], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[22] +'</td>'; // 爆炸抗性		ExploResist,				10,
+	item.投掷距离 = {code:item[23], text:item[23], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[23] +'</td>'; // 投掷距离		ThrowDis,					16,
+	item.属性免疫 = {code:item[24], text:item[24], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[24] +'</td>'; // 属性免疫		Immune,						5,
+	item.属性抗性 = {code:item[25], text:item[25], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[25] +'</td>'; // 属性抗性		Resist,						0,
+	item.内部散射 = {code:item[26], text:item[26], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[26] +'</td>'; // 内部散射		HalfHighAngleFloat,			0,
+	item.外部散射 = {code:item[27], text:item[27], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[27] +'</td>'; // 外部散射		HalfLowAngleFloat,			0,
+	item.附赠装备 = {code:item[28], text:item[28], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[28] +'</td>'; // 附赠装备		DLCContent,					,
+	item.自带装备 = {code:item[29], text:item[29], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[29] +'</td>'; // 自带装备		InitCargo,					2074|1101|1200,
+	item.改造装备 = {code:item[30], text:item[30], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[30] +'</td>'; // 改造装备		MechEffect,					200|211,
+	item.参考价格 = {code:item[31], text:item[31], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[31] +'</td>'; // 参考价格		Price,						0,
+	item.人类操作 = {code:item[32], text:item[32], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[32] +'</td>'; // 人类操作		IsHuman,					1,
+	item.人类驾驶 = {code:item[33], text:item[33], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[33] +'</td>'; // 人类驾驶		IsPerson,					1,
+	item.文本描述 = {code:item[34], text:item[34], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[34] +'</td>'; // 文本描述		Description,				#帝国制式装甲，没什么特色也没什么明显的缺点。拥有奔跑时可以跨过障碍的长动力足。\n【推荐配置】与队长机体相似,
+	item.操控机师 = {code:item[35], text:item[35], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[35] +'</td>'; // 操控机师		PlayerName,					#玛丽,
+	item.机师姓名 = {code:item[36], text:item[36], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[36] +'</td>'; // 机师姓名		PlayerNameEn,				Mary,
+	item.初始指令 = {code:item[37], text:item[37], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[37] +'</td>'; // 初始指令		InitAI,						1,
+	item.特殊指令 = {code:item[38], text:item[38], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[38] +'</td>'; // 特殊指令		InitAI_Chan,				1,
+	item.第二指令 = {code:item[39], text:item[39], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[39] +'</td>'; // 第二指令		SecondaryAi,				1|3,
+	item.第三指令 = {code:item[40], text:item[40], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[40] +'</td>'; // 第三指令		LastAi,						2|5,
+	item.文本描述 = {code:item[41], text:item[41], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[41] +'</td>'; // 文本描述		PlayerDescription,			#优异成绩毕业的优等生\n年龄：15\n战斗风格：跟随。\n喜欢：奖章和咖啡\n讨厌：烟,
+	item.最爱礼物 = {code:item[42], text:item[42], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[42] +'</td>'; // 最爱礼物		PlayerPerfect,				Pres0|14|18|7,
+	item.接受礼物 = {code:item[43], text:item[43], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[43] +'</td>'; // 接受礼物		PlayerLike,					Pres1|Pres2|Pres3|Pres4|13|17,
+	item.还行礼物 = {code:item[44], text:item[44], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[44] +'</td>'; // 还行礼物		PlayerNormal,				15|19|20,
+	item.嫌弃礼物 = {code:item[45], text:item[45], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[45] +'</td>'; // 嫌弃礼物		PlayerHate,					5|6|16,
+	item.射击散射 = {code:item[46], text:item[46], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[46] +'</td>'; // 射击散射		PlayerAngleMinus,			0,
+	item.射击间隔 = {code:item[47], text:item[47], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[47] +'</td>'; // 射击间隔		PlayerShotRateMinus,		0,
+	item.装弹时间 = {code:item[48], text:item[48], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[48] +'</td>'; // 装弹时间		PlayerReloadSpeedMinus,		0,
+	item.移动速度 = {code:item[49], text:item[49], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[49] +'</td>'; // 移动速度		PlayerMovePlus,				0,
+	item.武器维护 = {code:item[50], text:item[50], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[50] +'</td>'; // 武器维护		PlayerMaintain,				0,
+	item.奔跑速度 = {code:item[51], text:item[51], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[51] +'</td>'; // 奔跑速度		PlayerRunRate,				0,
+	item.特殊参数 = {code:item[52], text:item[52], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[52] +'</td>'; // 特殊参数		Params,						LowPressureBattleGetItem:21,
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 机体图片
-		if(index ===  1){ powerTable_tbody_node01 
-		+= '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+ '" src="../static/image/04_mecha_list/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
-		
-		// 机体名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4] !== '-' ? item[4] : item[1]][0]) +'</td>' }else 
-		
-		// 初始血量
-		if(index ===  5){ powerTable_tbody_node01 += '<td>'+data+'<span class="letterK"></span></td>' }else 
-		
-		// 文本描述
-		if(index === 18){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4] !== '-' ? item[4] : item[1]][0] +'</td>' }else 
-		
-		// 原型研发
-		if(index === 33){ powerTable_tbody_node01 += '<td>'+ CompanyList[item[33]][0] +'</td>' }else 
-		
-		// 操控机师
-		if(index === 17){ powerTable_tbody_node01 
-		// += '<td style="padding:2px;">' // alt="'+ (PlayerNameList[item[17]][0]) +'">'
-		+= '<td style="padding:2px;" alt="'+ (PlayerNameList[item[17]][0]) +'">'
-		+ '<img loading="lazy" alt="'+ item[17] +'" src="../static/image/04_mecha_list/'+ item[17] +'.png" style="width:32px;height:32px;" /></td>' }else 
-		
-		// P3'S装备
-		if(index >= 34 && index <= 41){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : 
-		data.split('|').map(function(e){ return EquipNameList[e][0] }).join('<br />')) +'</td>' }else 
-		
-		// 常规数据
-		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
+	// -----------------------------------------
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	// 空行处理
+	
+	if(item === 'blankRow'){
+		if(csv0[index+1] !== 'blankRow'){
+		powerTable01_group+=1};
+		return;
+	}else{
+		powerTable01_index +=1;
+	};
+	
+	// -----------------------------------------
+	
+	// 数据处理
+	
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.原型研发.text = textList.原型研发[item[2]];
+	item.炮台转速.text = parseInt(item.炮台转速.code).toFixed(2);
+	item.初始血量.text = (item.初始血量.code/1000) + '<span class="letterK"></span>';
+	
+	if(['100','101','102','103','104','105','106'].includes(item.项目代码.code) === true){
+	item.奔跑能量.code = item.奔跑能量.text = item.起步马力.code = item.起步马力.text = item.最大移速.code = item.最大移速.text = '-' };
+	
+	item.图片名称_0 = {text:'0_'+item.项目代码.text, code:'0_'+item.项目代码.code, };
+	item.图片名称_1 = {text:'1_'+item.项目代码.text, code:'1_'+item.项目代码.code, };
+	
+	item.无人机数 = {code:'-', text:'-', };
+	if(item.无人机值.code !== ''){ item.无人机数.code 
+	= item.无人机数.text = item.无人机值.code.split('|')[0] };
+	
+	item.特别注释 = {code:'-', text:'-', };
+	if(item.自带模块.code !== '' || item.附赠装备.code !== ''){ 
+	item.特别注释.text = item.特别注释.code = textList.特别注释[item.项目代码.code] };
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){	// 直接合并
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){	// 替换变量
+		
+		// item.文本描述.text 
+		// = item.文本描述.text.replace(/\n/g, '<br />');
+		
+		// item.功能函数.code
+		// .split('|').map(function(value){ return value.replace(/.+:/, '') })
+		// .forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	// 装备设置
+	
+	if(item.项目代码.code === '101' || item.项目代码.code === '104'){ item.左远装备.code = '10001' };
+	if(item.项目代码.code === '102' || item.项目代码.code === '105'){ item.左远装备.code = '10007' };
+	
+	if(item.左远装备.code === '0'){ item.左远装备.text = '无法装备' }else{
+		item.左远装备.text = textList.装备名称[item.左远装备.code].replace(/ # .+/, '');
+		if(item.项目代码.code === '203'){ item.左远装备.text = item.左远装备.text.replace('冲锋枪',   '冲锋枪LV01') }else 
+		if(item.项目代码.code === '205'){ item.左远装备.text = item.左远装备.text.replace('散弹枪',   '散弹枪LV01') }else 
+		if(item.项目代码.code === '106'){ item.左远装备.text = item.左远装备.text.replace('轻机枪',   '轻机枪L1'  ) }else 
+		if(item.项目代码.code === '102'){ item.左远装备.text = item.左远装备.text.replace('加农炮',   '加农炮L1'  ) }else 
+		if(item.项目代码.code === '105'){ item.左远装备.text = item.左远装备.text.replace('加农炮',   '加农炮L1'  ) }; //
+	};
+	
+	if(item.右远装备.code === '0'){ item.右远装备.text = '-' }else{
+		item.右远装备.text = textList.装备名称[item.右远装备.code].replace(/ # .+/, '');
+		if(item.项目代码.code === '205'){ item.右远装备.text = item.右远装备.text.replace('泵动炮',   '泵动炮L1'  ) }else
+		if(item.项目代码.code ===   '0'){ item.右远装备.text = item.右远装备.text.replace('老式步枪', '老式步枪L1') }; //
+	};
+	
+	if(item.左近装备.code === '0'){ item.左近装备.text = '-' }else{
+		item.左近装备.text = textList.装备名称[item.左近装备.code].replace(/ # .+/, '');
+		if(item.项目代码.code ===   '2'){ item.左近装备.text = item.左近装备.text.replace('光剑', '光剑LV01') };
+	};
+	
+	if(item.右近装备.code === '0'){ item.右近装备.text = '-' }else{
+		item.右近装备.text = textList.装备名称[item.右近装备.code].replace(/ # .+/, '');
+		if(item.项目代码.code ===   '2'){ item.右近装备.text = item.右近装备.text.replace('光剑', '光剑LV01') };
+	};
+	
+	item.挂件装备.text = '-';
+	if(['0','1','2','3','4',].includes(item.项目代码.code)){
+		if(item.挂件装备.code === ''){ item.挂件装备.text = 'EmptySet' }
+		else{ item.挂件装备.text = textList.装备名称[item.挂件装备.code].replace(/ #.+/,'') };
+	};
+	
+	item.投掷装备.text = '-';
+	if(['0','1','2','3','4',].includes(item.项目代码.code)){
+		if(item.投掷装备.code === ''){ item.投掷装备.text = 'EmptySet' }
+		else{ item.投掷装备.text = textList.装备名称[item.投掷装备.code].replace(/ #.+/,'').replace('手榴弹', '手榴弹L1') };
+	};
+	
+	item.自带装备.text = '-';
+	if(['0','1','2','3','4',].includes(item.项目代码.code)){
+		item.自带装备.text = item.自带装备.code.split('|').map(
+		function(value){ return textList.装备名称[value].replace(/ # (.+)/,'') }).join('/');
+		if(item.项目代码.code ===   '4'){ item.自带装备.text = item.自带装备.text.replace('转轴模块01', '转轴模块') };
+	};
+	
+	item.改造装备.text = '-';
+	if(['0','1','2','3','4','201','202','203','204','205',].includes(item.项目代码.code) === true){
+		if(item.改造装备.code === ''){ item.改造装备.text = 'EmptySet' }else{
+			item.改造装备.text = item.改造装备.code.split('|').map(
+			function(value){ return textList.装备名称[value].replace(/ # .+/, '') }).
+			map(function(value){ return `<div class='justify-48px'>`+ value +`</div>`; }).join('');
+		};
+	};
+	
+	// -----------------------------------------
+	
+	// InitBattery,      MaxBattery,
+	// 4|3|4|3|2|2|2|3, 12|8|10|10|5|5|3|6,
+	// 主,足部,主武器,副武器,近战,近战,投掷物,无人机
+	item.初始槽位.code = item.初始槽位.text.split('|');
+	item.最大槽位.code = item.最大槽位.text.split('|');
+	
+	// 左远槽位
+	item.左远槽位 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ].includes(item.项目代码.code) === true){ item.左远槽位.code = item.左远槽位.text = item.最大槽位.code[2] }else 
+	if(['101','102','104','105',].includes(item.项目代码.code) === true){ item.左远槽位.code = item.左远槽位.text = item.最大槽位.code[1] }
+	else if(item.项目代码.code === '106'){ item.左远槽位.code = item.左远槽位.text = '0' } };
+	
+	// 右远槽位
+	item.右远槽位 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ].includes(item.项目代码.code) === true){ item.右远槽位.code = item.右远槽位.text = item.最大槽位.code[3] }else 
+	if(['101','102','104','105',].includes(item.项目代码.code) === true){ item.右远槽位.code = item.右远槽位.text = '-' }
+	else if(item.项目代码.code === '106'){ item.右远槽位.code = item.右远槽位.text = '-' } };
+	
+	// 左近槽位
+	item.左近槽位 = {code:'-', text:'-', }; {
+	if(['0','1','2','3','4','201','202','203','204','205',]
+	.includes(item.项目代码.code) === true){ item.左近槽位.code = item.左近槽位.text = item.最大槽位.code[4] } };
+	
+	// 右近槽位
+	item.右近槽位 = {code:'-', text:'-', }; {
+	if(['0','1','2','3','4','201','202','203','204','205',]
+	.includes(item.项目代码.code) === true){ item.右近槽位.code = item.右近槽位.text = item.最大槽位.code[5] } };
+	
+	// 主体槽位
+	item.主体槽位 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', '101','102','104','105', ].includes(
+	item.项目代码.code) === true){ item.主体槽位.code = item.主体槽位.text = item.初始槽位.code[0] }
+	else if(item.项目代码.code === '106'){ item.主体槽位.code = item.主体槽位.text = '0' } };
+	
+	// 主体上限
+	item.主体上限 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', '101','102','104','105', ].includes(
+	item.项目代码.code) === true){ item.主体上限.code = item.主体上限.text = item.最大槽位.code[0] }
+	else if(item.项目代码.code === '106'){ item.主体上限.code = item.主体上限.text = '0' } };
+	
+	// 足部槽位
+	item.足部槽位 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ]
+	.includes(item.项目代码.code) === true){ item.足部槽位.code = item.足部槽位.text = item.初始槽位.code[1] } };
+	
+	// 足部上限
+	item.足部上限 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ]
+	.includes(item.项目代码.code) === true){ item.足部上限.code = item.足部上限.text = item.最大槽位.code[1] } };
+	
+	// 投掷槽位
+	item.投掷槽位 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ]
+	.includes(item.项目代码.code) === true){ item.投掷槽位.code = item.投掷槽位.text = item.初始槽位.code[6] } };
+	
+	// 投掷上限
+	item.投掷上限 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ]
+	.includes(item.项目代码.code) === true){ item.投掷上限.code = item.投掷上限.text = item.最大槽位.code[6] } };
+	
+	// 无人机槽
+	item.无人机槽 = {code:'-', text:'-', }; {
+	if(['0', '1', '2', '3', '4', '201', '202', '203', '204', '205', ]
+	.includes(item.项目代码.code) === true){ item.无人机槽.code = item.无人机槽.text = item.最大槽位.code[7] } };
+	
+	// 机塔足部
+	if(['101','102','104','105','106',].includes(item.项目代码.code)){
+	item.足部槽位.code = item.足部槽位.text = item.主体槽位.text; item.足部上限.code = item.足部上限.text = item.主体上限.text; };
+	
+	// 挂件槽位
+	item.挂件槽位 = {code:'-', text:'-', };
+	if(['0','1','2','3','4','201','202','203','204','205',]
+	.includes(item.项目代码.code) === true){ item.挂件槽位.code = item.挂件槽位.text = '10' };
+	
+	// 改造槽位
+	item.改造槽位 = {code:'-', text:'-', };
+	if([  '0',  '1',  '2',  '3',  '4',].includes(item.项目代码.code) === true){ item.改造槽位.code = item.改造槽位.text = '6' };
+	if(['201','202','203','204','205',].includes(item.项目代码.code) === true){ item.改造槽位.code = item.改造槽位.text = '2' };
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart00 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称_0.code}' src='../static/image/04_mecha_list/${item.图片名称_0.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称_0.code}" src="../static/image/04_mecha_list/${item.图片名称_0.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	item.操控机师.code = textList.操控机师[item.项目代码.code];
+	item.操控机师.text = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称_1.code}' src='../static/image/04_mecha_list/${item.图片名称_1.code}.png' style='width:128px;height:128px;' />
+		<div style='text-align:center;margin-top:8px;padding-top:8px;border-top:1px solid #666;font-size:14px;'>${item.操控机师.code}</div>">
+		<img loading="lazy" alt="${item.图片名称_1.code}" src="../static/image/04_mecha_list/${item.图片名称_1.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	item.原型研发.text = /*html*/`<td class="showPart01 followTip" 
+		style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.原型研发.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.原型研发.text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart00">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart00">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.初始血量.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.奔跑能量.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.起步马力.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.最大移速.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.炮台转速.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.穿甲抵抗.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.爆炸抗性.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.属性免疫.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.属性抗性.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.投掷距离.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.机体重量.text +'</td>';
+	
+	powerTable01_tbody_html += item.原型研发.text;
+	powerTable01_tbody_html += item.操控机师.text;
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.左远槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.右远槽位.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.左近槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.右近槽位.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.主体槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.主体上限.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.足部槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.足部上限.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.投掷槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.投掷上限.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.挂件槽位.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.改造槽位.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.无人机槽.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.无人机数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart02">'+ item.特别注释.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.左远装备.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.右远装备.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.左近装备.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.右近装备.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.挂件装备.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.投掷装备.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.改造装备.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart03">'+ item.自带装备.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable02 = $('#powerTable02'), powerTable_tbody_node02 = '';
+let jqi_powerTable02 = $('#powerTable02');
+let powerTable02_tbody_html = '';
+let powerTable02_group = -1;
+let powerTable02_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray02.forEach(function(item){
+csv1.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node02 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 机体名称
-		if(index ===  2){ powerTable_tbody_node02 += '<td style="height:40px;">'+ (ItemsNameList[item[3]][0]) +'</td>' }else 
-
-		// 文本描述
-		if(index === 11){ powerTable_tbody_node02 += '<td style="height:40px;">'+ DescriptionList[item[3]][0] +'</td>' }else 
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node02 += '<td style="height:40px;">'+ data +'</td>' };
-		
-	});
+	// -----------------------------------------
 	
-	// 闭合掉tr
-	powerTable_tbody_node02 += '</tr>';
+	// 空行处理
+	
+	if(item === 'blankRow'){
+		if(csv1[index+1] !== 'blankRow'){
+		powerTable02_group+=1};
+		return;
+	}else{
+		powerTable02_index +=1;
+	};
+	
+	// -----------------------------------------
+	
+	// 数据处理
+	
+	item.数据分组 = powerTable02_group;
+	item.项目序号 = powerTable02_index;
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.项目名称.text = (function(){	// 直接合并
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){	// 替换变量
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	// 提取数据
+	
+	item.换弹老化 = {text: item.功能函数.code.match(/BrokePos:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.换弹老化.text) === true){ item.换弹老化.text = '0'+item.换弹老化.text };
+	if(/^-.%/i.test(item.换弹老化.text) === true){ item.换弹老化.text = '-0'+item.换弹老化.text.slice(1) };
+	
+	item.最大散射 = {text: item.功能函数.code.match(/UpStable:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.最大散射.text) === true){ item.最大散射.text = '0'+item.最大散射.text };
+	if(/^-.%/i.test(item.最大散射.text) === true){ item.最大散射.text = '-0'+item.最大散射.text.slice(1) };
+	
+	item.偏移角度 = {text: item.功能函数.code.match(/AngleFloat:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.偏移角度.text) === true){ item.偏移角度.text = '0'+item.偏移角度.text };
+	if(/^-.%/i.test(item.偏移角度.text) === true){ item.偏移角度.text = '-0'+item.偏移角度.text.slice(1) };
+	
+	item.常规射程 = {text: item.功能函数.code.match(/BulletRange:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.常规射程.text) === true){ item.常规射程.text = '0'+item.常规射程.text };
+	if(/^-.%/i.test(item.常规射程.text) === true){ item.常规射程.text = '-0'+item.常规射程.text.slice(1) };
+	
+	item.喷射射程 = {text: item.功能函数.code.match(/SplitRange:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.喷射射程.text) === true){ item.喷射射程.text = '0'+item.喷射射程.text };
+	if(/^-.%/i.test(item.喷射射程.text) === true){ item.喷射射程.text = '-0'+item.喷射射程.text.slice(1) };
+	
+	item.射线射程 = {text: item.功能函数.code.match(/AddLaserRange:([^,|]+)/i)[1] +'%', };
+	if(/^.%/i.test(item.射线射程.text) === true){ item.射线射程.text = '0'+item.射线射程.text };
+	if(/^-.%/i.test(item.射线射程.text) === true){ item.射线射程.text = '-0'+item.射线射程.text.slice(1) };
+	
+	// -----------------------------------------
+	
+	// 统一格式
+	
+	if(parseInt(item.换弹老化.text) >= 100){ item.换弹老化.text = '+'+item.换弹老化.text }
+	else if(item.换弹老化.text.charAt(0) !== '-'){ item.换弹老化.text = '+ '+item.换弹老化.text }
+	else if(item.换弹老化.text.charAt(0) === '-'){ item.换弹老化.text = '- '+item.换弹老化.text.slice(1) };
+	
+	if(parseInt(item.最大散射.text) >= 100){ item.最大散射.text = '+'+item.最大散射.text }
+	else if(item.最大散射.text.charAt(0) !== '-'){ item.最大散射.text = '+ '+item.最大散射.text }
+	else if(item.最大散射.text.charAt(0) === '-'){ item.最大散射.text = '- '+item.最大散射.text.slice(1) };
+	
+	if(parseInt(item.偏移角度.text) >= 100){ item.偏移角度.text = '+'+item.偏移角度.text }
+	else if(item.偏移角度.text.charAt(0) !== '-'){ item.偏移角度.text = '+ '+item.偏移角度.text }
+	else if(item.偏移角度.text.charAt(0) === '-'){ item.偏移角度.text = '- '+item.偏移角度.text.slice(1) };
+	
+	if(parseInt(item.常规射程.text) >= 100){ item.常规射程.text = '+'+item.常规射程.text }
+	else if(item.常规射程.text.charAt(0) !== '-'){ item.常规射程.text = '+ '+item.常规射程.text }
+	else if(item.常规射程.text.charAt(0) === '-'){ item.常规射程.text = '- '+item.常规射程.text.slice(1) };
+	
+	if(parseInt(item.喷射射程.text) >= 100){ item.喷射射程.text = '+'+item.喷射射程.text }
+	else if(item.喷射射程.text.charAt(0) !== '-'){ item.喷射射程.text = '+ '+item.喷射射程.text }
+	else if(item.喷射射程.text.charAt(0) === '-'){ item.喷射射程.text = '- '+item.喷射射程.text.slice(1) };
+	
+	if(parseInt(item.射线射程.text) >= 100){ item.射线射程.text = '+'+item.射线射程.text }
+	else if(item.射线射程.text.charAt(0) !== '-'){ item.射线射程.text = '+ '+item.射线射程.text }
+	else if(item.射线射程.text.charAt(0) === '-'){ item.射线射程.text = '- '+item.射线射程.text.slice(1) };
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable02_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable02_tbody_html += /*item.项目图片*/'<td class="showPart01">'+ (item.项目序号+1) +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.换弹老化.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.最大散射.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.偏移角度.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.常规射程.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.喷射射程.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.射线射程.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable02_tbody_html += '</tr>';
 	
 });
-$('#powerTable02 tbody').html(powerTable_tbody_node02);
+$('#powerTable02 tbody').html(powerTable02_tbody_html);
 xj2._buildPowerTable('powerTable02');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable02);
+jqi_powerTable02.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable02) });
 
 // ---------------------------------------------
 
 // 当前所在
+let maxPage=3;
+let nowPage=1;
+let keyList = Array.from({length:maxPage, }, 
+function(e,i){ return String(i + 1) });
 let jqi_textPart = $('#textPart');
 
-// 向后翻页
-let nextPartAction = function(){
-	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart02'), jqi_textPart.text('P02') }else 
-	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart03'), jqi_textPart.text('P03') }else 
-	if(jqi_powerTable01.hasClass('showPart03') === true){ jqi_powerTable01.removeClass('showPart03').addClass('showPart01'), jqi_textPart.text('P01') };
-};
-
-// 向前翻页
-let prevPartAction = function(){
-	if(jqi_powerTable01.hasClass('showPart01') === true){ jqi_powerTable01.removeClass('showPart01').addClass('showPart03'), jqi_textPart.text('P03') }else 
-	if(jqi_powerTable01.hasClass('showPart02') === true){ jqi_powerTable01.removeClass('showPart02').addClass('showPart01'), jqi_textPart.text('P01') }else 
-	if(jqi_powerTable01.hasClass('showPart03') === true){ jqi_powerTable01.removeClass('showPart03').addClass('showPart02'), jqi_textPart.text('P02') };
+// 按钮翻页
+let pagingAction = function(target){
+	if(target === 'next'){ nowPage = (nowPage + 1 > maxPage) ? 1 : nowPage + 1 }else 
+	if(target === 'prev'){ nowPage = (nowPage - 1 < 1) ? maxPage : nowPage - 1 }else
+	{ nowPage = parseInt(target) }; // 不是 'next' 也不是 'prev', 那就直接解析成数值
+	for(let i = 1; i <= maxPage; i++){ jqi_powerTable01.removeClass('showPart0'+i) };
+	jqi_powerTable01.addClass('showPart0'+ nowPage);
+	jqi_textPart.text('P0' + nowPage);
 };
 
 // 阻止排序
 $('#turnPart').on('click', function(event){ event.stopPropagation() });
 
 // 翻页事件
-$('#nextPart').on('click', function(e){ nextPartAction() });
-$('#prevPart').on('click', function(e){ prevPartAction() });
+$('#nextPart').on('click', function(){ pagingAction('next') });
+$('#prevPart').on('click', function(){ pagingAction('prev') });
 
 // 键盘翻页
-$(window).on('keyup', function(event){
-	let activeElement = document.activeElement;
-	if(activeElement !== $('#pub_headFormText')[0]
-	&& document.documentElement.clientWidth >= 1280){
-		if(event.keyCode === 37 || event.keyCode === 65){ prevPartAction() }else	// 右或者 D
-		if(event.keyCode === 39 || event.keyCode === 68){ nextPartAction() }else	// 左或者 A
-		if(event.key === '1'){ jqi_powerTable01.removeClass('showPart02 showPart03').addClass('showPart01'), jqi_textPart.text('P01') }else	// 1 / 小键盘或数字键盘都行
-		if(event.key === '2'){ jqi_powerTable01.removeClass('showPart01 showPart03').addClass('showPart02'), jqi_textPart.text('P02') }else	// 2 / 小键盘或数字键盘都行
-		if(event.key === '3'){ jqi_powerTable01.removeClass('showPart01 showPart02').addClass('showPart03'), jqi_textPart.text('P03') };	// 3 / 小键盘或数字键盘都行
+$(window).on('keyup', function(event){ // 快捷按键
+	if(document.documentElement.clientWidth >= 1280 && 
+	/input|select/i.test(document.activeElement.nodeName) === false){			// 非控件聚焦
+		if([37,65,].includes(event.keyCode)){ pagingAction('prev') }else		// 方向键左 ← 或主键盘的 A 键
+		if([39,68,].includes(event.keyCode)){ pagingAction('next') }else		// 方向键右 → 或主键盘的 D 键
+		if(keyList.includes(event.key) === true){ pagingAction(event.key) };	// event.key 是 '1','2','3','4', 主键盘或小键盘都行
 	};
 });
 
@@ -738,7 +1274,7 @@ $(window).on('keyup', function(event){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.0</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
 </div>
 </div>
 </div>
