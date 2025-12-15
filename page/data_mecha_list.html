@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-12-16T01:18:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-12-16T01:18:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-12-16T01:18:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -200,7 +200,7 @@
 	<thead style="line-height:1;">
 		<tr>
 			
-			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
 			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
 			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
 			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
@@ -387,7 +387,7 @@ PlayerAngleMinus,PlayerShotRateMinus,PlayerReloadSpeedMinus,PlayerMovePlus,Playe
 射击散射,射击间隔,装弹时间,移动速度,武器维护,奔跑速度, 都是角色属性, 也放到主角小队的页面去, 没必要显示
 
 InitAI,InitAI_Chan,SecondaryAi,LastAi,PlayerDescription, 初始指令,特殊指令,第二指令,第三指令,文本描述,
-PlayerPerfect,PlayerLike,PlayerNormal,PlayerHate, 最爱礼物,接受礼物,还行礼物,嫌弃礼物
+PlayerPerfect,PlayerLike,PlayerNormal,PlayerHate, 最爱礼物,喜欢礼物,普通礼物,嫌弃礼物
 以上这些属性也都是角色相关的内容, 也放到主角小队的页面去, 没必要显示
 
 Skill : 初始技能, 这个属性在主角小队的页面和驾驶员的数据放在一起了, 所以不需要
@@ -711,8 +711,8 @@ csv0.forEach(function(item, index){
 	item.第三指令 = {code:item[40], text:item[40], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[40] +'</td>'; // 第三指令		LastAi,						2|5,
 	item.文本描述 = {code:item[41], text:item[41], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[41] +'</td>'; // 文本描述		PlayerDescription,			#优异成绩毕业的优等生\n年龄：15\n战斗风格：跟随。\n喜欢：奖章和咖啡\n讨厌：烟,
 	item.最爱礼物 = {code:item[42], text:item[42], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[42] +'</td>'; // 最爱礼物		PlayerPerfect,				Pres0|14|18|7,
-	item.接受礼物 = {code:item[43], text:item[43], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[43] +'</td>'; // 接受礼物		PlayerLike,					Pres1|Pres2|Pres3|Pres4|13|17,
-	item.还行礼物 = {code:item[44], text:item[44], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[44] +'</td>'; // 还行礼物		PlayerNormal,				15|19|20,
+	item.喜欢礼物 = {code:item[43], text:item[43], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[43] +'</td>'; // 喜欢礼物		PlayerLike,					Pres1|Pres2|Pres3|Pres4|13|17,
+	item.普通礼物 = {code:item[44], text:item[44], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[44] +'</td>'; // 普通礼物		PlayerNormal,				15|19|20,
 	item.嫌弃礼物 = {code:item[45], text:item[45], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[45] +'</td>'; // 嫌弃礼物		PlayerHate,					5|6|16,
 	item.射击散射 = {code:item[46], text:item[46], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[46] +'</td>'; // 射击散射		PlayerAngleMinus,			0,
 	item.射击间隔 = {code:item[47], text:item[47], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[47] +'</td>'; // 射击间隔		PlayerShotRateMinus,		0,
@@ -1274,7 +1274,7 @@ $(window).on('keyup', function(event){ // 快捷按键
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.2</div>
 </div>
 </div>
 </div>

@@ -160,6 +160,9 @@ details > content > *:last-child{margin-bottom:0;}
 .powerTable tbody td{border:none;border-right:1px solid var(--xj-ccc);border-bottom:1px solid var(--xj-ccc);vertical-align:middle;}
 .powerTable tbody td:first-child{border-left:1px solid var(--xj-ccc);}
 
+.powerTable tfoot th{border:none;border-right:1px solid var(--xj-ccc);border-bottom:1px solid var(--xj-ccc);vertical-align:middle;}
+.powerTable tfoot th:first-child{border-left:1px solid var(--xj-ccc);}
+
 /* 翻译后表头不要加粗, 也不要拉大字母间距 */
 html:not([lang|="zh"]) .powerTable thead th span b{letter-spacing:0px!important;font-weight:normal!important;}
 .powerTable thead th span b[_msttexthash][_msthash]{letter-spacing:0px!important;font-weight:normal!important;}

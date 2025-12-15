@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-11-28T18:08:28UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2025-12-16T01:18:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-11-28T18:08:28UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-11-28T18:08:28UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-12-16T01:18:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2025-12-16T01:18:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,32 +118,36 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 饰品是种特殊装备, 它适用于驾驶员而非机体, 目前共有 <c>34</c> 种 / 被分成了 <c>10</c> 类, 它们升级都是两件下级合成一件上级装备; <br />
-	02. 每个角色初始都只有一个饰品槽位, 可在人员整备界面右上角用荣誉点解锁更多槽位(第二三四个槽位分别需要荣誉点 <c>80/85/90</c>); <br />
-	03. LV1 的玉稳定框架-原石/原矿/精矿, 解锁天数都由变量 <c>$EquipOpenDay</c> 控制, 该变量在剧情模式下总为 <c>35</c>, 就相当于常量了; <br />
-	04. 玉刀刃/玉刀把/玉刀鞘/玉刀镡, 这四类饰品只有在潜行模式下才能获取, 并且限定库罗库才能装备, 都是用于提升背刺的各种能力; <br />
+	01. 饰品是种特殊装备, 它适用于驾驶员而非机体, 目前有 <c>50</c> 种, 被分成 <c>14</c> 类, 它们的升级都是两件下级装备合成一件上级装备<br />
+	02. 每个角色初始都只有一个饰品槽位, 可在人员整备界面的右上角用荣誉点解锁更多(第二三四个槽位分别需要 <c>[80/85/90]</c> 荣誉点)<br />
+	03. 有些饰品只能在特殊模式中取得(且限特定角色装备), 例如, 玉刀刃只在潜入模式出现(限库罗库), 玉长矛只在地牢模式出现(限桑)<br />
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目类型<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属对象<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>原型研发</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>合成材料</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>出现条件</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -152,28 +156,63 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>背刺饰品: 库罗库专属的四类饰品仅会在潜行模式下出现, 采购部不会卖(价格为 -1 的物品采购部都不会卖), 除了剧情事件可获取外, 你也能在潜行模式的整备人员界面右上角, 点击"解锁专属装备"获取, 这需要以荣誉点为代价, 需求算法为 <c>50+(25*N)</c>, N 是当前通过该功能获取的饰品数量, 例如第一个饰品就是 <c>50+(25*0)=50</c>, 第二个饰品就是 <c>50+(25*1)=75</c>, 值得注意的是, 普通模式下角色最多可以解锁四个饰品槽位, 但潜行模式下最多只能解锁三个饰品槽位, 因为第四个饰品槽位的位置被新增的"解锁专属装备"的按钮占据了;</p>
+<p>特殊饰品: 角色专属的饰品装备仅会在它们所属的特殊模式里出现(需要 DLC), 采购部门不会卖这类饰品, 除剧情事件能获取, 你也能在特殊模式的整备人员界面右上角, 点击"解锁专属装备"获取, 四个等级的饰品装备, 荣誉点需求分别为 <c>[50/125/350/1100]</c>, 需要注意, 普通模式下角色最多能解锁四个饰品槽位, 但特殊模式下最多只能解锁三个, 因为第四个饰品槽位的位置被"解锁专属装备"按钮占据了</p>
 
-<p>拆卸增压: 当饰品的价格 <c>>= 30</c>, 卸下饰品就会增加角色的脑负荷, 具体算法为 <c>饰品价格/10</c>, 最后向下取整, 例如玉过载框架-精矿, 价格是 <c>85</c>, 那么卸下时就会增加 <c>Floor(85/10)≈8</c> 的脑负荷, 但库罗库专属的四类饰品价格都是 <c>-1</c>, 所以卸下就没有惩罚;</p>
+<p>拆卸增压: 当饰品的价格 <c>>=20</c>, 卸下饰品就会增加角色的脑负荷, 具体算法为 <c>饰品价格÷10</c>, 结果最后向下取整, 例如玉过载框架-精矿, 价格是 <c>85</c>, 那么卸下的时候就会增加 <c>Floor(85÷10)=8</c> 脑负荷, 但特殊饰品除外, 因为它们的价格都是 <c>-1</c>, 所以没有惩罚</p>
 
-<p>不可重复: 与武器的配件或机体的模块相同, 饰品也是不能被重复装备的, 但不同等级的同类饰品可以并存(项目代码不同就能并存了);</p>
+<p>不可重复: 与武器的配件或机体的模块相同, 饰品也是不能被重复装备的, 但是不同等级的同类饰品可以并存(项目代码不同就能并存了)</p>
 
 <p>————</p>
 
-<p>背刺效率: 背刺敌人所需时长取决于爆破时间(和爆破建筑使用相同的 <c>Bursting</c> 函数, 详情可以查阅 <a href="data_enemy_info.html">敌军情报.html</a>), 假设背刺需要 <c>1</c> 秒, 则背刺效率增加 <c>50%</c>, 就相当于背刺 <c>1</c> 秒就能增加 <c>1.5</c> 秒的进度, 此外背刺护盾所需时间仅为背刺敌人本体的 <c>1/3</c>;</p>
+<p>背刺效率: 背刺敌人所需时长取决于爆破时间(和爆破建筑使用相同的 <c>Bursting</c> 函数, 详情可以查阅 <a href="data_enemy_info.html">敌军情报.html</a>), 假设背刺需要 <c>1</c> 秒, 则背刺效率增加 <c>50%</c>, 就相当于背刺 <c>1</c> 秒就能增加 <c>1.5</c> 秒的进度, 此外, 背刺护盾所需时间仅为背刺敌人本体的 <c>1/3</c></p>
 
-<p>背刺角度: 默认的背刺角度仅为 <c>60°</c>, 即敌人在玩家正前方左右 <c>30°</c> 以内才可以执行背刺操作, 如果角度增加 <c>45°</c>, 则敌人在玩家正前方左右 <c>30 + (45+1)/2 = 53°</c> 都可执行背刺, 相当于背刺角度增加了 <c>53 * 2 - 60 = 46°</c>, 因为奇怪算法, 额外多了 <c>1°</c>;</p>
+<p>搜索精度: 由敌人与玩家之间的距离决定, 距离越小则敌人的搜索就会越准, 搜索精度削减 <c>100%</c> 相当于要靠近一倍的距离才能发现你</p>
 
-<p>搜索精度: 由敌人与玩家之间的距离决定, 距离越小则敌人的搜索就越准, 搜索精度削减 <c>100%</c> 相当于要靠近一倍的距离才能发现你;</p>
+<p>背刺角度: 默认的背刺角度仅为 <c>60°</c>, 即敌人在玩家正前方左右 <c>30°</c> 以内才可以执行背刺操作, 如果角度增加 <c>45°</c> 则敌人在玩家正前方左右 <c>30 + (45+1)÷2 = 53°</c> 都可以执行背刺, 就相当于背刺角度增加了 <c>53 × 2 - 60 = 46°</c>(因为奇怪算法, 额外多了 <c>1°</c>)</p>
 
-<p>感知距离: 从敌人背后接近时对方感知我方的距离, 不同敌人的感知距离介于 <c>5 ~ 7</c>, 但发现也需要时间, 在发现之前完成背刺即可; </p>
+<p>感知距离: 从敌人背后接近时, 对方感知我方的距离, 不同敌人的感知距离介于 <c>5 ~ 7</c>, 但发现也需要时间, 在发现之前完成背刺即可</p>
+
+<p>————</p>
+
+<p>霸体状态: 霸体状态是指机体进入的一个不会被[打断/位移/动摇]的状态, 此时机体遭受攻击还会 <c>-25%</c> 伤害, 实际上只要敌人攻击的冲击力不高于我方机体当前稳定值(抗冲击力), 就不会出现硬直, 此时就会进入霸体状态, 跟别的游戏不一样, 这个状态是被动受打击的结果, 但也有部分近战武器, 例如[龙骑大剑/龙骑大剑S/龙骑巨型刃/龙骑双剑/龙骑双剑S], 当机体挥动它们的时候, 可以主动获得短暂的霸体状态, 而当角色装备了"玉胸甲"的饰品, 若处于霸体状态下, 减伤还可累加(装备最高级的玉胸甲有 <c>-25% + -33% = -58%</c> 减伤)</p>
+
+<p>攻防系统: 在红莲花 DLC 里, 敌我双方的武器都没有削韧的概念, 它采用的是一套"冲击/稳定"系统, 这套机制和其他模式下近战武器的"削韧/韧性"系统是不同的, 该系统相关的参数和动作绑定, 当前阶段是固定的, 我们没法改变(由于信息零散, 目前百科里也没有收录…)</p>
+
+<p>完美闪避: 进入闪避动作后, 在此期间碰到敌人的攻击范围就会触发(此时会出现短暂的子弹时间), 完美闪避的默认判断帧数是 <c>15</c> 帧(约 <c>0.3</c> 秒, 也就是说, 在这短暂的时间内刚好闪过敌人攻击, 就算完美闪避), 这里的帧数是指游戏开发使用的"物理帧"(Unity 引擎默认的物理帧为 <c>50FPS</c> 既每一帧的时间为 <c>0.02</c> 秒), 这个时间是固定的, 它跟显示器用的"渲染帧"没有关系, 不会因为玩家使用了高刷显示器而改变, 如果角色装备了"玉盾牌"饰品, 可以增加闪避的关键帧, 例如装备最高级的玉盾牌可 <c>+3</c> 帧(判断延长 <c>0.06</c> 秒)</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -183,284 +222,609 @@
 
 /* 数据注解
 
-MaxPile = 1,
-NeedWeapon = ColorPlus = Cluster = '',
-CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
+Func 是函数, 已经和 description 既描述结合起来, 这部分的数据没意义, 就删掉了
+MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1 的并没有意义, 所以删掉了
 
-————
+DebugHide: 控制台是否要隐藏该项目(隐藏则无法在控制台调出入手), 武器都是 false, 似乎也不需要
+ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
 
-DebugHide : 普通饰品都是 0
-DebugHide : 潜入模式饰品 1
+CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是配件槽位和融合槽位的数据, 只有武器才有, 其它的物品没有任何意义, 所以删掉了
+Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属性, 用于判断升级改造或者同类配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
 
 */
 
-// 表01数据
-let tbodyArray01 = [
-	
-	// 高亮,	项目图片,	项目序号,	项目名称,				项目代码,	参考价格,	默认排序,	项目类型,	归属种类,			配件等级,	解锁天数,	原型研发,					归属对象,		合成材料,								文本描述,		],		
-	// Active,	Image,		Number,		Name,					Items,		Price,		ResolveID,	Type,		Tag,				Level,		Day,		Company,					Exclusive,		Syns,									Description,	],		//01		
-	
-	[1,			251,		'01',		'玉稳定框架-原石',		251,		30,			1046,		'Equip',	'NormalEquip',		1,			35,			'Sub_1',					'EquipA',		'40005_2|40006_2|40007_6',				'-',			],		
-	[1,			252,		'02',		'玉增幅框架-原石',		252,		50,			1047,		'Equip',	'NormalEquip',		2,			50,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[1,			253,		'03',		'玉过载框架-原石',		253,		85,			1048,		'Equip',	'NormalEquip',		-1,			78,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[0,			254,		'04',		'玉稳定框架-原矿',		254,		30,			1049,		'Equip',	'NormalEquip',		1,			35,			'Sub_1',					'EquipA',		'40005_2|40006_2|40007_6',				'-',			],		
-	[0,			255,		'05',		'玉增幅框架-原矿',		255,		50,			1050,		'Equip',	'NormalEquip',		2,			68,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[0,			256,		'06',		'玉过载框架-原矿',		256,		85,			1051,		'Equip',	'NormalEquip',		-1,			80,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[1,			257,		'07',		'玉稳定框架-精矿',		257,		30,			1052,		'Equip',	'NormalEquip',		1,			35,			'Sub_1',					'EquipA',		'40005_2|40006_2|40007_6',				'-',			],		
-	[1,			258,		'08',		'玉增幅框架-精矿',		258,		50,			1053,		'Equip',	'NormalEquip',		2,			70,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[1,			259,		'09',		'玉过载框架-精矿',		259,		85,			1054,		'Equip',	'NormalEquip',		-1,			80,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[0,			260,		'10',		'玉稳定框架-摆件',		260,		30,			1055,		'Equip',	'NormalEquip',		1,			41,			'Sub_1',					'EquipA',		'40005_3|40006_3|40007_4',				'-',			],		
-	[0,			261,		'11',		'玉增幅框架-摆件',		261,		50,			1056,		'Equip',	'NormalEquip',		2,			71,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[0,			262,		'12',		'玉过载框架-摆件',		262,		85,			1057,		'Equip',	'NormalEquip',		-1,			81,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[1,			266,		'13',		'玉稳定框架-挂饰',		266,		30,			1061,		'Equip',	'NormalEquip',		1,			41,			'Sub_1',					'EquipA',		'40005_3|40006_3|40007_4',				'-',			],		
-	[1,			267,		'14',		'玉增幅框架-挂饰',		267,		50,			1062,		'Equip',	'NormalEquip',		2,			62,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[1,			268,		'15',		'玉过载框架-挂饰',		268,		85,			1063,		'Equip',	'NormalEquip',		-1,			85,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[0,			263,		'16',		'玉稳定框架-挂画',		263,		30,			1058,		'Equip',	'NormalEquip',		1,			41,			'Sub_1',					'EquipA',		'40005_1|40006_1|40007_5|40026_3',		'-',			],		
-	[0,			264,		'17',		'玉增幅框架-挂画',		264,		50,			1059,		'Equip',	'NormalEquip',		2,			73,			'Sub_2',					'EquipA',		'-',									'-',			],		
-	[0,			265,		'18',		'玉过载框架-挂画',		265,		85,			1060,		'Equip',	'NormalEquip',		-1,			83,			'Sub_3',					'EquipA',		'-',									'-',			],		//01		
-	
-	[1,			601,		'19',		'玉刀刃-原矿',			601,		-1,			1194,		'Equip',	'CantRecycle',		1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			602,		'20',		'玉刀刃-原石',			602,		-1,			1195,		'Equip',	'CantRecycle',		2,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			603,		'21',		'玉刀刃-粗制品',		603,		-1,			1196,		'Equip',	'CantRecycle',		3,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			604,		'22',		'玉刀刃-精制品',		604,		-1,			1197,		'Equip',	'CantRecycle',		-1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		//01		
-	
-	[0,			605,		'23',		'玉刀把-原矿',			605,		-1,			1198,		'Equip',	'CantRecycle',		1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			606,		'24',		'玉刀把-原石',			606,		-1,			1199,		'Equip',	'CantRecycle',		2,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			607,		'25',		'玉刀把-粗制品',		607,		-1,			1200,		'Equip',	'CantRecycle',		3,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			608,		'26',		'玉刀把-精制品',		608,		-1,			1201,		'Equip',	'CantRecycle',		-1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		//01		
-	
-	[1,			609,		'27',		'玉刀鞘-原矿',			609,		-1,			1202,		'Equip',	'CantRecycle',		1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			610,		'28',		'玉刀鞘-原石',			610,		-1,			1203,		'Equip',	'CantRecycle',		2,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			611,		'29',		'玉刀鞘-粗制品',		611,		-1,			1204,		'Equip',	'CantRecycle',		3,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[1,			612,		'30',		'玉刀鞘-精制品',		612,		-1,			1205,		'Equip',	'CantRecycle',		-1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		//01		
-	
-	[0,			613,		'31',		'玉刀镡-原矿',			613,		-1,			1206,		'Equip',	'CantRecycle',		1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			614,		'32',		'玉刀镡-原石',			614,		-1,			1207,		'Equip',	'CantRecycle',		2,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			615,		'33',		'玉刀镡-粗制品',		615,		-1,			1208,		'Equip',	'CantRecycle',		3,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		
-	[0,			616,		'34',		'玉刀镡-精制品',		616,		-1,			1209,		'Equip',	'CantRecycle',		-1,			999,		'TankType_PlayerName_1',	'Equip1',		'-',									'-',			],		//01		
-	
-];
+let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-// 项目名称
-let ItemsNameList = {
-	
-	251 : ['玉稳定框架-原石',		'翡翠安定性フレーム-原石',							'Jade Stable Frame - Raw Stone',				],		
-	252 : ['玉增幅框架-原石',		'翡翠増幅フレーム-原石',							'Jade Amplification Frame - Raw Stone',			],		
-	253 : ['玉过载框架-原石',		'翡翠オーバーロードフレーム-原石',					'Jade Overload Frame - Raw Stone',				],		//02		
-	
-	254 : ['玉稳定框架-原矿',		'翡翠安定性フレーム-原鉱',							'Jade Stable Frame - Raw Ore',					],		
-	255 : ['玉增幅框架-原矿',		'翡翠増幅フレーム-原鉱',							'Jade Amplification Frame - Raw Ore',			],		
-	256 : ['玉过载框架-原矿',		'翡翠オーバーロードフレーム-原鉱',					'Jade Overload Frame - Raw Ore',				],		//02		
-	
-	257 : ['玉稳定框架-精矿',		'翡翠安定性フレーム-精鉱',							'Jade Stable Frame - Refined Ore',				],		
-	258 : ['玉增幅框架-精矿',		'翡翠増幅フレーム-精鉱',							'Jade Amplification Frame - Refined Ore',		],		
-	259 : ['玉过载框架-精矿',		'翡翠オーバーロードフレーム-精鉱',					'Jade Overload Frame - Refined Ore',			],		//02		
-	
-	260 : ['玉稳定框架-摆件',		'翡翠安定性フレーム-調度品',						'Jade Stable Frame - Ornament',					],		
-	261 : ['玉增幅框架-摆件',		'翡翠増幅フレーム-調度品',							'Jade Amplification Frame - Ornament',			],		
-	262 : ['玉过载框架-摆件',		'翡翠オーバーロードフレーム-調度品',				'Jade Overload Frame - Ornament',				],		//02		
-	
-	263 : ['玉稳定框架-挂画',		'翡翠安定性フレーム-掛け絵',						'Jade Stable Frame - Painting',					],		
-	264 : ['玉增幅框架-挂画',		'翡翠増幅フレーム-掛け絵',							'Jade Amplification Frame - Painting',			],		
-	265 : ['玉过载框架-挂画',		'翡翠オーバーロードフレーム-掛け絵',				'Jade Overload Frame - Painting',				],		//02		
-	
-	266 : ['玉稳定框架-挂饰',		'翡翠安定性フレーム-オーナメント',					'Jade Stable Frame - Pendant',					],		
-	267 : ['玉增幅框架-挂饰',		'翡翠増幅フレーム-オーナメント',					'Jade Amplification Frame - Pendant',			],		
-	268 : ['玉过载框架-挂饰',		'翡翠オーバーロードフレーム-ム-オーナメント',		'Jade Overload Frame - Pendant',				],		//02		
-	
-	601 : ['玉刀刃-原矿',			'翡翠刃-原石',										'Jade Blade - Raw Stone',						],		
-	602 : ['玉刀刃-原石',			'翡翠刃-原鉱',										'Jade Blade - Raw Ore',							],		
-	603 : ['玉刀刃-粗制品',			'翡翠刃-粗製品',									'Jade Blade - Crudes',							],		
-	604 : ['玉刀刃-精制品',			'翡翠刃-精製品',									'Jade Blade - Boutique',						],		//02		
-	
-	605 : ['玉刀把-原矿',			'翡翠柄-原石',										'Jade Handle - Raw Stone',						],		
-	606 : ['玉刀把-原石',			'翡翠柄-原鉱',										'Jade Handle - Raw Ore',						],		
-	607 : ['玉刀把-粗制品',			'翡翠柄-粗製品',									'Jade Handle - Crudes',							],		
-	608 : ['玉刀把-精制品',			'翡翠柄-精製品',									'Jade Handle - Boutique',						],		//02		
-	
-	609 : ['玉刀鞘-原矿',			'翡翠鞘-原石',										'Jade Scabbard - Raw Stone',					],		
-	610 : ['玉刀鞘-原石',			'翡翠鞘-原鉱',										'Jade Scabbard - Raw Ore',						],		
-	611 : ['玉刀鞘-粗制品',			'翡翠鞘-粗製品',									'Jade Scabbard - Crudes',						],		
-	612 : ['玉刀鞘-精制品',			'翡翠鞘-精製品',									'Jade Scabbard - Boutique',						],		//02		
-	
-	613 : ['玉刀镡-原矿',			'翡翠ナイフホルダ-原石',							'Jade Holder - Raw Stone',						],		
-	614 : ['玉刀镡-原石',			'翡翠ナイフホルダ-原鉱',							'Jade Holder - Raw Ore',						],		
-	615 : ['玉刀镡-粗制品',			'翡翠ナイフホルダ-粗製品',							'Jade Holder  - Crudes',						],		
-	616 : ['玉刀镡-精制品',			'翡翠ナイフホルダ-精製品',							'Jade Holder  - Boutique',						],		//02		
-	
-	Equip : ['饰品',	'アクセサリー',		'Jewelry',		],		//02		
-	
-	NormalEquip : ['普通饰品',		'普通宝石',		'Normal Equip',		],		
-	CantRecycle : ['不可回收',		'回収不可',		'Cant Recycle',		],		//02		
-	
-	TankType_PlayerName_0 :	['玛丽',		'メアリー',			'Mary',			],		
-	TankType_PlayerName_1 :	['库罗库',		'クロック',			'Kuroku',		],		
-	TankType_PlayerName_2 :	['桑',			'サン',				'San',			],		
-	TankType_PlayerName_3 :	['赭石色',		'オーカー',			'Ocher',		],		
-	TankType_PlayerName_4 :	['克莱尔',		'クレア',			'Claire',		],		//02		
-	
-	EquipA : ['通用的装备',			'汎用の装備',				'Universal Equip',					],		
-	Equip0 : ['玛丽　专属',			'メアリー専用装備',			'Mary\'s Exclusive Equip',			],		
-	Equip1 : ['库罗库专属',			'クロック専用装備',			'Kuroku\'s Exclusive Equip',		],		
-	Equip2 : ['桑　　专属',			'サン専用装備',				'San\'s Exclusive Equip',			],		
-	Equip3 : ['赭石色专属',			'オーカー専用装備',			'Ocher\'s Exclusive Equip',			],		
-	Equip4 : ['克莱尔专属',			'クレア専用装備',			'Claire\'s Exclusive Equip',		],		//02		
-	
-	Sub_1 : ['格鲁公司',				'Grub株式会社',									'Grub Corporation',						],		
-	Sub_2 : ['诺普德公司',				'Novode株式会社',								'Novode Company',						],		
-	Sub_3 : ['红树林制造局',			'マングローブ製造局',							'Mangrove Manufacturing Bureau',		],		
-	Sub_4 : ['科尔第一集团公司',		'コール第一グループ会社',						'Cole First Group Company',				],		
-	Sub_5 : ['科尔第二集团公司',		'コール第二グループ会社',						'Cole Second Group Company',			],		
-	Sub_6 : ['拜克家具',				'BAIC家具株式会社',								'BAIC Furniture',						],		
-	Sub_7 : ['第一家居',				'第一ホームインターナショナルグループ',			'First Home International Group',		],		
-	Sub_8 : ['联合食品',				'共同食品株式会社',								'United Food Company',					],		//02		
-	
-	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',					],		
-	40002 :	['废料',			'スクラップ',				'Waste Material',				],		
-	40003 :	['弹壳',			'薬莢',						'Bullet Shell',					],		
-	40004 :	['弹头',			'弾頭',						'Warhead',						],		
-	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',			],		
-	40006 :	['齿轮',			'ギア',						'Gear',							],		
-	40007 :	['框架',			'フレーム',					'Frame',						],		
-	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',					],		
-	40009 :	['扳机',			'トリガー',					'Trigger',						],		
-	40010 :	['雷管',			'起爆装置',					'Detonator',					],		
-	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',			],		
-	40012 :	['弹链',			'弾帯',						'Ammunition Belt',				],		
-	40013 :	['棱镜',			'プリズム',					'Prism',						],		
-	40014 :	['透镜',			'レンズ',					'Lens',							],		
-	40015 :	['点火器',			'イグナイター',				'Igniter',						],		
-	40016 :	['冷凝管',			'復水管',					'Condenser',					],		
-	40017 :	['线圈',			'コイル',					'Coil',							],		
-	40018 :	['电容',			'コンデンサ',				'Capacitor',					],		
-	40019 :	['电感',			'インダクター',				'Inductor',						],		
-	40020 :	['三极管',			'三極管',					'Transistor',					],		
-	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',				],		
-	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',					],		
-	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',					],		
-	40024 :	['装甲',			'装甲',						'Armor',						],		
-	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',					],		
-	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',		],		
-	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',			],		
-	40028 :	['共振器',			'共振器',					'Resonator',					],		
-	40029 :	['刀片',			'ブレード',					'Blade',						],		
-	40030 :	['振荡器',			'発振回路',					'Oscillator',					],		
-	40031 :	['涂层',			'コーティング',				'Coating',						],		
-	40032 :	['核心',			'コア',						'Core',							],		//02		
-	
-};
+251,#玉稳定框架-原石,251,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1265,
+252,#玉增幅框架-原石,252,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:25|GlobalPressureUp:2,Sub_2,50,50,2,0,0,0,0,,,,,1266,
+253,#玉过载框架-原石,253,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:40|GlobalPressureUp:5,Sub_3,85,78,-1,0,0,0,0,,,,,1267,
 
-// 文本描述
-let DescriptionsList = {
+254,#玉稳定框架-原矿,254,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1268,
+255,#玉增幅框架-原矿,255,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:20|GlobalPressureUp:2,Sub_2,50,68,2,0,0,0,0,,,,,1269,
+256,#玉过载框架-原矿,256,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:30|GlobalPressureUp:5,Sub_3,85,80,-1,0,0,0,0,,,,,1270,
+
+257,#玉稳定框架-精矿,257,Equip,#受伤压力增长<Description>%,Equip,1,HarmPressureUp:-50,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1271,
+258,#玉增幅框架-精矿,258,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-4|HarmPressureUp:10,Sub_2,50,70,2,0,0,0,0,,,,,1272,
+259,#玉过载框架-精矿,259,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-6|HarmPressureUp:15,Sub_3,85,80,-1,0,0,0,0,,,,,1273,
+
+260,#玉稳定框架-摆件,260,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:15,Sub_1,30,40,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1274,
+261,#玉增幅框架-摆件,261,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:25,Sub_2,50,71,2,0,0,0,0,,,,,1275,
+262,#玉过载框架-摆件,262,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:40,Sub_3,85,81,-1,0,0,0,0,,,,,1276,
+
+266,#玉稳定框架-挂饰,266,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:15,Sub_1,30,44,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1280,
+267,#玉增幅框架-挂饰,267,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:25,Sub_2,50,62,2,0,0,0,0,,,,,1281,
+268,#玉过载框架-挂饰,268,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:40,Sub_3,85,85,-1,0,0,0,0,,,,,1282,
+
+263,#玉稳定框架-挂画,263,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:20|RestEffect:-15,Sub_1,30,42,1,0,0,0,0,,40005_1|40006_1|40007_5|40026_3,,,1277,
+264,#玉增幅框架-挂画,264,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:35|RestEffect:-25,Sub_2,50,73,2,0,0,0,0,,,,,1278,
+265,#玉过载框架-挂画,265,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:60|RestEffect:-40,Sub_3,85,83,-1,0,0,0,0,,,,,1279,
+
+601,#玉刀刃-原矿,601,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:5,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1431,
+602,#玉刀刃-原石,602,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:9,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1432,
+603,#玉刀刃-粗制品,603,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:15,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1433,
+604,#玉刀刃-精制品,604,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:25,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1434,
+
+605,#玉刀把-原矿,605,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:15,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1435,
+606,#玉刀把-原石,606,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:24,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1436,
+607,#玉刀把-粗制品,607,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1437,
+608,#玉刀把-精制品,608,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:45,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1438,
+
+613,#玉刀镡-原矿,613,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-6,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1443,
+614,#玉刀镡-原石,614,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-15,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1444,
+615,#玉刀镡-粗制品,615,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1445,
+616,#玉刀镡-精制品,616,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-50,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1446,
+
+609,#玉刀鞘-原矿,609,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:20,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1439,
+610,#玉刀鞘-原石,610,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:35,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1440,
+611,#玉刀鞘-粗制品,611,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:60,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1441,
+612,#玉刀鞘-精制品,612,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:100,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1442,
+
+635,#玉长矛-原矿,635,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:25,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1452,
+636,#玉长矛-原石,636,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:40,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1453,
+637,#玉长矛-粗制品,637,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:54,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1454,
+638,#玉长矛-精制品,638,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:64,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1455,
+
+631,#玉盾牌-原矿,631,Equip,#完美闪避判定时间增加,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1448,
+632,#玉盾牌-原石,632,Equip,#完美闪避判定时间增加（小幅）,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1449,
+633,#玉盾牌-粗制品,633,Equip,#完美闪避判定时间增加（中幅）,CantRecycle|Equip2,1,DodgeFrameAdd:2,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1450,
+634,#玉盾牌-精制品,634,Equip,#完美闪避判定时间增加（大幅）,CantRecycle|Equip2,1,DodgeFrameAdd:3,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1451,
+
+643,#玉头盔-原矿,643,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:6,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1460,
+644,#玉头盔-原石,644,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:10,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1461,
+645,#玉头盔-粗制品,645,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:15,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1462,
+646,#玉头盔-精制品,646,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:21,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1463,
+
+639,#玉胸甲-原矿,639,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:12,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1456,
+640,#玉胸甲-原石,640,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:20,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1457,
+641,#玉胸甲-粗制品,641,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:28,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1458,
+642,#玉胸甲-精制品,642,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:33,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1459,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	251 : [/*'玉稳定框架-原石',		GlobalPressureUp:-2,						*/'子弹时间(技能)时长 + 0%, 压力增长 -2',			'バレットタイム + 0% 延長、ストレス増加 -2',							'Bullet time duration increases by + 0%, Pressure Increment -2',																],		
-	252 : [/*'玉增幅框架-原石',		BulletTimePlus:25|GlobalPressureUp:2,		*/'子弹时间(技能)时长 +25%, 压力增长 +2',			'バレットタイム +25% 延長、ストレス増加 +2',							'Bullet time duration increases by +25%, Pressure Increment +2',																],		
-	253 : [/*'玉过载框架-原石',		BulletTimePlus:40|GlobalPressureUp:5,		*/'子弹时间(技能)时长 +40%, 压力增长 +5',			'バレットタイム +40% 延長、ストレス増加 +5',							'Bullet time duration increases by +40%, Pressure Increment +5',																],		//03		
+	项目名称 : {
 	
-	254 : [/*'玉稳定框架-原矿',		GlobalPressureUp:-2,						*/'子弹时间换弹和射击间隔- 0%, 压力增长-2',			'バレットタイム中のリロード時間と射撃間隔 - 0%, ストレス増加 -2',		'Reload Speed within bullet time and firing rate - 0%, Pressure Increment -2',													],		
-	255 : [/*'玉增幅框架-原矿',		BulletTimeEffectPlus:20|GlobalPressureUp:2,	*/'子弹时间换弹和射击间隔-20%, 压力增长+2',			'バレットタイム中のリロード時間と射撃間隔 -20%, ストレス増加 +2',		'Reload Speed within bullet time and firing rate -20%, Pressure Increment +2',													],		
-	256 : [/*'玉过载框架-原矿',		BulletTimeEffectPlus:30|GlobalPressureUp:5,	*/'子弹时间换弹和射击间隔-30%, 压力增长+5',			'バレットタイム中のリロード時間と射撃間隔 -30%, ストレス増加 +5',		'Reload Speed within bullet time and firing rate -30%, Pressure Increment +5',													],		//03		
+	251 : `玉稳定-原石`		+ ` # 玉稳定框架-原石,玉穩定框架-原石,Jade Stable Frame - Raw Stone,翡翠安定性フレーム-原石`,
+	252 : `玉增幅-原石`		+ ` # 玉增幅框架-原石,玉增幅框架-原石,Jade Amplification Frame - Raw Stone,翡翠増幅フレーム-原石`,
+	253 : `玉过载-原石`		+ ` # 玉过载框架-原石,玉超載框架-原石,Jade Overload Frame - Raw Stone,翡翠オーバーロードフレーム-原石`,
 	
-	257 : [/*'玉稳定框架-精矿',		HarmPressureUp:-50,							*/'换弹时间额外 - 0%, 受伤导致压力增长 -50%',		'リロード時間 - 0%, 負傷ストレス増加 -50%',								'Reload Speed - 0%, Injury Pressure Increment -50%',																			],		
-	258 : [/*'玉增幅框架-精矿',		AddWeaponReload:-4|HarmPressureUp:10,		*/'换弹时间额外 - 4%, 受伤导致压力增长 +10%',		'リロード時間 - 4%, 負傷ストレス増加 +10%',								'Reload Speed - 4%, Injury Pressure Increment +10%',																			],		
-	259 : [/*'玉过载框架-精矿',		AddWeaponReload:-6|HarmPressureUp:15,		*/'换弹时间额外 - 6%, 受伤导致压力增长 +15%',		'リロード時間 - 6%, 負傷ストレス増加 +15%',								'Reload Speed - 6%, Injury Pressure Increment +15%',																			],		//03		
+	254 : `玉稳定-原矿`		+ ` # 玉稳定框架-原矿,玉穩定框架-原礦,Jade Stable Frame - Raw Ore,翡翠安定性フレーム-原鉱`,
+	255 : `玉增幅-原矿`		+ ` # 玉增幅框架-原矿,玉增幅框架-原礦,Jade Amplification Frame - Raw Ore,翡翠増幅フレーム-原鉱`,
+	256 : `玉过载-原矿`		+ ` # 玉过载框架-原矿,玉超載框架-原礦,Jade Overload Frame - Raw Ore,翡翠オーバーロードフレーム-原鉱`,
 	
-	260 : [/*'玉稳定框架-摆件',		GiftEffect:15,								*/'当收到礼物时, 降低的压力值额外 + 15%',			'プレゼントストレス回復 + 15%',											'Pressure Regeneration from Gift + 15%',																						],		
-	261 : [/*'玉增幅框架-摆件',		GiftEffect:25,								*/'当收到礼物时, 降低的压力值额外 + 25%',			'プレゼントストレス回復 + 25%',											'Pressure Regeneration from Gift + 25%',																						],		
-	262 : [/*'玉过载框架-摆件',		GiftEffect:40,								*/'当收到礼物时, 降低的压力值额外 + 40%',			'プレゼントストレス回復 + 40%',											'Pressure Regeneration from Gift + 40%',																						],		//03		
+	257 : `玉稳定-精矿`		+ ` # 玉稳定框架-精矿,玉穩定框架-精礦,Jade Stable Frame - Refined Ore,翡翠安定性フレーム-精鉱`,
+	258 : `玉增幅-精矿`		+ ` # 玉增幅框架-精矿,玉增幅框架-精礦,Jade Amplification Frame - Refined Ore,翡翠増幅フレーム-精鉱`,
+	259 : `玉过载-精矿`		+ ` # 玉过载框架-精矿,玉超載框架-精礦,Jade Overload Frame - Refined Ore,翡翠オーバーロードフレーム-精鉱`,
 	
-	266 : [/*'玉稳定框架-挂饰',		RestEffect:15,								*/'休息(没出战在宿舍休息时)回复压力 + 15%',			'休憩ストレス回復 + 15%',												'Pressure Regeneration from Resting + 15%',																						],		
-	267 : [/*'玉增幅框架-挂饰',		RestEffect:25,								*/'休息(没出战在宿舍休息时)回复压力 + 25%',			'休憩ストレス回復 + 25%',												'Pressure Regeneration from Resting + 25%',																						],		
-	268 : [/*'玉过载框架-挂饰',		RestEffect:40,								*/'休息(没出战在宿舍休息时)回复压力 + 40%',			'休憩ストレス回復 + 40%',												'Pressure Regeneration from Resting + 40%',																						],		//03		
+	260 : `玉稳定-摆件`		+ ` # 玉稳定框架-摆件,玉穩定框架-擺件,Jade Stable Frame - Ornament,翡翠安定性フレーム-調度品`,
+	261 : `玉增幅-摆件`		+ ` # 玉增幅框架-摆件,玉增幅框架-擺件,Jade Amplification Frame - Ornament,翡翠増幅フレーム-調度品`,
+	262 : `玉过载-摆件`		+ ` # 玉过载框架-摆件,玉超載框架-擺件,Jade Overload Frame - Ornament,翡翠オーバーロードフレーム-調度品`,
 	
-	263 : [/*'玉稳定框架-挂画',		AddShiledLife:20|RestEffect:-15,			*/'护盾基础生命值 + 20%, 休息回复压力 - 15%',		'シールド基礎HP + 20%, 休憩ストレス回復 - 15%',							'Shield Base HP + 20%, Pressure Regeneration from Resting - 15%',																],		
-	264 : [/*'玉增幅框架-挂画',		AddShiledLife:35|RestEffect:-25,			*/'护盾基础生命值 + 35%, 休息回复压力 - 25%',		'シールド基礎HP + 35%, 休憩ストレス回復 - 25%',							'Shield Base HP + 35%, Pressure Regeneration from Resting - 25%',																],		
-	265 : [/*'玉过载框架-挂画',		AddShiledLife:60|RestEffect:-40,			*/'护盾基础生命值 + 60%, 休息回复压力 - 40%',		'シールド基礎HP + 60%, 休憩ストレス回復 - 40%',							'Shield Base HP + 60%, Pressure Regeneration from Resting - 40%',																],		//03		
+	266 : `玉稳定-挂饰`		+ ` # 玉稳定框架-挂饰,玉穩定框架-掛飾,Jade Stable Frame - Pendant,翡翠安定性フレーム-オーナメント`,
+	267 : `玉增幅-挂饰`		+ ` # 玉增幅框架-挂饰,玉增幅框架-掛飾,Jade Amplification Frame - Pendant,翡翠増幅フレーム-オーナメント`,
+	268 : `玉过载-挂饰`		+ ` # 玉过载框架-挂饰,玉超載框架-掛飾,Jade Overload Frame - Pendant,翡翠オーバーロードフレーム-ム-オーナメント`,
 	
-	601 : [/*'玉刀刃-原矿',			AsssinEffective:5,							*/'背刺(潜行模式下特殊操作)效率 +　5%',				'暗殺効率 +　5%',														'Backstab efficiency +　5%',																									],		
-	602 : [/*'玉刀刃-原石',			AsssinEffective:9,							*/'背刺(潜行模式下特殊操作)效率 +　9%',				'暗殺効率 +　9%',														'Backstab efficiency +　9%',																									],		
-	603 : [/*'玉刀刃-粗制品',		AsssinEffective:15,							*/'背刺(潜行模式下特殊操作)效率 + 15%',				'暗殺効率 + 15%',														'Backstab efficiency + 15%',																									],		
-	604 : [/*'玉刀刃-精制品',		AsssinEffective:25,							*/'背刺(潜行模式下特殊操作)效率 + 25%',				'暗殺効率 + 25%',														'Backstab efficiency + 25%',																									],		//03		
+	263 : `玉稳定-挂画`		+ ` # 玉稳定框架-挂画,玉穩定框架-掛畫,Jade Stable Frame - Painting,翡翠安定性フレーム-掛け絵`,
+	264 : `玉增幅-挂画`		+ ` # 玉增幅框架-挂画,玉增幅框架-掛畫,Jade Amplification Frame - Painting,翡翠増幅フレーム-掛け絵`,
+	265 : `玉过载-挂画`		+ ` # 玉过载框架-挂画,玉超載框架-掛畫,Jade Overload Frame - Painting,翡翠オーバーロードフレーム-掛け絵`,
 	
-	605 : [/*'玉刀把-原矿',			AsssinAngDis:15,							*/'背刺判定角度(决定是否能够操作) + 15°',			'暗殺判定角度 + 15°',													'Backstab angle determination + 15°',																							],		
-	606 : [/*'玉刀把-原石',			AsssinEffective:24,							*/'背刺判定角度(决定是否能够操作) + 24°',			'暗殺判定角度 + 24°',													'Backstab angle determination + 24°',																							],		
-	607 : [/*'玉刀把-粗制品',		AsssinEffective:30,							*/'背刺判定角度(决定是否能够操作) + 30°',			'暗殺判定角度 + 30°',													'Backstab angle determination + 30°',																							],		
-	608 : [/*'玉刀把-精制品',		AsssinAngDis:45,							*/'背刺判定角度(决定是否能够操作) + 45°',			'暗殺判定角度 + 45°',													'Backstab angle determination + 45°',																							],		//03		
+	601 : `玉刀刃-原矿`		+ ` # 玉刀刃-原矿,玉刀刃-原礦,Jade Blade - Raw Stone,翡翠刃-原石`,
+	602 : `玉刀刃-原石`		+ ` # 玉刀刃-原石,玉刀刃-原石,Jade Blade - Raw Ore,翡翠刃-原鉱`,
+	603 : `玉刀刃-粗制`		+ ` # 玉刀刃-粗制品,玉刀刃-粗製品,Jade Blade - Crudes,翡翠刃-粗製品`,
+	604 : `玉刀刃-精制`		+ ` # 玉刀刃-精制品,玉刀刃-精製品,Jade Blade - Boutique,翡翠刃-精製品`,
 	
-	609 : [/*'玉刀鞘-原矿',			AsssinSearchRange:20,						*/'敌人警觉后搜索的精度(发现的概率) - 20%',			'敵軍警戒の時の捜索精度 - 20%(敵軍捜索の時の精度を低下)',				'Enemy search accuracy - 20% (reduces the accuracy of enemy search when alerting)',												],		
-	610 : [/*'玉刀鞘-原石',			AsssinSearchRange:35,						*/'敌人警觉后搜索的精度(发现的概率) - 35%',			'敵軍警戒の時の捜索精度 - 35%(敵軍捜索の時の精度を低下)',				'Enemy search accuracy - 35% (reduces the accuracy of enemy search when alerting)',												],		
-	611 : [/*'玉刀鞘-粗制品',		AsssinSearchRange:60,						*/'敌人警觉后搜索的精度(发现的概率) - 60%',			'敵軍警戒の時の捜索精度 - 60%(敵軍捜索の時の精度を低下)',				'Enemy search accuracy - 60% (reduces the accuracy of enemy search when alerting)',												],		
-	612 : [/*'玉刀鞘-精制品',		AsssinSearchRange:100,						*/'敌人警觉后搜索的精度(发现的概率) -100%',			'敵軍警戒の時の捜索精度 -100%(敵軍捜索の時の精度を低下)',				'Enemy search accuracy -100% (reduces the accuracy of enemy search when alerting)',												],		//03		
+	605 : `玉刀把-原矿`		+ ` # 玉刀把-原矿,玉刀把-原礦,Jade Handle - Raw Stone,翡翠柄-原石`,
+	606 : `玉刀把-原石`		+ ` # 玉刀把-原石,玉刀把-原石,Jade Handle - Raw Ore,翡翠柄-原鉱`,
+	607 : `玉刀把-粗制`		+ ` # 玉刀把-粗制品,玉刀把-粗製品,Jade Handle - Crudes,翡翠柄-粗製品`,
+	608 : `玉刀把-精制`		+ ` # 玉刀把-精制品,玉刀把-精製品,Jade Handle - Boutique,翡翠柄-精製品`,
 	
-	613 : [/*'玉刀镡-原矿',			AsssinFeelDis:-6,							*/'从敌人背后接近时对方感知我方的距离 -　6%',		'敵軍背後感知距離 -　6%(背後から敵に接近した場合の敵の感知距離)',		'Enemy\'s perceived distance from behind -　6% (the perceived distance of the enemy when you approaching from behind)',			],		
-	614 : [/*'玉刀镡-原石',			AsssinFeelDis:-15,							*/'从敌人背后接近时对方感知我方的距离 - 15%',		'敵軍背後感知距離 - 15%(背後から敵に接近した場合の敵の感知距離)',		'Enemy\'s perceived distance from behind - 15% (the perceived distance of the enemy when you approaching from behind)',			],		
-	615 : [/*'玉刀镡-粗制品',		AsssinFeelDis:-30,							*/'从敌人背后接近时对方感知我方的距离 - 30%',		'敵軍背後感知距離 - 30%(背後から敵に接近した場合の敵の感知距離)',		'Enemy\'s perceived distance from behind - 30% (the perceived distance of the enemy when you approaching from behind)',			],		
-	616 : [/*'玉刀镡-精制品',		AsssinFeelDis:-50,							*/'从敌人背后接近时对方感知我方的距离 - 50%',		'敵軍背後感知距離 - 50%(背後から敵に接近した場合の敵の感知距離)',		'Enemy\'s perceived distance from behind - 50% (the perceived distance of the enemy when you approaching from behind)',			],		//03		
+	613 : `玉刀镡-原矿`		+ ` # 玉刀镡-原矿,玉刀鐔-原礦,Jade Holder - Raw Stone,翡翠ナイフホルダ-原石`,
+	614 : `玉刀镡-原石`		+ ` # 玉刀镡-原石,玉刀鐔-原石,Jade Holder - Raw Ore,翡翠ナイフホルダ-原鉱`,
+	615 : `玉刀镡-粗制`		+ ` # 玉刀镡-粗制品,玉刀鐔-粗製品,Jade Holder  - Crudes,翡翠ナイフホルダ-粗製品`,
+	616 : `玉刀镡-精制`		+ ` # 玉刀镡-精制品,玉刀鐔-精製品,Jade Holder  - Boutique,翡翠ナイフホルダ-精製品`,
+	
+	609 : `玉刀鞘-原矿`		+ ` # 玉刀鞘-原矿,玉刀鞘-原礦,Jade Scabbard - Raw Stone,翡翠鞘-原石`,
+	610 : `玉刀鞘-原石`		+ ` # 玉刀鞘-原石,玉刀鞘-原石,Jade Scabbard - Raw Ore,翡翠鞘-原鉱`,
+	611 : `玉刀鞘-粗制`		+ ` # 玉刀鞘-粗制品,玉刀鞘-粗製品,Jade Scabbard - Crudes,翡翠鞘-粗製品`,
+	612 : `玉刀鞘-精制`		+ ` # 玉刀鞘-精制品,玉刀鞘-精製品,Jade Scabbard - Boutique,翡翠鞘-精製品`,
+	
+	635 : `玉长矛-原矿`		+ ` # 玉长矛-原矿,玉長矛-原礦,Jade Spear - Raw Stone,翡翠槍-原石`,
+	636 : `玉长矛-原石`		+ ` # 玉长矛-原石,玉長矛-原石,Jade Spear - Raw Ore,翡翠槍-原鉱`,
+	637 : `玉长矛-粗制`		+ ` # 玉长矛-粗制品,玉長矛-粗製品,Jade Spear - Crudes,翡翠槍-粗製品`,
+	638 : `玉长矛-精制`		+ ` # 玉长矛-精制品,玉長矛-精製品,Jade Spear - Boutique,翡翠槍-精製品`,
+	
+	631 : `玉盾牌-原矿`		+ ` # 玉盾牌-原矿,玉盾牌-原礦,Jade Shiled - Raw Stone,翡翠盾-原石`,
+	632 : `玉盾牌-原石`		+ ` # 玉盾牌-原石,玉盾牌-原石,Jade Shiled - Raw Ore,翡翠盾-原鉱`,
+	633 : `玉盾牌-粗制`		+ ` # 玉盾牌-粗制品,玉盾牌-粗製品,Jade Shiled - Crudes,翡翠盾-粗製品`,
+	634 : `玉盾牌-精制`		+ ` # 玉盾牌-精制品,玉盾牌-精製品,Jade Shiled - Boutique,翡翠盾-精製品`,
+	
+	643 : `玉头盔-原矿`		+ ` # 玉头盔-原矿,玉頭盔-原礦,Jade Helmet - Raw Stone,翡翠ヘルメット-原石`,
+	644 : `玉头盔-原石`		+ ` # 玉头盔-原石,玉頭盔-原石,Jade Helmet - Raw Ore,翡翠ヘルメット-原鉱`,
+	645 : `玉头盔-粗制`		+ ` # 玉头盔-粗制品,玉頭盔-粗製品,Jade Helmet  - Crudes,翡翠ヘルメット-粗製品`,
+	646 : `玉头盔-精制`		+ ` # 玉头盔-精制品,玉頭盔-精製品,Jade Helmet  - Boutique,翡翠ヘルメット-精製品`,
+	
+	639 : `玉胸甲-原矿`		+ ` # 玉胸甲-原矿,玉胸甲-原礦,Jade Breastplate - Raw Stone,翡翠胸甲-原石`,
+	640 : `玉胸甲-原石`		+ ` # 玉胸甲-原石,玉胸甲-原石,Jade Scabbard - Raw Ore,翡翠胸甲-原鉱`,
+	641 : `玉胸甲-粗制`		+ ` # 玉胸甲-粗制品,玉胸甲-粗製品,Jade Scabbard - Crudes,翡翠胸甲-粗製品`,
+	642 : `玉胸甲-精制`		+ ` # 玉胸甲-精制品,玉胸甲-精製品,Jade Scabbard - Boutique,翡翠胸甲-精製品`,
+	
+	// 合成材料
+	
+	40001 : `废铁`			+ ` # 废铁,廢鐵,Scrap Iron,くず鉄`,
+	40002 : `废料`			+ ` # 废料,廢料,Waste Material,スクラップ`,
+	40005 : `接合物件`		+ ` # 接合物件,接合物件,Joining Component,接続オブジェクト`,
+	40006 : `齿轮`			+ ` # 齿轮,齒輪,Gear,ギア`,
+	40007 : `框架`			+ ` # 框架,框架,Frame,フレーム`,
+	
+	40003 : `弹壳`			+ ` # 弹壳,彈殼,Bullet Shell,薬莢`,
+	40008 : `铁管`			+ ` # 铁管,鐵管,Iron Pipe,鉄パイプ`,
+	40009 : `扳机`			+ ` # 扳机,扳機,Trigger,トリガー`,
+	
+	40021 : `润滑油`		+ ` # 润滑油,潤滑油,Lubricating Oil,潤滑油`,
+	40022 : `火花塞`		+ ` # 火花塞,火花塞,Spark Plug,スパークプラグ`,
+	40023 : `冷冻剂`		+ ` # 冷冻剂,冷凍劑,Refrigerant,冷媒`,
+	
+	40028 : `共振器`		+ ` # 共振器,共振器,Resonator,共振器`,
+	40029 : `刀片`			+ ` # 刀片,刀片,Blade,ブレード`,
+	40030 : `振荡器`		+ ` # 振荡器,振盪器,Oscillator,発振回路`,
+	
+	40017 : `线圈`			+ ` # 线圈,線圈,Coil,コイル`,
+	40018 : `电容`			+ ` # 电容,電容,Capacitor,コンデンサ`,
+	40019 : `电感`			+ ` # 电感,電感,Inductor,インダクター`,
+	
+	40013 : `棱镜`			+ ` # 棱镜,稜鏡,Prism,プリズム`,
+	40014 : `透镜`			+ ` # 透镜,透鏡,Lens,レンズ`,
+	
+	40024 : `装甲`			+ ` # 装甲,裝甲,Armor,装甲`,
+	40025 : `厚装甲`		+ ` # 厚装甲,厚裝甲,Heavy Armor,厚い装甲`,
+	
+	40026 : `力场管`		+ ` # 力场管,力場管,Force Field Generator,力場パイプ`,
+	40027 : `力场膜`		+ ` # 力场膜,力場膜,Force Field Membrane,力場膜`,
+	
+	40034 : `螺旋桨`		+ ` # 螺旋桨,螺旋槳,Propeller,プロペラ`,
+	40033 : `飞行单元`		+ ` # 飞行单元,飛行單元,Flight unit,飛行ユニット`,
+	
+	40011 : `工业塑料`		+ ` # 工业塑料,工業塑膠,Industrial Plastic,工業用プラスチック`,
+	
+	40015 : `点火器`		+ ` # 点火器,點火器,Igniter,イグナイター`,
+	40016 : `冷凝管`		+ ` # 冷凝管,冷凝管,Condenser,復水管`,
+	40020 : `三极管`		+ ` # 三极管,三極管,Transistor,三極管`,
+	
+	40004 : `弹头`			+ ` # 弹头,彈頭,Warhead,弾頭`,
+	40010 : `雷管`			+ ` # 雷管,雷管,Detonator,起爆装置`,
+	40031 : `涂层`			+ ` # 涂层,塗層,Coating,コーティング`,
+	40012 : `弹链`			+ ` # 弹链,彈鏈,Ammunition Belt,弾帯`,
+	40032 : `核心`			+ ` # 核心,核心,Core,コア`,
+	
+	},
+	
+	文本描述 : {
+	
+	251 : `子弹时间(技能)时长 + 0%, 压力增长 -2`					+ ` # 压力增长<Description>,壓力增長<Description>,Pressure Increment <Description>,ストレス増加<Description>`,
+	252 : `子弹时间(技能)时长 +25%, 压力增长 +2`					+ ` # 子弹时间时长增加<Description:0>%，压力增长+<Description:1>,子彈時間時長增加<Description:0>%，壓力增長+<Description:1>,Bullet time duration increases by <Description:0>%， Pressure Increment +<Description:1>,バレットタイム<Description:0>%延長、ストレス増加+<Description:1>`,
+	253 : `子弹时间(技能)时长 +40%, 压力增长 +5`					+ ` # 子弹时间时长增加<Description:0>%，压力增长+<Description:1>,子彈時間時長增加<Description:0>%，壓力增長+<Description:1>,Bullet time duration increases by <Description:0>%， Pressure Increment +<Description:1>,バレットタイム<Description:0>%延長、ストレス増加+<Description:1>`,
+	
+	254 : `子弹时间内换弹和射击间隔- 0%, 压力增长-2`				+ ` # 压力增长<Description>,壓力增長<Description>,Pressure Increment <Description>,ストレス増加<Description>`,
+	255 : `子弹时间内换弹和射击间隔-20%, 压力增长+2`				+ ` # 子弹时间内换弹时间与射击间隔-<Description:0>%，压力增长+<Description:1>,子彈時間內換彈時間與射擊間隔-<Description:0>%，壓力增長+<Description:1>,Reload Speed within bullet time and firing rate -<Description:0>%， Pressure Increment +<Description:1>,バレットタイム中のリロード時間と射撃間隔-<Description:0>%、ストレス増加+<Description:1>`,
+	256 : `子弹时间内换弹和射击间隔-30%, 压力增长+5`				+ ` # 子弹时间内换弹时间与射击间隔-<Description:0>%，压力增长+<Description:1>,子彈時間內換彈時間與射擊間隔-<Description:0>%，壓力增長+<Description:1>,Reload Speed within bullet time and firing rate -<Description:0>%， Pressure Increment +<Description:1>,バレットタイム中のリロード時間と射撃間隔-<Description:0>%、ストレス増加+<Description:1>`,
+	
+	257 : `武器换弹时间 - 0%, 但是受伤导致压力增长 -50%`			+ ` # 受伤压力增长<Description>%,受傷壓力增長<Description>%,Injury pressure increase<Description>%,負傷ストレス増加<Description>%`,
+	258 : `武器换弹时间 - 4%, 但是受伤导致压力增长 +10%`			+ ` # 换弹时间<Description:0>%，受伤压力增长+<Description:1>%,換彈時間<Description:0>%，受傷壓力增長+<Description:1>%,Reload Speed <Description:0>%， Injury Pressure Increment +<Description:1>%,リロード時間<Description:0>%、負傷ストレス増加+<Description:1>%`,
+	259 : `武器换弹时间 - 6%, 但是受伤导致压力增长 +15%`			+ ` # 换弹时间<Description:0>%，受伤压力增长+<Description:1>%,換彈時間<Description:0>%，受傷壓力增長+<Description:1>%,Reload Speed <Description:0>%， Injury Pressure Increment +<Description:1>%,リロード時間<Description:0>%、負傷ストレス増加+<Description:1>%`,
+	
+	260 : `当收到礼物时, 降低的压力值额外 + 15%`					+ ` # 礼物回复压力+<Description>%,禮物回復壓力+<Description>%,Pressure Regeneration from Gift +<Description>%,プレゼントストレス回復+<Description>%`,
+	261 : `当收到礼物时, 降低的压力值额外 + 25%`					+ ` # 礼物回复压力+<Description>%,禮物回復壓力+<Description>%,Pressure Regeneration from Gift +<Description>%,プレゼントストレス回復+<Description>%`,
+	262 : `当收到礼物时, 降低的压力值额外 + 40%`					+ ` # 礼物回复压力+<Description>%,禮物回復壓力+<Description>%,Pressure Regeneration from Gift +<Description>%,プレゼントストレス回復+<Description>%`,
+	
+	266 : `休息(没出战也没有去做任务)回复压力 + 15%`				+ ` # 休息回复压力+<Description>%,休息回復壓力+<Description>%,Pressure Regeneration from Resting +<Description>%,休憩ストレス回復+<Description>%`,
+	267 : `休息(没出战也没有去做任务)回复压力 + 25%`				+ ` # 休息回复压力+<Description>%,休息回復壓力+<Description>%,Pressure Regeneration from Resting +<Description>%,休憩ストレス回復+<Description>%`,
+	268 : `休息(没出战也没有去做任务)回复压力 + 40%`				+ ` # 休息回复压力+<Description>%,休息回復壓力+<Description>%,Pressure Regeneration from Resting +<Description>%,休憩ストレス回復+<Description>%`,
+	
+	263 : `护盾的基础生命值 + 20%, 但休息回复压力 - 15%`			+ ` # 护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,護盾基礎生命值+<Description:0>%，休息回復壓力<Description:1>%,Shield Base HP +<Description:0>%， Pressure Regeneration from Resting <Description:1>%,シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%`,
+	264 : `护盾的基础生命值 + 35%, 但休息回复压力 - 25%`			+ ` # 护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,護盾基礎生命值+<Description:0>%，休息回復壓力<Description:1>%,Shield Base HP +<Description:0>%， Pressure Regeneration from Resting <Description:1>%,シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%`,
+	265 : `护盾的基础生命值 + 60%, 但休息回复压力 - 40%`			+ ` # 护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,護盾基礎生命值+<Description:0>%，休息回復壓力<Description:1>%,Shield Base HP +<Description:0>%， Pressure Regeneration from Resting <Description:1>%,シールド基礎HP<Description:0>+%、休憩ストレス回復<Description:1>%`,
+	
+	601 : `背刺(潜行模式里的特殊操作)效率 +　5%`					+ ` # 背刺效率+<Description>%,背刺效率+<Description>%,Backstab efficiency +<Description>%,暗殺効率+<Description>%`,
+	602 : `背刺(潜行模式里的特殊操作)效率 +　9%`					+ ` # 背刺效率+<Description>%,背刺效率+<Description>%,Backstab efficiency +<Description>%,暗殺効率+<Description>%`,
+	603 : `背刺(潜行模式里的特殊操作)效率 + 15%`					+ ` # 背刺效率+<Description>%,背刺效率+<Description>%,Backstab efficiency +<Description>%,暗殺効率+<Description>%`,
+	604 : `背刺(潜行模式里的特殊操作)效率 + 25%`					+ ` # 背刺效率+<Description>%,背刺效率+<Description>%,Backstab efficiency +<Description>%,暗殺効率+<Description>%`,
+	
+	605 : `背刺判定角度(决定是否能够进行操作) + 15°`				+ ` # 背刺判定角度+<Description>°,背刺判定角度+<Description>°,Backstab angle determination +<Description>°,暗殺判定角度+<Description>°`,
+	606 : `背刺判定角度(决定是否能够进行操作) + 24°`				+ ` # 背刺判定角度+<Description>°,背刺判定角度+<Description>°,Backstab angle determination +<Description>°,暗殺判定角度+<Description>°`,
+	607 : `背刺判定角度(决定是否能够进行操作) + 30°`				+ ` # 背刺判定角度+<Description>°,背刺判定角度+<Description>°,Backstab angle determination +<Description>°,暗殺判定角度+<Description>°`,
+	608 : `背刺判定角度(决定是否能够进行操作) + 45°`				+ ` # 背刺判定角度+<Description>°,背刺判定角度+<Description>°,Backstab angle determination +<Description>°,暗殺判定角度+<Description>°`,
+	
+	613 : `从敌人的背后接近时, 对方感知我方的距离 -　6%`			+ ` # 敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,敵軍背後感知距離<Description>%（從背後接近敵人時敵人的感知距離）,Enemy's perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind),敵軍背後感知距離<Description>%（背後から敵に接近した場合の敵の感知距離）`,
+	614 : `从敌人的背后接近时, 对方感知我方的距离 - 15%`			+ ` # 敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,敵軍背後感知距離<Description>%（從背後接近敵人時敵人的感知距離）,Enemy's perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind),敵軍背後感知距離<Description>%（背後から敵に接近した場合の敵の感知距離）`,
+	615 : `从敌人的背后接近时, 对方感知我方的距离 - 30%`			+ ` # 敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,敵軍背後感知距離<Description>%（從背後接近敵人時敵人的感知距離）,Enemy's perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind),敵軍背後感知距離<Description>%（背後から敵に接近した場合の敵の感知距離）`,
+	616 : `从敌人的背后接近时, 对方感知我方的距离 - 50%`			+ ` # 敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,敵軍背後感知距離<Description>%（從背後接近敵人時敵人的感知距離）,Enemy's perceived distance from behind <Description>% (the perceived distance of the enemy when you approaching from behind),敵軍背後感知距離<Description>%（背後から敵に接近した場合の敵の感知距離）`,
+	
+	609 : `当敌人进入警觉状态后搜索的精度(发现的概率) - 20%`		+ ` # 敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,敵軍警覺後搜索精度-<Description>%（降低敵軍搜索時的精度）,Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting),敵軍警戒の時の捜索精度-<Description>%（敵軍捜索の時の精度を低下）`,
+	610 : `当敌人进入警觉状态后搜索的精度(发现的概率) - 35%`		+ ` # 敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,敵軍警覺後搜索精度-<Description>%（降低敵軍搜索時的精度）,Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting),敵軍警戒の時の捜索精度-<Description>%（敵軍捜索の時の精度を低下）`,
+	611 : `当敌人进入警觉状态后搜索的精度(发现的概率) - 60%`		+ ` # 敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,敵軍警覺後搜索精度-<Description>%（降低敵軍搜索時的精度）,Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting),敵軍警戒の時の捜索精度-<Description>%（敵軍捜索の時の精度を低下）`,
+	612 : `当敌人进入警觉状态后搜索的精度(发现的概率) -100%`		+ ` # 敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,敵軍警覺後搜索精度-<Description>%（降低敵軍搜索時的精度）,Enemy search accuracy -<Description>% (reduces the accuracy of enemy search when alerting),敵軍警戒の時の捜索精度-<Description>%（敵軍捜索の時の精度を低下）`,
+	
+	635 : `完美闪避后 8 秒内下次攻击攻击力 +25%`					+ ` # 完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,完美閃避後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After perfect evasion，the attack power of the next attack increased by <Description:1> within <Description:0>s,パーフェクトフラッシュ後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	636 : `完美闪避后 8 秒内下次攻击攻击力 +40%`					+ ` # 完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,完美閃避後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After perfect evasion，the attack power of the next attack increased by <Description:1> within <Description:0>s,パーフェクトフラッシュ後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	637 : `完美闪避后 8 秒内下次攻击攻击力 +54%`					+ ` # 完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,完美閃避後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After perfect evasion，the attack power of the next attack increased by <Description:1> within <Description:0>s,パーフェクトフラッシュ後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	638 : `完美闪避后 8 秒内下次攻击攻击力 +64%`					+ ` # 完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,完美閃避後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After perfect evasion，the attack power of the next attack increased by <Description:1> within <Description:0>s,パーフェクトフラッシュ後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	
+	631 : `完美闪避的判定时间增加(闪避关键帧 +1 帧)`				+ ` # 完美闪避判定时间增加,完美閃避判定時間新增,The determination time for perfect evasion has increased,パーフェクトフラッシュの判定時間増加`,
+	632 : `完美闪避的判定时间增加(闪避关键帧 +1 帧)`				+ ` # 完美闪避判定时间增加（小幅）,完美閃避判定時間新增（小幅）,The determination time for perfect evasion has increased（slightly）,パーフェクトフラッシュ判定時間増加（小幅）`,
+	633 : `完美闪避的判定时间增加(闪避关键帧 +2 帧)`				+ ` # 完美闪避判定时间增加（中幅）,完美閃避判定時間新增（中幅）,The determination time for perfect evasion has increased（mid-range）,パーフェクトフラッシュ判定時間増加（ミディアム）`,
+	634 : `完美闪避的判定时间增加(闪避关键帧 +3 帧)`				+ ` # 完美闪避判定时间增加（大幅）,完美閃避判定時間新增（大幅）,The determination time for perfect evasion has increased（significantly）,パーフェクトフラッシュ判定時間増加（大幅）`,
+	
+	643 : `受到伤害后 5 秒内, 我方下次攻击的攻击力 + 6%`			+ ` # 受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,受到傷害後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After Injured，the attack power of the next attack increased by <Description:1> within <Description:0>s,ダメージを受けた後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	644 : `受到伤害后 5 秒内, 我方下次攻击的攻击力 +10%`			+ ` # 受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,受到傷害後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After Injured，the attack power of the next attack increased by <Description:1> within <Description:0>s,ダメージを受けた後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	645 : `受到伤害后 5 秒内, 我方下次攻击的攻击力 +15%`			+ ` # 受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,受到傷害後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After Injured，the attack power of the next attack increased by <Description:1> within <Description:0>s,ダメージを受けた後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	646 : `受到伤害后 5 秒内, 我方下次攻击的攻击力 +21%`			+ ` # 受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,受到傷害後<Description:0>s內下一次攻擊攻擊力新增<Description:1>%,After Injured，the attack power of the next attack increased by <Description:1> within <Description:0>s,ダメージを受けた後<Description:0>s内の次の攻撃力が<Description:1>%増加する`,
+	
+	639 : `霸体状态下受到伤害 -12%(龙骑大剑和双剑可以出霸体)`		+ ` # 霸体状态下受到伤害减少<Description>%,霸體狀態下受到傷害减少<Description>%,Reducing damage received in a dominant state by <Description>%,覇者状態で受けるダメージを<Description>%下げる`,
+	640 : `霸体状态下受到伤害 -20%(龙骑大剑和双剑可以出霸体)`		+ ` # 霸体状态下受到伤害减少<Description>%,霸體狀態下受到傷害减少<Description>%,Reducing damage received in a dominant state by <Description>%,覇者状態で受けるダメージを<Description>%下げる`,
+	641 : `霸体状态下受到伤害 -28%(龙骑大剑和双剑可以出霸体)`		+ ` # 霸体状态下受到伤害减少<Description>%,霸體狀態下受到傷害减少<Description>%,Reducing damage received in a dominant state by <Description>%,覇者状態で受けるダメージを<Description>%下げる`,
+	642 : `霸体状态下受到伤害 -33%(龙骑大剑和双剑可以出霸体)`		+ ` # 霸体状态下受到伤害减少<Description>%,霸體狀態下受到傷害减少<Description>%,Reducing damage received in a dominant state by <Description>%,覇者状態で受けるダメージを<Description>%下げる`,
+	
+	},
+	
+	物品类型 : {
+	
+	Equip		: `饰品`					, // + ` # 饰品,飾品,Jewelry,アクセサリー`,
+	
+	},
+	
+	归属种类 : {
+	
+	Equip		: `普通饰品`				, // + ` # 普通饰品,普通飾品,Normal Jewelry,普通アクセサリー`,
+	CantRecycle	: `不可回收`				, // + ` # 不可回收,不可回收,Non-recyclable,回収不可`,
+	
+	EquipA		: `通用装备`				, // + ` # 角色通用的装备,通用的裝備,Universal Equip,汎用の装備`,
+	Equip0		: `限玛　丽`				, // + ` # 玛　丽专属装备,瑪麗专属装备,Mary Exclusive Equipment,メアリーの専属装備`,
+	Equip1		: `限库罗库`				, // + ` # 库罗库专属装备,庫羅庫专属装备,Kuroku Exclusive Equipment,クロックの専属装備`,
+	Equip2		: `限桑/San`				, // + ` # 桑/San专属装备,桑专属装备,San Exclusive Equipment,サンの専属装備`,
+	Equip3		: `限赭石色`				, // + ` # 赭石色专属装备,赭石色专属装备,Ocher Exclusive Equipment,オーカーの専属装備`,
+	Equip4		: `限克莱尔`				, // + ` # 克莱尔专属装备,克萊爾专属装备,Claire Exclusive Equipment,クレアの専属装備`,
+	
+	},
+	
+	原型研发 : {
+	
+	Sub_1		: `格鲁公司`				, // + ` # 格鲁公司,格魯公司,Grub Corporation,Grub株式会社`,
+	Sub_2		: `诺普德公司`				, // + ` # 诺普德公司,諾普德公司,Novode Company,Novode株式会社`,
+	Sub_3		: `红树林制造局`			, // + ` # 红树林制造局,紅樹林製造局,Mangrove Manufacturing Bureau,マングローブ製造局`,
+	Sub_4		: `科尔第一集团公司`		, // + ` # 科尔第一集团公司,科爾第一集團公司,Cole First Group Company,コール第一グループ会社`,
+	Sub_5		: `科尔第二集团公司`		, // + ` # 科尔第二集团公司,科爾第二集團公司,Cole Second Group Company,コール第二グループ会社`,
+	Sub_6		: `拜克家具`				, // + ` # 拜克家具,拜克傢俱,BAIC Furniture,BAIC家具株式会社`,
+	Sub_7		: `第一家居`				, // + ` # 第一家居,第一家居,First Home International Group,第一ホームインターナショナルグループ`,
+	Sub_8		: `联合食品`				, // + ` # 联合食品,聯合食品,United Food Company,共同食品株式会社`,
+	
+	TankType_PlayerName_0 : `玛　丽`		, // + ` # 玛丽,瑪麗,Mary,メアリー`,
+	TankType_PlayerName_1 : `库罗库`		, // + ` # 库罗库,庫羅庫,Kuroku,クロック`,
+	TankType_PlayerName_2 : `桑/San`		, // + ` # 桑,桑,San,サン`,
+	TankType_PlayerName_3 : `赭石色`		, // + ` # 赭石色,赭石色,Ocher,オーカー`,
+	TankType_PlayerName_4 : `克莱尔`		, // + ` # 克莱尔,克萊爾,Claire,クレア`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv0.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.物品类型.text = textList.物品类型[item[3]];
+	item.原型研发.text = textList.原型研发[item[8]];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
 		
-		// 项目图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/12_role_jewel/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
 		
-		// 项目名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
+	})();
+	
+	item.文本描述.text = (function(){
 		
-		// 项目类型
-		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 7]][0]) +'</td>' }else 
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
 		
-		// 归属种类
-		if(index ===  8){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 8]][0]) +'</td>' }else 
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
 		
-		// 原型研发
-		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[11]][0]) +'</td>' }else 
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
 		
-		// 归属对象
-		if(index === 12){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[12]][0]) +'</td>' }else 
+	})();
+	
+	item.解锁天数.text = (function(){
 		
-		// 合成材料
-		if(index === 13){ powerTable_tbody_node01 += '<td>'+ (
-			data === '-' ? '-' : 
-				data.split('|').map(function(material){
-					let [name,count, ]=material.split('_');
-					return (count +''+ ItemsNameList[name][0]);
-				}).join(' + ')
-		) +'</td>' }else 
+		if(item.解锁天数.code === '$StrategyOpenDay'){ 
+		return (item.解锁天数.code = '22') }; 
 		
-		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
+		if(item.解锁天数.code === '$NightOpenDay'){ 
+		return (item.解锁天数.code = '65') };
 		
-		// 常规数据
-		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		if(item.解锁天数.code === '$EquipOpenDay'){ 
+		return (item.解锁天数.code = '35') };
+		
+		if(item.解锁天数.code === '$AirOpenDay'){ 
+		return (item.解锁天数.code = '47') };
+		
+		return (item.解锁天数.code);
+		
+	})();
+	
+	item.归属种类.text = (function(){
+		
+		let result = item.归属种类.code.split('|');
+		
+		result = result.filter(function(value){ 
+			return (value === 'CantGen') ? false : true });
+		if(result.length === 1 && result[0] === ''){ result = [ ] };
+		
+		if(result.includes('Equip') 
+		=== true){ result.push('EquipA') };
+		
+		return result.map(function(value){ 
+		return textList.归属种类[value] }).join('<br />');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	let 合成材料_text = '';
+	let 合成材料_html = '';
+	item.合成材料.code.split('|').forEach(function(value,index,array){
+		
+		let id = '', length = '0';
+		let itemName = '无法合成';
+		let imageName = 'x', folderName = '.';
+		if(value === ''){ 合成材料_text = 'Unmake' }else{
+			
+			[id, length, ] = value.split('_');
+			
+			imageName = id;
+			itemName = textList.项目名称[id].replace(/(\s)#(.+)/,'');
+			合成材料_text = (合成材料_text + itemName +'×'+ length + (index + 1 < array.length ? ' + ' : ''));
+			
+			if(id.startsWith('4')){ folderName = 'material' }else 
+			if(id === '1101'){ folderName = '09_mecha_frag' }; // 仅有一个特殊材料
+			
+		};
+		
+		合成材料_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>×${(length.length>=2?'':' ')+length}</span>
+				<span>${itemName}</span>
+			</div>
+		`.replace(/\t|\n/g, '');
 		
 	});
+	合成材料_html = `<div class='itemFlex'>`+ 合成材料_html +`</div>`;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	let 出现条件_text = '';
+	let 出现条件_html = '';
+	item.出现条件.code.split('|').map(function(number){
+		
+		// 将范围值展开成具体的 id 列表
+		
+		if(number.includes('_') !== true){ return number };
+		let [start,end,] = number.split('_'), result = [ ];
+		
+		start = Number(start), end = Number(end);
+		while(start <= end){ 
+			result.push(String(start));
+			start = start+1;
+		};
+		
+		return result;
+		
+	}).flat()
+	.map(function(value){
+		
+		// 对武器用 id 最后两位进行排序
+		if(value === ''){ return '' }else 
+		if(value.length <= 4){ return '00#'+value }else 
+		if(value.length >= 5){ return value.slice(-2) + '#' + value };
+		
+	}).sort()
+	.map(function(value){
+		
+		// 排序后去掉上步为了排序的前缀
+		return value.replace(/..#/,'');
+		
+	})
+	.filter(function(value, index, array){
+		
+		// 同类的也显示, 但重复的不显示
+		let flag = true;
+		if(index >= 1 && value === array[index-1]){ flag = false }
+		return flag; //
+		
+	})
+	.forEach(function(value, index, array){
+		
+		let folderName = '.';
+		let imageName = 'x';
+		let itemName = '自动解锁'
+		if(value === ''){ 出现条件_text = 'Unlock' }else{
+			
+			if((Number(value) >= 10000 && Number(value) <= 19999) || (Number(value) >= 1250 && Number(value) <= 1262)){ folderName = '01_weapon_list' }else 
+			if(Number(value) >= 1101 && Number(value) <= 1126){ folderName = '09_mecha_frag' }
+			else{ folderName = '09_mecha_frag' };
+			imageName = value;
+			
+			itemName =  textList.项目名称[value].replace(/(\s)#(.+)/,'');
+			出现条件_text += itemName + (index+1< array.length? ',': '');
+			
+		};
+		
+		出现条件_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>→</span><span>${ itemName }</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	出现条件_html = `<div class='itemFlex'>`+ 出现条件_html +`</div>`;
+	
+	// -----------------------------------------
+	
+	item.物品类型.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.物品类型.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.物品类型.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.归属种类.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.归属种类.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.归属种类.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.原型研发.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.原型研发.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.原型研发.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	// -----------------------------------------
+	
+	item.合成材料.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${合成材料_html}">
+		<div class="ellipsis-1" style="width:30px;">${合成材料_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.出现条件.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${出现条件_html}">
+		<div class="ellipsis-1" style="width:30px;">${出现条件_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/13_pilot_jewel/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/13_pilot_jewel/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable01_tbody_html += item.物品类型.text;
+	powerTable01_tbody_html += item.归属种类.text;
+	powerTable01_tbody_html += item.原型研发.text;
+	powerTable01_tbody_html += item.合成材料.text;
+	powerTable01_tbody_html += item.出现条件.text;
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
 
 })();
 </script>
@@ -473,7 +837,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.1</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.2</div>
 </div>
 </div>
 </div>
