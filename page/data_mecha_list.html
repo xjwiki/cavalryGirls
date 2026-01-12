@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2025-12-16T01:18:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-12T16:00:56UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2025-12-16T01:18:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2025-12-16T01:18:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-12T16:00:56UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-01-12T16:00:56UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -668,6 +668,16 @@ let powerTable01_index = -1;
 // 生成表格
 csv0.forEach(function(item, index){
 	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	// -----------------------------------------
+	
 	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		TankType,					0,
 	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#游骑兵号,
 	item.原型研发 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 原型研发		Company,					Company_TankType1,
@@ -724,47 +734,10 @@ csv0.forEach(function(item, index){
 	
 	// -----------------------------------------
 	
-	// 空行处理
-	
-	if(item === 'blankRow'){
-		if(csv0[index+1] !== 'blankRow'){
-		powerTable01_group+=1};
-		return;
-	}else{
-		powerTable01_index +=1;
-	};
-	
-	// -----------------------------------------
-	
-	// 数据处理
-	
-	item.数据分组 = powerTable01_group;
-	item.项目序号 = powerTable01_index;
-	
 	item.项目名称.text = textList.项目名称[item.项目代码.code];
 	item.文本描述.text = textList.文本描述[item.项目代码.code];
 	
-	item.原型研发.text = textList.原型研发[item[2]];
-	item.炮台转速.text = parseInt(item.炮台转速.code).toFixed(2);
-	item.初始血量.text = (item.初始血量.code/1000) + '<span class="letterK"></span>';
-	
-	if(['100','101','102','103','104','105','106'].includes(item.项目代码.code) === true){
-	item.奔跑能量.code = item.奔跑能量.text = item.起步马力.code = item.起步马力.text = item.最大移速.code = item.最大移速.text = '-' };
-	
-	item.图片名称_0 = {text:'0_'+item.项目代码.text, code:'0_'+item.项目代码.code, };
-	item.图片名称_1 = {text:'1_'+item.项目代码.text, code:'1_'+item.项目代码.code, };
-	
-	item.无人机数 = {code:'-', text:'-', };
-	if(item.无人机值.code !== ''){ item.无人机数.code 
-	= item.无人机数.text = item.无人机值.code.split('|')[0] };
-	
-	item.特别注释 = {code:'-', text:'-', };
-	if(item.自带模块.code !== '' || item.附赠装备.code !== ''){ 
-	item.特别注释.text = item.特别注释.code = textList.特别注释[item.项目代码.code] };
-	
-	// -----------------------------------------
-	
-	item.项目名称.text = (function(){	// 直接合并
+	item.项目名称.text = (function(){
 		
 		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
 		let second = result.splice(1,1); result.push(second[0]);
@@ -779,7 +752,7 @@ csv0.forEach(function(item, index){
 		
 	})();
 	
-	item.文本描述.text = (function(){	// 替换变量
+	item.文本描述.text = (function(){
 		
 		// item.文本描述.text 
 		// = item.文本描述.text.replace(/\n/g, '<br />');
@@ -800,6 +773,26 @@ csv0.forEach(function(item, index){
 		}).join('');
 		
 	})();
+	
+	// -----------------------------------------
+	
+	item.原型研发.text = textList.原型研发[item[2]];
+	item.炮台转速.text = parseInt(item.炮台转速.code).toFixed(2);
+	item.初始血量.text = (item.初始血量.code/1000) + '<span class="letterK"></span>';
+	
+	if(['100','101','102','103','104','105','106'].includes(item.项目代码.code) === true){
+	item.奔跑能量.code = item.奔跑能量.text = item.起步马力.code = item.起步马力.text = item.最大移速.code = item.最大移速.text = '-' };
+	
+	item.图片名称_0 = {text:'0_'+item.项目代码.text, code:'0_'+item.项目代码.code, };
+	item.图片名称_1 = {text:'1_'+item.项目代码.text, code:'1_'+item.项目代码.code, };
+	
+	item.无人机数 = {code:'-', text:'-', };
+	if(item.无人机值.code !== ''){ item.无人机数.code 
+	= item.无人机数.text = item.无人机值.code.split('|')[0] };
+	
+	item.特别注释 = {code:'-', text:'-', };
+	if(item.自带模块.code !== '' || item.附赠装备.code !== ''){ 
+	item.特别注释.text = item.特别注释.code = textList.特别注释[item.项目代码.code] };
 	
 	// -----------------------------------------
 	
@@ -1056,6 +1049,16 @@ let powerTable02_index = -1;
 // 生成表格
 csv1.forEach(function(item, index){
 	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable02_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable02_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable02_group;
+	item.项目序号 = powerTable02_index;
+	
+	// -----------------------------------------
+	
 	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
 	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
 	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
@@ -1081,27 +1084,10 @@ csv1.forEach(function(item, index){
 	
 	// -----------------------------------------
 	
-	// 空行处理
-	
-	if(item === 'blankRow'){
-		if(csv1[index+1] !== 'blankRow'){
-		powerTable02_group+=1};
-		return;
-	}else{
-		powerTable02_index +=1;
-	};
-	
-	// -----------------------------------------
-	
-	// 数据处理
-	
-	item.数据分组 = powerTable02_group;
-	item.项目序号 = powerTable02_index;
-	
 	item.项目名称.text = textList.项目名称[item.项目代码.code];
 	item.文本描述.text = textList.文本描述[item.项目代码.code];
 	
-	item.项目名称.text = (function(){	// 直接合并
+	item.项目名称.text = (function(){
 		
 		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
 		let second = result.splice(1,1); result.push(second[0]);
@@ -1116,7 +1102,7 @@ csv1.forEach(function(item, index){
 		
 	})();
 	
-	item.文本描述.text = (function(){	// 替换变量
+	item.文本描述.text = (function(){
 		
 		item.文本描述.text 
 		= item.文本描述.text.replace(/\n/g, '<br />');
@@ -1274,7 +1260,7 @@ $(window).on('keyup', function(event){ // 快捷按键
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.2</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.3</div>
 </div>
 </div>
 </div>
