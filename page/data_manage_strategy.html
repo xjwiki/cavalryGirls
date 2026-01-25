@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-12T16:00:56UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-12T16:00:56UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-12T16:00:56UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,36 +118,38 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 目前的战略武器共有 <c>20</c> 种, 它们的功能多种多样, 有的可杀伤敌人, 有的则侧重于削弱, 甚至纳米修复机器人还能恢复机甲 HP; <br />
-	02. 整备城防界面默认有 <c>2</c> 个战略武器的安装槽位, 可用资金解锁更(最多 <c>7</c> 个), 费用为 <c>15+N</c>, <c>N</c> 是当前已经解锁的槽位数;<br />
-	03. 有些战略武器是无法被合成的, 它们是驾驶员忠诚度到达某个级别的奖励, 只有先获得过 <c>1</c> 件以解锁后, 采购部里才可能会刷出; <br />
-	04. 战略武器不像机甲配件, 它们既可以被重复安装, 在战斗中也可以被重复使用, 但使用会扣除战后的收益, 细节可查阅 <a href="#heading02"># 额外拓展</a>; <br />
+	01. 目前的战略武器共有 <c>23</c> 种, 它们的功能多种多样, 有的可杀伤敌人, 有的则侧重于削弱, 甚至纳米修复机器人还能恢复机甲血量<br />
+	02. 整备城防界面默认有 <c>2</c> 个战略武器槽位, 可用荣誉点解锁更(最多 <c>7</c> 个), 费用为 <c>120+(8×N)</c>, <c>N</c> 是当前已解锁的槽位数量<br />
+	03. 战略武器不像机甲配件, 它们既可以被重复安装, 在战斗中也可以被重复使用, 但使用会扣除战后的收益, 细节可查阅: <a href="#heading02"># 额外拓展</a><br />
 </p>
 
-<!--◇
-◆ 战略武器的槽位和种类都需要使用荣誉点解锁
-◇-->
-
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">装备名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">配件等级<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">解锁天数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">物品类型<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">原型研发<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合成材料<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">出现条件<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>冷却时间</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>原型研发</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>升级改造</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>合成材料</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>出现条件</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -156,50 +158,74 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>调用方法: 于整备城防的界面, 将战略武器安装进槽位之后, 在战场即可通过按 Tab 调出战略界面使用, 或是通过快捷键 1~7 调用, 如果安装时跳过了某个槽位, 则布局会忽视被跳过的槽位, 例如第四个槽位放空, 则第五个槽位的战略武器会填补这个空缺, 既五变成四;</p>
-
-<p>费用计算: 战略武器的费用由 <c>BaseSalary.csv</c> 表中的 <c>UseStrategyCostRate</c> 属性决定, 该属性的五个值为 <c>-2, -1, -2, -2, 0</c>, 分别代表了, 故事/正常, 硬核/残酷, 挑战模式, 无尽模式, 潜入模式, 具体的算法为 <c>CD × 0.01 × UseStrategyCostRate</c>, 例如在故事/正常模式下, 饱和轰炸的 CD 为 <c>50</c>(秒), 那使用一次饱和轰炸的价格就是 <c>50 × 0.01 × -2 = -1</c>, 战后于战略武器费用中扣除;</p>
-
-<p>天气影响: 天气会影响战略武器的 CD, 算法为 <c>RainRate × WeatherAffectCDRate ÷ 100 + 1</c>, <c>RainRate</c> 是场景阴晴状态的随机数, 细节可查阅: <a href="./data_enemy_plot.html">剧情模式.html</a> / <a href="./data_enemy_mode.html">特殊遭遇.html</a>, <c>WeatherAffectCDRate</c> 是 <c>Base.csv</c> 表中的参数, 默认预设为 <c>2</c>, 例如当前场景的 <c>RainRate</c> 为 <c>60</c>, 则 CD 为 <c>60×2÷100+1=2.2</c>, 假设调用饱和轰炸, CD 就是 <c>50×2.2=110</c> 秒, 但只有阴天既 <c>RainRate > 0</c> 才有影响, 如果是晴天则对 CD 没影响, 而且天气也不影响费用的计算(玛丽的 LV4 忠诚度奖励可 <c>-20%</c> CD, 但也不影响费用的计算);</p>
+<p>获取方法: 01.在采购部门购买(但并非所有的战略武器都会在采购部门出现), 02.用材料自行合成(但仅有部分战略武器可以被合成), 03.在整备城防的界面, 点击"解锁战略武器"按钮, 使用荣誉点兑换(只有那些能被合成的才能用荣誉点兑换, 且需要目标已到达解锁天数), 04.有时候休息日会刷出"补给战略武器"的假日安排, 如果选了这种选项, 也可以得到, 05.当队友的忠诚度到达某些等级后, 可能会赠送</p>
 
 <p>————</p>
 
-<p>解锁时间: 在剧情模式下, 战略武器的开放时间由变量 <c>$StrategyOpenDay</c> 控制, 该变量代表着战略武器的开放事件, 而这个事件被放在了第 <c>22</c> 天, 而部分战略武器的解锁天数也是由这个变量控制, 因此它们的解锁天数也是 <c>22</c>, 此外, 黑夜战场的开放时间由变量 <c>$NightOpenDay</c> 控制, 而这个事件被放在了第 <c>65</c> 天, 空投照明弹的解锁天数也是由这个变量控制, 因此它的解锁天数也就是 <c>65</c>;</p>
+<p>准备时间: 刚进入战场时, 是无法立刻使用战略武器的(在训练场除外), 它们会处于 CD 状态, 此时被称之为"准备时间"或"预加载时间", 这个时间默认是战略武器原始 CD 的 <c>25%</c>, 如果宿舍存在"退役设备02"家具套装, 则该时间可减半, 既准备时间变成 CD 的 <c>12.5%</c></p>
+
+<p>解锁时间: 在剧情模式下, 战略武器的开放时间由变量 <c>$StrategyOpenDay</c> 控制, 该变量代表战略武器的开放事件, 而这个事件被放在了第 <c>22</c> 天, 而部分战略武器的解锁天数也是由这个变量控制, 因此它们的解锁也是在第 <c>22</c> 天, 此外, 黑夜战场的开放时间由变量 <c>$NightOpenDay</c> 控制, 而这个事件被放在了第 <c>65</c> 天, 空投照明弹的解锁天数也由这个变量控制, 因此它的解锁天数是在第 <c>65</c> 天</p>
+
+<p>————</p>
+
+<p>使用方法: 于整备城防的界面, 将战略武器安装进槽位, 然后在战场按住键盘左侧的 <kbd>Alt</kbd> 键, 左上角就会显示当前可调用的战略武器, 接着根据界面的提示, 依照顺序按下方向键即可召唤支援, 如果按下方向键的顺序有误, 则调用会失败, 但是没有惩罚, 重新再尝试即可</p>
+
+<p>费用计算: 战略武器的费用由 <c>BaseSalary.csv</c> 表中的 <c>UseStrategyCostRate</c> 属性决定, 这个属性的值为 <c>[-1,-1,-1,-1,0,0,0,]</c>, 分别对应[正常剧情/硬核剧情/挑战/无尽/潜入/地牢/地牢挑战]模式, 而具体算法为 <c>CD × 2 × 0.01 × UseStrategyCostRate</c>, 例如, 在挑战模式中, "空投聚变反应堆"的 CD 为 <c>100</c> 秒, 使用一次的价格为 <c>100 × 2 × 0.01 × -1 = -2</c>, 战后于战略武器费用中扣除</p>
+
+<p>天气影响: 天气会影响战略武器的 CD, 算法为 <c>RainRate × WeatherAffectCDRate ÷ 100 + 1</c>, <c>RainRate</c> 是场景阴晴状态的随机数, 具体可查阅: <a href="./data_enemy_plot.html">剧情模式.html</a> / <a href="./data_enemy_mode.html">特殊遭遇.html</a>, <c>WeatherAffectCDRate</c> 是 <c>Base.csv</c> 表的参数, 默认为 <c>2</c>, 若场景的 <c>RainRate</c> 随机到 <c>60</c>, 则参数为 <c>60×2÷100+1=2.2</c>, 假设调用空投聚变反应堆, CD 就是 <c>100×2.2=220</c> 秒, 但仅阴天既 <c>RainRate > 0</c> 才有影响, 如果场景是晴天, 则不会影响到 CD, 而且天气也不影响费用计算(玛丽的 LV4 忠诚度奖励可 <c>-20%</c> CD, 但也不影响费用的计算)</p>
+
+<p>————</p>
+
+<p>
+	兑换需求: 在战略整备界面可用荣誉点兑换战略武器, 但只有那些在合成界面允许合成的对象才允许兑换, 且兑换需求的荣誉点是会动态变化的, 会随着兑换数量的增多而逐步提高(虽然可以用荣誉点兑换, 但回收它们的时候只能得到参考价格一半的资金, 不会得到荣誉点), 具体算法为 <c>需求 = (基础消耗 + 附加消耗基础值 x (之前等效基础物品数量之和+(等效基础物品数量-1)÷2)) x 等效基础物品数量</c><br />
+	<br />
+	01. 其中的"基础消耗"为 <c>StratagyHonorCostRate x Price</c>, 前者是预设表中的变量, 默认为 <c>2</c>, 后者是对象的参考价格<br />
+	02. 其中的"附加消耗基础值"为 <c>StratagyHonorCostPlus</c>, 这个属性也是位于预设表中的一个变量值, 默认为 <c>30</c><br />
+	03. 其中的"等效基础物品数量"为 <c>2^(实际等级-1)</c>, 大概可以理解为, <c>[1/2/3]</c> 级的对象, 分别等于 <c>[1/2/4]</c><br />
+	04. 其中的"之前等效基础物品数量之和"为 <c>之前使用荣誉点解锁的战略武器的"等效基础物品数量"之和</c><br />
+	<br />
+	假设第一次用荣誉点兑换了"空袭轰炸", 套入公式后结果就是: <c>(60×2 + 30 × (0+(1-1)÷2)) × 1 = 120</c><br />
+	假设第二次用荣誉点兑换了"空袭轰炸", 套入公式后结果就是: <c>(60×2 + 30 × (1+(1-1)÷2)) × 1 = 150</c><br />
+	<br />
+	假设第一次用荣誉点兑换了"集束空袭轰炸", 那么需求荣誉为: <c>(90×2 + 30 × (0+(2-1)÷2)) × 2 = 390</c><br />
+	假设第二次用荣誉点兑换了"集束空袭轰炸", 那么需求荣誉为: <c>(90×2 + 30 × (2+(2-1)÷2)) × 2 = 510</c><br />
+	<br />
+	集束空袭轰炸由于是二级的战略武器, 所以"等效基础物品数量"就是 <c>2</c>, 而"之前等效基础物品数量之和"是会积累的, 这就是为何解锁得越多, 荣誉点需求越高的主要原因, 而在等级的设定方面, 那些不可升级既装备等级为 <c>-2</c> 的, 在计算的时候, 等级会被当作是 <c>1</c><br />
+</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
 
-/* 归属种类 */
-#powerTable01 tr > td:nth-of-type(10){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(10) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(10):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(10):active > span:nth-of-type(2){display:block;}
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 
-/* 原形研发 */
-#powerTable01 tr > td:nth-of-type(11){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:152px;}
-#powerTable01 tr > td:nth-of-type(11) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(11):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(11):active > span:nth-of-type(2){display:block;}
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
 
-/* 合成材料 */
-#powerTable01 tr > td:nth-of-type(12){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(12) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(12):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(12):active > span:nth-of-type(2){display:block;}
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
 
-/* 出现条件 */
-#powerTable01 tr > td:nth-of-type(13){position:relative;cursor:default;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(1){display:inline-block;width:70px;vertical-align:top;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:underline;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2){display:none;position:absolute;top:50%;right:100%;transform:translate(-8px, -50%);pointer-events:none;padding:8px;border-radius:4px;z-index:32;color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;white-space:normal;min-width:232px;}
-#powerTable01 tr > td:nth-of-type(13) > span:nth-of-type(2)::after{position:absolute;top:50%;left:100%;transform:translate(0px, -50%);width:0;height:0;border:8px solid transparent;border-right:0;border-left-color:rgba(0,0,0,0.75);content:"";}
-#powerTable01 tr > td:nth-of-type(13):hover > span:nth-of-type(2), #powerTable01 tr > td:nth-of-type(13):active > span:nth-of-type(2){display:block;}
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -209,245 +235,623 @@
 
 /* 数据注解
 
-CargoPiles = CargoPilesMax = CargoPilesFusion = CargoPilesFusionMax = 0,
-ColorPlus = Cluster = '', DebugHide = 0,
-MaxPile = 1,
+Func 是函数, 已经和 description 既描述结合起来, 这部分的数据没意义, 就删掉了
+MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1 的并没有意义, 所以删掉了
+
+DebugHide: 控制台是否要隐藏该项目(隐藏则无法在控制台调出入手), 武器都是 false, 似乎也不需要
+ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
+
+CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是配件槽位和融合槽位的数据, 只有武器才有, 其它的物品没有任何意义, 所以删掉了
+Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属性, 用于判断升级改造或者同类配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
 
 ————
 
-$StrategyOpenDay = 22
-$NightOpenDay = 65
+Cluster 属性不为空, 也就是存在升级改造的可能
+01. id 是当前物品 id+1 的是对象升级型号(对于武器来说是 id+100)
+02. id 是其他值, 那么如果等级相同, 就是衍生型号, 如果等级不同, 则为改造型号
+
+调用键
+0 = 上
+1 = 右
+2 = 下
+3 = 左
 
 */
 
-// 项目数据
-let tbodyArray01 = [
-	
-	// 高亮,	装备图片,	装备序号,	装备名称,				项目代码,	参考价格,	配件等级,	默认排序,		解锁天数,	物品类型,		归属种类,		原型研发,						合成材料,									出现条件,					文本描述,		],		
-	// Active,	Image,		Number,		Name,					Items,		Price,		Level,		ResolveID,		Day,		Type,			Tag,			Company,						Syns,										NeedWeapon,					Description,	],		//01		
-	
-	[1,			1300,		'01',		'空袭扫射',				1300,		45,			-2,			230,			999,		'Strategy',		'-',			'TankType_PlayerName_4',		'-',										'1317',						'-',			],		//01		
-	
-	[0,			1305,		'06',		'空投地雷',				1305,		40,			-2,			235,			999,		'Strategy',		'-',			'TankType_PlayerName_1',		'-',										'-',						'-',			],		
-	[0,			1304,		'05',		'空投路障',				1304,		40,			-2,			234,			999,		'Strategy',		'-',			'TankType_PlayerName_1',		'-',										'-',						'-',			],		//01		
+let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-	[1,			1306,		'07',		'空投云爆弹',			1306,		70,			-2,			236,			22,			'Strategy',		'-',			'TankType_PlayerName_4',		'40008_4|40009_2|40011_5|40010_4',			'1306',						'-',			],		
-	[1,			1307,		'08',		'空投汽油弹',			1307,		40,			-2,			237,			22,			'Strategy',		'-',			'TankType_PlayerName_2',		'40008_2|40010_3|40015_2',					'1307',						'-',			],		//01		
-	
-	[0,			1308,		'09',		'空投电磁炸弹',			1308,		40,			-2,			238,			22,			'Strategy',		'-',			'TankType_PlayerName_2',		'40008_2|40010_3|40017_2',					'1308',						'-',			],		
-	[0,			1309,		'10',		'空投液氮炸弹',			1309,		40,			-2,			239,			22,			'Strategy',		'-',			'TankType_PlayerName_2',		'40008_2|40010_3|40016_2',					'1309',						'-',			],		//01		
-	
-	[1,			1311,		'12',		'空投烟雾弹',			1311,		60,			-2,			241,			999,		'Strategy',		'-',			'TankType_PlayerName_4',		'-',										'-',						'-',			],		
-	[1,			1312,		'13',		'空投照明弹',			1312,		40,			-2,			242,			65,			'Strategy',		'-',			'Main2_2',						'-',										'-',						'-',			],		//01		
-	
-	[0,			1310,		'11',		'纳米修复机器人',		1310,		100,		-2,			240,			999,		'Strategy',		'-',			'TankType_PlayerName_1',		'-',										'-',						'-',			],		
-	[0,			1313,		'14',		'空投机枪塔',			1313,		200,		-2,			243,			22,			'Strategy',		'-',			'Main2_2',						'-',										'-',						'-',			],		//01		
-	
-	[1,			1301,		'02',		'空袭破片炸弹',			1301,		30,			1,			231,			22,			'Strategy',		'-',			'Main2_2',						'40008_1|40010_3|40005_2',					'1301',						'-',			],		
-	[1,			1302,		'03',		'地毯破片炸弹',			1302,		50,			2,			232,			22,			'Strategy',		'-',			'TankType_PlayerName_1',		'-',										'1301_1303',				'-',			],		
-	[1,			1303,		'04',		'饱和破片炸弹',			1303,		90,			-1,			233,			22,			'Strategy',		'-',			'TankType_PlayerName_1',		'-',										'1301_1303',				'-',			],		//01		
-	
-	[0,			1314,		'15',		'破甲弹轰炸',			1314,		50,			1,			244,			22,			'Strategy',		'-',			'Main2_2',						'40001_12|40002_12|40008_5|40005_2',		'1301_1303|1314_1319',		'-',			],		
-	[0,			1315,		'16',		'精确破甲轰炸',			1315,		90,			2,			245,			22,			'Strategy',		'-',			'Main2_2',						'-',										'1314',						'-',			],		
-	[0,			1316,		'17',		'手术式破甲轰炸',		1316,		160,		-1,			246,			999,		'Strategy',		'-',			'Main2_2',						'-',										'1315',						'-',			],		//01		
-	
-	[1,			1317,		'18',		'空袭轰炸',				1317,		15,			1,			247,			22,			'Strategy',		'-',			'Main2_2',						'40008_1|40010_1|40005_1',					'-',						'-',			],		
-	[1,			1318,		'19',		'地毯式轰炸',			1318,		28,			2,			248,			22,			'Strategy',		'-',			'Main2_2',						'-',										'1317',						'-',			],		
-	[1,			1319,		'20',		'饱和轰炸',				1319,		50,			-1,			249,			22,			'Strategy',		'-',			'Main2_2',						'-',										'1318',						'-',			],		//01		
-	
-];
+1300,#空袭重机枪扫射,1300,Strategy,#召唤一台战机向目标区域进行重机枪扫射\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRect|CD:36|Code:011,TankType_PlayerName_4,45,999,-2,1,2,0,0,1301,,1317,,320,
 
-// 项目名称
-let ItemsNameList = {
-	
-	1300 : ['空袭扫射',				'空襲掃射',						'Air Raid',									],		//02		
-	
-	1305 : ['空投地雷',				'エアドロップ地雷',				'Airdropped Land Mine',						],		
-	1304 : ['空投路障',				'エアドロップバリケード',		'Airdropped Roadblock',						],		//02		
-	
-	1306 : ['空投云爆弹',			'エアドロップクラウドボム',		'Airdropped Thermobaric Weapon',			],		
-	1307 : ['空投汽油弹',			'エアドロップガソリン爆弾',		'Airdropped Napalm',						],		//02		
-	
-	1308 : ['空投电磁炸弹',			'エアドロップ電磁爆弾',			'Airdropped Electromagnetic Bomb',			],		
-	1309 : ['空投液氮炸弹',			'エアドロップ液体窒素爆弾',		'Airdropped Liquid Nitrogen Bomb',			],		//02		
-	
-	1311 : ['空投烟雾弹',			'エアドロップ煙幕弾',			'Airdropped Smoke Bomb',					],		
-	1312 : ['空投照明弹',			'エアドロップフレア',			'Airdropped Flare',							],		//02		
-	
-	1310 : ['纳米修复机器人',		'ナノリペアロボット',			'Nano Repair Bot',							],		
-	1313 : ['空投机枪塔单位',		'エアドロップ機関銃砲塔',		'Airdropped Machine Gun Turret',			],		//02		
-	
-	1301 : ['空袭破片炸弹',			'空襲フラグ爆撃',				'Aerial Frag Bombardment',					],		
-	1302 : ['地毯破片炸弹',			'絨毯フラグ爆撃',				'Carpet Frag Bombing',						],		
-	1303 : ['饱和破片炸弹',			'飽和フラグ爆撃',				'Saturation Frag Bombing',					],		//02		
-	
-	1314 : ['破甲弹轰炸',			'徹甲爆撃',						'Aerial Armor-Piercing Bombardment',		],		
-	1315 : ['精确破甲轰炸',			'正确式徹甲爆撃',				'Accurate Armor-Piercing Bombing',			],		
-	1316 : ['手术式破甲轰炸',		'外科手術式徹甲爆撃',			'Surgical Armor-Piercing Bombing',			],		//02		
-	
-	1317 : ['空袭轰炸',				'空襲爆撃',						'Aerial Bombardment',						],		
-	1318 : ['地毯轰炸',				'絨毯爆撃',						'Carpet Bombing',							],		
-	1319 : ['饱和轰炸',				'飽和爆撃',						'Saturation Bombing',						],		//02		
-	
-	'-' :	['-',	'-',	'-',	],
-	
-	'Strategy' :	['战略武器',	'戦略兵器',		'Strategic weapon',		],
-	
-	'TankType_PlayerName_0' :	['玛丽',				'メアリー',					'Mary',							],
-	'TankType_PlayerName_1' :	['库罗库',				'クロック',					'Kuroku',						],
-	'TankType_PlayerName_2' :	['桑 San',				'サン',						'San',							],
-	'TankType_PlayerName_3' :	['赭石色',				'オーカー',					'Ocher',						],
-	'TankType_PlayerName_4' :	['克莱尔',				'クレア',					'Claire',						],
-	'Main2_2' :					['航空集团有限公司',	'航空グループ株式会社',		'Aviation Group Co., Ltd',		],
-	
-	40001 :	['废铁',			'スクラップアイロン',		'Scrap Iron',					],
-	40002 :	['废料',			'スクラップ',				'Waste Material',				],
-	40003 :	['弹壳',			'薬莢',						'Bullet Shell',					],
-	40004 :	['弹头',			'弾頭',						'Warhead',						],
-	40005 :	['接合物件',		'接続オブジェクト',			'Joining Component',			],
-	40006 :	['齿轮',			'ギア',						'Gear',							],
-	40007 :	['框架',			'フレーム',					'Frame',						],
-	40008 :	['铁管',			'鉄パイプ',					'Iron Pipe',					],
-	40009 :	['扳机',			'トリガー',					'Trigger',						],
-	40010 :	['雷管',			'起爆装置',					'Detonator',					],
-	40011 :	['工业塑料',		'工業用プラスチック',		'Industrial Plastic',			],
-	40012 :	['弹链',			'弾帯',						'Ammunition Belt',				],
-	40013 :	['棱镜',			'プリズム',					'Prism',						],
-	40014 :	['透镜',			'レンズ',					'Lens',							],
-	40015 :	['点火器',			'イグナイター',				'Igniter',						],
-	40016 :	['冷凝管',			'復水管',					'Condenser',					],
-	40017 :	['线圈',			'コイル',					'Coil',							],
-	40018 :	['电容',			'コンデンサ',				'Capacitor',					],
-	40019 :	['电感',			'インダクター',				'Inductor',						],
-	40020 :	['三极管',			'三極管',					'Transistor',					],
-	40021 :	['润滑油',			'潤滑油',					'Lubricating Oil',				],
-	40022 :	['火花塞',			'スパークプラグ',			'Spark Plug',					],
-	40023 :	['冷冻剂',			'冷媒',						'Refrigerant',					],
-	40024 :	['装甲',			'装甲',						'Armor',						],
-	40025 :	['厚装甲',			'厚い装甲',					'Heavy Armor',					],
-	40026 :	['力场管',			'力場パイプ',				'Force Field Generator',		],
-	40027 :	['力场膜',			'力場膜',					'Force Field Membrane',			],
-	40028 :	['共振器',			'共振器',					'Resonator',					],
-	40029 :	['刀片',			'ブレード',					'Blade',						],
-	40030 :	['振荡器',			'発振回路',					'Oscillator',					],
-	40031 :	['涂层',			'コーティング',				'Coating',						],
-	40032 :	['核心',			'コア',						'Core',							],
-	
-};
+1301,#空袭轰炸,1301,Strategy,#召唤一台战机向目标区域进行空袭轰炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExplo|CD:64|Code:0213,Main2_2,60,$StrategyOpenDay,1,1,2,0,0,1302|1303,40008_4|40010_15|40005_10|40033_9,1301,,321,
+1302,#空袭集束轰炸,1302,Strategy,#召唤一台战机向目标区域进行空袭集束轰炸，能够跟踪瞄准的单位\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExplo2|CD:75|Code:01023,TankType_PlayerName_1,90,$StrategyOpenDay,-1,1,3,0,0,,,1301_1303,,322,
 
-// 文本描述
-let DescriptionList = {
+1307,#[业火]凝固汽油弹,1307,Strategy,#召唤一台战机向目标区域投掷数枚凝固汽油弹以形成一道火墙\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectFire|CD:110|Code:0121,TankType_PlayerName_2,80,$StrategyOpenDay,-2,1,3,0,0,1308|1309|1316,40008_9|40010_12|40015_10|40033_5,1302|1303|1307_1308,,330,
+1309,#[寒霜]液氮炸弹,1309,Strategy,#召唤一台战机向目标区域投掷数枚液氮炸弹以制造一片低温区域\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectIce|CD:60|Code:0123,TankType_PlayerName_2,80,$StrategyOpenDay,-2,1,3,0,0,1308|1307|1316,40008_9|40010_12|40016_10|40033_5,1302|1303|1307_1308,,332,
+1308,#[雷鸣]静电场炸弹,1308,Strategy,#召唤一台战机向目标区域投掷数枚静电场炸弹以制造一片静电场区域\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectElec|CD:60|Code:0122,TankType_PlayerName_2,80,$StrategyOpenDay,-2,1,3,0,0,1307|1309|1316,40008_9|40010_12|40017_10|40033_5,1302|1303|1307_1308,,331,
+
+1305,#空投地雷,1305,Strategy,#可以向目标地点空投一些地雷，前摇较长\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeMine|CD:75|Code:0123,TankType_PlayerName_1,40,999,-2,1,2,0,0,,,,,325,
+1304,#空投路障,1304,Strategy,#可以向目标地点空投一些路障，前摇较长\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBox|CD:90|Code:00000,TankType_PlayerName_1,40,999,-2,1,2,0,0,,,,,324,
+
+1311,#空投烟雾弹,1311,Strategy,#可以向目标地点空投许多烟雾弹\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSmoke|CD:45|Code:000,TankType_PlayerName_4,60,999,-2,1,2,0,0,1312,,,,334,
+1312,#空投照明弹,1312,Strategy,#可以向目标地点空投许多照明弹（夜晚可以照明，白天可以降低敌人的开火距离）\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,Light,1,Strategy:AirStrikeFlash|CD:36|Code:111,Main2_2,40,$NightOpenDay,-2,1,2,0,0,1311,,,,335,
+
+1322,#空投掩体,1322,Strategy,#可以向目标地点空投一座掩体碉堡\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBlockHouse|CD:42|Code:13021,Main2_2,30,$StrategyOpenDay,-2,1,2,0,0,,40025_7|40005_5|40033_2,1301_1303,,328,
+1313,#空投机枪塔,1313,Strategy,#,,1,Strategy:AirStrikeCannon|CD:150|Code:3012312,Main2_2,200,$StrategyOpenDay,-2,1,3,0,0,,3011_1|40033_25|40034_5,1307|1308|1309,,336,
+
+1303,#空袭精确轰炸,1303,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，带有破甲效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipeMelt_Lock|CD:40|Code:123,TankType_PlayerName_1,60,$StrategyOpenDay,-2,1,2,0,0,1301|1322|1317,40008_10|40010_10|40005_10|40033_5,1301_1303,,323,
+1306,#500kg重磅制导轰炸,1306,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，威力巨大\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeExplo_Lock|CD:54|Code:022213,TankType_PlayerName_4,120,$StrategyOpenDay,-2,1,3,0,0,1303|1318,40008_16|40009_10|40011_15|40010_15|40034_2,1301_1303,,329,
+
+1314,#轨道空爆破片炸弹,1314,Strategy,#可以向目标地点发射数枚轨道破片炸弹\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSeparate|CD:48|Code:0011,Main2_2,50,$StrategyOpenDay,-2,1,2,0,0,1315,40001_30|40002_30|40008_12|40005_5|40034_2,1301_1303|1314_1319,,337,
+1315,#轨道饱和弹幕轰炸,1315,Strategy,#可以向目标地点发射数枚轨道炸弹，火力覆盖时间长但是延迟较高\n缩短了发射到瞄准的间隔时间及冷却时间\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint|CD:70|Code:3312,Main2_2,75,$StrategyOpenDay,-2,1,3,0,0,1314,40001_40|40002_40|40008_16|40005_7|40034_2,1301_1303|1314_1319,,338,
+
+1316,#轨道元素炸弹轰炸,1316,Strategy,#可以向目标地点发射数枚轨道炸弹，带有随机元素效果\n进一步缩短了发射到瞄准的间隔时间及冷却时间，并增加了精度\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeElement|CD:60|Code:2333,Main2_2,70,$StrategyOpenDay,-2,1,2,0,0,,40008_10|40010_15|40015_3|40016_3|40034_3,1307|1308|1309,,339,
+1317,#轨道连续精确轰炸,1317,Strategy,#可以向目标地点发射数枚制导炸弹，尽管延迟很长但是带有跟踪效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipe_Lock|CD:110|Code:02213,Main2_2,100,$StrategyOpenDay,-2,1,3,0,0,1303,40008_15|40010_15|40005_15|40034_2,1314_1319,,340,
+
+1318,#122mm炮击火力网,1318,Strategy,#使用122mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint2|CD:135|Code:2311033,Main2_2,150,$StrategyOpenDay,1,1,3,0,0,1319|1306,40008_20|40010_20|40005_20|40034_2|40032_2,1314_1319,,341,
+1319,#155mm炮击火力网,1319,Strategy,#使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint3|CD:160|Code:2312032,Main2_2,240,$StrategyOpenDay,-1,1,4,0,0,,,1318,,342,
+
+1321,#空投聚变反应堆,1321,Strategy,#可以向目标地点空投一座微型剧变反应堆\n需要手动激活，激活后会产生巨大爆炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeNukeBox|CD:100|Code:3023103,Main2_2,120,$StrategyOpenDay,-2,1,2,0,0,1320,40008_12|40010_12|40005_12|40034_2,1301_1303,,327,
+1320,#空投护盾生成器,1320,Strategy,#可以向目标地点空投一座护盾生成器，护盾值会缓慢减少，当护盾值归零时装置会失效\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeShiled|CD:75|Code:21100,Main2_2,75,$StrategyOpenDay,-2,1,2,0,0,1321,40006_5|40007_10|40026_10|40027_15|40034_2,1301_1303,,326,
+1310,#纳米修复机器人,1310,Strategy,#可以向目标地点发射一枚生命回复炸弹【警告：对敌人有效】\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeHeal_Lock|CD:120|Code:11223,Company_1310,100,999,-2,1,2,0,0,,,,,333,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	1300 : [/*'空袭扫射',			Strategy:AirStrike|CD:20,				*/'可以向目标地点进行重机枪扫射, 子弹相当密集但每发伤害仅为 120, 破甲率也不高, 只能对付轻甲的单位(CD: 20秒)',		'目標地点に向けて重機関銃掃射を行うことができる\n(クールダウン:20秒)\n(シティディフェンス画面で装備可能)',																							'Shoots at the target location with heavy machine guns.\n(Cooldown: 20s)\n(Equip in City Defense Interface)',																																									],		//03		
+	项目名称 : {
 	
-	1305 : [/*'空投地雷',			Strategy:AirStrikeMine|CD:100,			*/'可以向目标地点空投一些地雷(5 颗), 每颗地雷伤害为 900, 投递的前摇较长(CD:100秒)',									'目標地点に向けていくつかの地雷を空中投下できる、準備時間が長い\n(クールダウン:100秒)\n(シティディフェンス画面で装備可能)',																			'Air-drops some land mines at the target location. Long casting animation.\n(Cooldown: 100s)\n(Equip in City Defense Interface)',																																				],		
-	1304 : [/*'空投路障',			Strategy:AirStrikeBox|CD:120,			*/'可以向目标地点空投一些路障(15个), 就像高级的路障许可, 投递的前摇较长(CD:120秒)',									'目標地点に向けていくつかのバリケードを空中投下できる、準備時間が長い\n(クールダウン:120秒)\n(シティディフェンス画面で装備可能)',																	'Air-drops some roadblocks at the target location. Long casting animation.\n(Cooldown: 120s)\n(Equip in City Defense Interface)',																																				],		//03		
+	1300	: `空袭重机枪扫射`		+ ` # 空袭重机枪扫射,空襲重機槍掃射,Air Raid: Heavy Machine Gun,空襲重機関銃掃射`,
 	
-	1306 : [/*'空投云爆弹',			Strategy:AirStrikeExplo|CD:70,			*/'可以向目标地点发射一枚集束炸弹战术导弹, 造成 6000 范围伤害并眩晕敌人(CD: 70秒)',									'目標地点に向けて集束爆弾を搭載した戦術ミサイルを発射できる\n(クールダウン:70秒)\n(シティディフェンス画面で装備可能)',																				'Fires one cluster bomb tactical missile at the target location.\n(Cooldown: 70s)\n(Equip in City Defense Interface)',																																							],		
-	1307 : [/*'空投汽油弹',			Strategy:AirStrikeFire|CD:60,			*/'可以向目标地点范围内发射多枚(5 枚)燃烧伤害的战术导弹, 每枚伤害仅 100(CD: 60秒)',									'目標地点に向けて大量の燃焼ダメージ戦術ミサイルを発射できる\n(クールダウン:60秒)\n(シティディフェンス画面で装備可能)',																				'Fires multiple tactical missiles dealing burning damage at the target location.\n(Cooldown: 60s)\n(Equip in City Defense Interface)',																																			],		//03		
+	1301	: `空袭轰炸`			+ ` # 空袭轰炸,空襲轟炸,Aerial Bombardment,空襲爆撃`,
+	1302	: `集束空袭轰炸`		+ ` # 空袭集束轰炸,空襲集束轟炸,Air Raid: Cluster Bombing,空襲クラスター爆撃`,
 	
-	1308 : [/*'空投电磁炸弹',		Strategy:AirStrikeElec|CD:60,			*/'可以向目标地点范围内发射多枚(5 枚)电磁伤害的战术导弹, 每枚伤害仅 050(CD: 60秒)',									'目標地点に向けて大量の電磁ダメージ戦術ミサイルを発射できる\n(クールダウン:60秒)\n(シティディフェンス画面で装備可能)',																				'Fires multiple tactical missiles dealing electromagnetic damage at the target location.\n(Cooldown: 60s)\n(Equip in City Defense Interface)',																																	],		
-	1309 : [/*'空投液氮炸弹',		Strategy:AirStrikeIce|CD:60,			*/'可以向目标地点范围内发射多枚(5 枚)寒冷伤害的战术导弹, 每枚伤害仅 050(CD:60秒)',									'目標地点に向けて大量の寒冷ダメージ戦術ミサイルを発射できる\n(クールダウン:60秒)\n(シティディフェンス画面で装備可能)',																				'Fires multiple tactical missiles dealing Cold damage at the target location.\n(Cooldown: 60s)\n(Equip in City Defense Interface)',																																				],		//03		
+	1307	: `[业火]凝固油弹`		+ ` # [业火]凝固汽油弹,[業火]凝固汽油彈,[Inferno] Napalm Bomb,[業火] 凝固ガソリン爆弾`,
+	1309	: `[寒霜]液氮炸弹`		+ ` # [寒霜]液氮炸弹,[寒霜]液氮炸彈,[Frost] Liquid Nitrogen Bomb,[寒霜] 液体窒素爆弾`,
+	1308	: `[雷鸣]静电炸弹`		+ ` # [雷鸣]静电场炸弹,[雷鳴]靜電場炸彈,[Thunder] Electrostatic Field Bomb,[雷鳴] 静電場爆弾`,
 	
-	1311 : [/*'空投烟雾弹',			Strategy:AirStrikeSmoke|CD:45,			*/'可以向目标地点空投许多烟雾弹, 没 Debuff 时, 敌人无法发现烟雾中的机体(CD: 45秒)',									'目標地点に向けて大量の煙幕弾を発射できる\n(クールダウン:45秒)\n(シティディフェンス画面で装備可能)',																								'Air-drops a large number of smoke bombs at the target location.\n(Cooldown: 45s)\n(Equip in City Defense Interface)',																																							],		
-	1312 : [/*'空投照明弹',			Strategy:AirStrikeFlash|CD:45,			*/'可以向目标地点空投许多照明弹, 在夜晚可照明, 白天可降低敌人的开火距离(CD: 45秒)',									'目標地点に向けて大量のフレアを空中投下できる(夜間は照明、昼間は敵の射程距離を縮める)\n(クールダウン:45秒)\n(シティディフェンス画面で装備可能)',													'Air-drops a large number of flares at the target location. (can be illuminated at night,  and the enemy\'s firing distance can be reduced during the day)\n(Cooldown: 45s)\n(Equip in City Defense Interface)',																],		//03		
+	1305	: `空投跳雷`			+ ` # 空投跳雷,空投跳雷,Airdropped Jump Mine,エアドロップジャンプ地雷`,
+	1304	: `空投路障`			+ ` # 空投路障,空投路障,Airdropped Roadblock,エアドロップバリケード`,
 	
-	1310 : [/*'纳米修复机器人',		Strategy:AirStrikeHeal|CD:120,			*/'可以向目标地点发射一枚生命回复炸弹, 恢复 5000 HP, 警告: 对敌人也有效(CD:120秒)',									'目標地点に向けてHP回復爆弾を発射できる【警告: 敵にも有効】\n(クールダウン:120秒)\n(シティディフェンス画面で装備可能)',																				'Fires one healing bomb that heals both allies and enemies at the target location.\n(Cooldown: 120s)\n(Equip in City Defense Interface)',																																		],		
-	1313 : [/*'空投机枪塔',			Strategy:AirStrikeCannon|CD:120,		*/'可以向目标地点空投一个机枪塔, 与初级枪塔类似但装备轻机枪, 转速也更快(CD:120秒)',									'目標地点に向けて機関銃砲塔を空中投下できる\n(クールダウン:120秒)\n(シティディフェンス画面で装備可能)',																								'Air-drops a Machine Gun Turret at the target location.\n(Cooldown: 120s)\n(Equip in City Defense Interface)',																																									],		//03		
+	1311	: `空投烟雾弹`			+ ` # 空投烟雾弹,空投煙霧彈,Airdropped Smoke Bomb,エアドロップ煙幕弾`,
+	1312	: `空投照明弹`			+ ` # 空投照明弹,空投照明彈,Airdropped Flare,エアドロップフレア`,
 	
-	1301 : [/*'空袭破片炸弹',		Strategy:AirStrikeSeparate1|CD:40,		*/'可以向目标地点发射一枚战术破片导弹, 约 25 块破片, 每块破片伤害为 120(CD: 40秒)',									'目標地点に向けて戦術フラグミサイルを発射できる\n(クールダウン:40秒)\n(シティディフェンス画面で装備可能)',																							'Fires one tactical frag missile at the target location.\n(Cooldown: 40s)\n(Equip in City Defense Interface)',																																									],		
-	1302 : [/*'地毯式破片炸弹',		Strategy:AirStrikeSeparate2|CD:54,		*/'可以向目标地点发射三枚战术破片导弹, 破片变得更多, 但破片伤害还是 120(CD: 54秒)',									'目標地点に向けて複数の戦術フラグミサイルを発射できる\n(クールダウン:54秒)\n(シティディフェンス画面で装備可能)',																					'Fires multiple tactical frag missiles at the target location.\n(Cooldown: 54s)\n(Equip in City Defense Interface)',																																							],		
-	1303 : [/*'饱和破片炸弹',		Strategy:AirStrikeSeparate3|CD:70,		*/'可以向目标地点发射五枚战术破片导弹, 破片变得更多, 但破片伤害还是 120(CD:120秒)',									'目標地点に向けて大量の戦術フラグミサイルを発射できる\n(クールダウン:120秒)\n(シティディフェンス画面で装備可能)',																					'Fires a large number of tactical frag missiles at the target location.\n(Cooldown: 120s)\n(Equip in City Defense Interface)',																																					],		//03		
+	1322	: `空投掩体碉堡`		+ ` # 空投掩体,空投掩體,Airdrop Bunker,エアドロップバンカー`,
+	1313	: `空投机枪炮塔`		+ ` # 空投机枪塔,空投機槍塔,Airdropped Machine Gun Turret,エアドロップ機関銃砲塔`,
 	
-	1314 : [/*'破甲轰炸',			Strategy:AirStrikeMelt1|CD:36,			*/'可以向目标地点发射一枚战术破甲导弹, 伤害仅 100, 效果为装甲融化和燃烧(CD: 36秒)',									'目標地点に向けて戦術徹甲ミサイルを発射できる\n目標に装甲熔解効果を与える\n(クールダウン:36秒)\n(シティディフェンス画面で装備可能)',																'Fires one tactical Armor-Piercing missile at the target location.\nCausing Melting Armor effect to the targets\n(Cooldown: 36s)\n(Equip in City Defense Interface)',																											],		
-	1315 : [/*'精确破甲轰炸',		Strategy:AirStrikeMelt2|CD:30,			*/'可以向目标地点发射一枚战术破甲导弹, 缩短了从发射到瞄准的间隔时间及CD(CD: 30秒)',									'目標地点に向けて戦術徹甲ミサイルを発射できる\n照準までの発射間隔と冷却時間を短縮\n目標に装甲熔解効果を与える\n(クールダウン:30秒)\n(シティディフェンス画面で装備可能)',							'Fires one tactical Armor-Piercing missile at the target location.\nShortened the interval between launch and aiming,  as well as the cooling time\nCausing Melting Armor effect to the targets\n(Cooldown: 30s)\n(Equip in City Defense Interface)',							],		
-	1316 : [/*'手术式破甲轰炸',		Strategy:AirStrikeMelt3|CD:25,			*/'可以向目标地点发射一枚战术破甲导弹, 发射变得更快更准, 进一步降低了CD(CD: 25秒)',									'目標地点に向けて戦術徹甲ミサイルを発射できる\n照準までの発射間隔と冷却時間をさらに短縮し、精度を高めた\n目標に装甲熔解効果を与える\n(クールダウン:25秒)\n(シティディフェンス画面で装備可能)',		'Fires one tactical Armor-Piercing missile at the target location.\nFurther shortened the interval time from launch to aiming and cooling time,  and increased accuracy\nCausing Melting Armor effect to the targets\n(Cooldown: 25s)\n(Equip in City Defense Interface)',		],		//03		
+	1303	: `精确空袭轰炸`		+ ` # 空袭精确轰炸,空襲精確轟炸,Air Raid: Precision Bombing,空襲精密爆撃`,
+	1306	: `半吨制导轰炸`		+ ` # 500kg重磅制导轰炸,500kg重磅制導轟炸,500kg Guided Bombing,500kg大型誘導爆撃`,
 	
-	1317 : [/*'空袭轰炸',			Strategy:AirStrikePoint1|CD:30,			*/'可以向目标地点发射一枚战术导弹, 造成的范围爆炸伤害 900, 附带眩晕效果(CD: 30秒)',									'目標地点に向けて戦術ミサイルを発射できる\n(クールダウン:30秒)\n(シティディフェンス画面で装備可能)',																								'Fires one tactical missile at the target location.\n(Cooldown: 30s)\n(Equip in City Defense Interface)',																																										],		
-	1318 : [/*'地毯轰炸',			Strategy:AirStrikePoint2|CD:36,			*/'可以向目标地点发射六枚战术导弹, 效果与空袭轰炸相同, 只是范围更广而已(CD: 36秒)',									'目標地点に向けて複数の戦術ミサイルを発射できる\n(クールダウン:36秒)\n(シティディフェンス画面で装備可能)',																							'Fires multiple tactical missiles at the target location.\n(Cooldown: 36s)\n(Equip in City Defense Interface)',																																									],		
-	1319 : [/*'饱和轰炸',			Strategy:AirStrikePoint3|CD:50,			*/'可以向目标地点发射12枚战术导弹, 效果与地毯轰炸相同, 只是数量更多而已(CD: 50秒)',									'目標地点に向けて大量の戦術ミサイルを発射できる\n(クールダウン:50秒)\n(シティディフェンス画面で装備可能)',																							'Fires a large number of tactical missiles at the target location.\n(Cooldown: 50s)\n(Equip in City Defense Interface)',																																						],		//03		
+	1314	: `轨道破片弹轰炸`		+ ` # 轨道空爆破片炸弹,軌道空爆破片炸彈,Orbital Airburst Shrapnel Bomb,軌道空中破片爆弾`,
+	1315	: `轨道饱和式轰炸`		+ ` # 轨道饱和弹幕轰炸,軌道飽和彈幕轟炸,Orbital Saturation Barrage Bombing,軌道飽和弾幕爆撃`,
+	
+	1316	: `轨道元素弹轰炸`		+ ` # 轨道元素炸弹轰炸,軌道元素炸彈轟炸,Orbital Elemental Bombing,軌道元素爆弾爆撃`,
+	1317	: `轨道连续性轰炸`		+ ` # 轨道连续精确轰炸,軌道連續精確轟炸,Orbital Continuous Precision Bombing,軌道連続精密爆撃`,
+	
+	1318	: `122mm 炮击网`		+ ` # 122mm炮击火力网,122mm炮擊火力網,122mm Artillery Fire Grid,122mm砲撃火力網`,
+	1319	: `155mm 炮击网`		+ ` # 155mm炮击火力网,155mm炮擊火力網,155mm Artillery Fire Grid,155mm砲撃火力網`,
+	
+	1321	: `空投聚变反应堆`		+ ` # 空投聚变反应堆,空投聚變反應堆,Airdrop Fusion Reactor,エアドロップ核融合炉`,
+	1320	: `空投护盾生成器`		+ ` # 空投护盾生成器,空投護盾生成器,Airdrop Shield Generator,エアドロップシールド発生装置`,
+	1310	: `纳米修复机器人`		+ ` # 纳米修复机器人,納米修復機器人,Nano Repair Bot,ナノリペアロボット`,
+	
+	// 城防设施
+	
+	3011	: `枪塔许可`			+ ` # 机枪塔许可,機槍塔許可,Machine Gun Turret Permit,機関銃砲塔免許`,
+	3012	: `枪塔许可+`			+ ` # 机枪塔许可+,機槍塔許可+,Machine Gun Turret Permit+,機関銃砲塔免許+`,
+	
+	// 合成材料
+	
+	40001	: `废铁`				+ ` # 废铁,廢鐵,Scrap Iron,くず鉄`,
+	40002	: `废料`				+ ` # 废料,廢料,Waste Material,スクラップ`,
+	40005	: `接合`				+ ` # 接合物件,接合物件,Joining Component,接続オブジェクト`,
+	40006	: `齿轮`				+ ` # 齿轮,齒輪,Gear,ギア`,
+	40007	: `框架`				+ ` # 框架,框架,Frame,フレーム`,
+	
+	40003	: `弹壳`				+ ` # 弹壳,彈殼,Bullet Shell,薬莢`,
+	40008	: `铁管`				+ ` # 铁管,鐵管,Iron Pipe,鉄パイプ`,
+	40009	: `扳机`				+ ` # 扳机,扳機,Trigger,トリガー`,
+	
+	40021	: `润滑油`				+ ` # 润滑油,潤滑油,Lubricating Oil,潤滑油`,
+	40022	: `火花塞`				+ ` # 火花塞,火花塞,Spark Plug,スパークプラグ`,
+	40023	: `冷冻剂`				+ ` # 冷冻剂,冷凍劑,Refrigerant,冷媒`,
+	
+	40028	: `共振器`				+ ` # 共振器,共振器,Resonator,共振器`,
+	40029	: `废刀片`				+ ` # 刀片,刀片,Blade,ブレード`,
+	40030	: `振荡器`				+ ` # 振荡器,振盪器,Oscillator,発振回路`,
+	
+	40017	: `线圈`				+ ` # 线圈,線圈,Coil,コイル`,
+	40018	: `电容`				+ ` # 电容,電容,Capacitor,コンデンサ`,
+	40019	: `电感`				+ ` # 电感,電感,Inductor,インダクター`,
+	
+	40013	: `棱镜`				+ ` # 棱镜,稜鏡,Prism,プリズム`,
+	40014	: `透镜`				+ ` # 透镜,透鏡,Lens,レンズ`,
+	
+	40026	: `力场管`				+ ` # 力场管,力場管,Force Field Generator,力場パイプ`,
+	40027	: `力场膜`				+ ` # 力场膜,力場膜,Force Field Membrane,力場膜`,
+	
+	40024	: `装甲`				+ ` # 装甲,裝甲,Armor,装甲`,
+	40025	: `厚装甲`				+ ` # 厚装甲,厚裝甲,Heavy Armor,厚い装甲`,
+	
+	40034	: `螺旋桨`				+ ` # 螺旋桨,螺旋槳,Propeller,プロペラ`,
+	40033	: `飞行单元`			+ ` # 飞行单元,飛行單元,Flight unit,飛行ユニット`,
+	
+	40011	: `工业塑料`			+ ` # 工业塑料,工業塑膠,Industrial Plastic,工業用プラスチック`,
+	
+	40015	: `点火器`				+ ` # 点火器,點火器,Igniter,イグナイター`,
+	40016	: `冷凝管`				+ ` # 冷凝管,冷凝管,Condenser,復水管`,
+	40020	: `三极管`				+ ` # 三极管,三極管,Transistor,三極管`,
+	
+	40004	: `弹头`				+ ` # 弹头,彈頭,Warhead,弾頭`,
+	40010	: `雷管`				+ ` # 雷管,雷管,Detonator,起爆装置`,
+	40031	: `涂层`				+ ` # 涂层,塗層,Coating,コーティング`,
+	40012	: `弹链`				+ ` # 弹链,彈鏈,Ammunition Belt,弾帯`,
+	40032	: `核心`				+ ` # 核心,核心,Core,コア`,
+	
+	40201	: `家具零件`			+ ` # 家具零件,傢俱零件,Furniture parts,家具部品`,
+	40202	: `高级家具零件`		+ ` # 高级家具零件,高級傢俱零件,Advanced tool parts,高級家具部品`,
+	
+	},
+	
+	文本描述 : {
+	
+	1300 : `召唤一台战机向目标区域进行重机枪扫射, 每发子弹可造成的伤害为 300, 触发按键: LeftAlt + [<CodeArrow>]`															+ ` # 召唤一台战机向目标区域进行重机枪扫射\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域進行重機槍掃射\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to perform Heavy Machine Gun Strafing on the target area\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域へ重機関銃掃射を行う\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1301 : `召唤一台战机向目标区域进行空袭轰炸, 每一发炮弹的爆炸伤害为 900, 触发按键: LeftAlt + [<CodeArrow>]`															+ ` # 召唤一台战机向目标区域进行空袭轰炸\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域進行空襲轟炸\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to perform Aerial Bombardment on the target area\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域へ空襲爆撃を行う\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1302 : `召唤一台战机向目标区域进行集束轰炸, 比空袭轰炸的炮弹更加密集, 触发按键: LeftAlt + [<CodeArrow>]`															+ ` # 召唤一台战机向目标区域进行空袭集束轰炸，能够跟踪瞄准的单位\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域進行空襲集束轟炸，能夠跟蹤瞄準的單位\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to perform Air Raid: Cluster Bombing on the target area that can track targeted units\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域へ空襲クラスター爆撃を行う。照準を定めたユニットを追尾できる\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1307 : `召唤一台战机向目标区域投掷数枚凝固汽油弹, 造成长时间的燃烧效果, 触发按键: LeftAlt + [<CodeArrow>]`											+ ` # 召唤一台战机向目标区域投掷数枚凝固汽油弹以形成一道火墙\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域投擲數枚凝固汽油彈以形成一道火牆\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to drop multiple Napalm Bombs at the target area to form a wall of fire\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域に数発のナパーム弾を投下し、火の壁を形成する\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1309 : `召唤一台战机向目标区域投掷数枚液氮炸弹, 可造成长时间的冰冻效果, 触发按键: LeftAlt + [<CodeArrow>]`											+ ` # 召唤一台战机向目标区域投掷数枚液氮炸弹以制造一片低温区域\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域投擲數枚液氮炸彈以製造一片低溫區域\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to drop multiple Liquid Nitrogen Bombs at the target area to create a low-temperature zone\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域に液体窒素爆弾を投下し、低温区域を生成する\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1308 : `召唤一台战机向目标区域投掷数枚静电场炸弹, 造成长时间的电磁效果, 触发按键: LeftAlt + [<CodeArrow>]`										+ ` # 召唤一台战机向目标区域投掷数枚静电场炸弹以制造一片静电场区域\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機向目標區域投擲數枚靜電場炸彈以製造一片靜電場區域\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to drop multiple Electrostatic Field Bombs at the target area to create an electrostatic field zone\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して目標区域に静電場爆弾を投下し、静電場区域を生成する\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1305 : `可以向目标地点空投一些跳雷(共　5 个), 前摇较长, 爆炸伤害为 900, 触发按键: LeftAlt + [<CodeArrow>]`												+ ` # 可以向目标地点空投一些跳雷，跳雷会在敌人靠近时弹射至敌人坐标，前摇较长\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投一些跳雷，跳雷會在敵人靠近時彈射至敵人座標，前搖較長\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Air-drops some jumping mines at the target location.Jumping mines will eject to the enemy's position when they approach. Long casting animation.\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けていくつかのジャンプ地雷を空中投下できる、ジャンプ地雷は敵が近づくと敵の座標にジャンプする、準備時間が長い\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備可能）`,
+	1304 : `可以向目标地点空投一些路障(共 15 个), 前摇较长, 就像路障许可, 触发按键: LeftAlt + [<CodeArrow>]`												+ ` # 可以向目标地点空投一些路障，前摇较长\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投一些路障，前搖較長\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Air-drops some roadblocks at the target location. Long casting animation.\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けていくつかのバリケードを空中投下できる、準備時間が長い\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備可能）`,
+	
+	1311 : `可向目标地点空投许多烟雾弹, 无 Debuff 时, 敌人无法发现烟雾中机体, 触发按键: LeftAlt + [<CodeArrow>]`													+ ` # 可以向目标地点空投许多烟雾弹\n（冷却时间:<Description:1>秒）\n[<CodeArrow>]\n（在城防界面装配）,可以向目標地點空投許多煙霧彈\n（冷卻時間:<Description:1>秒）\n[<CodeArrow>]\n（在城防介面裝配）,Air-drops a large number of smoke bombs at the target location.\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けて大量の煙幕弾を発射できる\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備可能）`,
+	1312 : `可向目标地点空投许多照明弹, 在夜晚可照明, 白天可降低敌人开火距离, 触发按键: LeftAlt + [<CodeArrow>]`													+ ` # 可以向目标地点空投许多照明弹（夜晚可以照明，白天可以降低敌人的开火距离）\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投許多照明彈（夜晚可以照明，白天可以降低敵人的開火距離）\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Air-drops a large number of flares at the target location. (can be illuminated at night， and the enemy's firing distance can be reduced during the day)\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けて大量のフレアを空中投下できる（夜間は照明、昼間は敵の射程距離を縮める）\n[<CodeArrow>]\n（クールダウン:<Description:1>秒））\n（シティディフェンス画面で装備可能）`,
+	
+	1322 : `可以向目标地点空投一座掩体碉堡, 外部射来的子弹可能被碉堡阻挡, 触发按键: LeftAlt + [<CodeArrow>]`																							+ ` # 可以向目标地点空投一座掩体碉堡\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投一座掩體碉堡\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can airdrop a Fortified Bunker to the target location\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へバンカーをエアドロップ可能\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で設置）`,
+	1313 : `可以向目标地点空投一个机枪炮塔, 枪塔装备轻机枪, HP: 5000, 触发按键: LeftAlt + [<CodeArrow>]`																							+ ` # 可以向目标地点空投一个机枪塔\n（冷却时间:<Description:1>秒）\n[<CodeArrow>]\n（在城防界面装配）,可以向目標地點空投一個機槍塔\n（冷卻時間:<Description:1>秒）\n[<CodeArrow>]\n（在城防介面裝配）,Air-drops a Machine Gun Turret at the target location.\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けて機関銃砲塔を空中投下できる\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備可能）`,
+	
+	1303 : `召唤一台战机瞄准一个单位精确轰炸, 造成 3k 爆炸伤害并附加燃烧效果, 触发按键: LeftAlt + [<CodeArrow>]`											+ ` # 召唤一台战机跟踪瞄准单位并进行精确轰炸，带有破甲效果\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機跟蹤瞄準單位並進行精確轟炸，帶有破甲效果\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to track a targeted unit and perform Precision Bombing with armor-piercing effect\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して照準を定めたユニットを追尾し精密爆撃を行う。アーマー破壊効果付き\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1306 : `召唤一台战机瞄准一个单位精确轰炸, 造成 1W 爆炸伤害以及眩晕, 触发按键: LeftAlt + [<CodeArrow>]`											+ ` # 召唤一台战机跟踪瞄准单位并进行精确轰炸，威力巨大\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,召喚一臺戰機跟蹤瞄準單位並進行精確轟炸，威力巨大\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Summon a strike aircraft to track a targeted unit and perform Precision Bombing with devastating power\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),戦闘機1機を召喚して照準を定めたユニットを追尾し精密爆撃を行う。威力が極めて高い\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1314 : `可以向目标地点发射数枚轨道破片炸弹, 弹片密集但伤害和破甲都较低, 触发按键: LeftAlt + [<CodeArrow>]`															+ ` # 可以向目标地点发射数枚轨道破片炸弹\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點發射數枚軌道破片炸彈\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can launch multiple orbital shrapnel bombs at the target location\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へ軌道破片爆弾を複数発射可能\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1315 : `可以向目标地点发射数枚轨道轰炸炸弹, 延迟较高但火力覆盖时间也长, 触发按键: LeftAlt + [<CodeArrow>]`															+ ` # 可以向目标地点发射数枚轨道炸弹，火力覆盖时间长但是延迟较高\n缩短了发射到瞄准的间隔时间及冷却时间\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點發射數枚軌道炸彈，火力覆蓋時間長但是延遲較高\n縮短了發射到瞄準的間隔時間及冷卻時間\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can launch multiple orbital bombs at the target location—long-lasting fire coverage but higher delay\nReduces the interval from launch to target lock and shortens cooldown\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へ軌道爆弾を複数発射可能。火力持続時間は長いが高遅延\n発射から照準までの間隔時間及びクールダウンを短縮した\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1316 : `可以向目标地点发射数枚轨道炸弹, 每枚炸弹都附带有随机的元素效果, 触发按键: LeftAlt + [<CodeArrow>]`																+ ` # 可以向目标地点发射数枚轨道炸弹，带有随机元素效果\n进一步缩短了发射到瞄准的间隔时间及冷却时间，并增加了精度\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點發射數枚軌道炸彈，帶有隨機元素效果\n進一步縮短了發射到瞄準的間隔時間及冷卻時間，並增加了精度\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can launch multiple orbital bombs at the target location with random-element effects\nFurther reduces the interval from launch to target lock and shortens cooldown， and increases accuracy\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へ複数の軌道爆弾を発射可能、ランダム元素効果付き\n発射から照準までの間隔時間及びクールダウンをさらに短縮し、精度を向上させた\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1317 : `可以向目标地点发射数枚制导炸弹, 尽管延迟很长但是带有跟踪效果, 触发按键: LeftAlt + [<CodeArrow>]`																+ ` # 可以向目标地点发射数枚制导炸弹，尽管延迟很长但是带有跟踪效果\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點發射數枚制導炸彈，儘管延遲很長但是帶有跟蹤效果\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can launch multiple guided bombs at the target location—long delay but with tracking effect\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へ複数の誘導爆弾を発射可能、遅延は長いが追尾効果付き\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n （シティディフェンス画面で装備）`,
+	
+	1318 : `122mm 的火炮攻击将会覆盖目标区域, 每颗炮弹可以造成 1200 伤害, 持续时间长, 伤害范围广, 要注意别误伤友军, 触发按键: LeftAlt + [<CodeArrow>]`						+ ` # 使用122mm火炮火力覆盖目标区域，注意不要误伤友军\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,使用122mm火炮火力覆蓋目標區域，注意不要誤傷友軍\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Use 122mm artillery to cover the target area—be careful not to hit friendly units\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),122mm砲で目標区域を火力制圧する。味方部隊への誤射に注意せよ\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1319 : `155mm 的火炮攻击将会覆盖目标区域, 每颗炮弹可以造成 2400 伤害, 持续时间长, 伤害范围广, 要注意别误伤友军, 触发按键: LeftAlt + [<CodeArrow>]`						+ ` # 使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,使用155mm火炮火力覆蓋目標區域，注意不要誤傷友軍\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Use 155mm artillery to cover the target area—be careful not to hit friendly units\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),155mm砲で目標区域を火力制圧する。味方部隊への誤射に注意せよ\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	
+	1321 : `可以向目标地点空投一座微型剧变反应堆, 激活后会产生巨大爆炸, 可以造成 30k+ 伤害, 但需要铁骑靠近手动激活, 触发按键: LeftAlt + [<CodeArrow>]`							+ ` # 可以向目标地点空投一座微型剧变反应堆\n需要手动激活，激活后会产生巨大爆炸\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投一座微型劇變反應堆\n需要手動啟動，啟動後會產生巨大爆炸\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can airdrop a Micro Fusion Reactor to the target location\nRequires manual activation; once activated， it will produce a massive explosion\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へ小型核融合炉をエアドロップ可能\n手動で起動させる必要があり、起動後は巨大爆発を引き起こす\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n （シティディフェンス画面で装備）`,
+	1320 : `可以向目标地点空投一座临时护盾生成器, HP = 15k, 每秒 HP 自动减 500, 最多存在 30 秒, 当护盾值归零装置会失效, 触发按键: LeftAlt + [<CodeArrow>]`		+ ` # 可以向目标地点空投一座护盾生成器，护盾值会缓慢减少，当护盾值归零时装置会失效\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點空投一座護盾生成器，護盾值會緩慢減少，當護盾值歸零時裝置會失效\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Can airdrop a Shield Generator to the target location—shield points decrease slowly; when the shield points reach zero， the device will fail\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in the City Defense interface),目標地点へシールド発生装置をエアドロップ可能。シールド値は徐々に減少し、ゼロになると装置は無効化される\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備）`,
+	1310 : `可以向目标地点发射一枚生命回复的炸弹, 需要注意, 它对敌人也有效, 可让机体 HP+5k, 纳米合金会减少治疗量(-80%), 触发按键: LeftAlt + [<CodeArrow>]`												+ ` # 可以向目标地点发射一枚生命回复炸弹【警告：对敌人有效】\n[<CodeArrow>]\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,可以向目標地點發射一枚生命回復炸彈【警告：對敵人有效】\n[<CodeArrow>]\n（冷卻時間:<Description:1>秒）\n（在城防介面裝配）,Fires one healing bomb that heals both allies and enemies at the target location.\n[<CodeArrow>]\n(Cooldown: <Description:1>s)\n(Equip in City Defense Interface),目標地点に向けてHP回復爆弾を発射できる【警告：敵にも有効】\n[<CodeArrow>]\n（クールダウン:<Description:1>秒）\n（シティディフェンス画面で装備可能）`,
+	
+	},
+	
+	物品类型 : {
+	
+	Strategy				: `战略武器`				, // + ` # 战略武器,戰略武器,Strategic weapon,戦略兵器`,
+	
+	},
+	
+	归属种类 : {
+	
+	Light					: `照明配件`				, // + ` # 照明,照明,Lighting,照明`,
+	Strategy				: `战略武器`				, // + ` # 战略武器,戰略武器,Strategic weapon,戦略兵器`,
+	
+	},
+	
+	原型研发 : {
+	
+	Main2_1					: `船舶集团有限公司`		, // + ` # 船舶集团有限公司,船舶集團有限公司,Shipbuilding Group Co.， Ltd,船舶重工グループ株式会社`,
+	Main2_2					: `航空集团有限公司`		, // + ` # 航空集团有限公司,航空集團有限公司,Aviation Group Co.， Ltd,航空グループ株式会社`,
+	Main2_3					: `总装备制造局`			, // + ` # 总装备制造局,總裝備製造局,General Equipment Manufacturing Bureau,汎用設備製造局`,
+	Main2_4					: `苏尔发动机制造局`		, // + ` # 苏尔发动机制造局,蘇爾發動機製造局,Sul Engine Manufacturing Bureau,スールエンジン製造局`,
+	Main2_5					: `风神公司`				, // + ` # 风神公司,風神公司,Hermes Company,風神公司`,
+	Main2_6					: `布尔发动机公司`			, // + ` # 布尔发动机公司,布爾發動機公司,Boolean Engine Company,ブールエンジン株式会社`,
+	Main2_7					: `蓝天电子公司`			, // + ` # 蓝天电子公司,藍天電子公司,Blue Sky Electronics Company,青空電子株式会社`,
+	Main2_8					: `首都兵工厂`				, // + ` # 首都兵工厂,首都兵工廠,Capital Arsenal,首都兵器工場`,
+	Main2_9					: `帝国火炮集团`			, // + ` # 帝国火炮集团,帝國火炮集團,Imperial Artillery Group,帝国火砲集団`,
+	Main2_10				: `格罗姆钢管厂`			, // + ` # 格罗姆钢管厂,格羅姆鋼管廠,Grom Steel Pipe Factory,グロム鋼管工場`,
+	Main2_11				: `弹头总装部`				, // + ` # 弹头总装部,彈頭總裝部,Bullet Assembly Department,弾頭総装填部`,
+	Main2_12				: `帝国仪器厂`				, // + ` # 帝国仪器厂,帝國儀器廠,Imperial Instrument Factory,帝国計器工場`,
+	
+	TankType_PlayerName_0	: `玛　丽`					, // + ` # 玛丽,瑪麗,Mary,メアリー`,
+	TankType_PlayerName_1	: `库罗库`					, // + ` # 库罗库,庫羅庫,Kuroku,クロック`,
+	TankType_PlayerName_2	: `桑/San`					, // + ` # 桑,桑,San,サン`,
+	TankType_PlayerName_3	: `赭石色`					, // + ` # 赭石色,赭石色,Ocher,オーカー`,
+	TankType_PlayerName_4	: `克莱尔`					, // + ` # 克莱尔,克萊爾,Claire,クレア`,
+	
+	Company_1310			: `苍岁纳米医学所`			, // + ` # 苍岁纳米医学所,蒼歲納米醫學所,Cangsui Nanomedicine Institute,蒼歳ナノ医学所`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv0.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	item.冷却时间 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 冷却时间		,							,
+	item.调用方法 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 调用方法		,							,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.物品类型.text = textList.物品类型[item[3]];
+	item.原型研发.text = textList.原型研发[item[8]];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.冷却时间.text = (function(){
 		
-		// 武器图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="'+ item[3] 
-		+'" src="../static/image/strategy/'+ item[1] +'.png" style="width:64px;height:64px;" /></td>' }else 
+		let result = item.功能函数.code.match(/CD:(\d+)/i)[1];
+		item.冷却时间.code = result;
+		return result;
 		
-		// 武器名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[item[4]][0]) +'</td>' }else 
+	})();
+	
+	item.调用方法.text = (function(){
 		
-		// 物品类型
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ (ItemsNameList[data][0]) +'</td>' }else 
+		let result = item.功能函数.code.match(/Code:(\d+)/i)[1];
+		item.调用方法.code = result;
 		
-		// 归属种类
-		if(index === 10){
-			let result = data.split('|').map(
-			function(e){ return ItemsNameList[e][0] }).join(' | ');
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
+		result = result.split('').map(function(key){
+			return {
+				'0' : '<i style="display:inline-block;vertical-align:top;width:12px;text-align:center;" class="fas fa-arrow-up"></i>',		// 上
+				'1' : '<i style="display:inline-block;vertical-align:top;width:12px;text-align:center;" class="fas fa-arrow-right"></i>',	// 右
+				'2' : '<i style="display:inline-block;vertical-align:top;width:12px;text-align:center;" class="fas fa-arrow-down"></i>',	// 下
+				'3' : '<i style="display:inline-block;vertical-align:top;width:12px;text-align:center;" class="fas fa-arrow-left"></i>',	// 左
+			}[key];
+		}).join('');
 		
-		// 原型研发
-		if(index === 11){
-			let result = ItemsNameList[data][0];
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
+		return result;
 		
-		// 合成材料
-		if(index === 12){
-			let result = data;
-			if(result != '-'){
-				result=data.split('|').map(function(string){
-					let [name, count,] = string.split('_');
-					return count + ItemsNameList[name][0];
-				}).join(' + ');
-			};
-			powerTable_tbody_node01 += 
-			'<td>'+ (result === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>'
-		}else 
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
 		
-		// 出现条件
-		if(index === 13){
-			let result = '';
-			let dataList = [];
-			data.split('|').forEach(function(code){
-				if(code.indexOf('_') === -1){ dataList.push(code) }else{
-					let [start, end, ] = code.split('_');
-					while(start <= end){ dataList.push(start), start = String(Number(start)+1) };
-				};
-			});
-			if(data !== '-'){ result = dataList.map(function(code){ return ItemsNameList[code][0] }).join(' | ') };
-			powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ('<span>'+ result +'</span><span>'+ result +'</span>')) +'</td>';
-		}else 
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
 		
-		// 文本描述
-		if(index === 14){ powerTable_tbody_node01 += '<td>'+ (DescriptionList[item[4]][0]) +'</td>' }else 
+	})();
+	
+	item.文本描述.text = (function(){
 		
-		// 常规数据
-		if(index !== 0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
+		item.文本描述.text = 
+		item.文本描述.text.replace(/\n/ig, '<br />')
+		.replace(/<Description:1>/ig, item.冷却时间.text).replace(/\[<CodeArrow>\]/ig, item.调用方法.text);
+		
+		// item.功能函数.code
+		// .split('|').map(function(value){ return value.replace(/.+:/, '') })
+		// .forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.解锁天数.text = (function(){
+		
+		if(item.解锁天数.code === '$StrategyOpenDay'){ 
+		return (item.解锁天数.code = '22') }; 
+		
+		if(item.解锁天数.code === '$DemolishOpenDay'){ 
+		return (item.解锁天数.code = '27') };
+		
+		if(item.解锁天数.code === '$NightOpenDay'){ 
+		return (item.解锁天数.code = '65') };
+		
+		if(item.解锁天数.code === '$EquipOpenDay'){ 
+		return (item.解锁天数.code = '35') };
+		
+		if(item.解锁天数.code === '$RoomOpenDay'){ 
+		return (item.解锁天数.code = '15') };
+		
+		if(item.解锁天数.code === '$AirOpenDay'){ 
+		return (item.解锁天数.code = '47') };
+		
+		return (item.解锁天数.code);
+		
+	})();
+	
+	item.归属种类.text = (function(){
+		
+		if(item.归属种类.code === ''){ item.归属种类.code = 'Strategy' }
+		else{ item.归属种类.code += '|Strategy' };
+		
+		return (item.归属种类.text = item.归属种类.code.split('|')
+		.filter(function(value){ if(value !== 'CantGen'){ return true } })
+		.map(function(value){ return textList.归属种类[value] }).join('<br />'));
+		
+	})();
+	
+	// -----------------------------------------
+	
+	let 合成材料_text = '';
+	let 合成材料_html = '';
+	item.合成材料.code.split('|').forEach(function(value,index,array){
+		
+		let id = '', length = '0';
+		let itemName = '无法合成';
+		let imageName = 'x', folderName = '.';
+		if(value === ''){ 合成材料_text = 'Unmake' }else{
+			
+			[id, length, ] = value.split('_');
+			
+			imageName = id;
+			itemName = textList.项目名称[id].replace(/(\s)#(.+)/,'');
+			合成材料_text = (合成材料_text + itemName +'×'+ length + (index + 1 < array.length ? ' + ' : ''));
+			
+			// 空投机枪需要有 ID:3011 既枪塔许可才能合成
+			if(id.startsWith('40')){ folderName = '25_manage_material' }else 
+			if(id.startsWith('30')){ folderName = '22_manage_defenses' };
+			
+		};
+		
+		合成材料_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>×${(length.length>=2?'':' ')+length}</span>
+				<span>${itemName}</span>
+			</div>
+		`.replace(/\t|\n/g, '');
 		
 	});
+	合成材料_html = `<div class='itemFlex'>`+ 合成材料_html +`</div>`;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	let 升级改造_text = '';
+	let 升级改造_html = '';
+	item.升级改造.code.split('|').map(function(number){
+		
+		// Cluster 属性不为空, 也就是存在升级改造的可能
+		// 01. id 是当前物品 id+1 的是对象升级型号(对于武器来说是 id+100)
+		// 02. id 是其他值, 那么如果等级相同, 就是衍生型号, 如果等级不同, 则为改造型号
+		
+		let level = {1300:-2, 1301:1, 1302:-1, 1303:-2, 1304:-2, 1305:-2, 1306:-2, 1307:-2, 1308:-2, 1309:-2, 1310:-2,
+		 1311:-2, 1312:-2, 1313:-2, 1314:-2, 1315:-2, 1316:-2, 1317:-2, 1318:1, 1319:-1, 1320:-2, 1321:-2, 1322:-2, };
+		
+		if(number === ''){ return '' }else 
+		if(number - item.项目代码.code === 1){ return '1#'+ number }else
+		if(level[number] === level[item.项目代码.code]){ return '3#'+ number }else{ return '2#'+ number };
+		
+	})
+	.sort().forEach(function(value, index, array){
+		
+		let folderName = '.', imageName = 'x';
+		let itemName = '没有选项', action = '操作';
+		if(value === ''){ 升级改造_text = 'Unable' }else{
+			
+			let level = {1300:-2, 1301:1, 1302:-1, 1303:-2, 1304:-2, 1305:-2, 1306:-2, 1307:-2, 1308:-2, 1309:-2, 1310:-2,
+			 1311:-2, 1312:-2, 1313:-2, 1314:-2, 1315:-2, 1316:-2, 1317:-2, 1318:1, 1319:-1, 1320:-2, 1321:-2, 1322:-2, };
+
+			value = value.slice(2);
+			if(value - item.项目代码.code === 1){ action = '升级' }
+			else if(level[value] === level[item.项目代码.code]){ action = '衍生' }else{ action = '改造' };
+			
+			imageName = value;
+			folderName = '23_manage_strategy';
+			itemName =  textList.项目名称[value].replace(/(\s)#(.+)/, '');
+			升级改造_text = 升级改造_text + (itemName + (index+1 < array.length ? ',' : ''));
+			
+		};
+		
+		升级改造_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>${action} : </span><span>${itemName}</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	升级改造_html = `<div class='itemFlex'>`+ 升级改造_html +`</div>`;
+	
+	let 出现条件_text = '';
+	let 出现条件_html = '';
+	item.出现条件.code.split('|').map(function(number){
+		
+		// 将范围值展开成具体的 id 列表
+		
+		if(number.includes('_') !== true){ return number };
+		let [start,end,] = number.split('_'), result = [ ];
+		
+		start = Number(start), end = Number(end);
+		while(start <= end){ 
+			result.push(String(start));
+			start = start+1;
+		};
+		
+		return result;
+		
+	}).flat()
+	.map(function(value){
+		
+		// 对武器用 id 最后两位进行排序
+		if(value === ''){ return '' }else 
+		if(value.length <= 4){ return '00#'+value }else 
+		if(value.length >= 5){ return value.slice(-2) + '#' + value };
+		
+	}).sort()
+	.map(function(value){
+		
+		// 排序后去掉上步为了排序的前缀
+		return value.replace(/..#/,'');
+		
+	})
+	.filter(function(value, index, array){
+		
+		// 同类的也显示, 但重复的不显示
+		let flag = true;
+		if(index >= 1 && value === array[index-1]){ flag = false }
+		return flag; //
+		
+	})
+	.forEach(function(value, index, array){
+		
+		let folderName = '.';
+		let imageName = 'x';
+		let itemName = '自动解锁'
+		if(value === ''){ 出现条件_text = 'Unlock' }else{
+			
+			if((Number(value) >= 10000 && Number(value) <= 19999) || (Number(value) >= 1250 && Number(value) <= 1262)){ folderName = '01_weapon_list' }else 
+			if(Number(value) >= 1101 && Number(value) <= 1126){ folderName = '09_mecha_frag' }
+			else{ folderName = '23_manage_strategy' };
+			imageName = value;
+			
+			itemName =  textList.项目名称[value].replace(/(\s)#(.+)/,'');
+			出现条件_text += itemName + (index+1< array.length? ',': '');
+			
+		};
+		
+		出现条件_html += /*html*/`
+			<div>
+				<img loading='lazy' alt='${itemName}' src='../static/image/${folderName}/${imageName}.png' />
+				<span>→</span><span>${ itemName }</span>
+			</div>
+		`.replace(/\t|\n/g, '');
+		
+	});
+	出现条件_html = `<div class='itemFlex'>`+ 出现条件_html +`</div>`;
+	
+	// -----------------------------------------
+	
+	item.物品类型.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.物品类型.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.物品类型.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.归属种类.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.归属种类.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.归属种类.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.原型研发.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="<div style='font-size:12px;'>${item.原型研发.text}</div>">
+		<div class="ellipsis-1" style="width:30px;">${item.原型研发.text.replace(/<br \/>/g, ',')}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	// -----------------------------------------
+	
+	item.合成材料.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${合成材料_html}">
+		<div class="ellipsis-1" style="width:30px;">${合成材料_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.升级改造.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${升级改造_html}">
+		<div class="ellipsis-1" style="width:30px;">${升级改造_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	item.出现条件.text = /*html*/`<td class="showPart01 followTip" style="cursor:pointer;" xjTip-align="right" xjTip-html="${出现条件_html}">
+		<div class="ellipsis-1" style="width:30px;">${出现条件_text}</div>
+	</td>`.replace(/\t|\n/g, '');
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/23_manage_strategy/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/23_manage_strategy/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.冷却时间.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable01_tbody_html += item.物品类型.text;
+	powerTable01_tbody_html += item.归属种类.text;
+	powerTable01_tbody_html += item.原型研发.text;
+	powerTable01_tbody_html += item.升级改造.text;
+	powerTable01_tbody_html += item.合成材料.text;
+	powerTable01_tbody_html += item.出现条件.text;
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 4px 4px 4px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
 
 })();
 </script>
@@ -460,7 +864,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
 </div>
 </div>
 </div>

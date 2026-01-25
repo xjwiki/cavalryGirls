@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-12T16:00:56UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-12T16:00:56UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-12T16:00:56UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,79 +118,140 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 目前合成材料总共有 <c>32</c> 种, 可以根据关键词分为 <c>17</c> 类, 它们存在的意义, 就是用于合成各种武器与配件, 以及部件和饰品; <br />
-	02. 合成材料的文本颜色只是为了区分而做出来的视觉效果, 没有其他任何影响, 可在合成界面左下角的仓库了解当前持有的材料数量; <br />
-	03. 合成材料的主要来源有三种, 一是解体厂开通后回收敌人的残骸, 二是回收各种装备选择回收成材料, 三是完成歼灭委托得到奖励; <br />
-	04. 装备回收的材料类型与合成装备所需材料类型相同, 而敌人回收的材料类型则取决于解体产出的词条, 词条可查阅 <a href="./data_enemy_info.html">敌军情报.html</a>; <br />
+	01. 目前的合成材料共有 <c>36</c> 种, 可以根据归属种类(既关键词)分为 <c>19</c> 类, 主要是被用于合成[武器/配件/饰品/城防/家具]等物品<br />
+	02. 合成材料的主要来源有三种, 一是解体厂开通后回收敌人的残骸, 二是完成歼灭委托得到奖励, 三是回收各种装备时选择回收成材料<br />
+	03. 装备回收的材料与合成装备所需的材料, 类型相同, 敌军残骸回收的材料类型, 则取决于解体产出词条, 词条可查阅 <a href="./data_enemy_info.html">敌军情报.html</a><br />
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属种类<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">参考价格<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大堆叠<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">默认排序<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">项目类型<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本颜色<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大堆叠</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>特殊颜色</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
 
 
 
-<section><h2 id="heading02">02. 额外拓展</h2>
+<section><h2 id="heading02">02. 特殊补给</h2>
 
-<!--◇
-02. 敌军被击败后, 是否必定会留下残骸? 敌军残骸的 HP, 跟敌军生前的 HP 值相同吗?
-2. 否，留下残骸的概率为“1-600/（最大Hp*2）”，另外处于溶解状态下不会留下残骸。残骸Hp在600~3000之间，因为计算比较复杂，所以概率分布并不均等，只能说较大概率跟原本HP相同
-
-03. 现在的残骸回收, 数值是否完全等于战场上能看到的残骸数量?
-3. 你是指解体厂的战利品？这个跟战场上的残骸完全没关系，得到解体厂战利品的概率为DemoPrice/10，DemoPrice是Enemys.csv表格里的字段
-
-03. 在解体厂内, 机体残骸的最大堆叠数为 99, 如果某种类型残骸已经达到这个上限, 则不会继续收纳更多该类型的残骸?
-3. 对
-◇-->
-
-<p>堆叠细节: 合成材料是游戏中少有的可以堆叠的物品(另外两种可堆叠的物品为礼物和书籍), 当堆叠的数量超过 <c>99</c> 之后, 就会在另外一个物品格子中生成一个新的同类项, 你可以在合成界面的仓库里, 查看当前所拥有的各项材料数量(一般都需要翻页到末尾才能看到);</p>
-
-<p>词条概念: 能从敌方机体上回收到什么类型的材料, 取决于"解体产出"的词条, 由于所有的敌人都有 <c>All</c> 这个词条, 所以, 废铁/废料/接合物件/齿轮/框架, 这五种材料是在任意残骸都可能获取到的, 而相应的假设你想要核心, 那就得看对方是否带有 <c>Ellite</c> 词条了;</p>
-
-<p>电力耗费: 解体每种敌人所需要的电力是固定的(可以到"敌军情报"页查看"解体电力"的属性), 我们大约可得到 <c>4</c> 倍于需求电力的材料, 例如耗费了 <c>X</c> 电力, 如果没有排除任何类型的材料, 保持回收价值为 <c>100%</c>, 则最后得到的材料, 合计总价格大致就等于 <c>4X</c>;</p>
-
-<p>————</p>
-
-<p>筛选影响: 当我们专注于某种材料的搜集而选择排除那些不要的材料, 此时残骸的价值就会被降低, 假设原本这个残骸可以生成 <c>10</c> 种材料, 但你现在只要其中的 <c>8</c> 种, 则残骸的价值就会变成原来的 <c>1 - (10-8)/10/1.5 ≈ 0.8667</c>, 其中 <c>1.5</c> 是 Base 表中预设的全局基础参数 <c>DemoElectLossRate</c>, 也就是说尽管能精准得到想要的材料, 但此时收获的材料价值合计就只剩原本的 <c>86.67% × 4</c> 了, 不过考虑到那些被排除的材料, 也许你已经拥有了许多, 而稀缺的材料则有很大缺口, 那么这点损失还是值得的, 不用纠结这点浪费;</p>
-
-<p>搜集残骸: 在过去的版本, 残骸是不会被保留的, 如果当天没回收则过夜后会被完全清空, 但最新版已经改变了这个规则, 现在残骸不会被自动清空了, 并且即便解体厂还没启用, 系统也会把敌军残骸进行保留, 等解体厂启用之后残骸就会被显示出来, 一般来讲, 精英敌人(BOSS)的残骸必定会被回收, 而常规敌人则要求未被"统计排除"才有回收可能(建筑和衍生物都会被排除), 回收的概率公式为 <c>解体电力/10</c>, 当结果 <c>>= 1</c> 时必定会被回收, 可以到"敌军情报"页查看"统计排除"和"解体电力"的属性, 因为残骸过夜不会被清空, 所以在外围任务中搜集补给箱就变得没什么必要, 因为最后我们面临的往往是电力不足而非缺少残骸, 所以捡箱子这事情就随缘吧, 不要太执着;</p>
-
-<p>技巧知识: 首先是, 在合成界面合成某种物品时, 可以点击材料后面的"追踪材料"按钮, 之后如果某种敌军残骸有你想要的材料, 就会显示红色的感叹号提示你, 这样方便搜集你想要的东西, 其次是, 解体厂每次解体的最低启动下限电力为 <c>7</c>, 如果敌人的残骸合计耗电量 <c><7</c>, 那么就无法被回收, 最后是, 发电厂升到最高级的时候, 每日可以提供 <c>70</c> 的电力, 电力能逐日积累, 甚至可以花钱购买, 每次购买可获得 <c>20</c> 电力, 虽然每日购买的次数无限, 但每次购买后价格都会提升, 具体算法为 <c>20+(20×(购买次数-1))=资金</c>, 例如每天购买的价格, 第1次是 <c>20</c>, 第2次是 <c>40</c>, 第3次是 <c>60</c>, 第4次是 <c>80</c>, 以此类推, 考虑到电力解体所得材料, 它们合计的价格是电力的 <c>4</c> 倍左右, 所以即便花 <c>80</c> 资金购买 <c>20</c> 电力也不算亏, 而"电能转换"既一次性将电力以 <c>1:1</c> 比值售出, 就完全不值了;</p>
-
-<p>————</p>
-
-<p>分解算法: 将装备拖到物品栏右下角"回收"处, 即可选择是回收成资金或回收成材料, 如果选择回收成资金, 可得到装备价值 <c>1/2</c> 的资金(向下取整), 如果选择回收成材料, 就会得到一些合成这个装备所需要的材料, 算法为 <c>材料回收数量 = (合成该物品的初级物品的材料数量 * PlusNum)/2</c>, 结果值仅保留整数, 若小于 1 则等于 1, 而 PlusNum 这参数为 <c>该物品的价格 / 该物品的初级物品的价格</c>, 结果值仅保留整数, 若小于 1 则等于 1, 例如回收 1 把"老式步枪B2M12", 这把武器的价格是 <c>80</c>, 而它的初级物品既"老式步枪"的价格为 <c>8</c>, 合成它的材料为 <c>3废铁 + 1铁管 + 1接合物件</c>, 那么参数 PlusNum 就是 <c>Integer(80/8) = 10</c>, 因此最终回收的三种合成材料数量就分别如下所示, 废铁 = <c>Integer(3*10)/2 = 15</c>, 铁管 = <c>Integer(1*10)/2 = 5</c>, 接合物件 = <c>Integer(1*10)/2 = 5</c>;</p>
-
-<p>解体算法: 假设要解体"弑君者", 需求电力是 <c>10</c>, 词条为 <c>All|Attack|Armor|MG</c>, 则可能获取的材料为(废铁,废料,接合物件,齿轮,框架|弹壳,铁管,扳机|装甲,厚装甲|弹链), 我们只要(厚装甲|弹链), 筛选后残骸价值为 <c>1-(11-2)/11/1.5≈0.45</c> 既 <c>4*10*0.45≈18</c>, 此时系统会从(厚装甲|弹链)中随机选中某个, 假设首回得到弹链(价格:8), 则残骸价值只剩下 <c>18-8=10</c>, 再随机选中某个, 假设这回得到弹链(价格:8), 则残骸价值只剩下 <c>10-8=2</c>, 再随机选中某个, 假设这回得到厚装甲(价格:10), 则残骸价值只剩下 <c>2-10=-8</c>, 由于 <c>-8<=0</c>, 这意味残骸价值耗尽, 那么到此结束, 本回最终收获是 <c>2弹链+1厚装甲</c>, 材料的价值合计为 <c>(8*2)+(10*1)=26</c>, 这也就是说, 我们的收获是有可能大于残骸价值的, 而残骸的材料回收机制大体就是如此, 不断随机获取允许的材料, 往复循环直到价值耗尽;</p>
-
-<p>————</p>
-
-<p>电力借贷: 假设你现在只有 <c>50</c> 电力, 但是却拥有 <c>10</c> 台弑君者需要解体, 每台需要 <c>10</c> 的电力, 正常情况下我们只能解体其中的 <c>5</c> 台, 但如果你在输入框中直接写 <c>10</c>, 然后直接点击"确定"按钮, 此时 <c>10</c> 台弑君者会被同时解体, 但之后的电力会变成 <c>-50</c>, 下一天如果发电量为 <c>70</c>, 则电力会变成 <c>20</c>, 也就是说我们可以预支电力, 并且没有任何利息, 虽然迟早是要还回去的, 但如果你着急解构某些机体以获得关键材料, 那么可以用这个方法来实现预支(预支得到的材料数量跟正常使用电力解构得到的材料数量是一样的);
+<p>
+	01. 补给箱是种特殊道具, 它跟敌军残骸类似, 可在解体厂使用电力分解, 能得到各种类型的合成材料, 目前共有 <c>10</c> 种类型的补给箱<br />
+	02. 补给箱的来源有两种, 一是采购部门购买, 二是在外围阵地时于战场掠夺, 但家具类补给箱例外, 它不会自动在采购部门或战场出现<br />
+	03. 补给箱所存在的意义, 是增加场景趣味性, 因为现阶段的敌军残骸会自动积累, 所以其实我们并不缺材料, 而是缺乏解体残骸的电力<br />
 </p>
+
+<table originalSort="1" id="powerTable02" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
+		<tr>
+			
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>参考价格</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>解锁天数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>装备等级</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大堆叠</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>排序代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>物品类型</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 48px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>归属种类</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:192px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>对应种类</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 50px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>库存图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody style="line-height:14px;"></tbody>
+</table>
+
+</section>
+
+
+
+<section><h2 id="heading03">03. 额外拓展</h2>
+
+<p>特殊颜色: 在游戏中, 合成材料的名称具有不同的文本颜色, 但那只是为了区分材料种类而做出的视觉效果, 除此之外并无其他任何影响</p>
+
+<p>堆叠细节: 合成材料是游戏中少有的可以堆叠的物品(另外两种可堆叠的物品为礼物和书籍), 当堆叠的数量超过 <c>99</c> 之后, 就会在另外一个物品格子中生成一个新的同类项, 你可以在合成界面的仓库里, 查看当前所拥有的各项材料数量(但一般都需要翻到最尾页才能看到)</p>
+
+<p>词条概念: 能从敌方机体残骸上回收到什么材料, 取决于"解体产出"的词条, 由于所有的敌人都具有词条 <c>All</c>, 所以[废铁/废料/接合/齿轮/框架], 这五种材料是在任意残骸中都可能获取到的, 而相应的假设你想要得到核心, 那就得看目标残骸是否带有 <c>Ellite</c> 词条了</p>
+
+<p>拆机需求: 解体每种敌人所需的电力是固定的(可以到"敌军情报"页查看"解体电力"的属性), 我们大约可得到 <c>4</c> 倍于需求电力的材料, 例如耗费了 <c>X</c> 电力, 如果没有排除任何类型的材料, 保持回收价值为 <c>100%</c> 则最后得到的合成材料, 合计的总价格大致就等于 <c>4X</c></p>
+
+<p>电力借贷: 假设你现在只有 <c>50</c> 电力, 但是却拥有 <c>10</c> 台弑君者需要解体, 每台需要 <c>10</c> 的电力, 正常情况下我们只能解体其中的 <c>5</c> 台, 但如果你在输入框中直接写 <c>10</c>, 然后直接点击"确定"按钮, 此时 <c>10</c> 台弑君者会被同时解体, 但之后的电力会变成 <c>-50</c>, 下一天如果发电量为 <c>70</c>, 则电力会变成 <c>-50+70=20</c>, 也就是说能预支电力, 并且没有任何利息, 虽然迟早是要还回去的, 但如果说, 你着急解构某些机体以获得关键材料, 那么可用这个方法来实现预支(预支得到的材料数量跟正常使用电力解构得到的材料数量是一样的)</p>
+
+<p>————</p>
+
+<p>敌军残骸: 敌军被击败后, 在战场留下残骸的概率为 <c>1-600÷(最大血量×2)</c>, 这意味着, 只有那些最大血量 <c>> 300</c> 的敌人才会有残骸(这里的血量指原始最大血量, 靠难度强化增益加上的不算), 不过处于溶解状态的敌军不会留下残骸, 残骸的血量介于 <c>600~3000</c> 之间, 由于计算比较复杂, 所以概率分布并不均等, 只能说残骸有较大概率跟敌军原本的最大血量相同, 但是, 解体厂的残骸回收和在战场上的敌军残骸没有任何关系, 解体厂回收残骸的概率固定为 <c>解体残骸所需电力÷10</c>, 所以把战场上的残骸打爆, 并不会影响到残骸的回收, 而在解体厂内, 敌军残骸最多可堆叠的数量 <c>99</c> 具, 如果某种类型的敌军残骸已经到达这个上限, 则不会继续收纳更多该类型的残骸</p>
+
+<p>残骸回收: 在过去的版本中, 残骸是不能过夜的, 如果当天没被解体, 则过夜后会被完全清空, 但当前已经改变了这个规则, 现在残骸已不会被自动清空了, 并且即便解体厂还没启用, 系统也会把敌军残骸进行保留, 等解体厂启用之后残骸就会被显示出来, 一般来讲, 精英敌人(BOSS)的残骸必定会被回收, 而常规敌人则要求未被"统计排除"才有回收可能(建筑和衍生物都会被排除), 回收的概率为 <c>解体电力÷10</c>, 当结果 <c>>= 1</c> 时必定会被回收, 可到"敌军情报"页查看"统计排除"和"解体电力"的属性, 由于残骸过夜不会被清空, 所以在外围任务中掠夺各种补给箱就变得没有必要了, 因为最后我们面临的往往是电力不足而非缺少残骸, 所以捡箱子这事情就随缘吧, 无需太执着</p>
+
+<p>————</p>
+
+<p>筛选影响: 当我们专注于某种材料的搜集而选择排除那些不要的材料, 此时残骸的价值就会被降低, 假设原本这个残骸可以生成 <c>10</c> 种材料, 但你现在只要其中的 <c>8</c> 种, 则残骸的价值就会变成原来的 <c>1-(10-8)÷10÷1.5 ≈ 0.867</c>, 其中的 <c>1.5</c> 是 Base.csv 中预设的全局基础参数 <c>DemoElectLossRate</c>, 也就是说尽管能精准得到想要的材料, 但此时收获的材料价值合计就只剩原本的 <c>86.7% × 4</c> 了, 不过考虑到那些被排除的材料, 也许你已经拥有了许多, 而稀缺的材料则有很大缺口, 那么这些额外损失还是值得的, 不用纠结这点浪费, 值得一提的是, 克莱尔的 LV6 和 LV10 忠诚度奖励, 可以分别再 <c>+10%</c> 和 <c>+20%</c> 的分解效率, 我们还以之前的这个分解案例来说, 在排除掉 <c>2</c> 种不要的材料后, 收获的材料价值合计就是 <c>(86.7%+10%+20%) × 4</c> 了, 有了这两个奖励后, 回收的材料价值可 <c>>100%</c></p>
+
+<p>分解算法: 将装备拖到物品栏右下角"回收"位置, 可选择是回收成资金或回收成材料, 如果选择回收成资金, 可得到装备价值一半的资金(向下取整), 如果选择回收成材料, 可得到一些合成该装备所需要的材料, 算法为 <c>材料回收数量 = (合成该物品的初级物品的材料数量×PlusNum)÷2</c>, 结果值仅保留整数, 若小于 1 则等于 1, 而 PlusNum 这个参数为 <c>该物品的价格 ÷ 该物品的初级物品的价格</c>, 结果值仅保留整数, 若小于 1 则等于 1, 例如回收一把"老式步枪B2M12", 该武器的价格是 <c>80</c>, 而它的初级物品既"老式步枪"的价格为 <c>8</c>, 而合成"老式步枪"的材料为 <c>3废铁 + 1铁管 + 1接合</c>, 那么参数 PlusNum 就是 <c>Integer(80÷8) = 10</c>, 因此最终回收"老式步枪B2M12"所得的材料就分别如下所示, 废铁 = <c>Integer(3×10)÷2 = 15</c>, 铁管 = <c>Integer(1×10)÷2 = 5</c>, 接合物件 = <c>Integer(1×10)÷2 = 5</c></p>
+
+<p>解体算法: 假设要解体"弑君者", 需求电力是 <c>10</c>, 词条为 <c>All|Attack|Armor|MG</c>, 则可能获取的材料为[废铁&废料&接合物件&齿轮&框架/弹壳&铁管&扳机/装甲&厚装甲/弹链], 我们只要[厚装甲/弹链], 筛选后残骸价值为 <c>1-(11-2)÷11÷1.5≈0.45</c> 既 <c>4×10×0.45≈18</c>, 此时系统会从[厚装甲/弹链]中随机选 <c>1</c> 个, 假设首回得到弹链(价格:8), 则残骸价值只剩下 <c>18-8=10</c>, 再随机选中某个, 假设还是得到了弹链(价格:8), 则残骸价值只剩下 <c>10-8=2</c>, 再随机选中某个, 假设这回得到了厚装甲(价格:10), 则残骸价值只剩下 <c>2-10=-8</c>, 由于 <c>-8<=0</c>, 意味残骸价值耗尽, 那到此结束, 本回最终收获是 <c>2弹链+1厚装甲</c>, 材料价值合计为 <c>(8×2)+(10×1)=26</c>, 也就是说, 我们最终的收获, 是有可能大于残骸价值的, 而残骸的材料回收机制大体就是如此, 不断随机获取允许的材料, 往复循环直到价值耗尽</p>
+
+<p>技巧知识: 首先是, 在合成界面合成某种物品时, 可点击材料后面的"追踪材料"按钮, 之后如果某种敌军残骸有你想要的材料, 就会显示出红色感叹号进行提示, 这样方便搜集你想要的东西, 其次是, 解体厂每次解体的最低启动下限电力为 <c>7</c>, 如果敌人的残骸合计耗电量 <c><7</c>, 那么就无法被回收, 最后是, 发电厂升到最高级的时候, 每天可以提供 <c>70</c> 的电力, 电力能逐日积累, 甚至可以花钱购买, 每次购买可获得 <c>20</c> 电力, 虽然每日购买的次数无限, 但每次购买后价格都会提升, 具体算法为 <c>20+(20×(购买次数-1))=资金</c>, 也就是说, 每天购买价格, 第1次是 <c>20</c>, 第2次是 <c>40</c>, 第3次是 <c>60</c>, 第4次是 <c>80</c>, 以此类推, 考虑到电力解体所得材料, 合计价格是电力的 <c>4</c> 倍左右, 所以即便是花 <c>80</c> 资金购买 <c>20</c> 电力也不算亏, 但"电能转换"既一次性将电力以 <c>1:1</c> 的比值售出, 就完全不值了</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -200,199 +261,579 @@
 
 /* 数据注解
 
-CargoPiles=CargoPilesMax=CargoPilesFusion=CargoPilesFusionMax=0
-Company='', Syns='', NeedWeapon='', Cluster = '', 
-Day=999, Level=1, DebugHide=0, 
+Func 是函数, 已经和 description 既描述结合起来, 这部分的数据没意义, 就删掉了
+MaxPile 属性是堆叠数, 只有礼物和书本等项目能够堆叠, 配件该项都是 1 的并没有意义, 所以删掉了
+
+DebugHide: 控制台是否要隐藏该项目(隐藏则无法在控制台调出入手), 武器都是 false, 似乎也不需要
+ColorPlus 属性是物品名称的特殊色, 只有敌方机甲回收的废料有这个属性, 配件该项都是 '', 并没有意义, 所以删掉了
+
+CargoPiles, CargoPilesMax, CargoPilesFusion, CargoPilesFusionMax 是配件槽位和融合槽位的数据, 只有武器才有, 其它的物品没有任何意义, 所以删掉了
+Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属性, 用于判断升级改造或者同类配件不得重复安装, 配件该项都是空, 并没有意义, 所以删掉了
+
+————
+
+Func 是函数, 其中的关键词被当作是归属种类这个属性的内容
+ColorPlus 是特殊颜色, 该属性目前似乎也就是给回收废料使用的
 
 */
 
-// 表01数据
-let tbodyArray01 = [
-	
-	//高亮,		项目图片,	项目序号,	项目名称,		项目代码,		归属种类,			参考价格,		最大堆叠,		默认排序,		项目类型,			文本颜色,			文本描述,		],		
-	//Active,	Image,		Number,		Name,			Items,			Func,				Price,			MaxPile,		ResolveID,		Type,				ColorPlus,			Description,	],		//01		
-	
-	[1,			40001,		'01',		'废铁',			40001,			'All',				1,				99,				1109,			'Material',			'#878787',			'合成材料',		],		
-	[1,			40002,		'02',		'废料',			40002,			'All',				1,				99,				1110,			'Material',			'#878787',			'合成材料',		],		
-	[1,			40005,		'03',		'接合物件',		40005,			'All',				2,				99,				1113,			'Material',			'#878787',			'合成材料',		],		
-	[1,			40006,		'04',		'齿轮',			40006,			'All',				3,				99,				1114,			'Material',			'#878787',			'合成材料',		],		
-	[1,			40007,		'05',		'框架',			40007,			'All',				3,				99,				1115,			'Material',			'#878787',			'合成材料',		],		//01		
-	
-	[0,			40003,		'06',		'弹壳',			40003,			'Attack',			2,				99,				1111,			'Material',			'#BC965D',			'合成材料',		],		
-	[0,			40008,		'07',		'铁管',			40008,			'Attack',			5,				99,				1116,			'Material',			'#BC965D',			'合成材料',		],		
-	[0,			40009,		'08',		'扳机',			40009,			'Attack',			5,				99,				1117,			'Material',			'#BC965D',			'合成材料',		],		//01		
-	
-	[1,			40021,		'09',		'润滑油',		40021,			'Speed',			3,				99,				1129,			'Material',			'#68E379',			'合成材料',		],		
-	[1,			40022,		'10',		'火花塞',		40022,			'Speed',			3,				99,				1130,			'Material',			'#68E379',			'合成材料',		],		
-	[1,			40023,		'11',		'冷冻剂',		40023,			'Speed',			5,				99,				1131,			'Material',			'#68E379',			'合成材料',		],		//01		
-	
-	[0,			40028,		'12',		'共振器',		40028,			'Melee',			3,				99,				1136,			'Material',			'#FFFFFF',			'合成材料',		],		
-	[0,			40029,		'13',		'刀片',			40029,			'Melee',			4,				99,				1137,			'Material',			'#FFFFFF',			'合成材料',		],		
-	[0,			40030,		'14',		'振荡器',		40030,			'Melee',			6,				99,				1138,			'Material',			'#FFFFFF',			'合成材料',		],		//01		
-	
-	[1,			40017,		'15',		'线圈',			40017,			'Electric',			4,				99,				1125,			'Material',			'#DB31D2',			'合成材料',		],		
-	[1,			40018,		'16',		'电容',			40018,			'Electric',			3,				99,				1126,			'Material',			'#DB31D2',			'合成材料',		],		
-	[1,			40019,		'17',		'电感',			40019,			'Electric',			5,				99,				1127,			'Material',			'#DB31D2',			'合成材料',		],		//01		
-	
-	[0,			40026,		'18',		'力场管',		40026,			'Energy',			3,				99,				1134,			'Material',			'#5873FF',			'合成材料',		],		
-	[0,			40027,		'19',		'力场膜',		40027,			'Energy',			5,				99,				1135,			'Material',			'#5873FF',			'合成材料',		],		//01		
-	
-	[1,			40013,		'20',		'棱镜',			40013,			'Laser',			3,				99,				1121,			'Material',			'#5FCBA3',			'合成材料',		],		
-	[1,			40014,		'21',		'透镜',			40014,			'Laser',			5,				99,				1122,			'Material',			'#5FCBA3',			'合成材料',		],		//01		
-	
-	[0,			40024,		'22',		'装甲',			40024,			'Armor',			2,				99,				1132,			'Material',			'#FFFC81',			'合成材料',		],		
-	[0,			40025,		'23',		'厚装甲',		40025,			'Armor',			10,				99,				1133,			'Material',			'#FFFC81',			'合成材料',		],		//01		
-	
-	[1,			40011,		'24',		'工业塑料',		40011,			'Shot',				4,				99,				1119,			'Material',			'#7A82BC',			'合成材料',		],		//01		
-	
-	[0,			40015,		'25',		'点火器',		40015,			'Flame',			4,				99,				1123,			'Material',			'#FF1400',			'合成材料',		],		
-	[0,			40016,		'26',		'冷凝管',		40016,			'Freeze',			4,				99,				1124,			'Material',			'#00FFFF',			'合成材料',		],		
-	[0,			40020,		'27',		'三极管',		40020,			'Split',			5,				99,				1128,			'Material',			'#FFFFFF',			'合成材料',		],		//01		
-	
-	[1,			40004,		'28',		'弹头',			40004,			'Damage',			3,				99,				1112,			'Material',			'#BC5D8D',			'合成材料',		],		
-	[1,			40010,		'29',		'雷管',			40010,			'Explo',			5,				99,				1118,			'Material',			'#EF5F00',			'合成材料',		],		
-	[1,			40031,		'30',		'涂层',			40031,			'Fade',				5,				99,				1139,			'Material',			'#FFFC81',			'合成材料',		],		
-	[1,			40012,		'31',		'弹链',			40012,			'MG',				8,				99,				1120,			'Material',			'#BC5D8D',			'合成材料',		],		
-	[1,			40032,		'32',		'核心',			40032,			'Ellite',			20,				99,				1140,			'Material',			'#F7FF00',			'合成材料',		],		//01		
-	
-];
+let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-// 项目名称
-let ItemsNameList = {
-	
-	40001 : ['废铁',			'スクラップアイロン',		'Scrap Iron',						],		
-	40002 : ['废料',			'スクラップ',				'Waste Material',					],		
-	40005 : ['接合物件',		'接続オブジェクト',			'Joining Component',				],		
-	40006 : ['齿轮',			'ギア',						'Gear',								],		
-	40007 : ['框架',			'フレーム',					'Frame',							],		//02		
-	
-	40003 : ['弹壳',			'薬莢',						'Bullet Shell',						],		
-	40008 : ['铁管',			'鉄パイプ',					'Iron Pipe',						],		
-	40009 : ['扳机',			'トリガー',					'Trigger',							],		//02		
-	
-	40021 : ['润滑油',			'潤滑油',					'Lubricating Oil',					],		
-	40022 : ['火花塞',			'スパークプラグ',			'Spark Plug',						],		
-	40023 : ['冷冻剂',			'冷媒',						'Refrigerant',						],		//02		
-	
-	40028 : ['共振器',			'共振器',					'Resonator',						],		
-	40029 : ['刀片',			'ブレード',					'Blade',							],		
-	40030 : ['振荡器',			'発振回路',					'Oscillator',						],		//02		
-	
-	40017 : ['线圈',			'コイル',					'Coil',								],		
-	40018 : ['电容',			'コンデンサ',				'Capacitor',						],		
-	40019 : ['电感',			'インダクター',				'Inductor',							],		//02		
-	
-	40026 : ['力场管',			'力場パイプ',				'Force Field Generator',			],		
-	40027 : ['力场膜',			'力場膜',					'Force Field Membrane',				],		//02		
-	
-	40013 : ['棱镜',			'プリズム',					'Prism',							],		
-	40014 : ['透镜',			'レンズ',					'Lens',								],		//02		
-	
-	40024 : ['装甲',			'装甲',						'Armor',							],		
-	40025 : ['厚装甲',			'厚い装甲',					'Heavy Armor',						],		//02		
-	
-	40011 : ['工业塑料',		'工業用プラスチック',		'Industrial Plastic',				],		//02		
-	
-	40015 : ['点火器',			'イグナイター',				'Igniter',							],		
-	40016 : ['冷凝管',			'復水管',					'Condenser',						],		
-	40020 : ['三极管',			'三極管',					'Transistor',						],		//02		
-	
-	40004 : ['弹头',			'弾頭',						'Warhead',							],		
-	40010 : ['雷管',			'起爆装置',					'Detonator',						],		
-	40031 : ['涂层',			'コーティング',				'Coating',							],		
-	40012 : ['弹链',			'弾帯',						'Ammunition Belt',					],		
-	40032 : ['核心',			'コア',						'Core',								],		//02		
-	
-};
+40001,#废铁,40001,Material,#合成材料,,99,All,,1,999,1,0,0,0,0,,,,<color=#878787>|</color>,1328,
+40002,#废料,40002,Material,#合成材料,,99,All,,1,999,1,0,0,0,0,,,,<color=#878787>|</color>,1329,
+40005,#接合物件,40005,Material,#合成材料,,99,All,,2,999,1,0,0,0,0,,,,<color=#878787>|</color>,1332,
+40006,#齿轮,40006,Material,#合成材料,,99,All,,3,999,1,0,0,0,0,,,,<color=#878787>|</color>,1333,
+40007,#框架,40007,Material,#合成材料,,99,All,,3,999,1,0,0,0,0,,,,<color=#878787>|</color>,1334,
 
-// 文本描述
-let DescriptionsList = {
+40003,#弹壳,40003,Material,#合成材料,,99,Attack,,2,999,1,0,0,0,0,,,,<color=#BC965D>|</color>,1330,
+40008,#铁管,40008,Material,#合成材料,,99,Attack,,5,999,1,0,0,0,0,,,,<color=#BC965D>|</color>,1335,
+40009,#扳机,40009,Material,#合成材料,,99,Attack,,5,999,1,0,0,0,0,,,,<color=#BC965D>|</color>,1336,
+
+40021,#润滑油,40021,Material,#合成材料,,99,Speed,,3,999,1,0,0,0,0,,,,<color=#68E379>|</color>,1348,
+40022,#火花塞,40022,Material,#合成材料,,99,Speed,,3,999,1,0,0,0,0,,,,<color=#68E379>|</color>,1349,
+40023,#冷冻剂,40023,Material,#合成材料,,99,Speed,,5,999,1,0,0,0,0,,,,<color=#68E379>|</color>,1350,
+
+40028,#共振器,40028,Material,#合成材料,,99,Melee,,3,999,1,0,0,0,0,,,,,1355,
+40029,#刀片,40029,Material,#合成材料,,99,Melee,,4,999,1,0,0,0,0,,,,,1356,
+40030,#振荡器,40030,Material,#合成材料,,99,Melee,,6,999,1,0,0,0,0,,,,,1357,
+
+40017,#线圈,40017,Material,#合成材料,,99,Electric,,4,999,1,0,0,0,0,,,,<color=#DB31D2>|</color>,1344,
+40018,#电容,40018,Material,#合成材料,,99,Electric,,3,999,1,0,0,0,0,,,,<color=#DB31D2>|</color>,1345,
+40019,#电感,40019,Material,#合成材料,,99,Electric,,5,999,1,0,0,0,0,,,,<color=#DB31D2>|</color>,1346,
+
+40013,#棱镜,40013,Material,#合成材料,,99,Laser,,3,999,1,0,0,0,0,,,,<color=#5FCBA3>|</color>,1340,
+40014,#透镜,40014,Material,#合成材料,,99,Laser,,5,999,1,0,0,0,0,,,,<color=#5FCBA3>|</color>,1341,
+
+40026,#力场管,40026,Material,#合成材料,,99,Energy,,3,999,1,0,0,0,0,,,,<color=#5873FF>|</color>,1353,
+40027,#力场膜,40027,Material,#合成材料,,99,Energy,,5,999,1,0,0,0,0,,,,<color=#5873FF>|</color>,1354,
+
+40024,#装甲,40024,Material,#合成材料,,99,Armor,,2,999,1,0,0,0,0,,,,<color=#FFFC81>|</color>,1351,
+40025,#厚装甲,40025,Material,#合成材料,,99,Armor,,10,999,1,0,0,0,0,,,,<color=#FFFC81>|</color>,1352,
+
+40034,#螺旋桨,40034,Material,#合成材料,,99,Fly,,10,999,1,0,0,0,0,,,,,1361,
+40033,#飞行单元,40033,Material,#合成材料,,99,Fly,,3,999,1,0,0,0,0,,,,,1360,
+
+40011,#工业塑料,40011,Material,#合成材料,,99,Shot,,4,999,1,0,0,0,0,,,,<color=#7A82BC>|</color>,1338,
+
+40015,#点火器,40015,Material,#合成材料,,99,Flame,,4,999,1,0,0,0,0,,,,<color=#FF1400>|</color>,1342,
+40016,#冷凝管,40016,Material,#合成材料,,99,Freeze,,4,999,1,0,0,0,0,,,,<color=#00FFFF>|</color>,1343,
+40020,#三极管,40020,Material,#合成材料,,99,Split,,5,999,1,0,0,0,0,,,,,1347,
+
+40004,#弹头,40004,Material,#合成材料,,99,Damage,,3,999,1,0,0,0,0,,,,<color=#BC5D8D>|</color>,1331,
+40010,#雷管,40010,Material,#合成材料,,99,Explo,,5,999,1,0,0,0,0,,,,<color=#EF5F00>|</color>,1337,
+40031,#涂层,40031,Material,#合成材料,,99,Fade,,5,999,1,0,0,0,0,,,,<color=#FFFC81>|</color>,1358,
+40012,#弹链,40012,Material,#合成材料,,99,MG,,8,999,1,0,0,0,0,,,,<color=#BC5D8D>|</color>,1339,
+40032,#核心,40032,Material,#合成材料,,99,Ellite,,20,999,1,0,0,0,0,,,,<color=#F7FF00>|</color>,1359,
+
+40201,#家具零件,40201,Material,#合成材料,,99,Furniture,,1,999,1,0,0,0,0,,,,<color=#FFF600>|</color>,1362,
+40202,#高级具零件,40202,Material,#合成材料,,99,Furniture,,10,999,1,0,0,0,0,,,,<color=#FFF600>|</color>,1363,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+let csv1 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
+
+40100,#补给箱-通用,40100,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox0,,10,$DemolishOpenDay,1,0,0,0,0,,,,,1365,
+
+40106,#补给箱-近战,40106,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox6,,31,50,1,0,0,0,0,,,,,1371,
+40103,#补给箱-弹头,40103,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox3,,25,40,1,0,0,0,0,,,,,1368,
+40105,#补给箱-核心,40105,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox5,,29,48,1,0,0,0,0,,,,,1370,
+
+40108,#补给箱-重武器,40108,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox8,,40,55,1,0,0,0,0,,,,,1373,
+
+40101,#补给箱-动力,40101,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox1,,15,$DemolishOpenDay,1,0,0,0,0,,,,,1366,
+40102,#补给箱-装甲,40102,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox2,,16,$DemolishOpenDay,1,0,0,0,0,,,,,1367,
+
+40104,#补给箱-元素,40104,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox4,,27,45,1,0,0,0,0,,,,,1369,
+40107,#补给箱-能量,40107,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox7,,38,52,1,0,0,0,0,,,,,1372,
+
+40109,#补给箱-重武器,40109,None,#向解体厂库存添加一个补给箱,AddFunc,99,AddToDemo:SupplyBox9,,30,$DemolishOpenDay,1,0,0,0,0,,,,,1374,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	40001 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40002 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40005 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40006 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40007 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	项目名称 : {
 	
-	40003 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40008 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40009 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40001	: `废铁`				+ ` # 废铁,廢鐵,Scrap Iron,くず鉄`,
+	40002	: `废料`				+ ` # 废料,廢料,Waste Material,スクラップ`,
+	40005	: `接合`				+ ` # 接合物件,接合物件,Joining Component,接続オブジェクト`,
+	40006	: `齿轮`				+ ` # 齿轮,齒輪,Gear,ギア`,
+	40007	: `框架`				+ ` # 框架,框架,Frame,フレーム`,
 	
-	40021 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40022 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40023 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40003	: `弹壳`				+ ` # 弹壳,彈殼,Bullet Shell,薬莢`,
+	40008	: `铁管`				+ ` # 铁管,鐵管,Iron Pipe,鉄パイプ`,
+	40009	: `扳机`				+ ` # 扳机,扳機,Trigger,トリガー`,
 	
-	40028 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40029 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40030 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40021	: `润滑油`				+ ` # 润滑油,潤滑油,Lubricating Oil,潤滑油`,
+	40022	: `火花塞`				+ ` # 火花塞,火花塞,Spark Plug,スパークプラグ`,
+	40023	: `冷冻剂`				+ ` # 冷冻剂,冷凍劑,Refrigerant,冷媒`,
 	
-	40017 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40018 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40019 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40028	: `共振器`				+ ` # 共振器,共振器,Resonator,共振器`,
+	40029	: `废刀片`				+ ` # 刀片,刀片,Blade,ブレード`,
+	40030	: `振荡器`				+ ` # 振荡器,振盪器,Oscillator,発振回路`,
 	
-	40026 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40027 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40017	: `线圈`				+ ` # 线圈,線圈,Coil,コイル`,
+	40018	: `电容`				+ ` # 电容,電容,Capacitor,コンデンサ`,
+	40019	: `电感`				+ ` # 电感,電感,Inductor,インダクター`,
 	
-	40013 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40014 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40013	: `棱镜`				+ ` # 棱镜,稜鏡,Prism,プリズム`,
+	40014	: `透镜`				+ ` # 透镜,透鏡,Lens,レンズ`,
 	
-	40024 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40025 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40026	: `力场管`				+ ` # 力场管,力場管,Force Field Generator,力場パイプ`,
+	40027	: `力场膜`				+ ` # 力场膜,力場膜,Force Field Membrane,力場膜`,
 	
-	40011 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40024	: `装甲`				+ ` # 装甲,裝甲,Armor,装甲`,
+	40025	: `厚装甲`				+ ` # 厚装甲,厚裝甲,Heavy Armor,厚い装甲`,
 	
-	40015 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40016 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40020 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40034	: `螺旋桨`				+ ` # 螺旋桨,螺旋槳,Propeller,プロペラ`,
+	40033	: `飞行单元`			+ ` # 飞行单元,飛行單元,Flight unit,飛行ユニット`,
 	
-	40004 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40010 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40031 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40012 : ['合成材料',		'合成素材',			'Materials for crafting',				],		
-	40032 : ['合成材料',		'合成素材',			'Materials for crafting',				],		//03		
+	40011	: `工业塑料`			+ ` # 工业塑料,工業塑膠,Industrial Plastic,工業用プラスチック`,
+	
+	40015	: `点火器`				+ ` # 点火器,點火器,Igniter,イグナイター`,
+	40016	: `冷凝管`				+ ` # 冷凝管,冷凝管,Condenser,復水管`,
+	40020	: `三极管`				+ ` # 三极管,三極管,Transistor,三極管`,
+	
+	40004	: `弹头`				+ ` # 弹头,彈頭,Warhead,弾頭`,
+	40010	: `雷管`				+ ` # 雷管,雷管,Detonator,起爆装置`,
+	40031	: `涂层`				+ ` # 涂层,塗層,Coating,コーティング`,
+	40012	: `弹链`				+ ` # 弹链,彈鏈,Ammunition Belt,弾帯`,
+	40032	: `核心`				+ ` # 核心,核心,Core,コア`,
+	
+	40201	: `家具零件`			+ ` # 家具零件,傢俱零件,Furniture parts,家具部品`,
+	40202	: `高级家具零件`		+ ` # 高级家具零件,高級傢俱零件,Advanced tool parts,高級家具部品`,
+	
+	// --
+	
+	40100	: `补给箱(通用)`		+ ` # 补给箱-通用,補給箱-通用,Supply box-Universal,補給箱-汎用`,
+	40101	: `补给箱(动力)`		+ ` # 补给箱-动力,補給箱-動力,Supply box-Power,補給箱-動力`,
+	40102	: `补给箱(装甲)`		+ ` # 补给箱-装甲,補給箱-裝甲,Supply box-Armor,補給箱-装甲`,
+	40103	: `补给箱(弹头)`		+ ` # 补给箱-弹头,補給箱-彈頭,Supply box-Warhead,補給箱-弾頭`,
+	40104	: `补给箱(元素)`		+ ` # 补给箱-元素,補給箱-元素,Supply box-Elemental,補給箱-元素`,
+	40105	: `补给箱(核心)`		+ ` # 补给箱-核心,補給箱-核心,Supply box-Core,補給箱-コア`,
+	40106	: `补给箱(近战)`		+ ` # 补给箱-近战,補給箱-近戰,Supply box-Melee,補給箱-近接`,
+	40107	: `补给箱(能量)`		+ ` # 补给箱-能量,補給箱-能量,Supply box-Energy,補給箱-エネルギー`,
+	40108	: `补给箱(重武)`		+ ` # 补给箱-重武器,補給箱-重武器,Supply box-Heavy,補給箱-じゅうへいき`,
+	40109	: `补给箱(家具)`		+ ` # 补给箱-家具,補給箱-傢俱,Supply box-Furniture,補給箱-家具`,
+	
+	},
+	
+	文本描述 : {
+	
+	40001	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40002	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40005	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40006	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40007	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40003	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40008	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40009	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40021	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40022	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40023	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40028	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40029	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40030	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40017	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40018	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40019	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40013	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40014	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40026	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40027	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40024	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40025	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40034	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40033	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40011	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40015	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40016	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40020	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40004	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40010	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40031	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40012	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40032	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	40201	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	40202	: `合成材料`														+ ` # 合成材料,合成材料,Materials for crafting,合成素材`,
+	
+	// --
+	
+	40100	: `向解体厂库存添加一个补给箱<br />通用型(战场ID: SupplyBox0)`		+ ` # 向解体厂库存添加一个补给箱:通用,向解體廠庫存添加一個補給箱:通用,Add a supply box to the inventory of the Disassembly factory:Universal,解体プラントの在庫に補給箱を追加する：汎用`,
+	40101	: `向解体厂库存添加一个补给箱<br />动力型(战场ID: SupplyBox1)`		+ ` # 向解体厂库存添加一个补给箱:动力,向解體廠庫存添加一個補給箱:動力,Add a supply box to the inventory of the Disassembly factory:Power,解体プラントの在庫に補給箱を追加する：動力`,
+	40102	: `向解体厂库存添加一个补给箱<br />装甲型(战场ID: SupplyBox2)`		+ ` # 向解体厂库存添加一个补给箱:装甲,向解體廠庫存添加一個補給箱:裝甲,Add a supply box to the inventory of the Disassembly factory:Armor,解体プラントの在庫に補給箱を追加する：装甲`,
+	40103	: `向解体厂库存添加一个补给箱<br />弹头型(战场ID: SupplyBox3)`		+ ` # 向解体厂库存添加一个补给箱:弹头,向解體廠庫存添加一個補給箱:彈頭,Add a supply box to the inventory of the Disassembly factory:Warhead,解体プラントの在庫に補給箱を追加する：弾頭`,
+	40104	: `向解体厂库存添加一个补给箱<br />元素型(战场ID: SupplyBox4)`		+ ` # 向解体厂库存添加一个补给箱:元素,向解體廠庫存添加一個補給箱:元素,Add a supply box to the inventory of the Disassembly factory:Elemental,解体プラントの在庫に補給箱を追加する：元素`,
+	40105	: `向解体厂库存添加一个补给箱<br />核心型(战场ID: SupplyBox5)`		+ ` # 向解体厂库存添加一个补给箱:核心,向解體廠庫存添加一個補給箱:核心,Add a supply box to the inventory of the Disassembly factory:Core,解体プラントの在庫に補給箱を追加する：コア`,
+	40106	: `向解体厂库存添加一个补给箱<br />近战型(战场ID: SupplyBox6)`		+ ` # 向解体厂库存添加一个补给箱:近战,向解體廠庫存添加一個補給箱:近戰,Add a supply box to the inventory of the Disassembly factory:Melee,解体プラントの在庫に補給箱を追加する：近接`,
+	40107	: `向解体厂库存添加一个补给箱<br />能量型(战场ID: SupplyBox7)`		+ ` # 向解体厂库存添加一个补给箱:能量,向解體廠庫存添加一個補給箱:能量,Add a supply box to the inventory of the Disassembly factory:Energy,解体プラントの在庫に補給箱を追加する：エネルギー`,
+	40108	: `向解体厂库存添加一个补给箱<br />武器型(战场ID: SupplyBox8)`		+ ` # 向解体厂库存添加一个补给箱:重武器,向解體廠庫存添加一個補給箱:重武器,Add a supply box to the inventory of the Disassembly factory:Heavy,解体プラントの在庫に補給箱を追加する：じゅうへいき`,
+	40109	: `向解体厂库存添加一个补给箱<br />家具型(战场ID: SupplyBox9)`		+ ` # 向解体厂库存添加一个补给箱:家具,向解體廠庫存添加一個補給箱:傢俱,Add a supply box to the inventory of the Disassembly factory:Furniture,解体プラントの在庫に補給箱を追加する：家具`,
+	
+	},
+	
+	物品类型 : {
+	
+	None	: `道具`		, // + ` # 道具,道具,Item,アイテム`,
+	
+	},
+	
+	归属种类 : {
+	
+	AddFunc	: `补给`		, // ` # 补给品,補給品,Supplies,補給品`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv0.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 项目图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0"><img loading="lazy" alt="'+item[3] 
-		+ '" src="../static/image/material/' + item[1] + '.png" style="width:64px;height:64px;" /></td>' }else 
-		
-		// 项目名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ (data === '-' ? '-' : ItemsNameList[item[ 4]][0]) +'</td>' }else 
-		
-		// 文本颜色
-		if(index === 10){ powerTable_tbody_node01 += '<td><span style="display:inline-block;vertical-align:top;width:12px;' + 
-		'height:12px;border:1px solid #999;border-radius:2px;background-color:' + data + ';"></span> ' + data + '</td>' }else 
-		
-		// 文本描述
-		if(index === 11){ powerTable_tbody_node01 += '<td>'+ (DescriptionsList[item[4]][0]) +'</td>' }else 
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.归属种类.text = (function(){
+		
+		return item.功能函数.text;
+		
+	})();
+	
+	item.特殊颜色.text = (function(){
+		
+		let color = item.特殊颜色.code.match(/#\w{6}/);
+		if(color === null){ color = '#FFFFFF' }else{ color = color[0] };
+		
+		return ('<span style="display:inline-block;vertical-align:top;width:12px;height:12px;'
+		+ 'border:1px solid var(--xj-999);border-radius:2px;background-color:' + color + ';"></span> ' + color);
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/25_manage_material/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/25_manage_material/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.最大堆叠.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.物品类型.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.归属种类.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.特殊颜色.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable02 = $('#powerTable02');
+let powerTable02_tbody_html = '';
+let powerTable02_group = -1;
+let powerTable02_index = -1;
+
+// ---------------------------------------------
+
+// 生成表格
+csv1.forEach(function(item, index){
+	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable02_index+=1 }
+	else{ if(csv1[index+1] !== 'blankRow'){ powerTable02_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable02_group;
+	item.项目序号 = powerTable02_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Items,						2042,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,						#耐久模块1,
+	item.图片名称 = {code:item[ 2], text:item[ 2], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 图片名称		Image,						2042,
+	item.物品类型 = {code:item[ 3], text:item[ 3], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 物品类型		Type,						BuffModel,
+	item.文本描述 = {code:item[ 4], text:item[ 4], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 文本描述		Description,				#生命上限+<Description:0>%，机体速度<Description:1>%,
+	item.归属种类 = {code:item[ 5], text:item[ 5], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 归属种类		Tag,						BuffModel|Door|Cannon,
+	item.最大堆叠 = {code:item[ 6], text:item[ 6], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 最大堆叠		MaxPile,					1,
+	item.功能函数 = {code:item[ 7], text:item[ 7], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 功能函数		Func,						AddHp:10|AddSpeed:-2,
+	item.原型研发 = {code:item[ 8], text:item[ 8], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 原型研发		Company,					Company_2042,
+	item.参考价格 = {code:item[ 9], text:item[ 9], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 9] +'</td>'; // 参考价格		Price,						10,
+	item.解锁天数 = {code:item[10], text:item[10], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[10] +'</td>'; // 解锁天数		Day,						0,
+	item.装备等级 = {code:item[11], text:item[11], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[11] +'</td>'; // 装备等级		Level,						1,
+	item.配件槽位 = {code:item[12], text:item[12], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[12] +'</td>'; // 配件槽位		CargoPiles,					0,
+	item.配件上限 = {code:item[13], text:item[13], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[13] +'</td>'; // 配件上限		CargoPilesMax,				0,
+	item.融合槽位 = {code:item[14], text:item[14], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[14] +'</td>'; // 融合槽位		CargoPilesFusion,			0,
+	item.融合上限 = {code:item[15], text:item[15], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[15] +'</td>'; // 融合上限		CargoPilesFusionMax,		0,
+	item.升级改造 = {code:item[16], text:item[16], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[16] +'</td>'; // 升级改造		Cluster,					,
+	item.合成材料 = {code:item[17], text:item[17], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[17] +'</td>'; // 合成材料		Syns,						40001_1|40007_1|40024_3,
+	item.出现条件 = {code:item[18], text:item[18], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[18] +'</td>'; // 出现条件		NeedWeapon,					,
+	item.特殊颜色 = {code:item[19], text:item[19], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[19] +'</td>'; // 特殊颜色		ColorPlus,					,
+	item.排序代码 = {code:item[20], text:item[20], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[20] +'</td>'; // 排序代码		ResolveID,					572,
+	item.调试隐藏 = {code:item[21], text:item[21], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[21] +'</td>'; // 调试隐藏		DebugHide,					,
+	item.对应种类 = {code:item[99], text:item[99], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 对应种类		,							,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.物品类型.text = textList.物品类型[item[3]];
+	item.归属种类.text = textList.归属种类[item[5]];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.解锁天数.text = (function(){
+		
+		if(item.解锁天数.code === '$StrategyOpenDay'){ 
+		return (item.解锁天数.code = '22') }; 
+		
+		if(item.解锁天数.code === '$DemolishOpenDay'){ 
+		return (item.解锁天数.code = '27') };
+		
+		if(item.解锁天数.code === '$NightOpenDay'){ 
+		return (item.解锁天数.code = '65') };
+		
+		if(item.解锁天数.code === '$EquipOpenDay'){ 
+		return (item.解锁天数.code = '35') };
+		
+		if(item.解锁天数.code === '$RoomOpenDay'){ 
+		return (item.解锁天数.code = '15') };
+		
+		if(item.解锁天数.code === '$AirOpenDay'){ 
+		return (item.解锁天数.code = '47') };
+		
+		return (item.解锁天数.code);
+		
+	})();
+	
+	item.对应种类.text = (function(){
+		
+		return item.对应种类.code = {
+		'SupplyBox0' :  `All|Attack`					.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox6' :  `All|Attack|Melee`				.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox3' :  `All|Attack|Damage`				.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox5' :  `All|Attack|Ellite`				.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox8' :  `All|Attack|Explo|Shot|MG`		.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox1' :  `All|Speed`						.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox2' :  `All|Armor`						.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox4' :  `All|Electric|Freeze|Flame`		.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox7' :  `All|Laser|Split|Energy|Fade`	.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		'SupplyBox9' :  `All|Furniture`					.split('|').map(function(id){ return `<span style="display:inline-block;">${id}</span>` }).join('|'),
+		}[item.功能函数.code.match(/SupplyBox\d/)[0]];
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.库存图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="left" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/25_manage_material/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/25_manage_material/${item.图片名称.code}.png" style="width: 40px;height: 40px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable02_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable02_tbody_html += /*item.库存图片 +*/'<td class="showPart01">'+(item.项目序号+1)+'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.参考价格.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.解锁天数.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.装备等级.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.最大堆叠.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.排序代码.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.物品类型.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.归属种类.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.对应种类.text +'</td>';
+	
+	powerTable02_tbody_html += item.库存图片;
+	
+	powerTable02_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable02_tbody_html += '</tr>';
+	
+});
+$('#powerTable02 tbody').html(powerTable02_tbody_html);
+xj2._buildPowerTable('powerTable02');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable02);
+jqi_powerTable02.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable02) });
 
 })();
 </script>
@@ -405,7 +846,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
 </div>
 </div>
 </div>
@@ -418,7 +859,8 @@ xj2._buildPowerTable('powerTable01');
 		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
 		<div id="pub_toolAnchorTip">
 			<a href="#heading01">01. 基本信息</a>
-			<a href="#heading02">02. 额外拓展</a>
+			<a href="#heading02">02. 特殊补给</a>
+			<a href="#heading03">03. 额外拓展</a>
 		</div>
 	</div>
 </div>

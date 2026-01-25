@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-12T16:00:56UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-12T16:00:56UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-12T16:00:56UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,26 +118,31 @@
 <section><h2 id="heading01">01. 税费参数</h2>
 
 <p>
-	01. 下面是战后收支总结界面的相关参数, 其中的"故事正常"/"硬核残酷"属性值, 分别是使用于剧情模式下的前两个难度和后两个难度; <br /> 
-	02. 参数中并没有关于幸存模式的数据, 因为该模式没有战后结算, 收益均源于幸存奖励, 细节可查阅 <a href="./data_others_priority.html#heading02">商品权重.html # 02.特殊情况</a>; <br />
-	03. 如果战后的弹药费/维修费/战略费等支出大于收益, 也不会倒扣, 因为系统设置了最小收益不得为负, 毕竟倒贴钱打仗就太魔幻了; <br />
-	04. 收支并非一成不变的, 它们会受到各种事件的影响, 例如开放宿舍后, 宿舍附加费用会加 <c>200%</c>, 更多细节可查阅 <a href="./event_detail.html">事件详情.html</a>; <br />
+	01. 下面是战后收支结算界面的相关参数, 其中的"故事正常"和"硬核残酷"属性值, 分别是使用于剧情模式下的前两个难度和后两个难度<br />
+	02. 参数中并没有关于幸存模式的数据, 因为该模式并没有战后结算, 收益均源于关卡奖励, 细节可查阅 <a href="./data_others_priority.html#heading02">商品权重.html # 02.特殊情况</a><br />
+	03. 如果战后的[弹药费/维修费/战略费]等支出大于收益, 也不会倒扣, 因为系统设置了最小收益不得为负(毕竟倒贴钱打仗就太魔幻了)<br />
 </p>
 
-<table originalSort="0" id="powerTable01" class="powerTable table-xs table-hover" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="0" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">税费序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:200px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">税费代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">故事正常<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">硬核残酷<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">挑战模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">无尽模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">潜入模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:160px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>故事正常</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>硬核残酷</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>挑战模式</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>无尽模式</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>潜入模式</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>地牢模式</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>地牢挑战</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -146,41 +151,57 @@
 
 <section><h2 id="heading02">02. 战后结算</h2>
 
-<p>基础工资: 取决于数据表中的 <c>Base</c> 参数, 它是笔固定收入, 不受队伍人数的影响, 即使是休息日也会照发, 有些事件可以让我们降低基础工资但提升"消灭敌人绩效", 从长远来看是划算的, 可以接受, 但降低基础工资来提取帝国建设基金就不划算了, 遭遇时需要谨慎;</p>
+<p>基础工资: 取决于数据表中的 <c>Base</c> 参数, 它是笔固定收入, 不受队伍人数的影响, 即使是休息日也会照发, 有些事件可以让我们降低基础工资但提升"消灭敌人绩效", 从长远来看是划算的, 可以接受, 但是降低基础工资来提取帝国建设基金就不划算了, 遭遇时需要谨慎</p>
 
-<p>军衔补助: 取决于当前队伍中的驾驶员军衔, 当驾驶员被晋升到最高级的士官长时, 每日薪水是 <c>77</c>, 若有 <c>5</c> 个驾驶员, 那么合计就是 <c>77×5=385</c>, 即使是休息日也会照发, 目前没有任何改变军衔补助的事件, 所以它是笔稳定的收入, 更多细节可查阅 <a href="./data_pilot_level.html">军衔等级.html</a>;</p>
-
-<p>消灭敌人绩效: 取决于场景的资金奖励, 具体数额可以查阅 <a href="./data_enemy_plot.html">剧情模式.html</a> 或 <a href="./data_enemy_mode.html">特殊遭遇.html</a>, 资金奖励同时也是这场战斗中敌人的总价值, 每种敌人都有它自己的价值, 具体细节可查阅 <a href="./data_enemy_info.html">敌军情报.html</a> 的剧情价值或特殊价值, 一般来讲, 绩效越高就代表敌人强度越高;</p>
-
-<p>休息日补助: 仅休息日有这项收益, 它是由 <c>帝国建设基金 + 军队建设基金 + 宿舍附加费用 + 自愿福利保险</c> 的和所决定的, 这项补助会抹平当天四项税费支出, 存在的意义在于避免出现休息日被倒扣费的情况, 因为休息日没有消灭敌人绩效的收益, 可能会出现赤字;</p>
-
-<p>外围任务补助: 仅外勤任务有这项收益, 当我们在做外围阵地或歼灭委托时, 如果场景有设置资金补助, 那么这场战斗就有这个资金收入, 但它和"任务报酬"是分开的, 并非同一个概念, 你可以前往 <a href="./data_enemy_outer.html">外勤任务.html</a> 的页面, 查看各种任务的收入细节(在表格的 P02 部分);</p>
+<p>军衔补助: 取决于当前队伍中的驾驶员军衔, 当驾驶员被晋升到最高级的士官长时, 每日薪水是 <c>77</c>, 若有 <c>5</c> 个驾驶员, 那合计就是 <c>77×5=385</c>, 盥洗室的家具套装可让补助额外 <c>+15</c>, 补助即使是休息日也会照发, 它是笔稳定的收入, 更多细节可查阅 <a href="./data_pilot_level.html">军衔等级.html</a></p>
 
 <p>————</p>
 
-<p>机体维修: 取决于数据表中的 <c>FixArmor</c> 参数, 它是机体受损后的维修费用, 例如在无尽模式中, 该参数为 <c>-20</c>, 假设有台机体损失了 <c>40%</c> 的 HP, 则战后的维修费用就是 <c>-20 × 40% = -8</c>, 某些事件会增加机体维修费用, 但可以花 <c>75</c> 资金贿赂, 以此避免涨价;</p>
+<p>消灭敌人绩效: 取决于场景的资金奖励, 数额可以查阅 <a href="./data_enemy_plot.html">剧情模式.html</a> 或 <a href="./data_enemy_mode.html">特殊遭遇.html</a>, 资金奖励同时也是这场战斗中敌人的总价值, 每一种敌人都有它自己的战场价值, 具体的细节可查阅 <a href="./data_enemy_info.html">敌军情报.html</a>(剧情价值或特殊价值), 一般来讲, 绩效越高就代表敌人强度越高</p>
 
-<p>大门维修: 取决于数据表中的 <c>FixDoor</c> 参数, 它是大门受损后的维修费用, 例如在无尽模式中, 该参数为 <c>-100</c>, 假设在战斗中损失了 <c>40%</c> 的 HP, 则战后的维修费用就是 <c>-100 × 40% = -40</c>, 某些事件会导致机体或大门的维修费用上涨, 这只能二选一, 无法避免;</p>
+<p>战利物: 当敌人被击倒后, 如果模式允许, 那些最大生命值 <c>>= 300</c> 且死亡时不是处于溶解状态的敌人, 可能会掉落金币, 当我方机体靠近金币时候, 将会自动拾取, 而这些金币被拾取后就会成为"战利品"收入, 关于战利品的细节, 可查阅 <a href="./data_enemy_info.html#heading03">敌军情报.html # 03.额外拓展</a></p>
 
-<p>帝国建设基金: 取决于数据表中的 <c>Tax1</c> 参数, 在事件表中, 有个事件叫"增税", 会导致该项税费 <c>+80%</c>, 这是无法避免的, 还有个事件叫"自愿降薪", 可用 <c>-5%</c> "基础工资"为代价, 一次性获得 <c>50</c> 资金, 这个可以放弃, 也推荐放弃, 因为大多数情况下并不划算;</p>
+<p>任务奖励: 仅休息日有这项收益, 取决于假日安排的后勤任务以及执行任务的驾驶员数量, 例如说, 休息日选择了"赶制弹药"的后勤任务, 该任务的单体报酬是 <c>15</c> 资金, 假设当前在基地中且脑负荷 <c>< 100</c> 的驾驶员总共有 <c>5</c> 个, 那么奖励的资金就是 <c>15 × 5 = 75</c> </p>
 
-<p>军队建设基金: 取决于数据表中的 <c>Tax2</c> 参数, 在事件表中, 有个事件叫"增税2", 会导致该项税费 <c>+80%</c>, 这是无法避免的(积极建设军队是每一位公民应尽的义务, 战场上的你是否感觉仅仅是杀敌并不能满足自己报效祖国的愿望呢, 从即日起, 军队建设基金将增收);</p>
+<p>休息日补助: 仅休息日有这项收益, 它的具体数值由 <c>帝国建设基金 + 军队建设基金 + 宿舍附加费用 + 自愿福利保险</c> 的和所决定的, 这项补助会抹平当天四项税费支出, 意义在于避免出现休息日被倒扣费的情况, 因为休息日没有消灭敌人绩效的收益, 就可能会出现赤字</p>
 
-<p>宿舍附加费用: 取决于数据表中的 <c>Tax3</c> 参数, 在事件表中, 有个事件叫"宿舍2", 会导致该项税费 <c>+200%</c>, 这个事件在宿舍开放后必定会触发, 无法避免, 还有个事件叫"宿舍3", 会导致该项税费 <c>+200%</c>, 也无法避免(剧情模式和无尽模式的后期必定会触发该事件);</p>
-
-<p>自愿福利保险: 取决于数据表中的 <c>Tax4</c> 参数, 在事件表中, 有个事件叫"放弃保险", 可用 <c>30</c> 资金为代价, 降低 <c>50%</c> 的自愿福利保险, 在剧情模式和挑战模式中都有机会触发该事件, 而且不止一次, 这是比较好的事件, 一般都是赚的, 如果遇到, 无脑接受就行;</p>
+<p>外围任务补助: 仅外勤任务有这项收益, 当执行外围阵地或歼灭委托的任务, 如果场景有设置"资金补助", 那这场战斗就有这个资金收入, 注意它和"任务报酬"是分开算的, 并不是同一个概念, 你可以前往 <a href="./data_enemy_outer.html">外勤任务.html</a>, 查看各种任务的"资金补助"属性和"任务报酬"属性</p>
 
 <p>————</p>
 
-<p>荣誉点: 取决于场景的荣誉奖励, 具体数额可以查阅 <a href="./data_enemy_plot.html">剧情模式.html</a> 或 <a href="./data_enemy_mode.html">特殊遭遇.html</a> 或 <a href="./data_enemy_outer.html">外勤任务.html</a> 的荣誉奖励属性(外勤任务的这项属性位于表格的 P02), 但收益一般都会比场景预设低, 因为弹药费/战略武器费/精神力透支/敌军突破防线开支, 都可能从这扣除;</p>
+<p>机体维修: 取决于数据表中的 <c>FixArmor</c> 参数, 它是机体受损的维修费用, 例如在挑战模式中, 该参数为 <c>-20</c>, 假设有台机体损失了 <c>40%</c> 的 HP, 则战后的机体维修费用就是 <c>-20 × 40% = -8</c>, 某些事件可能增加机体维修费用, 但可以花 <c>75</c> 资金贿赂, 以避免涨价</p>
 
-<p>弹药费用: 既武器的弹药费, 武器的首轮子弹都是免费的, 但之后如果换弹就要收费了, 剧情模式从第 <c>45</c> 天起才开始收弹药费, 如果场景有荣誉收益, 就用荣誉抵消费用, 没有荣誉收益, 才用资金收益抵消费用, 值得一提的是, 节日安排的护送任务, 是不算弹药费的;</p>
+<p>大门维修: 取决于数据表中的 <c>FixDoor</c> 参数, 它是大门受损的维修费用, 例如在挑战模式中, 该参数为 <c>-100</c>, 假设在战斗中损失了 <c>40%</c> 的 HP, 则战后的大门维修费用就是 <c>-100 × 40% = -40</c>, 某些事件会导致机体或大门的维修费用上涨, 就只能二选一, 无法避免</p>
 
-<p>战略武器费: 既使用战略支援和肩扛武器的费用, 跟弹药费一样, 也是优先使用荣誉抵消, 没荣誉收益才用资金抵消, 值得一提的是, 投掷物既不被归入战略武器费, 也不被归入弹药费用, 实际上投掷物是完全免费的, 限制它被使用的, 就只有投掷物的 CD, 以及你的操作;</p>
+<p>战利品税: 取决于数据表中的 <c>TrophyTax</c> 参数, 它是战利品的扣除费用, 例如在挑战模式中, 该参数为 <c>50</c>, 假设在战斗中总共捡到 <c>80</c> 金币, 则战后的可以获得的战利品资金就是 <c>80 × 50 ÷ 100 = 40</c>, 目前没有任何事件会改变战利品税率, 所以战利品总是会减半</p>
 
-<p>精神力透支: 既驾驶员在战场使用了技能后, 需要扣除的费用, 该项支出仅在挑战模式和潜入模式中存在, 因为这两个模式没有脑负荷概念, 所以才以荣誉或资金为代价, 而在其他模式中, 驾驶员使用技能只会导致脑负荷上涨(但脑负荷即使满了也还是可以继续用技能的);</p>
+<p>————</p>
 
-<p>敌军突破防线: 该项数据仅存在于需要防守大门的正面战场中(挑战模式和幸存模式不需要防守大门), 当敌人过于靠近大门, 系统就会提示说防线已被突破, 然后收益就会减少了, 也就是说, 尽量尝试将敌人消灭在沙包圈以外吧, 毕竟古人有云, 进攻才是最好的防御手段;</p>
+<p>帝国建设基金: 取决于数据表中的参数 <c>Tax1</c>, 在事件表中, 有个事件叫"增税", 会导致该项税费 <c>+80%</c>, 这个是无法避免的, 还有个事件叫"自愿降薪", 可以"基础工资" <c>-5%</c> 为代价, 一次性 <c>+50</c> 资金, 这个事件可以放弃, 也推荐放弃, 因为大多数情况下并不划算</p>
+
+<p>军队建设基金: 取决于数据表中的参数 <c>Tax2</c>, 在事件表中, 有个事件叫"增税02", 会导致该项税费 <c>+80%</c>, 这个是无法避免的: 积极建设军队是每一位公民应尽的义务, 战场上的你是否感觉仅仅是杀敌并不能满足自己报效祖国的愿望呢, 从即日起, 军队建设基金将增收</p>
+
+<p>宿舍附加费用: 取决于数据表中的参数 <c>Tax3</c>, 在事件表中, 有个事件叫"宿舍02", 会导致该项税费 <c>+200%</c>, 这个事件在宿舍开放后, 必定会触发, 无法避免, 还有个事件叫"宿舍03", 会导致该项税费 <c>+200%</c>, 也无法避免(剧情模式和无尽模式的后期必定会触发该事件)</p>
+
+<p>自愿福利保险: 取决于数据表中的参数 <c>Tax4</c>, 在事件表中, 有个事件叫"放弃保险", 可用 <c>30</c> 资金为代价, 降低 <c>50%</c> 的自愿福利保险, 在剧情模式和挑战模式中都有机会触发该事件, 而且不止一次, 是个比较好的事件, 一般都是有得赚的, 如果遇到, 无脑接受就行</p>
+
+<p>————</p>
+
+<p>荣誉点: 既荣誉点收入, 取决于场景的荣誉奖励, 具体可以查阅 <a href="./data_enemy_plot.html">剧情模式.html</a> 或 <a href="./data_enemy_mode.html">特殊遭遇.html</a> 或 <a href="./data_enemy_outer.html">外勤任务.html</a> 的荣誉奖励属性, 这个收益一般都会比场景的预设值低, 因为[弹药费/战略武器费/精神力透支/敌军突破防线开支]都可能从这里扣, 所以很难得到 <c>100%</c></p>
+
+<p>弹药费用: 既武器的弹药费, 武器的首轮子弹都是免费的, 但之后如果换弹就要收费了, 剧情模式从第 <c>45</c> 天起才开始收弹药费, 如果场景有荣誉收益, 就用荣誉抵消费用, 没有荣誉收益, 就用资金收益抵消费用, 值得一提的是, 节日安排里的护送任务, 是不算弹药费的</p>
+
+<p>战略武器费: 既使用战略支援和肩扛武器的费用, 跟弹药费一样, 也是优先使用荣誉抵消, 没荣誉收益才用资金收益抵消, 值得一提的是, 投掷物既不被归入战略武器费, 也不被归入弹药费用, 实际上投掷物是完全免费的(限制它的就只有投掷物的冷却时间, 以及你的操作)</p>
+
+<p>精神力透支: 既驾驶员在战场使用了技能后, 需要扣除的费用, 该项支出仅在挑战模式和潜入模式存在, 因为这两个模式没有脑负荷概念, 所以才以荣誉或资金为使用代价, 而在其他模式中, 驾驶员使用技能只会导致脑负荷上涨(但脑负荷即使满了也还是可以继续用技能的)</p>
+
+<p>敌军突破防线: 该项数据仅存在于需要防守大门的正面战场(挑战模式和幸存模式不需要防守大门), 当敌人过于靠近大门, 系统就会提示, 说防线已经被突破, 然后收益就会减少了, 也就是说, 尽量尝试将敌人消灭在沙包圈以外吧, 毕竟古人有云, 进攻才是最好的防御手段</p>
+
+<p>————</p>
+
+<p>税费别名: 在地牢模式中, 基础工资被改名为"奖学金", 帝国建设基金被改名为"助学贷款分期", 军队建设基金被改名为"助学贷款利息", 宿舍附加费用被改名为"伙食费", 自愿福利保险依然叫"自愿福利保险", 它们分别对应了 <c>Tax1/Tax2/Tax3/Tax4</c>, 只是文本差异而已</p>
+
+<p>动态变化: 收支并非一成不变的, 它们会受到各种事件的影响, 例如开放宿舍后, 宿舍附加费用会 <c>+200%</c>, 到了游戏中后期, 机体维修和大门维修的费率也大幅度提升, 而影响较为明显, 还要属弹药费的上涨, 换弹甚至可能导致收益归零, 更多细节可查阅 <a href="./event_detail.html">事件详情.html</a></p>
 
 </section>
 
@@ -188,25 +209,23 @@
 
 <section><h2 id="heading03">03. 算法合集</h2>
 
-<p>换弹费用: 它公式为 <c>武器换弹老化概率 × UseArmorCostRate × 0.01</c>, <c>UseArmorCostRate</c> 可查阅上方的税费参数表, 例如雷神焚天炮, 老化概率为 <c>75</c>, 在无尽模式中的费用就是 <c>75 × -3 × 0.01 = -2.25</c>, 值得注意的是, 武器详情面板里显示的弹药费用并没有考虑到驾驶员的属性和武器维护模块的影响, 所以那个值是可能偏高的, 如果你已经将武器的老化概率压低, 战后结算界面会正常计算的;</p>
+<p>换弹费用: 它公式为 <c>武器换弹老化概率 × UseArmorCostRate × 0.01</c>, <c>UseArmorCostRate</c> 可查阅上方的税费参数表, 如雷神焚天炮, 老化概率为 <c>100</c>, 在挑战模式中的费用就是 <c>100 × -2 × 0.01 = -2</c>, 值得注意的是, 武器详情面板显示的弹药费用并没有考虑到[驾驶员的武器维护属性/武器维护模块]的影响, 所以那个值是可能偏高的, 如果你已经将武器的老化概率压低, 战后结算是会正常计算的</p>
 
-<p>战略武器和肩扛武器费用: 它公式为 <c>武器冷却时间 × UseStrategyCostRate × 0.01</c>, <c>UseStrategyCostRate</c> 可查阅上方的税费参数表, 例如饱和轰炸, 冷却时间为 <c>50</c>, 在无尽模式中的费用就是 <c>50 × -2 × 0.01 = -1</c>, 值得注意的是, 虽然雨天和某些手段(如配件或忠诚度奖励)会影响到冷却时间, 但这里的费用计算并不受外界因素的影响, 它只看原本的参数, 所以这部分的费用也没有下调的余地;</p>
+<p>战略武器和肩扛武器费用: 它的公式为 <c>CD × 2 × 0.01 × UseStrategyCostRate</c>, <c>UseStrategyCostRate</c> 可以查阅上方的税费参数表, 例如空投聚变反应堆, CD 为 <c>100</c>, 那么在挑战模式的费用就是 <c>100 × 2 × 0.01 × -1 = -2</c>, 值得注意的是, 虽然雨天和某些手段(如肩扛配件或忠诚度奖励)会影响 CD 的时间, 但费用计算不受外界因素影响, 它只看原本的参数, 所以这部分的费用也没有下调的余地</p>
 
-<p>技能费用: 它公式为 <c>技能的脑负荷代价 × UseStrategy2CostRate × 0.01</c>, <c>UseStrategy2CostRate</c> 可查阅上方的税费参数表, 例如库罗库的装填过载, 脑负荷代价为 <c>15</c>, 在潜入模式中的费用就是 <c>15 × -24 × 0.01 = -3.6</c>, 结果向下取整, 也就是 <c>-3</c>, 目前并没有手段能降低技能所带来的脑负荷, 所以这个费用也没有下调的余地, 不过这个费用只存在于挑战模式和潜入模式, 所以影响也不大;</p>
+<p>技能费用: 它公式为 <c>技能的脑负荷代价 × 0.01 × UseStrategy2CostRate</c>, <c>UseStrategy2CostRate</c> 可查阅上方的税费参数表, 例如库罗库的技能"装填过载", 脑负荷增加 <c>15</c>, 那么在潜入模式中的费用就是 <c>15 × 0.01 × -24 = -3.6</c>, 结果向下取整, 也就是 <c>-3</c>, 目前并没有手段能降低技能带来的脑负荷, 所以这个费用也没有下调的余地, 但这个费用只存在于挑战模式和潜入模式, 所以影响也不大</p>
 
-<p>敌军突入防线导致的扣费: 它公式为 <c>敌军与大门的距离 ÷ EnemyGetInMax</c>, <c>EnemyGetInMax</c> 可查阅上方的税费参数表, 例如在无尽模式中, 有某个敌军单位突破了防线, 距离我方大门的中心点为 <c>14</c>, 这相当于放电炮的最大射程, 则战后扣费就是 <c>14 ÷ 28 = 0.5</c>, 也就是说, 本场战斗的荣誉点就只剩 <c>50%</c>, 不过算法有个极限, 最小为 <c>0.25</c>, 就算防线被完全突破, 保底也能留下 <c>25%</c> 荣誉点;</p>
-
-<p>————</p>
-
-<p>武器配件的拆卸代价: 当武器从机体上卸下时, 并不需要支付任何费用, 但配件从武器上拆下时, 如果配件价格 <c>>=30</c>, 则需要以武器的耐久度为代价, 具体算法为 <c>配件价格÷10</c>, 结果向下取整, 例如将制式弹鼓从武器上拆下, 该配件的价格为 <c>100</c>, 就会降低 <c>100÷10=10</c> 的耐久度, 如果武器耐久度小于拆下配件所需要扣除的耐久度, 那么配件将无法被拆下, 不过将配件直接拖去回收, 则没有代价;</p>
-
-<p>武器维修的代价: 除了拆下配件可能导致武器耐久度下降, 触发开火老化和换弹老化, 也分别会 <c>-1%</c> 和 <c>-3%</c> 的武器耐久度, 当我们升级武器时, 耐久度会被平均, 既所有武器的耐久度相加再除以武器数量, 这也是恢复武器耐久度的一种方法, 除此之外, 就只能用资金或装备对武器进行维修了, 维修的算法为 <c>武器价格 × 1.2 × (1 - 当前武器耐久)</c>, 更多细节可查阅 <a href="./data_manage_building.html#heading04">基地部门.html # 04.机体部门</a>;</p>
-
-<p>其他的拆卸: 除武器和投掷物以外, 所有用于机体的配件, 当价格 <c>>=30</c> 的时候, 拆卸就都需要付费, 具体算法为 <c>配件价格÷10</c>, 结果向下取整, 例如高级耐久模块的价格为 <c>75</c>, 拆卸就需要支付 <c>75÷10≈7</c> 的资金, 实际上大门的装备和驾驶员的饰品, 在拆卸时也是使用这个算法, 只不过拆卸饰品所付出的代价并非资金, 而是脑负荷, 如果当前脑负荷加上拆卸后上升的脑负荷 <c>>135</c>, 则无法被拆卸;</p>
+<p>敌军突入防线导致的扣费: 算法为 <c>敌军与大门的距离 ÷ EnemyGetInMax</c>, <c>EnemyGetInMax</c> 可查阅上方的税费参数表, 例如无尽模式, 有某个敌军单位突破了防线, 距离我方大门的中心点为 <c>14</c>, 这相当于放电炮的最大射程, 则战后扣费为 <c>14 ÷ 28 = 0.5</c>, 也就是说, 本场战斗的荣誉点收益就只剩下 <c>50%</c>, 不过这个算法有个极限, 最小值为 <c>0.25</c>, 就算防线被完全突破, 保底也能留下 <c>25%</c> 荣誉点</p>
 
 <p>————</p>
 
-<p>拆卸小技巧: 拆卸大多有代价, 但如果你安装了"模块化机组"这个机体改造的装备, 则拆卸没有折损费(但武器配件除外), 除此之外, 如果装备或配件是直接拖到回收栏, 也没拆卸代价, 还有就是, 因升级而导致同级装备或配件被卸下, 也没拆卸代价(例如武器上有两个穿甲模块, 一个二级一个三级, 将二级升级成三级后, 就同时存在两个三级, 此时其中一个配件将会被自动卸下, 这种情况就是不收费的);</p>
+<p>武器配件的拆卸代价: 当武器从机体上卸下时, 无需支付费用, 但配件从武器上拆下时, 如果配件价格 <c>>= 20</c>, 则需要以武器的耐久度为代价, 具体算法为 <c>配件价格÷10</c>, 结果向下取整, 例如将"制式弹鼓"从武器上拆下, 由于配件的价格为 <c>80</c>, 会降低 <c>80÷10=8</c> 的耐久度, 如果武器当前的耐久度已经小于拆下配件所需要扣除的耐久度, 那么配件就无法被拆下, 但如果将配件直接拖去回收则无需代价</p>
+
+<p>武器维修的代价: 除了拆下配件可能导致武器耐久度下降, 触发开火老化和换弹老化, 也分别会 <c>-1%</c> 和 <c>-3%</c> 的武器耐久度, 当我们升级武器时, 耐久度会被平均, 既所有武器的耐久度相加再除以武器数量, 这也是恢复武器耐久度的一种方法, 除此之外, 就只能用资金或装备对武器进行维修了, 维修的算法为 <c>武器价格 × 1.2 × (1 - 当前武器耐久)</c>, 更多细节可以查阅 <a href="./data_manage_building.html#heading04">基地部门.html # 04.机体部门</a></p>
+
+<p>其他的拆卸: 除了武器和投掷物以外, 所有用于机体的配件, 当价格 <c>>=20</c> 的时候, 拆卸就都需要付费, 具体的算法为 <c>装备价格÷10</c>, 结果向下取整, 例如高级耐久模块的价格为 <c>75</c>, 拆卸就需要支付 <c>75÷10≈7</c> 的资金, 饰品装备的拆卸也是用这个算法, 只不过付出的代价是脑负荷, 如果当前脑负荷加上拆卸后上升的脑负荷 <c>> 135</c>, 则无法被拆卸, 而战略武器与大门装备的拆卸则无需支付任何费用</p>
+
+<p>小技巧: 拆卸大多有代价, 但如果安装了"模块化机组"这个机体改造的装备, 则拆卸不会产生折损费(但武器配件除外), 除此之外, 如果装备或配件是直接拖到回收栏, 也没拆卸代价, 还有就是, 因升级而导致同级装备或配件被卸下, 也没拆卸代价, 例如武器上有两个穿甲模块, 一个二级一个三级, 将二级升级成三级后, 就同时存在两个三级配件, 此时其中一个配件将会被自动卸下, 这种情况就是不收费的</p>
 
 </section>
 
@@ -214,18 +233,45 @@
 
 <section><h2 id="heading04">04. 偷税操作</h2>
 
-<p>基本概念: 当思潮偏向叛逆, 在战后结算页面, 可对帝国建设基金/军队建设基金/宿舍附加费用/自愿福利保险这四项支出执行偷税操作, 一旦成功, 当天这个支出就能省下, 这在初期可能意义不大, 但中后期税费变高, 就有了操作的价值, 我们甚至可用香烟来提升成功率, 或用酒降来低曝光率, 值得注意的是, 偷税失败和偷税曝光是两码事, 失败并没有惩罚, 甚至还能提升下次偷税的成功率, 曝光则队长会被抓去教育, 这将导致思潮偏向保守, 并且被偷那项税费也会变得更高, 不过好在可用 <c>2</c> 香烟或 <c>2</c> 酒来执行贿赂, 以此避免惩罚;</p>
+<p>基本概念: 当思潮偏向叛逆, 在战后结算页面, 可对[帝国建设基金/军队建设基金/宿舍附加费用/自愿福利保险]这些支出执行偷税操作, 一旦成功, 当天的支出就能省下, 甚至可以用香烟来提升成功率, 或者使用酒降来低曝光率, 而偷税的收益是能够覆盖烟酒价值的, 只要有烟酒, 建议进行操作, 值得注意的是, 偷税失败和偷税曝光是两码事, 失败并没有惩罚, 甚至还能提升下次偷税的成功率, 曝光则队长会被抓去教育, 这将导致思潮偏向保守, 并且被偷那项税费也会变得更高, 不过好在可用 <c>2</c> 香烟或 <c>2</c> 酒来执行贿赂, 以此避免惩罚</p>
 
-<p>成功概率: <c>-(SuccessBasicRate÷TaxN)</c>, 结果值被限定在了 <c>0 ~ 1</c> 之间(既 <c>0% ~ 100%</c>), 假设我们是在无尽模式下偷取帝国建设基金的税费, 套用公式, 结果就是 <c>-(8÷-18)≈0.44</c>, <c>SuccessBasicRate</c> 和 <c>TaxN</c> 可查阅 <a href="#heading01"># 01.税费参数</a>, 前者还会受到贿赂和之前偷税成败导致成功率调整的影响, 后者也会受到各种事件的影响而增减, 所以这里只是简化算法而已, LV2 的叛逆思潮奖励可提高成功率, 公式为 <c>1-((1-成功率)÷奖励)</c>, 奖励默认为 <c>2</c>, 用之前的 <c>0.44</c> 成功率算, 结果就是 <c>1-((1-0.44)÷2)≈0.72</c>, 由于影响因素较多, 所以计算颇为复杂, 但基本概念无非就是, 税费越高成功率越低, 贿赂越多成功率越高, 只要香烟管够, 总能把成功率升得很高;</p>
+<p>成功概率: <c>-(SuccessBasicRate÷TaxN)</c>, 结果值被限定在 <c>0 ~ 1</c> 之间(也就是 <c>0% ~ 100%</c>), 假设在无尽模式下偷取帝国建设基金, 套用公式, 结果就是 <c>-(8÷-18)≈0.44</c>, <c>SuccessBasicRate</c> & <c>TaxN</c> 可查阅 <a href="#heading01"># 01.税费参数</a>, 前者还会受到贿赂和之前偷税成败导致成功率调整的影响, 后者也会受到各种事件的影响而增减, 所以这里只是简化算法而已, LV2 的叛逆思潮奖励还可以提高成功率, 公式为 <c>1-((1-成功率)÷奖励)</c>, 奖励这个变量默认为 <c>2</c>, 用之前的 <c>0.44</c> 成功率算, 结果为 <c>1-((1-0.44)÷2)≈0.72</c>, 由于影响因素较多, 所以计算的结果颇为复杂, 但基本概念无非就是, 税费越高成功率越低, 贿赂越多成功率越高, 只要香烟管够, 就可以把成功率升得很高</p>
 
-<p>曝光概率: <c>1+(ExposureRate÷TaxN)</c>, 结果值被限定在了 <c>0 ~ 1</c> 之间(既 <c>0% ~ 100%</c>), 假设我们是在无尽模式下偷取帝国建设基金的税费, 套用公式, 结果就是 <c>1+(12÷18)≈1.66</c>, <c>ExposureBasicRate</c> 和 <c>TaxN</c> 可查阅 <a href="#heading01"># 01.税费参数</a>, 前者还会受到贿赂和之前偷税成败导致曝光率调整的影响, 后者也会受到各种事件的影响而增减, 所以这里只是简化算法而已, LV4 的叛逆思潮奖励可降低曝光率, 公式为 <c>曝光率÷奖励</c>, 奖励默认为 <c>2</c>, 用之前的 <c>1.66</c> 曝光率算, 结果就是 <c>1.66÷2≈0.84</c>, 由于最后结果既没有小于 <c>0</c> 也没有大于 <c>1</c>, 因此无需再调整, 总之基本概念就是, 税费越高曝光率越高, 贿赂越多曝光率越低, 酒管够就能把曝光率压得足够低, 值得注意的是, 贿赂与之前偷税的成败, 对于成功率与曝光率的影响, 都仅限本次结算而已, 甚至完成外勤任务也会重置这些临时的影响;</p>
+<p>曝光概率: <c>1+(ExposureBasicRate÷TaxN)</c>, 结果值被限定在 <c>0 ~ 1</c> 之间(也就是 <c>0% ~ 100%</c>), 假设在无尽模式偷取帝国建设基金, 套用公式, 结果就是 <c>1+(12÷18)≈1.66</c>, <c>ExposureBasicRate</c> & <c>TaxN</c> 可查阅 <a href="#heading01"># 01.税费参数</a>, 前者还会受到贿赂以及之前偷税成败导致曝光率调整的影响, 后者也会受到各种事件的影响而增减, 所以这里只是简化算法而已, LV4 的叛逆思潮奖励可降低曝光率, 公式为 <c>曝光率÷奖励</c>, 奖励默认为 <c>2</c>, 用之前的 <c>1.66</c> 曝光率算, 结果就是 <c>1.66÷2≈0.84</c>, 由于最后结果, 既没有小于 <c>0</c> 也没有大于 <c>1</c>, 因此无需再调整, 总之基本概念为, 税费越高曝光率越高, 贿赂越多曝光率越低, 酒管够就能把曝光率压得足够低, 值得注意的是, 贿赂与之前偷税的成败, 对于成功率与曝光率的影响, 都仅限本次结算而已, 数据不会保留, 甚至完成外勤任务也会重置这些临时的影响</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -235,107 +281,181 @@
 
 /* 数据注解
 
+Value_0			故事正常
+Value_2			硬核残酷
+Value_Chan		挑战模式
+Value_Enl		无尽模式
+Value_KRK		潜入模式
+Value_SON		地牢模式
+Value_SONchan	地牢挑战
+
 */
 
-// 表01数据
-let tbodyArray01 = [
-	
-	// 高亮,	税费序号,	税费代码,					故事正常,		硬核残酷,		挑战模式,		无尽模式,		潜入模式		文本描述,								],		
-	// Active,	Number,		BaseSalary,					Value_0,		Value_2,		Value_Chan,		Value_Enl,		Value_KRK,		Descriptions,							],		//01		
-	
-	[1,			'01',		'Tax1',						-15,			-15,			-15,			-18,			-15,			'帝国建设基金',							],		
-	[1,			'02',		'Tax2',						-18,			-18,			-15,			-18,			-18,			'军队建设基金',							],		//01		
-	
-	[0,			'03',		'Tax3',						-15,			-15,			-15,			-18,			-15,			'宿舍附加费用',							],		
-	[0,			'04',		'Tax4',						-12,			-12,			-15,			-18,			-12,			'自愿福利保险',							],		//01		
-	
-	[1,			'05',		'FixArmor',					-10,			-20,			-20,			-20,			-50,			'机甲维修基数',							],		
-	[1,			'06',		'FixDoor',					-100,			-100,			-100,			-100,			-100,			'大门维修基数',							],		//01		
-	
-	[0,			'07',		'UseArmorCostRate',			-4,				-3,				-2,				-3,				0,				'武器弹药费乘算基数',					],		
-	[0,			'08',		'UseStrategyCostRate',		-2,				-1,				-2,				-2,				0,				'战略支援费乘算基数',					],		//01		
-	
-	[1,			'09',		'UseStrategy2CostRate',		0,				0,				-12,			0,				-24,			'使用技能开支',							],		
-	[1,			'10',		'EnemyGetInMax',			24,				32,				0,				28,				32,				'防线计算距离',							],		//01		
-	
-	[0,			'11',		'SuccessBasicRate',			10,				10,				15,				8,				10,				'偷税成功概率',							],		
-	[0,			'12',		'ExposureBasicRate',		10,				10,				15,				12,				10,				'偷税暴露概率',							],		//01		
-	
-	[1,			'13',		'BriberyPlusRate',			40,				20,				30,				30,				10,				'贿赂影响偷税成功率或曝光率',			],		
-	[1,			'14',		'PunishPlusRate',			0,				0,				0.2,			0.1,			0.25,			'偷税暴露导致税费增加百分比',			],		//01		
-	
-	[0,			'15',		'SuccessMinusSuccessRate',	5,				10,				15,				15,				10,				'偷税成功降低下回偷税成功率',			],		
-	[0,			'16',		'SuccessMinusExposureRate',	5,				10,				15,				15,				10,				'偷税成功提升下回偷税曝光率',			],		//01		
-	
-	[1,			'17',		'FailPlusSuccessRate',		20,				10,				15,				15,				10,				'偷税失败提升下回偷税成功率',			],		
-	[1,			'18',		'FailPlusExposureRate',		20,				10,				15,				15,				10,				'偷税失败降低下回偷税曝光率',			],		//01		
-	
-	[0,			'19',		'Base',						70,				70,				100,			100,			40,				'基础工资',								],		//01		
-	
-];
+let csv0 = (String.raw`// BaseSalary,Value_0,Value_2,Value_Chan,Value_Enl,Value_KRK,Value_SON,Value_SONchan
 
-// 项目名称
-let ItemsNameList = {
+Tax1,-15,-15,-15,-18,-15,-15,-15
+Tax2,-18,-18,-15,-18,-18,-18,-18
+Tax3,-15,-15,-15,-18,-15,-15,-15
+Tax4,-12,-12,-15,-18,-12,-12,-12
+
+Base,70,70,100,100,40,70,100
+TrophyTax,50,50,50,50,50,50,50
+
+FixArmor,-10,-20,-20,-20,-50,0,0
+FixDoor,-100,-100,-100,-100,-100,0,0
+
+UseArmorCostRate,-2,-3,-2,-3,0,0,0
+UseStrategyCostRate,-1,-1,-1,-1,0,0,0
+
+UseStrategy2CostRate,0,0,-12,0,-24,0,0
+EnemyGetInMax,24,32,0,28,32,0,0
+
+SuccessBasicRate,10,10,15,8,10,10,10
+ExposureBasicRate,10,10,15,12,10,10,10
+
+BriberyPlusRate,40,20,30,30,10,10,10
+PunishPlusRate,0,0,0.2,0.1,0.25,0.25,0.5
+
+SuccessMinusExposureRate,5,10,15,15,10,10,10
+SuccessMinusSuccessRate,5,10,15,15,10,10,10
+
+FailPlusExposureRate,20,10,15,15,10,10,10
+FailPlusSuccessRate,20,10,15,15,10,10,10
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	Tax1 :						['帝国建设基金',					'帝国建設基金',										'Empire Building Fund',																	],		
-	Tax2 :						['军队建设基金',					'軍隊建設基金',										'Military Construction Fund',															],		
-	Tax3 :						['宿舍附加费用',					'宿舎付加税',										'Dormitory additional taxes and fees',													],		
-	Tax4 :						['自愿福利保险',					'任意福祉保険',										'Voluntary welfare insurance',															],		//02		
+	项目名称 : {
 	
-	FixArmor :					['机甲维修基数',					'機甲整備基数',										'Mech maintenance base',																],		
-	FixDoor :					['大门维修基数',					'ゲートほしゅきすう',								'Gate maintenance base',																],		//02		
+	},
 	
-	UseArmorCostRate :			['武器弹药费乘算基数',				'武器弾薬費乗算基数',								'Calculation base for multiplying weapon and ammunition costs',							],		
-	UseStrategyCostRate :		['战略支援费乘算基数',				'戦略支援費乗算基数',								'Strategic support fee multiplied by calculation base',									],		//02		
+	文本描述 : {
 	
-	UseStrategy2CostRate :		['精力透支的额外开销',				'スキル支出の使用',									'Skill expenditure',																	],		
-	EnemyGetInMax :				['入侵防线的计算距离',				'ぼうせんけいさんきょり',							'Defense line calculation distance',													],		//02		
+	Tax1						: `帝国建设基金`					+ ` # 帝国建设基金,帝國建設基金,Empire Development Fund,帝国建設基金`,
+	Tax2						: `军队建设基金`					+ ` # 军队建设基金,軍隊建設基金,Armed Forces Development Fund,軍隊建設基金`,
 	
-	SuccessBasicRate :			['战后偷税的成功概率',				'脱税成功確率',										'Probability of tax evasion success',													],		
-	ExposureBasicRate :			['战后偷税的暴露概率',				'脱税暴露の確率',									'Probability of tax evasion exposure',													],		//02		
+	Tax3						: `宿舍附加费用`					+ ` # 宿舍附加税,宿舍附加稅,Dormitory Surtax,寮付加税`,
+	Tax4						: `自愿福利保险`					+ ` # 自愿福利保险,自願福利保險,Voluntary Benefits Insurance,任意給付保険`,
 	
-	BriberyPlusRate :			['贿赂影响偷税成功率或曝光率',		'賄賂が脱税の成功率や露出率に影響する',				'Bribery affects the success rate or exposure rate of tax evasion',						],		
-	PunishPlusRate :			['偷税暴露导致税费增加百分比',		'脱税発覚による税金増加率',							'Tax evasion exposure leads to a percentage increase in taxes and fees',				],		//02		
+	Base						: `基础工资`						+ ` # 基础工资,基礎工資,Basic Salary,基本給`,
+	TrophyTax					: `战利品税`						+ ` # 战利品税,戰利品稅,Loot tax,戦利品税`,
 	
-	SuccessMinusSuccessRate :	['偷税成功降低下回偷税成功率',		'脱税が成功して次回の脱税成功率を下げる',			'Successful tax evasion reduces the success rate of next tax evasion',					],		
-	SuccessMinusExposureRate :	['偷税成功提升下回偷税曝光率',		'脱税は次回の脱税露出率を高めることに成功した',		'Successful tax evasion increases exposure rate for next tax evasion',					],		//02		
+	FixArmor					: `机体维修基数`					+ ` # 机体维修,機體維修,Mecha Repair,機体修理`,
+	FixDoor						: `大门维修基数`					+ ` # 大门维修,大門維修,Gate Repair,ゲート修理`,
 	
-	FailPlusSuccessRate :		['偷税失败提升下回偷税成功率',		'脱税失敗で次回脱税成功率アップ',					'Tax evasion failure increases the success rate of tax evasion in the next attempt',	],		
-	FailPlusExposureRate :		['偷税失败降低下回偷税曝光率',		'脱税失敗で次回の脱税露出率が低下',					'Failed tax evasion reduces the exposure rate of next tax evasion',						],		//02		
+	UseArmorCostRate			: `武器弹药费的基数`				+ ` # 弹药费用,彈藥費用,Cost of ammunition,弾薬コスト`,
+	UseStrategyCostRate			: `战略支援费的基数`				+ ` # 战略武器费用,戰略武器費用,Strategic weapons costs,戦略兵器コスト`,
 	
-	Base :						['基础工资',						'基礎給',											'Basic salary',																			],		//02		
+	UseStrategy2CostRate		: `使用技能额外开销`				+ ` # 精神力透支,精神力透支,Spiritual overdraft,精神力過消耗`,
+	EnemyGetInMax				: `入侵防线计算距离`				+ ` # 敌军突入防线,敵軍突入防線,Enemy forces broke in,敵軍が侵入`,
+	
+	SuccessBasicRate			: `战后偷税成功概率`				+ ` # 战后偷税的成功概率,戰後偷稅的成功機率,Probability of tax evasion success,脱税成功確率`,
+	ExposureBasicRate			: `战后偷税暴露概率`				+ ` # 战后偷税的暴露概率,戰後偷稅的暴露機率,Probability of tax evasion exposure,脱税暴露の確率`,
+	
+	BriberyPlusRate				: `贿赂影响偷税成功率或曝光率`		+ ` # 贿赂影响偷税成功率或曝光率,賄賂影響偷稅成功率或曝光率,Bribery affects the success rate or exposure rate of tax evasion,賄賂が脱税の成功率や露出率に影響する`,
+	PunishPlusRate				: `偷税暴露导致税费增加百分比`		+ ` # 偷税暴露导致税费增加百分比,偷稅暴露導致稅費增加百分比,Tax evasion exposure leads to a percentage increase in taxes and fees,脱税発覚による税金増加率`,
+	
+	SuccessMinusSuccessRate		: `偷税成功降低下回偷税成功率`		+ ` # 偷税成功降低下回偷税成功率,偷稅成功降低下回偷稅成功率,Successful tax evasion reduces the success rate of next tax evasion,脱税が成功して次回の脱税成功率を下げる`,
+	SuccessMinusExposureRate	: `偷税成功提升下回偷税曝光率`		+ ` # 偷税成功提升下回偷税曝光率,偷稅成功提升下回偷稅曝光率,Successful tax evasion increases exposure rate for next tax evasion,脱税は次回の脱税露出率を高めることに成功した`,
+	
+	FailPlusSuccessRate			: `偷税失败提升下回偷税成功率`		+ ` # 偷税失败提升下回偷税成功率,偷稅失敗提升下回偷稅成功率,Tax evasion failure increases the success rate of tax evasion in the next attempt,脱税失敗で次回脱税成功率アップ`,
+	FailPlusExposureRate		: `偷税失败降低下回偷税曝光率`		+ ` # 偷税失败降低下回偷税曝光率,偷稅失敗降低下回偷稅曝光率,Failed tax evasion reduces the exposure rate of next tax evasion,脱税失敗で次回の脱税露出率が低下`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv0.forEach(function(item, index){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(csv0[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 文本描述
-		if(index ===  8){ powerTable_tbody_node01 += '<td style="height:40px;">'+ ItemsNameList[item[2]][0] +'</td>' }else 
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node01 += '<td style="height:40px;">'+ data +'</td>' };
-		
-	});
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		BaseSalary,			Tax1,
+	item.故事正常 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 故事正常		Value_0,			-15,
+	item.硬核残酷 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 硬核残酷		Value_2,			-15,
+	item.挑战模式 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 挑战模式		Value_Chan,			-15,
+	item.无尽模式 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 无尽模式		Value_Enl,			-18,
+	item.潜入模式 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 潜入模式		Value_KRK,			-15,
+	item.地牢模式 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 地牢模式		Value_SON,			-15,
+	item.地牢挑战 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 地牢挑战		Value_SONchan,		-15,
+	item.文本描述 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 文本描述		,					,
+	
+	// -----------------------------------------
+	
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	item.文本描述.text = (function(){
+		
+		// item.文本描述.text 
+		// = item.文本描述.text.replace(/\n/g, '<br />');
+		
+		// item.功能函数.code
+		// .split('|').map(function(value){ return value.replace(/.+:/, '') })
+		// .forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable01_tbody_html += /*item.项目图片*/'<td class="showPart01">'+ (item.项目序号+1) +'</td>';
+	//powerTable01_tbody_html += '<td class="showPart01">'+item.项目名称.text+'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.故事正常.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.硬核残酷.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.挑战模式.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.无尽模式.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.潜入模式.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.地牢模式.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.地牢挑战.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
 
 })();
 </script>
@@ -348,7 +468,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.3</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
 </div>
 </div>
 </div>
