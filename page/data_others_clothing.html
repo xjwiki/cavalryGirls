@@ -239,6 +239,7 @@ let csv1 = (String.raw`// Cloth,Unlock,Icon,Name,Type,Hide
 
 4_OutFit,-1,Casual4,OutfitCloth,1,0
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.replace('IDle1', 'Idle1').replace('IDle2', 'Idle2') // 对应图片的名称是小写的 d, 但是这里却使用了大写的 D
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
 // 文本内容
