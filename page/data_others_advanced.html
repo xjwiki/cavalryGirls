@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -14,11 +14,11 @@
 <script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
 
 <link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
-<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
 <script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
 <script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
 <script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
-<script src="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
 
 <link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
 <script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,27 +118,75 @@
 <section><h2 id="heading01">01. 难度强化</h2>
 
 <p>
-	01. 难度强化会提升游戏的挑战性, 难度越高, 奖励点数也会越多(奖励点数可用于兑换全局增益), 有些成就也需要相应难度才能达成; <br />
-	02. 无尽模式的难度共有 <c>32</c> 项, 会随着天数而逐步生效(每隔几天会强制你选择某项), 规律是低等级都选完了才会出现下一等级的; <br />
-	03. 挑战模式的难度共有 <c>18</c> 项, 实际上它不单影响挑战模式, 同时也应对于剧情模式下四个不同的难度, 难度越高生效项也就越多; <br />
-	04. 幸存模式的难度共有 <c>12</c> 项, 难度越高则点数奖励也越多, 奖励点数采用了百分比的单位, 并且是以累加的形式实现收益加成的; <br />
+	01. 下表是"剧情模式"和"无尽模式"的难度强化选项, 总共有 <c>32</c> 个, 它们会随天数推进, 以事件弹窗形式出现, 供玩家选择(三选一)<br />
+	02. 选项出现的规则是, 只有低等级的选项被选完了, 下个难度等级的选项才会出现, 所以虽有随机因素, 但整体会按难度等级依次生效<br />
+	03. 并非所有选项都有机会被用上, 剧情模式天数有限, 等级较高的选项来不及出现, 流程就会结束, 无尽模式如果提前退役, 也是如此<br />
 </p>
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">难度图标<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">难度序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:222px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">难度名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">难度代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">所属模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">点数奖励<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">等级划分<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">对应剧情<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">难度效果<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>难度等级</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width:256px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>功能函数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
+</table>
+
+<p>
+	01. 下表是"挑战模式"的难度强化等级, 总共有 <c>18</c> 级, 可在该模式的初始界面自由设置(但最高只能到第 17 级, 第 18 级已被废弃)<br />
+	02. 难度会影响负面 Buff 的数量和敌人的强度, 但也会奖励更多的驻防点数(可用于兑换全局增益), 有些成就也需要相应难度才能达成<br />
+</p>
+
+<table originalSort="1" id="powerTable02" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
+		<tr>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>点数奖励</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width:256px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>功能函数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody style="line-height:14px;"></tbody>
+</table>
+
+<p>
+	01. 下表是"幸存模式"的难度强化等级, 总共有 <c>12</c> 级, 可在该模式的初始界面自由设置, 奖励和影响都是使用累加的算法(而非覆盖)<br />
+</p>
+
+<table originalSort="1" id="powerTable03" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
+		<tr>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>点数奖励</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width:256px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>功能函数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -148,29 +196,87 @@
 <section><h2 id="heading02">02. 全局增益</h2>
 
 <p>
-	01. 全局增益是达成条件后, 使用点数兑换的奖励效果, 不过它只对新档游戏有效, 目前仅剧情模式/挑战模式/幸存模式存在全局增益; <br />
-	02. 剧情模式的增益共有 <c>17</c> 项, 需要靠解锁成就的奖励点数启动(点数在成就界面领取), 不过当前的奖励点数不足以启用所有增益; <br />
-	03. 挑战模式的增益共有 <c>8</c> 项, 需要靠驻防点数启用, 驻防点数来源于天数, 在该模式下坚守越多天, 能得到的驻防点数也就会越多; <br />
-	04. 幸存模式的增益共有 <c>5</c> 项, 需要靠生存点数启用, 生存点数来源于关卡, 在该模式下通过越多关, 能得到的生存点数也就会越多; <br />
+	01. 下表是"剧情模式"的全局增益效果, 总共有 <c>18</c> 项, 你可以在成就界面, 通过解锁成就兑换"成就点数", 然后用这种点数激活它们<br />
+	02. 完成所有成就, 点数奖励共计约为三万, 激活所有增益, 需求点数共计约为五万, 所以, 当下即便解锁全成就, 也无法启用全部增益<br />
+	03. 增益效果仅对新档有效, 存档并不受后期增益变更的影响, 尽管剧情模式和无尽模式共用难度强化选项, 但以下增益对无尽模式无效<br />
 </p>
 
-<table originalSort="1" id="powerTable02" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<table originalSort="1" id="powerTable04" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">增益图标<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">增益序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">增益名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">增益代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:120px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">所属模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">最大等级<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">收益数值<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">收益上限<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">初始需求<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">升级需求<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">合计需求<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>等级上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始奖励</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大奖励</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>升级消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>满级需求</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
+</table>
+
+<p>
+	01. 下表是"挑战模式"的全局增益效果, 总共有 <c>8</c> 项, 你可以在该模式的初始界面, 点击"全局增益"按钮 → 使用"驻防点数"激活它们<br />
+	02. 玩到通关结算或者中途退役, 都能得到一定的驻防点数(退役按钮在整备界面顶部, 但初始是隐藏的, 需要等到第 <c>8</c> 天才会出现!)<br />
+</p>
+
+<table originalSort="1" id="powerTable05" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
+		<tr>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>等级上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始奖励</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大奖励</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>升级消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>满级需求</b><i class="icon fas fa-sort"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody style="line-height:14px;"></tbody>
+</table>
+
+<p>
+	01. 下表是"挑战模式"的全局增益效果, 总共有 <c>6</c> 项, 需要使用"生存点数"进行激活, 其操作与挑战模式的全局增益类似, 不再复述…<br />
+</p>
+
+<table originalSort="1" id="powerTable06" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
+		<tr>
+			
+			<th sorttype="string" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>等级上限</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始奖励</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>最大奖励</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>初始消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>升级消耗</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>满级需求</b><i class="icon fas fa-sort"></i></span></th>
+			
+		</tr>
+	</thead>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -179,41 +285,61 @@
 
 <section><h2 id="heading03">03. 额外拓展</h2>
 
-<p>难度强化的缩略图标: 实际上只有无尽模式的难度强化数据具有图标, 挑战模式和幸存模式都是没有的(只有纯文本的描述而已), 只不过挑战模式和幸存模式的选项内容和无尽模式类似, 背后使用的也是相同的代码, 这里为了表格美观, 就选用了一些描述近似的作为替代;</p>
+<p id="剧情模式的难度强化"><nb>剧情模式的难度强化</nb>: 在剧情模式中, [故事/正常]难度, 会在第 <c>[34/46/58/69/73/77/81/85/89/93]</c> 这 <c>10</c> 天, 分别触发一次难度提升事件, [硬核/残酷]难度, 会在第 <c>[34/39/43/48/52/56/60/69/73/76/79/82/86/90/93]</c> 这 <c>15</c> 天, 分别触发一次难度提升事件, 除了由玩家自主选择的难度强化选项外, 硬核难度初始还会自带难度等级 <c>< 2</c> 的难度强化选项(共计 <c>3</c> 项), 残酷难度初始还会自带难度等级 <c>< 3</c> 的难度强化选项(共计 <c>8</c> 项), 所以, 最终这两个难度的难度选项总计分别为 <c>3+15=18</c> 和 <c>8+15=23</c>, 而不是 <c>15</c></p>
 
-<p>难度强化的效果算法: 同类型的难度强化效果是累加的, 例如在无尽模式下, 高效组装线的效果和高效生产线的效果, 分别是敌方全属性小幅强化(+3%)和敌方全属性小幅强化(+4%), 当它们同时存在时, 敌方全属性强化就变成了 <c>3% + 4% = 7%</c>, 而不是 <c>4%</c> 代替 <c>3%</c>;</p>
+<p id="无尽模式的难度强化"><nb>无尽模式的难度强化</nb>: 在无尽模式中, 会以 <c>40</c> 天为 <c>1</c> 循环, 并在 <c>[2/8/12/16/19/23/28/33/38]</c> 这 <c>9</c> 天, 分别触发一次难度提升事件, 如果你能一直坚守下去, 那么将会在第 <c>4</c> 个循环周期内(大约第 <c>139</c> 天左右), 选完所有的难度强化选项(共计 <c>32</c> 项)</p>
 
-<p>————</p>
+<p id="挑战模式的点数奖励"><nb>挑战模式的点数奖励</nb>: 在挑战模式中, 如果初始设置了难度强化, 则战后可得到更多驻防点数的奖励, 难度越高, 奖励越多, 这里采用的是累加算法, 例如在最高级的难度强化下(LV18), 数收益将 <c>× (20+25+25+30+50+20+20+30+20+50+50+60+100+50+50+100+50+100=850)%</c></p>
 
-<p>难度强化的点数奖励: 挑战模式和幸存模式的难度强化存在点数奖励, 既难度越高, 最后能得到的点数奖励也越多, 点数奖励是采用了累加的算法, 例如在挑战模式下, 难度 LV1 的点数奖励为 <c>20</c>, 难度 LV2 的点数奖励为 <c>25</c>, 那么在 LV2 难度下, 战后所能得到的点数奖励将会 <c>×(1+((20+25)÷100))</c>, 挑战模式下最高难度的点数奖励, 合计为 <c>850</c>, 幸存模式下最高难度的点数奖励, 合计为 <c>760</c>;</p>
-
-<p>难度强化的等级划分: 无尽模式的难度强化存在等级划分, 既等级越高, 难度强化选项的影响就越大, 无尽模式以 <c>40</c> 天为一循环, 并在 <c>2/8/12/16/19/23/28/33/38</c> 的天数里, 强迫你选一项难度强化(一般是三选一), 如果你能坚守下去, 那么将会在第 <c>4</c> 个循环周期内(大约第 <c>139</c> 天左右)选完所有的难度强化选项, 而等级划分的作用是, 只有前一级的选项都选完了, 下一级的难度选项才会出现;</p>
-
-<p>难度强化的对应剧情: 挑战模式的难度强化存在对应剧情, 既这些难度选项对于剧情模式的影响, 该属性共有 <c>2/3/4</c> 三个值, 分别对应剧情模式下的 <c>正常/硬核/残酷</c> 三个难度等级, 例如, 当我们在剧情模式中选择了硬核难度(对应值为 <c>3</c>), 那么挑战模式那些对应剧情属性 <c><=3</c> 的难度选项都会同时生效(故事难度对应的值应为 <c>1</c>, 但由于该属性没有值为 <c>1</c>, 所以故事难度没有任何难度加成);</p>
+<p id="幸存模式的点数奖励"><nb>幸存模式的点数奖励</nb>: 在幸存模式中, 如果初始设置了难度强化, 则战后可得到更多生存点数的奖励, 难度越高, 奖励越多, 与挑战模式相同的, 也是采用了累加算法, 例如在最高级的难度强化下(LV12), 数收益将 <c>× (20+25+40+50+100+40+100+100+100+50+75+150=850)%</c></p>
 
 <p>————</p>
 
-<p>全局增益的收益算法: 大多数全局增益的选项都有多个等级, 而收益采用的是替换算法, 如剧情模式下的初始资金, 第一级可增加 <c>100</c> 资金, 每升一级增加 <c>100</c> 资金, 那么升到满级既第五级就增加 <c>500</c> 资金, 结果就是 <c>500</c>, 而不是 <c>100+200+300+400+500=1500</c>;</p>
+<p id="剧情模式的全局增益"><nb>剧情模式的全局增益</nb>: 剧情模式的全局增益需要靠奖励点解锁, 而奖励点来源于解锁成就, 但目前所有成就能提供的奖励点, 合计总共是 <c>30350</c>, 而解锁该模式的所有全局增益, 总共需要奖励点是 <c>48045</c>, 这也就是说, 就算你达成了全成就, 也无法解锁所有的全局增益, 只能等后续 DLC 增加更多成就了(可以考虑不提升驾驶员的初始忠诚度, 因为初始那几级其实很容易达成, 且提前升级就收不到回礼了!)</p>
 
-<p>全局增益的需求算法: 大多数全局增益的选项都有多个等级, 而需求采用的是累加算法, 如剧情模式下的初始资金, 第一级需求的点数为 <c>200</c>, 升级需求点数为 <c>200</c>, 第二级需求点数为 <c>200+200=400</c>, 第三级需求点数为 <c>400+200=600</c>, 既在上一级需求的基础上累加;</p>
+<p id="挑战模式的全局增益"><nb>挑战模式的全局增益</nb>: 挑战模式的全局增益需要靠驻防点解锁(合计需要 <c>27775</c>), 而驻防点来源于在该模式所坚守的天数, 具体算法为 <c>每日结算界面的最终资金收益 × Round(当前天数 ÷ 10) ÷ DefendPointGetRate × (1 + 难度强化的点数奖励之和 ÷ 100)</c>, "每日结算界面的最终资金收益"等于(基本工资 + 军衔工资 + 资金奖励 - 大门维修费 - 机体维修费)的值, "Round(当前天数 ÷ 10)"的 Round 既取整, "DefendPointGetRate"是 Base.csv 表中的变量, 默认为 <c>10</c>, "难度强化的点数奖励之和"则取决于究竟难度强化开到了第 N 级</p>
 
-<p>————</p>
-
-<p>剧情模式的全局增益: 剧情模式的全局增益需要靠奖励点解锁, 而奖励点来源于解锁成就, 但目前所有成就能提供的奖励点, 合计总共是 <c>28970</c>, 而解锁该模式的所有全局增益, 总共需要的奖励点 <c>42720</c>, 这也就是说, 就算你达成了全成就, 也无法解锁所有的全局增益, 只能等后续 DLC 增加更多成就了(可以考虑不提升驾驶员的初始忠诚度, 因为初始那几级其实很容易升级, 且提前升级就收不到回礼了);</p>
-
-<p>挑战模式的全局增益: 挑战模式的全局增益需要靠驻防点解锁(合计需求为 <c>22990</c> 点), 而驻防点来源于在该模式下所坚守的天数, 具体算法为 <c>每日结算界面的最终资金收益 × Round(当前天数 ÷ 10) ÷ DefendPointGetRate × (1 + 难度强化的点数奖励之和 ÷ 100)</c>, "每日结算界面的最终资金收益"等于(基本工资+军衔工资+资金奖励-大门维修费-机体维修费), "Round(当前天数 ÷ 10)"的 Round 既取整, "DefendPointGetRate"是 Base.csv 表中的变量, 默认为 <c>10</c>, "难度强化的点数奖励之和"则取决于究竟难度强化开到了第几级; </p>
-
-<p>幸存模式的全局增益: 幸存模式的全局增益需要靠生存点解锁(合计需求为 <c>10400</c> 点), 而生存点来源于在该模式下所通过的关卡, 具体算法为 <c>BaseValue × (1 + 难度强化的点数奖励之和 ÷ 100)</c>, <c>BaseVlue</c> 可被翻译为基本值, 它取决于当前所在关卡, 当关卡小于 <c>SurvivePointMinDay</c> 时, 基本值为 <c>1</c>, 当关卡小于 <c>SurvivePointDay</c> 时, 基本值为 <c>SurvivePointBase</c>, 当关卡大于 <c>SurvivePointDay</c> 时, 基本值为 <c>当前关卡数值 × SurvivePointRate</c>, 也就是说, 关卡越靠后, 生存点收益就越高(<c>SurvivePointMinDay</c> / <c>SurvivePointDay</c> / <c>SurvivePointBase</c> / <c>SurvivePointRate</c> 都是 Base.csv 表中的变量, 默认为 <c>5</c> / <c>15</c> / <c>50</c> / <c>11</c>);</p>
+<p id="幸存模式的全局增益"><nb>幸存模式的全局增益</nb>: 幸存模式的全局增益需要靠生存点解锁(合计需要 <c>12650</c>), 而生存点来源于在该模式所通过的关卡, 具体算法为 <c>BaseValue × (1 + 难度强化的点数奖励之和 ÷ 100)</c>, <c>BaseVlue</c> 可被翻译为基本值, 它取决于当前所在关卡数, 当关卡 <c>< SurvivePointMinDay</c> 时, 基本值为 <c>1</c>, 当关卡 <c>< SurvivePointDay</c> 时, 基本值为 <c>SurvivePointBase</c>, 当关卡 <c>> SurvivePointDay</c> 时, 基本值为 <c>当前关卡数 × SurvivePointRate</c>, 也就是说, 关卡越靠后, 生存点收益越高(上文里提到的变量, [<c>SurvivePointMinDay</c>/<c>SurvivePointDay</c>/<c>SurvivePointBase</c>/<c>SurvivePointRate</c>] 都是 Base.csv 表的变量, 它们的默认值分别 [<c>5</c>/<c>15</c>/<c>50</c>/<c>11</c>])</p>
 
 <p>————</p>
 
-<p>幸存模式的进度算法: 在幸存模式的战场界面, 顶部有进度条, 需要打爆足够的敌人, 将进度条填满才能进入下一关, 这个进度条的最大值是 <c>TotalHonor × SurRateBase</c>, 每打爆一个敌人, 进度条增加值是 <c>Price_Chan × SurRateBase</c>, <c>TotalHonor</c> 是当前关卡的荣誉奖励值, <c>Price_Chan</c> 是敌人的特殊价值(如果 <c><1</c> 则自动调整为 <c>1</c>), <c>SurRateBase</c> 则是 Base.csv 表中的变量, 默认为 <c>20</c>, 如果被打爆的是个 Boss, 那么结果还得进度条增加值得 <c>÷2</c>, 举例来说, 幸存模式的首关, 进度条最大值就是 <c>20×20=400</c>, 那么只需要打爆 <c>20</c> 台军刀即可, 因为军刀的特殊价值 <c><1</c>, 所以调整为 <c>1</c>, 打爆就是增加 <c>1×20=20</c> 进度, 所以就是 <c>400÷20=20</c> 台;</p>
+<p id="全局增益的收益算法"><nb>全局增益的收益算法</nb>: 大多数全局增益的选项都有多个等级, 而收益采用的是替换算法, 如剧情模式下的初始资金, 第一级 <c>+100</c> 资金, 之后每升一级会再 <c>+100</c> 资金, 那么升到满级既第五级就增加 <c>500</c> 资金, 结果就是 <c>500</c>, 而不是 <c>100+200+300+400+500=1500</c></p>
+
+<p id="全局增益的需求算法"><nb>全局增益的需求算法</nb>: 大多数全局增益的选项都有多个等级, 而需求采用的是累加算法, 如剧情模式下的初始资金, 第一级需求的点数为 <c>200</c>, 升级消耗 <c>200</c> 点数, 第二级需求点数为 <c>200+200=400</c>, 第三级需求点数为 <c>200+200+200=600</c>, 既在上一级需求基础上累加</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
+#powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -223,352 +349,1089 @@
 
 /* 数据注解
 
+Items.csv
+除了有无尽模式的 32 条数据, 还有演习模式的一些数据, 但目前没被用到
+
+EnlDifficult.csv
+该模式现在同时也是剧情模式的难度选项, 它的图标和函数由 Items.csv 中的数据所决定
+
+SurDifficult.csv
+DifficultInit, 该属性并没有意义, 可能是因为复制 ChanDifficult.csv 文件结构时一并带过来的
+
+ChanDifficult.csv
+DifficultInit, 该属性过去用于设置剧情模式自动生效的难度效果, 但现在该功能已经被废弃, 不用理会
+DailyDiffEffective, 该属性为 1 的数据, 同时也是演习模式的难度词条, 对应 items.csv 的 9 条数据
+
 */
 
-// 表01数据
-let tbodyArray01 = [
-	
-	// 高亮,		难度图标,		难度序号,		难度名称,					难度代码,		所属模式,		点数奖励,		等级划分,		对应剧情,		难度效果,										],		
-	// Active,		Image,			Number, 		Name,						EnlDifficult,	Model,			Reward,			Level,			DifficultInit,	Effect,											],		//01		
-	
-	[1,				501,			'01',			'高效组装',					1,				'Enl',			0,				1,				0,				'EnemyStrengthen_All:3',						],		
-	[1,				502,			'02',			'高效生产线',				2,				'Enl',			0,				1,				0,				'EnemyStrengthen_All:4',						],		
-	[1,				508,			'03',			'自动化生产线',				8,				'Enl',			0,				2,				0,				'EnemyStrengthen_All:6',						],		
-	[1,				516,			'04',			'超高精度生产线',			16,				'Enl',			0,				3,				0,				'EnemyStrengthen_All:9',						],		
-	[1,				518,			'05',			'高精度生产线',				18,				'Enl',			0,				4,				0,				'EnemyStrengthen_All:12',						],		
-	[1,				527,			'06',			'特高精度生产线',			27,				'Enl',			0,				5,				0,				'EnemyStrengthen_All:16',						],		//01		
-	
-	[0,				512,			'07',			'精英强化',					12,				'Enl',			0,				2,				0,				'EnemyStrengthen_Boss:20',						],		
-	[0,				517,			'08',			'强大精英',					17,				'Enl',			0,				3,				0,				'EnemyStrengthen_Boss:30',						],		
-	[0,				522,			'09',			'精英大强化',				22,				'Enl',			0,				4,				0,				'EnemyStrengthen_Boss:20',						],		
-	[0,				528,			'10',			'高精密精英',				28,				'Enl',			0,				5,				0,				'EnemyStrengthen_Boss:60',						],		
-	[0,				531,			'11',			'极强大精英',				31,				'Enl',			0,				6,				0,				'EnemyStrengthen_Boss:100',						],		//01		
-	
-	[1,				503,			'12',			'低温焊枪',					3,				'Enl',			0,				1,				0,				'EnemyStrengthen_Armor:15',						],		
-	[1,				504,			'13',			'焊接升级',					4,				'Enl',			0,				1,				0,				'EnemyStrengthen_Armor:15',						],		
-	[1,				513,			'14',			'无缝焊接',					13,				'Enl',			0,				3,				0,				'EnemyStrengthen_Armor:25',						],		
-	[1,				524,			'15',			'高精密焊接',				24,				'Enl',			0,				5,				0,				'EnemyStrengthen_Armor:50',						],		//01		
-	
-	[0,				507,			'16',			'膛线优化',					7,				'Enl',			0,				1,				0,				'EnemyStrengthen_RangePlus:4',					],		
-	[0,				515,			'17',			'炮口强化',					15,				'Enl',			0,				3,				0,				'EnemyStrengthen_RangePlus:9',					],		
-	[0,				526,			'18',			'高精密炮管',				26,				'Enl',			0,				5,				0,				'EnemyStrengthen_RangePlus:16',					],		//01		
-	
-	[1,				509,			'19',			'基建炮击',					9,				'Enl',			0,				2,				0,				'ChanllengeStrengthen_ManPPlus:1',				],		
-	[1,				519,			'20',			'基建渗透',					19,				'Enl',			0,				4,				0,				'ChanllengeStrengthen_ManPPlus:1',				],		//01		
-	
-	[0,				505,			'21',			'精密车工',					5,				'Enl',			0,				1,				0,				'EnemyStrengthen_Life:20',						],		
-	[0,				506,			'22',			'高速车床',					6,				'Enl',			0,				1,				0,				'EnemyStrengthen_Life:20',						],		
-	[0,				514,			'23',			'数控车工',					14,				'Enl',			0,				3,				0,				'EnemyStrengthen_Life:50',						],		
-	[0,				525,			'24',			'高精密车工',				25,				'Enl',			0,				5,				0,				'EnemyStrengthen_Life:75',						],		//01		
-	
-	[1,				510,			'25',			'补给线破坏',				10,				'Enl',			0,				2,				0,				'ChanllengeStrengthen_ArmCost:1',				],		
-	[1,				520,			'26',			'补给线切断',				20,				'Enl',			0,				4,				0,				'ChanllengeStrengthen_ArmCost:2',				],		
-	[1,				532,			'27',			'补给线毁灭',				32,				'Enl',			0,				6,				0,				'ChanllengeStrengthen_ArmCost:3',				],		//01		
-	
-	[0,				523,			'28',			'工厂破坏',					23,				'Enl',			0,				4,				0,				'ChanllengeStrengthen_FixCost:10',				],		
-	[0,				529,			'29',			'工厂毁灭',					29,				'Enl',			0,				5,				0,				'ChanllengeStrengthen_FixCost:20',				],		
-	[0,				530,			'30',			'工厂毁坏',					30,				'Enl',			0,				6,				0,				'ChanllengeStrengthen_FixCost:30',				],		//01		
-	
-	[1,				511,			'31',			'后勤破坏',					11,				'Enl',			0,				2,				0,				'ChanllengeStrengthen_ShopRef:2',				],		
-	[1,				521,			'32',			'后勤毁灭',					21,				'Enl',			0,				4,				0,				'ChanllengeStrengthen_ShopRef:3',				],		//01		
-	
-	[0,				501,			'33',			'高效组装',					1,				'Cha',			20,				0,				3,				'EnemyStrengthen_All:4',						],		
-	[0,				513,			'34',			'无缝焊接',					2,				'Cha',			25,				0,				2,				'EnemyStrengthen_Armor:25',						],		
-	[0,				514,			'35',			'数控车工',					3,				'Cha',			25,				0,				2,				'EnemyStrengthen_Life:40',						],		
-	[0,				526,			'36',			'炮口强化',					4,				'Cha',			30,				0,				3,				'EnemyStrengthen_RangePlus:10',					],		
-	[0,				516,			'37',			'超高精度生产线',			5,				'Cha',			50,				0,				2,				'EnemyStrengthen_All:8',						],		
-	[0,				509,			'38',			'基建炮击',					6,				'Cha',			20,				0,				3,				'ChanllengeStrengthen_ManPPlus:1',				],		
-	[0,				510,			'39',			'补给线破坏',				7,				'Cha',			20,				0,				3,				'ChanllengeStrengthen_ArmCost:1',				],		
-	[0,				521,			'40',			'后勤毁灭',					8,				'Cha',			30,				0,				3,				'ChanllengeStrengthen_ShopRef:4',				],		//01		
-	
-	[1,				512,			'41',			'精英强化',					9,				'Cha',			20,				0,				4,				'EnemyStrengthen_Boss:10',						],		
-	[1,				524,			'42',			'高精密焊接',				10,				'Cha',			50,				0,				3,				'EnemyStrengthen_Armor:50',						],		
-	[1,				525,			'43',			'高精密车工',				11,				'Cha',			50,				0,				3,				'EnemyStrengthen_Life:80',						],		
-	[1,				526,			'44',			'高精密炮管',				12,				'Cha',			60,				0,				4,				'EnemyStrengthen_RangePlus:30',					],		
-	[1,				518,			'45',			'高精度生产线',				13,				'Cha',			100,			0,				4,				'EnemyStrengthen_All:12',						],		
-	[1,				517,			'46',			'强大精英',					14,				'Cha',			50,				0,				4,				'EnemyStrengthen_Boss:30',						],		
-	[1,				529,			'47',			'工厂毁灭',					15,				'Cha',			50,				0,				3,				'ChanllengeStrengthen_FixCost:20',				],		
-	[1,				528,			'48',			'高精密精英',				16,				'Cha',			100,			0,				4,				'EnemyStrengthen_Boss:60',						],		
-	[1,				532,			'49',			'补给线毁灭',				17,				'Cha',			50,				0,				4,				'ChanllengeStrengthen_ArmCost:3',				],		
-	[1,				531,			'50',			'极强大精英',				18,				'Cha',			100,			0,				4,				'EnemyStrengthen_Boss:100',						],		//01		
-	
-	[0,				501,			'51',			'高效组装',					1,				'Sur',			20,				0,				0,				'EnemyStrengthen_All:4',						],		
-	[0,				504,			'52',			'焊接升级',					2,				'Sur',			25,				0,				0,				'EnemyStrengthen_Armor:20',						],		
-	[0,				514,			'53',			'数控车工',					3,				'Sur',			40,				0,				0,				'EnemyStrengthen_Life:40',						],		
-	[0,				526,			'54',			'炮口强化',					4,				'Sur',			50,				0,				0,				'EnemyStrengthen_RangePlus:10',					],		
-	[0,				506,			'55',			'高速车床',					5,				'Sur',			60,				0,				0,				'EnemyStrengthen_All:10',						],		
-	[0,				513,			'56',			'无缝焊接',					6,				'Sur',			40,				0,				0,				'EnemyStrengthen_Armor:30',						],		//01		
-	
-	[1,				525,			'57',			'高精密车工',				7,				'Sur',			100,			0,				0,				'EnemyStrengthen_Life:80',						],		
-	[1,				526,			'58',			'高精密炮管',				8,				'Sur',			100,			0,				0,				'EnemyStrengthen_RangePlus:30',					],		
-	[1,				518,			'59',			'高精度生产线',				9,				'Sur',			100,			0,				0,				'EnemyStrengthen_All:12',						],		
-	[1,				517,			'60',			'强大精英',					10,				'Sur',			50,				0,				0,				'EnemyStrengthen_Boss:30',						],		
-	[1,				528,			'61',			'高精密精英',				11,				'Sur',			75,				0,				0,				'EnemyStrengthen_Boss:60',						],		
-	[1,				531,			'62',			'极强大精英',				12,				'Sur',			100,			0,				0,				'EnemyStrengthen_Boss:100',						],		//01		
-	
-];
+// 剧情难度
+let csv1 = (String.raw`// EnlDifficult,Level,ID,Description
 
-// 表02数据
-let tbodyArray02 = [
-	
-	// 高亮,		增益图标,		增益序号,		增益名称,					增益代码,		所属模式,		最大等级,		收益数值,		收益上限,		初始需求,		升级需求,		合计需求,		],		
-	// Active, 		Image,			Number, 		Title,						GlobalGain,		Model,			MaxLevel,		AddValue,		Limit,			FirstConsume,	AddConsume,		TotalConsume,	],		//01		
-	
-	[1,				1,				'01',			'初始资金',					1,				'Plo',			5,				100,			500,			200,			200,			3000,			],		//01		
-	
-	[0,				2,				'02',			'人力资源部初始等级',		2,				'Plo',			10,				1,				10,				40,				80,				4000,			],		
-	[0,				3,				'03',			'资源回收部初始等级',		3,				'Plo',			5,				1,				5,				40,				90,				1100,			],		
-	[0,				4,				'04',			'武器制造部初始等级',		4,				'Plo',			5,				1,				5,				40,				90,				1100,			],		
-	[0,				5,				'05',			'配件制造部初始等级',		5,				'Plo',			5,				1,				5,				80,				150,			1900,			],		
-	[0,				6,				'06',			'有机合成部初始等级',		6,				'Plo',			4,				1,				4,				100,			120,			1120,			],		
-	[0,				7,				'07',			'解体发电厂初始等级',		7,				'Plo',			5,				1,				5,				40,				80,				1000,			],		//01		
-	
-	[1,				8,				'08',			'初始叛逆',					8,				'Plo',			5,				2,				10,				80,				160,			2000,			],		
-	[1,				9,				'09',			'初始激进',					9,				'Plo',			5,				2,				10,				100,			160,			2100,			],		
-	[1,				10,				'10',			'初始博爱',					10,				'Plo',			5,				2,				10,				100,			90,				1400,			],		
-	[1,				11,				'11',			'初始理智',					11,				'Plo',			5,				2,				10,				120,			180,			2400,			],		//01		
-	
-	[0,				12,				'12',			'外围生效天数延迟(天)',		12,				'Plo',			4,				1,				4,				200,			400,			3200,			],		
-	[0,				13,				'13',			'外围到达天数减少(天)',		13,				'Plo',			2,				1,				2,				1600,			2400,			5600,			],		//01		
-	
-	[1,				14,				'14',			'库洛库初始好感',			14,				'Plo',			4,				1,				4,				200,			400,			3200,			],		
-	[1,				15,				'15',			'桑/San初始好感',			15,				'Plo',			4,				1,				4,				200,			400,			3200,			],		
-	[1,				16,				'16',			'赭石色初始好感',			16,				'Plo',			4,				1,				4,				200,			400,			3200,			],		
-	[1,				17,				'17',			'克莱尔初始好感',			17,				'Plo',			4,				1,				4,				200,			400,			3200,			],		//01		
-	
-	[0,				1,				'18',			'初始资金',					1,				'Cha',			10,				100,			1000,			100,			150,			7750,			],		//01		
-	
-	[1,				2,				'19',			'人力资源部初始等级',		2,				'Cha',			15,				1,				15,				40,				45,				5325,			],		
-	[1,				3,				'20',			'资源回收部初始等级',		3,				'Cha',			10,				1,				10,				25,				45,				2275,			],		
-	[1,				4,				'21',			'武器制造部初始等级',		4,				'Cha',			5,				1,				5,				50,				150,			1750,			],		
-	[1,				5,				'22',			'配件制造部初始等级',		5,				'Cha',			5,				1,				5,				40,				120,			1400,			],		
-	[1,				7,				'23',			'解体发电厂初始等级',		6,				'Cha',			10,				1,				10,				20,				60,				2900,			],		
-	[1,				18,				'24',			'商店刷新物数量增加',		7,				'Cha',			3,				1,				3,				80,				100,			540,			],		
-	[1,				19,				'25',			'基建制造物备选增加',		8,				'Cha',			3,				1,				3,				150,			200,			1050,			],		//01		
-	
-	[0,				1,				'26',			'初始资金',					1,				'Sur',			10,				50,				500,			100,			100,			5500,			],		//01		
-	
-	[1,				18,				'27',			'升级奖励数量',				2,				'Sur',			4,				1,				4,				100,			200,			1600,			],		
-	[1,				12,				'28',			'升级奖励价值提高',			3,				'Sur',			6,				5,				30,				50,				100,			1800,			],		
-	[1,				13,				'29',			'升级奖励价值上限提高',		4,				'Sur',			4,				25,				100,			50,				50,				500,			],		
-	[1,				19,				'30',			'升级额外奖励次数',			5,				'Sur',			1,				1,				1,				1000,			0,				1000,			],		//01		
-	
-];
+1,1,501,#敌方全属性小幅强化
+2,2,502,#敌方全属性小幅强化
+8,2,508,#敌方全属性强化
+16,4,516,#敌方全属性大幅强化
+18,5,518,#敌方全属性强化
+27,7,527,#敌方全属性大幅强化
 
-// 项目名称
-let ItemsNameList = {
-	
-	positive_01 : ['初始资金',							'初期資金',									'Initial Funds',													],		//02		
-	
-	positive_02 : ['人力资源部初始等级',				'人事部初期レベル',							'Initial level of the Human Resources Group',						],		
-	positive_03 : ['资源回收部初始等级',				'資源回収部初期レベル',						'Initial level of the Resource Recycling Group',					],		
-	positive_04 : ['武器制造部初始等级',				'武器製造部初期レベル',						'Initial level of the Weapon Factory',								],		
-	positive_05 : ['配件制造部初始等级',				'アタッチメント製造部初期レベル',			'Initial level of the Gadget Factory',								],		
-	positive_06 : ['有机合成部初始等级',				'有機合成部初期レベル',						'Initial level of the Organic Synthesis Group',						],		
-	positive_07 : ['解体发电厂初始等级',				'発電所初期レベル',							'Initial level of the Electricity Plant',							],		//02		
-	
-	positive_08 : ['初始叛逆',							'初期反逆',									'Initial Revolt Value',												],		
-	positive_09 : ['初始激进',							'初期過激',									'Initial Radical Value',											],		
-	positive_10 : ['初始博爱',							'初期博愛',									'Initial Philanthropy Value',										],		
-	positive_11 : ['初始理智',							'初期理性',									'Initial Reason Value',												],		//02		
-	
-	positive_12 : ['外围阵地生效时间延迟(天数)',		'外周陣地有効日数遅延（日)',				'Delay in Effectiveness of Perimeter Positions (days)',				],		
-	positive_13 : ['外围阵地到达时间减少(天数)',		'外周陣地到着日数減少（日)',				'Reduction in Days to Reach Perimeter Positions (days)',			],		//02		
-	
-	positive_14 : ['库罗库初始好感',					'クロック初期好感度',						'Initial Affinity of Kuruko',										],		
-	positive_15 : ['桑/San初始好感',					'サン初期好感度',							'Initial Affinity of San',											],		
-	positive_16 : ['赭石色初始好感',					'オーカー初期好感度',						'Initial Affinity of Ocher',										],		
-	positive_17 : ['克莱尔初始好感',					'クレア初期好感度',							'Initial Affinity of Claire',										],		//02		
-	
-	positive_18 : ['初始资金',							'初期資金',									'Initial Funds',													],		//02		
-	
-	positive_19 : ['人力资源部初始等级',				'人事部初期レベル',							'Initial level of the Human Resources Group',						],		
-	positive_20 : ['资源回收部初始等级',				'資源回収部初期レベル',						'Initial level of the Resource Recycling Group',					],		
-	positive_21 : ['武器制造部初始等级',				'武器製造部初期レベル',						'Initial level of the Weapon Factory',								],		
-	positive_22 : ['配件制造部初始等级',				'アタッチメント製造部初期レベル',			'Initial level of the Gadget Factory',								],		
-	positive_23 : ['解体发电厂初始等级',				'発電所初期レベル',							'Initial level of the Electricity Plant',							],		
-	positive_24 : ['商店刷新物数量增加',				'ショップの更新されるアイテム数増加',		'Increase the quantity of items refreshed in the shop',				],		
-	positive_25 : ['基建制造物选项增加',				'インフラ製造品の選択肢を追加',				'Infrastructure division item manufacturing options increase',		],		//02		
-	
-	positive_26 : ['初始资金',							'初期資金',									'Initial Funds',													],		//02		
-	
-	positive_27 : ['升级奖励数量',						'アップグレード奨励オプション数の追加',		'Number of options for upgrade rewards increased',					],		
-	positive_28 : ['升级奖励价值提高',					'アップグレード奨励価値の追加',				'Upgrade reward value increase',									],		
-	positive_29 : ['升级奖励价值上限提高',				'アップグレード奨励価値の上限追加',			'Upgrade reward value limit increased',								],		
-	positive_30 : ['升级额外奖励次数',					'アップグレード回数の追加',					'Add additional times for Upgrade rewards',							],		//02		
-	
-	501 : [/*'EnemyStrengthen_All:3',				*/'高效组装线',		'高効率組み立て',				'Efficient Assembly',				],		
-	502 : [/*'EnemyStrengthen_All:4',				*/'高效生产线',		'高効率生産ライン',				'Efficient Production Line',		],		
-	508 : [/*'EnemyStrengthen_All:6',				*/'自动化产线',		'自動化生産ライン',				'Auto Production Line',				],		
-	516 : [/*'EnemyStrengthen_All:9',				*/'中精度产线',		'超高精度生産ライン',			'Super-precise Production Line',	],		
-	518 : [/*'EnemyStrengthen_All:12',				*/'高精度产线',		'高精度生産ライン',				'Highly Precise Production Line',	],		
-	527 : [/*'EnemyStrengthen_All:16',				*/'超精度产线',		'特高精度生産ライン',			'Ultra-precise Production Line',	],		//02		
-	
-	512 : [/*'EnemyStrengthen_Boss:20',				*/'精英小强化',		'エリート強化',					'Elite Enhancement',				],		
-	517 : [/*'EnemyStrengthen_Boss:30',				*/'精英中强化',		'強力なエリート',				'Strong Elite',						],		
-	522 : [/*'EnemyStrengthen_Boss:20',				*/'精英再强化',		'エリート大強化',				'Elite Major Enhancement',			],		
-	528 : [/*'EnemyStrengthen_Boss:60',				*/'精英大强化',		'高精度エリート',				'Highly Precise Elite',				],		
-	531 : [/*'EnemyStrengthen_Boss:100',			*/'高精密精英',		'極強大エリート',				'Ultra-strong Major Elite',			],		//02		
-	
-	503 : [/*'EnemyStrengthen_Armor:15',			*/'低温度焊枪',		'低温トーチ',					'Freezing Welding Gun',				],		
-	504 : [/*'EnemyStrengthen_Armor:15',			*/'焊接再升级',		'はんだ付けアップグレード',		'Welding Upgrade',					],		
-	513 : [/*'EnemyStrengthen_Armor:25',			*/'无缝焊接法',		'はんだ無し接続',				'Seamless Welding',					],		
-	524 : [/*'EnemyStrengthen_Armor:50',			*/'高精密焊接',		'高精度はんだ付け',				'Highly Precise Welding',			],		//02		
-	
-	507 : [/*'EnemyStrengthen_RangePlus:4',			*/'膛线再优化',		'ライフリング最適化',			'Rifling Optimization',				],		
-	515 : [/*'EnemyStrengthen_RangePlus:9',			*/'炮口再强化',		'砲門強化',						'Gun Muzzle Enhancement',			],		
-	526 : [/*'EnemyStrengthen_RangePlus:16',		*/'高精密炮管',		'高精度バレル',					'Highly Precise Gun Barrel',		],		//02		
-	
-	509 : [/*'ChanllengeStrengthen_ManPPlus:1',		*/'基建遭炮击',		'インフラ砲撃',					'Infrastructure Bombard',			],		
-	519 : [/*'ChanllengeStrengthen_ManPPlus:1',		*/'基建遭渗透',		'インフラ潜入',					'Infrastructure Infiltration',		],		//02		
-	
-	505 : [/*'EnemyStrengthen_Life:20',				*/'精密化车工',		'精密旋盤工',					'Precise Lathe Work',				],		
-	506 : [/*'EnemyStrengthen_Life:20',				*/'超高速车床',		'高速旋盤',						'High-speed Lathe',					],		
-	514 : [/*'EnemyStrengthen_Life:50',				*/'自动化车工',		'NC旋盤工',						'CNC Lathe Work',					],		
-	525 : [/*'EnemyStrengthen_Life:75',				*/'高精密车床',		'高精度旋盤工',					'Highly Precise Lathe Work',		],		//02		
-	
-	510 : [/*'ChanllengeStrengthen_ArmCost:-1',		*/'补给线破坏',		'補給線破壊',					'Supply Chain Sabotage',			],		
-	520 : [/*'ChanllengeStrengthen_ArmCost:-2',		*/'补给线切断',		'補給線切断',					'Supply Chain Cutoff',				],		
-	532 : [/*'ChanllengeStrengthen_ArmCost:-3',		*/'补给线毁灭',		'補給線壊滅',					'Supply Chain Devastation',			],		//02		
-	
-	511 : [/*'ChanllengeStrengthen_ShopRef:2',		*/'后勤被破坏',		'兵站破壊',						'Logistics Sabotage',				],		
-	521 : [/*'ChanllengeStrengthen_ShopRef:3',		*/'后勤被毁灭',		'兵站壊滅',						'Logistics Devastation',			],		
-	523 : [/*'ChanllengeStrengthen_FixCost:10',		*/'工厂被破坏',		'工場破壊',						'Factory Sabotage',					],		
-	529 : [/*'ChanllengeStrengthen_FixCost:20',		*/'工厂被毁坏',		'工場壊滅',						'Factory Devastation',				],		
-	530 : [/*'ChanllengeStrengthen_FixCost:30',		*/'工厂被毁灭',		'工場損害',						'Factory Destruction',				],		//02		
-	
-	Plo : ['剧情模式',			'ストーリーモード',				'Story Mode',				],		
-	Cha : ['挑战模式',			'チャレンジモード',				'Challenge Mode',			],		
-	Enl : ['无尽模式',			'エンドレスモード',				'Endless Mode',				],		
-	Sur : ['幸存模式',			'生存者モード',					'Survival Mode',			],		
-	KRK : ['潜入模式',			'潜入モード',					'Sneaking Mode ',			],		
-	Any : ['任意模式',			'任意モード',					'Any Mode',					],		//02		
-	
-};
+12,3,512,#首领单位属性小幅强化
+17,3,517,#首领单位属性强化
+22,5,522,#首领单位属性小幅强化
+28,7,528,#首领单位属性强化
+31,8,531,#首领单位属性大幅强化
 
-// 文本描述
-let DescriptionList = {
+3,1,503,#敌方抵抗强化
+4,2,504,#敌方抵抗强化
+13,4,513,#敌方抵抗大幅强化
+24,6,524,#敌方抵抗大幅强化
+
+7,2,507,#敌方射程强化
+15,4,515,#敌方射程大幅强化
+26,6,526,#敌方射程大幅强化
+
+9,3,509,#基建消耗增长增加
+19,5,519,#基建消耗增长增加
+
+5,1,505,#敌方生命值强化
+6,2,506,#敌方生命值强化
+14,4,514,#敌方生命值大幅强化
+25,6,525,#敌方生命值大幅强化
+
+10,3,510,#战略武器/弹药费小幅增加
+20,5,520,#战略武器/弹药费小幅增加
+32,8,532,#战略武器/弹药费大幅增加
+
+23,5,523,#修理费用增加
+29,7,529,#修理费用大幅增加
+30,8,530,#修理费用大幅增加
+
+11,3,511,#商店刷新价格大幅增加
+21,5,521,#商店刷新价格大幅增加
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 挑战难度
+let csv2 = (String.raw`// ChanDifficult,Name,Effect,DailyDiffEffective,Reward,DifficultInit
+
+// 0,#无难度强化,,0,0,0
+
+1,#敌方全属性小幅强化,EnemyStrengthen_All:4,1,20,3
+2,#敌方抵抗强化,EnemyStrengthen_Armor:25,1,25,2
+3,#敌方生命值强化,EnemyStrengthen_Life:40,1,25,2
+4,#敌方射程强化,EnemyStrengthen_RangePlus:10,1,30,3
+5,#敌方全属性强化,EnemyStrengthen_All:8,1,50,2
+6,#基建消耗增长增加,ChanllengeStrengthen_ManPPlus:1,0,20,3
+
+7,#战略武器/弹药费小幅增加,ChanllengeStrengthen_ArmCost:-1,0,20,3
+8,#商店刷新价格大幅增加,ChanllengeStrengthen_ShopRef:4,0,30,3
+9,#首领单位属性小幅强化,EnemyStrengthen_Boss:10,0,20,4
+10,#敌方抵抗大幅强化,EnemyStrengthen_Armor:50,1,50,3
+11,#敌方生命值大幅强化,EnemyStrengthen_Life:80,1,50,3
+12,#敌方射程大幅强化,EnemyStrengthen_RangePlus:30,1,60,4
+
+13,#敌方全属性大幅强化,EnemyStrengthen_All:12,1,100,4
+14,#首领单位属性强化,EnemyStrengthen_Boss:30,0,50,4
+15,#修理费用大幅增加,ChanllengeStrengthen_FixCost:-20,0,50,3
+16,#首领单位属性大幅强化,EnemyStrengthen_Boss:60,0,100,4
+17,#战略武器/弹药费大幅增加,ChanllengeStrengthen_ArmCost:-3,0,50,4
+18,#首领单位属性大幅强化,EnemyStrengthen_Boss:100,0,100,4
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 幸存难度
+let csv3 = (String.raw`// SurDifficult,Name,Effect,Reward,DifficultInit
+
+// 0,#无难度强化,,0,0
+
+1,#敌方全属性小幅强化,EnemyStrengthen_All:4,20,0
+2,#敌方抵抗强化,EnemyStrengthen_Armor:10,25,0
+3,#敌方生命值强化,EnemyStrengthen_Life:20,40,0
+4,#敌方射程强化,EnemyStrengthen_RangePlus:5,50,0
+5,#不可再选择明日敌人,SurvivalStrengthen_CantChoose:1,100,0
+6,#敌方抵抗大幅强化,EnemyStrengthen_Armor:20,40,0
+
+7,#敌方生命值大幅强化,EnemyStrengthen_Life:30,100,0
+8,#敌方射程大幅强化,EnemyStrengthen_RangePlus:15,100,0
+9,#敌方全属性大幅强化,EnemyStrengthen_All:8,100,0
+10,#首领单位属性强化,EnemyStrengthen_Boss:10,50,0
+11,#首领单位属性大幅强化,EnemyStrengthen_Boss:20,75,0
+12,#战斗流程更长（且后期敌人更强）,SurvivalStrengthen_Moreday:1,150,0
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 剧情增益
+let csv4 = (String.raw`// GlobalGain,Image,Title,AddValue,Limit,FirstConsume,AddConsume
+
+1,1,#初始资金,100,500,200,200
+
+5,5,#配件制造部初始等级,1,5,80,150
+2,2,#人力资源部初始等级,1,10,40,80
+
+3,3,#资源回收部初始等级,1,5,40,90
+6,6,#有机合成部初始等级,1,4,100,120
+18,18,#配件制造部初始等级,1,15,40,45
+4,4,#武器制造部初始等级,1,5,40,90
+
+7,7,#发电厂初始等级,1,5,40,80
+
+8,8,#初始叛逆度,2,10,80,160
+9,9,#初始激进度,2,10,100,160
+10,10,#初始博爱值,2,10,100,90
+11,11,#初始理智值,2,10,120,180
+
+14,14,#库洛库初始好感,1,4,200,400
+15,15,#桑初始好感,1,4,200,400
+16,16,#赭石色初始好感,1,4,200,400
+17,17,#克莱尔初始好感,1,4,200,400
+
+12,12,#外围生效天数延迟（天）,1,4,200,400
+13,13,#外围到达天数减少（天）,1,2,1600,2400
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 挑战增益
+let csv5 = (String.raw`// GlobalGainChan,Image,Title,AddValue,Limit,FirstConsume,AddConsume
+
+1,1,#初始资金,100,1000,100,150
+
+5,5,#仓库初始等级,1,5,40,120
+2,2,#人力资源部初始等级,1,15,40,45
+
+3,3,#资源回收部初始等级,1,10,25,45
+7,18,#配件制造部初始等级,1,15,40,45
+4,4,#武器制造部初始等级,1,5,50,150
+
+6,7,#发电厂初始等级,1,10,20,60
+
+8,19,#基建制造物品备选增加,1,3,150,200
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 幸存增益
+let csv6 = (String.raw`// GlobalGainSur,Image,Title,AddValue,Limit,FirstConsume,AddConsume
+
+1,1,#初始资金,50,500,100,100
+
+2,18,#升级奖励可选数量,1,4,100,200
+5,19,#升级额外奖励次数,1,1,1000,0
+
+4,13,#升级奖励价值上限提高,25,100,50,50
+3,12,#升级奖励价值提高,5,30,50,100
+
+6,3,#重铸效率,8,40,50,200
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 难度选项
+let csvZ = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
+
+501,#高效组装,501,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:3,,-1,999,1,0,0,0,0,,,,,1376,1
+502,#高效生产线,502,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:4,,-1,999,1,0,0,0,0,,,,,1377,1
+508,#自动化生产线,508,None,#敌方全属性强化,,99,EnemyStrengthen_All:6,,-1,999,1,0,0,0,0,,,,,1383,1
+516,#超高精度生产线,516,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:9,,-1,999,1,0,0,0,0,,,,,1391,1
+518,#高精度生产线,518,None,#敌方全属性强化,,99,EnemyStrengthen_All:12,,-1,999,1,0,0,0,0,,,,,1393,1
+527,#特高精度生产线,527,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:16,,-1,999,1,0,0,0,0,,,,,1402,1
+
+512,#精英强化,512,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1387,1
+517,#强大精英,517,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:30,,-1,999,1,0,0,0,0,,,,,1392,1
+522,#精英大强化,522,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1397,1
+528,#高精密精英,528,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:60,,-1,999,1,0,0,0,0,,,,,1403,1
+531,#极强大精英,531,None,#首领单位属性大幅强化,,99,EnemyStrengthen_Boss:100,,-1,999,1,0,0,0,0,,,,,1406,1
+
+503,#低温焊枪,503,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:10,,-1,999,1,0,0,0,0,,,,,1378,1
+504,#焊接升级,504,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:15,,-1,999,1,0,0,0,0,,,,,1379,1
+513,#无缝焊接,513,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:25,,-1,999,1,0,0,0,0,,,,,1388,1
+524,#高精密焊接,524,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:50,,-1,999,1,0,0,0,0,,,,,1399,1
+
+507,#膛线优化,507,None,#敌方射程强化,,99,EnemyStrengthen_RangePlus:4,,-1,999,1,0,0,0,0,,,,,1382,1
+515,#炮口强化,515,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:9,,-1,999,1,0,0,0,0,,,,,1390,1
+526,#高精密炮管,526,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:16,,-1,999,1,0,0,0,0,,,,,1401,1
+
+509,#基建炮击,509,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1384,1
+519,#基建渗透,519,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1394,1
+
+505,#精密车工,505,None,#敌方生命值强化,,99,EnemyStrengthen_Life:15,,-1,999,1,0,0,0,0,,,,,1380,1
+506,#高速车床,506,None,#敌方生命值强化,,99,EnemyStrengthen_Life:20,,-1,999,1,0,0,0,0,,,,,1381,1
+514,#数控车工,514,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:50,,-1,999,1,0,0,0,0,,,,,1389,1
+525,#高精密车工,525,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:75,,-1,999,1,0,0,0,0,,,,,1400,1
+
+510,#补给线破坏,510,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-1,,-1,999,1,0,0,0,0,,,,,1385,1
+520,#补给线切断,520,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-2,,-1,999,1,0,0,0,0,,,,,1395,1
+532,#补给线毁灭,532,None,#战略武器/弹药费大幅增加,,99,ChanllengeStrengthen_ArmCost:-3,,-1,999,1,0,0,0,0,,,,,1407,1
+
+523,#工厂破坏,523,None,#修理费用增加,,99,ChanllengeStrengthen_FixCost:-10,,-1,999,1,0,0,0,0,,,,,1398,1
+529,#工厂毁灭,529,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-20,,-1,999,1,0,0,0,0,,,,,1404,1
+530,#工厂毁坏,530,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-30,,-1,999,1,0,0,0,0,,,,,1405,1
+
+511,#后勤破坏,511,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:2,,-1,999,1,0,0,0,0,,,,,1386,1
+521,#后勤毁灭,521,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:3,,-1,999,1,0,0,0,0,,,,,1396,1
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	501 : ['敌方全属性小幅强化(+　<Description>%)',			'敵の全ステータス小幅強化(+　<Description>%)',			'Enemy All Stats Slightly Enhanced(+　<Description>%)',							],		
-	502 : ['敌方全属性小幅强化(+　<Description>%)',			'敵の全ステータス小幅強化(+　<Description>%)',			'Enemy All Stats Slightly Enhanced(+　<Description>%)',							],		
-	508 : ['敌方全属性中幅强化(+　<Description>%)',			'敵全ステータス強化(+　<Description>%)',				'Enemy All Stats Enhanced(+　<Description>%)',									],		
-	516 : ['敌方全属性中幅强化(+　<Description>%)',			'敵全ステータス大幅強化(+　<Description>%)',			'Enemy All Stats Significantly Enhanced(+　<Description>%)',					],		
-	518 : ['敌方全属性大幅强化(+ <Description>%)',			'敵全ステータス強化(+ <Description>%)',					'Enemy All Stats Enhanced(+ <Description>%)',									],		
-	527 : ['敌方全属性大幅强化(+ <Description>%)',			'敵全ステータス大幅強化(+ <Description>%)',				'Enemy All Stats Significantly Enhanced(+ <Description>%)',						],		//03		
+	项目名称 : {
 	
-	512 : ['首领单位属性小强化(+ <Description>%)',			'ボスユニットステータス小幅強化(+ <Description>%)',		'Boss Unit Stats Slightly Enhanced(+ <Description>%)',							],		
-	517 : ['首领单位属性中强化(+ <Description>%)',			'ボスユニットステータス強化(+ <Description>%)',			'Boss Unit Stats Enhanced(+ <Description>%)',									],		
-	522 : ['首领单位属性小强化(+ <Description>%)',			'ボスユニットステータス小幅強化(+ <Description>%)',		'Boss Unit Stats Slightly Enhanced(+ <Description>%)',							],		
-	528 : ['首领单位属性大强化(+ <Description>%)',			'ボスユニットステータス強化(+ <Description>%)',			'Boss Unit Stats Enhanced(+ <Description>%)',									],		
-	531 : ['首领单位属性大强化(+<Description>%)',			'ボスユニットステータス大幅強化(+<Description>%)',		'Boss Unit Stats Significantly Enhanced(+<Description>%)',						],		//03		
+	csv1_1	: `高效组装线`		+ ` # 高效组装,高效組裝,Efficient Assembly,高効率組み立て`,
+	csv1_2	: `高效生产线`		+ ` # 高效生产线,高效生產線,Efficient Production Line,高効率生産ライン`,
+	csv1_8	: `自动化产线`		+ ` # 自动化生产线,自動化生產線,Auto Production Line,自動化生産ライン`,
+	csv1_16	: `中精度产线`		+ ` # 超高精度生产线,超高精度生產線,Super-precise Production Line,超高精度生産ライン`,
+	csv1_18	: `高精度产线`		+ ` # 高精度生产线,高精度生產線,Highly Precise Production Line,高精度生産ライン`,
+	csv1_27	: `超精度产线`		+ ` # 特高精度生产线,特高精度生產線,Ultra-precise Production Line,特高精度生産ライン`,
 	
-	503 : ['敌方抵抗小幅度强化(+ <Description>%)',			'敵抵抗強化(+ <Description>%)',							'Enemy Resistance Enhanced(+ <Description>%)',									],		
-	504 : ['敌方抵抗小幅度强化(+ <Description>%)',			'敵抵抗強化(+ <Description>%)',							'Enemy Resistance Enhanced(+ <Description>%)',									],		
-	513 : ['敌方抵抗中幅度强化(+ <Description>%)',			'敵抵抗大幅強化(+ <Description>%)',						'Enemy Resistance Significantly Enhanced(+ <Description>%)',					],		
-	524 : ['敌方抵抗大幅度强化(+ <Description>%)',			'敵抵抗大幅強化(+ <Description>%)',						'Enemy Resistance Significantly Enhanced(+ <Description>%)',					],		//03		
+	csv1_12	: `精英小强化`		+ ` # 精英强化,精英強化,Elite Enhancement,エリート強化`,
+	csv1_17	: `精英中强化`		+ ` # 强大精英,強大精英,Strong Elite,強力なエリート`,
+	csv1_22	: `精英再强化`		+ ` # 精英大强化,精英大強化,Elite Major Enhancement,エリート大強化`,
+	csv1_28	: `精英大强化`		+ ` # 高精密精英,高精密精英,Highly Precise Elite,高精度エリート`,
+	csv1_31	: `高精密精英`		+ ` # 极强大精英,極強大精英,Ultra-strong Major Elite,極強大エリート`,
 	
-	507 : ['敌方射程小幅度强化(+　<Description>%)',			'敵射程強化(+　<Description>%)',						'Enemy Range Enhanced(+　<Description>%)',										],		
-	515 : ['敌方射程中幅度强化(+　<Description>%)',			'敵射程大幅強化(+　<Description>%)',					'Enemy Range Significantly Enhanced(+　<Description>%)',						],		
-	526 : ['敌方射程大幅度强化(+ <Description>%)',			'敵射程大幅強化(+ <Description>%)',						'Enemy Range Significantly Enhanced(+ <Description>%)',							],		//03		
+	csv1_3	: `低温度焊枪`		+ ` # 低温焊枪,低溫焊槍,Freezing Welding Gun,低温トーチ`,
+	csv1_4	: `焊接再升级`		+ ` # 焊接升级,焊接升級,Welding Upgrade,はんだ付けアップグレード`,
+	csv1_13	: `无缝焊接法`		+ ` # 无缝焊接,無縫焊接,Seamless Welding,はんだ無し接続`,
+	csv1_24	: `高精密焊接`		+ ` # 高精密焊接,高精密焊接,Highly Precise Welding,高精度はんだ付け`,
 	
-	509 : ['基建人力消耗增长增加(+ <Description>)',			'インフラ消費の増加値上昇(+ <Description>)',			'Infrastructure Manpower Consumption Increased(+ <Description>)',				],		
-	519 : ['基建人力消耗增长增加(+ <Description>)',			'インフラ消費の増加値上昇(+ <Description>)',			'Infrastructure Manpower Consumption Increased(+ <Description>)',				],		//03		
+	csv1_7	: `膛线再优化`		+ ` # 膛线优化,膛線優化,Rifling Optimization,ライフリング最適化`,
+	csv1_15	: `炮口再强化`		+ ` # 炮口强化,炮口強化,Gun Muzzle Enhancement,砲門強化`,
+	csv1_26	: `高精密炮管`		+ ` # 高精密炮管,高精密炮管,Highly Precise Gun Barrel,高精度バレル`,
 	
-	505 : ['敌方生命值小幅强化(+ <Description>%)',			'敵HP強化(+ <Description>%)',							'Enemy HP Enhanced(+ <Description>%)',											],		
-	506 : ['敌方生命值小幅强化(+ <Description>%)',			'敵HP強化(+ <Description>%)',							'Enemy HP Enhanced(+ <Description>%)',											],		
-	514 : ['敌方生命值中幅强化(+ <Description>%)',			'敵HP大幅強化(+ <Description>%)',						'Enemy HP Significantly Enhanced(+ <Description>%)',							],		
-	525 : ['敌方生命值大幅强化(+ <Description>%)',			'敵HP大幅強化(+ <Description>%)',						'Enemy HP Significantly Enhanced(+ <Description>%)',							],		//03		
+	csv1_9	: `基建遭炮击`		+ ` # 基建炮击,基建炮擊,Infrastructure Bombard,インフラ砲撃`,
+	csv1_19	: `基建遭渗透`		+ ` # 基建渗透,基建滲透,Infrastructure Infiltration,インフラ潜入`,
 	
-	510 : ['战略和弹药费小幅增加(+ <Description>)',			'戦略兵器/弾薬コスト小幅上昇(+ <Description>)',			'Strategic Weapon/Ammunition Costs Slightly Enhanced(+ <Description>)',			],		
-	520 : ['战略和弹药费中幅增加(+ <Description>)',			'戦略兵器/弾薬コスト中幅上昇(+ <Description>)',			'Strategic Weapon/Ammunition Costs moderately Enhanced(+ <Description>)',		],		
-	532 : ['战略和弹药费大幅增加(+ <Description>)',			'戦略兵器/弾薬コスト大幅上昇(+ <Description>)',			'Strategic Weapon/Ammunition Costs Significantly Enhanced(+ <Description>)',	],		//03		
+	csv1_5	: `精密化车工`		+ ` # 精密车工,精密車工,Precise Lathe Work,精密旋盤工`,
+	csv1_6	: `超高速车床`		+ ` # 高速车床,高速車床,High-speed Lathe,高速旋盤`,
+	csv1_14	: `自动化车工`		+ ` # 数控车工,數控車工,CNC Lathe Work,NC旋盤工`,
+	csv1_25	: `高精密车床`		+ ` # 高精密车工,高精密車工,Highly Precise Lathe Work,高精度旋盤工`,
 	
-	523 : ['修理费用小幅度增加(+ <Description>%)',			'修理コスト上昇(+ <Description>%)',						'Repair Costs Enhanced(+ <Description>%)',										],		
-	529 : ['修理费用中幅度增加(+ <Description>%)',			'修理コスト大幅上昇(+ <Description>%)',					'Repair Costs Significantly Enhanced(+ <Description>%)',						],		
-	530 : ['修理费用大幅度增加(+ <Description>%)',			'修理コスト大幅上昇(+ <Description>%)',					'Repair Costs Significantly Enhanced(+ <Description>%)',						],		//03		
+	csv1_10	: `补给线破坏`		+ ` # 补给线破坏,補給線破壞,Supply Chain Sabotage,補給線破壊`,
+	csv1_20	: `补给线切断`		+ ` # 补给线切断,補給線切斷,Supply Chain Cutoff,補給線切断`,
+	csv1_32	: `补给线毁灭`		+ ` # 补给线毁灭,補給線毀滅,Supply Chain Devastation,補給線壊滅`,
 	
-	511 : ['商店刷新价格大幅增加(+ <Description>)',			'ショップ更新コスト大幅上昇(+ <Description>)',			'Shop Refresh Prices Significantly Increased(+ <Description>)',					],		
-	521 : ['商店刷新价格大幅增加(+ <Description>)',			'ショップ更新コスト大幅上昇(+ <Description>)',			'Shop Refresh Prices Significantly Increased(+ <Description>)',					],		//03		
+	csv1_23	: `工厂被破坏`		+ ` # 工厂破坏,工廠破壞,Factory Sabotage,工場破壊`,
+	csv1_29	: `工厂被毁坏`		+ ` # 工厂毁灭,工廠毀滅,Factory Devastation,工場壊滅`,
+	csv1_30	: `工厂被毁灭`		+ ` # 工厂毁坏,工廠毀壞,Factory Destruction,工場損害`,
+	
+	csv1_11	: `后勤被破坏`		+ ` # 后勤破坏,後勤破壞,Logistics Sabotage,兵站破壊`,
+	csv1_21	: `后勤被毁灭`		+ ` # 后勤毁灭,後勤毀滅,Logistics Devastation,兵站壊滅`,
+	
+	// --
+	
+	csv2_1	: `进阶 1`			+ ` # 进阶 1,進階 1,Advance 1,ランクアップ 1`,
+	csv2_2	: `进阶 2`			+ ` # 进阶 2,進階 2,Advance 2,ランクアップ 2`,
+	csv2_3	: `进阶 3`			+ ` # 进阶 3,進階 3,Advance 3,ランクアップ 3`,
+	csv2_4	: `进阶 4`			+ ` # 进阶 4,進階 4,Advance 4,ランクアップ 4`,
+	csv2_5	: `进阶 5`			+ ` # 进阶 5,進階 5,Advance 5,ランクアップ 5`,
+	csv2_6	: `进阶 6`			+ ` # 进阶 6,進階 6,Advance 6,ランクアップ 6`,
+	
+	csv2_7	: `进阶 7`			+ ` # 进阶 7,進階 7,Advance 7,ランクアップ 7`,
+	csv2_8	: `进阶 8`			+ ` # 进阶 8,進階 8,Advance 8,ランクアップ 8`,
+	csv2_9	: `进阶 9`			+ ` # 进阶 9,進階 9,Advance 9,ランクアップ 9`,
+	csv2_10	: `进阶 10`			+ ` # 进阶 10,進階 10,Advance 10,ランクアップ 10`,
+	csv2_11	: `进阶 11`			+ ` # 进阶 11,進階 11,Advance 11,ランクアップ 11`,
+	csv2_12	: `进阶 12`			+ ` # 进阶 12,進階 12,Advance 12,ランクアップ 12`,
+	
+	csv2_13	: `进阶 13`			+ ` # 进阶 13,進階 13,Advance 13,ランクアップ 13`,
+	csv2_14	: `进阶 14`			+ ` # 进阶 14,進階 14,Advance 14,ランクアップ 14`,
+	csv2_15	: `进阶 15`			+ ` # 进阶 15,進階 15,Advance 15,ランクアップ 15`,
+	csv2_16	: `进阶 16`			+ ` # 进阶 16,進階 16,Advance 16,ランクアップ 16`,
+	csv2_17	: `进阶 17`			+ ` # 进阶 17,進階 17,Advance 17,ランクアップ 17`,
+	csv2_18	: `进阶 18`			+ ` # 进阶 18,進階 18,Advance 18,ランクアップ 18`,
+	
+	// --
+	
+	csv3_1	: `进阶 1`			+ ` # 进阶 1,進階 1,Advance 1,ランクアップ 1`,
+	csv3_2	: `进阶 2`			+ ` # 进阶 2,進階 2,Advance 2,ランクアップ 2`,
+	csv3_3	: `进阶 3`			+ ` # 进阶 3,進階 3,Advance 3,ランクアップ 3`,
+	csv3_4	: `进阶 4`			+ ` # 进阶 4,進階 4,Advance 4,ランクアップ 4`,
+	csv3_5	: `进阶 5`			+ ` # 进阶 5,進階 5,Advance 5,ランクアップ 5`,
+	csv3_6	: `进阶 6`			+ ` # 进阶 6,進階 6,Advance 6,ランクアップ 6`,
+	
+	csv3_7	: `进阶 7`			+ ` # 进阶 7,進階 7,Advance 7,ランクアップ 7`,
+	csv3_8	: `进阶 8`			+ ` # 进阶 8,進階 8,Advance 8,ランクアップ 8`,
+	csv3_9	: `进阶 9`			+ ` # 进阶 9,進階 9,Advance 9,ランクアップ 9`,
+	csv3_10	: `进阶 10`			+ ` # 进阶 10,進階 10,Advance 10,ランクアップ 10`,
+	csv3_11	: `进阶 11`			+ ` # 进阶 11,進階 11,Advance 11,ランクアップ 11`,
+	csv3_12	: `进阶 12`			+ ` # 进阶 12,進階 12,Advance 12,ランクアップ 12`,
+	
+	},
+	
+	文本描述 : {
+	
+	csv1_1	: `敌方全属性小幅强化(+　3%, Sum: +　3%)`		+ ` # 敌方全属性小幅强化 [<Description>%],敵方全屬性小幅強化 [<Description>%],Enemy All Stats Slightly Enhanced [<Description>%],敵の全ステータス小幅強化 [<Description>%]`,
+	csv1_2	: `敌方全属性小幅强化(+　4%, Sum: +　7%)`		+ ` # 敌方全属性小幅强化 [<Description>%],敵方全屬性小幅強化 [<Description>%],Enemy All Stats Slightly Enhanced [<Description>%],敵の全ステータス小幅強化 [<Description>%]`,
+	csv1_8	: `敌方全属性中幅强化(+　6%, Sum: + 13%)`		+ ` # 敌方全属性强化 [<Description>%],敵方全屬性強化 [<Description>%],Enemy All Stats Enhanced [<Description>%],敵全ステータス強化 [<Description>%]`,
+	csv1_16	: `敌方全属性中幅强化(+　9%, Sum: + 22%)`		+ ` # 敌方全属性大幅强化 [<Description>%],敵方全屬性大幅強化 [<Description>%],Enemy All Stats Significantly Enhanced [<Description>%],敵全ステータス大幅強化 [<Description>%]`,
+	csv1_18	: `敌方全属性大幅强化(+ 12%, Sum: + 34%)`		+ ` # 敌方全属性强化 [<Description>%],敵方全屬性強化 [<Description>%],Enemy All Stats Enhanced [<Description>%],敵全ステータス強化 [<Description>%]`,
+	csv1_27	: `敌方全属性大幅强化(+ 16%, Sum: + 50%)`		+ ` # 敌方全属性大幅强化 [<Description>%],敵方全屬性大幅強化 [<Description>%],Enemy All Stats Significantly Enhanced [<Description>%],敵全ステータス大幅強化 [<Description>%]`,
+	
+	csv1_12	: `首领单位属性小强化(+ 20%, Sum: + 20%)`		+ ` # 首领单位属性小幅强化 [<Description>%],首領單位屬性小幅強化 [<Description>%],Boss Unit Stats Slightly Enhanced [<Description>%],ボスユニットステータス小幅強化 [<Description>%]`,
+	csv1_17	: `首领单位属性小强化(+ 30%, Sum: + 50%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv1_22	: `首领单位属性小强化(+ 20%, Sum: + 70%)`		+ ` # 首领单位属性小幅强化 [<Description>%],首領單位屬性小幅強化 [<Description>%],Boss Unit Stats Slightly Enhanced [<Description>%],ボスユニットステータス小幅強化 [<Description>%]`,
+	csv1_28	: `首领单位属性中强化(+ 60%, Sum: +130%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv1_31	: `首领单位属性大强化(+100%, Sum: +230%)`		+ ` # 首领单位属性大幅强化 [<Description>%],首領單位屬性大幅強化 [<Description>%],Boss Unit Stats Significantly Enhanced [<Description>%],ボスユニットステータス大幅強化 [<Description>%]`,
+	
+	csv1_3	: `敌方抵抗小幅度强化(+ 10%, Sum: + 10%)`		+ ` # 敌方抵抗强化 [<Description>%],敵方抵抗強化 [<Description>%],Enemy Resistance Enhanced [<Description>%],敵抵抗強化 [<Description>%]`,
+	csv1_4	: `敌方抵抗中幅度强化(+ 15%, Sum: + 25%)`		+ ` # 敌方抵抗强化 [<Description>%],敵方抵抗強化 [<Description>%],Enemy Resistance Enhanced [<Description>%],敵抵抗強化 [<Description>%]`,
+	csv1_13	: `敌方抵抗大幅度强化(+ 25%, Sum: + 50%)`		+ ` # 敌方抵抗大幅强化 [<Description>%],敵方抵抗大幅強化 [<Description>%],Enemy Resistance Significantly Enhanced [<Description>%],敵抵抗大幅強化 [<Description>%]`,
+	csv1_24	: `敌方抵抗超幅度强化(+ 50%, Sum: +100%)`		+ ` # 敌方抵抗大幅强化 [<Description>%],敵方抵抗大幅強化 [<Description>%],Enemy Resistance Significantly Enhanced [<Description>%],敵抵抗大幅強化 [<Description>%]`,
+	
+	csv1_7	: `敌方射程小幅度强化(+　4%, Sum: +　4%)`		+ ` # 敌方射程强化 [<Description>%],敵方射程強化 [<Description>%],Enemy Range Enhanced [<Description>%],敵射程強化 [<Description>%]`,
+	csv1_15	: `敌方射程中幅度强化(+　9%, Sum: + 13%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	csv1_26	: `敌方射程大幅度强化(+ 16%, Sum: + 29%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	
+	csv1_9	: `基建人力消耗小增长(+　1P, Sum: +　1P)`		+ ` # 基建消耗增长增加,基建消耗增長增加,Infrastructure Manpower Consumption Increased,インフラ消費の増加値上昇`,
+	csv1_19	: `基建人力消耗小增长(+　1P, Sum: +　2P)`		+ ` # 基建消耗增长增加,基建消耗增長增加,Infrastructure Manpower Consumption Increased,インフラ消費の増加値上昇`,
+	
+	csv1_5	: `敌方生命值小幅强化(+ 15%, Sum: + 15%)`		+ ` # 敌方生命值强化 [<Description>%],敵方生命值強化 [<Description>%],Enemy HP Enhanced [<Description>%],敵HP強化 [<Description>%]`,
+	csv1_6	: `敌方生命值小幅强化(+ 20%, Sum: + 35%)`		+ ` # 敌方生命值强化 [<Description>%],敵方生命值強化 [<Description>%],Enemy HP Enhanced [<Description>%],敵HP強化 [<Description>%]`,
+	csv1_14	: `敌方生命值大幅强化(+ 60%, Sum: +105%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	csv1_25	: `敌方生命值大幅强化(+ 75%, Sum: +180%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	
+	csv1_10	: `战略和弹药费小增加(+　1V, Sum: +　1V)`		+ ` # 战略武器/弹药费小幅增加,戰略武器/彈藥費小幅增加,Strategic Weapon/Ammunition Costs Slightly Enhanced,戦略兵器/弾薬コスト小幅上昇`,
+	csv1_20	: `战略和弹药费中增加(+　2V, Sum: +　3V)`		+ ` # 战略武器/弹药费小幅增加,戰略武器/彈藥費小幅增加,Strategic Weapon/Ammunition Costs Slightly Enhanced,戦略兵器/弾薬コスト小幅上昇`,
+	csv1_32	: `战略和弹药费大增加(+　3V, Sum: +　6V)`		+ ` # 战略武器/弹药费大幅增加,戰略武器/彈藥費用大幅增加,Strategic Weapon/Ammunition Costs Significantly Enhanced,戦略兵器/弾薬コスト大幅上昇`,
+	
+	csv1_23	: `修理费用小幅度增加(+ 10%, Sum: + 10%)`		+ ` # 修理费用增加,修理費用增加,Repair Costs Enhanced,修理コスト上昇`,
+	csv1_29	: `修理费用中幅度增加(+ 20%, Sum: + 30%)`		+ ` # 修理费用大幅增加 [<Description>%],修理費用大幅增加 [<Description>%],Repair Costs Significantly Enhanced [<Description>%],修理コスト大幅上昇 [<Description>%]`,
+	csv1_30	: `修理费用大幅度增加(+ 30%, Sum: + 60%)`		+ ` # 修理费用大幅增加 [<Description>%],修理費用大幅增加 [<Description>%],Repair Costs Significantly Enhanced [<Description>%],修理コスト大幅上昇 [<Description>%]`,
+	
+	csv1_11	: `商店刷新价格大增加(+　2$, Sum: +　2$)`		+ ` # 商店刷新价格大幅增加,商店刷新價格大幅增加,Shop Refresh Prices Significantly Increased,ショップ更新コスト大幅上昇`,
+	csv1_21	: `商店刷新价格大增加(+　3$, Sum: +　5$)`		+ ` # 商店刷新价格大幅增加,商店刷新價格大幅增加,Shop Refresh Prices Significantly Increased,ショップ更新コスト大幅上昇`,
+	
+	// --
+	
+	csv2_1	: `敌方全属性小幅强化(+　4%, Sum: +　4%)`		+ ` # 敌方全属性小幅强化 [<Description>%],敵方全屬性小幅強化 [<Description>%],Enemy All Stats Slightly Enhanced [<Description>%],敵の全ステータス小幅強化 [<Description>%]`,
+	csv2_2	: `敌方抵抗大幅度强化(+ 25%, Sum: + 25%)`		+ ` # 敌方抵抗大幅强化 [<Description>%],敵方抵抗大幅強化 [<Description>%],Enemy Resistance Significantly Enhanced [<Description>%],敵抵抗大幅強化 [<Description>%]`,
+	csv2_3	: `敌方生命值大幅强化(+ 40%, Sum: + 40%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	csv2_4	: `敌方射程大幅度强化(+ 10%, Sum: + 10%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	csv2_5	: `敌方全属性中幅强化(+　8%, Sum: + 12%)`		+ ` # 敌方全属性大幅强化 [<Description>%],敵方全屬性大幅強化 [<Description>%],Enemy All Stats Significantly Enhanced [<Description>%],敵全ステータス大幅強化 [<Description>%]`,
+	csv2_6	: `基建人力消耗小增长(+　1P, Sum: +　1P)`		+ ` # 基建消耗增长增加,基建消耗增長增加,Infrastructure Manpower Consumption Increased,インフラ消費の増加値上昇`,
+	
+	csv2_7	: `战略和弹药费小增加(+　1V, Sum: +　1V)`		+ ` # 战略武器/弹药费小幅增加,戰略武器/彈藥費小幅增加,Strategic Weapon/Ammunition Costs Slightly Enhanced,戦略兵器/弾薬コスト小幅上昇`,
+	csv2_8	: `商店刷新价格大增加(+　4$, Sum: +　4$)`		+ ` # 商店刷新价格大幅增加,商店刷新價格大幅增加,Shop Refresh Prices Significantly Increased,ショップ更新コスト大幅上昇`,
+	csv2_9	: `首领单位属性小强化(+ 10%, Sum: + 10%)`		+ ` # 首领单位属性小幅强化 [<Description>%],首領單位屬性小幅強化 [<Description>%],Boss Unit Stats Slightly Enhanced [<Description>%],ボスユニットステータス小幅強化 [<Description>%]`,
+	csv2_10	: `敌方抵抗超幅度强化(+ 50%, Sum: + 75%)`		+ ` # 敌方抵抗大幅强化 [<Description>%],敵方抵抗大幅強化 [<Description>%],Enemy Resistance Significantly Enhanced [<Description>%],敵抵抗大幅強化 [<Description>%]`,
+	csv2_11	: `敌方生命值大幅强化(+ 80%, Sum: +120%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	csv2_12	: `敌方射程大幅度强化(+ 30%, Sum: + 40%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	
+	csv2_13	: `敌方全属性大幅强化(+ 12%, Sum: + 24%)`		+ ` # 敌方全属性强化 [<Description>%],敵方全屬性強化 [<Description>%],Enemy All Stats Enhanced [<Description>%],敵全ステータス強化 [<Description>%]`,
+	csv2_14	: `首领单位属性小强化(+ 30%, Sum: + 40%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv2_15	: `修理费用中幅度增加(+ 20%, Sum: + 20%)`		+ ` # 修理费用大幅增加 [<Description>%],修理費用大幅增加 [<Description>%],Repair Costs Significantly Enhanced [<Description>%],修理コスト大幅上昇 [<Description>%]`,
+	csv2_16	: `首领单位属性中强化(+ 60%, Sum: +100%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv2_17	: `战略和弹药费大增加(+　3V, Sum: +　4V)`		+ ` # 战略武器/弹药费大幅增加,戰略武器/彈藥費用大幅增加,Strategic Weapon/Ammunition Costs Significantly Enhanced,戦略兵器/弾薬コスト大幅上昇`,
+	csv2_18	: `首领单位属性大强化(+100%, Sum: +200%)`		+ ` # 首领单位属性大幅强化 [<Description>%],首領單位屬性大幅強化 [<Description>%],Boss Unit Stats Significantly Enhanced [<Description>%],ボスユニットステータス大幅強化 [<Description>%]`,
+	
+	// --
+	
+	csv3_1	: `敌方全属性小幅强化(+　4%, Sum: +　4%)`		+ ` # 敌方全属性小幅强化 [<Description>%],敵方全屬性小幅強化 [<Description>%],Enemy All Stats Slightly Enhanced [<Description>%],敵の全ステータス小幅強化 [<Description>%]`,
+	csv3_2	: `敌方抵抗中幅度强化(+ 10%, Sum: + 10%)`		+ ` # 敌方抵抗强化 [<Description>%],敵方抵抗強化 [<Description>%],Enemy Resistance Enhanced [<Description>%],敵抵抗強化 [<Description>%]`,
+	csv3_3	: `敌方生命值大幅强化(+ 20%, Sum: + 20%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	csv3_4	: `敌方射程大幅度强化(+　5%, Sum: +　5%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	csv3_5	: `不可再选择明日敌人(系统自动/随机选择)`		+ ` # 不可再选择明日敌人,不可再選擇明日敵人,No longer can choose the enemy of tomorrow,次の敵を選べない`,
+	csv3_6	: `敌方抵抗大幅度强化(+ 20%, Sum: + 30%)`		+ ` # 敌方抵抗大幅强化 [<Description>%],敵方抵抗大幅強化 [<Description>%],Enemy Resistance Significantly Enhanced [<Description>%],敵抵抗大幅強化 [<Description>%]`,
+	
+	csv3_7	: `敌方生命值大幅强化(+ 30%, Sum: + 50%)`		+ ` # 敌方生命值大幅强化 [<Description>%],敵方生命值大幅強化 [<Description>%],Enemy HP Significantly Enhanced [<Description>%],敵HP大幅強化 [<Description>%]`,
+	csv3_8	: `敌方射程大幅度强化(+ 15%, Sum: + 20%)`		+ ` # 敌方射程大幅强化 [<Description>%],敵方射程大幅強化 [<Description>%],Enemy Range Significantly Enhanced [<Description>%],敵射程大幅強化 [<Description>%]`,
+	csv3_9	: `敌方全属性大幅强化(+　8%, Sum: + 12%)`		+ ` # 敌方全属性强化 [<Description>%],敵方全屬性強化 [<Description>%],Enemy All Stats Enhanced [<Description>%],敵全ステータス強化 [<Description>%]`,
+	csv3_10	: `首领单位属性小强化(+ 10%, Sum: + 10%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv3_11	: `首领单位属性中强化(+ 20%, Sum: + 30%)`		+ ` # 首领单位属性强化 [<Description>%],首領單位屬性強化 [<Description>%],Boss Unit Stats Enhanced [<Description>%],ボスユニットステータス強化 [<Description>%]`,
+	csv3_12	: `战斗的流程变得更长(原 62 天/加 11 天)`		+ ` # 战斗流程更长,戰鬥流程更長,The combat process is longer,戦闘プロセスが長く`,
+	
+	},
+	
+	剧情增益 : {
+	
+	1	: `初始的资金`						+ ` # 初始资金,初始資金,Initial Funds,初期資金`,
+	
+	5	: `仓库的初始等级`					+ ` # 仓库初始等级,倉庫初始等級,Initial level of the Storage,倉庫初期レベル`,
+	2	: `人力资源部初始等级`				+ ` # 人力资源部初始等级,人力資源部初始等級,Initial level of the Human Resources Group,人事部初期レベル`,
+	
+	3	: `资源回收部初始等级`				+ ` # 资源回收部初始等级,資源回收部初始等級,Initial level of the Resource Recycling Group,資源回収部初期レベル`,
+	6	: `有机合成部初始等级`				+ ` # 有机合成部初始等级,有機合成部初始等級,Initial level of the Organic Synthesis Group,有機合成部初期レベル`,
+	18	: `部件回收部初始等级`				+ ` # 部件回收部初始等级,部件生產部初始等級,Initial level of the Component Production Department,部品生産部初期レベル`,
+	4	: `武器制造厂初始等级`				+ ` # 武器制造厂初始等级,武器製造廠初始等級,Initial level of the Weapon Factory,武器製造工場初期レベル`,
+	
+	7	: `发电厂初始等级`					+ ` # 发电厂初始等级,發電廠初始等級,Initial level of the Electricity Plant,発電所初期レベル`,
+	
+	8	: `初始叛逆值`						+ ` # 初始叛逆度,初始叛逆度,Initial Revolt Value,初期反逆度`,
+	9	: `初始激进值`						+ ` # 初始激进度,初始激進度,Initial Radical Value,初期過激度`,
+	10	: `初始博爱值`						+ ` # 初始博爱值,初始博愛值,Initial Philanthropy Value,初期博愛値`,
+	11	: `初始理智值`						+ ` # 初始理智值,初始理智值,Initial Reason Value,初期理性値`,
+	
+	14	: `库罗库的初始好感`				+ ` # 库罗库初始好感,庫羅庫初始好感,Initial Affinity of Kuruko,クロック初期好感度`,
+	15	: `桑/San的初始好感`				+ ` # 桑初始好感,桑初始好感,Initial Affinity of San,サン初期好感度`,
+	16	: `赭石色的初始好感`				+ ` # 赭石色初始好感,赭石色初始好感,Initial Affinity of Ocher,オーカー初期好感度`,
+	17	: `克莱尔的初始好感`				+ ` # 克莱尔初始好感,克萊爾初始好感,Initial Affinity of Claire,クレア初期好感度`,
+	
+	12	: `外围阵地生效天数延迟(天)`		+ ` # 外围阵地生效天数延迟（天）,週邊陣地生效天數延遲（天）,Delay in Effectiveness of Perimeter Positions (days),外周陣地有効日数遅延（日）`,
+	13	: `外围阵地到达天数减少(天)`		+ ` # 外围阵地到达天数减少（天）,週邊陣地到達天數減少（天）,Reduction in Days to Reach Perimeter Positions (days),外周陣地到着日数減少（日）`,
+	
+	},
+	
+	挑战增益 : {
+	
+	1	: `初始的资金`						+ ` # 初始资金,初始資金,Initial Funds,初期資金`,
+	
+	5	: `仓库的初始等级`					+ ` # 仓库初始等级,倉庫初始等級,Initial level of the Storage,倉庫初期レベル`,
+	2	: `人力资源部初始等级`				+ ` # 人力资源部初始等级,人力資源部初始等級,Initial level of the Human Resources Group,人事部初期レベル`,
+	
+	3	: `资源回收部初始等级`				+ ` # 资源回收部初始等级,資源回收部初始等級,Initial level of the Resource Recycling Group,資源回収部初期レベル`,
+	7	: `部件回收部初始等级`				+ ` # 部件回收部初始等级,部件生產部初始等級,Initial level of the Component Production Department,部品生産部初期レベル`,
+	4	: `武器制造厂初始等级`				+ ` # 武器制造厂初始等级,武器製造廠初始等級,Initial level of the Weapon Factory,武器製造工場初期レベル`,
+	
+	6	: `发电厂初始等级`					+ ` # 发电厂初始等级,發電廠初始等級,Initial level of the Electricity Plant,発電所初期レベル`,
+	
+	8	: `增加基建制造物品备选项`			+ ` # 基建制造物品备选增加,基建製造物品選項增加,Infrastructure division item manufacturing options increase,インフラ製造品の選択肢を追加`,
+	
+	},
+	
+	幸存增益 : {
+	
+	1	: `初始自带资金`					+ ` # 初始资金,初始資金,Initial Funds,初期資金`,
+	
+	2	: `升级奖励可选数量`				+ ` # 升级奖励可选数量,升級獎勵可選數量,Number of options for upgrade rewards increased,アップグレード奨励オプション数の追加`,
+	5	: `升级额外奖励次数`				+ ` # 升级额外奖励次数,升級額外獎勵次數,add additional times for Upgrade rewards,アップグレード回数の追加`,
+	
+	4	: `升级奖励价值上限提高`			+ ` # 升级奖励价值上限提高,升級獎勵價值上限提高,Upgrade reward value limit increased,アップグレード奨励価値の上限追加`,
+	3	: `升级奖励价值提高`				+ ` # 升级奖励价值提高,升級獎勵價值提高,Upgrade reward value increase,アップグレード奨励価値の追加`,
+	
+	6	: `重铸物品效率`					+ ` # 重铸物品效率,重铸物品效率,Efficiency of recasting items,再鋳造効率`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
+// 分解数据
+csvZ.result = new Object();
+csvZ.forEach(function(e){ csvZ.result[e[0]] = e });
+
+// ---------------------------------------------
+
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv1.forEach(function(item, index, array){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 增益图标
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;text-align:center;"><img loading="lazy" alt="' + 
-		item[3] + '" src="../static/image/advanced/'+item[1]+'.png" style="width:56px;height:64px;" /></td>' }else 
-		
-		// 难度名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[item[1]][0] +'</td>' }else 
-		
-		// 所属模式
-		if(index ===  5){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[data][0] +'</td>' }else 
-		
-		// 难度效果
-		if(index ===  9){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item
-		[1]][0].replace('<Description>', data.split(':')[1]) +'</td>' }else
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		EnlDifficult,		1,
+	item.难度等级 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 难度等级		Level,				1,
+	item.引用代码 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 引用代码		ID,					501,
+	item.项目名称 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 项目名称		Description,		#敌方全属性小幅强化,
+	
+	item.点数奖励 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 点数奖励		,					,
+	item.图片名称 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 图片名称		,					,
+	item.功能函数 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 功能函数		,					,
+	item.文本描述 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 文本描述		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称['csv1_' + item.项目代码.code];
+	item.文本描述.text = textList.文本描述['csv1_' + item.项目代码.code];
+	
+	item.功能函数.text = csvZ.result[item.引用代码.code][7];
+	item.功能函数.code = csvZ.result[item.引用代码.code][7];
+	
+	item.图片名称.text = item.引用代码.text;
+	item.图片名称.code = item.引用代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description>', 'i'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/32_others_advanced/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/32_others_advanced/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.难度等级.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.功能函数.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable02 = $('#powerTable02'), powerTable_tbody_node02 = '';
+let jqi_powerTable02 = $('#powerTable02');
+let powerTable02_tbody_html = '';
+let powerTable02_group = -1;
+let powerTable02_index = -1;
 
 // 生成表格
-tbodyArray02.forEach(function(item){
+csv2.forEach(function(item, index, array){
 	
-	// 高亮同类
-	powerTable_tbody_node02 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable02_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable02_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 增益图标
-		if(index ===  1){ powerTable_tbody_node02 += '<td style="padding:0;text-align:center;"><img loading="lazy" alt="' + item[3] + 
-		'" src="../static/image/advanced/'+item[1]+'.png" style="width:56px;height:64px;" /></td>' }else 
-		
-		// 增益名称
-		if(index ===  3){ powerTable_tbody_node02 += '<td>'+ ItemsNameList['positive_'+item[2]][0] +'</td>' }else 
-		
-		// 所属模式
-		if(index ===  5){ powerTable_tbody_node02 += '<td>'+ ItemsNameList[data][0] +'</td>' }else 
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node02 += '<td>'+ data +'</td>' };
-		
-	});
+	// 数据处理
+	item.数据分组 = powerTable02_group;
+	item.项目序号 = powerTable02_index;
 	
-	// 闭合掉tr
-	powerTable_tbody_node02 += '</tr>';
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		ChanDifficult,			1,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,					#敌方全属性小幅强化,
+	item.功能函数 = {code:item[ 2], text:item[ 2], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 功能函数		Effect,					EnemyStrengthen_All:4,
+	item.演习影响 = {code:item[ 3], text:item[ 3], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 演习影响		DailyDiffEffective,		1,
+	item.点数奖励 = {code:item[ 4], text:item[ 4], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 点数奖励		Reward,					20,
+	item.剧情影响 = {code:item[ 5], text:item[ 5], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 剧情影响		DifficultInit,			3,
+	
+	item.图片名称 = {code:item[99], text:item[99], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 图片名称		,						,
+	item.文本描述 = {code:item[99], text:item[99], }; // powerTable02_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 文本描述		,						,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称['csv2_' + item.项目代码.code];
+	item.文本描述.text = textList.文本描述['csv2_' + item.项目代码.code];
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description>', 'i'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.图片名称.text = 'x';
+	item.图片名称.code = 'x';
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable02_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable02_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.点数奖励.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01">'+ item.功能函数.text +'</td>';
+	
+	powerTable02_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable02_tbody_html += '</tr>';
 	
 });
-$('#powerTable02 tbody').html(powerTable_tbody_node02);
+$('#powerTable02 tbody').html(powerTable02_tbody_html);
 xj2._buildPowerTable('powerTable02');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable02);
+jqi_powerTable02.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable02) });
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable03 = $('#powerTable03');
+let powerTable03_tbody_html = '';
+let powerTable03_group = -1;
+let powerTable03_index = -1;
+
+// 生成表格
+csv3.forEach(function(item, index, array){
+	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable03_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable03_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable03_group;
+	item.项目序号 = powerTable03_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		SurDifficult,		1,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,				#敌方全属性小幅强化,
+	item.功能函数 = {code:item[ 2], text:item[ 2], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 功能函数		Effect,				EnemyStrengthen_All:4,
+	item.点数奖励 = {code:item[ 3], text:item[ 3], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 点数奖励		Reward,				20,
+	item.剧情影响 = {code:item[ 4], text:item[ 4], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 剧情影响		DifficultInit,		0,
+	
+	item.图片名称 = {code:item[99], text:item[99], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 图片名称		,					,
+	item.文本描述 = {code:item[99], text:item[99], }; // powerTable03_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 文本描述		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称['csv3_' + item.项目代码.code];
+	item.文本描述.text = textList.文本描述['csv3_' + item.项目代码.code];
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		item.文本描述.text 
+		= item.文本描述.text.replace(/\n/g, '<br />');
+		
+		item.功能函数.code
+		.split('|').map(function(value){ return value.replace(/.+:/, '') })
+		.forEach(function(value){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description>', 'i'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.图片名称.text = 'x';
+	item.图片名称.code = 'x';
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable03_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable03_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable03_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable03_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable03_tbody_html += '<td class="showPart01">'+ item.点数奖励.text +'</td>';
+	
+	powerTable03_tbody_html += '<td class="showPart01">'+ item.功能函数.text +'</td>';
+	
+	powerTable03_tbody_html += '<td class="showPart01" style='+
+	'"padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable03_tbody_html += '</tr>';
+	
+});
+$('#powerTable03 tbody').html(powerTable03_tbody_html);
+xj2._buildPowerTable('powerTable03');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable03);
+jqi_powerTable03.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable03) });
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable04 = $('#powerTable04');
+let powerTable04_tbody_html = '';
+let powerTable04_group = -1;
+let powerTable04_index = -1;
+
+// 生成表格
+csv4.forEach(function(item, index, array){
+	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable04_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable04_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable04_group;
+	item.项目序号 = powerTable04_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		GlobalGain,			1,
+	item.图片名称 = {code:item[ 1], text:item[ 1], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 图片名称		Image,				1,
+	item.项目名称 = {code:item[ 2], text:item[ 2], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 项目名称		Title,				#初始资金,
+	item.初始奖励 = {code:item[ 3], text:item[ 3], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 初始奖励		AddValue,			100,
+	item.最大奖励 = {code:item[ 4], text:item[ 4], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 最大奖励		Limit,				500,
+	item.初始消耗 = {code:item[ 5], text:item[ 5], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 初始消耗		FirstConsume,		200,
+	item.升级消耗 = {code:item[ 6], text:item[ 6], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 升级消耗		AddConsume,			200,
+	item.等级上限 = {code:item[99], text:item[99], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 等级上限		,					,
+	item.满级需求 = {code:item[99], text:item[99], }; // powerTable04_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 满级需求		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.剧情增益[item.项目代码.code];
+	
+	item.等级上限.text = item.等级上限.code = (item.最大奖励.code / item.初始奖励.code);
+	
+	item.满级需求.text = item.满级需求.code = (
+	item.等级上限.code / 2 * (item.初始消耗.code * 2 + item.升级消耗.code * (item.等级上限.code - 1)) );
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/32_others_advanced/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/32_others_advanced/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable04_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable04_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable04_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	powerTable04_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.等级上限.text +'</td>';
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.初始奖励.text +'</td>';
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.最大奖励.text +'</td>';
+	
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.初始消耗.text +'</td>';
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.升级消耗.text +'</td>';
+	powerTable04_tbody_html += '<td class="showPart00">'+ item.满级需求.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable04_tbody_html += '</tr>';
+	
+});
+$('#powerTable04 tbody').html(powerTable04_tbody_html);
+xj2._buildPowerTable('powerTable04');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable04);
+jqi_powerTable04.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable04) });
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable05 = $('#powerTable05');
+let powerTable05_tbody_html = '';
+let powerTable05_group = -1;
+let powerTable05_index = -1;
+
+// 生成表格
+csv5.forEach(function(item, index, array){
+	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable05_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable05_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable05_group;
+	item.项目序号 = powerTable05_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		GlobalGain,			1,
+	item.图片名称 = {code:item[ 1], text:item[ 1], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 图片名称		Image,				1,
+	item.项目名称 = {code:item[ 2], text:item[ 2], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 项目名称		Title,				#初始资金,
+	item.初始奖励 = {code:item[ 3], text:item[ 3], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 初始奖励		AddValue,			100,
+	item.最大奖励 = {code:item[ 4], text:item[ 4], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 最大奖励		Limit,				500,
+	item.初始消耗 = {code:item[ 5], text:item[ 5], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 初始消耗		FirstConsume,		200,
+	item.升级消耗 = {code:item[ 6], text:item[ 6], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 升级消耗		AddConsume,			200,
+	item.等级上限 = {code:item[99], text:item[99], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 等级上限		,					,
+	item.满级需求 = {code:item[99], text:item[99], }; // powerTable05_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 满级需求		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.挑战增益[item.项目代码.code];
+	
+	item.等级上限.text = item.等级上限.code = (item.最大奖励.code / item.初始奖励.code);
+	
+	item.满级需求.text = item.满级需求.code = (
+	item.等级上限.code / 2 * (item.初始消耗.code * 2 + item.升级消耗.code * (item.等级上限.code - 1)) );
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/32_others_advanced/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/32_others_advanced/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable05_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable05_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable05_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	powerTable05_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.等级上限.text +'</td>';
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.初始奖励.text +'</td>';
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.最大奖励.text +'</td>';
+	
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.初始消耗.text +'</td>';
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.升级消耗.text +'</td>';
+	powerTable05_tbody_html += '<td class="showPart00">'+ item.满级需求.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable05_tbody_html += '</tr>';
+	
+});
+$('#powerTable05 tbody').html(powerTable05_tbody_html);
+xj2._buildPowerTable('powerTable05');
+// $('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable05);
+jqi_powerTable05.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable05) });
+
+// ---------------------------------------------
+
+// 基本变量
+let jqi_powerTable06 = $('#powerTable06');
+let powerTable06_tbody_html = '';
+let powerTable06_group = -1;
+let powerTable06_index = -1;
+
+// 生成表格
+csv6.forEach(function(item, index, array){
+	
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable06_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable06_group+=1 }; return '这是空行'; };
+	
+	// 数据处理
+	item.数据分组 = powerTable06_group;
+	item.项目序号 = powerTable06_index;
+	
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		GlobalGain,			1,
+	item.图片名称 = {code:item[ 1], text:item[ 1], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 图片名称		Image,				1,
+	item.项目名称 = {code:item[ 2], text:item[ 2], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 项目名称		Title,				#初始资金,
+	item.初始奖励 = {code:item[ 3], text:item[ 3], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 初始奖励		AddValue,			100,
+	item.最大奖励 = {code:item[ 4], text:item[ 4], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 最大奖励		Limit,				500,
+	item.初始消耗 = {code:item[ 5], text:item[ 5], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 初始消耗		FirstConsume,		200,
+	item.升级消耗 = {code:item[ 6], text:item[ 6], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 升级消耗		AddConsume,			200,
+	item.等级上限 = {code:item[99], text:item[99], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 等级上限		,					,
+	item.满级需求 = {code:item[99], text:item[99], }; // powerTable06_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 满级需求		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.幸存增益[item.项目代码.code];
+	
+	item.等级上限.text = item.等级上限.code = (item.最大奖励.code / item.初始奖励.code);
+	
+	item.满级需求.text = item.满级需求.code = (
+	item.等级上限.code / 2 * (item.初始消耗.code * 2 + item.升级消耗.code * (item.等级上限.code - 1)) );
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/32_others_advanced/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/32_others_advanced/${item.图片名称.code}.png" style="width: 32px;height: 32px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable06_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 40px;">';
+	powerTable06_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable06_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	powerTable06_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.等级上限.text +'</td>';
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.初始奖励.text +'</td>';
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.最大奖励.text +'</td>';
+	
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.初始消耗.text +'</td>';
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.升级消耗.text +'</td>';
+	powerTable06_tbody_html += '<td class="showPart00">'+ item.满级需求.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable06_tbody_html += '</tr>';
+	
+});
+$('#powerTable06 tbody').html(powerTable06_tbody_html);
+xj2._buildPowerTable('powerTable06');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable06);
+jqi_powerTable06.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable06) });
 
 })();
 </script>
@@ -581,7 +1444,7 @@ xj2._buildPowerTable('powerTable02');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
 </div>
 </div>
 </div>

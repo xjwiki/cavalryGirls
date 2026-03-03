@@ -4,10 +4,13 @@
 /* xj.base 默认字体并不是等间距的，但做文档还是等间距字体更好，所以在这里重新设置一次 Iosevka */
 /* 黑白主题的内容还不完善，不少插件有待改进就暂不启用了，把文本打散换行在移动端小屏幕会好看些 */
 
-@font-face{font-family:Iosevka;font-weight:normal;font-style:normal; src:url("../font/iosevka/33.2.2/IosevkaFixed-Regular.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:bold;  font-style:normal; src:url("../font/iosevka/33.2.2/IosevkaFixed-Bold.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:normal;font-style:oblique;src:url("../font/iosevka/33.2.2/IosevkaFixed-Oblique.woff2") format('woff2');}
-@font-face{font-family:Iosevka;font-weight:bold;  font-style:oblique;src:url("../font/iosevka/33.2.2/IosevkaFixed-BoldOblique.woff2") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Regular.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Bold.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-Oblique.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-BoldOblique.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+
+@font-face{font-family:"NotoSans";font-weight:normal;font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Regular.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"NotoSans";font-weight:bold;  font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Bold.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
 
 .xj-basic-white{
 --xj-bodyGradient:rgba(204,204,204,0.5);
@@ -203,12 +206,17 @@ html:not([lang="ko"]) :is(ko-i, ko-b, ko-t, ko-f, ko-g, ko-ib, ko-it, ko-if, ko-
 html:not([lang="en"]) :is(en-i, en-b, en-t, en-f, en-g, en-ib, en-it, en-if, en-ig){display:none;}
 html:not([lang="ud"]) :is(ud-i, ud-b, ud-t, ud-f, ud-g, ud-ib, ud-it, ud-if, ud-ig){display:none;}
 
+/* 使用自定义 h 标签代替 <span style="display:none"></span> 和 <i hidden></i>, 尽量让文本更短 */
+/* 现在改变了项目名称和文本描述的处理方式, 这个标签应该是用不上了, 但也没必要删了, 暂时先留着 */
+h{display:none!important;}
+
 /* 使用自定义 c 标签代替 code, 一方面输入更短, 另一方面浏览器翻译的时候也不会当作代码而不翻译 */
 
 c{padding:0 0.5em;color:#f39;vertical-align:bottom;font-family:var(--xj-codeText);background-color:var(--xj-f0f0f0);}
 
-/* 使用自定义 h 标签代替 <span style="display:none"></span> 和 <i hidden></i>, 尽量让文本更短 */
+/* 既 native bold, italic, 仅限环境有加粗或倾斜字体的情况, 不允许浏览器自动合成, 避免影响宽度 */
 
-h{display:none!important;}
+ni{font-style:italic;font-synthesis:none;}
+nb{font-weight:bolder;font-synthesis:none;}
 
 

@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -14,11 +14,11 @@
 <script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
 
 <link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
-<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
 <script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
 <script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
 <script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
-<script src="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
 
 <link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
 <script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -397,7 +397,7 @@
 
 <p>53. 每秒伤害: 公式为 <c>伤害总值 ÷ 射击周期</c>, 也就是所谓的 Damage Per Second, 既 DPS, 这个值对非散弹类的动能武器来讲是比较精准的, 而电弧与高爆类武器算是群伤 AOE, 射线武器的伤害会多段重复, 因此这个值对这类武器来讲就没什么价值了, 总之, 看看就好</p>
 
-<p>54. 特殊参数: 既子弹打中后能施加的 Debuff 效果, 目前仅少数几把武器存在这个功能, 只要子弹的攻击不被抵抗, 就会附加异常状态, 当复数的异常状态被叠加时, 还能催生出更多的负面效果, 不过这些负面效果在这里难以展开讲述, 具体详情可以查看 <a href="./data_others_parlance.html">术语提示.html</a></p>
+<p>54. 特殊参数: 既子弹打中后能施加的 Debuff 效果, 目前仅少数几把武器存在这个功能, 只要子弹的攻击不被抵抗, 就会附加异常状态, 当复数的异常状态被叠加时, 还能催生出更多的负面效果, 不过这些负面效果在这里难以展开讲述, 具体详情可以查看 <a href="./data_others_parlance.html">名词解析.html</a></p>
 
 <p>————</p>
 
@@ -456,10 +456,18 @@
 <p>16. 肩扛火箭炮: 火箭炮射出的是导弹, 导弹带有追踪功能, 但并不是特别精准, 所以不要指望能准确命中, 导弹还可分为两种, 一种是动能类型的, 一种是高爆类型的, 动能类型的击中后会自动消失, 高爆类型的击中后会自动爆炸, 而火箭炮射出的便是高爆类导弹, 由于系统限制, 机体于短时间内受到爆炸伤害的最大次数为 <c>3</c>, 所以它的威力可能不如预期那么高, 关于爆炸, 细节可参考 <a href="./data_manage_parlance.html">术语名词.html</a></p>
 
 <!--
+◆武器升级的时候, 起码需要一份材料, 如果材料的价格不足以弥补差价, 可以使用资金填补, 但是武器的等级越高, 需要填补的差价也就越大, 
+算法为 <c>当前武器等级 × 材料价格</c>, 例如, LV4 的轻机枪要升级到 LV5, 只需要 4 把 LV1 的轻机枪作为武器, 每一把轻机枪的价格为 60, 所以材料价格就是 4×60=240
+但如果你材料不够, 例如当前你只有 1 把轻机枪, 那就需要使用资金弥补另外 3 把轻机枪的缺口, 此时资金的需求就是 <c>3 × 60 × 4 = 720</c>,
+其中的 3 是缺少的轻机枪数量, 其中的 60 是轻机枪的价格, 其中的 4 是当前武器的等级
+
 蓄力系统: 部分武器可以蓄力, 但可在机体整备界面, 点击武器右上角的"武器设置"按钮, 将蓄力功能关闭, 蓄力完成自动射击也是可以设置的
 剑气攻击/暗杀操作/强制蹲踞
 
 如果改造武器的材料价值不够, 需要用资金弥补, 那么此时资金需求会翻倍, 例如材料价值为 80, 我们使用的材料价值为 40, 剩余部分需要用资金弥补, 那么需要的资金为 <c>(80-40)×2=80</c> ? 但有时候价格又不会翻倍?
+
+垃圾武器: 虽然不怕抵抗, 但子弹被抵抗了便无法触发暴击
+废料武器有面板的1-（0.95×0.6）=0.43真实伤害，动能武器带废料融合3有面板的1-（0.95×0.5）=0.525真实伤害
 -->
 
 <!--
@@ -561,11 +569,11 @@ word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-lin
 #powerTable01 .weapon-special{background-color:#f93;}
 #powerTable01 .weapon-disabled{background-color:#f33;}
 
-#powerTable01 thead tr th:nth-last-of-type(5){background-image:url("../static/image/achieved/141.jpg");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ff7f00; */
-#powerTable01 thead tr th:nth-last-of-type(4){background-image:url("../static/image/achieved/103.jpg");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#6dd900; */
-#powerTable01 thead tr th:nth-last-of-type(3){background-image:url("../static/image/achieved/109.jpg");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ff0000; */
-#powerTable01 thead tr th:nth-last-of-type(2){background-image:url("../static/image/achieved/115.jpg");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ffdc73; */
-#powerTable01 thead tr th:nth-last-of-type(1){background-image:url("../static/image/achieved/121.jpg");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#00bfff; */
+#powerTable01 thead tr th:nth-last-of-type(5){background-image:url("../static/image/29_others_achieved/141.png");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ff7f00; */
+#powerTable01 thead tr th:nth-last-of-type(4){background-image:url("../static/image/29_others_achieved/103.png");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#6dd900; */
+#powerTable01 thead tr th:nth-last-of-type(3){background-image:url("../static/image/29_others_achieved/109.png");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ff0000; */
+#powerTable01 thead tr th:nth-last-of-type(2){background-image:url("../static/image/29_others_achieved/115.png");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#ffdc73; */
+#powerTable01 thead tr th:nth-last-of-type(1){background-image:url("../static/image/29_others_achieved/121.png");background-size:14px 14px;background-repeat:no-repeat;background-position:4px 4px;} /* color:#00bfff; */
 </style>
 
 
@@ -655,6 +663,9 @@ SpecialParam -> Impact:0 属性: 设置近战武器冲击力, 冲击力高于敌
 SpecialParam -> Special:3 属性: 近战武器的特判, 3 是镰刀的回旋攻击, 4 是鱼叉重击, 5 是斧头投掷
 
 ————
+
+◆ ShoulderWeapon.csv
+◆ 肩扛武器自带的模块, 实际上有生效, 但好像没有在游戏里的槽位中提现出来, 最好是提取文本后追加到 csv0 中去
 
 */
 
@@ -754,7 +765,7 @@ let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Com
 10315,#轻型狙M24,10315,Weapon,#对轻型狙M10进行进一步全属性得到了加强，略微增重并缩短了使用寿命\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:315|AddSpeed:-25|AddRotSpeed:-25,Company_10415,80,0,4,5,6,4,8,10415,,,,150,
 10415,#轻型狙M45,10415,Weapon,#对轻型狙M24进行进一步全属性较小加强\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:415|AddSpeed:-25|AddRotSpeed:-25,Company_10415,125,0,-1,6,9,4,8,10515|10405,,,,166,
 
-10515,#电磁三眼铳,10515,Weapon,#自他国走私的高精尖武器。轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发。价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但她仍然是一款强大的武器。,NormalWeapon|Riffle,1,Weapon:515|AddSpeed:-25|AddRotSpeed:-25,Main_2,300,0,-2,6,8,4,8,,10415_2|40032_4,,,179,
+10515,#电磁三眼铳,10515,Weapon,#自他国走私的高精尖武器。轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发。价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但他仍然是一款强大的武器。,NormalWeapon|Riffle,1,Weapon:515|AddSpeed:-25|AddRotSpeed:-25,Main_2,300,0,-2,6,8,4,8,,10415_2|40032_4,,,179,
 
 10004,#重型狙,1004,Weapon,#强大的单发武器，射程伤害都很高，但是射速很感人\n较重，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:4|AddSpeed:-10|AddRotSpeed:-50,Company_10004,70,16,1,4,7,1,2,10104|10305|10040|10080,40008_5|40009_5|40004_8,10004|10005|10015|10104|10105|10115|10204|10205|10215|10304|10315|10415,,7,
 10104,#重型狙M1,10104,Weapon,#对重型狙进行了全属性强化，各属性都有所增强。进一步增加了重量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:104|AddSpeed:-25|AddRotSpeed:-60,Company_10004,350,25,2,6,11,1,3,10204|10500,,10004,,60,
@@ -2410,7 +2421,7 @@ let textList = {
 	10315 : `对轻型狙M1实现进一步强化, 全属性被提升了但也缩短了寿命, 略微增重`		+ ` # 对轻型狙M10进行进一步全属性得到了加强，略微增重并缩短了使用寿命,對輕型狙M10進行進一步全屬性得到了加強，略微增重並縮短了使用壽命,An enhanced version of the light sniper M10 with all stats improved that weighs slightly more with shorter life,軽狙撃銃M10をさらに強化し，全ステータスが上昇したが，重量がわずかに増加し，使用寿命も短縮した`,
 	10415 : `对轻型狙M24 实现进一步的属性提升, 只是射程和穿甲略微被降低了一点`		+ ` # 对轻型狙M24进行进一步全属性较小加强,對輕型狙M24進行進一步全屬性較小加強,An enhanced version of the Light Sniper Rifle M24 with all stats slightly increased,軽狙撃銃M24の全ステータスを更に小幅に強化したもの`,
 	
-	10515 : `自他国走私来的高精尖武器, 射击为高精度三连发, 性能强大但难以维护`		+ ` # 自他国走私的高精尖武器，轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发，价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但她仍然是一款强大的武器,自他國走私的高精尖武器，輕型電磁炮，動能武器，有三個槍管，射擊方式為高精度三連發，價格昂貴，武器性能強大，但過於精密的設計導致其難以維護，維護成本高，老化概率高，但她仍然是一款強大的武器,This is a high-tech weapon smuggled from other countries，It can be classified as a light electromagnetic cannon，which is actually a kinetic weapon with 3 barrels，and the shooting method is high-precision 3-round burst，It is expensive and has powerful weapon performance，However，it's too sophisticated to maintain and has high maintenance costs and wear rate，Still，it is a powerful weapon,他国から密輸された高精度な磁電銃，三連バレルの軽量キネティック兵器で，高精度の三点バースト発射が可能，強力な性能を誇るが，設計が繊細すぎて整備が困難で，維持コストが高く，経年劣化のリスクも大きい，それでもなお，強力な兵器であることは間違いない`,
+	10515 : `自他国走私来的高精尖武器, 射击为高精度三连发, 性能强大但难以维护`		+ ` # 自他国走私的高精尖武器，轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发，价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但他仍然是一款强大的武器,自他國走私的高精尖武器，輕型電磁炮，動能武器，有三個槍管，射擊方式為高精度三連發，價格昂貴，武器性能強大，但過於精密的設計導致其難以維護，維護成本高，老化概率高，但他仍然是一款強大的武器,This is a high-tech weapon smuggled from other countries，It can be classified as a light electromagnetic cannon，which is actually a kinetic weapon with 3 barrels，and the shooting method is high-precision 3-round burst，It is expensive and has powerful weapon performance，However，it's too sophisticated to maintain and has high maintenance costs and wear rate，Still，it is a powerful weapon,他国から密輸された高精度な磁電銃，三連バレルの軽量キネティック兵器で，高精度の三点バースト発射が可能，強力な性能を誇るが，設計が繊細すぎて整備が困難で，維持コストが高く，経年劣化のリスクも大きい，それでもなお，強力な兵器であることは間違いない`,
 	
 	10004 : `强大的单发武器, 射程和伤害都很高, 但射速感人, 弹夹容量也小(较重)`		+ ` # 强大的单发武器，射程伤害都很高，但是射速很感人，较重,強大的單發武器，射程傷害都很高，但是射速很感人，較重,A power single-shot weapon with high range，damage，and slow firing rate，Heavy,射程距離が長くダメージも大きいが，連射速度が悪い強力な単発武器，重量重め`,
 	10104 : `对重型狙进行了全属性强化, 各属性都有所增强, 也进一步的增加了重量`		+ ` # 对重型狙进行了全属性强化，各属性都有所增强，进一步增加了重量,對重型狙進行了全屬性強化，各屬性都有所增強，進一步增加了重量,An enhanced Heavy Sniper Rifle with all stats improved and weighs more,重狙撃銃を全面的に強化したもの，全のステータスが強化され，重量もさらに増加した`,
@@ -4160,7 +4171,7 @@ filterFunction();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
 </div>
 </div>
 </div>

@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -14,11 +14,11 @@
 <script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
 
 <link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
-<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
 <script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
 <script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
 <script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
-<script src="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
 
 <link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
 <script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -118,31 +118,66 @@
 <section><h2 id="heading01">01. 基本信息</h2>
 
 <p>
-	01. 成就共 <c>181</c> 个, 可分为 <c>6</c> 类, 具体为 : 剧情模式(3)/挑战模式(10)/无尽模式(6)/幸存模式(5)/潜入模式(2)/任意模式(155); <br />
-	02. 解锁成就既可领取"奖励点数"(在初始界面>成就界面领), 点数可以解锁增益, 重开剧情模式就会生效, 细节可查阅 <a href="./data_others_advanced.html">奖惩机制.html</a>; <br />
-	03. 存在着 <c>7</c> 个隐藏成就, 其中两个是剧情模式走叛军路线才能完成的, 其余五个则要求击杀特定敌人, 细节可查阅 <a href="./event_detail.html">事件详情.html</a>; <br />
-	04. "触发函数"&"相关参数"都是系统用于检测成就是否解锁的代码, 对普通玩家来讲其实并没有什么意义, 这里只是顺带罗列出来而已; <br />
+	01. 当前的游戏成就总共有 <c>192</c> 个, 其中有 <c>7</c> 个是隐藏的(两个和剧情模式下的结局相关, 另外的五个则要求我方击杀特定的敌人)<br />
+	02. 解锁成就既可领取"奖励点数"(在初始界面->成就界面领), 点数可以解锁增益, 但需要开新档才能生效, 细节可查阅 <a href="./data_others_advanced.html">奖惩机制.html</a><br />
+	03. 下表中的"触发函数"字段, 是系统用于检测成就是否可被解锁的代码, 对普通玩家来讲并没有什么意义, 这里只是顺带罗列出来而已<br />
 </p>
-<!--◇
-触发函数和触发参数两个单元格可以合并, 参考深暗森林的做法
-◇-->
 
-<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;line-height:14px;">
-	<thead>
+<p style="display:flex;justify-content:space-between;align-items:center;">
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;">隐藏成就: </span>
+		<select id="attrSelect01" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;">角色相关: </span>
+		<select id="attrSelect02" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;">模式限定: </span>
+		<select id="attrSelect03" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;">触发函数: </span>
+		<select id="attrSelect04" class="needsclick select-unset" style="flex:1 1 auto;width:148px;"></select>
+	</label>
+</p>
+
+<p style="display:flex;justify-content:space-between;align-items:center;">
+	<label style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;align-self:center;width:80px;">名称描述: </span>
+		<input id="nameInput01" class="input-unset" type="search" style="flex:1 1 auto;width:116px;" placeholder="None" />
+		<button id="nameCheck01" class="button-unset" type="button" style="flex:0 0 auto;width:32px;margin-left:-1px;font-size:14px;color:#999;"><i class="fas fa-magnifying-glass"></i></button>
+	</label>
+	<span style="display:inline-flex;flex:0 0 auto;width:472px;
+	color:#999;">(可以搜索名称或描述, 多关键词用空格隔开)</span>
+	<span style="display:inline-flex;flex:0 0 auto;width:228px;">
+		<span style="flex:0 0 auto;color:#999;">│</span>
+		<button id="resetButton" class="button-unset" type="button" 
+		style="flex:0 0 auto;width:74px;margin-left:auto;order:1;">清空</button>
+	</span>
+</p>
+
+<table originalSort="1" id="powerTable01" class="powerTable table-xs table-hover showPart01" style="width:960px;">
+	<thead style="line-height:1;">
 		<tr>
-			<th sorttype="string" style="width: 65px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">成就图片<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 32px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">成就序号<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">成就名称<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">成就代码<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">是否隐藏<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="number" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">奖励点数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">归属模式<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">触发函数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">相关参数<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
-			<th sorttype="string" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;">文本描述<i class="icon fas fa-sort" style="margin-left:0;"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 66px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目图片</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 64px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目序号</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width:128px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目名称</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>项目代码</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="number" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>奖励点数</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 40px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>隐藏成就</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 60px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>角色相关</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: 80px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>模式限定</b><i class="icon fas fa-sort"></i></span></th>
+			
+			<th sorttype="string" class="showPart01" style="width: 96px;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>触发函数</b><i class="icon fas fa-sort"></i></span></th>
+			<th sorttype="string" class="showPart01" style="width: auto;padding-top:6px;"><span style="writing-mode:vertical-lr;letter-spacing:2px;"><b>文本描述</b><i class="icon fas fa-sort"></i></span></th>
+			
 		</tr>
 	</thead>
-	<tbody></tbody>
+	<tbody style="line-height:14px;"></tbody>
 </table>
 
 </section>
@@ -151,51 +186,75 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>亲自操控: 有部分成就, 例如"狂战士"或者"兰博", 在我们为机体配上对应的装备后, 还需要我们亲自操控并完成一场战斗才能解锁, 战斗如果由 AI 控制是无法解锁的(剧情模式和无尽模式都可以在战场按 Tab 进入战略界面, 然后点击"机体详情", 临场切换操控的机体);</p>
+<p id="奖励点数"><nb>奖励点数</nb>: 当前所有成就的奖励点数总和为 <c>30350</c>, 而点开剧情模式所有全局增益, 需要的奖励点数为 <c>48045</c>, 也就是说, 当下即使你实现了全成就解锁, 全局增益也无法被全部启用, 总需要进行一些取舍, 关于这个问题, 只能期待后续拓展添加更多成就和奖励点数了</p>
 
-<p>击杀成就: 有五个隐藏是成就是击杀 Boss 机体, 当我们在剧情模式下走叛逃路线时, 这些 Boss 必定会出现, 将其击杀即可, 但实际上这些 Boss 在挑战模式和无尽模式中也可能会随机出现, 如果在这些模式下遭遇并击杀它们, 也是可行的, 不是非得在剧情模式下完成;</p>
+<p id="解锁限制"><nb>解锁限制</nb>: 在剧情模式下有个故事难度, 它提供了 DebugTool, 可随意添加任何物品到物品栏中, 是专门用于玩家测试各种装配的, 由于可以获得任意物品, 而且战斗难度也很低, 所以毫无挑战性可言, 因此, 在该难度下无法解锁任何成就, 其余难度则对解锁成就没有限制</p>
 
-<p>随机完成: 除了五个隐藏 Boss, 还有一些成就与击杀特定的目标有关, 例如"渗透者克星"或者"掷弹者克星", 而渗透者和掷弹者这类敌人是否出现是随机的, 有时一整局游戏总会有一两种敌人不会出现, 那也是正常现象, 这个也没法强求, 多挑战几次, 自然就能解锁了;</p>
+<p id="同时完成"><nb>同时完成</nb>: [挑战者/破关者/突破者/全能者/蔑视者](通关挑战模式的进阶难度), 这类具有上下级关联的成就, 一旦解锁了高难度的成就, 则低难度的成就一般也会自动解锁, 所以其实并不需要重复挑战多次, 像解锁无尽模式的坚持到第 N 天和第 N 战, 也都是这样的机制</p>
 
-<p>元素相关: 冰火两重天=装备喷火器和寒冰喷雾朝敌群喷洒即可, 元素使者=融合高爆武器触发随机元素效果即可, 冰系法师=使用寒冰喷雾朝敌群喷洒即可, 连锁反应=高温天气下用喷油枪朝敌群喷洒即可, 闪电链=下雨天气时用安装了"线圈模块"的电弧武器攻击敌人即可;</p>
-
-<p>武器需求: 究极大杀器=装备高斯狙击步枪, 再装上"杀伤模块"将伤害提升至 7000, 于战场上打出暴击即可, 超大容量=装备冲锋枪B2的最高级版本, 再装上"大弹鼓"配件上战场即可, 行走燃料罐=装备任意喷射武器, 再装三个"外挂燃料桶"上战场即可(这个装备是挂件);</p>
+<p id="先后循序"><nb>先后循序</nb>: 想同时达成"永恒传奇"和"屹立不倒", 需要在无尽模式中坚持到 150 天再点击"决战", 坚持 100 场战斗后, 选择退役, 会先解锁屹立不倒, 读档再退役, 就会解锁永恒传奇, 这个顺序不能颠倒, 因为未开启决战就退役, 存档会被自动删除, 那你就得重打一回了</p>
 
 <p>————</p>
 
-<p>解锁限制: 剧情模式下有个故事难度, 它提供了 Debug 工具, 可随意添加任何物品到物品栏中, 是专门为用于玩家测试各种装配的, 由于可以获得任意物品, 且战斗难度也很低, 所以毫无挑战性可言, 因此, 在该难度下无法解锁任何成就, 其余难度则对解锁成就无限制;</p>
+<p id="亲自操控"><nb>亲自操控</nb>: 部分成就, 例如"狂战士"或者"兰博", 在我们为机体配上对应的装备后, 还需要我们亲自操控并完成一场战斗才能解锁, 战斗如果由 AI 控制, 是无法解锁的(剧情模式和无尽模式都可以在战场的战略面板(快捷键 <kbd>Tab</kbd>), 点击"机体详情", 临场切换操控的机体)</p>
 
-<p>同时完成: 挑战者/破关者/突破者/全能者/蔑视者(通关挑战模式的进阶某难度), 这类具有上下级关联的成就, 一旦你解锁了高难度的成就, 则低难度的成就一般也会自动解锁, 所以并不需要重复挑战多次, 像解锁无尽模式的坚持到第 N 天和第 N 战, 也都是这样的机制;</p>
+<p id="击杀成就"><nb>击杀成就</nb>: 有五个隐藏是成就是击杀 Boss 机体, 当我们在剧情模式下走叛逃或革命路线时, 这些 Boss 必定出现, 将其击杀即可, 但是这些 Boss 在挑战模式和无尽模式中也可能会随机出现的, 如果在这些模式下遭遇并击杀它们, 也是可行的, 不是非得在剧情模式下完成</p>
 
-<p>先后循序: 想同时达成"永恒传奇"和"屹立不倒", 需要在无尽模式中坚持到 150 天再点击"决战", 坚持 100 场战斗后选择退役, 会先解锁屹立不倒, 读档再退役, 就会解锁永恒传奇, 这个顺序不能颠倒, 因为未开启决战就退役, 存档会被自动删除, 那你就得重打一回了;</p>
+<p id="随机完成"><nb>随机完成</nb>: 除了五个隐藏的 Boss 成就, 还有其他跟击杀特定的目标有关, 例如"渗透者克星"或者"掷弹者克星", 但渗透者和掷弹者这类敌人是否出现是随机的, 有时一整局游戏总会有一两种敌人不会出现, 那也是正常现象, 这个也没法强求, 多挑战几次, 自然就能遇到了</p>
 
 <p>————</p>
 
-<p>奖励点数: 当前所有成就的奖励点数总和为 <c>28970</c>, 而点开剧情模式所有全局增益所需要的奖励点数为 <c>42720</c>, 也就是说, 目前这阶段, 即使达成了全成就, 全局增益也无法全部开启, 总需要进行一些取舍, 关于这一点, 只能期待后续 DLC 添加更多成就和奖励点数了;</p>
+<p id="武器需求"><nb>武器需求</nb>: 究极大杀器->使用高斯狙击步枪, 再装上"杀伤模块"将伤害提升至 7000 后于战场上打出暴击即可, 超大容量->装备冲锋枪B2的最高级版本, 再装上"大弹鼓"配件上战场即可, 行走燃料罐->装备任意喷射武器, 再装三个"外挂燃料桶"上战场即可(这个装备是挂件)</p>
 
-<!--◇
-◆ 30天前不能送出涨好感的礼物 - 剧情模式下送给队长就无所谓, 因为队长并没有好感度
-◆ 所有思潮为负 - 只要为负值即可, 不需要所有思潮都是负数的最小值
-◆ 01. 60天不能刷新商店也不能升级基建 - 买书导致商店刷新的操作会导致成就无法完成吗?
-◆ 外围阵地驻扎8股或12股敌军 - 不含歼灭委托 - 故事难度和正常难度的外围委托数量是无法完成这个成就的!
+<p id="元素相关"><nb>元素相关</nb>: 冰火两重天->装备喷火器和寒冰喷雾朝敌群喷洒即可, 元素使者->融合高爆武器触发随机元素效果即可, 冰系法师->使用寒冰喷雾朝敌群喷洒即可, 连锁反应->高温天气时用喷油枪朝敌群喷洒即可, 闪电链->下雨天时用安装了"线圈模块"的电弧武器攻击敌人即可</p>
 
-06. 我应该是触发超过 10 次子弹时间了, 但这个成就总是没反应…
-06. 子弹时间需要自然结束才计入一次，如果进入子弹时间后被命中导致退出子弹时间是不会计入的
-06. 你的意思是, 技能发动期间, 如果玛丽被击中会导致本次计数无效 [疑问]
-06. 如果被击中导致退出了子弹时间就无效
+<p>————</p>
 
-成就
-8股12股敌军 - 最好是走革命路线, 救出叛军首领后加入他们, 然后引出五个大 Boss, 他们会成为 5 个无限期的外围阵地任务, 这样就容易凑齐
-子弹时间
-偷税
-◇-->
+<p id="铁公鸡"><nb>铁公鸡</nb>: "在 30 天之前没有送出过一次涨好感的礼物", 该成就并不检测送礼给队长的情况, 因为队长没有好感度的机制, 送了也不影响</p>
+
+<p id="时代糟粕"><nb>时代糟粕</nb>: "所有思潮为负", 该成就只要求四项思潮都小于 0, 不要求它们都是最小值, 所以你完全可在达成后将思潮再转正, 也来得及</p>
+
+<p id="自己的够了"><nb>自己的够了</nb>: "在 60 天之前没有刷新过一次商店", 该成就要求在六十天以前, 没点击过采购部门的刷新按钮, 但在休息室买书这类不算</p>
+
+<p id="ＨＲ经理"><nb>ＨＲ经理</nb>: "累计招募 100 次", 该成就的数值只会算那些中途加入的队员(会出现招募的 UI), 初始自带的角色并不会被纳入统计的范围</p>
+
+<p id="战略关键"><nb>战略关键</nb>: "外围阵地同时驻扎了 12 股敌军", 该成就仅计算委外阵地, 不含歼灭委托, 最适合完成该任务的时机, 是在硬核难度或残酷难度的剧情模式, 走叛逃或革命路线, 在第八十天左右找克莱尔对话, 召出最终的五个 Boss 任务, 这样再凑七个外围阵地的任务就行了</p>
+
+<p id="闪避宗师"><nb>闪避宗师</nb>: "触发 100 次子弹时间", 该成就和玛丽的"子弹时间"这个战场技能并不相关, 它计算的是我方在战场上按 <kbd>Space</kbd> 执行闪避, 并成功躲开敌人攻击的操作(此时游戏时间的流逝会变慢), 如果我方在进入子弹时间后被打中, 导致退出子弹时间, 那么这次子弹时间就不会被纳入统计数据, 该成就并不需要你在一个模式流程里完成, 在任意模式里, 因闪避而产生了子弹时间且没被打断, 都会让数据+1</p>
 
 </section>
 
 
 
 <style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
 #powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
 </style>
 
 
@@ -205,749 +264,1127 @@
 
 /* 数据注解
 
-IconPath = '-',
-LockLevelType = '-',
+IconPath, 既图标路径, 已经被废弃, 不用理会
+LockLevelType, 既等级类型, 已经被废弃, 不用理会
 
 */
 
-// 表01数据
-let tbodyArray01 = [
-	
-	// 高亮,	成就图片,	成就序号,	成就名称,				成就代码,		是否隐藏,		奖励点数,		归属模式,		触发函数,								相关参数,								文本描述,														],		
-	// Active, 	Image,		Number, 	Name,					Achievements,	Hide,			Point,			Belong,			Func,									Value,									Description,													],		//01		
-	
-	[1,			1,			'001',		'新兵',					1,				0,				40,				'Any',			'DayOnceOver',							'10',									'存活10天',														],		
-	[1,			2,			'002',		'熟练士兵',				2,				0,				80,				'Any',			'DayOnceOver',							'30',									'存活30天',														],		
-	[1,			3,			'003',		'老兵',					3,				0,				120,			'Any',			'DayOnceOver',							'55',									'存活55天',														],		
-	[1,			4,			'004',		'资深老兵',				4,				0,				160,			'Any',			'DayOnceOver',							'80',									'存活80天',														],		
-	[1,			5,			'005',		'退役',					5,				0,				240,			'Any',			'DayOnceOver',							'100',									'存活100天',													],		//01		
-	
-	[0,			6,			'006',		'重型武器',				6,				0,				80,				'Any',			'WeaponBatteryOver',					'12',									'装备一把12槽位的武器通过一场战斗',								],		
-	[0,			7,			'007',		'超重型武器',			7,				0,				120,			'Any',			'WeaponBatteryOver',					'15',									'装备一把15槽位的武器通过一场战斗',								],		
-	[0,			8,			'008',		'大国重器',				8,				0,				200,			'Any',			'WeaponBatteryOver',					'18',									'装备一把18槽位的武器通过一场战斗',								],		//01		
-	
-	[1,			9,			'009',		'冰火两重天',			9,				0,				80,				'Any',			'EnemyReaction',						'ArmorMelting|0.5',						'同时对敌人施加冰火状态以融化敌人装甲',							],		
-	[1,			10,			'010',		'元素使者',				10,				0,				120,			'Any',			'AllDebuffSole',						'-',									'在一场战斗中触发了所有一级属性反应',							],		
-	[1,			11,			'011',		'冰系法师',				11,				0,				120,			'Any',			'EnemyReactionTime',					'Frozen|10|1',							'一次性冻结10个目标',											],		
-	[1,			12,			'012',		'连锁反应',				12,				0,				120,			'Any',			'EnemyReactionTime',					'Detonate|10|1',						'一次性引爆10个目标',											],		
-	[1,			13,			'013',		'闪电链',				13,				0,				120,			'Any',			'EnemyReactionAttack',					'Electrification|20',					'在一次感电中造成20次闪电连锁',									],		//01		
-	
-	[0,			14,			'014',		'乞丐装备',				14,				0,				80,				'Any',			'WeaponDurabilityFightLess',			'50',									'使用一把50耐久以下的武器通过一场战斗',							],		
-	[0,			15,			'015',		'物尽其用',				15,				0,				80,				'Any',			'weaponLoseDurabilityFightOver',		'20',									'武器失去20以上耐久的情况下通过一场战斗',						],		//01		
-	
-	[1,			16,			'016',		'强力武器',				16,				0,				80,				'Any',			'DamageOnceOver',						'2000',									'造成一次性2000以上的伤害',										],		
-	[1,			17,			'017',		'大杀器',				17,				0,				120,			'Any',			'DamageOnceOver',						'5000',									'造成一次性5000以上的伤害',										],		
-	[1,			18,			'018',		'超级大杀器',			18,				0,				160,			'Any',			'DamageOnceOver',						'10000',								'造成一次性10000以上的伤害',									],		
-	[1,			19,			'019',		'究极大杀器',			19,				0,				200,			'Any',			'DamageOnceOver',						'20000',								'造成一次性20000以上的伤害',									],		//01		
-	
-	[0,			20,			'020',		'闪避高手',				20,				0,				40,				'Any',			'BulletTimeCntTotalOver',				'1',									'触发1次子弹时间',												],		
-	[0,			21,			'021',		'闪避大师',				21,				0,				80,				'Any',			'BulletTimeCntTotalOver',				'10',									'触发10次子弹时间',												],		
-	[0,			22,			'022',		'闪避宗师',				22,				0,				160,			'Any',			'BulletTimeCntTotalOver',				'100',									'触发100次子弹时间',											],		//01		
-	
-	[1,			23,			'023',		'堡垒',					23,				0,				120,			'Any',			'MoveSpeedFightLess',					'0',									'操纵移动力为0的机体通过一场战斗',								],		
-	[1,			24,			'024',		'有备无患',				24,				0,				80,				'Any',			'AllHangFight',							'Every',								'操纵一台所有外挂槽都装配挂件的机甲通过一场战斗',				],		
-	[1,			25,			'025',		'装甲爱好者',			25,				0,				160,			'Any',			'AllHangFight',							'PlayerArmorC2',						'操纵一台所有外挂槽都装配三级复合装甲的机甲通过一场战斗',		],		
-	[1,			26,			'026',		'完全强化',				26,				0,				100,			'Any',			'AllArmor',								'-',									'使一台机体所有槽位开启（不包括武器槽）',						],		
-	[1,			27,			'027',		'完全改造',				27,				0,				120,			'Any',			'AllMechEffect',						'-',									'将一台机体改造槽装满',											],		//01		
-	
-	[0,			28,			'028',		'破坏性拆解',			28,				0,				50,				'Any',			'DemolishPartCostOnceOver',				'15',									'拆除一个拆除费用15以上的配件',									],		
-	[0,			29,			'029',		'超大容量',				29,				0,				120,			'Any',			'BulletClipFightOver',					'250',									'使用一把弹容量超过250的武器通过一场战斗',						],		
-	[0,			30,			'030',		'更多弹头',				30,				0,				120,			'Any',			'WeaponDamageFightOver',				'3000',									'使用一把伤害超过3000的武器通过一场战斗',						],		
-	[0,			31,			'031',		'走得快',				31,				0,				80,				'Any',			'MoveSpeedPartCntFightOver',			'5',									'操纵一台装配5个增加速度的插件的机体通过一场战斗',				],		
-	[0,			32,			'032',		'转的快',				32,				0,				80,				'Any',			'RotateSpeedPartCntFightOver',			'5',									'操纵一台装配5个增加转速的插件的机体通过一场战斗',				],		
-	[0,			33,			'033',		'法杖',					33,				0,				80,				'Any',			'WeaponDebuffCntFightOver',				'3',									'使用一把拥有三种元素效果的武器通过一场战斗',					],		
-	[0,			34,			'034',		'行走的燃料罐',			34,				0,				80,				'Any',			'ThrowerRangePlusFightOver',			'100',									'使用一把射程是原来两倍的喷射武器通过一场战斗',					],		
-	[0,			35,			'035',		'闪电使者',				35,				0,				80,				'Any',			'LightningHitFightOver',				'8',									'使用一把弹射次数达到8的电弧武器通过一场战斗',					],		//01		
-	
-	[1,			36,			'036',		'掷弹兵',				36,				0,				120,			'Any',			'KuluokuOnlyThrow',						'IdleMode:Kuroku',						'操作库罗库只使用投掷物通过一场战斗',							],		
-	[1,			37,			'037',		'狂战士',				37,				0,				120,			'Any',			'TeammateAssignedWeapon',				'2|Close|54+55+154+155',				'操作桑使用两把电光斧通过一场战斗',								],		
-	[1,			38,			'038',		'神射手',				38,				0,				120,			'Any',			'ZheshiseDontMove',						'-',									'操作赭石色，在不移动的情况下通过一场战斗',						],		
-	[1,			39,			'039',		'兰博',					39,				0,				120,			'Any',			'TeammateAssignedWeapon',				'4|Range|13+113+213',					'操作克莱尔并装配两把重机枪通过一场战斗',						],		//01		
-	
-	[0,			40,			'040',		'战略要地',				40,				0,				60,				'Any',			'OutMissionCntOnceOver',				'4',									'外围同时拥有4股敌军',											],		
-	[0,			41,			'041',		'战略目标',				41,				0,				100,			'Any',			'OutMissionCntOnceOver',				'8',									'外围同时拥有8股敌军',											],		
-	[0,			42,			'042',		'虱子多了不怕痒',		42,				0,				200,			'Any',			'OutMissionCntOnceOver',				'12',									'外围同时拥有12股敌军',											],		//01		
-	
-	[1,			43,			'043',		'战士',					43,				0,				40,				'Any',			'KillEnemyOver',						'100|Total',							'消灭100单位敌人',												],		
-	[1,			44,			'044',		'长官',					44,				0,				80,				'Any',			'KillEnemyOver',						'1000|Total',							'消灭1000单位敌人',												],		
-	[1,			45,			'045',		'司令',					45,				0,				160,			'Any',			'KillEnemyOver',						'10000|Total',							'消灭10000单位敌人',											],		
-	[1,			46,			'046',		'将军',					46,				0,				200,			'Any',			'KillEnemyOver',						'100000|Total',							'消灭100000单位敌人',											],		//01		
-	
-	[0,			47,			'047',		'小队长',				47,				0,				80,				'Any',			'KillEnemyOver',						'1000',									'单局游戏中消灭1000单位敌人',									],		
-	[0,			48,			'048',		'指挥官',				48,				0,				160,			'Any',			'KillEnemyOver',						'10000',								'单局游戏中消灭10000单位敌人',									],		//01		
-	
-	[1,			49,			'049',		'巨人猎手',				49,				0,				100,			'Any',			'KillEnemySpecialFight',				'Boss3+Boss3_',							'击败百臂巨人',													],		
-	[1,			50,			'050',		'母体杀手',				50,				0,				100,			'Any',			'KillEnemySpecialFight',				'Boss2+Boss2_',							'击败增殖者',													],		
-	[1,			51,			'051',		'傀儡刺客',				51,				0,				100,			'Any',			'KillEnemySpecialFight',				'Boss1+Boss1_',							'击败傀儡师',													],		
-	[1,			52,			'052',		'弑神克星',				52,				0,				120,			'Any',			'KillEnemySpecialFight',				'Boss4',								'击败泰坦',														],		//01		
-	
-	[0,			53,			'053',		'装甲猎杀者',			53,				0,				120,			'Any',			'KillEnemySpecialFight',				'Boss10A',								'击败装甲母体',													],		
-	[0,			54,			'054',		'圣盾猎杀者',			54,				0,				120,			'Any',			'KillEnemySpecialFight',				'Boss10C',								'击败圣盾母体',													],		
-	[0,			55,			'055',		'特战猎杀者',			55,				0,				120,			'Any',			'KillEnemySpecialFight',				'Boss10B',								'击败特战母体',													],		
-	[0,			56,			'056',		'劫法场者',				56,				0,				160,			'Any',			'KillEnemySpecialFight',				'Boss5',								'击败巨像',														],		//01		
-	
-	[1,			57,			'057',		'渗透者克星',			57,				0,				120,			'Any',			'KillEnemySpecialFight',				'High11a',								'击败精锐渗透型机甲',											],		
-	[1,			58,			'058',		'掷弹者克星',			58,				0,				120,			'Any',			'KillEnemySpecialFight',				'High12a',								'击败精锐掷弹型机甲',											],		
-	[1,			59,			'059',		'冲锋者克星',			59,				0,				120,			'Any',			'KillEnemySpecialFight',				'High13a',								'击败精锐冲锋型机甲',											],		
-	[1,			60,			'060',		'狙击手克星',			60,				0,				120,			'Any',			'KillEnemySpecialFight',				'High14a',								'击败精锐狙击型机甲',											],		//01		
-	
-	[0,			61,			'061',		'黑骑兵杀手',			61,				1,				180,			'Any',			'KillEnemySpecialFight',				'High1',								'击败黑骑兵号',													],		
-	[0,			62,			'062',		'突骑兵猎手',			62,				1,				180,			'Any',			'KillEnemySpecialFight',				'High2',								'击败突骑兵号',													],		
-	[0,			63,			'063',		'烈驹终结者',			63,				1,				180,			'Any',			'KillEnemySpecialFight',				'High3',								'击败烈驹号',													],		
-	[0,			64,			'064',		'枪骑兵杀手',			64,				1,				180,			'Any',			'KillEnemySpecialFight',				'High4',								'击败枪骑兵号',													],		
-	[0,			65,			'065',		'甲胄骑士毁灭者',		65,				1,				180,			'Any',			'KillEnemySpecialFight',				'High5',								'击败甲胄骑士号',												],		//01		
-	
-	[1,			66,			'066',		'采购员',				66,				0,				80,				'Any',			'CostMoneyInShopTotalOver',				'1000',									'在商店累计花费$1000',											],		
-	[1,			67,			'067',		'采购主任',				67,				0,				120,			'Any',			'CostMoneyInShopTotalOver',				'10000',								'在商店累计花费$10000',											],		
-	[1,			68,			'068',		'采购经理',				68,				0,				180,			'Any',			'CostMoneyInShopTotalOver',				'100000',								'在商店累计花费$100000',										],		//01		
-	
-	[0,			69,			'069',		'运气极差',				69,				0,				100,			'Any',			'RecycleResourceOnceLess',				'2',									'在资源回收部获得$2',											],		
-	[0,			70,			'070',		'工头',					70,				0,				100,			'Any',			'UpgradeBuilding',						'ManpowerGroup|Max',					'将人力资源部升级到满级',										],		
-	[0,			71,			'071',		'礼品店老板',			71,				0,				100,			'Any',			'UpgradeBuilding',						'ArmorGroup|Max',						'将有机回收部升级到满级',										],		
-	[0,			72,			'072',		'回收大户',				72,				0,				100,			'Any',			'UpgradeBuilding',						'ResourceGroup|Max',					'将资源回收部升级到满级',										],		
-	[0,			73,			'073',		'军火女王',				73,				0,				100,			'Any',			'UpgradeBuilding',						'WeaponGroup|Max',						'将武器制造部升级到满级',										],		
-	[0,			74,			'074',		'配件制造商',			74,				0,				100,			'Any',			'UpgradeBuilding',						'PartGroup|Max',						'将配件制造部升级到满级',										],		//01		
-	
-	[1,			75,			'075',		'发电机',				75,				0,				40,				'Any',			'ElectricGroupParamsOnceOver',			'40',									'每日电力产出达到40',											],		
-	[1,			76,			'076',		'发电厂',				76,				0,				80,				'Any',			'ElectricGroupParamsOnceOver',			'70',									'每日电力产出达到70',											],		
-	[1,			77,			'077',		'用电大户',				77,				0,				50,				'Any',			'ElectricCostTodayOver',				'100',									'一日之内消耗100电力',											],		
-	[1,			78,			'078',		'用电黑洞',				78,				0,				150,			'Any',			'ElectricCostTodayOver',				'300',									'一日之内消耗300电力',											],		//01		
-	
-	[0,			79,			'079',		'理财能手',				79,				0,				80,				'Any',			'GetMoneyOver',							'5000',									'单局游戏内赚到$5000',											],		
-	[0,			80,			'080',		'赚钱高手',				80,				0,				120,			'Any',			'GetMoneyOver',							'10000',								'单局游戏内赚到$10000',											],		
-	[0,			81,			'081',		'金手指',				81,				0,				160,			'Any',			'GetMoneyOver',							'15000',								'单局游戏内赚到$15000',											],		//01		
-	
-	[1,			82,			'082',		'遮风避雨的住处',		82,				0,				80,				'Any',			'RoomComfortOnceOver',					'60',									'宿舍舒适度达到60',												],		
-	[1,			83,			'083',		'温暖的家',				83,				0,				120,			'Any',			'RoomComfortOnceOver',					'120',									'宿舍舒适度达到120',											],		
-	[1,			84,			'084',		'大豪斯',				84,				0,				240,			'Any',			'RoomComfortOnceOver',					'200',									'宿舍舒适度达到200',											],		
-	[1,			85,			'085',		'清洁工作',				85,				0,				80,				'Any',			'RoomNoLetter',							'-',									'拆除宿舍内所有垃圾',											],		
-	[1,			86,			'086',		'抓到你了',				86,				0,				100,			'Any',			'CaughtTeammate',						'-',									'在宿舍内抓起一名队员',											],		//01		
-	
-	[0,			87,			'087',		'严密监控',				87,				0,				120,			'Any',			'StealTax',								'ExposureRate|Less|20|Exposure',		'在20%以下暴露率偷税暴露',										],		
-	[0,			88,			'088',		'苛捐杂税',				88,				0,				120,			'Any',			'StealTax',								'SuccessRate|Over|80|Fail',				'在80%以上成功率偷税失败',										],		
-	[0,			89,			'089',		'初犯',					89,				0,				40,				'Any',			'StealTaxCntTotalOver',					'1',									'累计偷税1次',													],		
-	[0,			90,			'090',		'累犯',					90,				0,				80,				'Any',			'StealTaxCntTotalOver',					'10',									'累计偷税10次',													],		
-	[0,			91,			'091',		'税金小偷',				91,				0,				120,			'Any',			'StealTaxCntTotalOver',					'100',									'累计偷税100次',												],		
-	[0,			92,			'092',		'财务蛀虫',				92,				0,				200,			'Any',			'StealTaxCntTotalOver',					'300',									'累计偷税300次',												],		//01		
-	
-	[1,			93,			'093',		'良好市民',				93,				0,				150,			'Any',			'CheckDayLess',							'91|StealTax|0',						'在90天之前没有进行过一次偷税',									],		
-	[1,			94,			'094',		'自己的够了',			94,				0,				150,			'Any',			'CheckDayLess',							'60|RefreshShop|0',						'在60天之前没有刷新过一次商店',									],		
-	[1,			95,			'095',		'我才不要这些升级',		95,				0,				150,			'Any',			'CheckDayLess',							'60|UpgradeBuilding|0',					'在60天之前没有升级过一次基建',									],		
-	[1,			96,			'096',		'铁公鸡',				96,				0,				150,			'Any',			'CheckDayLess',							'30|GoodPresent|0',						'在30天之前没有送出过一次涨好感的礼物',							],		
-	[1,			97,			'097',		'清理大师',				97,				0,				150,			'Any',			'CheckDayLess',							'70|OutMissionMax|3',					'在70天之前外围敌军从来不超过3股（含）',						],		//01		
-	
-	[0,			98,			'098',		'绿发女孩',				98,				0,				40,				'Any',			'RecruitTeammate',						'1',									'招募库罗库',													],		
-	[0,			99,			'099',		'城防助理',				99,				0,				80,				'Any',			'LoyaltyLevelOver',						'1|4',									'与库罗库好感达到?4',											],		
-	[0,			100,		'100',		'团队阳光',				100,			0,				120,			'Any',			'LoyaltyLevelOver',						'1|8',									'与库罗库好感达到?8',											],		
-	[0,			101,		'101',		'团队天使',				101,			0,				160,			'Any',			'LoyaltyEvent',							'1',									'触发库罗库的好感事件',											],		
-	[0,			102,		'102',		'训练生',				102,			0,				160,			'Any',			'LoyaltyEvent2',						'1',									'了解库罗库的过去',												],		
-	[0,			103,		'103',		'库罗库',				103,			0,				200,			'Any',			'LoyaltyLevelOver',						'1|12',									'与库罗库好感达到满',											],		//01		
-	
-	[1,			104,		'104',		'红发女孩',				104,			0,				40,				'Any',			'RecruitTeammate',						'2',									'招募桑',														],		
-	[1,			105,		'105',		'采购部监工',			105,			0,				80,				'Any',			'LoyaltyLevelOver',						'2|4',									'与桑好感达到?4',												],		
-	[1,			106,		'106',		'采购部大姐头',			106,			0,				120,			'Any',			'LoyaltyLevelOver',						'2|8',									'与桑好感达到?8',												],		
-	[1,			107,		'107',		'暴力少女',				107,			0,				160,			'Any',			'LoyaltyEvent',							'2',									'触发桑的好感事件',												],		
-	[1,			108,		'108',		'不堪回首的过去',		108,			0,				160,			'Any',			'LoyaltyEvent2',						'2',									'了解桑的过去',													],		
-	[1,			109,		'109',		'桑',					109,			0,				200,			'Any',			'LoyaltyLevelOver',						'2|12',									'与桑好感达到满',												],		//01		
-	
-	[0,			110,		'110',		'黄发女孩',				110,			0,				40,				'Any',			'RecruitTeammate',						'3',									'招募赭石色',													],		
-	[0,			111,		'111',		'赭石色的礼物',			111,			0,				80,				'Any',			'LoyaltyLevelOver',						'3|4',									'与赭石色好感达到?4',											],		
-	[0,			112,		'112',		'赭石色的大礼物',		112,			0,				120,			'Any',			'LoyaltyLevelOver',						'3|8',									'与赭石色好感达到?8',											],		
-	[0,			113,		'113',		'文学少女',				113,			0,				160,			'Any',			'LoyaltyEvent',							'3',									'触发赭石色的好感事件',											],		
-	[0,			114,		'114',		'杀手',					114,			0,				160,			'Any',			'LoyaltyEvent2',						'3',									'了解赭石色的过去',												],		
-	[0,			115,		'115',		'赭石色',				115,			0,				200,			'Any',			'LoyaltyLevelOver',						'3|12',									'与赭石色好感达到满',											],		//01		
-	
-	[1,			116,		'116',		'蓝发女孩',				116,			0,				40,				'Any',			'RecruitTeammate',						'4',									'招募克莱尔',													],		
-	[1,			117,		'117',		'基建部助理',			117,			0,				80,				'Any',			'LoyaltyLevelOver',						'4|4',									'与克莱尔好感达到?4',											],		
-	[1,			118,		'118',		'基建部领导',			118,			0,				120,			'Any',			'LoyaltyLevelOver',						'4|8',									'与克莱尔好感达到?8',											],		
-	[1,			119,		'119',		'健身女孩',				119,			0,				160,			'Any',			'LoyaltyEvent',							'4',									'触发克莱尔的好感事件',											],		
-	[1,			120,		'120',		'老战士',				120,			0,				160,			'Any',			'LoyaltyEvent2',						'4',									'了解克莱尔的过去',												],		
-	[1,			121,		'121',		'克莱尔',				121,			0,				200,			'Any',			'LoyaltyLevelOver',						'4|12',									'与克莱尔好感达到满',											],		//01		
-	
-	[0,			122,		'122',		'长见识了',				122,			0,				40,				'Any',			'PointUpgradeTotalOver',				'1',									'使用升级点升级1次',											],		
-	[0,			123,		'123',		'长知识了',				123,			0,				80,				'Any',			'PointUpgradeTotalOver',				'10',									'使用升级点升级10次',											],		
-	[0,			124,		'124',		'长脑子了',				124,			0,				160,			'Any',			'PointUpgradeTotalOver',				'100',									'使用升级点升级100次',											],		//01		
-	
-	[1,			125,		'125',		'学艺精通',				125,			0,				120,			'Any',			'PeopleStatusOver',						'-1|Any|Max',							'将一项属性升满（不包括上限加成）',								],		
-	[1,			126,		'126',		'超级士兵',				126,			0,				200,			'Any',			'PeopleStatusOver',						'-1|All|Max',							'将一名角色所有属性升满（不包括上限加成）',						],		
-	[1,			127,		'127',		'英雄之证',				127,			0,				40,				'Any',			'GiveHeroMedalTotalOver',				'1',									'送出1枚英雄勋章',												],		
-	[1,			128,		'128',		'满门忠烈',				128,			0,				160,			'Any',			'GiveHeroMedalTotalOver',				'20',									'送出20枚英雄勋章',												],		//01		
-	
-	[0,			129,		'129',		'深思熟虑',				129,			0,				100,			'Any',			'Thought',								'Reason|Over|30',						'理智思潮达到满',												],		
-	[0,			130,		'130',		'大爱无疆',				130,			0,				100,			'Any',			'Thought',								'Altruistic|Over|30',					'博爱思潮达到满',												],		
-	[0,			131,		'131',		'不安现状',				131,			0,				100,			'Any',			'Thought',								'Radical|Over|30',						'激进思潮达到满',												],		
-	[0,			132,		'132',		'王侯将相宁有种乎',		132,			0,				100,			'Any',			'Thought',								'Rebellion|Over|30',					'叛逆思潮达到满',												],		//01		
-	
-	[1,			133,		'133',		'时代先驱',				133,			0,				200,			'Any',			'Thought',								'All|Over|30',							'所有思潮为满',													],		
-	[1,			134,		'134',		'时代糟粕',				134,			0,				100,			'Any',			'Thought',								'All|Less|-1',							'所有思潮为负',													],		//01		
-	
-	[0,			135,		'135',		'交流者',				135,			0,				40,				'Any',			'TalkToPeopleCntTotalOver',				'1',									'在休息区与队友聊天1次',										],		
-	[0,			136,		'136',		'知心姐姐',				136,			0,				80,				'Any',			'TalkToPeopleCntTotalOver',				'10',									'在休息区与队友聊天10次',										],		
-	[0,			137,		'137',		'社牛',					137,			0,				160,			'Any',			'TalkToPeopleCntTotalOver',				'100',									'在休息区与队友聊天100次',										],		//01		
-	
-	[1,			138,		'138',		'人见人爱',				138,			0,				40,				'Any',			'GetGiftOver',							'2|Today',								'在一天中收到2份礼物',											],		
-	[1,			139,		'139',		'人气王',				139,			0,				120,			'Any',			'GetGiftOver',							'3|Today',								'在一天中收到3份礼物',											],		
-	[1,			140,		'140',		'海王',					140,			0,				200,			'Any',			'GetGiftOver',							'4|Today',								'在一天中收到4份礼物',											],		//01		
-	
-	[0,			141,		'141',		'投桃报李',				141,			0,				40,				'Any',			'GetGiftOver',							'1|Total',								'累计收到1份礼物',												],		
-	[0,			142,		'142',		'滴水之恩',				142,			0,				80,				'Any',			'GetGiftOver',							'10|Total',								'累计收到10份礼物',												],		
-	[0,			143,		'143',		'来而不往非礼也',		143,			0,				160,			'Any',			'GetGiftOver',							'100|Total',							'累计收到100份礼物',											],		//01		
-	
-	[1,			144,		'144',		'第一次送礼',			144,			0,				40,				'Any',			'GivePresentTotalOver',					'1',									'送出1份礼物',													],		
-	[1,			145,		'145',		'礼品店老板',			145,			0,				100,			'Any',			'GivePresentTotalOver',					'30',									'送出30份礼物',													],		
-	[1,			146,		'146',		'礼品厂老板',			146,			0,				160,			'Any',			'GivePresentTotalOver',					'600',									'送出600份礼物',												],		
-	[1,			147,		'147',		'精准踩雷',				147,			0,				60,				'Any',			'GiveHatePresentTotalOver',				'1',									'送出1份队友讨厌的礼物',										],		
-	[1,			148,		'148',		'地雷系女孩',			148,			0,				120,			'Any',			'GiveHatePresentTotalOver',				'10',									'送出10份队友讨厌的礼物',										],		//01		
-	
-	[0,			149,		'149',		'双人成行',				149,			0,				40,				'Any',			'TeammateCntOnceOver',					'2',									'小队拥有2人',													],		
-	[0,			150,		'150',		'三人成众',				150,			0,				80,				'Any',			'TeammateCntOnceOver',					'3',									'小队拥有3人',													],		
-	[0,			151,		'151',		'四大天王',				151,			0,				120,			'Any',			'TeammateCntOnceOver',					'4',									'小队拥有4人',													],		
-	[0,			152,		'152',		'五虎上将',				152,			0,				160,			'Any',			'TeammateCntOnceOver',					'5',									'小队拥有5人',													],		//01		
-	
-	[1,			153,		'153',		'HR',					153,			0,				120,			'Any',			'RecruitTeammateCntTotalOver',			'5',									'累计招募5次',													],		
-	[1,			154,		'154',		'HR主任',				154,			0,				180,			'Any',			'RecruitTeammateCntTotalOver',			'10',									'累计招募10次',													],		
-	[1,			155,		'155',		'HR经理',				155,			0,				300,			'Any',			'RecruitTeammateCntTotalOver',			'100',									'累计招募100次',												],		//01		
-	
-	[0,			156,		'156',		'牺牲',					156,			0,				240,			'Plot',			'-',									'-',									'达成牺牲结局',													],		
-	[0,			157,		'157',		'叛逃',					157,			1,				240,			'Plot',			'-',									'-',									'达成叛逃结局',													],		
-	[0,			168,		'158',		'叛变',					168,			1,				240,			'Plot',			'-',									'-',									'达成叛变结局',													],		//01		
-	
-	[1,			158,		'159',		'武曲星',				158,			0,				200,			'Chan',			'EndChanllengeWithChar',				'0',									'使用玛丽通关挑战模式',											],		
-	[1,			159,		'160',		'提尔',					159,			0,				200,			'Chan',			'EndChanllengeWithChar',				'4',									'使用克莱尔通关挑战模式',										],		
-	[1,			160,		'161',		'韦驮天',				160,			0,				200,			'Chan',			'EndChanllengeWithChar',				'1',									'使用库罗库通关挑战模式',										],		
-	[1,			161,		'162',		'玛尔斯',				161,			0,				200,			'Chan',			'EndChanllengeWithChar',				'3',									'使用赭石色通关挑战模式',										],		
-	[1,			162,		'163',		'阿瑞斯',				162,			0,				200,			'Chan',			'EndChanllengeWithChar',				'2',									'使用桑通关挑战模式',											],		//01		
-	
-	[0,			163,		'164',		'挑战者',				163,			0,				200,			'Chan',			'EndChanllengePlusOver',				'0',									'通关挑战模式',													],		
-	[0,			164,		'165',		'通关者',				164,			0,				300,			'Chan',			'EndChanllengePlusOver',				'1',									'通关挑战模式进阶模式1',										],		
-	[0,			165,		'166',		'突破者',				165,			0,				500,			'Chan',			'EndChanllengePlusOver',				'5',									'通关挑战模式进阶模式5',										],		
-	[0,			166,		'167',		'破关者',				166,			0,				750,			'Chan',			'EndChanllengePlusOver',				'10',									'通关挑战模式进阶模式10',										],		
-	[0,			167,		'168',		'全能者',				167,			0,				1000,			'Chan',			'EndChanllengePlusOver',				'17',									'通关挑战模式进阶模式17',										],		//01		
-	
-	[1,			179,		'169',		'棕色幸存者',			179,			0,				500,			'Sur',			'EndSurviveWithChar',					'0',									'使用玛丽通关幸存者模式',										],		
-	[1,			169,		'170',		'绿色幸存者',			169,			0,				500,			'Sur',			'EndSurviveWithChar',					'1',									'使用库洛库通关幸存者模式',										],		
-	[1,			170,		'171',		'红色幸存者',			170,			0,				500,			'Sur',			'EndSurviveWithChar',					'2',									'使用桑通关幸存者模式',											],		
-	[1,			171,		'172',		'黄色幸存者',			171,			0,				500,			'Sur',			'EndSurviveWithChar',					'3',									'使用赭石色通关幸存者模式',										],		
-	[1,			172,		'173',		'蓝色幸存者',			172,			0,				500,			'Sur',			'EndSurviveWithChar',					'4',									'使用克莱尔通关幸存者模式',										],		//01		
-	
-	[0,			173,		'174',		'夜叉',					173,			0,				200,			'Enl',			'EndEnlessWithDay',						'40',									'在无尽模式达到40天并退役',										],		
-	[0,			174,		'175',		'恶鬼',					174,			0,				400,			'Enl',			'EndEnlessWithDay',						'80',									'在无尽模式达到80天并退役',										],		
-	[0,			175,		'176',		'阿修罗',				175,			0,				800,			'Enl',			'EndEnlessWithDay',						'150',									'在无尽模式达到150天并退役',									],		//01		
-	
-	[1,			176,		'177',		'兵临城下',				176,			0,				200,			'Enl',			'EndEnlessSurviveWithDay',				'10',									'在最终战斗达到第10战并退役',									],		
-	[1,			177,		'178',		'喋血孤城',				177,			0,				400,			'Enl',			'EndEnlessSurviveWithDay',				'50',									'在最终战斗达到第50战并退役',									],		
-	[1,			178,		'179',		'最后一滴血',			178,			0,				800,			'Enl',			'EndEnlessSurviveWithDay',				'100',									'在最终战斗达到第100战并退役',									],		//01		
-	
-	[0,			180,		'180',		'潜入者',				180,			0,				400,			'KRK',			'EndIdleType',							'Kuroku',								'通关潜入模式',													],		
-	[0,			181,		'181',		'黑夜死神',				181,			0,				400,			'KRK',			'EndIdleTypeSpecial',					'Kuroku',								'在每一次任务都不超过最大警觉的情况下通关潜入模式',				],		//01		
-	
-];
+let csv1 = (String.raw`// Achievements,Name,Description,IconPath,Point,Hide,Func,Value,LockLevelType
 
-// 项目名称
-let ItemsNameList = {
-	
-	1	: ['新兵',					'新兵',										'Recruit',									],		
-	2	: ['熟练士兵',				'熟練兵',									'Experienced Soldier',						],		
-	3	: ['老兵',					'ベテラン',									'Veteran Soldier',							],		
-	4	: ['资深老兵',				'キャリアのあるベテラン',					'Seasoned Veteran Soldier',					],		
-	5	: ['退役',					'退役',										'Retire',									],		//02		
-	
-	6	: ['重型武器',				'重装兵器',									'Heavy Weapon',								],		
-	7	: ['超重武器',				'超重装兵器',								'Super Heavy Weapon',						],		
-	8	: ['大国重器',				'大国の超兵器',								'Earthshaker',								],		//02		
-	
-	9	: ['冰火两重天',			'氷と炎の輪舞',								'Of Ice and Fire',							],		
-	10	: ['元素使者',				'元素の使者',								'Elementalist',								],		
-	11	: ['冰系法师',				'氷の魔術師',								'Ice Mage',									],		
-	12	: ['连锁反应',				'連鎖反応',									'Chain Reaction',							],		
-	13	: ['闪电链',				'ライトニングチェーン',						'Lightning Chain',							],		//02		
-	
-	14	: ['乞丐装备',				'乞食装備',									'Beggar\'s Equipment',						],		
-	15	: ['物尽其用',				'最大限の活用',								'Wear and Tear',							],		//02		
-	
-	16	: ['强力武器',				'強力な武器',								'Powerful Weapon',							],		
-	17	: ['大杀武器',				'超兵器',									'Great Slaughter Weapon',					],		
-	18	: ['超级大杀器',			'スーパー兵器',								'Super Great Slaughter Weapon',				],		
-	19	: ['究极大杀器',			'究極兵器',									'Ultimate Great Slaughter Weapon',			],		//02		
-	
-	20	: ['闪避高手',				'回避の達人',								'Dodge Expert',								],		
-	21	: ['闪避大师',				'回避のマスター',							'Dodge Master',								],		
-	22	: ['闪避宗师',				'回避のグランドマスター',					'Dodge Grandmaster',						],		//02		
-	
-	23	: ['堡垒',					'フォートレス',								'Fortress',									],		
-	24	: ['有备无患',				'備えあれば憂いなし',						'Well-prepared',							],		
-	25	: ['装甲爱好者',			'装甲愛好家',								'Armor Enthusiast',							],		
-	26	: ['完全强化',				'完全強化',									'Complete Enhancement',						],		
-	27	: ['完全改造',				'完全改造',									'Complete Remodeling',						],		//02		
-	
-	28	: ['破坏性拆解',			'破壊的分解',								'Destructive Disassembly',					],		
-	29	: ['超大容量',				'特大容量',									'More Dakka',								],		
-	30	: ['更多弹头',				'弾頭の山',									'More Warheads',							],		
-	31	: ['走得快',				'早足',										'Run Fast',									],		
-	32	: ['转的快',				'高速旋回',									'Rotate Fast',								],		
-	33	: ['法杖',					'魔法の杖',									'Staff',									],		
-	34	: ['行走燃料罐',			'歩行燃料タンク',							'Walking Fuel Can',							],		
-	35	: ['闪电的使者',			'稲妻の使者',								'Messenger of Lightning',					],		//02		
-	
-	36	: ['掷弹尖兵',				'擲弾兵',									'Grenadier',								],		
-	37	: ['狂战士',				'バーサーカー',								'Berserker',								],		
-	38	: ['神射手',				'マークスマン',								'Sharpshooter',								],		
-	39	: ['兰博',					'ランボー',									'Rambo',									],		//02		
-	
-	40	: ['战略要地',				'戦略の要',									'Strategic Stronghold',						],		
-	41	: ['战略目标',				'戦略目標',									'Strategic Objective',						],		
-	42	: ['战略关键',				'シラミが多くても痒くない',					'Live With It',								],		//02		
-	
-	43	: ['战士',					'ウォリアー',								'Warrior',									],		
-	44	: ['长官',					'長官',										'Superior officer',							],		
-	45	: ['司令',					'司令',										'Commanding Officer',						],		
-	46	: ['将军',					'将軍',										'General',									],		//02		
-	
-	47	: ['小队长',				'小隊長',									'Squad Leader',								],		
-	48	: ['指挥官',				'指揮官',									'Commander',								],		//02		
-	
-	49	: ['巨人猎手',				'ジャイアントハンター',						'Giant Hunter',								],		
-	50	: ['母体杀手',				'母体キラー',								'Matrix Buster',							],		
-	51	: ['蛞蝓刺客',				'スラグの暗殺者',							'Slug Killer',								],		
-	52	: ['泰坦克星',				'タイタンキラー',							'Titan Killer',								],		//02		
-	
-	53	: ['装甲猎杀者',			'装甲ハンター',								'Armored Hunter',							],		
-	54	: ['圣盾猎杀者',			'聖盾ハンター',								'Holy Shield Hunter',						],		
-	55	: ['特战猎杀者',			'特殊部隊ハンター',							'Special Forces Hunter',					],		
-	56	: ['巨像猎杀者',			'処刑場荒らし',								'Massacre Executor',						],		//02		
-	
-	57	: ['渗透者克星',			'潜入者の天敵',								'Infiltrator Slayer',						],		
-	58	: ['掷弹者克星',			'擲弾兵の天敵',								'Grenadier Slayer',							],		
-	59	: ['冲锋者克星',			'突撃兵の天敵',								'Assault Trooper Slayer',					],		
-	60	: ['狙击手克星',			'狙撃手の天敵',								'Sniper Slayer',							],		//02		
-	
-	61	: ['黑骑兵杀手',			'黒騎兵キラー',								'Black Knight Buster',						],		
-	62	: ['突骑兵猎手',			'突撃騎兵ハンター',							'Charge Cavalry Hunter',					],		
-	63	: ['烈驹终结者',			'烈馬ターミネーター',						'Fierce Steed Terminator',					],		
-	64	: ['枪骑兵杀手',			'槍騎兵キラー',								'Spear Cavalry Buster',						],		
-	65	: ['骑士毁灭者',			'甲冑騎士デストロイヤー',					'Armor Knight Destroyer',					],		//02		
-	
-	66	: ['采购科员',				'購買担当者',								'Merchandiser',								],		
-	67	: ['采购主任',				'購買ディレクター',							'Procurement Supervisor',					],		
-	68	: ['采购经理',				'購買マネージャー',							'Procurement Manager',						],		//02		
-	
-	69	: ['运气极差',				'運が悪すぎ',								'Extremely Unlucky',						],		
-	70	: ['工头',					'工事現場監督',								'Foreman',									],		
-	71	: ['糖果屋',				'キャンディハウス',							'Candy House',								],		
-	72	: ['回收大户',				'大手回収業者',								'Recycling Company',						],		
-	73	: ['军火女王',				'兵器の女王',								'Arms Dealer',								],		
-	74	: ['配件厂商',				'アタッチメントメーカー',					'Gadgets Manufacturer',						],		//02		
-	
-	75	: ['发电机',				'発電機',									'Generator',								],		
-	76	: ['发电厂',				'発電所',									'Electricity Plant',						],		
-	77	: ['用电大户',				'電力大量消費者',							'Heavy Electricity Consumer',				],		
-	78	: ['用电黑洞',				'電力のブラックホール',						'Electricity Black Hole',					],		//02		
-	
-	79	: ['理财小能手',			'財務管理の達人',							'Financial Wizard',							],		
-	80	: ['赚钱高手',				'金儲けの達人',								'Money-making Expert',						],		
-	81	: ['金手指',				'ゴールドフィンガー',						'Cheats',									],		//02		
-	
-	82	: ['遮风避雨住',			'雨風をしのぐ場所',							'Shelter from the Storm',					],		
-	83	: ['温暖的家',				'暖かい家',									'Cozy Home',								],		
-	84	: ['大豪斯',				'グランドハウス',							'Mansion',									],		
-	85	: ['清洁工作',				'清掃仕事',									'Cleaning Work',							],		
-	86	: ['我抓到你了',			'捕まえた',									'Gotcha',									],		//02		
-	
-	87	: ['严密监控',				'綿密の監視',								'Intensive Surveillance',					],		
-	88	: ['苛捐杂税',				'雑多な税金',								'Excessive Taxes',							],		
-	89	: ['初犯',					'初犯',										'First-time Offender',						],		
-	90	: ['累犯',					'再犯',										'Repeat Offender',							],		
-	91	: ['税金小偷',				'税金泥棒',									'Tax Thief',								],		
-	92	: ['财务蛀虫',				'財務を蝕む虫',								'Financial Parasite',						],		//02		
-	
-	93	: ['良好市民',				'善良な市民',								'Model Citizen',							],		
-	94	: ['自己的够了',			'自分の分は十分',							'Content with Oneself',						],		
-	95	: ['不要这些升级',			'レベルアップなんていらない',				'I don\'t want these upgrades',				],		
-	96	: ['纯铁公鸡',				'アイアンコック',							'Miser',									],		
-	97	: ['清理大师',				'清掃の達人',								'Cleaning Master',							],		//02		
-	
-	98	: ['绿发女孩',				'緑の髪の少女',								'Green-haired Girl',						],		
-	99	: ['城防助理',				'シティディフェンスアシスタント',			'City Defense Assistant',					],		
-	100	: ['团队阳光',				'小隊の太陽',								'Team Sunshine',							],		
-	101	: ['团队天使',				'小隊のエンジェル',							'Team Angel',								],		
-	102	: ['训练生',				'訓練生',									'Trainee',									],		
-	103	: ['库罗库',				'クロック',									'Kuroku',									],		//02		
-	
-	104	: ['红发女孩',				'赤い髪の少女',								'Red-haired Girl',							],		
-	105	: ['采购部监工',			'購買部門のスーパーバイザー',				'Procurement Supervisor',					],		
-	106	: ['采购部大姐头',			'購買部門の姉貴',							'Procurement Boss',							],		
-	107	: ['暴力少女',				'暴力少女',									'Violent Girl',								],		
-	108	: ['不堪回首',				'嫌な過去',									'Unforgettable Past',						],		
-	109	: ['桑 / San',				'サン',										'San',										],		//02		
-	
-	110	: ['黄发女孩',				'黄色い髪の少女',							'Yellow-haired Girl',						],		
-	111	: ['赭石色的礼物',			'オーカーのプレゼント',						'A gift from Ocher',						],		
-	112	: ['赭石色的大型礼物',		'オーカーのビッグプレゼント',				'A big gift from Ocher',					],		
-	113	: ['文学少女',				'文学少女',									'Literary Girl',							],		
-	114	: ['杀手往事',				'キラー',									'Buster',									],		
-	115	: ['赭 石 色',				'オーカー',									'Ocher',									],		//02		
-	
-	116	: ['蓝发女孩',				'青い髪の少女',								'Blue-haired Girl',							],		
-	117	: ['基建部助理',			'インフラ部門のアシスタント',				'Infrastructure Division Assistant',		],		
-	118	: ['基建部的领导',			'インフラ部長',								'Infrastructure Division Leader',			],		
-	119	: ['健身女',				'フィットネスガール',						'Fitness Girl',								],		
-	120	: ['老战士',				'オールドウォリアー',						'Seasoned Warrior',							],		
-	121	: ['克莱尔',				'クレア',									'Claire',									],		//02		
-	
-	122	: ['长见识了',				'見聞が広がった',							'Broadened Horizons',						],		
-	123	: ['长知识了',				'知識が増えた',								'Gained knowledge',							],		
-	124	: ['长脑子了',				'脳みそが生えてきた',						'Became More Thoughtful',					],		//02		
-	
-	125	: ['学艺精通',				'技術に精通した',							'Mastery of Skills',						],		
-	126	: ['超级士兵',				'スーパーソルジャー',						'Super Soldier',							],		
-	127	: ['英雄之证',				'英雄の証',									'Proof of Heroism',							],		
-	128	: ['满门忠烈',				'忠誠の一家',								'Distinguished Service',					],		//02		
-	
-	129	: ['深思熟虑',				'思慮深い',									'Thoughtful Consideration',					],		
-	130	: ['大爱无疆',				'博愛家',									'Boundless Love',							],		
-	131	: ['不安现状',				'現状に満足しない',							'Unsettled Status Quo',						],		
-	132	: ['众生平等',				'王侯将相寧んぞ種あらんや',					'Are aristocrats born noble?',				],		//02		
-	
-	133	: ['时代先驱',				'時代の先駆者',								'Pioneer of the Era',						],		
-	134	: ['时代糟粕',				'時代の屑',									'Dregs of the Era',							],		//02		
-	
-	135	: ['交流者',				'コミュニケーター',							'Mediator',									],		
-	136	: ['知心姐姐',				'皆のお姉ちゃん',							'Understanding Sister',						],		
-	137	: ['大无畏社牛',			'社交の達人',								'Chatty',									],		//02		
-	
-	138	: ['人见人爱',				'皆に愛される',								'Loved by Everyone',						],		
-	139	: ['人气王',				'人気者',									'Popular',									],		
-	140	: ['海王',					'ナンパ好き',								'Philander',								],		//02		
-	
-	141	: ['投桃报李',				'投桃報李',									'Repay Kindness with Kindness',				],		
-	142	: ['滴水之恩',				'一滴の水の恩',								'A Drop of Water in Kindness',				],		
-	143	: ['礼尚往来',				'来りて往かざれば亦礼に非ざる也',			'Returning the Favor',						],		//02		
-	
-	144	: ['第一次送礼',			'初めてのプレゼント',						'First-time Gift Giving',					],		
-	145	: ['礼品店老板',			'プレゼントショップのオーナー',				'Gift Shop Owner',							],		
-	146	: ['礼品厂老板',			'プレゼントファクトリーのオーナー',			'Gift Factory Owner',						],		
-	147	: ['精准地踩雷',			'地雷踏みの達人',							'Accurately Step on a Land Mine',			],		
-	148	: ['地雷系女孩',			'地雷系女子',								'Land Mine Girl',							],		//02		
-	
-	149	: ['双人成行',				'二人で行く',								'It Takes Two',								],		
-	150	: ['三人成众',				'三人で行く',								'Three\'s a Crowd',							],		
-	151	: ['四大天王',				'四天王で行く',								'Four Heavenly Kings',						],		
-	152	: ['五虎上将',				'五虎将で行く',								'Full House',								],		//02		
-	
-	153	: ['HR 科员',				'HR',										'Human Resources Operator',					],		
-	154	: ['HR 主任',				'HR主任',									'Human Resources Supervisor',				],		
-	155	: ['HR 经理',				'HRマネージャー',							'Human Resources Manager',					],		//02		
-	
-	156	: ['结束',					'終了',										'End',										],		
-	157	: ['叛逃',					'寝返り',									'Defection',								],		
-	168	: ['革命',					'革命',										'Revolution',								],		//02		
-	
-	158	: ['武曲星',				'武曲星',									'Wenchang Star',							],		
-	159	: ['提　尔',				'テュール',									'Tyr',										],		
-	160	: ['韦驮天',				'韋駄天',									'Ganesha',									],		
-	161	: ['玛尔斯',				'マールス',									'Mars',										],		
-	162	: ['阿瑞斯',				'アレス',									'Ares',										],		//02		
-	
-	163	: ['挑战者',				'チャレンジャー',							'Challenger',								],		
-	164	: ['破关者',				'ステージブレーカー',						'Breaker',									],		
-	165	: ['突破者',				'突破者',									'Breaker',									],		
-	166	: ['全能者',				'全能者',									'Almighty',									],		
-	167	: ['蔑视者',				'軽蔑者',									'Defier',									],		//02		
-	
-	179	: ['棕色幸存者',			'栗色の生存者',								'Brown Survivor',							],		
-	169	: ['绿色幸存者',			'緑色の生存者',								'Green Survivors',							],		
-	170	: ['红色幸存者',			'赤い生存者',								'Red Survivors',							],		
-	171	: ['黄色幸存者',			'黄色の生存者',								'Yellow Survivor',							],		
-	172	: ['蓝色幸存者',			'青い生存者',								'Blue Survivor',							],		//02		
-	
-	173	: ['初露锋芒',				'新星の輝き',								'Rising Star',								],		
-	174	: ['坚韧不拔',				'不屈の精神',								'Unyielding Spirit',						],		
-	175	: ['永恒传奇',				'永遠の伝説',								'Eternal Legend',							],		//02		
-	
-	176	: ['兵临城下',				'兵が城下に臨む',							'City under siege',							],		
-	177	: ['喋血孤城',				'孤城の血を流す',							'Bloody Lonely City',						],		
-	178	: ['屹立不倒',				'最後の一滴の血',							'Last Blood',								],		//02		
-	
-	180	: ['潜入者',				'潜入者',									'Infiltrator',								],		
-	181	: ['黑死神',				'暗夜の死神',								'The Night Reaper',							],		//02		
-	
-	Plot :	['剧情模式',			'ストーリーモード',							'Story Mode',								],		
-	Chan :	['挑战模式',			'チャレンジモード',							'Challenge Mode',							],		
-	Enl :	['无尽模式',			'エンドレスモード',							'Endless Mode',								],		
-	Sur :	['幸存模式',			'生存者モード',								'Survival Mode',							],		
-	KRK :	['潜入模式',			'潜入モード',								'Sneaking Mode ',							],		
-	Any :	['任意模式',			'任意モード',								'Any Mode',									],		//02		
-	
-};
+1,#新兵,#存活10天,,40,,DayOnceOver,10,
+2,#熟练士兵,#存活30天,,80,,DayOnceOver,30,
+3,#老兵,#存活55天,,120,,DayOnceOver,55,
+4,#资深老兵,#存活80天,,160,,DayOnceOver,80,
+5,#退役,#存活100天,,240,,DayOnceOver,100,
 
-// 文本描述
-let DescriptionList = {
+6,#重型武器,#装备一把12槽位的武器通过一场战斗,,80,,WeaponBatteryOver,12,
+7,#超重型武器,#装备一把15槽位的武器通过一场战斗,,120,,WeaponBatteryOver,15,
+8,#大国重器,#装备一把18槽位的武器通过一场战斗,,200,,WeaponBatteryOver,18,
+
+9,#冰火两重天,#同时对敌人施加冰火状态以融化敌人装甲,,80,,EnemyReaction,ArmorMelting|0.5,
+10,#元素使者,#在一场战斗中触发了所有一级属性反应,,120,,AllDebuffSole,,
+11,#冰系法师,#一次性冻结10个目标,,120,,EnemyReactionTime,Frozen|10|1,
+12,#连锁反应,#一次性引爆10个目标,,120,,EnemyReactionTime,Detonate|10|1,
+13,#闪电链,#在一次感电中造成20次闪电连锁,,120,,EnemyReactionAttack,Electrification|20,
+
+14,#乞丐装备,#使用一把50耐久以下的武器通过一场战斗,,80,,WeaponDurabilityFightLess,50,
+15,#物尽其用,#武器失去20以上耐久的情况下通过一场战斗,,80,,weaponLoseDurabilityFightOver,20,
+
+16,#强力武器,#造成一次性2000以上的伤害,,80,,DamageOnceOver,2000,
+17,#大杀器,#造成一次性5000以上的伤害,,120,,DamageOnceOver,5000,
+18,#超级大杀器,#造成一次性10000以上的伤害,,160,,DamageOnceOver,10000,
+19,#究极大杀器,#造成一次性20000以上的伤害,,200,,DamageOnceOver,20000,
+
+20,#闪避高手,#触发1次子弹时间,,40,,BulletTimeCntTotalOver,1,
+21,#闪避大师,#触发10次子弹时间,,80,,BulletTimeCntTotalOver,10,
+22,#闪避宗师,#触发100次子弹时间,,160,,BulletTimeCntTotalOver,100,
+
+23,#堡垒,#操纵移动力为0的机体通过一场战斗,,120,,MoveSpeedFightLess,0,
+24,#有备无患,#操纵一台所有外挂槽都装配挂件的机甲通过一场战斗,,80,,AllHangFight,Every,
+25,#装甲爱好者,#操纵一台所有外挂槽都装配三级复合装甲的机甲通过一场战斗,,160,,AllHangFight,PlayerArmorC2,
+
+26,#完全强化,#使一台机体所有槽位开启（不包括武器槽）,,100,,AllArmor,,
+27,#完全改造,#将一台机体改造槽装满,,120,,AllMechEffect,,
+
+28,#破坏性拆解,#拆除一个拆除费用15以上的配件,,50,,DemolishPartCostOnceOver,15,
+29,#超大容量,#使用一把弹容量超过250的武器通过一场战斗,,120,,BulletClipFightOver,250,
+30,#更多弹头,#使用一把伤害超过3000的武器通过一场战斗,,120,,WeaponDamageFightOver,3000,
+
+31,#走得快,#操纵一台装配5个增加速度的插件的机体通过一场战斗,,80,,MoveSpeedPartCntFightOver,5,
+32,#转的快,#操纵一台装配5个增加转速的插件的机体通过一场战斗,,80,,RotateSpeedPartCntFightOver,5,
+
+33,#法杖,#使用一把拥有三种元素效果的武器通过一场战斗,,80,,WeaponDebuffCntFightOver,3,
+34,#行走的燃料罐,#使用一把射程是原来两倍的喷射武器通过一场战斗,,80,,ThrowerRangePlusFightOver,100,
+35,#闪电使者,#使用一把弹射次数达到8的电弧武器通过一场战斗,,80,,LightningHitFightOver,8,
+
+36,#掷弹兵,#操作库罗库只使用投掷物通过一场战斗,,120,,KuluokuOnlyThrow,,IdleMode:Kuroku
+37,#狂战士,#操作桑使用两把电光斧通过一场战斗,,120,,TeammateAssignedWeapon,2|Close|54+55+154+155,
+38,#神射手,#操作赭石色，在不移动的情况下通过一场战斗,,120,,ZheshiseDontMove,,
+39,#兰博,#操作克莱尔并装配两把重机枪通过一场战斗,,120,,TeammateAssignedWeapon,4|Range|13+113+213,
+
+40,#战略要地,#外围同时拥有4股敌军,,60,,OutMissionCntOnceOver,4,
+41,#战略目标,#外围同时拥有8股敌军,,100,,OutMissionCntOnceOver,8,
+42,#虱子多了不怕痒,#外围同时拥有12股敌军,,200,,OutMissionCntOnceOver,12,
+
+43,#战士,#消灭100单位敌人,,40,,KillEnemyOver,100|Total,
+44,#长官,#消灭1000单位敌人,,80,,KillEnemyOver,1000|Total,
+45,#司令,#消灭10000单位敌人,,160,,KillEnemyOver,10000|Total,
+46,#将军,#消灭100000单位敌人,,200,,KillEnemyOver,100000|Total,
+
+47,#小队长,#单局游戏中消灭1000单位敌人,,80,,KillEnemyOver,1000,
+48,#指挥官,#单局游戏中消灭10000单位敌人,,160,,KillEnemyOver,10000,
+
+49,#巨人猎手,#击败百臂巨人,,100,,KillEnemySpecialFight,Boss3+Boss3_,
+50,#母体杀手,#击败增殖者,,100,,KillEnemySpecialFight,Boss2+Boss2_,
+51,#傀儡刺客,#击败傀儡师,,100,,KillEnemySpecialFight,Boss1+Boss1_,
+52,#弑神克星,#击败泰坦,,120,,KillEnemySpecialFight,Boss4,
+
+53,#装甲猎杀者,#击败装甲母体,,120,,KillEnemySpecialFight,Boss10A,
+54,#圣盾猎杀者,#击败圣盾母体,,120,,KillEnemySpecialFight,Boss10C,
+55,#特战猎杀者,#击败特战母体,,120,,KillEnemySpecialFight,Boss10B,
+56,#劫法场者,#击败巨像,,160,,KillEnemySpecialFight,Boss5,
+
+57,#渗透者克星,#击败精锐渗透型机甲,,120,,KillEnemySpecialFight,High11a,
+58,#掷弹者克星,#击败精锐掷弹型机甲,,120,,KillEnemySpecialFight,High12a,
+59,#冲锋者克星,#击败精锐冲锋型机甲,,120,,KillEnemySpecialFight,High13a,
+60,#狙击手克星,#击败精锐狙击型机甲,,120,,KillEnemySpecialFight,High14a,
+
+61,#黑骑兵杀手,#击败黑骑兵号,,180,1,KillEnemySpecialFight,High1,
+62,#突骑兵猎手,#击败突骑兵号,,180,1,KillEnemySpecialFight,High2,
+63,#烈驹终结者,#击败烈驹号,,180,1,KillEnemySpecialFight,High3,
+64,#枪骑兵杀手,#击败枪骑兵号,,180,1,KillEnemySpecialFight,High4,
+65,#甲胄骑士毁灭者,#击败甲胄骑士号,,180,1,KillEnemySpecialFight,High5,
+
+66,#采购员,#在商店累计花费$1000,,80,,CostMoneyInShopTotalOver,1000,
+67,#采购主任,#在商店累计花费$10000,,120,,CostMoneyInShopTotalOver,10000,
+68,#采购经理,#在商店累计花费$100000,,180,,CostMoneyInShopTotalOver,100000,
+
+69,#运气极差,#在资源回收部获得$2,,100,,RecycleResourceOnceLess,2,
+70,#工头,#将人力资源部升级到满级,,100,,UpgradeBuilding,ManpowerGroup|Max,
+71,#礼品店老板,#将有机回收部升级到满级,,100,,UpgradeBuilding,ArmorGroup|Max,
+72,#回收大户,#将资源回收部升级到满级,,100,,UpgradeBuilding,ResourceGroup|Max,
+73,#军火女王,#将武器制造部升级到满级,,100,,UpgradeBuilding,WeaponGroup|Max,
+74,#配件制造商,#将配件制造部升级到满级,,100,,UpgradeBuilding,PartGroup|Max,
+
+75,#发电机,#每日电力产出达到40,,40,,ElectricGroupParamsOnceOver,40,
+76,#发电厂,#每日电力产出达到70,,80,,ElectricGroupParamsOnceOver,70,
+77,#用电大户,#一日之内消耗100电力,,50,,ElectricCostTodayOver,100,
+78,#用电黑洞,#一日之内消耗300电力,,150,,ElectricCostTodayOver,300,
+
+79,#理财能手,#单局游戏内赚到$5000,,80,,GetMoneyOver,5000,
+80,#赚钱高手,#单局游戏内赚到$10000,,120,,GetMoneyOver,10000,
+81,#金手指,#单局游戏内赚到$15000,,160,,GetMoneyOver,15000,
+
+82,#遮风避雨的住处,#宿舍舒适度达到60,,80,,RoomComfortOnceOver,60,
+83,#温暖的家,#宿舍舒适度达到120,,120,,RoomComfortOnceOver,120,
+84,#大豪斯,#宿舍舒适度达到200,,240,,RoomComfortOnceOver,200,
+85,#清洁工作,#拆除宿舍内所有垃圾,,80,,RoomNoLetter,,
+86,#抓到你了,#在宿舍内抓起一名队员,,100,,CaughtTeammate,,
+
+87,#严密监控,#在20%以下暴露率偷税暴露,,120,,StealTax,ExposureRate|Less|20|Exposure,
+88,#苛捐杂税,#在80%以上成功率偷税失败,,120,,StealTax,SuccessRate|Over|80|Fail,
+89,#初犯,#累计偷税1次,,40,,StealTaxCntTotalOver,1,
+90,#累犯,#累计偷税10次,,80,,StealTaxCntTotalOver,10,
+91,#税金小偷,#累计偷税100次,,120,,StealTaxCntTotalOver,100,
+92,#财务蛀虫,#累计偷税300次,,200,,StealTaxCntTotalOver,300,
+
+93,#良好市民,#在90天之前没有进行过一次偷税,,150,,CheckDayLess,91|StealTax|0,
+94,#自己的够了,#在60天之前没有刷新过一次商店,,150,,CheckDayLess,60|RefreshShop|0,
+95,#我才不要这些升级,#在60天之前没有升级过一次基建,,150,,CheckDayLess,60|UpgradeBuilding|0,
+96,#铁公鸡,#在30天之前没有送出过一次涨好感的礼物,,150,,CheckDayLess,30|GoodPresent|0,
+97,#清理大师,#在70天之前外围敌军从来不超过3股（含）,,150,,CheckDayLess,70|OutMissionMax|3,
+
+98,#绿发女孩,#招募库罗库,,40,,RecruitTeammate,1,
+99,#城防助理,#与库罗库好感达到?4,,80,,LoyaltyLevelOver,1|4,
+100,#团队阳光,#与库罗库好感达到?8,,120,,LoyaltyLevelOver,1|8,
+101,#团队天使,#触发库罗库的好感事件,,160,,LoyaltyEvent,1,
+102,#训练生,#了解库罗库的过去,,160,,LoyaltyEvent2,1,
+103,#库罗库,#与库罗库好感达到满,,200,,LoyaltyLevelOver,1|12,
+
+104,#红发女孩,#招募桑,,40,,RecruitTeammate,2,
+105,#采购部监工,#与桑好感达到?4,,80,,LoyaltyLevelOver,2|4,
+106,#采购部大姐头,#与桑好感达到?8,,120,,LoyaltyLevelOver,2|8,
+107,#暴力少女,#触发桑的好感事件,,160,,LoyaltyEvent,2,
+108,#不堪回首的过去,#了解桑的过去,,160,,LoyaltyEvent2,2,
+109,#桑,#与桑好感达到满,,200,,LoyaltyLevelOver,2|12,
+
+110,#黄发女孩,#招募赭石色,,40,,RecruitTeammate,3,
+111,#赭石色的礼物,#与赭石色好感达到?4,,80,,LoyaltyLevelOver,3|4,
+112,#赭石色的大礼物,#与赭石色好感达到?8,,120,,LoyaltyLevelOver,3|8,
+113,#文学少女,#触发赭石色的好感事件,,160,,LoyaltyEvent,3,
+114,#杀手,#了解赭石色的过去,,160,,LoyaltyEvent2,3,
+115,#赭石色,#与赭石色好感达到满,,200,,LoyaltyLevelOver,3|12,
+
+116,#蓝发女孩,#招募克莱尔,,40,,RecruitTeammate,4,
+117,#基建部助理,#与克莱尔好感达到?4,,80,,LoyaltyLevelOver,4|4,
+118,#基建部领导,#与克莱尔好感达到?8,,120,,LoyaltyLevelOver,4|8,
+119,#健身女孩,#触发克莱尔的好感事件,,160,,LoyaltyEvent,4,
+120,#老战士,#了解克莱尔的过去,,160,,LoyaltyEvent2,4,
+121,#克莱尔,#与克莱尔好感达到满,,200,,LoyaltyLevelOver,4|12,
+
+122,#长见识了,#使用升级点升级1次,,40,,PointUpgradeTotalOver,1,
+123,#长知识了,#使用升级点升级10次,,80,,PointUpgradeTotalOver,10,
+124,#长脑子了,#使用升级点升级100次,,160,,PointUpgradeTotalOver,100,
+
+125,#学艺精通,#将一项属性升满（不包括上限加成）,,120,,PeopleStatusOver,-1|Any|Max,
+126,#超级士兵,#将一名角色所有属性升满（不包括上限加成）,,200,,PeopleStatusOver,-1|All|Max,
+127,#英雄之证,#送出1枚英雄勋章,,40,,GiveHeroMedalTotalOver,1,
+128,#满门忠烈,#送出20枚英雄勋章,,160,,GiveHeroMedalTotalOver,20,
+
+129,#深思熟虑,#理智思潮达到满,,100,,Thought,Reason|Over|30,
+130,#大爱无疆,#博爱思潮达到满,,100,,Thought,Altruistic|Over|30,
+131,#不安现状,#激进思潮达到满,,100,,Thought,Radical|Over|30,
+132,#王侯将相宁有种乎,#叛逆思潮达到满,,100,,Thought,Rebellion|Over|30,
+
+133,#时代先驱,#所有思潮为满,,200,,Thought,All|Over|30,
+134,#时代糟粕,#所有思潮为负,,100,,Thought,All|Less|-1,
+
+135,#交流者,#在休息区与队友聊天1次,,40,,TalkToPeopleCntTotalOver,1,
+136,#知心姐姐,#在休息区与队友聊天10次,,80,,TalkToPeopleCntTotalOver,10,
+137,#社牛,#在休息区与队友聊天100次,,160,,TalkToPeopleCntTotalOver,100,
+
+138,#人见人爱,#在一天中收到2份礼物,,40,,GetGiftOver,2|Today,
+139,#人气王,#在一天中收到3份礼物,,120,,GetGiftOver,3|Today,
+140,#海王,#在一天中收到4份礼物,,200,,GetGiftOver,4|Today,
+
+141,#投桃报李,#累计收到1份礼物,,40,,GetGiftOver,1|Total,
+142,#滴水之恩,#累计收到10份礼物,,80,,GetGiftOver,10|Total,
+143,#来而不往非礼也,#累计收到100份礼物,,160,,GetGiftOver,100|Total,
+
+144,#第一次送礼,#送出1份礼物,,40,,GivePresentTotalOver,1,
+145,#礼品店老板,#送出30份礼物,,100,,GivePresentTotalOver,30,
+146,#礼品厂老板,#送出600份礼物,,160,,GivePresentTotalOver,600,
+
+147,#精准踩雷,#送出1份队友讨厌的礼物,,60,,GiveHatePresentTotalOver,1,
+148,#地雷系女孩,#送出10份队友讨厌的礼物,,120,,GiveHatePresentTotalOver,10,
+
+149,#双人成行,#小队拥有2人,,40,,TeammateCntOnceOver,2,
+150,#三人成众,#小队拥有3人,,80,,TeammateCntOnceOver,3,
+151,#四大天王,#小队拥有4人,,120,,TeammateCntOnceOver,4,
+152,#五虎上将,#小队拥有5人,,160,,TeammateCntOnceOver,5,
+
+153,#HR,#累计招募5次,,120,,RecruitTeammateCntTotalOver,5,
+154,#HR主任,#累计招募10次,,180,,RecruitTeammateCntTotalOver,10,
+155,#HR经理,#累计招募100次,,300,,RecruitTeammateCntTotalOver,100,
+
+156,#牺牲,#达成牺牲结局,,240,,,,
+157,#叛逃,#达成叛逃结局,,240,1,,,
+168,#叛变,#达成叛变结局,,240,1,,,
+
+158,#武曲星,#使用玛丽通关挑战模式,,200,,EndChanllengeWithChar,0,
+160,#韦驮天,#使用库罗库通关挑战模式,,200,,EndChanllengeWithChar,1,
+159,#提尔,#使用克莱尔通关挑战模式,,200,,EndChanllengeWithChar,4,
+161,#玛尔斯,#使用赭石色通关挑战模式,,200,,EndChanllengeWithChar,3,
+162,#阿瑞斯,#使用桑通关挑战模式,,200,,EndChanllengeWithChar,2,
+
+163,#挑战者,#通关挑战模式,,200,,EndChanllengePlusOver,0,
+164,#通关者,#通关挑战模式进阶模式1,,300,,EndChanllengePlusOver,1,
+165,#突破者,#通关挑战模式进阶模式5,,500,,EndChanllengePlusOver,5,
+166,#破关者,#通关挑战模式进阶模式10,,750,,EndChanllengePlusOver,10,
+167,#全能者,#通关挑战模式进阶模式17,,1000,,EndChanllengePlusOver,17,
+
+179,#棕色幸存者,#使用玛丽通关幸存者模式,,500,,EndSurviveWithChar,0,
+169,#绿色幸存者,#使用库洛库通关幸存者模式,,500,,EndSurviveWithChar,1,
+170,#红色幸存者,#使用桑通关幸存者模式,,500,,EndSurviveWithChar,2,
+171,#黄色幸存者,#使用赭石色通关幸存者模式,,500,,EndSurviveWithChar,3,
+172,#蓝色幸存者,#使用克莱尔通关幸存者模式,,500,,EndSurviveWithChar,4,
+
+173,#夜叉,#在无尽模式达到40天并退役,,200,,EndEnlessWithDay,40,
+174,#恶鬼,#在无尽模式达到80天并退役,,400,,EndEnlessWithDay,80,
+175,#阿修罗,#在无尽模式达到150天并退役,,800,,EndEnlessWithDay,150,
+
+176,#兵临城下,#在最终战斗达到第10战并退役,,200,,EndEnlessSurviveWithDay,10,
+177,#喋血孤城,#在最终战斗达到第50战并退役,,400,,EndEnlessSurviveWithDay,50,
+178,#最后一滴血,#在最终战斗达到第100战并退役,,800,,EndEnlessSurviveWithDay,100,
+
+180,#潜入者,#通关潜入模式,,400,,EndIdleType,Kuroku,
+181,#黑夜死神,#在每一次任务都不超过最大警觉的情况下通关潜入模式,,400,,EndIdleTypeSpecial,Kuroku,
+
+182,#击败破荒,#击败破荒龙骑兵,,50,,KillEnemySpecialFight,ActAssassinBoss,
+183,#击败绝念,#击败绝念龙骑兵,,50,,KillEnemySpecialFight,ActLanceBoss,
+184,#击败镇宇,#击败镇宇龙骑兵,,50,,KillEnemySpecialFight,ActShieldBoss,
+
+186,#击败陨日,#击败陨日龙骑兵,,50,,KillEnemySpecialFight,ActSaberBoss,
+188,#击败陨日改,#击败陨日龙骑兵（改）,,300,,KillEnemySpecialFight,ActSaberBossPlus,
+
+185,#击败裂蛰,#击败裂蛰烬蝎,,50,,KillEnemySpecialFight,ActScorpion,
+187,#击败玄钩,#击败玄钩螫狱,,300,,KillEnemySpecialFight,ActScorpionPlus,
+
+189,#击败碎界,#击败碎界龙骑兵,,150,,KillEnemySpecialFight,ActFinalBoss,
+190,#击败碎界,#击败碎界龙骑兵,,150,,KillEnemySpecialFight,ActFinalBoss2,
+
+191,#角斗者,#通关地牢模式（剧情）,,80,,EndIdleType,Song,
+192,#角斗者,#通关地牢模式（挑战）,,150,,KillEnemySpecialFight,ActFinalBoss2,
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
 	
-	1	: [/*'新兵',					*/'存活 10 天',														'生存日数10日',																							'Survive for 10 days',																						],		
-	2	: [/*'熟练士兵',				*/'存活 30 天',														'生存日数30日',																							'Survive for 30 days',																						],		
-	3	: [/*'老兵',					*/'存活 55 天',														'生存日数55日',																							'Survive for 55 days',																						],		
-	4	: [/*'资深老兵',				*/'存活 80 天',														'生存日数80日',																							'Survive for 80 days',																						],		
-	5	: [/*'退役',					*/'存活 100天',														'生存日数100日',																						'Survive for 100 days',																						],		//03		
+	项目名称 : {
 	
-	6	: [/*'重型武器',				*/'装备一把 12 槽位的武器通过一场战斗',								'12スロットの武器を装備して戦闘をクリアする',															'Equip a 12-slot weapon and pass a battle',																	],		
-	7	: [/*'超重型武器',				*/'装备一把 15 槽位的武器通过一场战斗',								'15スロットの武器を装備して戦闘をクリアする',															'Equip a 15-slot weapon and pass a battle',																	],		
-	8	: [/*'大国重器',				*/'装备一把 18 槽位的武器通过一场战斗',								'18スロットの武器を装備して戦闘をクリアする',															'Equip an 18-slot weapon and pass a battle',																],		//03		
+	1	: `新兵`					+ ` # 新兵,新兵,Recruit,新兵`,
+	2	: `熟练士兵`				+ ` # 熟练士兵,熟練士兵,Experienced Soldier,熟練兵`,
+	3	: `老兵`					+ ` # 老兵,老兵,Veteran Soldier,ベテラン`,
+	4	: `资深老兵`				+ ` # 资深老兵,資深老兵,Seasoned Veteran Soldier,キャリアのあるベテラン`,
+	5	: `退役`					+ ` # 退役,退役,Retire,退役`,
 	
-	9	: [/*'冰火两重天',				*/'同时对敌人施加冰火状态融化敌人装甲',								'敵に氷と炎の状態同時に付与し、装甲を溶かす',															'Apply ice and fire status to enemies simultaneously to melt their armor',									],		
-	10	: [/*'元素使者',				*/'在一场战斗中触发了所有一级属性反应',								'1回の戦闘ですべてのレベル1属性反応を発動する',															'Triggered all level 1 stats reactions in one battle',														],		
-	11	: [/*'冰系法师',				*/'在一次攻击中, 一次性冻结 10 个目标',								'一度に10個のターゲットを凍結させる',																	'Freeze 10 targets at once',																				],		
-	12	: [/*'连锁反应',				*/'在一次攻击中, 一次性引爆 10 个目标',								'一度に10個のターゲットを起爆する',																		'Detonate 10 targets at once',																				],		
-	13	: [/*'闪电链',					*/'在一次攻击中感电造成 20 次闪电连锁',								'1回の感電でライトニングチェーンを20個生成する',														'Cause 20 lightning chains in one electrification',															],		//03		
+	6	: `重型武器`				+ ` # 重型武器,重型武器,Heavy Weapon,重装兵器`,
+	7	: `超重武器`				+ ` # 超重型武器,超重型武器,Super Heavy Weapon,超重装兵器`,
+	8	: `大国重器`				+ ` # 大国重器,大國重器,Earthshaker,大国の超兵器`,
 	
-	14	: [/*'乞丐装备',				*/'用了 50 耐久以下的武器通过一场战斗',								'耐久力50未満の武器を使って戦闘を1回クリアする',														'Pass a battle using a weapon with durability below 50',													],		
-	15	: [/*'物尽其用',				*/'武器失去 20 以上耐久下通过一场战斗',								'武器の耐久力が20以上失われた場合、戦闘を1回クリアする',												'Pass a battle with a weapon that loses more than 20 durability',											],		//03		
+	9	: `冰火两重天`				+ ` # 冰火两重天,冰火兩重天,Of Ice and Fire,氷と炎の輪舞`,
+	10	: `元素使者`				+ ` # 元素使者,元素使者,Elementalist,元素の使者`,
+	11	: `冰系法师`				+ ` # 冰系法师,冰系法師,Ice Mage,氷の魔術師`,
+	12	: `连锁反应`				+ ` # 连锁反应,連鎖反應,Chain Reaction,連鎖反応`,
+	13	: `闪电链`					+ ` # 闪电链,閃電鏈,Lightning Chain,ライトニングチェーン`,
 	
-	16	: [/*'强力武器',				*/'造成一次性　2000 以上的伤害',									'1回の攻撃で2000以上のダメージを与える',																'Inflict damage of 2000 or more in one hit',																],		
-	17	: [/*'大杀器',					*/'造成一次性　5000 以上的伤害',									'1回の攻撃で5000以上のダメージを与える',																'Inflict damage of 5000 or more in one hit',																],		
-	18	: [/*'超级大杀器',				*/'造成一次性 10000 以上的伤害',									'1回の攻撃で10000以上のダメージを与える',																'Inflict damage of 10000 or more in one hit',																],		
-	19	: [/*'究极大杀器',				*/'造成一次性 20000 以上的伤害',									'1回の攻撃で20000以上のダメージを与える',																'Inflict damage of 20000 or more in one hit',																],		//03		
+	14	: `乞丐装备`				+ ` # 乞丐装备,乞丐裝備,Beggar's Equipment,乞食装備`,
+	15	: `物尽其用`				+ ` # 物尽其用,物盡其用,Wear and Tear,最大限の活用`,
 	
-	20	: [/*'闪避高手',				*/'触发 1 次子弹时间',												'バレットタイムを1回発動する',																			'Trigger bullet time once',																					],		
-	21	: [/*'闪避大师',				*/'触发 10 次子弹时间',												'バレットタイムを10回発動する',																			'Trigger bullet time 10 times',																				],		
-	22	: [/*'闪避宗师',				*/'触发 100 次子弹时间',											'バレットタイムを100回発動する',																		'Trigger bullet time 100 times',																			],		//03		
+	16	: `强力武器`				+ ` # 强力武器,強力武器,Powerful Weapon,強力な武器`,
+	17	: `大杀武器`				+ ` # 大杀器,大殺器,Great Slaughter Weapon,超兵器`,
+	18	: `超级大杀器`				+ ` # 超级大杀器,超級大殺器,Super Great Slaughter Weapon,スーパー兵器`,
+	19	: `究极大杀器`				+ ` # 究极大杀器,究極大殺器,Ultimate Great Slaughter Weapon,究極兵器`,
 	
-	23	: [/*'堡垒',					*/'操纵移动力为 0 的机体通过一场战斗',								'移動力0の機体で戦闘を1回クリアする',																	'Control a unit with 0 mobility and pass a battle',															],		
-	24	: [/*'有备无患',				*/'操纵一台所有外挂槽都装配满的机甲通过一场战斗',					'すべての外付けスロットにアタッチメントを装備した機体で戦闘を1回クリアする',							'Control a mecha with mounted objects equipped in all external slots and pass a battle',					],		
-	25	: [/*'装甲爱好者',				*/'操纵一台所有外挂槽都装配了三级复合装甲的机甲通过一场战斗',		'すべての外付けスロットにレベル3複合装甲を装備した機体で戦闘を1回クリアする',							'Control a mecha with level 3 composite armor equipped in all external slots and pass a battle',			],		
-	26	: [/*'完全强化',				*/'使一台机体所有槽位开启(不包括武器)',								'1つ機体のすべてのスロットを開放する（武器スロットを除く）',											'Activate all slots of a mecha (excluding weapon slots)',													],		
-	27	: [/*'完全改造',				*/'将一台机体的改造槽装满',											'1つ機体の改造スロットを満タンにする',																	'Fill all modification slots of a mecha',																	],		//03		
+	20	: `闪避高手`				+ ` # 闪避高手,閃避高手,Dodge Expert,回避の達人`,
+	21	: `闪避大师`				+ ` # 闪避大师,閃避大師,Dodge Master,回避のマスター`,
+	22	: `闪避宗师`				+ ` # 闪避宗师,閃避宗師,Dodge Grandmaster,回避のグランドマスター`,
 	
-	28	: [/*'破坏性拆解',				*/'拆除一个拆除费用 15 的配件($150+ 即可)',							'取外しコスト15以上のアタッチメントを取り外す',															'Remove a gadget with a removal fee of 15 or higher',														],		
-	29	: [/*'超大容量',				*/'使用一把弹容超过 250 的武器通过一场战斗',						'弾倉容量が250以上の武器を使って戦闘を1回クリアする',													'Use a weapon with a magazine capacity exceeding 250 to pass a battle',										],		
-	30	: [/*'更多弹头',				*/'使用一把伤害超过 3000 的武器通过一场战斗',						'3000以上のダメージの武器を使って戦闘を1回クリアする',													'Use a weapon with damage exceeding 3000 to pass a battle',													],		
-	31	: [/*'走得快',					*/'操纵一台装配 5 个增速的插件的机体来通过一场战斗',				'速度アタッチメントを5個以上装備した機体を操作して戦闘を1回クリアする',									'Control a mecha equipped with 5 plugins that increase movement speed to pass a battle',					],		
-	32	: [/*'转的快',					*/'操纵一台装配 5 个增转的插件的机体来通过一场战斗',				'旋回速度アタッチメントを5個以上装備した機体を操作して戦闘を1回クリアする',								'Control a mecha equipped with 5 plugins that increase rotation speed to pass a battle',					],		
-	33	: [/*'法杖',					*/'使用一把拥有 3 种元素效果的武器来通过一场战斗',					'3つの元素効果を持つ武器を使って戦闘を1回クリアする',													'Use a weapon with three elemental effects to pass a battle',												],		
-	34	: [/*'行走的燃料罐',			*/'使用一把射程是原来 2 倍的喷射武器来通过一场战斗',				'元の2倍の射程を持つ噴射兵器を使って戦闘を1回クリアする',												'Use a spraying weapon with doubled range to pass a battle',												],		
-	35	: [/*'闪电使者',				*/'使用一把弹射次数达到了 8 的电弧武器来通过一场战斗',				'跳ね返り回数が8回になった電弧兵器を使って戦闘を1回クリアする',											'Use an electric arc weapon with 8 bounces to pass a battle',												],		//03		
+	23	: `堡垒`					+ ` # 堡垒,堡壘,Fortress,フォートレス`,
+	24	: `有备无患`				+ ` # 有备无患,有備無患,Well-prepared,備えあれば憂いなし`,
+	25	: `装甲的爱好者`			+ ` # 装甲爱好者,裝甲愛好者,Armor Enthusiast,装甲愛好家`,
 	
-	36	: [/*'掷弹兵',					*/'操作库罗库只使用投掷物来通过一场战斗',							'クロックを操作して、投擲物だけで戦闘を1回クリアする',													'Control Kuroku and use only throwing objects to pass a battle',											],		
-	37	: [/*'狂战士',					*/'操作桑使用两把近战电光斧来通过一场战斗',							'サンを操作して、2本電光斧を使って戦闘を1回クリアする',													'Control San and use two Lightning Axes to pass a battle',													],		
-	38	: [/*'神射手',					*/'操作赭石色在不移动的情况下来通过一场战斗',						'オーカーを操作して、移動せずに戦闘を1回クリアする',													'Control Ocher and pass a battle without moving',															],		
-	39	: [/*'兰博',					*/'操作克莱尔并装配了两把重机枪来通过一场战斗',						'クレアを操作して、重機関銃を2挺を装備して戦闘を1回クリアする',											'Control Claire and equip two heavy machine guns to pass a battle',											],		//03		
+	26	: `完全强化`				+ ` # 完全强化,完全強化,Complete Enhancement,完全強化`,
+	27	: `完全改造`				+ ` # 完全改造,完全改造,Complete Remodeling,完全改造`,
 	
-	40	: [/*'战略要地',				*/'外围阵地同时驻扎了　4 股敌军',									'外周陣地に同時に4つの敵軍が駐屯している',																'There are 4 enemy forces simultaneously stationed at the perimeter positions',								],		
-	41	: [/*'战略目标',				*/'外围阵地同时驻扎了　8 股敌军',									'外周陣地に同時に8つの敵軍が駐屯している',																'There are 8 enemy forces simultaneously stationed at the perimeter positions',								],		
-	42	: [/*'虱子多了不怕痒',			*/'外围阵地同时驻扎了 12 股敌军',									'外周陣地に同時に12つの敵軍が駐屯している',																'There are 12 enemy forces simultaneously stationed at the perimeter positions',							],		//03		
+	28	: `破坏性拆解`				+ ` # 破坏性拆解,破壞性拆解,Destructive Disassembly,破壊的分解`,
+	29	: `超大型容量`				+ ` # 超大容量,超大容量,More Dakka,特大容量`,
+	30	: `更多的弹头`				+ ` # 更多弹头,更多彈頭,More Warheads,弾頭の山`,
 	
-	43	: [/*'战士',					*/'消灭 100 单位敌人',												'敵を100体倒す',																						'Eliminate 100 enemy units',																				],		
-	44	: [/*'长官',					*/'消灭 1000 单位敌人',												'敵を1000体倒す',																						'Eliminate 1000 enemy units',																				],		
-	45	: [/*'司令',					*/'消灭 10000 单位敌人',											'敵を10000体倒す',																						'Eliminate 10000 enemy units',																				],		
-	46	: [/*'将军',					*/'消灭 100000 单位敌人',											'敵を100000体倒す',																						'Eliminate 100000 enemy units',																				],		//03		
+	31	: `走得快`					+ ` # 走得快,走得快,Run Fast,早足`,
+	32	: `转的快`					+ ` # 转的快,轉的快,Rotate Fast,高速旋回`,
 	
-	47	: [/*'小队长',					*/'单局游戏中消灭 1000 单位敌人',									'1回のゲームで敵を1000体倒す',																			'Eliminate 1000 enemy units in a single game session',														],		
-	48	: [/*'指挥官',					*/'单局游戏中消灭 10000 单位敌人',									'1回のゲームで敵を10000体倒す',																			'Eliminate 10000 enemy units in a single game session',														],		//03		
+	33	: `元属性法杖`				+ ` # 法杖,法杖,Staff,魔法の杖`,
+	34	: `行走燃料罐`				+ ` # 行走的燃料罐,行走的燃料罐,Walking Fuel Can,歩行燃料タンク`,
+	35	: `闪电的使者`				+ ` # 闪电使者,閃電使者,Messenger of Lightning,稲妻の使者`,
 	
-	49	: [/*'巨人猎手',				*/'击败百臂巨人',													'百腕巨人を撃破する',																					'Defeat the Hundred-Armed Giant',																			],		
-	50	: [/*'母体杀手',				*/'击败增殖者',														'増殖者を撃破する',																						'Defeat the Multiplier',																					],		
-	51	: [/*'蛞蝓刺客',				*/'击败钢蛞蝓',														'スチールスラグを撃破する',																				'Defeat the Steel Slug',																					],		
-	52	: [/*'泰坦克星',				*/'击败泰坦',														'タイタンを撃破する',																					'Defeat the Titan',																							],		//03		
+	36	: `掷弹尖兵`				+ ` # 掷弹兵,擲彈兵,Grenadier,擲弾兵`,
+	37	: `狂战士`					+ ` # 狂战士,狂戰士,Berserker,バーサーカー`,
+	38	: `神射手`					+ ` # 神射手,神射手,Sharpshooter,マークスマン`,
+	39	: `兰博`					+ ` # 兰博,蘭博,Rambo,ランボー`,
 	
-	53	: [/*'装甲猎杀者',				*/'击败装甲母体',													'装甲母体を撃破する',																					'Defeat the Armored Matrix',																				],		
-	54	: [/*'圣盾猎杀者',				*/'击败圣盾母体',													'聖盾母体を撃破する',																					'Defeat the Holy Shield Matrix',																			],		
-	55	: [/*'特战猎杀者',				*/'击败特战母体',													'特殊戦母体を撃破する',																					'Defeat the Special Forces Matrix',																			],		
-	56	: [/*'劫法场者',				*/'击败巨像战机',													'コロッサスを撃破する',																					'Defeat the Colossus',																						],		//03		
+	40	: `战略要地`				+ ` # 战略要地,戰略要地,Strategic Stronghold,戦略の要`,
+	41	: `战略目标`				+ ` # 战略目标,戰略目標,Strategic Objective,戦略目標`,
+	42	: `战略关键`				+ ` # 虱子多了不怕痒,蝨子多了不怕癢,Live With It,シラミが多くても痒くない`,
 	
-	57	: [/*'渗透者克星',				*/'击败精锐渗透型机甲',												'精鋭潜入型機体を撃破する',																				'Defeat the Elite Infiltrator mecha',																		],		
-	58	: [/*'掷弹者克星',				*/'击败精锐掷弹型机甲',												'精鋭擲弾型機体を撃破する',																				'Defeat the Elite Grenade launcher mecha',																	],		
-	59	: [/*'冲锋者克星',				*/'击败精锐冲锋型机甲',												'精鋭突撃型機体を撃破する',																				'Defeat the Elite Assault mecha',																			],		
-	60	: [/*'狙击手克星',				*/'击败精锐狙击型机甲',												'精鋭狙撃型機体を撃破する',																				'Defeat the Elite Sniper mecha',																			],		//03		
+	43	: `战士`					+ ` # 战士,戰士,Warrior,ウォリアー`,
+	44	: `长官`					+ ` # 长官,長官,Superior officer,長官`,
+	45	: `司令`					+ ` # 司令,司令,Commanding Officer,司令`,
+	46	: `将军`					+ ` # 将军,將軍,General,将軍`,
 	
-	61	: [/*'黑骑兵杀手',				*/'击败黑骑兵号',													'黒騎兵号を撃破する',																					'Defeat the Black Knight',																					],		
-	62	: [/*'突骑兵猎手',				*/'击败突骑兵号',													'突撃騎兵号を撃破する',																					'Defeat the Charge Cavalry',																				],		
-	63	: [/*'烈驹终结者',				*/'击败烈驹号',														'烈馬号を撃破する',																						'Defeat the Fierce Steed',																					],		
-	64	: [/*'枪骑兵杀手',				*/'击败枪骑兵号',													'槍騎兵号を撃破する',																					'Defeat the Spear Cavalry',																					],		
-	65	: [/*'甲胄骑士毁灭者',			*/'击败甲胄骑士号',													'甲冑騎士号を撃破する',																					'Defeat the Armor Knight',																					],		//03		
+	47	: `小队长`					+ ` # 小队长,小隊長,Squad Leader,小隊長`,
+	48	: `指挥官`					+ ` # 指挥官,指揮官,Commander,指揮官`,
 	
-	66	: [/*'采购员',					*/'在商店累计花费 $1000',											'ショップで累積$1000を消費する',																		'Spend a total of $1000 in the shop',																		],		
-	67	: [/*'采购主任',				*/'在商店累计花费 $10000',											'ショップで累積$10000を消費する',																		'Spend a total of $10000 in the shop',																		],		
-	68	: [/*'采购经理',				*/'在商店累计花费 $100000',											'ショップで累積$100000を消費する',																		'Spend a total of $100000 in the shop',																		],		//03		
+	49	: `巨人猎手`				+ ` # 巨人猎手,巨人獵手,Giant Hunter,ジャイアントハンター`,
+	50	: `母体杀手`				+ ` # 母体杀手,母體殺手,Matrix Buster,母体キラー`,
+	51	: `蛞蝓刺客`				+ ` # 蛞蝓刺客,蛞蝓刺客,Slug Killer,スラグの暗殺者`,
+	52	: `泰坦克星`				+ ` # 泰坦克星,泰坦剋星,Titan Killer,タイタンキラー`,
 	
-	69	: [/*'运气极差',				*/'在资源回收部获得最低$2',											'資源回収部から$2を獲得する',																			'Obtain $2 in the resource recycling group',																],		
-	70	: [/*'工头',					*/'将人力资源部升级到满级',											'人事部をレベルMaxにする',																				'Upgrade the Human Resources Group to maximum level',														],		
-	71	: [/*'糖果屋',					*/'将有机合成部升级到满级',											'有機合成部レベルMaxにする',																			'Upgrade the Organic Synthesis Group to maximum level',														],		
-	72	: [/*'回收大户',				*/'将资源回收部升级到满级',											'資源回収部をレベルMaxにする',																			'Upgrade the Resource Recycling Group to maximum level',													],		
-	73	: [/*'军火女王',				*/'将武器制造部升级到满级',											'武器製造部をレベルMaxにする',																			'Upgrade the Weapon Factory to maximum level',																],		
-	74	: [/*'配件制造商',				*/'将配件制造部升级到满级',											'アタッチメント製造部をレベルMaxにする',																'Upgrade the Gadget Factory to maximum level',																],		//03		
+	53	: `装甲猎杀者`				+ ` # 装甲猎杀者,裝甲獵殺者,Armored Hunter,装甲ハンター`,
+	54	: `圣盾猎杀者`				+ ` # 圣盾猎杀者,聖盾獵殺者,Holy Shield Hunter,聖盾ハンター`,
+	55	: `特战猎杀者`				+ ` # 特战猎杀者,特戰獵殺者,Special Forces Hunter,特殊部隊ハンター`,
+	56	: `巨像猎杀者`				+ ` # 劫法场者,劫法場者,Massacre Executor,処刑場荒らし`,
 	
-	75	: [/*'发电机',					*/'每日电力产出达到了 40',											'1日の電力生産量が40に達する',																			'Reach a daily electricity output of 40',																	],		
-	76	: [/*'发电厂',					*/'每日电力产出达到了 70',											'1日の電力生産量が70に達する',																			'Reach a daily electricity output of 70',																	],		
-	77	: [/*'用电大户',				*/'一日之内消耗 100 电力',											'1日に100電力を消費する',																				'Consume 100 electricity within a day',																		],		
-	78	: [/*'用电黑洞',				*/'一日之内消耗 300 电力',											'1日に300電力を消費する',																				'Consume 300 electricity within a day',																		],		//03		
+	57	: `渗透者克星`				+ ` # 渗透者克星,滲透者剋星,Infiltrator Slayer,潜入者の天敵`,
+	58	: `掷弹者克星`				+ ` # 掷弹者克星,擲彈者剋星,Grenadier Slayer,擲弾兵の天敵`,
+	59	: `冲锋者克星`				+ ` # 冲锋者克星,衝鋒者剋星,Assault Trooper Slayer,突撃兵の天敵`,
+	60	: `狙击手克星`				+ ` # 狙击手克星,狙擊手剋星,Sniper Slayer,狙撃手の天敵`,
 	
-	79	: [/*'理财能手',				*/'单局游戏内赚到　$5000',											'1回のゲームで$5000を稼ぐ',																				'Earn $5000 within a single game session',																	],		
-	80	: [/*'赚钱高手',				*/'单局游戏内赚到 $10000',											'1回のゲームで$10000を稼ぐ',																			'Earn $10000 within a single game session',																	],		
-	81	: [/*'金手指',					*/'单局游戏内赚到 $15000',											'1回のゲームで$15000を稼ぐ',																			'Earn $15000 within a single game session',																	],		//03		
+	61	: `黑骑兵杀手`				+ ` # 黑骑兵杀手,黑騎兵殺手,Black Knight Buster,黒騎兵キラー`,
+	62	: `突骑兵猎手`				+ ` # 突骑兵猎手,突騎兵獵手,Charge Cavalry Hunter,突撃騎兵ハンター`,
+	63	: `烈驹终结者`				+ ` # 烈驹终结者,烈駒終結者,Fierce Steed Terminator,烈馬ターミネーター`,
+	64	: `枪骑兵杀手`				+ ` # 枪骑兵杀手,槍騎兵殺手,Spear Cavalry Buster,槍騎兵キラー`,
+	65	: `甲胄毁灭者`				+ ` # 甲胄骑士毁灭者,甲胄騎士毀滅者,Armor Knight Destroyer,甲冑騎士デストロイヤー`,
 	
-	82	: [/*'遮风避雨的住处',			*/'宿舍舒适度达到　60',												'寮快適度が60に達する',																					'Reach a dormitory comfort of 60',																			],		
-	83	: [/*'温暖的家',				*/'宿舍舒适度达到 120',												'寮快適度が120に達する',																				'Reach a dormitory comfort of 120',																			],		
-	84	: [/*'大豪斯',					*/'宿舍舒适度达到 200',												'寮快適度が200に達する',																				'Reach a dormitory comfort of 200',																			],		
-	85	: [/*'清洁工作',				*/'拆除宿舍内所有垃圾',												'寮からすべてのゴミを取り除く',																			'Remove all trash from the dormitory',																		],		
-	86	: [/*'抓到你了',				*/'在宿舍抓起一名队员',												'寮で隊員を持ち上げる',																					'Capture a team member in the dormitory',																	],		//03		
+	66	: `采购科员`				+ ` # 采购员,採購員,Merchandiser,購買担当者`,
+	67	: `采购主任`				+ ` # 采购主任,採購主任,Procurement Supervisor,購買ディレクター`,
+	68	: `采购经理`				+ ` # 采购经理,採購經理,Procurement Manager,購買マネージャー`,
 	
-	87	: [/*'严密监控',				*/'在 20% 以下暴露率偷税暴露',										'発覚率20%未満の状態で脱税が発覚する',																	'Expose tax evasion with an exposure rate below 20%',														],		
-	88	: [/*'苛捐杂税',				*/'在 80% 以上成功率偷税失败',										'成功率80%以上の状態で脱税に失敗する',																	'Fail to commit tax evasion with a success rate above 80%',													],		
-	89	: [/*'初犯',					*/'累计偷税　 1 次',												'累積1回脱税する',																						'Commit tax evasion a total of 1 time',																		],		
-	90	: [/*'累犯',					*/'累计偷税　10 次',												'累積10回脱税する',																						'Commit tax evasion a total of 10 times',																	],		
-	91	: [/*'税金小偷',				*/'累计偷税 100 次',												'累積100回脱税する',																					'Commit tax evasion a total of 100 times',																	],		
-	92	: [/*'财务蛀虫',				*/'累计偷税 300 次',												'累積300回脱税する',																					'Commit tax evasion a total of 300 times',																	],		//03		
+	69	: `运气极差`				+ ` # 运气极差,運氣極差,Extremely Unlucky,運が悪すぎ`,
+	70	: `工头`					+ ` # 工头,工頭,Foreman,工事現場監督`,
+	71	: `糖果屋`					+ ` # 糖果屋,糖果屋,Candy House,キャンディハウス`,
+	72	: `回收大户`				+ ` # 回收大户,回收大戶,Recycling Company,大手回収業者`,
+	73	: `军火女王`				+ ` # 军火女王,軍火女王,Arms Dealer,兵器の女王`,
+	74	: `配件厂商`				+ ` # 配件制造商,配件製造商,Gadgets Manufacturer,アタッチメントメーカー`,
 	
-	93	: [/*'良好市民',				*/'在 90 天之前没有进行过一次偷税',									'90日目までに一度も脱税したことがない',																	'Have not committed tax evasion within the past 90 days',													],		
-	94	: [/*'自己的够了',				*/'在 60 天之前没有刷新过一次商店',									'60日目までに一度もショップを更新したことがない',														'Haven\'t refreshed the shop within the past 60 days',														],		
-	95	: [/*'我才不要这些升级',		*/'在 60 天之前没有升级过一次基建',									'60日目までに一度もインフラをアップグレードしたことがない',												'Haven\'t upgraded the infrastructure within the past 60 days',												],		
-	96	: [/*'铁公鸡',					*/'在 30 天之前没有送出过一次涨好感的礼物',							'30日目までに一度も好感度プレゼントを送ったことがない',													'Have not sent a gift to increase Affinity within the past 30 days',										],		
-	97	: [/*'清理大师',				*/'在 70 天之前外围敌军从来不超过三股(含)',							'70日目までに外周の敵軍は一度も3隊（含む）を超えたことがない',											'The number of enemy forces stationed in the perimeter has never exceeded 3 within the past 70 days',		],		//03		
+	75	: `发电机`					+ ` # 发电机,發電機,Generator,発電機`,
+	76	: `发电厂`					+ ` # 发电厂,發電廠,Electricity Plant,発電所`,
+	77	: `用电大户`				+ ` # 用电大户,用電大戶,Heavy Electricity Consumer,電力大量消費者`,
+	78	: `用电黑洞`				+ ` # 用电黑洞,用電黑洞,Electricity Black Hole,電力のブラックホール`,
 	
-	98	: [/*'绿发女孩',				*/'招募库罗库',														'クロックを仲間にする',																					'Recruit Kuroku',																							],		
-	99	: [/*'城防助理',				*/'与库罗库的好感达到 4',											'クロックの好感度を4にする',																			'Reach an Affinity of 4 with Kuroku',																		],		
-	100	: [/*'团队阳光',				*/'与库罗库的好感达到 8',											'クロックの好感度を8にする',																			'Reach an Affinity of 8 with Kuroku',																		],		
-	101	: [/*'团队天使',				*/'触发库罗库的好感事件',											'クロックの好感度イベントをトリガーする',																'Trigger an Affinity event with Kuroku',																	],		
-	102	: [/*'训练生',					*/'了解库罗库过去的故事',											'クロックの過去を知る',																					'Learn about Kuroku\'s past',																				],		
-	103	: [/*'库罗库',					*/'与库罗库好感达到满级',											'クロックの好感度を最大にする',																			'Reach maximum Affinity with Kuroku',																		],		//03		
+	79	: `理财小能手`				+ ` # 理财能手,理財能手,Financial Wizard,財務管理の達人`,
+	80	: `赚钱高手`				+ ` # 赚钱高手,賺錢高手,Money-making Expert,金儲けの達人`,
+	81	: `金手指`					+ ` # 金手指,金手指,Cheats,ゴールドフィンガー`,
 	
-	104	: [/*'红发女孩',				*/'招募桑/San',														'サンを仲間にする',																						'Recruit San',																								],		
-	105	: [/*'采购部监工',				*/'与桑/San的好感达到 4',											'サンの好感度を4にする',																				'Reach an Affinity of 4 with San',																			],		
-	106	: [/*'采购部大姐头',			*/'与桑/San的好感达到 8',											'サンの好感度を8にする',																				'Reach an Affinity of 8 with San',																			],		
-	107	: [/*'暴力少女',				*/'触发桑/San的好感事件',											'サンの好感度イベントをトリガーする',																	'Trigger an Affinity event with San',																		],		
-	108	: [/*'不堪回首的过去',			*/'了解桑/San过去的故事',											'サンの過去を知る',																						'Learn about San\'s past',																					],		
-	109	: [/*'桑',						*/'与桑/San好感达到满级',											'サンの好感度を最大にする',																				'Reach maximum Affinity with San',																			],		//03		
+	82	: `遮风避雨处`				+ ` # 遮风避雨的住处,遮風避雨的住處,Shelter from the Storm,雨風をしのぐ場所`,
+	83	: `温暖的家`				+ ` # 温暖的家,溫暖的家,Cozy Home,暖かい家`,
+	84	: `大豪斯`					+ ` # 大豪斯,大豪斯,Mansion,グランドハウス`,
+	85	: `清洁工作`				+ ` # 清洁工作,清潔工作,Cleaning Work,清掃仕事`,
+	86	: `我抓到你了`				+ ` # 抓到你了,抓到你了,Gotcha,捕まえた`,
 	
-	110	: [/*'黄发女孩',				*/'招募赭石色',														'オーカーを仲間にする',																					'Recruit Ocher',																							],		
-	111	: [/*'赭石色的礼物',			*/'与赭石色的好感达到 4',											'オーカーの好感度を4にする',																			'Reach an Affinity of 4 with Ocher',																		],		
-	112	: [/*'赭石色的大礼物',			*/'与赭石色的好感达到 8',											'オーカーの好感度を8にする',																			'Reach an Affinity of 8 with Ocher',																		],		
-	113	: [/*'文学少女',				*/'触发赭石色的好感事件',											'オーカーの好感度イベントをトリガーする',																'Trigger an Affinity event with Ocher',																		],		
-	114	: [/*'杀手',					*/'了解赭石色过去的故事',											'オーカーの過去を知る',																					'Learn about Ocher\'s past',																				],		
-	115	: [/*'赭石色',					*/'与赭石色好感达到满级',											'オーカーの好感度を最大にする',																			'Reach maximum Affinity with Ocher',																		],		//03		
+	87	: `严密监控`				+ ` # 严密监控,嚴密監控,Intensive Surveillance,綿密の監視`,
+	88	: `苛捐杂税`				+ ` # 苛捐杂税,苛捐雜稅,Excessive Taxes,雑多な税金`,
+	89	: `初犯`					+ ` # 初犯,初犯,First-time Offender,初犯`,
+	90	: `累犯`					+ ` # 累犯,累犯,Repeat Offender,再犯`,
+	91	: `税金小偷`				+ ` # 税金小偷,稅金小偷,Tax Thief,税金泥棒`,
+	92	: `财务蛀虫`				+ ` # 财务蛀虫,財務蛀蟲,Financial Parasite,財務を蝕む虫`,
 	
-	116	: [/*'蓝发女孩',				*/'招募克莱尔',														'クレアを仲間にする',																					'Recruit Claire',																							],		
-	117	: [/*'基建部助理',				*/'与克莱尔的好感达到 4',											'クレアの好感度を4にする',																				'Reach an Affinity of 4 with Claire',																		],		
-	118	: [/*'基建部领导',				*/'与克莱尔的好感达到 8',											'クレアの好感度を8にする',																				'Reach an Affinity of 8 with Claire',																		],		
-	119	: [/*'健身女孩',				*/'触发克莱尔的好感事件',											'クレアの好感度イベントをトリガーする',																	'Trigger an Affinity event with Claire',																	],		
-	120	: [/*'老战士',					*/'了解克莱尔过去的故事',											'クレアの過去を知る',																					'Learn about Claire\'s past',																				],		
-	121	: [/*'克莱尔',					*/'与克莱尔好感达到满级',											'クレアの好感度を最大にする',																			'Reach maximum Affinity with Claire',																		],		//03		
+	93	: `良好市民`				+ ` # 良好市民,良好市民,Model Citizen,善良な市民`,
+	94	: `自己的够了`				+ ` # 自己的够了,自己的夠了,Content with Oneself,自分の分は十分`,
+	95	: `不要这些升级`			+ ` # 我才不要这些升级,我才不要這些升級,I don't want these upgrades,レベルアップなんていらない`,
+	96	: `纯铁公鸡`				+ ` # 铁公鸡,鐵公雞,Miser,アイアンコック`,
+	97	: `清理大师`				+ ` # 清理大师,清理大師,Cleaning Master,清掃の達人`,
 	
-	122	: [/*'长见识了',				*/'使用升级点升级 1 次',											'レベルアップポイントで1回レベルアップする',															'Use leveling points to upgrade 1 time',																	],		
-	123	: [/*'长知识了',				*/'使用升级点升级 10 次',											'レベルアップポイントで10回レベルアップする',															'Use leveling points to upgrade 10 times',																	],		
-	124	: [/*'长脑子了',				*/'使用升级点升级 100 次',											'レベルアップポイントで100回レベルアップする',															'Use leveling points to upgrade 100 times',																	],		//03		
+	98	: `绿发女孩`				+ ` # 绿发女孩,綠發女孩,Green-haired Girl,緑の髪の少女`,
+	99	: `城防助理`				+ ` # 城防助理,城防助理,City Defense Assistant,シティディフェンスアシスタント`,
+	100	: `团队阳光`				+ ` # 团队阳光,團隊陽光,Team Sunshine,小隊の太陽`,
+	101	: `团队天使`				+ ` # 团队天使,團隊天使,Team Angel,小隊のエンジェル`,
+	102	: `训练生`					+ ` # 训练生,訓練生,Trainee,訓練生`,
+	103	: `库罗库`					+ ` # 库罗库,庫羅庫,Kuroku,クロック`,
 	
-	125	: [/*'学艺精通',				*/'将一项属性升满(不包括上限加成)',									'一つのステータスを最大にする（上限ボーナスを含まない）',												'Max out one of the stats (excluding upper limit bonuses)',													],		
-	126	: [/*'超级士兵',				*/'将一名角色所有属性升满(不包括上限加成)',							'一人のキャラクターのすべてのステータスを最大にする（上限ボーナスを含まない）',							'Max out all stats for one character (excluding upper limit bonuses)',										],		
-	127	: [/*'英雄之证',				*/'送出　1 枚英雄勋章',												'英雄メダルを1個贈る',																					'Send out 1 Hero Medal',																					],		
-	128	: [/*'满门忠烈',				*/'送出 20 枚英雄勋章',												'英雄メダルを20個贈る',																					'Send out 20 Hero Medals',																					],		//03		
+	104	: `红发女孩`				+ ` # 红发女孩,紅發女孩,Red-haired Girl,赤い髪の少女`,
+	105	: `采购部监工`				+ ` # 采购部监工,採購部監工,Procurement Supervisor,購買部門のスーパーバイザー`,
+	106	: `采购部大姐头`			+ ` # 采购部大姐头,採購部大姐頭,Procurement Boss,購買部門の姉貴`,
+	107	: `暴力少女`				+ ` # 暴力少女,暴力少女,Violent Girl,暴力少女`,
+	108	: `不堪回首`				+ ` # 不堪回首的过去,不堪回首的過去,Unforgettable Past,嫌な過去`,
+	109	: `桑 / San`				+ ` # 桑,桑,San,サン`,
 	
-	129	: [/*'深思熟虑',				*/'理智思潮达到满',													'理性思潮が最大になる',																					'Reach maximum Reason Sentiment',																			],		
-	130	: [/*'大爱无疆',				*/'博爱思潮达到满',													'博愛思潮が最大になる',																					'Reach maximum Philanthropy Sentiment',																		],		
-	131	: [/*'不安现状',				*/'激进思潮达到满',													'過激思潮が最大になる',																					'Reach maximum Radical Sentiment',																			],		
-	132	: [/*'王侯将相宁有种乎',		*/'叛逆思潮达到满',													'反逆思潮が最大になる',																					'Reach maximum Revolt Sentiment',																			],		//03		
+	110	: `黄发女孩`				+ ` # 黄发女孩,黃發女孩,Yellow-haired Girl,黄色い髪の少女`,
+	111	: `赭石色的礼物`			+ ` # 赭石色的礼物,赭石色的禮物,A gift from Ocher,オーカーのプレゼント`,
+	112	: `赭石色的大型礼物`		+ ` # 赭石色的大礼物,赭石色的大禮物,A big gift from Ocher,オーカーのビッグプレゼント`,
+	113	: `文学少女`				+ ` # 文学少女,文學少女,Literary Girl,文学少女`,
+	114	: `杀手往事`				+ ` # 杀手,殺手,Buster,キラー`,
+	115	: `赭 石 色`				+ ` # 赭石色,赭石色,Ocher,オーカー`,
 	
-	133	: [/*'时代先驱',				*/'所有思潮为满',													'全ての思潮が最大になる',																				'All Sentiments are at maximum.',																			],		
-	134	: [/*'时代糟粕',				*/'所有思潮为负',													'全ての思潮がマイナスになる',																			'All Sentiments are negative',																				],		//03		
+	116	: `蓝发女孩`				+ ` # 蓝发女孩,藍發女孩,Blue-haired Girl,青い髪の少女`,
+	117	: `基建部助理`				+ ` # 基建部助理,基建部助理,Infrastructure Division Assistant,インフラ部門のアシスタント`,
+	118	: `基建部的领导`			+ ` # 基建部领导,基建部領導,Infrastructure Division Leader,インフラ部長`,
+	119	: `健身女孩`				+ ` # 健身女孩,健身女孩,Fitness Girl,フィットネスガール`,
+	120	: `老战士`					+ ` # 老战士,老戰士,Seasoned Warrior,オールドウォリアー`,
+	121	: `克莱尔`					+ ` # 克莱尔,克萊爾,Claire,クレア`,
 	
-	135	: [/*'交流者',					*/'在休息区与队友聊天 1 次',										'休憩エリアで隊員と1回会話する',																		'Chat with teammates in the rest area 1 time',																],		
-	136	: [/*'知心姐姐',				*/'在休息区与队友聊天 10 次',										'休憩エリアで隊員と10回会話する',																		'Chat with teammates in the rest area 10 times',															],		
-	137	: [/*'社牛',					*/'在休息区与队友聊天 100 次',										'休憩エリアで隊員と100回会話する',																		'Chat with teammates in the rest area 100 times',															],		//03		
+	122	: `长见识了`				+ ` # 长见识了,長見識了,Broadened Horizons,見聞が広がった`,
+	123	: `长知识了`				+ ` # 长知识了,長知識了,Gained knowledge,知識が増えた`,
+	124	: `长脑子了`				+ ` # 长脑子了,長腦子了,Became More Thoughtful,脳みそが生えてきた`,
 	
-	138	: [/*'人见人爱',				*/'在一天中收到 2 份礼物',											'1日に2つのプレゼントを受け取る',																		'Receive 2 gifts in one day',																				],		
-	139	: [/*'人气王',					*/'在一天中收到 3 份礼物',											'1日に3つのプレゼントを受け取る',																		'Receive 3 gifts in one day',																				],		
-	140	: [/*'海王',					*/'在一天中收到 4 份礼物',											'1日に4つのプレゼントを受け取る',																		'Receive 4 gifts in one day',																				],		//03		
+	125	: `学艺精通`				+ ` # 学艺精通,學藝精通,Mastery of Skills,技術に精通した`,
+	126	: `超级士兵`				+ ` # 超级士兵,超級士兵,Super Soldier,スーパーソルジャー`,
+	127	: `英雄之证`				+ ` # 英雄之证,英雄之證,Proof of Heroism,英雄の証`,
+	128	: `满门忠烈`				+ ` # 满门忠烈,滿門忠烈,Distinguished Service,忠誠の一家`,
 	
-	141	: [/*'投桃报李',				*/'累计收到了 1 份礼物',											'合計1個のプレゼントを受け取る',																		'Accumulate 1 received gift',																				],		
-	142	: [/*'滴水之恩',				*/'累计收到了 10 份礼物',											'合計10個のプレゼントを受け取る',																		'Accumulate 10 received gifts',																				],		
-	143	: [/*'来而不往非礼也',			*/'累计收到了 100 份礼物',											'合計100個のプレゼントを受け取る',																		'Accumulate 100 received gifts',																			],		//03		
+	129	: `深思熟虑`				+ ` # 深思熟虑,深思熟慮,Thoughtful Consideration,思慮深い`,
+	130	: `大爱无疆`				+ ` # 大爱无疆,大愛無疆,Boundless Love,博愛家`,
+	131	: `不安现状`				+ ` # 不安现状,不安現狀,Unsettled Status Quo,現状に満足しない`,
+	132	: `众生平等`				+ ` # 王侯将相宁有种乎,王侯將相寧有種乎,Are aristocrats born noble?,王侯将相寧んぞ種あらんや`,
 	
-	144	: [/*'第一次送礼',				*/'送出 1 份礼物',													'プレゼントを1個贈る',																					'Send out 1 gift',																							],		
-	145	: [/*'礼品店老板',				*/'送出 30 份礼物',													'プレゼントを30個贈る',																					'Send out 30 gifts',																						],		
-	146	: [/*'礼品厂老板',				*/'送出 600 份礼物',												'プレゼントを600個贈る',																				'Send out 600 gifts',																						],		
-	147	: [/*'精准踩雷',				*/'送出一份队友讨厌的礼物',											'隊員が嫌いなプレゼントを1個送る',																		'Send out 1 gift that teammates dislike',																	],		
-	148	: [/*'地雷系女孩',				*/'送出十份队友讨厌的礼物',											'隊員が嫌いなプレゼントを10個送る',																		'Send out 10 gifts that teammates dislike',																	],		//03		
+	133	: `时代先驱`				+ ` # 时代先驱,時代先驅,Pioneer of the Era,時代の先駆者`,
+	134	: `时代糟粕`				+ ` # 时代糟粕,時代糟粕,Dregs of the Era,時代の屑`,
 	
-	149	: [/*'双人成行',				*/'小队拥有 2 人',													'隊員が2人になる',																						'Having 2 members on the team',																				],		
-	150	: [/*'三人成众',				*/'小队拥有 3 人',													'隊員が3人になる',																						'Having 3 members on the team',																				],		
-	151	: [/*'四大天王',				*/'小队拥有 4 人',													'隊員が4人になる',																						'Having 4 members on the team',																				],		
-	152	: [/*'五虎上将',				*/'小队拥有 5 人',													'隊員が5人になる',																						'Having 5 members on the team',																				],		//03		
+	135	: `交流者`					+ ` # 交流者,交流者,Mediator,コミュニケーター`,
+	136	: `知心姐姐`				+ ` # 知心姐姐,知心姐姐,Understanding Sister,皆のお姉ちゃん`,
+	137	: `大无畏社牛`				+ ` # 社牛,社牛,Chatty,社交の達人`,
 	
-	153	: [/*'HR',						*/'累计招募 5 次',													'合計5回リクルートする',																				'Recruit a total of 5 times',																				],		
-	154	: [/*'HR主任',					*/'累计招募 10 次',													'合計10回リクルートする',																				'Recruit a total of 10 times',																				],		
-	155	: [/*'HR经理',					*/'累计招募 100 次',												'合計100回リクルートする',																				'Recruit a total of 100 times',																				],		//03		
+	138	: `人见人爱`				+ ` # 人见人爱,人見人愛,Loved by Everyone,皆に愛される`,
+	139	: `人气王`					+ ` # 人气王,人氣王,Popular,人気者`,
+	140	: `海王`					+ ` # 海王,海王,Philander,ナンパ好き`,
 	
-	156	: [/*'结束',					*/'达成结束结局',													'終了エンディングを達成する',																			'Achieve the End ending',																					],		
-	157	: [/*'叛逃',					*/'达成叛逃结局',													'寝返りエンディングを達成する',																			'Achieve the Defection ending',																				],		
-	168	: [/*'革命',					*/'达成革命结局',													'革命エンディングを達成する',																			'Achieve the Revolution ending',																			],		//03		
+	141	: `投桃报李`				+ ` # 投桃报李,投桃報李,Repay Kindness with Kindness,投桃報李`,
+	142	: `滴水之恩`				+ ` # 滴水之恩,滴水之恩,A Drop of Water in Kindness,一滴の水の恩`,
+	143	: `礼尚往来`				+ ` # 来而不往非礼也,來而不往非禮也,Returning the Favor,来りて往かざれば亦礼に非ざる也`,
 	
-	158	: [/*'武曲星',					*/'使用玛　丽通关挑战模式',											'メアリーでチャレンジモードをクリアする',																'Use Mary to pass the challenge mode',																		],		
-	159	: [/*'提尔',					*/'使用克莱尔通关挑战模式',											'クレアでチャレンジモードをクリアする',																	'Use Claire to pass the challenge mode',																	],		
-	160	: [/*'韦驮天',					*/'使用库罗库通关挑战模式',											'クロックでチャレンジモードをクリアする',																'Use Kuroku to pass the challenge mode',																	],		
-	161	: [/*'玛尔斯',					*/'使用赭石色通关挑战模式',											'オーカーでチャレンジモードをクリアする',																'Use Ocher to pass the challenge mode',																		],		
-	162	: [/*'阿瑞斯',					*/'使用桑/San通关挑战模式',											'サンでチャレンジモードをクリアする',																	'Use San to pass the challenge mode',																		],		//03		
+	144	: `第一次送礼`				+ ` # 第一次送礼,第一次送禮,First-time Gift Giving,初めてのプレゼント`,
+	145	: `礼品店老板`				+ ` # 礼品店老板,禮品店老闆,Gift Shop Owner,プレゼントショップのオーナー`,
+	146	: `礼品厂老板`				+ ` # 礼品厂老板,禮品廠老闆,Gift Factory Owner,プレゼントファクトリーのオーナー`,
 	
-	163	: [/*'挑战者',					*/'通关挑战模式(任意难度)',											'チャレンジモードをクリアする',																			'Pass Challenge Mode',																						],		
-	164	: [/*'破关者',					*/'通关挑战模式进阶模式 1',											'チャレンジモード上級モード1をクリアする',																'Pass Challenge Mode Advanced Mode 1',																		],		
-	165	: [/*'突破者',					*/'通关挑战模式进阶模式 5',											'チャレンジモード上級モード5をクリアする',																'Pass Challenge Mode Advanced Mode 5',																		],		
-	166	: [/*'全能者',					*/'通关挑战模式进阶模式10',											'チャレンジモード上級モード10をクリアする',																'Pass Challenge Mode Advanced Mode 10',																		],		
-	167	: [/*'蔑视者',					*/'通关挑战模式进阶模式17',											'チャレンジモード上級モード17をクリアする',																'Pass Challenge Mode Advanced Mode 17',																		],		//03		
+	147	: `精准地踩雷`				+ ` # 精准踩雷,精准踩雷,Accurately Step on a Land Mine,地雷踏みの達人`,
+	148	: `地雷系女孩`				+ ` # 地雷系女孩,地雷系女孩,Land Mine Girl,地雷系女子`,
 	
-	179	: [/*'棕色幸存者',				*/'使用玛　丽通关了幸存者模式',										'メアリーで生存者モードをクリアする',																	'Use Mary to pass the Survival Mode',																		],		
-	169	: [/*'绿色幸存者',				*/'使用库洛库通关了幸存者模式',										'クロックで生存者モードをクリアする',																	'Use Kuroku to pass the Survival Mode',																		],		
-	170	: [/*'红色幸存者',				*/'使用桑/San通关了幸存者模式',										'サンで生存者モードをクリアする',																		'Use San to pass the Survival Mode',																		],		
-	171	: [/*'黄色幸存者',				*/'使用赭石色通关了幸存者模式',										'オーカーで生存者モードをクリアする',																	'Use Ocher to pass the Survival Mode',																		],		
-	172	: [/*'蓝色幸存者',				*/'使用克莱尔通关了幸存者模式',										'クレアで生存者モードをクリアする',																		'Use Claire to pass the Survival Mode',																		],		//03		
+	149	: `双人成行`				+ ` # 双人成行,雙人成行,It Takes Two,二人で行く`,
+	150	: `三人成众`				+ ` # 三人成众,三人成眾,Three's a Crowd,三人で行く`,
+	151	: `四大天王`				+ ` # 四大天王,四大天王,Four Heavenly Kings,四天王で行く`,
+	152	: `五虎上将`				+ ` # 五虎上将,五虎上將,Full House,五虎将で行く`,
 	
-	173	: [/*'初露锋芒',				*/'在无尽模式下达到　40 天并退役',									'エンドレスモードで40日間達し退役する',																	'Reach 40 days in Endless Mode and Retire',																	],		
-	174	: [/*'坚韧不拔',				*/'在无尽模式下达到　80 天并退役',									'エンドレスモードで80日間達し退役する',																	'Reach 80 days in Endless Mode and Retire',																	],		
-	175	: [/*'永恒传奇',				*/'在无尽模式下达到 150 天并退役',									'エンドレスモードで150日間達し退役する',																'Reach 150 days in Endless Mode and Retire',																],		
-	176	: [/*'兵临城下',				*/'在最终战斗达到第　10 战并退役',									'最終戦で10戦目に達し退役する',																			'Reach the 10th battle in The Final Battle and retire',														],		
-	177	: [/*'喋血孤城',				*/'在最终战斗达到第　50 战并退役',									'最終戦で50戦目に達し退役する',																			'Reach the 50th battle in The Final Battle and retire',														],		
-	178	: [/*'最后一滴血',				*/'在最终战斗达到第 100 战并退役',									'最終戦で100戦目に達し退役する',																		'Reach the 100th battle in The Final Battle and retire',													],		//03		
+	153	: `HR科员`					+ ` # HR,HR,Human Resources Operator,HR`,
+	154	: `HR主任`					+ ` # HR主任,HR主任,Human Resources Supervisor,HR主任`,
+	155	: `HR经理`					+ ` # HR经理,HR經理,Human Resources Manager,HRマネージャー`,
 	
-	180	: [/*'潜入者',					*/'通关潜入模式(使用库罗库在潜入模式下坚守 39 天)',					'潜入モードをクリアする',																				'Pass Sneaking Mode',																						],		
-	181	: [/*'黑夜死神',				*/'通关潜入模式(每次任务都不超过最大警觉的情况下)',					'クエストごとに最大警戒を超えずに潜入モードをクリアする',												'Pass Sneaking Mode without exceeding maximum alertness in each task',										],		//03		
+	156	: `结束`					+ ` # 结束,結束,End,終了`,
+	157	: `叛逃`					+ ` # 叛逃,叛逃,Defection,寝返り`,
+	168	: `革命`					+ ` # 革命,革命,Revolution,革命`,
+	
+	158	: `武曲星`					+ ` # 武曲星,武曲星,Wenchang Star,武曲星`,
+	160	: `韦驮天`					+ ` # 韦驮天,韋馱天,Ganesha,韋駄天`,
+	159	: `提　尔`					+ ` # 提尔,提爾,Tyr,テュール`,
+	161	: `玛尔斯`					+ ` # 玛尔斯,瑪爾斯,Mars,マールス`,
+	162	: `阿瑞斯`					+ ` # 阿瑞斯,阿瑞斯,Ares,アレス`,
+	
+	163	: `挑战者`					+ ` # 挑战者,挑戰者,Challenger,チャレンジャー`,
+	164	: `破关者`					+ ` # 破关者,破關者,Breaker,ステージブレーカー`,
+	165	: `突破者`					+ ` # 突破者,突破者,Breaker,突破者`,
+	166	: `全能者`					+ ` # 全能者,全能者,Almighty,全能者`,
+	167	: `蔑视者`					+ ` # 蔑视者,蔑視者,Defier,軽蔑者`,
+	
+	179	: `棕色幸存者`				+ ` # 棕色幸存者,棕色倖存者,Brown Survivor,栗色の生存者`,
+	169	: `绿色幸存者`				+ ` # 绿色幸存者,綠色倖存者,Green Survivors,緑色の生存者`,
+	170	: `红色幸存者`				+ ` # 红色幸存者,紅色倖存者,Red Survivors,赤い生存者`,
+	171	: `黄色幸存者`				+ ` # 黄色幸存者,黃色倖存者,Yellow Survivor,黄色の生存者`,
+	172	: `蓝色幸存者`				+ ` # 蓝色幸存者,藍色倖存者,Blue Survivor,青い生存者`,
+	
+	173	: `初露锋芒`				+ ` # 初露锋芒,初露鋒芒,Rising Star,新星の輝き`,
+	174	: `坚韧不拔`				+ ` # 坚韧不拔,堅韌不拔,Unyielding Spirit,不屈の精神`,
+	175	: `永恒传奇`				+ ` # 永恒传奇,永恆傳奇,Eternal Legend,永遠の伝説`,
+	
+	176	: `兵临城下`				+ ` # 兵临城下,兵臨城下,City under siege,兵が城下に臨む`,
+	177	: `喋血孤城`				+ ` # 喋血孤城,喋血孤城,Bloody Lonely City,孤城の血を流す`,
+	178	: `屹立不倒`				+ ` # 最后一滴血,最後一滴血,Last Blood,最後の一滴の血`,
+	
+	180	: `潜入者`					+ ` # 潜入者,潛入者,Infiltrator,潜入者`,
+	181	: `夜死神`					+ ` # 黑夜死神,黑夜死神,The Night Reaper,暗夜の死神`,
+	
+	182	: `击败破荒`				+ ` # 击败破荒,擊敗破荒,Defeat Wastelord,デバステイターを撃破`,
+	183	: `击败绝念`				+ ` # 击败绝念,擊敗絕念,Defeat Heartless,イクリプスを撃破`,
+	184	: `击败镇宇`				+ ` # 击败镇宇,擊敗鎮宇,Defeat Earthwarden,アースガードを撃破`,
+	
+	186	: `击败陨日(正)`			+ ` # 击败陨日,擊敗隕日,Defeat Sundoom,サンフォールを撃破`,
+	188	: `击败陨日(改)`			+ ` # 击败陨日改,擊敗隕日改,Defeat Sundoom Modified,サンフォール（改）を撃破`,
+	
+	185	: `击败裂蛰烬蝎`			+ ` # 击败裂蛰,擊敗裂蟄,Defeat Riftscourge,スコルピオを撃破`,
+	187	: `击败玄钩螫狱`			+ ` # 击败玄钩,擊敗玄鉤,Defeat Darkhook,アビスティンを撃破`,
+	
+	189	: `击败碎界(正)`			+ ` # 击败碎界,擊敗碎界,Defeat Worldshatter,ワールドブレイカーを撃破`,
+	190	: `击败碎界(改)`			+ ` # 击败碎界改,擊敗碎界改,Defeat Worldshatter Modified,ワールドブレイカー（改）を撃破`,
+	
+	191	: `角斗士`					+ ` # 角斗士,角鬥士,Gladiator,グラディエーター`,
+	192	: `红莲花`					+ ` # 红莲花,紅蓮花,Crimson Lotus,紅蓮の花`,
+	
+	},
+	
+	文本描述 : {
+	
+	1	: `存活 10 天`													+ ` # 存活10天,存活10天,Survive for 10 days,生存日数10日`,
+	2	: `存活 30 天`													+ ` # 存活30天,存活30天,Survive for 30 days,生存日数30日`,
+	3	: `存活 55 天`													+ ` # 存活55天,存活55天,Survive for 55 days,生存日数55日`,
+	4	: `存活 80 天`													+ ` # 存活80天,存活80天,Survive for 80 days,生存日数80日`,
+	5	: `存活100 天`													+ ` # 存活100天,存活100天,Survive for 100 days,生存日数100日`,
+	
+	6	: `装备一把 12 槽位的武器通过一场战斗`							+ ` # 装备一把12槽位的武器通过一场战斗,裝備一把12槽位的武器通過一場戰鬥,Equip a 12-slot weapon and pass a battle,12スロットの武器を装備して戦闘をクリアする`,
+	7	: `装备一把 15 槽位的武器通过一场战斗`							+ ` # 装备一把15槽位的武器通过一场战斗,裝備一把15槽位的武器通過一場戰鬥,Equip a 15-slot weapon and pass a battle,15スロットの武器を装備して戦闘をクリアする`,
+	8	: `装备一把 18 槽位的武器通过一场战斗`							+ ` # 装备一把18槽位的武器通过一场战斗,裝備一把18槽位的武器通過一場戰鬥,Equip an 18-slot weapon and pass a battle,18スロットの武器を装備して戦闘をクリアする`,
+	
+	9	: `同时对敌人施加冰火状态融化敌人装甲`							+ ` # 同时对敌人施加冰火状态以融化敌人装甲,同時對敵人施加冰火狀態以融化敵人裝甲,Apply ice and fire status to enemies simultaneously to melt their armor,敵に氷と炎の状態同時に付与し、装甲を溶かす`,
+	10	: `在一场战斗中触发了所有一级属性反应`							+ ` # 在一场战斗中触发了所有一级属性反应,在一場戰鬥中觸發了所有一級屬性反應,Triggered all level 1 stats reactions in one battle,1回の戦闘ですべてのレベル1属性反応を発動する`,
+	11	: `在一次攻击中, 一次性冻结 10 个目标`							+ ` # 一次性冻结10个目标,一次性凍結10個目標,Freeze 10 targets at once,一度に10個のターゲットを凍結させる`,
+	12	: `在一次攻击中, 一次性引爆 10 个目标`							+ ` # 一次性引爆10个目标,一次性引爆10個目標,Detonate 10 targets at once,一度に10個のターゲットを起爆する`,
+	13	: `在一次攻击中, 一次性电击 20 个目标`							+ ` # 在一次感电中造成20次闪电连锁,在一次感電中造成20次閃電連鎖,Cause 20 lightning chains in one electrification,1回の感電でライトニングチェーンを20個生成する`,
+	
+	14	: `使用 50 耐久以下的武器通过一场战斗`							+ ` # 使用一把50耐久以下的武器通过一场战斗,使用一把50耐久以下的武器通過一場戰鬥,Pass a battle using a weapon with durability below 50,耐久力50未満の武器を使って戦闘を1回クリアする`,
+	15	: `失去 20 以上的武器耐久通过一场战斗`							+ ` # 武器失去20以上耐久的情况下通过一场战斗,武器失去20以上耐久的情況下通過一場戰鬥,Pass a battle with a weapon that loses more than 20 durability,武器の耐久力が20以上失われた場合、戦闘を1回クリアする`,
+	
+	16	: `造成一次性　2000 以上的伤害`									+ ` # 造成一次性2000以上的伤害,造成一次性2000以上的傷害,Inflict damage of 2000 or more in one hit,1回の攻撃で2000以上のダメージを与える`,
+	17	: `造成一次性　5000 以上的伤害`									+ ` # 造成一次性5000以上的伤害,造成一次性5000以上的傷害,Inflict damage of 5000 or more in one hit,1回の攻撃で5000以上のダメージを与える`,
+	18	: `造成一次性 10000 以上的伤害`									+ ` # 造成一次性10000以上的伤害,造成一次性10000以上的傷害,Inflict damage of 10000 or more in one hit,1回の攻撃で10000以上のダメージを与える`,
+	19	: `造成一次性 20000 以上的伤害`									+ ` # 造成一次性20000以上的伤害,造成一次性20000以上的傷害,Inflict damage of 20000 or more in one hit,1回の攻撃で20000以上のダメージを与える`,
+	
+	20	: `触发 1 次子弹时间`											+ ` # 触发1次子弹时间,觸發1次子彈時間,Trigger bullet time once,バレットタイムを1回発動する`,
+	21	: `触发 10 次子弹时间`											+ ` # 触发10次子弹时间,觸發10次子彈時間,Trigger bullet time 10 times,バレットタイムを10回発動する`,
+	22	: `触发 100 次子弹时间`											+ ` # 触发100次子弹时间,觸發100次子彈時間,Trigger bullet time 100 times,バレットタイムを100回発動する`,
+	
+	23	: `操纵一台移动为零的机体通过一场战斗`							+ ` # 操纵移动力为0的机体通过一场战斗,操縱移動力為0的機體通過一場戰鬥,Control a unit with 0 mobility and pass a battle,移動力0の機体で戦闘を1回クリアする`,
+	24	: `操纵一台所有外挂槽都装满的机体通过一场战斗`					+ ` # 操纵一台所有外挂槽都装配挂件的机甲通过一场战斗,操縱一臺所有外掛槽都裝配掛件的機甲通過一場戰鬥,Control a mecha with mounted objects equipped in all external slots and pass a battle,すべての外付けスロットにアタッチメントを装備した機体で戦闘を1回クリアする`,
+	25	: `操纵一台所有外挂槽装了三级复合装甲的机体通过一场战斗`		+ ` # 操纵一台所有外挂槽都装配三级复合装甲的机甲通过一场战斗,操縱一臺所有外掛槽都裝配三級複合裝甲的機甲通過一場戰鬥,Control a mecha with level 3 composite armor equipped in all external slots and pass a battle,すべての外付けスロットにレベル3複合装甲を装備した機体で戦闘を1回クリアする`,
+	
+	26	: `使一台机体所有槽位开启`										+ ` # 使一台机体所有槽位开启（不包括武器槽）,使一臺機體所有槽位開啟（不包括武器槽）,Activate all slots of a mecha (excluding weapon slots),1つ機体のすべてのスロットを開放する（武器スロットを除く）`,
+	27	: `将一台机体的改造槽装满`										+ ` # 将一台机体改造槽装满,將一臺機體改造槽裝滿,Fill all modification slots of a mecha,1つ機体の改造スロットを満タンにする`,
+	
+	28	: `拆除一个拆除费用 15 的配件($150+ 即可)`						+ ` # 拆除一个拆除费用15以上的配件,拆除一個拆除費用15以上的配件,Remove a gadget with a removal fee of 15 or higher,取外しコスト15以上のアタッチメントを取り外す`,
+	29	: `使用一把弹容超过 250 的武器通过一场战斗`						+ ` # 使用一把弹容量超过250的武器来通过一场战斗,使用一把彈容量超過250的武器通過一場戰鬥,Use a weapon with a magazine capacity exceeding 250 to pass a battle,弾倉容量が250以上の武器を使って戦闘を1回クリアする`,
+	30	: `使用一把伤害超过 3000 的武器通过一场战斗`					+ ` # 使用一把伤害超过3000的武器来通过一场战斗,使用一把傷害超過3000的武器通過一場戰鬥,Use a weapon with damage exceeding 3000 to pass a battle,3000以上のダメージの武器を使って戦闘を1回クリアする`,
+	
+	31	: `操纵一台装配了 5 个增速插件的机体通过一场战斗`				+ ` # 操纵一台装配5个增加速度的插件的机体来通过一场战斗,操縱一臺裝配5個增加速度的插件的機體通過一場戰鬥,Control a mecha equipped with 5 plugins that increase movement speed to pass a battle,速度アタッチメントを5個以上装備した機体を操作して戦闘を1回クリアする`,
+	32	: `操纵一台装配了 5 个增转插件的机体通过一场战斗`				+ ` # 操纵一台装配5个增加转速的插件的机体来通过一场战斗,操縱一臺裝配5個增加轉速的插件的機體通過一場戰鬥,Control a mecha equipped with 5 plugins that increase rotation speed to pass a battle,旋回速度アタッチメントを5個以上装備した機体を操作して戦闘を1回クリアする`,
+	
+	33	: `使用一把拥有 3 种元素效果的武器来通过一场战斗`				+ ` # 使用一把拥有三种元素效果的武器来通过一场战斗,使用一把擁有三種元素效果的武器通過一場戰鬥,Use a weapon with three elemental effects to pass a battle,3つの元素効果を持つ武器を使って戦闘を1回クリアする`,
+	34	: `使用一把射程是原来 2 倍的喷射武器来通过一场战斗`				+ ` # 使用一把射程是原来两倍的喷射武器来通过一场战斗,使用一把射程是原來兩倍的噴射武器通過一場戰鬥,Use a spraying weapon with doubled range to pass a battle,元の2倍の射程を持つ噴射兵器を使って戦闘を1回クリアする`,
+	35	: `使用一把弹射次数达到了 8 的电弧武器来通过一场战斗`			+ ` # 使用一把弹射次数达到8的电弧武器来通过一场战斗,使用一把彈射次數達到8的電弧武器通過一場戰鬥,Use an electric arc weapon with 8 bounces to pass a battle,跳ね返り回数が8回になった電弧兵器を使って戦闘を1回クリアする`,
+	
+	36	: `操作库罗库只使用投掷物来通过一场战斗`						+ ` # 操作库罗库只使用投掷物来通过一场战斗,操作庫羅庫只使用投擲物通過一場戰鬥,Control Kuroku and use only throwing objects to pass a battle,クロックを操作して、投擲物だけで戦闘を1回クリアする`,
+	37	: `操作桑使用两把近战电光斧来通过一场战斗`						+ ` # 操作桑使用两把电光斧来通过一场战斗,操作桑使用兩把電光斧通過一場戰鬥,Control San and use two Lightning Axes to pass a battle,サンを操作して、2本電光斧を使って戦闘を1回クリアする`,
+	38	: `操作赭石色在不移动的情况下来通过一场战斗`					+ ` # 操作赭石色，在不移动的情况下来通过一场战斗,操作赭石色，在不移動的情況下通過一場戰鬥,Control Ocher and pass a battle without moving,オーカーを操作して、移動せずに戦闘を1回クリアする`,
+	39	: `操作克莱尔并装配了两把重机枪来通过一场战斗`					+ ` # 操作克莱尔并装配两把重机枪来通过一场战斗,操作克萊爾並裝配兩把重機槍通過一場戰鬥,Control Claire and equip two heavy machine guns to pass a battle,クレアを操作して、重機関銃を2挺を装備して戦闘を1回クリアする`,
+	
+	40	: `外围阵地同时驻扎了　4 股敌军`								+ ` # 外围阵地同时驻扎了4股敌军,週邊同時擁有4股敵軍,There are 4 enemy forces simultaneously stationed at the perimeter positions,外周陣地に同時に4つの敵軍が駐屯している`,
+	41	: `外围阵地同时驻扎了　8 股敌军`								+ ` # 外围阵地同时驻扎了8股敌军,週邊同時擁有8股敵軍,There are 8 enemy forces simultaneously stationed at the perimeter positions,外周陣地に同時に8つの敵軍が駐屯している`,
+	42	: `外围阵地同时驻扎了 12 股敌军`								+ ` # 外围阵地同时驻扎了12股敌军,週邊同時擁有12股敵軍,There are 12 enemy forces simultaneously stationed at the perimeter positions,外周陣地に同時に12つの敵軍が駐屯している`,
+	
+	43	: `消灭 100 单位敌人`											+ ` # 消灭100单位敌人,消滅100單位敵人,Eliminate 100 enemy units,敵を100体倒す`,
+	44	: `消灭 1000 单位敌人`											+ ` # 消灭1000单位敌人,消滅1000單位敵人,Eliminate 1000 enemy units,敵を1000体倒す`,
+	45	: `消灭 10000 单位敌人`											+ ` # 消灭10000单位敌人,消滅10000單位敵人,Eliminate 10000 enemy units,敵を10000体倒す`,
+	46	: `消灭 100000 单位敌人`										+ ` # 消灭100000单位敌人,消滅100000單位敵人,Eliminate 100000 enemy units,敵を100000体倒す`,
+	
+	47	: `在单局游戏中消灭 1000 单位敌人`								+ ` # 单局游戏中消灭1000单位敌人,單局遊戲中消滅1000單位敵人,Eliminate 1000 enemy units in a single game session,1回のゲームで敵を1000体倒す`,
+	48	: `在单局游戏中消灭 10000 单位敌人`								+ ` # 单局游戏中消灭10000单位敌人,單局遊戲中消滅10000單位敵人,Eliminate 10000 enemy units in a single game session,1回のゲームで敵を10000体倒す`,
+	
+	49	: `击败百臂巨人`												+ ` # 击败百臂巨人,擊敗百臂巨人,Defeat the Hundred-Armed Giant,百腕巨人を撃破する`,
+	50	: `击败增殖者`													+ ` # 击败增殖者,擊敗增殖者,Defeat the Multiplier,増殖者を撃破する`,
+	51	: `击败钢蛞蝓`													+ ` # 击败钢蛞蝓,擊敗鋼蛞蝓,Defeat the Steel Slug,スチールスラグを撃破する`,
+	52	: `击败泰坦`													+ ` # 击败泰坦,擊敗泰坦,Defeat the Titan,タイタンを撃破する`,
+	
+	53	: `击败装甲母体`												+ ` # 击败装甲母体,擊敗裝甲母體,Defeat the Armored Matrix,装甲母体を撃破する`,
+	54	: `击败圣盾母体`												+ ` # 击败圣盾母体,擊敗聖盾母體,Defeat the Holy Shield Matrix,聖盾母体を撃破する`,
+	55	: `击败特战母体`												+ ` # 击败特战母体,擊敗特戰母體,Defeat the Special Forces Matrix,特殊戦母体を撃破する`,
+	56	: `击败巨像战机`												+ ` # 击败巨像,擊敗巨像,Defeat the Colossus,コロッサスを撃破する`,
+	
+	57	: `击败精锐渗透型机甲`											+ ` # 击败精锐渗透型机甲,擊敗精銳滲透型機甲,Defeat the Elite Infiltrator mecha,精鋭潜入型機体を撃破する`,
+	58	: `击败精锐掷弹型机甲`											+ ` # 击败精锐掷弹型机甲,擊敗精銳擲彈型機甲,Defeat the Elite Grenade launcher mecha,精鋭擲弾型機体を撃破する`,
+	59	: `击败精锐冲锋型机甲`											+ ` # 击败精锐冲锋型机甲,擊敗精銳衝鋒型機甲,Defeat the Elite Assault mecha,精鋭突撃型機体を撃破する`,
+	60	: `击败精锐狙击型机甲`											+ ` # 击败精锐狙击型机甲,擊敗精銳狙擊型機甲,Defeat the Elite Sniper mecha,精鋭狙撃型機体を撃破する`,
+	
+	61	: `击败黑骑兵号`												+ ` # 击败黑骑兵号,擊敗黑騎兵號,Defeat the Black Knight,黒騎兵号を撃破する`,
+	62	: `击败突骑兵号`												+ ` # 击败突骑兵号,擊敗突騎兵號,Defeat the Charge Cavalry,突撃騎兵号を撃破する`,
+	63	: `击败烈驹号`													+ ` # 击败烈驹号,擊敗烈駒號,Defeat the Fierce Steed,烈馬号を撃破する`,
+	64	: `击败枪骑兵号`												+ ` # 击败枪骑兵号,擊敗槍騎兵號,Defeat the Spear Cavalry,槍騎兵号を撃破する`,
+	65	: `击败甲胄骑士号`												+ ` # 击败甲胄骑士号,擊敗甲胄騎士號,Defeat the Armor Knight,甲冑騎士号を撃破する`,
+	
+	66	: `在商店累计花费 $1000`										+ ` # 在商店累计花费$1000,在商店累計花費$1000,Spend a total of $1000 in the shop,ショップで累積$1000を消費する`,
+	67	: `在商店累计花费 $10000`										+ ` # 在商店累计花费$10000,在商店累計花費$10000,Spend a total of $10000 in the shop,ショップで累積$10000を消費する`,
+	68	: `在商店累计花费 $100000`										+ ` # 在商店累计花费$100000,在商店累計花費$100000,Spend a total of $100000 in the shop,ショップで累積$100000を消費する`,
+	
+	69	: `在资源回收部获得$2资金`										+ ` # 在资源回收部获得$2,在資源回收部獲得$2,Obtain $2 in the resource recycling group,資源回収部から$2を獲得する`,
+	70	: `将人力资源部升级到满级`										+ ` # 将人力资源部升级到满级,將人力資源部升級到滿級,Upgrade the Human Resources Group to maximum level,人事部をレベルMaxにする`,
+	71	: `将有机合成部升级到满级`										+ ` # 将有机合成部升级到满级,將有機合成部升級到滿級,Upgrade the Organic Synthesis Group to maximum level,有機合成部レベルMaxにする`,
+	72	: `将资源回收部升级到满级`										+ ` # 将资源回收部升级到满级,將資源回收部升級到滿級,Upgrade the Resource Recycling Group to maximum level,資源回収部をレベルMaxにする`,
+	73	: `将武器制造部升级到满级`										+ ` # 将武器制造部升级到满级,將武器製造部升級到滿級,Upgrade the Weapon Factory to maximum level,武器製造部をレベルMaxにする`,
+	74	: `将部件回收部升级到满级`										+ ` # 将部件回收部升级到满级,將部件生產部升級到滿級,Upgrade the Component Production Department to maximum level,部品生産部をレベルMaxにする`,
+	
+	75	: `每日电力产出达到了 40`										+ ` # 每日电力产出达到40,每日電力產出達到40,Reach a daily electricity output of 40,1日の電力生産量が40に達する`,
+	76	: `每日电力产出达到了 70`										+ ` # 每日电力产出达到70,每日電力產出達到70,Reach a daily electricity output of 70,1日の電力生産量が70に達する`,
+	77	: `一日之内消耗 100 电力`										+ ` # 一日之内消耗100电力,一日之內消耗100電力,Consume 100 electricity within a day,1日に100電力を消費する`,
+	78	: `一日之内消耗 300 电力`										+ ` # 一日之内消耗300电力,一日之內消耗300電力,Consume 300 electricity within a day,1日に300電力を消費する`,
+	
+	79	: `单局游戏内赚到　$5000`										+ ` # 单局游戏内赚到$5000,單局遊戲內賺到$5000,Earn $5000 within a single game session,1回のゲームで$5000を稼ぐ`,
+	80	: `单局游戏内赚到 $10000`										+ ` # 单局游戏内赚到$10000,單局遊戲內賺到$10000,Earn $10000 within a single game session,1回のゲームで$10000を稼ぐ`,
+	81	: `单局游戏内赚到 $15000`										+ ` # 单局游戏内赚到$15000,單局遊戲內賺到$15000,Earn $15000 within a single game session,1回のゲームで$15000を稼ぐ`,
+	
+	82	: `宿舍舒适度达到　60`											+ ` # 宿舍舒适度达到60,宿舍舒適度達到60,Reach a dormitory comfort of 60,寮快適度が60に達する`,
+	83	: `宿舍舒适度达到 120`											+ ` # 宿舍舒适度达到120,宿舍舒適度達到120,Reach a dormitory comfort of 120,寮快適度が120に達する`,
+	84	: `宿舍舒适度达到 200`											+ ` # 宿舍舒适度达到200,宿舍舒適度達到200,Reach a dormitory comfort of 200,寮快適度が200に達する`,
+	85	: `拆除宿舍内所有垃圾`											+ ` # 拆除宿舍内所有垃圾,拆除宿舍內所有垃圾,Remove all trash from the dormitory,寮からすべてのゴミを取り除く`,
+	86	: `在宿舍抓起一名队员`											+ ` # 在宿舍内抓起一名队员,在宿舍內抓起一名隊員,Capture a team member in the dormitory,寮で隊員を持ち上げる`,
+	
+	87	: `在 20% 以下暴露率偷税暴露`									+ ` # 在20%以下暴露率偷税暴露,在20%以下暴露率偷稅暴露,Expose tax evasion with an exposure rate below 20%,発覚率20%未満の状態で脱税が発覚する`,
+	88	: `在 80% 以上成功率偷税失败`									+ ` # 在80%以上成功率偷税失败,在80%以上成功率偷稅失敗,Fail to commit tax evasion with a success rate above 80%,成功率80%以上の状態で脱税に失敗する`,
+	89	: `累计偷税　 1 次`												+ ` # 累计偷税1次,累計偷稅1次,Commit tax evasion a total of 1 time,累積1回脱税する`,
+	90	: `累计偷税　10 次`												+ ` # 累计偷税10次,累計偷稅10次,Commit tax evasion a total of 10 times,累積10回脱税する`,
+	91	: `累计偷税 100 次`												+ ` # 累计偷税100次,累計偷稅100次,Commit tax evasion a total of 100 times,累積100回脱税する`,
+	92	: `累计偷税 300 次`												+ ` # 累计偷税300次,累計偷稅300次,Commit tax evasion a total of 300 times,累積300回脱税する`,
+	
+	93	: `在 90 天之前没有进行过一次偷税`								+ ` # 在90天之前没有进行过一次偷税,在90天之前沒有進行過一次偷稅,Have not committed tax evasion within the past 90 days,90日目までに一度も脱税したことがない`,
+	94	: `在 60 天之前没有刷新过一次商店`								+ ` # 在60天之前没有刷新过一次商店,在60天之前沒有刷新過一次商店,Haven't refreshed the shop within the past 60 days,60日目までに一度もショップを更新したことがない`,
+	95	: `在 60 天之前没有升级过一次基建`								+ ` # 在60天之前没有升级过一次基建,在60天之前沒有升級過一次基建,Haven't upgraded the infrastructure within the past 60 days,60日目までに一度もインフラをアップグレードしたことがない`,
+	96	: `在 30 天之前没有送出过一次涨好感的礼物`						+ ` # 在30天之前没有送出过一次涨好感的礼物,在30天之前沒有送出過一次漲好感的禮物,Have not sent a gift to increase Affinity within the past 30 days,30日目までに一度も好感度プレゼントを送ったことがない`,
+	97	: `在 70 天之前外围敌军从来不超过三股(含)`						+ ` # 在70天之前外围敌军从来不超过3股（含）,在70天之前週邊敵軍從來不超過3股（含）,The number of enemy forces stationed in the perimeter has never exceeded 3 within the past 70 days,70日目までに外周の敵軍は一度も3隊（含む）を超えたことがない`,
+	
+	98	: `招募库罗库`													+ ` # 招募库罗库,招募庫羅庫,Recruit Kuroku,クロックを仲間にする`,
+	99	: `与库罗库的好感达到 4`										+ ` # 与库罗库好感达到4,與庫羅庫好感達到4,Reach an Affinity of 4 with Kuroku,クロックの好感度を4にする`,
+	100	: `与库罗库的好感达到 8`										+ ` # 与库罗库好感达到8,與庫羅庫好感達到8,Reach an Affinity of 8 with Kuroku,クロックの好感度を8にする`,
+	101	: `触发库罗库的好感事件`										+ ` # 触发库罗库的好感事件,觸發庫羅庫的好感事件,Trigger an Affinity event with Kuroku,クロックの好感度イベントをトリガーする`,
+	102	: `了解库罗库过去的故事`										+ ` # 了解库罗库的过去,瞭解庫羅庫的過去,Learn about Kuroku's past,クロックの過去を知る`,
+	103	: `与库罗库好感达到满级`										+ ` # 与库罗库好感达到满级,與庫羅庫好感達到滿,Reach maximum Affinity with Kuroku,クロックの好感度を最大にする`,
+	
+	104	: `招募桑/San`													+ ` # 招募桑,招募桑,Recruit San,サンを仲間にする`,
+	105	: `与桑/San的好感达到 4`										+ ` # 与桑好感达到4,與桑好感達到4,Reach an Affinity of 4 with San,サンの好感度を4にする`,
+	106	: `与桑/San的好感达到 8`										+ ` # 与桑好感达到8,與桑好感達到8,Reach an Affinity of 8 with San,サンの好感度を8にする`,
+	107	: `触发桑/San的好感事件`										+ ` # 触发桑的好感事件,觸發桑的好感事件,Trigger an Affinity event with San,サンの好感度イベントをトリガーする`,
+	108	: `了解桑/San过去的故事`										+ ` # 了解桑的过去,瞭解桑的過去,Learn about San's past,サンの過去を知る`,
+	109	: `与桑/San好感达到满级`										+ ` # 与桑好感达到满,與桑好感達到滿,Reach maximum Affinity with San,サンの好感度を最大にする`,
+	
+	110	: `招募赭石色`													+ ` # 招募赭石色,招募赭石色,Recruit Ocher,オーカーを仲間にする`,
+	111	: `与赭石色的好感达到 4`										+ ` # 与赭石色好感达到4,與赭石色好感達到4,Reach an Affinity of 4 with Ocher,オーカーの好感度を4にする`,
+	112	: `与赭石色的好感达到 8`										+ ` # 与赭石色好感达到8,與赭石色好感達到8,Reach an Affinity of 8 with Ocher,オーカーの好感度を8にする`,
+	113	: `触发赭石色的好感事件`										+ ` # 触发赭石色的好感事件,觸發赭石色的好感事件,Trigger an Affinity event with Ocher,オーカーの好感度イベントをトリガーする`,
+	114	: `了解赭石色过去的故事`										+ ` # 了解赭石色的过去,瞭解赭石色的過去,Learn about Ocher's past,オーカーの過去を知る`,
+	115	: `与赭石色好感达到满级`										+ ` # 与赭石色好感达到满,與赭石色好感達到滿,Reach maximum Affinity with Ocher,オーカーの好感度を最大にする`,
+	
+	116	: `招募克莱尔`													+ ` # 招募克莱尔,招募克萊爾,Recruit Claire,クレアを仲間にする`,
+	117	: `与克莱尔的好感达到 4`										+ ` # 与克莱尔好感达到4,與克萊爾好感達到4,Reach an Affinity of 4 with Claire,クレアの好感度を4にする`,
+	118	: `与克莱尔的好感达到 8`										+ ` # 与克莱尔好感达到8,與克萊爾好感達到8,Reach an Affinity of 8 with Claire,クレアの好感度を8にする`,
+	119	: `触发克莱尔的好感事件`										+ ` # 触发克莱尔的好感事件,觸發克萊爾的好感事件,Trigger an Affinity event with Claire,クレアの好感度イベントをトリガーする`,
+	120	: `了解克莱尔过去的故事`										+ ` # 了解克莱尔的过去,瞭解克萊爾的過去,Learn about Claire's past,クレアの過去を知る`,
+	121	: `与克莱尔好感达到满级`										+ ` # 与克莱尔好感达到满,與克萊爾好感達到滿,Reach maximum Affinity with Claire,クレアの好感度を最大にする`,
+	
+	122	: `使用升级点升级 1 次`											+ ` # 使用升级点升级1次,使用升級點升級1次,Use leveling points to upgrade 1 time,レベルアップポイントで1回レベルアップする`,
+	123	: `使用升级点升级 10 次`										+ ` # 使用升级点升级10次,使用升級點升級10次,Use leveling points to upgrade 10 times,レベルアップポイントで10回レベルアップする`,
+	124	: `使用升级点升级 100 次`										+ ` # 使用升级点升级100次,使用升級點升級100次,Use leveling points to upgrade 100 times,レベルアップポイントで100回レベルアップする`,
+	
+	125	: `将一名角色一项属性升满(不包括上限加成)`						+ ` # 将一项属性升满（不包括上限加成）,將一項屬性升滿（不包括上限加成）,Max out one of the stats (excluding upper limit bonuses),一つのステータスを最大にする（上限ボーナスを含まない）`,
+	126	: `将一名角色所有属性升满(不包括上限加成)`						+ ` # 将一名角色所有属性升满（不包括上限加成）,將一名角色所有屬性升滿（不包括上限加成）,Max out all stats for one character (excluding upper limit bonuses),一人のキャラクターのすべてのステータスを最大にする（上限ボーナスを含まない）`,
+	127	: `送出　1 枚英雄勋章`											+ ` # 送出1枚英雄勋章,送出1枚英雄勳章,Send out 1 Hero Medal,英雄メダルを1個贈る`,
+	128	: `送出 20 枚英雄勋章`											+ ` # 送出20枚英雄勋章,送出20枚英雄勳章,Send out 20 Hero Medals,英雄メダルを20個贈る`,
+	
+	129	: `理智思潮达到满`												+ ` # 理智思潮达到满,理智思潮達到滿,Reach maximum Reason Sentiment,理性思潮が最大になる`,
+	130	: `博爱思潮达到满`												+ ` # 博爱思潮达到满,博愛思潮達到滿,Reach maximum Philanthropy Sentiment,博愛思潮が最大になる`,
+	131	: `激进思潮达到满`												+ ` # 激进思潮达到满,激進思潮達到滿,Reach maximum Radical Sentiment,過激思潮が最大になる`,
+	132	: `叛逆思潮达到满`												+ ` # 叛逆思潮达到满,叛逆思潮達到滿,Reach maximum Revolt Sentiment,反逆思潮が最大になる`,
+	
+	133	: `所有思潮为满`												+ ` # 所有思潮为满,所有思潮為滿,All Sentiments are at maximum.,全ての思潮が最大になる`,
+	134	: `所有思潮为负`												+ ` # 所有思潮为负,所有思潮為負,All Sentiments are negative,全ての思潮がマイナスになる`,
+	
+	135	: `在休息区与队友聊天 1 次`										+ ` # 在休息区与队友聊天1次,在休息區與隊友聊天1次,Chat with teammates in the rest area 1 time,休憩エリアで隊員と1回会話する`,
+	136	: `在休息区与队友聊天 10 次`									+ ` # 在休息区与队友聊天10次,在休息區與隊友聊天10次,Chat with teammates in the rest area 10 times,休憩エリアで隊員と10回会話する`,
+	137	: `在休息区与队友聊天 100 次`									+ ` # 在休息区与队友聊天100次,在休息區與隊友聊天100次,Chat with teammates in the rest area 100 times,休憩エリアで隊員と100回会話する`,
+	
+	138	: `在一天中收到 2 份礼物`										+ ` # 在一天中收到2份礼物,在一天中收到2份禮物,Receive 2 gifts in one day,1日に2つのプレゼントを受け取る`,
+	139	: `在一天中收到 3 份礼物`										+ ` # 在一天中收到3份礼物,在一天中收到3份禮物,Receive 3 gifts in one day,1日に3つのプレゼントを受け取る`,
+	140	: `在一天中收到 4 份礼物`										+ ` # 在一天中收到4份礼物,在一天中收到4份禮物,Receive 4 gifts in one day,1日に4つのプレゼントを受け取る`,
+	
+	141	: `累计收到了 1 份礼物`											+ ` # 累计收到1份礼物,累計收到1份禮物,Accumulate 1 received gift,合計1個のプレゼントを受け取る`,
+	142	: `累计收到了 10 份礼物`										+ ` # 累计收到10份礼物,累計收到10份禮物,Accumulate 10 received gifts,合計10個のプレゼントを受け取る`,
+	143	: `累计收到了 100 份礼物`										+ ` # 累计收到100份礼物,累計收到100份禮物,Accumulate 100 received gifts,合計100個のプレゼントを受け取る`,
+	
+	144	: `送出 1 份礼物`												+ ` # 送出1份礼物,送出1份禮物,Send out 1 gift,プレゼントを1個贈る`,
+	145	: `送出 30 份礼物`												+ ` # 送出30份礼物,送出30份禮物,Send out 30 gifts,プレゼントを30個贈る`,
+	146	: `送出 600 份礼物`												+ ` # 送出600份礼物,送出600份禮物,Send out 600 gifts,プレゼントを600個贈る`,
+	
+	147	: `送出一份队友讨厌的礼物`										+ ` # 送出1份队友讨厌的礼物,送出1份隊友討厭的禮物,Send out 1 gift that teammates dislike,隊員が嫌いなプレゼントを1個送る`,
+	148	: `送出十份队友讨厌的礼物`										+ ` # 送出10份队友讨厌的礼物,送出10份隊友討厭的禮物,Send out 10 gifts that teammates dislike,隊員が嫌いなプレゼントを10個送る`,
+	
+	149	: `小队拥有 2 人`												+ ` # 小队拥有2人,小隊擁有2人,Having 2 members on the team,隊員が2人になる`,
+	150	: `小队拥有 3 人`												+ ` # 小队拥有3人,小隊擁有3人,Having 3 members on the team,隊員が3人になる`,
+	151	: `小队拥有 4 人`												+ ` # 小队拥有4人,小隊擁有4人,Having 4 members on the team,隊員が4人になる`,
+	152	: `小队拥有 5 人`												+ ` # 小队拥有5人,小隊擁有5人,Having 5 members on the team,隊員が5人になる`,
+	
+	153	: `累计招募 5 次`												+ ` # 累计招募5次,累計招募5次,Recruit a total of 5 times,合計5回リクルートする`,
+	154	: `累计招募 10 次`												+ ` # 累计招募10次,累計招募10次,Recruit a total of 10 times,合計10回リクルートする`,
+	155	: `累计招募 100 次`												+ ` # 累计招募100次,累計招募100次,Recruit a total of 100 times,合計100回リクルートする`,
+	
+	156	: `达成结束结局`												+ ` # 达成结束结局,達成結束結局,Achieve the End ending,終了エンディングを達成する`,
+	157	: `达成叛逃结局`												+ ` # 达成叛逃结局,達成叛逃結局,Achieve the Defection ending,寝返りエンディングを達成する`,
+	168	: `达成革命结局`												+ ` # 达成革命结局,達成革命結局,Achieve the Revolution ending,革命エンディングを達成する`,
+	
+	158	: `使用玛　丽通关挑战模式`										+ ` # 使用玛丽通关挑战模式,使用瑪麗通關挑戰模式,Use Mary to pass the challenge mode,メアリーでチャレンジモードをクリアする`,
+	160	: `使用库罗库通关挑战模式`										+ ` # 使用库罗库通关挑战模式,使用庫羅庫通關挑戰模式,Use Kuroku to pass the challenge mode,クロックでチャレンジモードをクリアする`,
+	159	: `使用克莱尔通关挑战模式`										+ ` # 使用克莱尔通关挑战模式,使用克萊爾通關挑戰模式,Use Claire to pass the challenge mode,クレアでチャレンジモードをクリアする`,
+	161	: `使用赭石色通关挑战模式`										+ ` # 使用赭石色通关挑战模式,使用赭石色通關挑戰模式,Use Ocher to pass the challenge mode,オーカーでチャレンジモードをクリアする`,
+	162	: `使用桑/San通关挑战模式`										+ ` # 使用桑通关挑战模式,使用桑通關挑戰模式,Use San to pass the challenge mode,サンでチャレンジモードをクリアする`,
+	
+	163	: `通关挑战模式(任意难度)`										+ ` # 通关挑战模式,通關挑戰模式,Pass Challenge Mode,チャレンジモードをクリアする`,
+	164	: `通关挑战模式进阶模式 1`										+ ` # 通关挑战模式进阶模式1,通關挑戰模式進階模式1,Pass Challenge Mode Advanced Mode 1,チャレンジモード上級モード1をクリアする`,
+	165	: `通关挑战模式进阶模式 5`										+ ` # 通关挑战模式进阶模式5,通關挑戰模式進階模式5,Pass Challenge Mode Advanced Mode 5,チャレンジモード上級モード5をクリアする`,
+	166	: `通关挑战模式进阶模式10`										+ ` # 通关挑战模式进阶模式10,通關挑戰模式進階模式10,Pass Challenge Mode Advanced Mode 10,チャレンジモード上級モード10をクリアする`,
+	167	: `通关挑战模式进阶模式17`										+ ` # 通关挑战模式进阶模式17,通關挑戰模式進階模式17,Pass Challenge Mode Advanced Mode 17,チャレンジモード上級モード17をクリアする`,
+	
+	179	: `使用玛　丽通关了幸存者模式`									+ ` # 使用玛丽通关幸存者模式,使用瑪麗通關倖存者模式,Use Mary to pass the Survival Mode,メアリーで生存者モードをクリアする`,
+	169	: `使用库洛库通关了幸存者模式`									+ ` # 使用库洛库通关幸存者模式,使用庫洛庫通關倖存者模式,Use Kuroku to pass the Survival Mode,クロックで生存者モードをクリアする`,
+	170	: `使用桑/San通关了幸存者模式`									+ ` # 使用桑通关幸存者模式,使用桑通關倖存者模式,Use San to pass the Survival Mode,サンで生存者モードをクリアする`,
+	171	: `使用赭石色通关了幸存者模式`									+ ` # 使用赭石色通关幸存者模式,使用赭石色通關倖存者模式,Use Ocher to pass the Survival Mode,オーカーで生存者モードをクリアする`,
+	172	: `使用克莱尔通关了幸存者模式`									+ ` # 使用克莱尔通关幸存者模式,使用克萊爾通關倖存者模式,Use Claire to pass the Survival Mode,クレアで生存者モードをクリアする`,
+	
+	173	: `在无尽模式下达到　40 天并退役`								+ ` # 在无尽模式达到40天并退役,在無盡模式達到40天並退役,Reach 40 days in Endless Mode and Retire,エンドレスモードで40日間達し退役する`,
+	174	: `在无尽模式下达到　80 天并退役`								+ ` # 在无尽模式达到80天并退役,在無盡模式達到80天並退役,Reach 80 days in Endless Mode and Retire,エンドレスモードで80日間達し退役する`,
+	175	: `在无尽模式下达到 150 天并退役`								+ ` # 在无尽模式达到150天并退役,在無盡模式達到150天並退役,Reach 150 days in Endless Mode and Retire,エンドレスモードで150日間達し退役する`,
+	
+	176	: `在最终战斗达到第　10 战并退役`								+ ` # 在最终战斗达到第10战并退役,在最終戰鬥達到第10戰並退役,Reach the 10th battle in The Final Battle and retire,最終戦で10戦目に達し退役する`,
+	177	: `在最终战斗达到第　50 战并退役`								+ ` # 在最终战斗达到第50战并退役,在最終戰鬥達到第50戰並退役,Reach the 50th battle in The Final Battle and retire,最終戦で50戦目に達し退役する`,
+	178	: `在最终战斗达到第 100 战并退役`								+ ` # 在最终战斗达到第100战并退役,在最終戰鬥達到第100戰並退役,Reach the 100th battle in The Final Battle and retire,最終戦で100戦目に達し退役する`,
+	
+	180	: `通关潜入模式(使用库罗库在潜入模式下坚守 39 天)`				+ ` # 通关潜入模式,通關潛入模式,Pass Sneaking Mode,潜入モードをクリアする`,
+	181	: `通关潜入模式(每次任务都不超过最大警觉的情况下)`				+ ` # 在每一次任务都不超过最大警觉的情况下通关潜入模式,在每一次任務都不超過最大警覺的情況下通關潛入模式,Pass Sneaking Mode without exceeding maximum alertness in each task,クエストごとに最大警戒を超えずに潜入モードをクリアする`,
+	
+	182	: `击败破荒龙骑兵`												+ ` # 击败破荒龙骑兵,擊敗破荒龍騎兵,Defeat Wastelord Dragoon,デバステイター·ドラグーンを撃破する`,
+	183	: `击败绝念龙骑兵`												+ ` # 击败绝念龙骑兵,擊敗絕念龍騎兵,Defeat Heartless Dragoon,イクリプス·ドラグーンを撃破する`,
+	184	: `击败镇宇龙骑兵`												+ ` # 击败镇宇龙骑兵,擊敗鎮宇龍騎兵,Defeat Earthwarden Dragoon,アースガード·ドラグーンを撃破する`,
+	
+	185	: `击败裂蛰烬蝎`												+ ` # 击败裂蛰烬蝎,擊敗裂蟄燼蠍,Defeat Riftscourge Cinderscorpion,スコルピオを撃破する`,
+	187	: `击败玄钩螫狱`												+ ` # 击败玄钩螫狱,擊敗玄鉤螫獄,Defeat Darkhook Venomhell,アビスティンを撃破する`,
+	
+	186	: `击败陨日龙骑兵(正)`											+ ` # 击败陨日龙骑兵,擊敗隕日龍騎兵,Defeat Sundoom Dragoon,サンフォール·ドラグーンを撃破する`,
+	188	: `击败陨日龙骑兵(改)`											+ ` # 击败陨日龙骑兵（改）,擊敗隕日龍騎兵（改）,Defeat Sundoom Dragoon (Modified),サンフォール·ドラグーン（改）を撃破する`,
+	
+	189	: `击败碎界龙骑兵(正)`											+ ` # 击败碎界龙骑兵,擊敗碎界龍騎兵,Defeat Worldshatter Dragoon,ワールドブレイカー·ドラグーンを撃破する`,
+	190	: `击败碎界龙骑兵(改)`											+ ` # 击败碎界龙骑兵（改）,擊敗碎界龍騎兵（改）,Defeat Worldshatter Dragoon (Modified),ワールドブレイカー·ドラグーン（改）を撃破する`,
+	
+	191	: `通关地牢模式(剧情)`											+ ` # 通关地牢模式（剧情）,通關地牢模式（劇情）,Clear Dungeon Mode (Story),ダンジョンモード（ストーリー）をクリアする`,
+	192	: `通关地牢模式(挑战)`											+ ` # 通关地牢模式（挑战）,通關地牢模式（挑戰）,Clear Dungeon Mode (Challenge),ダンジョンモード（チャレンジ）をクリアする`,
+	
+	},
 	
 };
 
 // ---------------------------------------------
 
 // 基本变量
-let jqi_powerTable01 = $('#powerTable01'), powerTable_tbody_node01 = '';
+let jqi_powerTable01 = $('#powerTable01');
+let powerTable01_tbody_html = '';
+let powerTable01_group = -1;
+let powerTable01_index = -1;
+
+// ---------------------------------------------
 
 // 生成表格
-tbodyArray01.forEach(function(item){
+csv1.forEach(function(item, index, array){
 	
-	// 高亮同类
-	powerTable_tbody_node01 += 
-	'<tr'+ (item[0] === 1 ? ' class="tr-active"' : '') +'>';
+	// 空行处理
+	if(item !== 'blankRow'){ powerTable01_index+=1 }
+	else{ if(array[index+1] !== 'blankRow'){ powerTable01_group+=1 }; return '这是空行'; };
 	
-	// 遍历出td
-	item.forEach(function(data, index){
-		
-		// 成就图片
-		if(index ===  1){ powerTable_tbody_node01 += '<td style="padding:0;"><img loading="lazy" alt="' + item[3] 
-		+ '" src="../static/image/achieved/'+item[1]+'.jpg" style="width:64px;height:64px;" /></td>' }else 
-		
-		// 成就名称
-		if(index ===  3){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[item[4]][0] +'</td>' }else 
-		
-		// 归属模式
-		if(index ===  7){ powerTable_tbody_node01 += '<td>'+ ItemsNameList[data][0] +'</td>' }else 
-		
-		// 文本描述
-		if(index === 10){ powerTable_tbody_node01 += '<td>'+ DescriptionList[item[4]][0] +'</td>' }else 
-		
-		// 常规数据
-		if(index !==  0){ powerTable_tbody_node01 += '<td>'+ data +'</td>' };
-		
-	});
+	// 数据处理
+	item.数据分组 = powerTable01_group;
+	item.项目序号 = powerTable01_index;
 	
-	// 闭合掉tr
-	powerTable_tbody_node01 += '</tr>';
+	// -----------------------------------------
+	
+	item.项目代码 = {code:item[ 0], text:item[ 0], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 0] +'</td>'; // 项目代码		Achievements,		1,
+	item.项目名称 = {code:item[ 1], text:item[ 1], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 1] +'</td>'; // 项目名称		Name,				#新兵,
+	item.文本描述 = {code:item[ 2], text:item[ 2], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 2] +'</td>'; // 文本描述		Description,		#存活10天,
+	item.图标路径 = {code:item[ 3], text:item[ 3], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 3] +'</td>'; // 图标路径		IconPath,			,
+	item.奖励点数 = {code:item[ 4], text:item[ 4], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 4] +'</td>'; // 奖励点数		Point,				40,
+	item.隐藏成就 = {code:item[ 5], text:item[ 5], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 5] +'</td>'; // 隐藏成就		Hide,				,
+	item.触发函数 = {code:item[ 6], text:item[ 6], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 6] +'</td>'; // 触发函数		Func,				DayOnceOver,
+	item.函数参数 = {code:item[ 7], text:item[ 7], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 7] +'</td>'; // 函数参数		Value,				10,
+	item.等级类型 = {code:item[ 8], text:item[ 8], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[ 8] +'</td>'; // 等级类型		LockLevelType,		,
+	item.图片名称 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 图片名称		,					,
+	item.角色相关 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 角色相关		,					,
+	item.模式限定 = {code:item[99], text:item[99], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item[99] +'</td>'; // 模式限定		,					,
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = textList.项目名称[item.项目代码.code];
+	item.文本描述.text = textList.文本描述[item.项目代码.code];
+	
+	item.图片名称.text = item.项目代码.text;
+	item.图片名称.code = item.项目代码.code;
+	
+	// -----------------------------------------
+	
+	item.项目名称.text = (function(){
+		
+		let result = item.项目名称.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	item.文本描述.text = (function(){
+		
+		// item.文本描述.text 
+		// = item.文本描述.text.replace(/\n/g, '<br />');
+		
+		// item.功能函数.code
+		// .split('|').map(function(value){ return value.replace(/.+:/, '') })
+		// .forEach(function(value, index){ item.文本描述.text = item.文本描述.text.replace(new RegExp('<Description\(:'+ index +'\)\?>', 'ig'), value) });
+		
+		let result = item.文本描述.text.split(' # '); result = [result[0], ...result[1].split(','),];
+		let second = result.splice(1,1); result.push(second[0]);
+		return result.map(function(value,i){
+			value = value.trim();
+			if(i === 0){ return `<zh-hans-b lang='zh-hans' translate='no'>${value}</zh-hans-b>` }else 
+			if(i === 1){ return `<zh-hant-b lang='zh-hant' translate='no'>${value}</zh-hant-b>` }else 
+			if(i === 2){ return `<en-b lang='en' translate='no'>${value}</en-b>` }else 
+			if(i === 3){ return `<ja-b lang='ja' translate='no'>${value}</ja-b>` }else 
+			if(i === 4){ return `<ud-b itsUndefined>${value}</ud-b>` };
+		}).join('');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.隐藏成就.text = (function(){
+		
+		if(item.隐藏成就.code === ''){ item.隐藏成就.code = '0' };
+		
+		if(item.隐藏成就.code === '1'){ return '✔' }
+		else{ return '-' };
+		
+	})();
+	
+	item.触发函数.text = (function(){
+		
+		if(item.触发函数.code === ''){ item.触发函数.code = 'Achievements' };
+		if(item.函数参数.code === ''){ item.函数参数.code = 'true' };
+		
+		return ('<td class="showPart02 hoverEllipsis"><div style="width:86px;">'
+		+ (item.触发函数.code +':'+ item.函数参数.code) +'</div></td>');
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.角色相关.text = (function(){
+		
+		let result = '无指定';
+		
+		if(['158','179', ]																												.includes(item.项目代码.code)){ result = '玛　丽' };
+		if(['160','169', '36', '98', '99','100','101','102','103', '180','181',]														.includes(item.项目代码.code)){ result = '库罗库' };
+		if(['162','170', '37','104','105','106','107','108','109', '182','183','184','185','186','187','188','189','190','191','192',]	.includes(item.项目代码.code)){ result = '桑/San' };
+		if(['161','171', '38','110','111','112','113','114','115', ]																	.includes(item.项目代码.code)){ result = '赭石色' };
+		if(['159','172', '39','116','117','118','119','120','121', ]																	.includes(item.项目代码.code)){ result = '克莱尔' };
+		
+		return item.角色相关.code = result;
+		
+	})();
+	
+	item.模式限定.text = (function(){
+		
+		let result = '任意模式';
+		
+		if(['156','157','168',]													.includes(item.项目代码.code)){ result = '剧情模式' };
+		if(['158','159','160','161','162','163','164','165','166','167',]		.includes(item.项目代码.code)){ result = '挑战模式' };
+		if(['173','174','175','176','177','178',]								.includes(item.项目代码.code)){ result = '无尽模式' };
+		if(['169','170','171','172','179',]										.includes(item.项目代码.code)){ result = '幸存模式' };
+		if(['180','181',]														.includes(item.项目代码.code)){ result = '潜入模式' };
+		if(['182','183','184','185','186','187','188','189','190','191','192',]	.includes(item.项目代码.code)){ result = '地牢模式' };
+		
+		return item.模式限定.code = result;
+		
+	})();
+	
+	// -----------------------------------------
+	
+	item.项目图片 = (/*html*/`<td class="showPart01 followTip"
+	xjTip-align="right" style="padding:0;position:relative;text-align:center;cursor:pointer;" xjTip-html="
+		<img loading='lazy' alt='${item.图片名称.code}' src='../static/image/29_others_achieved/${item.图片名称.code}.png' style='width:128px;height:128px;' />">
+		<img loading="lazy" alt="${item.图片名称.code}" src="../static/image/29_others_achieved/${item.图片名称.code}.png" style="width: 64px;height: 64px;" />
+	</td>`.replace(/\t|\n/g, ''));
+	
+	// -----------------------------------------
+	
+	// 生成内容
+	powerTable01_tbody_html += '<tr index="'+ item.项目序号 +'" group="'+ item.数据分组 +'" style="height: 65px;">';
+	powerTable01_tbody_html += (item.项目图片 +'<td class="showPart01">'+ (item.项目序号+1) +'</td>');
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目名称.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.项目代码.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.奖励点数.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.隐藏成就.text +'</td>';
+	
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.角色相关.text +'</td>';
+	powerTable01_tbody_html += '<td class="showPart01">'+ item.模式限定.text +'</td>';
+	
+	powerTable01_tbody_html += item.触发函数.text;
+	powerTable01_tbody_html += '<td class="showPart01" '+
+	'style="padding:4px 6px 4px 6px;">'+ item.文本描述.text +'</td>';
+	
+	// -----------------------------------------
+	
+	powerTable01_tbody_html += '</tr>';
 	
 });
-$('#powerTable01 tbody').html(powerTable_tbody_node01);
+$('#powerTable01 tbody').html(powerTable01_tbody_html);
 xj2._buildPowerTable('powerTable01');
+$('.followTip').xjTip();
+
+// 动态高亮
+xj2._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+
+// ---------------------------------------------
+
+// 隐藏成就
+let attrSelect01_Option = [
+	['0',		'0(✘)',		],
+	['1',		'1(✔)',		],
+];
+
+// 角色相关
+let attrSelect02_Option = [
+	['无指定',		'无指定',		],
+	['玛　丽',		'玛　丽',		],
+	['库罗库',		'库罗库',		],
+	['桑/San',		'桑/San',		],
+	['赭石色',		'赭石色',		],
+	['克莱尔',		'克莱尔',		],
+];
+
+// 模式限定
+let attrSelect03_Option = [
+	['任意模式',		'任意模式',		],
+	['剧情模式',		'剧情模式',		],
+	['挑战模式',		'挑战模式',		],
+	['无尽模式',		'无尽模式',		],
+	['幸存模式',		'幸存模式',		],
+	['潜入模式',		'潜入模式',		],
+	['地牢模式',		'地牢模式',		],
+];
+
+// 触发函数
+let attrSelect04_Option = [
+	['DayOnceOver',							'DayOnceOver',							],
+	['WeaponBatteryOver',					'WeaponBatteryOver',					],
+	['EnemyReaction',						'EnemyReaction',						],
+	['AllDebuffSole',						'AllDebuffSole',						],
+	['EnemyReactionTime',					'EnemyReactionTime',					],
+	['EnemyReactionAttack',					'EnemyReactionAttack',					],
+	['WeaponDurabilityFightLess',			'WeaponDurabilityFightLess',			],
+	['weaponLoseDurabilityFightOver',		'weaponLoseDurabilityFightOver',		],
+	['DamageOnceOver',						'DamageOnceOver',						],
+	['BulletTimeCntTotalOver',				'BulletTimeCntTotalOver',				],
+	['MoveSpeedFightLess',					'MoveSpeedFightLess',					],
+	['AllHangFight',						'AllHangFight',							],
+	['AllArmor',							'AllArmor',								],
+	['AllMechEffect',						'AllMechEffect',						],
+	['DemolishPartCostOnceOver',			'DemolishPartCostOnceOver',				],
+	['BulletClipFightOver',					'BulletClipFightOver',					],
+	['WeaponDamageFightOver',				'WeaponDamageFightOver',				],
+	['MoveSpeedPartCntFightOver',			'MoveSpeedPartCntFightOver',			],
+	['RotateSpeedPartCntFightOver',			'RotateSpeedPartCntFightOver',			],
+	['WeaponDebuffCntFightOver',			'WeaponDebuffCntFightOver',				],
+	['ThrowerRangePlusFightOver',			'ThrowerRangePlusFightOver',			],
+	['LightningHitFightOver',				'LightningHitFightOver',				],
+	['KuluokuOnlyThrow',					'KuluokuOnlyThrow',						],
+	['TeammateAssignedWeapon',				'TeammateAssignedWeapon',				],
+	['ZheshiseDontMove',					'ZheshiseDontMove',						],
+	['OutMissionCntOnceOver',				'OutMissionCntOnceOver',				],
+	['KillEnemyOver',						'KillEnemyOver',						],
+	['KillEnemySpecialFight',				'KillEnemySpecialFight',				],
+	['CostMoneyInShopTotalOver',			'CostMoneyInShopTotalOver',				],
+	['RecycleResourceOnceLess',				'RecycleResourceOnceLess',				],
+	['UpgradeBuilding',						'UpgradeBuilding',						],
+	['ElectricGroupParamsOnceOver',			'ElectricGroupParamsOnceOver',			],
+	['ElectricCostTodayOver',				'ElectricCostTodayOver',				],
+	['GetMoneyOver',						'GetMoneyOver',							],
+	['RoomComfortOnceOver',					'RoomComfortOnceOver',					],
+	['RoomNoLetter',						'RoomNoLetter',							],
+	['CaughtTeammate',						'CaughtTeammate',						],
+	['StealTax',							'StealTax',								],
+	['StealTaxCntTotalOver',				'StealTaxCntTotalOver',					],
+	['CheckDayLess',						'CheckDayLess',							],
+	['RecruitTeammate',						'RecruitTeammate',						],
+	['LoyaltyLevelOver',					'LoyaltyLevelOver',						],
+	['LoyaltyEvent',						'LoyaltyEvent',							],
+	['LoyaltyEvent2',						'LoyaltyEvent2',						],
+	['PointUpgradeTotalOver',				'PointUpgradeTotalOver',				],
+	['PeopleStatusOver',					'PeopleStatusOver',						],
+	['GiveHeroMedalTotalOver',				'GiveHeroMedalTotalOver',				],
+	['Thought',								'Thought',								],
+	['TalkToPeopleCntTotalOver',			'TalkToPeopleCntTotalOver',				],
+	['GetGiftOver',							'GetGiftOver',							],
+	['GivePresentTotalOver',				'GivePresentTotalOver',					],
+	['GiveHatePresentTotalOver',			'GiveHatePresentTotalOver',				],
+	['TeammateCntOnceOver',					'TeammateCntOnceOver',					],
+	['RecruitTeammateCntTotalOver',			'RecruitTeammateCntTotalOver',			],
+	['Achievements',						'Achievements',							],
+	['EndChanllengeWithChar',				'EndChanllengeWithChar',				],
+	['EndChanllengePlusOver',				'EndChanllengePlusOver',				],
+	['EndSurviveWithChar',					'EndSurviveWithChar',					],
+	['EndEnlessWithDay',					'EndEnlessWithDay',						],
+	['EndEnlessSurviveWithDay',				'EndEnlessSurviveWithDay',				],
+	['EndIdleType',							'EndIdleType',							],
+	['EndIdleTypeSpecial',					'EndIdleTypeSpecial',					],
+];
+
+// 获取对象
+let jqi_nameInput01 = $('#nameInput01'), jqi_nameCheck01 = $('#nameCheck01'), jqi_resetButton = $('#resetButton');
+let str_emptyOption = '<option value="empty" selected="selected" style="background-color:#f5f5f5;">None</option>';
+
+// 创建元素
+let jqi_attrSelect01 = $('#attrSelect01').html(str_emptyOption + attrSelect01_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect02 = $('#attrSelect02').html(str_emptyOption + attrSelect02_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect03 = $('#attrSelect03').html(str_emptyOption + attrSelect03_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+let jqi_attrSelect04 = $('#attrSelect04').html(str_emptyOption + attrSelect04_Option.map(function(e){ return '<option value="'+ e[0] +'">'+ e[1] +'</option>' }).join(''));
+
+// ---------------------------------------------
+
+// 获取 tbody 和 tr
+let jqi_table01_tbody = $('#powerTable01 tbody'), jqi_table01_tbody_tr = jqi_table01_tbody.find('tr');
+
+// 创建无结果的节点
+let jqi_empty_result_tr = $(/*html*/`<tr index="-1" group="-1" style="height: 65px;" class="emptyTr">
+<td colSpan="99"><span>没有任何匹配的结果!<br />There Are No Any Matching Results!</span></td></tr>`);
+
+// 创建总筛选的函数
+let filterFunction = function(){
+	
+	// 将要展示的tr合集
+	let trShowIndexArray = [];
+	
+	// 表单元素当前的值
+	let jqi_attrSelect01_value = jqi_attrSelect01.val();
+	let jqi_attrSelect02_value = jqi_attrSelect02.val();
+	let jqi_attrSelect03_value = jqi_attrSelect03.val();
+	let jqi_attrSelect04_value = jqi_attrSelect04.val();
+	
+	// 获取匹配项的索引
+	jqi_nameInput01.val().trim()
+	.split(/ {1,}/).forEach(function(text){
+		csv1.forEach(function(item){
+			if(item !== 'blankRow' && (item.项目名称.text.
+			includes(text) === true || item.文本描述.text.includes(text) === true)){
+				
+				// 隐藏成就
+				if(jqi_attrSelect01_value !== 'empty' 
+				&& jqi_attrSelect01_value !== item.隐藏成就.code){ return };
+				
+				// 角色相关
+				if(jqi_attrSelect02_value !== 'empty' 
+				&& jqi_attrSelect02_value !== item.角色相关.code){ return };
+				
+				// 模式限定
+				if(jqi_attrSelect03_value !== 'empty' 
+				&& jqi_attrSelect03_value !== item.模式限定.code){ return };
+				
+				// 触发函数
+				if(jqi_attrSelect04_value !== 'empty' 
+				&& jqi_attrSelect04_value !== item.触发函数.code){ return };
+				
+				// 符合条件
+				trShowIndexArray
+				.push(String(item.项目序号));
+				
+			};
+		});
+	});
+	
+	// 根据结果显示隐藏
+	if(trShowIndexArray.length === 0){
+		jqi_table01_tbody_tr.addClass('hideTr');
+		jqi_empty_result_tr.removeClass('hideTr' );
+		jqi_table01_tbody.append(jqi_empty_result_tr);
+	}else{
+		jqi_empty_result_tr.remove();
+		jqi_table01_tbody_tr.each(function(index, value){
+			if(trShowIndexArray.includes(value.getAttribute('index')) 
+			=== true){ value.classList.remove('hideTr') }else{ value.classList.add('hideTr') };
+		});
+	};
+	
+	// 合并同类设置高亮
+	xj2._groupedSet(jqi_powerTable01);
+	
+};
+
+// 绑定表单控件操作
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+jqi_select){ jqi_select.on('change', function(){ filterFunction() }) });
+jqi_nameInput01.on('input', function(){ filterFunction() });
+jqi_resetButton.on('click', function(){
+	jqi_nameInput01.val('');
+[jqi_attrSelect01, jqi_attrSelect02, jqi_attrSelect03, jqi_attrSelect04, ].forEach(function(
+	jqi_select){ jqi_select.find('option:first').prop('selected', true) });
+	jqi_empty_result_tr.remove();
+	filterFunction();
+});
+
+// 自动执行一次筛选
+filterFunction();
 
 })();
 </script>
@@ -960,7 +1397,7 @@ xj2._buildPowerTable('powerTable01');
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
 </div>
 </div>
 </div>

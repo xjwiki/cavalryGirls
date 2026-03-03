@@ -5,6 +5,6 @@
 
 **网站**: <https://xjwiki.github.io/cavalryGirls/index.html>  
 
-**更新**: [wiki_update](https://xjwiki.github.io/cavalryGirls/page/ertra_wiki_update.html)  
+**更新**: [wiki_update](https://xjwiki.github.io/cavalryGirls/page/extra_wiki_update.html)  
 
 

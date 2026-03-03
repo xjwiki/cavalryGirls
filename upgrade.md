@@ -7,13 +7,14 @@
 ## Detail
 
 **关于更新的具体细节可查阅**:  
-<https://xjwiki.github.io/cavalryGirls/page/ertra_wiki_update.html>  
+<https://xjwiki.github.io/cavalryGirls/page/extra_wiki_update.html>  
 
 
 
 <!-- --------------------------------------------------------------------------------------- -->
 ## V0.2.X  
 
+V0.2.5(2026-03-02)  
 V0.2.4(2026-01-26)  
 V0.2.3(2026-01-12)  
 V0.2.2(2025-12-16)  

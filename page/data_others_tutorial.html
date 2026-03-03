@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="zh-hans" class="xj-basic-white">
+<head>
+<meta charset="utf-8" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
+<meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
+
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
+<meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
+
+<meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
+<meta name="google-site-verification" content="Jj4aBeybsWE_3JrgbCzW5XnnGJvRgGEuSFrFQ0FaLO4" />
+<script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
+
+<link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
+<script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
+<script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
+<script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
+<script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
+<script src="../static/plugin/jquery/3.7.1/dist/jquery.min.js"></script>
+
+<link id="prism-theme-white" rel="stylesheet" href="../static/plugin/prismjs/1.25.0/themes/material-light.min.css" />
+<link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
+<script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
+<script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.css" />
+<script src="../static/plugin/xjDemo/0.1.0/dist/xjDemo.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjDir/0.2.1/dist/xjDir.min.css" />
+<script src="../static/plugin/xjDir/0.2.1/dist/xjDir.min.js"></script>
+
+<link rel="stylesheet" href="../static/plugin/xjTip/0.1.3/dist/xjTip.min.css" />
+<script src="../static/plugin/xjTip/0.1.3/dist/xjTip.min.js"></script>
+
+<script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
+
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
+
+<meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
+<meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
+
+<title>教程提示</title>
+</head>
+<body>
+
+
+
+<div id="pub_size"><div id="pub_size_winx"></div><div id="pub_size_winy"></div></div>
+<div id="pub_lang"><i>这是用于语言检测的测试句子</i></div>
+<div id="pub_pack">
+
+
+
+<div id="pub_side">
+	<div class="xjScroll" id="xjScroll01" style="width:100%;">
+		<div class="xjDir" id="xjDir01" xjDir="{createRipple:false, }" style="padding:8px;width:100%;border-right:none;font-family:inherit;">
+			<ul>
+				<script>
+				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
+				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
+				// document.title = xj2.i18n[document.title];
+				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
+				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				</script>
+			</ul>
+		</div>
+	</div>
+	<script>
+	(function(){
+		let setDirMinHeight = function(){ $('#xjScroll01').css('height', $('#pub_size')[0].clientHeight) };
+		setDirMinHeight();
+		$(window).on('resize', setDirMinHeight); 
+		if(/Mobile|Android|IOS|iPhone|iPad/i.test(navigator.userAgent)){ $(window).on('scroll', setDirMinHeight) };
+		$('#xjScroll01').xjScroll({
+			native:true, barsHide:0, barsShow:false, resizeCallbackType:'none', 
+			scrollCallback:function(returnObject){ xj.storage.sessionStorage.set('dirPositionY', returnObject.scrollY()) }, 
+			operateAfter:function(returnObject){ if(xj.storage.sessionStorage.get('dirPositionY') !== null){ returnObject.scrollY(parseInt(xj.storage.sessionStorage.get('dirPositionY'))) } },
+		});
+	})();
+	</script>
+</div>
+
+
+
+<div id="pub_wrap">
+<div id="pub_head">
+	<h1 id="pub_headText"><a class="a-unset" href=""><span>教程提示</span><small>(引导文本)</small></a></h1>
+	
+	<form id="pub_headForm" target="_blank" enctype="text/plain" title="Press Enter For Search" action="./_search.html">
+		<input id="pub_headFormText" class="input-plain" type="search" 
+			name="query" autocomplete="off" placeholder="Search" value="" />
+		<button id="pub_headFormIcon" class="fas fa-search" type="submit"></button>
+	</form>
+	
+	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
+	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
+	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
+</div>
+
+
+
+<div id="pub_main">
+
+
+
+<section><h2 id="heading01">01. 入门教程</h2>
+
+<p>————</p>
+
+<p>以下是剧情模式中, 初始的新手引导, 如果没有跳过教程, 那么第 <c>0</c> 天就是教官于战场上指导我们如何操作机体(不要攻击教官, 那是反叛行为, 会导致游戏直接结束), 值得注意的是, <c>Toturial7</c> 提到"弹跳闪避子弹可以增加子弹时间", 是指面对攻击按 <kbd>Space</kbd> 闪避, 如果达成了完美闪避(机体没被击中), 则会进入子弹时间(游戏时间流逝减缓), 这个子弹时间跟玛丽那个名为子弹时间的技能没有关系</p>
+
+<p>
+	ToturialStart: 早上好啊;<br />
+	Toturial0:　　 欢迎你来到前线;<br />
+	Toturial1:　　 今天我会教你怎么战斗;<br />
+</p>
+<p>
+	Toturial2:　　 先使用 WSAD 移动机体;<br />
+	Toturial3:　　 鼠标的左右键可以开火;<br />
+	Toturial4:　　 Q 键可以切换近战攻击;<br />
+</p>
+<p>
+	Toturial5:　　 Shift 按住就可以奔跑;<br />
+	Toturial6:　　 按空格键即可实现弹跳闪避;<br />
+	Toturial7:　　 弹跳闪避子弹可以增加子弹时间;<br />
+</p>
+<p>
+	Toturial8:　　 点击 Ctrl 可蹲踞;<br />
+	Toturial9:　　 蹲踞能够降低散射, 增强防御和射程;<br />
+	Toturial10:　　现在来实战一下吧;<br />
+	Toturial11:　　要保护好城市大门, 这是主要的目标;<br />
+	ToturialVic:　 不错, 好好加油吧;<br />
+</p>
+
+<p>————</p>
+
+<p>以下是潜入模式中, 初始的操作说明, 主要是讲解隐蔽和暗杀的关键, 总结起来无非就是, 避开灯, 树里躲, 背后刺, 蹲下溜, 值得一提的是, 大部分情况下我们都不需要清空场中的所有敌人, 只要完成任务目标就能撤退了, 但尽可能杀敌还是有好处的, 这样可以得到更多资金, 有资金了就能买到更多装备, 进一步提升机体强度, 但中后期资金的用途开始变小, 就不用强求清场了, 因为有的敌人确实很棘手</p>
+
+<p>
+	ToturialC1: 潜入任务中, 不要暴露在敌人的探照灯下;<br />
+</p>
+<p>
+	ToturialC2: 潜入任务中, 若没有被敌人注视, 即可在敌人身后执行暗杀(需装备电子匕首),<br />
+	　　　　　　即使敌人背对着我们, 但距离太近时也可能会感知到(距离越近感知程度越高),<br />
+	　　　　　　如果我们的机体与敌人的机体发生了任何的触碰, 那么敌人就会立刻发现我们;<br />
+</p>
+<p>
+	ToturialC3: 树丛是极佳的藏匿和暗杀地点, 除非距离敌人非常近, 不然基本不会被察觉, 但是树丛本身不具备遮挡视线的功能, 谨记!;<br />
+	ToturialC4: 敌人的视野远比探照灯广, 但如果处于蹲踞状态, 敌人对你的视野就仅限探照灯内了(除非距离过近);<br />
+	ToturialC5: 当我们的盟友开火时, 若自身处于隐匿状态, 则敌人会优先被盟友的火力吸引;<br />
+</p>
+<p>
+	ToturialC6: 如果敌人已经进入索敌状态, 但玩家自身未被发现, 此时背刺效率便会翻两倍;<br />
+	ToturialC7: 有些建筑具有炮台守卫, 这些炮台通常生命值较低, 适合狙杀, 亦可以被爆破,<br />
+	　　　　　　炮台不会被警报或声音等因素吸引, 炮台开火也不会影响任务评价(敌军警觉);<br />
+</p>
+<p>
+	ToturialC8: 工厂类的建筑被破坏之后, 会出现自动防御的机械,<br />
+	　　　　　　自动防御机械没有视野限制, 会始终锁定玩家,<br />
+	　　　　　　这些机械开火不影响任务评价(敌军警觉);<br />
+</p>
+
+<p>————</p>
+
+<p>以下是地牢模式中, 初始的操作说明, 主要是讲一些近战的技巧, 地牢模式无法装备远程武器, 只能使用特殊的双手通用近战武器, 这类武器拥有各种攻击方式(通过不同按键的点击或长按触发), 趣味性十足(尽管有些武器的使用难度很高), 虽然你也可以多尝试不同的武器, 但如果想顺利通关, 还是建议尽早选定一种武器作为主体, 因为关卡的资源并不丰富, 如果中途频繁更换武器, 将阻碍装备的最终成型</p>
+
+<p>
+	ToturialS1: 在地牢模式中, 非战斗情况下, 你可以随时使用战略面板, 打开机体整备界面;<br />
+	ToturialS2: 持近战武器的时候, 弹跳可闪避近战攻击;<br />
+	ToturialS3: 举盾牌可防御近战攻击, 但是会消耗体力;<br />
+	ToturialS4: 锁定敌人的按键为 <kbd>F</kbd>, 可确保攻击精准;<br />
+	ToturialS5: 防御状态下使用盾牌攻击, 能对敌人的近战攻击进行格挡(也就是所谓的弹反), 成功后, 进行普通攻击可打出强力追击斩!;<br />
+</p>
+
+</section>
+
+
+
+<section><h2 id="heading02">02. 结算提示</h2>
+
+<p>以下是战后结算界面会随机出现的各种游戏提示, 包括机制细节和玩法建议, 目前共 <c>65</c> 条(最后几条是 XJ 自己加的), 这些提示都是随机出现的, 但它们有个特殊的 <c>Day</c> 属性, 意思是最早出现的天数限制, 例如 <c>Hint_25</c>, 值为 <c>10</c>, 这就意味着这条提示在第十天开始才可能出现, 它告诉我们脑负荷会随天数而逐渐增加, 这是因为剧情模式下第十天才会开启人员整备界面, 也需要开始处理脑负荷了</p>
+
+<p>————</p>
+
+<p>
+	Hint_0 (Day= 0): 机体的抵抗值越高, 被攻击后就越是容易触发抵抗效果;<br />
+	Hint_1 (Day= 0): 如果攻击被抵抗了, 那么伤害就只剩下 <c>5%</c>;<br />
+	Hint_2 (Day= 0): 抵抗值会被穿甲值抵消, 低穿甲的武器更容易触发抵抗的效果;<br />
+	Hint_3 (Day= 0): 触发抵抗的公式= <c>子弹穿甲值÷目标抵抗值</c>;<br />
+	Hint_4 (Day= 0): 子弹即使被抵抗也可造成属性攻击, 低穿甲武器可考虑多加属性攻击;<br />
+	Hint_5 (Day= 0): 敌人所装备装甲, 一般都是 <c>100</c> 的抵抗值;<br />
+	Hint_6 (Day= 0): 近战攻击无视抵抗和护盾;<br />
+	Hint_7 (Day= 0): [爆炸/电弧/射线]伤害无视抵抗;<br />
+	Hint_8 (Day= 0): 同一发子弹可以触发多种属性攻击;<br />
+	Hint_9 (Day=10): 射线与电弧无视抵抗且不会被障碍物阻挡;<br />
+</p>
+
+<p>
+	Hint_10(Day= 0): 没有不好用的武器, 经过特定的强化后, 任何武器都会变得非常强大;<br />
+	Hint_11(Day= 0): 低转速和低移速的负面效果远比想象中的更大, 要尽量避免这种情况;<br />
+	Hint_12(Day= 0): 挂载装甲的效果比想象的更好, 冲锋枪等低穿甲攻击几乎不再有威胁;<br />
+	Hint_13(Day= 0): 看准敌人装甲的位置, 通常装备了装甲的敌人, 无甲部分都非常脆弱;<br />
+	Hint_14(Day= 0): 投掷武器经过 CD 后可以再次使用, 不用担心会用完;<br />
+	Hint_15(Day= 0): 投掷武器需要配置后才能使用, 会按机体整备处安排的顺序进行投掷;<br />
+	Hint_16(Day= 0): 适当强化缩短射击间隔及装弹时间, 即使数值表现不明确, 体验上可能也会带来质变;<br />
+	Hint_17(Day= 0): 进行首领战时, 优先消灭首领, 否则杂兵会不断增援;<br />
+	Hint_18(Day= 0): 敌人之间存在友伤, 可合理利用这点;<br />
+	Hint_19(Day= 0): 武器散射越低就越准;<br />
+</p>
+
+<p>
+	Hint_20(Day= 0): 概率均为加乘, 例如 <c>+10%</c> 弹夹弹量和 <c>+20%</c> 弹夹弹量的模块配合一起用时, 最后的结果是 <c>+30%</c> 弹夹弹量;<br />
+	Hint_21(Day= 0): 不以百分号结尾的参数强化为直接加, 例如暴击率为 <c>50</c>, 装载了 <c>+25</c> 暴击的模块, 最终的暴击率为<c>75%</c>;<br />
+	Hint_22(Day= 0): 以百分号结尾的参数强化为计算比例, 例如穿甲为 <c>50</c>, 装载了 <c>+50%</c> 穿甲的模块, 最终的穿甲为 <c>75</c>;<br />
+	Hint_23(Day= 0): 模块强化为四舍五入, 例如穿甲 <c>8</c> 的武器 <c>+30%</c> 穿甲, 本应为 <c>10.4</c> 穿甲, 但是会折算成 <c>10</c>;<br />
+	Hint_24(Day= 0): 榴散炮也是一种散弹, 所以也受散弹模块的加成影响;<br />
+	Hint_25(Day=10): 随着战局的持续, 每日增加的脑负荷也会逐渐的增加;<br />
+	Hint_26(Day=10): 在城防界面请尽量把队友安排在掩体(沙袋)后面, 这将极大提升他们在战场的生存率;<br />
+	Hint_27(Day=10): 保护好以远程攻击为主的队友, 由于炮管本身有长度, 被近战攻击缠上时会很难脱身;<br />
+	Hint_28(Day=10): 没有弱小的队友, 要根据队友的 AI 和武器, 进行合理的安排和强化;<br />
+	Hint_29(Day=10): 爱护你的队友, 因为在这个残酷的世界, 除了你没有人会关心他们了;<br />
+</p>
+
+<p>
+	Hint_30(Day=10): 忠诚度与受伤撤退的阈值相关, 如忠诚为 <c>50</c> 的队友, 会在受伤 <c>>= 50%</c> 时撤退;<br />
+	Hint_31(Day=10): 好好培养和队友的感情, 当好感达 <c>65</c> 以上时, 可能会有额外惊喜;<br />
+	Hint_32(Day=10): 队友每天的首次送礼才会加忠诚度, 而自己则不限量;<br />
+	Hint_33(Day=10): 分裂模块和爆炸模块看似用处不大, 但配置得当也许会有惊人的效果;<br />
+	Hint_34(Day=10): 队友会尽量避免友伤(停火避免误伤), 但不排除意外, 尽量别站在队友的射击路线上;<br />
+	Hint_35(Day=10): 如果自己不上场, 可选择队友进行操作;<br />
+	Hint_36(Day=10): 宿舍的休息效果只对不上场的队友有效;<br />
+	Hint_37(Day=10): 参与外勤作战时, 尽量选择移动速度相近的队友配合, 不然掉队的队友很容易被消灭;<br />
+	Hint_38(Day=10): 参与外勤作战时, 最好直奔目标, 别和杂兵缠斗, 因为杂兵是无限的;<br />
+	Hint_39(Day=10): 驾驶员的每一种属性都存在着强化上限;<br />
+</p>
+
+<p>
+	Hint_40(Day=10): 招募完所有队友后, 会收到增加出战人数上限的申请(但是需要 <c>1000</c> 资金以及 <c>1000</c> 荣誉为代价);<br />
+	Hint_41(Day=20): 即使敌人处于隐身状态, 也会在地上留下影子, 当然队友可能不一定能注意到这一点;<br />
+	Hint_42(Day=20): 部分敌方 Boss 会携带实体盾牌, 这些盾牌免疫子弹, 只能绕开攻击;<br />
+	Hint_43(Day=20): 炮弹无法穿过能量盾, 但是会在接触的那个位置爆炸;<br />
+	Hint_44(Day=20): 投掷物可以直接穿过护盾, 是消灭拥有护盾的敌人首选;<br />
+	Hint_45(Day=20): 护盾通常需要持续火力来压制, 狙击枪等武器就不太适合;<br />
+	Hint_46(Day=20): 近战武器不受那些只对动能武器有效的模块影响(如子弹伤害/暴击暴伤/元素伤害等);<br />
+	Hint_47(Day=20): 近战武器的本质其实是能量武器, 所以需要充能, 也有攻击间隔, 弹夹数量等概念;<br />
+	Hint_48(Day=20): 隐身敌人如果被附加元素属性(异常状态)就会显形, 可以此向队友呈现敌人位置;<br />
+	Hint_49(Day=20): 商品的总数是有限的, 被刷掉的商品不会再出现(当然大部分商品都不止一件);<br />
+</p>
+
+<p>
+	Hint_50(Day=20): 总是垂直于敌人的炮口进行移动, 是战场生存的第一法则;<br />
+	Hint_51(Day=20): 如果被数量庞大的敌人给包围了, 可考虑暂时离开大门, 敌人会优先攻击大门, 大门非常坚固, 可以撑一会的(大概);<br />
+	Hint_52(Day=20): 在对付强大的敌人时, 尽量和队友先集火同一个敌人, 而不是选择各自为战(除非多个方向的敌人都非常多);<br />
+	Hint_53(Day=20): 情报处时有奇效, 尤其是前期强力城防设施不多时, 例如可将大量地雷优先铺设到敌人前进线路;<br />
+	Hint_54(Day=20): 沙袋的抵抗不高, 但是绝对比你站在空地好;<br />
+	Hint_55(Day=20): 敌人几乎不会预判射击(因为 AI 没做), 保持移动很重要;<br />
+	Hint_56(Day=20): 不要只是强化你自己, 队友在很多时候都射得比你更准, 属性也比你好;<br />
+	Hint_57(Day=30): 护盾对电弧及射线武器均有较好的减伤效果;<br />
+	Hint_58(Day=30): 由于护盾会回复的特性, 就不太适合使用狙击武器来对付;<br />
+	Hint_59(Day=30): 由于护盾会回复的特性, 推荐用冲锋枪或散弹等武器对付(因为高 DPS);<br />
+</p>
+
+<p>
+	Hint_60(Day= 0): 射线及电弧均可以穿透装甲(穿甲抵抗无法防御这些武器);<br />
+	Hint_61(Day= 0): 烟雾是个好东西, 在外围作战时的需求很高;<br />
+	Hint_62(Day= 0): 如果身上有负面效果, 即使躲藏在烟雾中也会被敌人发现;<br />
+	Hint_63(Day=60): 如果敌人身上有负面效果, 即使是躲藏在黑暗中, 也可以被队友发现到;<br />
+	Hint_64(Day= 0): 善用元素反应效果有奇效;<br />
+	Hint_65(Day= 0): 电磁效果对护盾或有奇效;<br />
+</p>
+
+<p>
+	Hint_XJ(Day= 0): 无人机和作战单元都不会攻击那些正在被爆破的建筑(以避免元素反应);<br />
+	Hint_XJ(Day= 0): 部分敌方 Boss 会携带实体盾牌, 实体盾牌免疫大多数远程武器, 除了绕后, 你还可以尝试用远距离的近战武器攻击;<br />
+</p>
+
+<p>
+	Hint_XJ(Day= 0): 敌人身上的携带的装甲, 默认抵抗值都是 <c>100</c>, 就像 LV3 复合装甲;<br />
+	Hint_XJ(Day= 0): 钢盾(id:8)/肢解者(id:31)/角斗士(id:107A)/方阵兵(id:109B)等敌人, 身上有携带装甲, 但仅部分部分方向有而已;<br />
+</p>
+
+</section>
+
+
+
+<style>/* 样式设置 */
+
+/* 翻译适配 */
+html:not([lang|="zh"]) #heading01 ~ p > label > span{font-size:12px;line-height:1;}
+html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:1;}
+
+/* 隐藏处理 */
+#powerTable01 .hideTr{display:none;}
+#powerTable01 .hideTd{display:none;}
+
+/* 内容省略 */
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+
+/* 悬停展示 */
+#powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#powerTable01 .hoverEllipsis:hover > div{overflow:visible;white-space:normal;}
+
+/* 升级改造 */
+.xjTip .itemFlex{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:24px;}
+.xjTip .itemFlex > div{display:flex;gap:8px;}
+.xjTip .itemFlex > div > span:nth-of-type(1){flex:0 0 auto;}
+.xjTip .itemFlex > div > span:nth-of-type(2){flex:1 1 auto;text-align-last:justify;}
+.xjTip .itemFlex > div > img{flex:0 0 auto;width:24px;height:24px;box-shadow:0 0 0 1px inset #999;}
+
+/* 槽位数据 */
+.slotFlex{display:flex;flex-direction:column-reverse;}
+.slotFlex > span{flex:1 1 auto;} .slotFlex > span > span{float:left;margin-right:6px;}
+</style>
+
+
+
+<script>/* 脚本逻辑 */
+(function(){
+
+/* 数据注解
+
+入门教程没有 csv 文件, 仅在 Descriptions.csv 有文本数据
+但是战后结算页面的提示文本有个 Hint.csv 文件, 不过也没有做成表格的必要, 还是纯文本的直接展示就行了
+
+*/
+
+// 结算提示
+let csv1 = (String.raw`// Hint,Day,Value
+
+0,0,#机体抵抗值越高，被攻击后越容易触发抵抗效果
+1,0,#被抵抗了的攻击只会造成10%的伤害
+2,0,#抵抗值会被穿甲值抵消，低穿甲的武器更容易触发抵抗效果
+3,0,#触发抵抗的公式为：子弹穿甲值/目标抵抗值
+4,0,#子弹即使被抵抗，也可以造成属性攻击，低穿甲武器可以考虑多添加属性攻击
+5,0,#敌人所装备装甲的抵抗值是100
+6,0,#近战攻击无视抵抗和护盾
+7,0,#爆炸、射线、电弧伤害无视抵抗
+8,0,#同一发子弹可以触发多种属性攻击
+9,10,#射线武器与电弧武器无视抵抗且不会被障碍物阻挡
+
+10,0,#没有不好用的武器，经过特定的强化，任何武器都会变得非常强大
+11,0,#低转速和低移动速度的负面效果比想象的更强，尽量避免这种情况
+12,0,#挂载装甲的效果比想象的更好，冲锋枪子弹等低穿甲攻击几乎不再有威胁
+13,0,#看准敌人装甲的位置，通常装备了装甲的敌人，无装甲的部分都非常脆弱
+14,0,#投掷武器每日都会补充，不用担心会用完
+15,0,#投掷武器需要配置才能使用，会按机体整备处安排的顺序进行投掷
+16,0,#进行适当的强化缩短开火间隔及装弹时间，即使数值上感受不明确，体验上可能也会带来质变
+17,0,#首领战时，优先消灭首领，否则杂兵会不断增援
+18,0,#敌人之间存在友伤，可以合理利用这一点
+19,0,#武器散射越低，打的越准
+
+20,0,#概率均为加乘，例如+10%弹夹弹量和+20%弹夹弹量的模块配合在一起最后的结果是+30%弹夹弹量
+21,0,#以百分号结尾的参数强化为直接加，例如暴击率为50%，装载了+25%暴击的模块，最终的暴击率为75%
+22,0,#不以百分号结尾的参数强化为计算比例，例如穿甲为50，装载了+50%穿甲的模块，最终的穿甲为75
+23,0,#模块强化为四舍五入，例如穿甲8的武器+30%穿甲，本应为10.4穿甲，但是会折算成10
+24,0,#榴散炮也是散弹，也会受散弹模块的加成影响
+25,10,#随着战局的持续，每日增加的脑负荷会逐渐增加
+26,10,#在城防界面请尽量把队友安排在掩体后面，这会极大提升他们的生存率
+27,10,#保护好远程攻击为主的队友，由于炮管本身有长度，被近战攻击缠上的队友很难脱身
+28,10,#没有弱小的队友，要根据队友的ai和武器进行合理的安排和强化
+29,10,#爱护你的队友，在这个残酷的世界，除了你没有人会关心他们了
+
+30,10,#忠诚度与撤退受伤阈值直接相关，例如忠诚50的队友，会在受伤50%时撤退
+31,10,#好好培养和队友的感情，好感达到65以上时，可能会有额外惊喜
+32,10,#队友每天只能送一次礼物，而自己则不限量
+33,10,#分裂模块和爆炸模块乍一看用处不大，不过配置得当也许会有惊人的效果
+34,10,#队友会尽量避免友伤，但不排除意外情况。尽量不要站在队友的射击路线上
+35,10,#如果自己不上场，可以选择队友进行操作
+36,10,#宿舍的休息效果只对不上场的队友有效
+37,10,#参与敌后作战时，尽量选择移动速度相近的队友，不然掉队的队友很容易被消灭
+38,10,#参与敌后作战时，直奔目标，不要和杂兵缠斗，杂兵是无限的
+39,10,#驾驶员的每一种属性都存在强化上限
+
+40,10,#招募完所有队友后，会收到增加出战人数上限的申请
+41,20,#即使敌人隐身了，也会在地上留下影子。当然队友可能不一定能注意到这一点
+42,20,#斩击无法对有能量盾的敌人造成伤害，不过锯子可以
+43,20,#炮弹无法穿过能量盾，但是会在接触的位置爆炸
+44,20,#投掷物可以直接穿过护盾，是消灭拥有护盾的敌人首选
+45,20,#护盾通常需要持续火力来压制，狙击枪等武器就不太适合
+46,20,#近战武器不受子弹伤害，暴击暴伤，元素伤害等只对动能武器有效的模块影响
+47,20,#近战武器本质为能量武器，需要充能，也有攻击间隔，弹夹数等概念
+48,20,#隐身敌人如果被附加了元素属性则会显形，可以以此来向队友呈现敌人位置
+49,20,#商品的总数是有限的，被刷新掉的商品不会再出现（当然，有的商品不止一件）
+
+50,20,#总是垂直敌人炮口移动，是生存第一法则
+51,20,#如果被数量庞大的敌人包围了，可以考虑暂时离开大门，敌人会优先攻击大门。大门非常坚固，还是可以撑一会的（大概）
+52,20,#对付强大的敌人时，尽量和队友先集火同一个敌人（除非多个方向敌人都非常多）
+53,20,#情报处有时有奇效，尤其是前期强力城防许可不多时，例如可以将大量地雷优先铺设到敌人前进线路
+54,20,#沙袋的抵抗不高，但是绝对比你站在空地好
+55,20,#敌人几乎都不会预判射击，保持移动很重要
+56,20,#不要只强化自己，队友很多时候射的比你准，属性也比你好
+57,30,#护盾对电弧及射线武器均有较好的减伤效果
+58,30,#由于护盾会回复的特性，不太适合使用狙击武器来对付
+59,30,#由于护盾会回复的特性，推荐使用冲锋枪和散弹等高dps武器来对付
+
+60,0,#射线及电弧均可以穿透装甲
+61,0,#烟雾是个好东西，外围作战的需求很高
+62,0,#如果身上有负面效果，即使躲藏在烟雾中也会被敌人发现
+63,60,#如果敌人身上有负面效果，即使躲藏在黑暗中也可以被队友发现
+64,0,#善用元素反应效果有奇效
+65,30,#电磁效果对护盾有奇效
+`).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
+.split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
+
+// 文本内容
+let textList = {
+	
+	入门教程 : {
+	
+	ToturialStart	: `早上好,早上好,Good morning,おはよう`,
+	Toturial0		: `欢迎来到前线，列兵,歡迎來到前線，列兵,Welcome to the front line， Private.,最前線へようこそ、列兵`,
+	Toturial1		: `今天我会教你怎么战斗,今天我會教你怎麼戰鬥,Today， I will teach you how to fight.,今日はお前に戦い方を教えてやる`,
+	Toturial2		: `wasd移动你的机体,wasd移動你的機體,Use WASD keys to move your mecha.,WASDで機体を動す`,
+	Toturial3		: `鼠标左右键开火,滑鼠左右鍵開火,Left or right click to fire.,マウスの左右ボタンで射撃する`,
+	Toturial4		: `Q切换近战攻击,Q切換近戰攻擊,Use Q keys to toggle melee attack.,Qで近接攻撃に切り替える`,
+	Toturial5		: `按住shift奔跑,按住shift奔跑,Hold Shift to sprint.,shift長押しで走行`,
+	Toturial6		: `空格键向行进方向弹跳,空格鍵向行進方向彈跳,Press the spacebar to jump in the direction of travel,SPACEで移動方向にジャンプする`,
+	Toturial7		: `弹跳闪避敌人的子弹可以获得子弹时间奖励,彈跳閃避敵人的子彈可以獲得子彈時間獎勵,Jump to dodge enemy bullets can trigger bullet time reward,ジャンプで敵の弾丸を回避すると、バレットタイムに入る`,
+	Toturial8		: `点击Ctrl蹲踞,點擊Ctrl蹲踞,Press [Ctrl] to crouch.,Ctrlキーでしゃがむ`,
+	Toturial9		: `蹲踞可以降低散射，增强防御和射程,蹲踞可以降低散射，增強防禦和射程,When crouched， bullet spread is lowered while defense and range are increased.,しゃがむと弾の散らばりが低下し、防御と射程が強化される`,
+	Toturial10		: `现在来实战一下吧,現在來實戰一下吧,Now， give it a go in a real fight.,では実戦だ`,
+	Toturial11		: `保护好城市的大门，这是主要目标,保護好城市的大門，這是主要目標,Protect the city gate. This is your main objective.,街のゲートを守る、これが主な目標だ`,
+	ToturialVic		: `不错，好好加油吧,不錯，好好加油吧,Not bad. Good luck.,悪くない、この調子で頑張れ`,
+	
+	ToturialC1		: `潜入任务中，不要暴露在敌人的探照灯下,潛入任務中，不要暴露在敵人的探照燈下,In Sneaking Mode \ndo not expose yourself to enemy searchlights,潜入任務では\n敵のサーチライトさらさないように`,
+	ToturialC2		: `潜入任务中，若没有被敌人注视，可以在敌人身后进行暗杀。\n【警告】进行暗杀需装备电子匕首（当前已装备）\n【警告】即使背对着敌人，若距离太近，也可能被感知到\n（距离越近感知程度越高）,潛入任務中，若沒有被敵人注視，可以在敵人身後進行暗殺。\n【警告】進行暗殺需裝備電子匕首（當前已裝備）\n【警告】即使背對著敵人，若距離太近，也可能被感知到\n（距離越近感知程度越高）,If you are not being watched by the enemy during the Sneaking Mode\n you can carry out assassination behind them. \nWarning: Assassination requires equipping an Electric Dagger (currently equipped)\nWarning: Even if facing away from the enemy， if the distance is too close， it may still be perceived. \n(The closer the distance， the higher the perception level),潜入任務では\n敵に注視されなければ背後から暗殺することができる。 \n【警告】暗殺には電子ダガー（現在装備中）が必要\n【警告】敵が背を向けていても、距離が近すぎると感知される可能性がある \n（距離が近いほど感知度が高くなる）`,
+	ToturialC3		: `树丛是极佳的藏匿和暗杀地点\n除非距离敌人非常近，不然基本不会被察觉。\n【注】树丛本身不具备任何遮挡视线的功能，谨记,樹叢是極佳的藏匿和暗殺地點\n除非距離敵人非常近，不然基本不會被察覺。\n【注】樹叢本身不具備任何遮擋視線的功能，謹記,Trees are excellent hiding and assassination sites\n unless they are very close to the enemy. \n[Note] The bushes themselves do not have any function of obstructing vision\n please remember,樹木は絶好の隠れ場所と暗殺場所である\n敵に余程近付かれない限り気付かれる事はない。 \n【注】植え込み自体には視線を遮る機能はない\n発見された場合は気を付ける事`,
+	ToturialC9		: `可以在战略面板查看敌人视野,可以在戰略面板查看敵人視野,TYou can view the enemy's field of view in the Strategy Panel,戦略パネルで敵の視界を見ることができる`,
+	ToturialC4		: `敌人的视野远比探照灯要广\n但是如果处于“蹲踞”状态，敌人对你的视野就仅限探照灯内了\n（除非距离过近）,敵人的視野遠比探照燈要廣\n但是如果處於“蹲踞”狀態，敵人對你的視野就僅限探照燈內了\n（除非距離過近）,The enemy's field of view is much wider than the searchlight\n but if you are in a Crouching state， the enemy's field of view is limited to the searchlight\n (unless the distance is too close),敵の視野はサーチライトよりもはるかに広い \nしかし「しゃがみ」状態にあると、敵のあなたに対する視野はサーチライト内に限られる \n（距離が近すぎない限り）`,
+	ToturialC5		: `当盟友开火时若自身处于隐匿状态，则敌人会优先被盟友的火力吸引,當盟友開火時若自身處於隱匿狀態，則敵人會優先被盟友的火力吸引,When allies fire， if you are in a hidden state\n the enemy will be attracted to the firepower of the allies first,同盟が発砲したときに自身が隠匿状態になると\n敵は同盟の火力に優先的に惹かれる`,
+	ToturialC6		: `如果敌人进入索敌状态后玩家自身未被发现\n此时背刺效率便会翻2倍,如果敵人進入索敵狀態後玩家自身未被發現\n此時背刺效率便會翻2倍,If the player is not detected after the enemy enters the search state\n the backstab efficiency will triple,敵が索敵状態に入った後にプレイヤー自身が発見されなければ \n背刺効率は3倍になる`,
+	ToturialC7		: `有些建筑有炮台守卫\n炮台通常生命值较低，适合狙杀。亦可以被爆破\n炮台不会被警报/声音等吸引\n炮台开火不影响任务评价（敌军警觉）,有些建築有炮臺守衛\n炮臺通常生命值較低，適合狙殺。亦可以被爆破\n炮臺不會被警報/聲音等吸引\n炮臺開火不影響任務評價（敵軍警覺）,Some buildings have turrets to guard\nTurret usually has low health and is suitable for sniping. It can also be blasted\nTurrets will not be attracted by alarms/sounds， etc\nTurrets alerted does not affect mission evaluation (enemy alertness),一部の建物には砲台の警備がいる\n砲台は通常耐久値が低く、狙撃するのに適している。爆破も有効だ\n砲台は警報/音などに引かれない\n砲台の警戒は任務評価に影響しない（敵軍警戒）`,
+	ToturialC8		: `工厂类的建筑被破坏后，会出现自动防御的机械\n自动防御机械没有视野限制，会始终锁定玩家\n自动机械开火不影响任务评价（敌军警觉）,工廠類的建築被破壞後，會出現自動防禦的機械\n自動防禦機械沒有視野限制，會始終鎖定玩家\n自動機械開火不影響任務評價（敵軍警覺）,After the destruction of factory buildings， automatic defense machinery will appear\nThey have no field of view restrictions and will always lock players on\Machinerys alerted do not affect mission evaluation (enemy alertness),工場等の建物が破壊されると、自動防御機械が現れる\n自動防御機械は視界制限がなく、常にプレイヤーをロックします\n自動防御機械の警戒は任務評価に影響しない（敵軍警戒）`,
+	
+	ToturialS1		: `地牢模式中，非战斗情况下，你可以随时使用战略面板打开机体整备界面,地牢模式中，非戰鬥情況下，你可以隨時使用戰略面板打開機體整備介面,In dungeon mode， outside of combat， you can open the mecha maintenance interface anytime using the Strategy Panel.,ダンジョンモードでは、非戦闘時は、いつでも戦略パネルから機体整備画面を開くことができます`,
+	ToturialS2		: `持近战武器弹跳可以闪避近战攻击,持近戰武器彈跳可以閃避近戰攻擊,Bouncing with a melee weapon can dodge close-range attacks.,近接武器を装備している場合、ジャンプで敵の近接攻撃を回避できます`,
+	ToturialS3		: `举起盾牌可以防御近战攻击，但是会消耗体力,舉起盾牌可以防禦近戰攻擊，但是會消耗體力,Raising your shield can defend melee attacks， but consume stamina.,盾を構えることで近接攻撃を防御可能。ただし、スタミナを消費します`,
+	ToturialS4		: `防御状态下使用盾牌攻击可以对敌人近战攻击进行格挡（弹反），格挡（弹反）成功后进行普通攻击可以打出强力追击斩,防禦狀態下使用盾牌攻擊可以對敵人近戰攻擊進行格擋（彈反），格擋（彈反）成功後進行普通攻擊可以打出強力追擊斬,Attacking while in a defensive stance with a shield can block (counter) enemy melee attacks. Successfully blocking and following up with a normal attack triggers a powerful Chase Slash.,防御状態で盾で攻撃を行うと、敵の近接攻撃をガード（弾き）できます。成功後に通常攻撃を行うと、強力な「追撃斬」を発動できます`,
+	ToturialS5		: `使用交互键[F]锁定敌人，以确保攻击精准,使用互動鍵[F]鎖定敵人，以確保攻擊精准,Lock enemies with interactive keys [F] to ensure precise attacks,インタラクティブキー[F]を使用して敵をロックし、攻撃の正確さを確保する`,
+	
+	},
+	
+	结算提示 : {
+	
+	Hint_Value_0	: `机体抵抗值越高，被攻击后越容易触发抵抗效果,機體抵抗值越高，被攻擊後越容易觸發抵抗效果,The higher a mecha's resistance， the more likely it's going to trigger resistance when attacked.,機体の抵抗値が高いほど、攻撃を受けた際に抵抗効果が発動しやすくなります`,
+	Hint_Value_1	: `被抵抗了的攻击只会造成5%的伤害,被抵抗了的攻擊只會造成5%的傷害,Resisted attacks deal only 5% damage.,抵抗された攻撃は5%のダメージしか与えられません`,
+	Hint_Value_2	: `抵抗值会被穿甲值抵消，低穿甲的武器更容易触发抵抗效果,抵抗值會被穿甲值抵消，低穿甲的武器更容易觸發抵抗效果,Resistance is neglected by armor penetration. Weapons with low armor penetration are more likely to trigger resistance.,抵抗値は装甲貫通値によって相殺され、装甲貫通力の低い武器は抵抗効果を誘発する可能性が高くなります`,
+	Hint_Value_3	: `触发抵抗的公式为：子弹穿甲值/目标抵抗值,觸發抵抗的公式為：子彈穿甲值/目標抵抗值,Resistance triggering formula: bullet armor penetration divided by target resistance.,抵抗発動確率の計算式は:弾丸装甲貫通値/ターゲット抵抗値`,
+	Hint_Value_4	: `子弹即使被抵抗，也可以造成属性攻击，低穿甲武器可以考虑多添加属性攻击,子彈即使被抵抗，也可以造成屬性攻擊，低穿甲武器可以考慮多添加屬性攻擊,Resisted bullets still deal effects damage. Consider adding multiple effects to weapons with low armor penetration.,弾丸が抵抗されても、属性攻撃を与えることができます、低装甲貫通武器には、属性攻撃を大量に付与することを検討してください`,
+	Hint_Value_5	: `敌人所装备装甲的抵抗值是100,敵人所裝備裝甲的抵抗值是100,Enemy armor resistance is set at 100.,敵が装備している装甲の抵抗値は100`,
+	Hint_Value_6	: `近战攻击无视抵抗和护盾,近戰攻擊無視抵抗和護盾,Melee attacks ignore resistance and shields.,近接攻撃は抵抗とシールドを無視します`,
+	Hint_Value_7	: `爆炸、射线、电弧伤害无视抵抗,爆炸、射線、電弧傷害無視抵抗,Explosions， rays， and arc damage ignore resistance.,爆発、光線、電弧によるダメージは抵抗を無視します`,
+	Hint_Value_8	: `同一发子弹可以触发多种属性攻击,同一發子彈可以觸發多種屬性攻擊,A single round of bullets may trigger multiple effects damage.,同じ弾丸で複数の属性攻撃を発動できます`,
+	Hint_Value_9	: `射线武器与电弧武器无视抵抗且不会被障碍物阻挡,射線武器與電弧武器無視抵抗且不會被障礙物阻擋,Ray weapons and arc weapons ignore resistance and obstacles.,光線兵器と電弧兵器は抵抗を無視し、且つ障害物によってブロックされません`,
+	
+	Hint_Value_10	: `没有不好用的武器，经过特定的强化，任何武器都会变得非常强大,沒有不好用的武器，經過特定的強化，任何武器都會變得非常強大,There is no such thing as a useless weapon. Any weapon could become powerful with proper enhancements.,出来の悪い武器は存在しません。特定の強化を行うと、どの武器も非常に強力になります`,
+	Hint_Value_11	: `低转速和低移动速度的负面效果比想象的更强，尽量避免这种情况,低轉速和低移動速度的負面效果比想像的更強，儘量避免這種情況,Low rotational and movement speed affect you worse than you think. Try to avoid being caught in this kind of situation.,低回転?低移動速度のマイナス効果は想像以上に強いので、なるべくこういった状況を回避しましょう`,
+	Hint_Value_12	: `挂载装甲的效果比想象的更好，冲锋枪子弹等低穿甲攻击几乎不再有威胁,掛載裝甲的效果比想像的更好，衝鋒槍子彈等低穿甲攻擊幾乎不再有威脅,Mounted armor is more effective than you imagine. Weapons with low armor penetration such as the submachine gun no longer pose a threat.,アタッチメント装甲の効果は予想以上に良く、短機関銃弾などの低装甲貫通攻撃はほとんど脅威ではなくなります`,
+	Hint_Value_13	: `看准敌人装甲的位置，通常装备了装甲的敌人，无装甲的部分都非常脆弱,看准敵人裝甲的位置，通常裝備了裝甲的敵人，無裝甲的部分都非常脆弱,Pay attention to where the enemy armor is located. The unarmored parts of armored enemies are usually vulnerable.,敵の装甲の位置を見てください、通常、装甲を装備している敵の装甲のない部分は非常に脆弱です`,
+	Hint_Value_14	: `投掷武器每日都会补充，不用担心会用完,投擲武器每日都會補充，不用擔心會用完,Throwing weapons are replenished every day and never truly run out.,投擲武器は毎日補充されるので無くなる心配はありません`,
+	Hint_Value_15	: `投掷武器需要配置才能使用，会按机体整备处安排的顺序进行投掷,投擲武器需要配置才能使用，會按機體整備處安排的順序進行投擲,Throwing weapons have to be equipped and are used in sequence.,投擲武器は使用前に設定する必要があり、機体整備部門が決めた順番で投擲されます`,
+	Hint_Value_16	: `进行适当的强化缩短开火间隔及装弹时间，即使数值上感受不明确，体验上可能也会带来质变,進行適當的強化縮短開火間隔及裝彈時間，即使數值上感受不明確，體驗上可能也會帶來質變,Consider enhancing firing rate and reload time. A small increase in the values could substantially improve user experience.,適切な強化により、射撃間隔とリロード時間が短縮されます。数値上の変化は微々たるものても、実際の体験に質的な変化をもたらす可能性があります`,
+	Hint_Value_17	: `首领战时，优先消灭首领，否则杂兵会不断增援,首領戰時，優先消滅首領，否則雜兵會不斷增援,Prioritize the boss in boss battles to stop enemy reinforcements.,ボス戦ではボスを先に倒してください、さもないと雑兵の増援がどんどん湧いてきます`,
+	Hint_Value_18	: `敌人之间存在友伤，可以合理利用这一点,敵人之間存在友傷，可以合理利用這一點,Friendly damage is possibly among enemies. Try to utilize this.,敵同士間に味方ダメージが存在し、合理的に利用してください`,
+	Hint_Value_19	: `武器散射越低，打的越准,武器散射越低，打的越准,The lower a weapon's spread， the more accurate it is.,武器散布が低いほど、射撃の精度が高くなります`,
+	
+	Hint_Value_20	: `概率均为加乘，例如+10%弹夹弹量和+20%弹夹弹量的模块配合在一起最后的结果是+30%弹夹弹量,概率均為加乘，例如+10%彈夾彈量和+20%彈夾彈量的模組配合在一起最後的結果是+30%彈夾彈量,Bonuses stack. E.g. equipping a +10% magazine capacity module and a +20% magazine capacity module will give you +30% magazine capacity in total.,確率はすべて加算されます。たとえば、+10%弾倉容量と+20%弾倉容量のモジュールを組み合わせると、最終的な結果は+30%弾倉容量になります。`,
+	Hint_Value_21	: `以百分号结尾的参数强化为直接加，例如暴击率为50%，装载了+25%暴击的模块，最终的暴击率为75%,以百分號結尾的參數強化為直接加，例如暴擊率為50%，裝載了+25%暴擊的模組，最終的暴擊率為75%,Stats in percentages are added directly to the bonuses. E.g. equipping a +25% crit rate module with a base crit rate of 50% will push the total crit rate to 75%.,パーセント記号で終わるパラメーターは直接加算強化されます。たとえば、会心率が50%の場合、会心率+25%のモジュールが搭載されている場合、最終的な会心率は75%になります`,
+	Hint_Value_22	: `不以百分号结尾的参数强化为计算比例，例如穿甲为50，装载了+50%穿甲的模块，最终的穿甲为75,不以百分號結尾的參數強化為計算比例，例如穿甲為50，裝載了+50%穿甲的模組，最終的穿甲為75,Stats not in percentages are calculated by ratio. E.g. equipping a +50% armor penetration module with a base armor penetration of 50 will result in a final armor penetration of 75.,パーセント記号で終わらないパラメータは、比率計算で強化されます。たとえば、装甲貫通力が50で、装甲貫通力+50%のモジュールを搭載すると、最終的な装甲貫通力は75になります。`,
+	Hint_Value_23	: `模块强化为四舍五入，例如穿甲8的武器+30%穿甲，本应为10.4穿甲，但是会折算成10,模組強化為四捨五入，例如穿甲8的武器+30%穿甲，本應為10.4穿甲，但是會折算成10,Module enhancement values are rounded. E.g. Equipping a +30% armor penetration module to a weapon with 8 armor penetration add up to 10.4， but the final value is rounded to 10 armor penetration.,モジュールによる強化は切り上げられます。たとえば、装甲貫通8の武器+30%装甲貫通は10.4装甲貫通であるが、10に変換されます`,
+	Hint_Value_24	: `榴散炮也是散弹，也会受散弹模块的加成影响,榴散炮也是散彈，也會受散彈模組的加成影響,The howitzer shoots spreadshots， affected by spreadshot module bonuses.,榴弾砲も散弾であり、散弾モジュールのボーナスの影響も受けます`,
+	Hint_Value_25	: `随着战局的持续，每日增加的脑负荷会逐渐增加,隨著戰局的持續，每日增加的腦負荷會逐漸增加,The daily brainload increase grows as the war drags on.,戦いが続くにつれて、毎日増加する脳への負荷の値が徐々に増加します`,
+	Hint_Value_26	: `在城防界面请尽量把队友安排在掩体后面，这会极大提升他们的生存率,在城防介面請儘量把隊友安排在掩體後面，這會極大提升他們的生存率,Try to deploy allies behind cover in the City Defense Interface to greatly increase their chance of survival.,シティディフェンス画面では、カバーの後ろに隊員を配置してみてください。これにより、生存率が大幅に向上します`,
+	Hint_Value_27	: `保护好远程攻击为主的队友，由于炮管本身有长度，被近战攻击缠上的队友很难脱身,保護好遠程攻擊為主的隊友，由於炮管本身有長度，被近戰攻擊纏上的隊友很難脫身,Prioritize protecting ranged allies. Due to the length of the muzzle， it's hard for ranged allies to escape from melee enemies.,遠距離攻撃主体の味方を守ってください、バレル自体が長いため、近接攻撃に巻き込まれた隊員が逃げにくい`,
+	Hint_Value_28	: `没有弱小的队友，要根据队友的ai和武器进行合理的安排和强化,沒有弱小的隊友，要根據隊友的ai和武器進行合理的安排和強化,There is no such thing as a weak ally. Deploy and enhance your team all according to allies' AI and weapons.,弱い隊員は居ません、隊員のAIと武器に応じて合理的な配置と強化を行う必要があります`,
+	Hint_Value_29	: `爱护你的队友，在这个残酷的世界，除了你没有人会关心他们了,愛護你的隊友，在這個殘酷的世界，除了你沒有人會關心他們了,Cherish your allies， for no one else shall care for them in this cruel world.,隊員を大事にしなさい、この残酷な世界では、あなた以外誰も彼らのことを気にかけてはくれません`,
+	
+	Hint_Value_30	: `忠诚度与撤退受伤阈值直接相关，例如忠诚50的队友，会在受伤50%时撤退,忠誠度與撤退受傷閾值直接相關，例如忠誠50的隊友，會在受傷50%時撤退,The loyalty is related to the injury-retreat value. E.g. allies with a 50 loyalty will treat when they sustain a 50% injury.,ロイヤリティは、退却時の負傷のしきい値に直接関係します。たとえば、忠誠度が50の隊員は、負傷が50%になると退却します`,
+	Hint_Value_31	: `好好培养和队友的感情，好感达到65以上时，可能会有额外惊喜,好好培養和隊友的感情，好感達到65以上時，可能會有額外驚喜,Treat your allies well. Once your affinity with them reaches 65， a suprise may await you.,隊員との関係をうまく築き、好感度が65以上になると、予想外のサプライズがあるかもしれません`,
+	Hint_Value_32	: `队友每天只能送一次礼物，而自己则不限量,隊友每天只能送一次禮物，而自己則不限量,Allies may send one gift per day. The restriction does not apply to yourself.,隊員は1日1回しかプレゼントを贈れませんが、自分には無制限にプレゼントを贈ることができます`,
+	Hint_Value_33	: `分裂模块和爆炸模块乍一看用处不大，不过配置得当也许会有惊人的效果,分裂模組和爆炸模組乍一看用處不大，不過配置得當也許會有驚人的效果,While the splitter module and the explosion module may seem very useful at first glance， they can be surprisingly effected when used properly.,分裂モジュールと爆発モジュールは、一見あまり役に立たないが、適切に配置すると驚異的な効果を発揮できるかもしれません`,
+	Hint_Value_34	: `队友会尽量避免友伤，但不排除意外情况。尽量不要站在队友的射击路线上,隊友會儘量避免友傷，但不排除意外情況。儘量不要站在隊友的射擊路線上,Your allies do their best to avoid friendly damage， but accidents could happen. Try not to stand in the bullet trajectory.,隊員は出来る限り味方ダメージを避けようとしますが、事故る可能性は完全に排除できません。隊員の射線上に立たないようにしてください`,
+	Hint_Value_35	: `如果自己不上场，可以选择队友进行操作,如果自己不上場，可以選擇隊友進行操作,When you're not deployed into battle， you can still control your allies.,自身が出撃しない場合は、操作する隊員を選択できます`,
+	Hint_Value_36	: `宿舍的休息效果只对不上场的队友有效,宿舍的休息效果只對不上場的隊友有效,Dormitory resting effect only affects undeployed allies.,寮の休息効果は、出撃していない隊員にのみ有効です`,
+	Hint_Value_37	: `参与敌后作战时，尽量选择移动速度相近的队友，不然掉队的队友很容易被消灭,參與敵後作戰時，儘量選擇移動速度相近的隊友，不然掉隊的隊友很容易被消滅,Try to select allies with a similar movement speed to yourself when fighting behind enemy lines， otherwise allies who fall behind could be easily eliminated.,敵陣で戦闘を行う場合、移動速度の近い隊員を選ぶように、さもないと遅れた者は容易に排除されます`,
+	Hint_Value_38	: `参与敌后作战时，直奔目标，不要和杂兵缠斗，杂兵是无限的,參與敵後作戰時，直奔目標，不要和雜兵纏鬥，雜兵是無限的,Head straight for the target when fighting behind enemy lines. Do not spend too much time with foot soldiers as there is an unlimited amount of them.,敵陣で戦闘を行う場合は、目標に向かって直進し、無限に湧いてくる雑魚との戦いに時間をかけないでください`,
+	Hint_Value_39	: `驾驶员的每一种属性都存在强化上限,駕駛員的每一種屬性都存在強化上限,There is an upper limit to pilot stats enhancements.,パイロットのステータスごとに強化限界があります`,
+	
+	Hint_Value_40	: `招募完所有队友后，会收到增加出战人数上限的申请,招募完所有隊友後，會收到增加出戰人數上限的申請,After recruiting all allies， you will receive an application to increase the maximum deployment number.,隊員全員を募集した後、出撃人数の上限を増やすための申請が届きます`,
+	Hint_Value_41	: `即使敌人隐身了，也会在地上留下影子。当然队友可能不一定能注意到这一点,即使敵人隱身了，也會在地上留下影子。當然隊友可能不一定能注意到這一點,Invisible enemies still cast shadows on the ground， though your allies not may be aware of this.,敵がステルス状態に入っても、地面に影が残ります。もちろん、隊員は必ずしもこれに気付くとは限りません`,
+	Hint_Value_42	: `斩击无法对有能量盾的敌人造成伤害，不过锯子可以,斬擊無法對有能量盾的敵人造成傷害，不過鋸子可以,Slashes deal no damage to enemies with energy shields， but chain saws do.,斬撃はエネルギーシールドを持つ敵にダメージを与えることはできませんが、鋸はできます`,
+	Hint_Value_43	: `炮弹无法穿过能量盾，但是会在接触的位置爆炸,炮彈無法穿過能量盾，但是會在接觸的位置爆炸,Cannons cannot pass through energy shields. Instead， they explode on impact.,砲弾はエネルギーシールドを通過できませんが、接触した位置で爆発します`,
+	Hint_Value_44	: `投掷物可以直接穿过护盾，是消灭拥有护盾的敌人首选,投擲物可以直接穿過護盾，是消滅擁有護盾的敵人首選,Throwing objects can pass through shields. They're the top choice against shielded enemies.,投擲物はシールドを直接通過でき、シールドを持つ敵を殲滅するための最良の選択肢です。`,
+	Hint_Value_45	: `护盾通常需要持续火力来压制，狙击枪等武器就不太适合,護盾通常需要持續火力來壓制，狙擊槍等武器就不太適合,Fire suppression is usually necessary against shields. Weapons such as the sniper rifer are not effective in this case.,シールドは通常、制圧するために継続的な火力を必要とし、スナイパーライフルなどの武器は適していません`,
+	Hint_Value_46	: `近战武器不受子弹伤害，暴击暴伤，元素伤害等只对动能武器有效的模块影响,近戰武器不受子彈傷害，暴擊暴傷，元素傷害等只對動能武器有效的模組影響,Melee weapons are not affected by modules such as bullet damage， crit damage， and elemental damage， that are only effective on kinetic weapons.,近接武器は、弾丸ダメージ、会心率、会心ダメージ、エレメンタルダメージなどキネティック兵器にのみ有効なモジュールの影響を受けません`,
+	Hint_Value_47	: `近战武器本质为能量武器，需要充能，也有攻击间隔，弹夹数等概念,近戰武器本質為能量武器，需要充能，也有攻擊間隔，彈夾數等概念,All melee weapons are energy weapons that require recharging and are affected by firing rate and magazine capacity.,近接武器の本質はチャージが必要なエネルギー武器であり、攻撃間隔や弾倉数などの概念もあります`,
+	Hint_Value_48	: `隐身敌人如果被附加了元素属性则会显形，可以以此来向队友呈现敌人位置,隱身敵人如果被附加了元素屬性則會顯形，可以以此來向隊友呈現敵人位置,Invisible enemies will be revealed if applied with elemental stats. Utilize this to help your allies.,ステルス中の敵は、元素属性を付与されると姿を現します、これ利用して敵の位置を隊員に教えることができます`,
+	Hint_Value_49	: `商品的总数是有限的，被刷新掉的商品不会再出现（当然，有的商品不止一件）,商品的總數是有限的，被刷新掉的商品不會再出現（當然，有的商品不止一件）,The amount of all purchasable items is limited. Items will not appear again once refreshed (though， some items are more than one in quantity).,商品の総数は限られており、リフレッシュされた商品は二度と出現しません(もちろん、複数個存在する商品もあります)`,
+	
+	Hint_Value_50	: `总是垂直敌人炮口移动，是生存第一法则,總是垂直敵人炮口移動，是生存第一法則,The first rule of survival is moving perpendicularly to the enemy muzzle.,敵の銃口に対して常に垂直に動くのが生存の第一法則`,
+	Hint_Value_51	: `如果被数量庞大的敌人包围了，可以考虑暂时离开大门，敌人会优先攻击大门。大门非常坚固，还是可以撑一会的（大概）,如果被數量龐大的敵人包圍了，可以考慮暫時離開大門，敵人會優先攻擊大門。大門非常堅固，還是可以撐一會的（大概）,If you ever find yourself surrounded by a large number of enemies， consider getting away from the gate temporarily as enemies prioritize attacking it. The gate is very strong and can last for a while， probably.,多数の敵に囲まれている場合は、一時的にゲートを離れることも考慮に入れてください、敵が優先的にゲートを攻撃します。ゲートは非常に頑丈で、しばらくの間なら耐えられるはず(多分)`,
+	Hint_Value_52	: `对付强大的敌人时，尽量和队友先集火同一个敌人（除非多个方向敌人都非常多）,對付強大的敵人時，儘量和隊友先集火同一個敵人（除非多個方向敵人都非常多）,When fighting powerful enemies， try to focus on one enemy with your allies (unless there are many of them in multiple directions).,強力な敵に対処するときは、まずは隊員と同じ敵に火力を集中するようにしてください(複数の方向に多くの敵がいる場合を除く)`,
+	Hint_Value_53	: `情报处有时有奇效，尤其是前期强力城防许可不多时，例如可以将大量地雷优先铺设到敌人前进线路,情報處有時有奇效，尤其是前期強力城防許可不多時，例如可以將大量地雷優先鋪設到敵人前進線路,The Intelligence Office could be surprisingly useful， especially in the early phase when you don't have a lot of city defense permits. E.g. they can plan a large number of land mines on the enemy's path.,諜報部は時に奇跡的な効果を発揮することがあり、特に初期段階で強力なシティディフェンス免許が少ない場合、例えば、敵の前線に最初に大量の地雷を設置することができます`,
+	Hint_Value_54	: `沙袋的抵抗不高，但是绝对比你站在空地好,沙袋的抵抗不高，但是絕對比你站在空地好,Sandbags have low resistance， but it beats standing in the open.,土嚢の抵抗が大したものではないが、空き地よりは断然いい`,
+	Hint_Value_55	: `敌人几乎都不会预判射击，保持移动很重要,敵人幾乎都不會預判射擊，保持移動很重要,Enemies almost never predict your movement when shooting. It is important to keep on the move.,敵は射線を予測することはほとんどないので、動き続けることが重要です`,
+	Hint_Value_56	: `不要只强化自己，队友很多时候射的比你准，属性也比你好,不要只強化自己，隊友很多時候射的比你准，屬性也比你好,Enhance your allies as well as yourself. A lot of times， they are more accurate and have better stats than you.,自分だけを強化しないでください、隊員はしばしばあなたよりも正確に射撃し、彼らのステータスもあなたよりも優れています`,
+	Hint_Value_57	: `护盾对电弧及射线武器均有较好的减伤效果,護盾對電弧及射線武器均有較好的減傷效果,Shields have good damage reduction effects on arc and ray weapons,シールドは電弧と光線兵器に対して良いダメージ軽減効果を発揮できます`,
+	Hint_Value_58	: `由于护盾会回复的特性，不太适合使用狙击武器来对付,由於護盾會回復的特性，不太適合使用狙擊武器來對付,Due to the regenerative nature of the shield， it is not suitable to use sniper weapons to deal with it,回復するシールドの性質上、狙撃兵器で対処することは適していません`,
+	Hint_Value_59	: `由于护盾会回复的特性，推荐使用冲锋枪和散弹等高dps武器来对付,由於護盾會回復的特性，推薦使用衝鋒槍和散彈等高dps武器來對付,Due to the regenerative nature of the shield， it is recommended to use high DPS weapons such as submachine guns and shrapnel to deal with it,回復するシールドの性質上、短機関銃や散弾などの高dps武器を使用して対処することをお勧めします`,
+	
+	Hint_Value_60	: `射线及电弧均可以穿透装甲,射線及電弧均可以穿透裝甲,Both rays and arcs can penetrate armor,光線と電弧の両方が装甲を貫通することができます`,
+	Hint_Value_61	: `烟雾是个好东西，外围作战的需求很高,煙霧是個好東西，週邊作戰的需求很高,Smoke is a good thing， and the demand for peripheral operations is high,煙幕は良いものです、外周戦闘での需要は高い`,
+	Hint_Value_62	: `如果身上有负面效果，即使躲藏在烟雾中也会被敌人发现,如果身上有負面效果，即使躲藏在煙霧中也會被敵人發現,If there are debuff effects on the body， even hiding in the smoke will be detected by the enemy,デバフがかかっている場合は、煙幕の中に隠れていても敵に検知されます`,
+	Hint_Value_63	: `如果敌人身上有负面效果，即使躲藏在黑暗中也可以被队友发现,如果敵人身上有負面效果，即使躲藏在黑暗中也可以被隊友發現,If the enemy has debuff effects， even hiding in the dark can be detected by teammates,敵がデバフ効果を持っている場合、暗闇に隠れていても隊員が敵を見つけることができます`,
+	Hint_Value_64	: `善用元素反应效果有奇效,善用元素反應效果有奇效,Effectively using elements to react with extraordinary effects,元素反応効果を活用すると驚異的な効果が得られます`,
+	Hint_Value_65	: `电磁效果对护盾有奇效,電磁效果對護盾有奇效,Electromagnetic effects have a miraculous effect on shields,電磁効果はシールドに対して驚異的な効果を発揮できます`,
+	
+	},
+	
+};
+
+})();
+</script>
+
+
+
+</div> <!--main--->
+
+
+
+<div id="pub_foot">
+	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="pub_tool">
+	<div id="pub_toolPack">
+		<button id="pub_toolBackToTop" type="button" title="Back to Top"><i class="fas fa-angles-up"></i></button>
+		<button id="pub_toolNavigated" type="button" title="Switch Link"><i class="fas fa-list-ul"></i></button>
+		<div id="pub_toolAnchorTip">
+			<a href="#heading01">01. 入门教程</a>
+			<a href="#heading02">02. 结算提示</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>if(location.hostname === 'xjwiki.github.io'){ document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJKKVNP3TC"><\/script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-HJKKVNP3TC");<\/script>`) }else if(location.hostname.includes('192.168.') === false){ document.write(`<script>!function(a,b,c){var d,e,f,g,h;for((b[c]=b[c]||[]).push(function(){try{b.yaCounter97880532=new Ya.Metrika({id:97880532,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(a){}}),d=a.getElementsByTagName("script")[0],e="https://mc.yandex.ru/metrika/watch.js",f=a.createElement("script"),g=function(){d.parentNode.insertBefore(f,d)},h=0;h<document.scripts.length;h++)if(document.scripts[h].src===e)return;f.type="text/javascript",f.async=!0,f.src=e,"[object Opera]"==b.opera?a.addEventListener("DOMContentLoaded",g,!1):g()}(document,window,"yandex_metrika_callbacks");<\/script>`) };</script>
+</body>
+</html>
+
+

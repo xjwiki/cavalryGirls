@@ -383,9 +383,12 @@ xj2._dirLinksContent = $(/*html*/`
 			
 			<li><a href="./${istIndex?'page/':''}data_others_priority.html">							<i class="xjDir-icon fas fa-scale-balanced"></i>		<i class="xjDir-text"><span>商品权重</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_achieved.html">							<i class="xjDir-icon fas fa-trophy"></i>				<i class="xjDir-text"><span>成就系统</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_advanced.html">							<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_clothing.html">							<i class="xjDir-icon fas fa-shirt"></i>					<i class="xjDir-text"><span>换装造型</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_dialogue.html">							<i class="xjDir-icon fas fa-comment-dots"></i>			<i class="xjDir-text"><span>台词对白</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_parlance.html">							<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>术语提示</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_advanced.html">							<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_parlance.html">							<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>名词解析</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_tutorial.html">							<i class="xjDir-icon fas fa-bell"></i>					<i class="xjDir-text"><span>教程提示</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_announce.html">							<i class="xjDir-icon fas fa-newspaper"></i>				<i class="xjDir-text"><span>时政新闻</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_question.html">							<i class="xjDir-icon fas fa-circle-question"></i>		<i class="xjDir-text"><span>问题合集</span></i></a></li>
 		</ul>
 	</li>
@@ -404,7 +407,7 @@ xj2._dirLinksContent = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-square-plus"></i>	<i class="xjDir-text">衍生内容</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./${istIndex?'page/':''}ertra_wiki_update.html">								<i class="xjDir-icon fas fa-rotate"></i>				<i class="xjDir-text"><span>网站更新</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}extra_wiki_update.html">								<i class="xjDir-icon fas fa-rotate"></i>				<i class="xjDir-text"><span>网站更新</span></i></a></li>
 			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/images/">				<i class="xjDir-icon fas fa-paintbrush"></i>			<i class="xjDir-text"><span>艺术作品</span></i></a></li>
 			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/workshop/">				<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>创意工坊</span></i></a></li>
 		</ul>

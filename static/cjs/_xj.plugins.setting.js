@@ -27,8 +27,8 @@ xj.rippleOption['0.5.1'] = {};
 // xj.basic
 if(!xj.basicConfig){ xj.basicConfig = {} };
 if(!xj.basicOption){ xj.basicOption = {} };
-xj.basicConfig['0.5.0'] = {};
-xj.basicOption['0.5.0'] = {};
+xj.basicConfig['0.5.1'] = {};
+xj.basicOption['0.5.1'] = {};
 
 // xjArrive
 if(!xj.Arrive){ xj.Arrive = {} };

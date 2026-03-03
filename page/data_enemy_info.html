@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -14,11 +14,11 @@
 <script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
 
 <link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
-<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
 <script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
 <script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
 <script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
-<script src="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
 
 <link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
 <script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -234,7 +234,7 @@
 <p class="p-unset">01. 项目图片: 被收录到图鉴中的敌人才拥有预览图, 但部分未被收录的也根据相似性提供了现成的图片, 只是未必完全匹配, 仅供参考</p>
 <p class="p-unset">02. 项目序号: 这是表格默认排序的参照, 可以通过该参数得知敌人的总数(不过有些敌人的造型是相同的, 只是部分参数有所区别而已)</p>
 <p class="p-unset">03. 项目名称: 为了排版的美观以及实现同类敌人的关联性, 所以 XJ 略微调整了一些敌人名称, 但这无关紧要, 反正看图也能识别出来</p>
-<p class="p-usual">04. 项目代码: 在剧情模式中(仅最简单的故事难度下), 可以在训练场调出敌人进行测试, 在战略界面输入敌人代码即可唤出对应的敌人</p>
+<p class="p-usual">04. 项目代码: 在剧情模式中(仅最简单的故事难度下), 可以在训练场调出敌人进行测试, 在战略面板输入敌人代码即可唤出对应的敌人</p>
 
 <p class="p-usual">05. 基础血量: 训练场中的测试模型拥有 1 亿 HP(它并非无敌, 也可以被打爆), 其次是[灾厄沙虫(一百万)/沙虫(六十万)/主宰(十万)]</p>
 
@@ -328,7 +328,7 @@
 
 <p>掉落机制: 击倒敌人后, 敌人可能会掉落金币或血包, 但并非所有模式都会有掉落, 例如每日挑战只会掉落血包, 而剧情模式只会掉金币, 如果某个模式会同时掉落金币和血包, 则 <c>75%</c> 的概率是金币而 <c>25%</c> 的概率是血包, 仅那些最大生命值 <c>>= 300</c> 的敌人且死亡时不是处于溶解状态才可能掉落(但溶解并不影响残骸回收), 而那些解体电力 <c><3</c> 的敌人有 <c>(3-解体电力)÷2</c> 的概率不会掉落任何物品</p>
 
-<p>掉落价值: 敌人掉落金币和血包时, 有个"参考价值", 算法为 <c>解体电力÷3</c>, 最大为 <c>30</c>, 敌人可能会生成多个金币和血包, 这是因为"参考价值"会被划分成几份来给金币和血包赋值, 划分方式是循环的, 当参考价值 <c>>0</c> 时, 以 <c>1 ~ 参考价值</c> 为范围随机出这次循环的掉落物的价值, 可将其称之为 <c>ThisPrice</c>, 只生成金币时, 为了金币掉落数多一点 <c>ThisPrice</c> 会再次以 <c>(1~ThisPrice)÷2-1</c> 为范围随机重新赋值, 金币的价值既 <c>ThisPrice</c>, 而血包的回复量为 <c>ThisPrice×40</c>, 参考价值会减去 ThisPrice 然后再进行下次循环</p>
+<p>掉落价值: 敌人掉落金币和血包时, 有个"参考价值", 算法为 <c>解体电力÷3</c>, 最大为 <c>30</c>, 敌人可能会生成多个金币和血包, 这是因为"参考价值"会被划分成几份来给金币和血包赋值, 划分方式是循环的, 当参考价值 <c>>0</c> 时, 以 <c>1 ~ 参考价值</c> 为范围随机出这次循环的掉落物的价值, 可将其称之为 <c>ThisPrice</c>, 只生成金币时, 为了金币掉落数多一点 <c>ThisPrice</c> 会再次以 <c>(1~ThisPrice)÷2-1</c> 为范围随机重新赋值, 金币的价值既 <c>ThisPrice</c>, 而血包的回复量为 <c>ThisPrice×40</c>, 参考价值会减去 <c>ThisPrice</c> 后再进行下次循环</p>
 
 <p>————</p>
 
@@ -3177,7 +3177,7 @@ filterFunction();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
 </div>
 </div>
 </div>

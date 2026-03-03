@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-01-26T04:00:12UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-02T20:50:16UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -14,11 +14,11 @@
 <script>document.addEventListener('DOMContentLoaded', function(){ FastClick.attach(document.body) }, false);</script>
 
 <link rel="stylesheet" href="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.css" />
-<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.css" />
+<link rel="stylesheet" href="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.css" />
 <script src="../static/plugin/xj.viewport/0.3.2/dist/xj.viewport.min.js"></script>
 <script src="../static/plugin/xj.storage/0.2.2/dist/xj.storage.min.js"></script>
 <script src="../static/plugin/xj.ripple/0.5.1/dist/xj.ripple.min.js"></script>
-<script src="../static/plugin/xj.basic/0.5.0/dist/xj.basic.min.js"></script>
+<script src="../static/plugin/xj.basic/0.5.1/dist/xj.basic.min.js"></script>
 
 <link rel="stylesheet" href="../static/plugin/fortawesome/6.7.2/css/all.min.css" />
 <script src="../static/plugin/fastclick/1.0.6/lib/fastclick.min.js"></script>
@@ -42,8 +42,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-01-26T04:00:12UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-01-26T04:00:12UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-02T20:50:16UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-02T20:50:16UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -358,9 +358,15 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p>无尽模式的间隔因素: 每批敌人的数量由"每组价值"所决定(小于"资金奖励"但大于"剧情价值"), 每个敌人出现的间隔为 <c>0.25</c> 秒, 而两批敌人出现的间隔时间就是"间隔因素"乘以这些敌人的"生成间隔"之和, 大于 20 秒则等于 20 秒(敌人的"生成间隔"可参阅 <a href="./data_enemy_info.html">敌军情报.html</a>), 在无尽模式中, 两批敌人出现的间隔时间还要除以循环次数(每 <c>40</c> 天为一循环), 既循环次数越多, 则敌人出现的间隔就越短</p>
+<p id="幸存模式的关卡数量"><nb>幸存模式的关卡数量</nb>: 从上表的数据来看, 幸存模式总共存在着 <c>74</c> 条数据, 这就意味着该模式总共有 <c>74</c> 个关卡, 但实际上, 一般通过前面的 <c>63</c> 个关卡就算完成了(打完 Boss 就能触发结算), 因为再往后的 <c>11</c> 个关卡, 只有在挑战该模式的最高难度时才会出现</p>
 
-<p>幸存模式的关卡奖励: 幸存模式的关卡奖励数据被放在了"假日安排"的数据里, 当假日安排不为空时, 那么关卡的奖励就不是随机的, 而是从预设中挑选, 如果"外勤类型"为 <c>1</c>, 就表示执行一个假日安排中的函数, 如果"外勤类型"为 <c>2</c>, 就表示获得一个假日安排的物品, 实际上随机的装备奖励也不是真的完全随机, 有的奖励还是需要获取低级装备才能解锁, 所以最好是一开始就决定好这回要玩什么武器</p>
+<p id="幸存模式的关卡奖励"><nb>幸存模式的关卡奖励</nb>: 幸存模式每通过一关, 会触发两次关卡奖励, 每次奖励可获得一件物品(随机四选一), 而关卡奖励可分为两种类型, 第一种叫固定奖励, 它会占据一次奖励次数, 但所出现的选项和内容, 都是由场景的"假日安排"这项数据所决定的, 第二种叫普通奖励(某些关卡无需作战, 触发连续奖励, 也算普通奖励), 出现什么内容取决于"物品类型"数据, 具体可参阅 <a href="./data_others_priority.html#heading02">商品权重.html # 02.幸存奖励</a></p>
+
+<p id="幸存模式的进度算法"><nb>幸存模式的进度算法</nb>: 在幸存模式的战场界面, 顶部有进度条, 需要打爆足够敌人, 将进度条填满才能进入下一关, 该进度条的最大值是 <c>TotalHonor × SurRateBase</c>, 每打爆一个敌人, 进度条会增加 <c>Price_Chan × SurRateBase</c>, <c>TotalHonor</c> 是当前关卡的荣誉奖励值, <c>Price_Chan</c> 是敌人的特殊价值(如果 <c><1</c> 则自动调整为 <c>1</c>), <c>SurRateBase</c> 则是 Base.csv 表中的变量, 默认为 <c>20</c>, 例如说, 幸存模式的首关, 进度条最大值为 <c>20×20=400</c>, 军刀的特殊价值为 <c>1</c>, 打爆可加 <c>1×20=20</c> 进度, 所以打爆 <c>400÷20=20</c> 台即可</p>
+
+<!--◇
+<p>无尽模式的间隔因素: 每批敌人的数量由"每组价值"所决定(小于"资金奖励"但大于"剧情价值"), 每个敌人出现的间隔为 <c>0.25</c> 秒, 而两批敌人出现的间隔时间就是"间隔因素"乘以这些敌人的"生成间隔"之和, 大于 20 秒则等于 20 秒(敌人的"生成间隔"可参阅 <a href="./data_enemy_info.html">敌军情报.html</a>), 在无尽模式中, 两批敌人出现的间隔时间还要除以循环次数(每 <c>40</c> 天为一循环), 既循环次数越多, 则敌人出现的间隔就越短</p>
+◇-->
 
 <!--
 <p>无尽模式: P01 展示了无尽模式的数据, 它以 <c>40</c> 天为一个循环周期, 理论上来讲, 只要你想, 它便不会结束, 与其他模式相比, 它的特殊之处还在于多了一个 <c>OutMissionMaxLoop</c> 属性, 用于决定当天的外勤任务会被循环几次, 例如第六天的外勤任务只会被循环三次, 既第四次循环(第 120 天会开始第四次循环)就不会再触发了, 现在这个参数被放在了"外勤数量"的属性里(下划线后的第二个参数便是);</p>
@@ -3944,7 +3950,7 @@ jqi_powerTable05.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTab
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.4</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.5</div>
 </div>
 </div>
 </div>
