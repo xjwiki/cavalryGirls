@@ -383,9 +383,10 @@ xj2._dirLinksContent = $(/*html*/`
 			
 			<li><a href="./${istIndex?'page/':''}data_others_priority.html">							<i class="xjDir-icon fas fa-scale-balanced"></i>		<i class="xjDir-text"><span>商品权重</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_achieved.html">							<i class="xjDir-icon fas fa-trophy"></i>				<i class="xjDir-text"><span>成就系统</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_advanced.html">							<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
+			<li><a href="./${istIndex?'page/':''}data_others_sponsors.html">							<i class="xjDir-icon fas fa-trademark"></i>				<i class="xjDir-text"><span>厂商冠名</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_clothing.html">							<i class="xjDir-icon fas fa-shirt"></i>					<i class="xjDir-text"><span>换装造型</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_dialogue.html">							<i class="xjDir-icon fas fa-comment-dots"></i>			<i class="xjDir-text"><span>台词对白</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_advanced.html">							<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_parlance.html">							<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>名词解析</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_tutorial.html">							<i class="xjDir-icon fas fa-bell"></i>					<i class="xjDir-text"><span>教程提示</span></i></a></li>
 			<li><a href="./${istIndex?'page/':''}data_others_announce.html">							<i class="xjDir-icon fas fa-newspaper"></i>				<i class="xjDir-text"><span>时政新闻</span></i></a></li>

@@ -4,13 +4,13 @@
 /* xj.base 默认字体并不是等间距的，但做文档还是等间距字体更好，所以在这里重新设置一次 Iosevka */
 /* 黑白主题的内容还不完善，不少插件有待改进就暂不启用了，把文本打散换行在移动端小屏幕会好看些 */
 
-@font-face{font-family:"Iosevka";font-weight:normal;font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Regular.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:bold;  font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Bold.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:normal;font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-Oblique.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:bold;  font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-BoldOblique.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Regular.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Bold.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-Oblique.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-BoldOblique.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
 
-@font-face{font-family:"NotoSans";font-weight:normal;font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Regular.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
-@font-face{font-family:"NotoSans";font-weight:bold;  font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Bold.woff2?time=2026-03-02T20:50:16UTC+8") format('woff2');}
+@font-face{font-family:"NotoSans";font-weight:normal;font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Regular.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"NotoSans";font-weight:bold;  font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Bold.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
 
 .xj-basic-white{
 --xj-bodyGradient:rgba(204,204,204,0.5);
@@ -181,7 +181,6 @@ html:not([lang|="zh"]) .powerTable thead th span b{letter-spacing:0px!important;
 /*--------------------------------------------------------------------------------------------*/
 
 /* 自定义中日韩英控制标签, 留着一份原生中文不设置 lang="xx" translate="no" 属性, 方便机翻处理 */
-
 zh-hans-i, zh-hant-i, ja-i, ko-i, en-i, ud-i{display:inline;}
 zh-hans-b, zh-hant-b, ja-b, ko-b, en-b, ud-b{display:block;}
 zh-hans-t, zh-hant-t, ja-t, ko-t, en-t, ud-t{display:table;}
@@ -211,12 +210,20 @@ html:not([lang="ud"]) :is(ud-i, ud-b, ud-t, ud-f, ud-g, ud-ib, ud-it, ud-if, ud-
 h{display:none!important;}
 
 /* 使用自定义 c 标签代替 code, 一方面输入更短, 另一方面浏览器翻译的时候也不会当作代码而不翻译 */
-
-c{padding:0 0.5em;color:#f39;vertical-align:bottom;font-family:var(--xj-codeText);background-color:var(--xj-f0f0f0);}
+c{padding:0 0.5em;color:#f39;vertical-align:bottom;background-color:var(--xj-f0f0f0);}
 
 /* 既 native bold, italic, 仅限环境有加粗或倾斜字体的情况, 不允许浏览器自动合成, 避免影响宽度 */
+/* notoSans 字体只能它们自己使用, 如果设为全局, ib 标签会出现采用多种不同字体混排而出错的情况 */
 
 ni{font-style:italic;font-synthesis:none;}
 nb{font-weight:bolder;font-synthesis:none;}
+
+html:is([lang|="zh"]) :is(ni,nb){font-family:var(--xj-codeFont-notoSans);}
+html:not([lang|="zh"]) :is(ni,nb){font-family:var(--xj-textFont-notoSans);}
+
+:is(ni,nb){
+--xj-codeFont-notoSans:"Iosevka", "Iosevka Fixed", "Menlo", "Consolas", 
+"Liberation Mono", "Courier New", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans CN", "NotoSans", monospace;
+--xj-textFont-notoSans:"-apple-system", "Segoe UI", "Roboto", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans CN", "NotoSans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;}
 
 
