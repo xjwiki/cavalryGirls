@@ -145,7 +145,7 @@
 
 <section><h2 id="heading02">02. 额外拓展</h2>
 
-<p id="关于众筹"><nb>关于众筹</nb>: 铁骑少女的众筹开始于 2024-09-20, 结束于 2024-11-19, 共 60 天, 它于 <a target="_blank" href="https://m.modian.com/project/135094.html">摩点</a> / <a target="_blank" href="https://www.kickstarter.com/projects/wehavegoodgame/cavalry-girls-dlc">Kick Starter</a> / <a target="_blank" href="https://ci-en.net/creator/25654">CIEN Page</a> 这 3 个平台同步进行, 除了游戏本体和 DLC, 众筹还根据支持的档次, 提供了丰富的周边回赠, 得益于众多热心玩家的鼎力支持, 最后共计募集到了 <c>330907.06</c> 元(人民币), 而厂商冠名, 便是众筹回报中的一项, 如果你想了解更多细节, 可前往三个众筹相关页面或 <a href="https://docs.qq.com/sheet/DUGRCaHNqWUhMUFdK?tab=BB08J2">更新计划表</a> 查阅</p>
+<p id="关于众筹"><nb>关于众筹</nb>: 铁骑少女的众筹开始于 2024-09-20, 结束于 2024-11-19, 共 60 天, 它于 <a target="_blank" href="https://m.modian.com/project/135094.html">摩点</a> / <a target="_blank" href="https://www.kickstarter.com/projects/wehavegoodgame/cavalry-girls-dlc">Kick Starter</a> / <a target="_blank" href="https://ci-en.net/creator/25654">CIEN Page</a> 这 3 个平台同步进行, 除了游戏本体和 DLC, 众筹还根据支持的档次, 提供了丰富的周边回赠, 得益于众多热心玩家的鼎力支持, 最后共计募集到了 <c>330907.06</c> 元(人民币), 而厂商冠名, 便是众筹回报中的一项, 如果你想了解更多细节, 可前往三个众筹相关页面或 <a target="_blank" href="https://docs.qq.com/sheet/DUGRCaHNqWUhMUFdK?tab=BB08J2">更新计划表</a> 查阅</p>
 
 </section>
 
@@ -5399,7 +5399,7 @@ csv0.forEach(function(item, index, array){
 	item.冠名状态 = {code:'', text:'', };
 	item.冠名状态.text = (function(){
 		if(item.原型研发.code === ''){ return item.冠名状态.code = '' };
-		if(/^company_/i.test(item.原型研发.code) === true){ return item.冠名状态.code = '✔' }else{ return item.冠名状态.code = '-' };
+		if(/^company_/i.test(item.原型研发.code) === true){ return item.冠名状态.code = '<i class="fas fa-check"></i>' }else{ return item.冠名状态.code = '--' };
 	})();
 	
 	item.冠名厂商 = {code:'', text:'', };
