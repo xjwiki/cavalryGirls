@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -105,6 +108,9 @@
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
 	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
+	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
 </div>
@@ -129,6 +135,22 @@
 		改进: isGlobal -> 升级 xj.basic 框架(0.5.1 -> 0.5.2)<br />
 	</p>
 ◇-->
+
+<div><h4><b>V0.2.7(2026-03-18)</b></h4><p>概述: 本次更新并没有添加什么实质性的新内容, 只是在头部做了一个辅助翻译的按钮, 实际上, 在当前项目的数据表格里, 项目名称和文本描述本来就是经过特殊处理的, 即便调用了浏览器的自动翻译, 这两个部分的文本在翻译后, 结果也会和游戏内的文本保持高度一致</p>
+	<p>
+		新增: isGlobal -> 头部的翻译按钮<br />
+	</p>
+	<p>
+		修复: 厂商冠名 -> "更新计划表"链接被错误的跳转<br />
+		修复: isGlobal -> 表格中省略文本出现了错误换行<br />
+	</p>
+	<p>
+		改进: 厂商冠名 -> 强调表格的冠名状态, 加粗符号(可视性更好了)<br />
+		改进: isGlobal -> 扩大了多语言翻译的样式匹配项(更加的精准了)<br />
+		改进: isGlobal -> 比对了近期更新的内容, 同步了许多数据和文本<br />
+	</p>
+</div>
+<p>————</p>
 
 <div><h4><b>V0.2.6(2026-03-14)</b></h4><p>概述: 本次更新了百科项目所依赖的基础库和 UI 框架, 并同步了游戏最近几次更新所添加的装备(包括[武器/配件/融合]), 但由于新加的温度系统较为复杂, 所以这部分还未进行深入的剖析, 除此之外, 还添加了厂商冠名的新页面(众筹金主名单), 并修正了许多文本内容</p>
 	<p>
@@ -417,7 +439,7 @@
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

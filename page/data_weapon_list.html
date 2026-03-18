@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -456,7 +462,7 @@
 
 <p id="肩扛火炮"><nb>15. 肩扛火炮</nb>: 肩扛火炮在发射时, 会射出 <c>3</c> 种不同类型的炮弹(共计是 <c>11</c> 发), 不同类型的炮弹, 伤害也不相同, 如果全部命中, 大约可造成 <c>(900×3) + (600×5) + (1200×3) = 9300</c> 点伤害, 既平均每颗子弹的伤害为 <c>9300 ÷ 11 ≈ 845</c>, 但由于炮弹的爆点不同, 所以能对敌人造成一半的伤害就已经算不错了, 也因此, 在上面的表格中, 该武器的子弹伤害值也是粗略的采用均值既 <c>9300/2 = 4650</c></p>
 
-<p id="肩扛火箭炮"><nb>16. 肩扛火箭炮</nb>: 火箭炮射出的是导弹, 导弹带有追踪功能, 但并不是特别精准, 所以不要指望能准确命中, 导弹还可分为两种, 一种是动能类型的, 一种是高爆类型的, 动能类型的击中后会自动消失, 高爆类型的击中后会自动爆炸, 而火箭炮射出的便是高爆类导弹, 由于系统限制, 机体于短时间内受到爆炸伤害的最大次数为 <c>3</c>, 所以它的威力可能不如预期那么高, 关于爆炸, 细节可参考 <a href="./data_manage_parlance.html">术语名词.html</a></p>
+<p id="肩扛火箭炮"><nb>16. 肩扛火箭炮</nb>: 火箭炮射出的是导弹, 导弹带有追踪功能, 但并不是特别精准, 所以不要指望能准确命中, 导弹还可分为两种, 一种是动能类型的, 一种是高爆类型的, 动能类型的击中后会自动消失, 高爆类型的击中后会自动爆炸, 而火箭炮射出的便是高爆类导弹, 由于系统限制, 机体于短时间内受到爆炸伤害的最大次数为 <c>3</c>, 所以它的威力可能不如预期那么高, 关于爆炸, 细节可参考 <a href="./data_others_parlance.html">术语名词.html</a></p>
 
 <!--
 01. 武器升级时, 使用资金填补差价的算法: 武器升级的时候, 起码需要一份材料, 如果材料的价格不足以弥补差价, 可以使用资金填补, 但是武器的等级越高, 需要填补的差价也就越大, 算法为 <c>当前武器等级 × 材料价格</c>, 例如, LV4 的轻机枪要升级到 LV5, 只需要 4 把 LV1 的轻机枪作为武器, 每一把轻机枪的价格为 60, 所以材料价格就是 4×60=240, 但如果你材料不够, 例如当前你只有 1 把轻机枪, 那就需要使用资金弥补另外 3 把轻机枪的缺口, 此时资金的需求就是 <c>3 × 60 × 4 = 720</c>, 其中的 3 是缺少的轻机枪数量, 其中的 60 是轻机枪的价格, 其中的 4 是当前武器的等级 ———— 这样理解对吗?
@@ -551,9 +557,10 @@ height:20px;text-align:center;line-height:20px;cursor:default;}
 #prevPart{flex:1 1 auto;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -687,9 +694,6 @@ SpecialParam -> Special:3 属性: 近战武器的特判, 3 是镰刀的回旋攻
 
 // 物品属性
 let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
-
-// -1,Missing,-1,None,Missing Item\nItemID: {0},,1,||||,,0,999,-2,0,0,0,0,,,,,0,1
-// 1001,,1001,None,,,1,,,9999,999,-2,0,0,0,0,,,,,1,1
 
 10000,#老式步枪,1000,Weapon,#最基础的武器，换弹夹快可能是唯一的优点\n较轻，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:0|AddSpeed:-5|AddRotSpeed:-5,Company_10000,8,0,1,2,4,1,3,10100|10001|10009|10019|10038|10043,40001_3|40008_1|40005_1,,,3,
 10100,#老式步枪B2,10100,Weapon,#对老式步枪进行了强化，增加了装弹量并轻微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:100|AddSpeed:-10|AddRotSpeed:-10,Company_10000,16,21,2,3,5,2,4,10200|10201|10219|10138|10143,,10000,,58,
@@ -1413,20 +1417,20 @@ let csv1 =(`// Weapons,Projectile,Image,Sound,ClipSound,FireRate,AngleFloat,Fire
 // 额外数据
 1252,BulletExplodeBig2,1252,7_CAN,,0.6,5,2,1,24,0,0,0,0,0,CaseSmoke2,0,,,2694,
 1253,BulletExplodeMega,1253,CAN2,,1,10,1,1,40,0,0,0,0,0,CaseSmoke2,0,,,2694,
-1254,BulletBigAntiair,1254,MG,,0.05,10,18,1,22,0,0,0,0,0,CaseSmoke,0,,,,		
-1255,BulletLargeMinuAntiAir,1255,5_HRF,,0.05,12,24,1,36,0,0,0,0,0,CaseSmoke,0,,,,		
-1250,BulletExplodeFollowShoulder,1250,Missile2,,0.15,120,10,1,30,0,0,0,0,0,CaseSmoke,0,,,,		
-1251,BulletExplodeFollowShoulder,1251,Missile2,,0.1,120,15,1,48,0,0,0,0,0,CaseSmoke,0,,,,		
-1256,ShoulderEMP,1256,EMP1,,0,0,0,1,45,0,0,0,0,0,,0,,,,		
-1257,ShoulderEMP2,1257,EMP2,,0,0,0,1,55,0,0,0,0,0,,0,,,,		
-1258,BulletExplodeFollowAntiAir,1258,Missile2,,0.15,120,14,1,20,0,0,0,0,0,CaseSmoke,0,,,,		
-1259,BulletExplodeFollowAntiAir,1259,Missile2,,0.1,120,20,1,30,0,0,0,0,0,CaseSmoke,0,,,,		
-1260,RayNormalLong3,1260,Laser 03,,1,0,10,1,55,0,0,0,0,0,,0,,,,		
-1261,RayNormalLong4,1261,Laser 03,,0.9,0,15,1,72,0,0,0,0,0,,0,,,,		
-1262,BulletExplodeFollowShoulder,1262,Missile2,,0.1,150,6,1,20,0,0,0,0,0,CaseSmoke,0,,,,		
-1263,BulletExplodeFollowShoulder,1263,Missile2,,0.18,0,1,1,50,0,0,0,0,0,CaseSmoke,0,,,,		
+1254,BulletBigAntiair,1254,MG,,0.05,10,18,1,22,0,0,0,0,0,CaseSmoke,0,,,,
+1255,BulletLargeMinuAntiAir,1255,5_HRF,,0.05,12,24,1,36,0,0,0,0,0,CaseSmoke,0,,,,
+1250,BulletExplodeFollowShoulder,1250,Missile2,,0.15,120,10,1,30,0,0,0,0,0,CaseSmoke,0,,,,
+1251,BulletExplodeFollowShoulder,1251,Missile2,,0.1,120,15,1,48,0,0,0,0,0,CaseSmoke,0,,,,
+1256,ShoulderEMP,1256,EMP1,,0,0,0,1,45,0,0,0,0,0,,0,,,,
+1257,ShoulderEMP2,1257,EMP2,,0,0,0,1,55,0,0,0,0,0,,0,,,,
+1258,BulletExplodeFollowAntiAir,1258,Missile2,,0.15,120,14,1,20,0,0,0,0,0,CaseSmoke,0,,,,
+1259,BulletExplodeFollowAntiAir,1259,Missile2,,0.1,120,20,1,30,0,0,0,0,0,CaseSmoke,0,,,,
+1260,RayNormalLong3,1260,Laser 03,,1,0,10,1,55,0,0,0,0,0,,0,,,,
+1261,RayNormalLong4,1261,Laser 03,,0.9,0,15,1,72,0,0,0,0,0,,0,,,,
+1262,BulletExplodeFollowShoulder,1262,Missile2,,0.1,150,6,1,20,0,0,0,0,0,CaseSmoke,0,,,,
+1263,BulletExplodeFollowShoulder,1263,Missile2,,0.18,0,1,1,50,0,0,0,0,0,CaseSmoke,0,,,,
 `)
-.split(/\n/).filter(function(e){ return /^\d/.test(e) }).map(function(e){ return e.split(',') });
+.split(/\n/).filter(function(e){ return /^\w/.test(e) }).map(function(e){ return e.split(',') });
 
 // 子弹参数
 let csv2 =(`// Bullets,Prefab,BulletRange,BulletSpeed,Damage,AntiAir,MaxHit,StrayPos,PiercingPossibility,CriticDamage,CriticPossibility,FireType,fireFlash,SetParent,MinRange,Debuff,Kinetic,SpecialParam
@@ -1959,8 +1963,8 @@ let textList = {
 	
 	10006 : `冲锋枪`							+ ` # 冲锋枪,衝鋒槍,Submachine Gun,短機関銃`,
 	10106 : `冲锋枪S5`							+ ` # 冲锋枪S5,衝鋒槍S5,Submachine Gun S5,短機関銃S5`,
-	10206 : `冲锋枪S5M`							+ ` # 冲锋枪S5m0,衝鋒槍S5m0,Submachine Gun S5m0,短機関銃S5m0`,
-	10306 : `冲锋枪S5M1`						+ ` # 冲锋枪S5M,衝鋒槍S5M,Submachine Gun S5M,短機関銃S5M`,
+	10206 : `冲锋枪S5M`							+ ` # 冲锋枪S5M,衝鋒槍S5M,Submachine Gun S5M,短機関銃S5M`,
+	10306 : `冲锋枪S5M1`						+ ` # 冲锋枪S5m0,衝鋒槍S5m0,Submachine Gun S5m0,短機関銃S5m0`,
 	10406 : `冲锋枪S5M10`						+ ` # 冲锋枪S5M10,衝鋒槍S5M10,Submachine Gun S5M10,短機関銃S5M10`,
 	
 	10021 : `冲锋枪B2`							+ ` # 冲锋枪B2,衝鋒槍B2,Submachine Gun B2,短機関銃B2`,
@@ -2055,7 +2059,7 @@ let textList = {
 	10228 : `光线枪`							+ ` # 光线步枪,光線步槍,Nightstar Beamcaster,ビームライフル`,
 	
 	10027 : `切割射线`							+ ` # 切割射线,切割射線,Slicing Ray,カッティング光線`,
-	10127 : `切割射线M`							+ ` # 切割射线M,切割射線M,Slicing Ray M,カッティングレイM`,
+	10127 : `切割射线M`							+ ` # 切割射线M,切割射線M,Slicing Ray M,カッティング光線M`,
 	
 	10028 : `长焦射线`							+ ` # 长焦射线,長焦射線,Telephoto Ray,長焦点光線`,
 	10128 : `长焦射线S`							+ ` # 长焦射线S,長焦射線S,Telephoto Ray S,長焦点光線S`,
@@ -2292,8 +2296,8 @@ let textList = {
 	1258  : `肩扛式防空导弹`					+ ` # 肩扛式防空导弹,肩扛式防空導彈,Shoulder-mounted Anti-air missile Launcher,肩発射式防空ミサイル`,
 	1259  : `重型肩扛式防空导弹`				+ ` # 重型肩扛式防空导弹,重型肩扛式防空導彈,Heavy Shoulder-mounted Anti-air missile Launcher,重装肩発射式防空ミサイル`,
 	
-	1260  : `肩扛式切割射线`					+ ` # 肩扛式切割射线,肩扛式切割射線,Shoulder-mounted Slicing Ray,肩発射式カッティングレイ`,
-	1261  : `肩扛式重型切割射线`				+ ` # 肩扛式重型切割射线,肩扛式重型切割射線,Heavy Shoulder-mounted Slicing Ray,重型肩発射式カッティングレイ`,
+	1260  : `肩扛式切割射线`					+ ` # 肩扛式切割射线,肩扛式切割射線,Shoulder-mounted Slicing Ray,肩発射式カッティング光線`,
+	1261  : `肩扛式重型切割射线`				+ ` # 肩扛式重型切割射线,肩扛式重型切割射線,Heavy Shoulder-mounted Slicing Ray,重型肩発射式カッティング光線`,
 	
 	1262  : `强袭型双向飞弹`					+ ` # 强袭型双向飞弹,強襲型雙向飛彈,Strike-Type Dual Missile Launcher,強襲式ツインミサイル`,
 	1263  : `肩扛弹道破甲弹`					+ ` # 肩扛式弹道破甲弹,肩扛式彈道破甲彈,Shoulder-mounted ballistic armor piercing rocket Launcher,肩発射式弾道破甲ロケットランチャー`,
@@ -2401,7 +2405,7 @@ let textList = {
 	10500 : `由皇帝下令设计生产的步枪, 高穿甲无视护盾, 两段伤害(击中还会爆炸)`		+ ` # 由皇帝陛下下令，皇家设计局设计并建造的最新步枪，被誉为帝国打赢战争的关键，虽然因为产能不足，只能装备给皇家卫队，高穿甲无视护盾，两段伤害，击中后 0.1S 爆炸,由皇帝陛下下令，皇家設計局設計並建造的最新步槍，被譽為帝國打贏戰爭的關鍵，雖然因為產能不足，只能裝備給皇家衛隊，高穿甲無視護盾，兩段傷害，擊中後 0.1S 爆炸,This rifle was designed and constructed by the Royal Design Bureau under the order of the Emperor and was praised as the key for the empire to win the war，Due to insufficient production capacity，it can only be equipped to the Royal Guard，High armor penetration rate，ignores shields，deals DMG twice，and explodes 0.1S after hitting,皇帝陛下の命により，王立設計局が開発・製造した最新鋭ライフル，帝国の勝利を支える切り札と称されているが，生産数が限られており，王室親衛隊のみが装備を許されている，高装甲貫通力，シールド無視，二段階ダメージ，命中から 0.1 秒後に爆発`,
 	
 	10019 : `特化版的老式步枪, 这是只能单发的武器, 不过这也意味着没有开火空挡`		+ ` # 只能单发的武器，不过这也意味着不会有开火空挡,只能單發的武器，不過這也意味著不會有開火空擋,While it only fires single-shots，there is no gap between firing,単発だけの武器，これは射撃の隙がなくなるということでも意味する `,
-	10119 : `老式步枪A1的强化型号, 进一步降低了枪身损耗, 可长时间使用不会老化`		+ ` # 老式步枪A1的强化型号，进一步降低了枪身损耗,老式步槍A1的強化型號，進一步降低了槍身損耗,An enhanced version of the antique rifle A1 with lower wear rate,旧式小銃A1の強化モデル，銃本体の摩耗をさらに低減した`,
+	10119 : `老式步枪A1的强化型号, 进一步降低了枪身损耗, 可长时间使用不会老化`		+ ` # 老式步枪A1的强化型号，进一步降低了枪身损耗,老式步槍A1的強化型號，進一步降低了槍身損耗,An enhanced version of the antique rifle A1 with lower Weapon durability decreases,旧式小銃A1の強化モデル，銃本体の摩耗をさらに低減した`,
 	10219 : `老式步枪A1S 强化型号, 全属性得到强化, 并增加了自动锁定功能的机关`		+ ` # 老式步枪A1S的强化型号，进行了进一步全属性强化，增加了自动锁定功能的机关,老式步槍A1S的強化型號，進行了進一步全屬性強化，新增了自動鎖定功能的機關,An enhanced version of the antique rifle A1S with all stats improved，Automatic locking function added,旧式小銃A1Sの強化モデル，全ステータスをさらに強化した，オートロック機能を追加した`,
 	10319 : `可射出多发子弹的智能枪械, 子弹会从多个角度追踪敌人, 以确保命中率`		+ ` # 一种同时射击多发子弹的智能枪械，会从多个角度追踪敌人，以确保命中,一種同時射擊多發子彈的智能槍械，會從多個角度追蹤敵人，以確保命中,A smart gun that can fire multiple bullets at a time，It will track the enemy from multiple angles to ensure a 100% hit,複数の弾丸を同時に発射するスマート銃器，角度を問わず敵を追尾し，高い命中率を誇る`,
 	
@@ -2458,7 +2462,7 @@ let textList = {
 	// --
 	
 	10006 : `射速非常快的压制形武器, 输出效率很高, 但是穿甲能力较弱(重量适中)`		+ ` # 射速非常快的压制武器，输出很高，但是穿甲能力较弱，重量适中,射速非常快的壓制武器，輸出很高，但是穿甲能力較弱，重量適中,A suppressing weapon with high firing rate，damage，and weak Armor Penetration，Medium weight,発射速度が非常に速く，火力が高いが，装甲貫通能力が弱い制圧兵器，重量中等`,
-	10106 : `对冲锋枪进行了强化, 通过牺牲少量装弹的时间, 降低了武器的老化概率`		+ ` # 对冲锋枪进行了强化，牺牲少量装弹时间降低了老化率,對衝鋒槍進行了強化，犧牲少量裝彈時間降低了老化率,An enhanced submachine gun with lower wear rate at the cost of slightly higher reload time,短機関銃を強化し，リロード時間を少し犠牲にすることで劣化率を減少した`,
+	10106 : `对冲锋枪进行了强化, 通过牺牲少量装弹的时间, 降低了武器的老化概率`		+ ` # 对冲锋枪进行了强化，牺牲少量装弹时间降低了老化率,對衝鋒槍進行了強化，犧牲少量裝彈時間降低了老化率,An enhanced submachine gun with lower Weapon durability decreases at the cost of slightly higher reload time,短機関銃を強化し、リロード時間を少し犠牲にすることで武器耐久低下を減少した`,
 	10206 : `对冲锋枪S5进行了全面强化, 伤害和射程都有所提升, 但是重量较多增加`		+ ` # 对冲锋枪S5进行了全面强化，但是重量较多增加,對衝鋒槍S5進行了全面強化，但是重量較多增加,An enhanced version of the submachine gun S5 that weighs a lot more,短機関銃S5を全面的に強化したが，重量も大幅に増加した`,
 	10306 : `对冲锋枪S5M 进行了全面强化, 射击间隔和装弹量有所提升, 但也更重了`		+ ` # 对冲锋枪S5m进行了全面强化，但是重量较多增加,對衝鋒槍S5m進行了全面強化，但是重量較多增加,An enhanced version of the submachine gun S5m that weighs a lot more,短機関銃S5mを全面的に強化したが，重量も大幅に増加した`,
 	10406 : `对冲锋枪S5M1实现了进一步的全属性小幅增强, 伤害和弹夹容量有所提高`		+ ` # 对冲锋枪S5M进行进一步全属性较小加强,對衝鋒槍S5M進行進一步全屬性較小加強,An enhanced version of the submachine gun S5M with all stats slightly increased,短機関銃S5Mの全ステータスを更に小幅に強化したもの`,
@@ -2554,7 +2558,7 @@ let textList = {
 	10228 : `发射单次精确的光束, 可以实现二段蓄力攻击, 每段蓄力会消耗两发子弹`		+ ` # 可发射单次精确的光束，可以蓄力攻击间以发射更强的光束，可以进行二段蓄力以发射更强的光束，每段蓄力会消耗 2 发子弹,可發射單次精確的光束，可以蓄力攻擊間以發射更強的光束，可以進行二段蓄力以發射更強的光束，每段蓄力會消耗 2 發子彈,It can fire one single and highly accurate laser at a time，It can be charged for a powerful shot，You can also have a two-stage charge (using 2 bullets) to get a more powerful shot,単発高精度のビームを発射可能な武器，チャージによってより強力なビームを撃てる，二段階チャージが可能で，各段階ごとに弾丸 2 発を消費する`,
 	
 	10027 : `可发射切割的射线, 攻击不高但持久, 无视护甲(可能造成短暂高温伤害)`		+ ` # 可以发射能持续对目标进行切割的射线的武器，攻击不高但是持久，可以无视护甲，但是面对常规敌人和护盾效果较弱(射线武器有概率造成非常短暂的高温伤害),可以發射能持續對目標進行切割的射線的武器，攻擊不高但是持久，可以無視護甲，但是面對常規敵人和護盾效果較弱(射線武器有機會造成非常短暫的高溫傷害),Shoots rays that constantly slice targets，Its low damage is balanced by its constant output and the ability to ignore armor，Weak against regular enemies and shield effects(Ray weapons have a chance to cause very brief high-temperature damage),ターゲットを連続的に切り裂く光線を発射する武器，攻撃は高くないが持続時間が長く，アーマーを無視できるが，通常の敵やシールドに対する効果は弱い(光線兵器は確率でごく短時間の高温ダメージを与える)`,
-	10127 : `对切割射线进行了强化, 伤害和射程都有所提升(可能造成短暂高温伤害)`		+ ` # 对切割射线进行了小幅度的全属性强化，略微降低了寿命(射线武器有概率造成非常短暂的高温伤害),對切割射線進行了小幅度的全屬性強化，略微降低了壽命(射線武器有概率造成非常短暫的高溫傷害),An incremental all-stat enhancement has been applied to the slicing ray，resulting in a slight decrease in durability(Ray weapons have a chance to cause very brief high-temperature damage),カッティングレイの全ステータスをわずかに強化し，寿命をわずかに短縮させたモデル(光線兵器は確率でごく短時間の高温ダメージを与える)`,
+	10127 : `对切割射线进行了强化, 伤害和射程都有所提升(可能造成短暂高温伤害)`		+ ` # 对切割射线进行了小幅度的全属性强化，略微降低了寿命(射线武器有概率造成非常短暂的高温伤害),對切割射線進行了小幅度的全屬性強化，略微降低了壽命(射線武器有概率造成非常短暫的高溫傷害),An incremental all-stat enhancement has been applied to the slicing ray，resulting in a slight decrease in durability(Ray weapons have a chance to cause very brief high-temperature damage),カッティング光線の全ステータスをわずかに強化し，寿命をわずかに短縮させたモデル(光線兵器は確率でごく短時間の高温ダメージを与える)`,
 	
 	10028 : `可发射切割的射线, 攻距远但上弹久, 无视护甲(可能造成短暂高温伤害)`		+ ` # 可以发射能持续对目标进行切割的射线的武器，攻击距离远但是上弹久，可以无视护甲，但是面对常规敌人和护盾效果较弱(射线武器有概率造成非常短暂的高温伤害),可以發射能持續對目標進行切割的射線的武器，攻擊距離遠但是上彈久，可以無視護甲，但是面對常規敵人和護盾效果較弱(射線武器有機會造成非常短暫的高溫傷害),Shoots rays that constantly slice targets，Its long reload time is balanced by its long range and the ability to ignore armor，Weak against regular enemies and shield effects(Ray weapons have a chance to cause very brief high-temperature damage),ターゲットを連続的に切り裂く光線を発射する武器，攻撃距離は長いが，リロードに時間がかかる，アーマーを無視できるが，通常の敵とシールドに対する効果は弱い(光線兵器は確率でごく短時間の高温ダメージを与える)`,
 	10128 : `对长焦射线进行了强化, 寿命更长但也更加沉重(可能造成短暂高温伤害)`		+ ` # 对长焦射线进行了使用寿命的强化，使得重量增加了(射线武器有概率造成非常短暂的高温伤害),對長焦射線進行了使用壽命的強化，使得重量增加了(射線武器有概率造成非常短暫的高溫傷害),The telephoto ray has been reinforced to improve its durability，resulting in an increase in weight(Ray weapons have a chance to cause very brief high-temperature damage),長焦点光線の使用寿命を強化し，重量を増やしたモデル(光線兵器は確率でごく短時間の高温ダメージを与える)`,
@@ -2577,8 +2581,8 @@ let textList = {
 	10031 : `可发射电弧在敌人间弹射, 面对护盾的效果较弱(可能造成短暂麻痹伤害)`		+ ` # 可以发射电弧的武器，电弧能在敌人之间弹射，但是面对护盾效果较弱(电磁武器有概率造成非常短暂的麻痹伤害),可以發射電弧的武器，電弧能在敵人之間彈射，但是面對護盾效果較弱(電磁武器有機會造成非常短暫的麻痺傷害),Shoots electric arcs that bounce between enemies and are weak against shield effects(Electromagnetic weapons have a chance to cause very brief paralysis damage),電弧を発射できる武器，電磁は敵の間で跳ね返るが，シールドに対する効果が弱い(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
 	10131 : `对电弧枪进行了强化, 但同时也略微降低了寿命(可能造成短暂麻痹伤害)`		+ ` # 对电弧枪进行了小幅度的全属性强化，略微降低了寿命(电磁武器有概率造成非常短暂的麻痹伤害),對電弧槍進行了小幅度的全屬性強化，略微降低了壽命(電磁武器有機會造成非常短暫的麻痺傷害),An incremental all-stat enhancement has been applied to the arc gun，resulting in a slight decrease in durability(Electromagnetic weapons have a chance to cause very brief paralysis damage),電弧銃の全ステータスをわずかに強化し，寿命をわずかに短縮させたモデル(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
 	
-	10034 : `可发射复数的电弧, 弹射极多, 缺点是射程较近(可能造成短暂麻痹伤害)`		+ ` # 可以发射复数电弧的武器，可以发生极多次数的弹射，缺点是射程较近\n（电磁武器有概率造成非常短暂的麻痹伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n【电弧武器】,可以發射複數電弧的武器，可以發生極多次數的彈射，缺點是射程較近\n（電磁武器有機會造成非常短暫的麻痺傷害）\n機體速度<Description:1>%，轉向速度<Description:2>%\n,Shoots multiple short-range electric arcs that bounce many times between enemies.\n(Electromagnetic weapons have a chance to cause very brief paralysis damage.)\nMovement speed: <Description:1>%; Rotational speed: <Description:2>%\n[Arc weapon],複数の電弧を発射できる武器、跳ね返りの回数が非常に多いが、射程が比較的短いのが欠点\n（電磁兵器は確率でごく短時間の麻痺ダメージを与える）\n機体速度<Description:1>%、旋回速度<Description:2>%\n【電弧兵器】`,
-	10134 : `对放电炮进行强化, 弹射增加, 但是寿命变短了(可能造成短暂麻痹伤害)`		+ ` # 对放电炮进行了强化，使得电弧弹射进一步增加了，但是使用寿命变短了(电磁武器可以造成非常短暂的麻痹伤害),對放電炮進行了強化，使得電弧彈射進一步增加了，但是使用壽命變短了(電磁武器有機會造成非常短暫的麻痺傷害),Enhancements have been made to the electric cannon，resulting in increased arc projection，but with a shorter durability(Electromagnetic weapons have a chance to cause very brief paralysis damage),放電砲の強化モデル，電磁の跳ね返り回数を増やしたが，使用寿命が縮んだ(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
+	10034 : `可发射复数的电弧, 弹射极多, 缺点是射程较近(可能造成短暂麻痹伤害)`		+ ` # 可以发射复数电弧的武器，可以发生极多次数的弹射，缺点是射程较近(电磁武器有概率造成非常短暂的麻痹伤害),可以發射複數電弧的武器，可以發生極多次數的彈射，缺點是射程較近(電磁武器有機會造成非常短暫的麻痺傷害),Shoots multiple short-range electric arcs that bounce many times between enemies(Electromagnetic weapons have a chance to cause very brief paralysis damage),複数の電弧を発射できる武器，跳ね返りの回数が非常に多いが，射程が比較的短いのが欠点(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
+	10134 : `对放电炮进行强化, 弹射增加, 但是寿命变短了(可能造成短暂麻痹伤害)`		+ ` # 对放电炮进行了强化，使得电弧弹射及数量进一步增加了，但是使用寿命变短了(电磁武器可以造成非常短暂的麻痹伤害),對放電炮進行了強化，使得電弧彈射及数量進一步增加了，但是使用壽命變短了(電磁武器有機會造成非常短暫的麻痺傷害),Enhancements have been made to the electric cannon，resulting in increased arc projection and quantity，but with a shorter durability(Electromagnetic weapons have a chance to cause very brief paralysis damage),放電砲の強化モデル，電磁の跳ね返り回数および数量を増やしたが，使用寿命が縮んだ(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
 	
 	10032 : `发射长距电弧在敌人间弹射, 对护盾的效果较弱(可能造成短暂麻痹伤害)`		+ ` # 可以发射长距电弧的武器，电弧能在敌人之间弹射，但是面对护盾效果较弱(电磁武器有概率造成非常短暂的麻痹伤害),可以發射長距電弧的武器，電弧能在敵人之間彈射，但是面對護盾效果較弱(電磁武器有機會造成非常短暫的麻痺傷害),Shoots long-range electric arcs that bounce between enemies and are weak against shield effects(Electromagnetic weapons have a chance to cause very brief paralysis damage),遠距離電弧を発射できる武器，電弧は敵の間を跳ね返ることができるが，シールドに対する効果が弱い(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
 	10132 : `对长距电弧枪进行寿命强化, 但是重量也增加了(可能造成短暂麻痹伤害)`		+ ` # 对长距电弧枪进行了使用寿命的强化，使得重量增加了(电磁武器有概率造成非常短暂的麻痹伤害),對長距電弧槍進行了使用壽命的強化，使得重量增加了(電磁武器有機會造成非常短暫的麻痺傷害),The long-range arc gun has been reinforced to improve its durability，resulting in an increase in weight(Electromagnetic weapons have a chance to cause very brief paralysis damage),長距離電弧銃の使用寿命を強化し，重量を増やしたモデル(電磁兵器は確率でごく短時間の麻痺ダメージを与える)`,
@@ -2790,8 +2794,8 @@ let textList = {
 	1258 : `可发射防空导弹, 优先对空攻击`											+ ` # 在肩部挂载一台防空导弹，会优先攻击飞行单位，对飞行单位有着良好的压制能力(在战略面板启用),在肩部掛載一臺防空導彈，會優先攻擊飛行單位，對飛行單位有著良好的壓制能力(在戰略面板啟用),Mounts a rocket launcher on the shoulder that shoots Anti-air missiles，it will prioritize attacking flying units and have good suppression ability against flying units (Activated in Strategy),肩部にミサイルを発射できる防空ミサイルを搭載する、優先的に飛行ユニットを攻撃し、飛行ユニットに対して良好な制圧能力を持っている(戦略パネルで有効化できる)`,
 	1259 : `可发射防空导弹, 优先对空攻击`											+ ` # 在肩部挂载一台重型防空导弹，会优先攻击飞行单位，对飞行单位有着良好的压制能力(在战略面板启用),在肩部掛載一臺重型防空導彈，會優先攻擊飛行單位，對飛行單位有著良好的壓制能力(在戰略面板啟用),Mounts a heavy rocket launcher on the shoulder that shoots Anti-air missiles，it will prioritize attacking flying units and have good suppression ability against flying units(Activated in Strategy),肩部にミサイルを発射できる重装防空ミサイルを搭載する、優先的に飛行ユニットを攻撃し、飛行ユニットに対して良好な制圧能力を持っている(戦略パネルで有効化できる)`,
 	
-	1260 : `可发射切割射线, 威力大且持久`											+ ` # 在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久(在战略面板启用),在肩部掛載一臺切割射線，比起掌上型切割射線威力更大更持久(在戰略面板啟用),Mounts a slicing ray on your shoulder and it's more powerful and lasting than the handheld slicing ray(Activated in Strategy),肩に搭載できるカッティングレイ，手持ち型よりも長く照射でき、威力も高い(戦略パネルで有効化できる)`,
-	1261 : `可发射切割射线, 威力大且持久`											+ ` # 在肩部挂载一台重型切割射线，持续时间更久，威力也更强(在战略面板启用),在肩部掛載一臺重型切割射線，持續時間更久，威力也更強(在戰略面板啟用),Mounts a slicing ray on your shoulder and it's more powerful and lasting than the normal one(Activated in Strategy),肩に搭載できる重装カッティングレイ，より長時間照射でき、威力も高い(戦略パネルで有効化できる)`,
+	1260 : `可发射切割射线, 威力大且持久`											+ ` # 在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久(在战略面板启用),在肩部掛載一臺切割射線，比起掌上型切割射線威力更大更持久(在戰略面板啟用),Mounts a slicing ray on your shoulder and it's more powerful and lasting than the handheld slicing ray(Activated in Strategy),肩に搭載できるカッティング光線，手持ち型よりも長く照射でき、威力も高い(戦略パネルで有効化できる)`,
+	1261 : `可发射切割射线, 威力大且持久`											+ ` # 在肩部挂载一台重型切割射线，持续时间更久，威力也更强(在战略面板启用),在肩部掛載一臺重型切割射線，持續時間更久，威力也更強(在戰略面板啟用),Mounts a slicing ray on your shoulder and it's more powerful and lasting than the normal one(Activated in Strategy),肩に搭載できる重装カッティング光線，より長時間照射でき、威力も高い(戦略パネルで有効化できる)`,
 	
 	1262 : `可发射双联装火箭弹, 冷却超快`											+ ` # 在肩部挂载一台火箭炮，可以发射双联装火箭弹，这种火箭弹冷却非常快，可以持续压制敌人(在战略面板启用),在肩部掛載一臺火箭炮，可以發射雙聯裝火箭彈，這種火箭彈冷卻非常快，可以持續壓制敵人(在戰略面板啟用),Mounts a rocket launcher on your shoulder that can fire two rockets at the same time. These rockets have short cooldown time and can suppress the enemy continuously(Activated in Strategy),肩部に2連ロケットを発射できるロケットランチャーを搭載する，クールダウンが非常に短く、継続的な火力圧力をかけられる(戦略パネルで有効化できる)`,
 	1263 : `可发射弹道破甲导弹，无视地形`											+ ` # 在肩部挂载一台火箭炮，可以发射弹道破甲导弹，无视地形攻击目标点，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,在肩部掛載一臺火箭炮，可以發射彈道破甲導彈，無視地形攻擊目標點，冷卻時間:<Description:1>秒\n（在戰略面板啟用）\n機體速度<Description:2>%，轉向速度<Description:3>%\n,Mounts a rocket launcher on the shoulder that shoots ballistic armor piercing missiles ，which ignore terrains to attack target point. Cooldown: <Description:1>s.\n(Activated in Strategy)\nMovement speed: <Description:2>%; rotational speed: <Description:3>%\n,肩部にロケットを発射できるロケットランチャーを搭載する、弾道破甲ロケットミサイルを発射し、地形を無視して目標点を攻撃することができます、クールダウン:<Description:1>秒\n(戦略パネルで有効化できる)\n機体速度<Description:2>%、旋回速度<Description:3>%\n`,
@@ -2838,11 +2842,11 @@ let textList = {
 	ForceBoth		: `双手武器`		, // + ` # 强制双持,強制雙持,Force both hands,強制両手`,
 	DoubleWeapon	: `槽位通用`		, // + ` # 远程/近战槽位通用,遠程/近戰槽位通用,Remote/Melee slot universal,リモート/近接スロット共通`,
 	
-	Tanktype0		: `游骑专属`		, // + ` # 游骑兵号专属,遊騎兵號专属,Ranger Exclusive,レンジャー号専属`,
-	Tanktype1		: `骠骑专属`		, // + ` # 骠骑兵号专属,驃騎兵號专属,Hussar Exclusive,ユサール号専属`,
-	Tanktype2		: `龙骑专属`		, // + ` # 龙骑兵号专属,龍騎兵號专属,Dragoon Exclusive,ドラグーン号専属`,
-	Tanktype3		: `弓骑专属`		, // + ` # 弓骑兵号专属,弓騎兵號专属,Horse Archer Exclusive,弓騎兵号専属`,
-	Tanktype4		: `圣骑专属`		, // + ` # 圣骑兵号专属,聖騎士號专属,Paladin Exclusive,聖騎士号専属`,
+	Tanktype0		: `游骑专属`		, // + ` # 游骑兵号专属,遊騎兵號專屬,Ranger Exclusive,レンジャー号専属`,
+	Tanktype1		: `骠骑专属`		, // + ` # 骠骑兵号专属,驃騎兵號專屬,Hussar Exclusive,ユサール号専属`,
+	Tanktype2		: `龙骑专属`		, // + ` # 龙骑兵号专属,龍騎兵號專屬,Dragoon Exclusive,ドラグーン号専属`,
+	Tanktype3		: `弓骑专属`		, // + ` # 弓骑兵号专属,弓騎兵號專屬,Horse Archer Exclusive,弓騎兵号専属`,
+	Tanktype4		: `圣骑专属`		, // + ` # 圣骑兵号专属,聖騎士號專屬,Paladin Exclusive,聖騎士号専属`,
 	
 	Light			: `照明配件`		, // + ` # 照明,照明,Lighting,照明`,
 	EnergyWeapon	: `能量子弹`		, // + ` # 能量弹,能量彈,Energetic Bullet,エネルギー弾`,
@@ -2954,7 +2958,7 @@ let textList = {
 	Company_10333			: `SEELE`								, // + ` # SEELE,SEELE,Polaris Aerospace,SEELE`,
 	Company_10401			: `斯坦德装备制造局`					, // + ` # 斯坦德装备制造局,斯坦德裝備製造局,Stande Equipment Manufacturing Bureau,スタント装備製造局`,
 	Company_10415			: `直木氏精密仪器修械所`				, // + ` # 直木氏精密仪器修械所,直木氏精密儀器修械所,Skylark Aérospatiale,直木氏精密機器修理所`,
-	Company_10418			: `PoGu.Inc`							, // + ` # PoGu.Inc,PoGu.Inc,Sleeping Fox,PoGu.Inc`,
+	Company_10418			: `PoGu.Inc`							, // + ` # PoGu.Inc,Sleeping Fox,PoGu.Inc,Sleeping Fox`,
 	Company_10430			: `人之领遗落科技`						, // + ` # 人之领遗落科技,人之領遺落科技,Technology from Domain Era Emblem,Domain Era 技術`,
 	Company_10504			: `重装河豚`							, // + ` # 重装河豚,重裝河豚,FRAN Kallipygos mk3,さいそうふぐ`,
 	Company_10507			: `人之领技术`							, // + ` # 人之领技术,人之領技術,Nightstar Technologies Incorporated,人のリーダーTech`,
@@ -2979,7 +2983,8 @@ let powerTable01_group = -1;
 let powerTable01_index = -1;
 
 // 子弹预设
-(function(){ // 补全伤害和防空
+(function(){
+// 补全伤害和防空
 csv2.result['BulletExplode'					].splice(4, 2, '900',  '10' );
 csv2.result['BulletExplodeMin'				].splice(4, 2, '600',  '10' );
 csv2.result['BulletExplodeMegaMini'			].splice(4, 2, '2400', '10' );
@@ -2999,7 +3004,6 @@ csv2.result['BulletExplodeBig2'				].splice(4, 2, '4650', '10' );
 csv2.result['BulletExplodeMega'				].splice(4, 2, '7000', '10' );
 csv2.result['BulletExplodeFollowShoulder'	].splice(4, 2, '900',  '25' );
 csv2.result['BulletExplodeFollowAntiAir'	].splice(4, 2, '200',  '100');
-
 })();
 
 // 颜色方块
@@ -3489,7 +3493,7 @@ csv0.forEach(function(item, index){
 	item.偏移角度 = {code:item.csv1Result[10], text:item.csv1Result[10], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[10] +'</td>'; // 偏移角度		Stable,					0.1,
 	item.换弹老化 = {code:item.csv1Result[11], text:item.csv1Result[11], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[11] +'</td>'; // 换弹老化		BrokePos,				4,
 	item.开火老化 = {code:item.csv1Result[12], text:item.csv1Result[12], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[12] +'</td>'; // 开火老化		BrokePos2,				3,
-	item.开火老化 = {code:item.csv1Result[13], text:item.csv1Result[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[13] +'</td>'; // 开火升温		Tempar,					3,
+	item.开火升温 = {code:item.csv1Result[13], text:item.csv1Result[13], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[13] +'</td>'; // 开火升温		Tempar,					3,
 	item.换弹音效 = {code:item.csv1Result[14], text:item.csv1Result[14], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[14] +'</td>'; // 换弹音效		Reload,					1,
 	item.弹壳类型 = {code:item.csv1Result[15], text:item.csv1Result[15], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[15] +'</td>'; // 弹壳类型		Case,					CaseNormal,
 	item.后坐力值 = {code:item.csv1Result[16], text:item.csv1Result[16], }; // powerTable01_tbody_html += '<td class="showPart00">'+ item.csv1Result[16] +'</td>'; // 后坐力值		Force,					240,
@@ -3840,12 +3844,12 @@ csv0.forEach(function(item, index){
 	
 });
 $('#powerTable01 tbody').html(powerTable01_tbody_html);
-xj2._buildPowerTable('powerTable01');
+xjwiki._buildPowerTable('powerTable01');
 $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable01);
-jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+xjwiki._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
@@ -4224,7 +4228,7 @@ let filterFunction = function(){
 	};
 	
 	// 合并同类设置高亮
-	xj2._groupedSet(jqi_powerTable01);
+	xjwiki._groupedSet(jqi_powerTable01);
 	
 };
 
@@ -4256,7 +4260,7 @@ filterFunction();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

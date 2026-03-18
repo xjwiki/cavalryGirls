@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -257,11 +263,11 @@
 
 <p>————</p>
 
-<p><nb id="格挡">格挡</nb><br />部分可以进行防御的近战武器(例如尖锐盾牌或龙骑剑盾), 在刚举起盾或者挥舞盾的瞬间, 具有格挡判定, 此时可以阻挡敌人的任何近战攻击和远程攻击, 除了部分强力攻击, 成功格挡近战攻击, 可以令敌人陷入一个短暂的硬直状态, 而格挡远程攻击则可以将子弹反弹回去</p><!-- <span style="opacity:0.5;">HintBrief:<c>45</c>, Weight:<c>4</c>, Video:<c>24</c>, tag:<c>''</c></span><br /> -->
+<p><nb id="格挡">格挡</nb><br />部分可以进行防御的近战武器(例如尖锐盾牌或龙骑剑盾), 在刚举起盾或者挥舞盾的瞬间, 具有格挡判定, 此时可以阻挡敌人的任何近战攻击和远程攻击, 除了部分强力攻击, 成功格挡近战攻击, 可以令敌人陷入一个短暂的硬直状态, 而格挡远程攻击则可以将子弹反弹回去</p><!-- <span style="opacity:0.5;">HintBrief:<c>45</c>, Weight:<c>5</c>, Video:<c>24</c>, tag:<c>''</c></span><br /> -->
 
 <p><nb id="霸体">霸体</nb><br />部分近战武器在挥动时, 会使机体进入一个难以被[打断/位移/动摇]的状态, 且遭受攻击会 <c>-25%</c> 伤害, 而在遭受攻击时, 只要攻击的冲击力不高于机体当前稳定值(抗冲击力), 就不会出现硬直, 此时也会进入霸体状态, 也就是说, 攻击和被攻击, 都可能会触发霸体状态</p><!-- <span style="opacity:0.5;">HintBrief:<c>46</c>, Weight:<c>4</c>, Video:<c>''</c>, tag:<c>''</c></span><br /> -->
 
-<p><nb id="闪避">闪避</nb><br />在战场中, 按下 <kbd>Space</kbd> 即可闪避(需要消耗奔跑能量), 如果把握好时机, 在敌人攻击的那个瞬间成功触发闪避, 就被称之为完美闪避, 此时系统会触发子弹时间(表现为游戏的时间流逝变慢), 便是输出的好机会, 如果在子弹时间内, 再次触发完美闪避, 可以延长子弹时间</p><!-- <span style="opacity:0.5;">HintBrief:<c>47</c>, Weight:<c>4</c>, Video:<c>22</c>, tag:<c>''</c></span><br /> -->
+<p><nb id="闪避">闪避</nb><br />在战场中, 按下 <kbd>Space</kbd> 即可闪避(需要消耗奔跑能量), 如果把握好时机, 在敌人攻击的那个瞬间成功触发闪避, 就被称之为完美闪避, 此时系统会触发子弹时间(表现为游戏的时间流逝变慢), 便是输出的好机会, 如果在子弹时间内, 再次触发完美闪避, 可以延长子弹时间</p><!-- <span style="opacity:0.5;">HintBrief:<c>47</c>, Weight:<c>5</c>, Video:<c>22</c>, tag:<c>''</c></span><br /> -->
 
 <p>————</p>
 
@@ -285,17 +291,16 @@
 
 <p><nb id="离子抗性">离子抗性</nb><br />触发等离子抵抗的概率(类似爆抗), 成功触发抵抗之后, 等离子就只能造成 <c>3%</c> 的伤害(例如子弹的伤害为 <c>1000</c>, 抵抗后只剩 <c>30</c>)</p><!-- <span style="opacity:0.5;">HintBrief:<c>48</c>, Weight:<c>3</c>, Video:<c>''</c>, tag:<c>''</c></span><br /> -->
 
-<p><nb id="溶解效果">溶解效果</nb><br />当机体受到等离子攻击, <c>等离子的伤害 ÷ 500 >= 4</c>, 或机体当前生命值 <c><= 400</c>, 就会触发溶解效果, 但建筑不会溶解, 最大生命值 <c>< 300</c> 的机体也不会触发溶解, 溶解状态下单位会不断受到灼烧伤害(伤害算法类似机体身上的燃烧效果, 持续时间最少持续 <c>2</c> 秒), 处于溶解状态下的单位, 受到等离子伤害会翻倍, 处于溶解状态下的单位, 死亡不会留下残骸, 而当残骸受到等离子伤害时，会立刻溶解</p><!-- <span style="opacity:0.5;">HintBrief:<c>43</c>, Weight:<c>3</c>, Video:<c>''</c>, tag:<c>''</c></span><br /> -->
+<p><nb id="溶解效果">溶解效果</nb><br />当机体受到等离子攻击, <c>等离子的伤害 ÷ 500 >= 4</c>, 或机体当前生命值 <c><= 400</c>, 就会触发溶解效果, 但建筑不会溶解, 最大生命值 <c>< 300</c> 的机体也不会触发溶解, 溶解状态下单位会不断受到灼烧伤害(伤害算法类似机体身上的燃烧效果, 持续时间最少持续 <c>2</c> 秒), 处于溶解状态下的单位, 受到等离子伤害会翻倍, 处于溶解状态下的单位, 死亡不会留下残骸, 而当残骸受到等离子伤害时, 会立刻溶解</p><!-- <span style="opacity:0.5;">HintBrief:<c>43</c>, Weight:<c>3</c>, Video:<c>''</c>, tag:<c>''</c></span><br /> -->
 
-<!--◇
-<p><nb id="武器融合">武器融合</nb><br />
-	<span style="opacity:0.5;">HintBrief:<c>38</c>, Weight:<c>2</c>, Video:<c>14</c>, tag:<c>''</c></span><br />
-	可以将一把武器融合进另一把武器, 使得一把武器可以带有部分另一把武器的效果
-</p>
-<p><nb id="战略武器">战略武器</nb><br />
-	<span style="opacity:0.5;">HintBrief:<c>50</c>, Weight:<c>2</c>, Video:<c>16</c>, tag:<c>''</c></span><br />
-	装配战略武器后, 使用交互键 <kbd>Left</kbd> + <kbd>Ctrl</kbd> 打开战略面板, 根据按键指示激活战略武器
-</p>
+<!--◇◆◆◆◆
+<p>————</p>
+
+<p><nb id="武器融合">武器融合</nb><br />可以将一把武器融合进另一把武器, 使得一把武器可以带有部分另一把武器的效果</p><!-- <span style="opacity:0.5;">HintBrief:<c>38</c>, Weight:<c>2</c>, Video:<c>14</c>, tag:<c>''</c></span><br /> ->
+
+<p><nb id="战略武器">战略武器</nb><br />装配战略武器后, 使用交互键 <kbd>Left</kbd> + <kbd>Ctrl</kbd> 打开战略面板, 根据按键指示激活战略武器</p><!-- <span style="opacity:0.5;">HintBrief:<c>50</c>, Weight:<c>2</c>, Video:<c>16</c>, tag:<c>''</c></span><br /> ->
+
+<p><nb id="废料弹丸">废料弹丸</nb><br />一种特殊弹丸, 击中目标始终会发生抵抗, 但是抵抗后造成的伤害却比常规弹丸高很多, 对外挂装甲可以实现 100% 穿透</p><!-- <span style="opacity:0.5;">HintBrief:<c>51</c>, Weight:<c>5</c>, Video:<c>''</c>, tag:<c>''</c></span><br /> ->
 ◇-->
 
 </section>
@@ -313,9 +318,10 @@ html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:
 #powerTable01 .hideTd{display:none;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -391,12 +397,13 @@ let csv1 = (String.raw`// HintBrief,Name,Weight,Video,Tag,Description
 42,#等离子,4,,,#等离子武器会造成真实伤害，但是会被护盾完全吸收
 43,#溶解,3,,,#短时间内受到大量等离子伤害或低生命值时受到等离子伤害会触发溶解效果。溶解状态下单位会不断受到灼烧伤害，并且溶解状态的单位不会产生残骸。当残骸受到等离子伤害时，会立刻溶解。溶解状态下的单位受到的等离子伤害会翻倍。
 44,#流弹,3,,,#子弹达到最大射程后继续飞行的概率，最大可以使子弹射程达到两倍最大射程。\n但是随着距离增加，子弹的跳弹概率也会增加。
-45,#格挡,4,Tot24,,#部分近战防御武器（例如盾），在刚举起盾或者挥舞盾的瞬间，若敌人正在使用近战攻击，会被判定为格挡。格挡会让使用近战武器的敌人陷入一个硬直状态。
+45,#格挡,5,Tot24,,#部分近战防御武器（例如盾），在刚举起盾或者挥舞盾的瞬间，若敌人正在使用近战攻击，会被判定为格挡。格挡会让使用近战武器的敌人陷入一个硬直状态。
 46,#霸体,4,,,#部分近战武器，在挥动时会使机体进入的一个不会被打断/位移/动摇的状态
-47,#完美闪避,4,Tot22,,#在敌人攻击瞬间闪避触发的效果，以触发子弹时间为标志
+47,#完美闪避,5,Tot22,,#在敌人攻击瞬间闪避触发的效果，以触发子弹时间为标志
 48,#等离子抗性,3,,,#触发等离子抗的概率。触发抗性后，只会造成10%的伤害。
 49,#精心维护,3,,,#
 50,#战略武器,2,Tot16,,#
+51,#废料弹丸,5,,,#一种特殊弹丸，击中目标始终会发生抵抗\n但是抵抗后造成的伤害却比常规弹丸高很多\n对外挂装甲可以实现100%穿透
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
@@ -490,6 +497,7 @@ let textList = {
 	HintBrief_Name_48			: `等离子抗性,等離子抗性,Plasma Resistance,プラズマ耐性`,
 	HintBrief_Name_49			: `精心维护,精心維護,Meticulous maintenance,入念なメンテナンス`,
 	HintBrief_Name_50			: `战略武器,戰略武器,Strategic weapon,戦略兵器`,
+	HintBrief_Name_51			: `废料弹丸,廢料彈丸,scrap projectile,廃材弾丸`,
 	
 	},
 	
@@ -544,6 +552,7 @@ let textList = {
 	HintBrief_Description_48	: `触发离子抗后，等离子只会造成33%的伤害。,觸發離子抗後，等離子只會造成33%的傷害。,The rate of triggering Plasma Resistance. After triggering Plasm Resistance， the plasma only deals 33% damage.,プラズマ耐性を発動する確率。プラズマ耐性発動後、プラズマは33%のダメージしか与えられません。`,
 	HintBrief_Description_49	: `武器耐久大于100时（最多150），武器拥有“精心”维护的效果。当触发耐久降低时，可以少降低30%,武器耐久大於100時（最多150），武器擁有“精心”維護的效果。當觸發耐久降低時，可以少降低30%,When weapon durability is above 100 (max 150)， the weapon gains the [Meticulous] maintenance effect. When durability is lost， the loss is reduced by 30%.,武器耐久が100以上の場合（最大150）、武器は「入念」なメンテナンス効果を持つ。耐久減少が発生した際、減少量を30%軽減させる`,
 	HintBrief_Description_50	: `装配战略武器后，使用交互键[Lctrl]打开战略面板，根据按键指示激活战略武器,裝配戰略武器後，使用交互鍵[Lctrl]打開戰略面板，根據按鍵指示啟動戰略武器,After equipping strategic weapons，press the interaction key [Lctrl] to open the Strategic Panel and activate strategic weapons following the on-screen prompts.,戦略兵器装備後、インタラクションキー[Lctrl]で戦略パネルを開き、操作指示に従って戦略兵器を起動できる`,
+	HintBrief_Description_51	: `一种特殊弹丸，击中目标始终会发生抵抗\n但是抵抗后造成的伤害却比常规弹丸高很多\n对外挂装甲可以实现100%穿透,一種特殊彈丸，擊中目標始終會發生抵抗\n但是抵抗後造成的傷害卻比常規彈丸高很多\n對外掛裝甲可以實現100%穿透,A special projectile that always trigger resiststence when hitting a target\n but causes much higher damage than conventional projectiles\n It can achieve 100% penetration through external armor,目標に命中すると常に抵抗が発生する特殊な弾丸であるが\n抵抗後のダメージは通常の弾丸よりもはるかに高い\n外付け装甲に対して100%貫通を実現することができる`,
 	
 	},
 	
@@ -560,7 +569,7 @@ let textList = {
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

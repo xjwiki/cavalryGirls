@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -399,9 +405,10 @@ height:20px;text-align:center;line-height:20px;cursor:default;}
 #prevPart{flex:1 1 auto;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -725,323 +732,333 @@ CanonDungeon,,,Main_2,#叛军炮台,1000,0,1,30,50,0,0,1134,0,0,50,30,0,4,4,10,1
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
 // 武器参数
-let csv1 =(`// Weapons,Projectile,Image,Sound,ClipSound,FireRate,AngleFloat,FireNum,ClipNum,ReloadSpeed,Stable,BrokePos,BrokePos2,Reload,Case,Force,Func,DefaultModule,DefaultFusion
+let csv1 =(`// Weapons,Projectile,Image,Sound,ClipSound,FireRate,AngleFloat,FireNum,ClipNum,ReloadSpeed,Stable,BrokePos,BrokePos2,Tempar,Reload,Case,Force,Func,DefaultModule,DefaultFusion
 
-0,BulletNormal,,0_SMG,SL,0.18,8,1,12,2,0.1,4,3,1,CaseNormal,240,,,
-1,BulletNormal,,1_HMG,SL,0.12,11,1,15,3.5,0.125,5,3,1,CaseNormal,270,,,
-2,BulletNormal,,2_SSG,Sh,1.25,15,12,6,6,0.01,17,9,1,CaseLarge,900,,,
-3,BulletMinu,,3_HSG,Sh,1,36,25,7,7,0.01,15,9,1,CaseLarge,900,,,
-4,BulletLarge,,4_LRF,LL2,2,5,1,5,5.6,0.6,15,9,1,CaseLarge,2400,,,
-5,BulletLargeMinu,,5_HRF,LL,0.6,12,1,12,8,0.36,11,6,1,CaseLarge,1000,,,
-6,BulletMinu,,6_GTL,SS,0.08,14,1,50,2,0.15,6,3,1,CaseSmall,180,,,
-7,BulletExplode,,7_CAN,LS,1.5,8,1,6,10,0.5,45,80,1,CaseSmoke,1600,,,
-8,BulletExplodeMin,,CAN2,LS,2,15,8,2,8,0.7,45,80,1,CaseSmoke2,2400,,,
-9,BulletPierce,,1_HMG,SL2,0.2,7,1,12,3,0.075,5,3,1,CaseNormal,300,,,
-10,Thrower-Fire,,FLM,,2,0,1,3,6,0.1,4,0,1,,0,,,
-11,Thrower-Freeze,,FLM2,,2,0,1,3,6,0.1,4,0,1,,0,,,
-12,BulletElectr,,1_HMG,SL2,0.2,9,1,10,5,0.1,7,0,1,CaseNormal,120,,,
-13,BulletBig,,MG,ML2,0.1,18,1,80,21,0.4,28,15,1,CaseLarge,500,ForceSeat,,
-14,BulletLargeMinu,,MGC,LS,0.075,22,1,90,56,0.1,96,88,1,CaseLarge,600,ForceSeat,,
-15,BulletBigFar,,0_RF,SL2,0.6,8,1,9,3.5,0.2,9,6,1,CaseNormal,600,,,
-16,BulletNormal2,,1_HMG,SL,0.12,10,1,25,4.5,0.15,7,3,1,CaseNormal,270,,,
-17,BulletNormal2,,1_HMG,SL,0.1,18,1,25,4.5,0.225,7,3,1,CaseNormal,270,,,
-18,BulletNormal,,1_HMG,SL,0.2,12,1,6,0.8,0.1,2,0,1,CaseNormal,270,,,2692
-19,BulletNormal2,,0_SMG,SL,0.5,5,1,5,0.5,0.05,3,0,1,CaseNormal,240,,,
-20,BulletNormal2,,2_SSG,Sh,0.25,24,20,2,5,0.01,6,3,1,CaseLarge,600,,,
-21,BulletMinu,,6_GTL,SS,0.08,16,1,100,4,0.2,12,6,1,CaseSmall,192,,,
-22,BulletMinu2,,6_GTL,SS,0.1,12,1,42,2,0.1,7,3,1,CaseSmall,192,,,
-23,BulletBig2,,2_SSG,LS,2,15,6,2,5.5,0.01,7,3,1,CaseLarge,1600,,,
-24,BulletNormal,,MG2,SL2,0.1,12,1,60,8,0.2,20,10,1,CaseNormal,300,,,
-25,BulletNormal,,2_SSG,Sh,0.2,5,3,8,4,0.01,7,3,1,CaseLarge,600,,,
-26,BulletExplodeMin2,,CanL,LS,0.2,20,1,15,9,0.5,40,24,1,CaseSmoke,300,,,
-27,RayNormal,,Laser 03,,1,0,1,9,3.5,0.01,12,0,1,,0,,,
-28,RayNormalLong,,Laser 03,,1.5,0,1,4,5,0.01,10,0,1,,0,,,
-29,RayBurst,,Laser 03,,1,0,1,4,2.5,0.01,5,0,1,,0,,,
-30,RayBurstLong,,Laser 03,,2,0,1,1,6,0.01,5,0,1,,0,,,
-31,Lightning,,Electric,,1,0,1,8,4,0.01,20,0,1,,0,,,
-32,LightningLong,,Electric,,1.5,0,1,4,5.5,0.01,35,0,1,,0,,,
-33,LightningDamage,,Electric,,1.5,0,1,2,7,0.01,42,0,1,,0,,,
-34,LightningBurst,,Electric,,2,0,1,3,6.5,0.01,40,0,1,,0,,,
-35,Lightning_Treat,,Lightning_Treat,,1,0,1,5,6,0.01,100,200,1,,0,,,
-36,Thrower-Oil,,WTE,,4,0,1,1,6,0.1,4,0,1,,0,,,
-37,Thrower-Water,,WTE,,4,0,1,4,6,0.1,4,0,1,,0,,,
-38,BulletWater,,6_GTL,SS,0.05,10,1,36,2,0.1,4,3,1,CaseNormal,240,,,
-39,BulletElectrMin,,Ele_Gtl,SS,0.09,18,1,20,3.2,0.2,4,3,1,CaseSmall,150,,,
-40,BulletElectrLarge,,Ele_RF,ML3,1.35,3,1,3,5.2,0.4,6,3,1,CaseLarge,800,,,
-41,GunShield,,,,0,0,0,0,0,0,0,0,,,0,,,
-42,BulletExplodeMin2,,CanL,LS,0.5,8,1,5,3,0.1,15,12,1,CaseSmoke,300,,,
-43,BulletLargeMinu0,,5_HRF,LL,0.5,20,1,3,4,0.35,4,3,1,CaseLarge,1000,,,
-44,BulletEner,,1_Ener2,ML2,0.135,12,1,48,6,0.25,30,25,1,CaseNormal,300,,,
-45,BulletEner,,1_Ener2,ML2,0.5,10,1,10,4,0.1,8,5,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,
-46,BulletGrenadeProjMine,,Throw2,,1.5,8,1,5,5.5,0.3,24,32,1,CaseSmoke,300,,,
-47,BulletTeleport,,Throw2,,0.5,0,1,2,10,0.01,0,0,1,,0,ManualReload|FixedClipNum,,
-48,BulletElectr,,Ele_SG,Sh,1,14,12,4,5,0.01,17,9,1,CaseNormal,900,,,
-49,BulletEner,,En_SG,Sh,1,16,10,4,5.5,0.01,17,9,1,CaseNormal,900,,,
-80,BulletEnerLarge,,En_RF,LL,2.4,3,1,3,9,0.64,6,3,1,CaseLarge,2400,,,
-81,BulletExplodeHigh,,CAN2,LS,1.5,24,1,5,11,0.5,45,80,1,CaseSmoke2,1600,ForceSeat,,2694
-82,BulletExplode,,CANMi,,1,12,1,5,7.5,0.5,45,80,1,CaseSmoke,1000,,,1460|1461
-100,BulletNormal,,0_SMG,SL,0.18,7,1,15,2,0.1,5,3,1,CaseNormal,240,,,
-101,BulletNormal,,1_HMG,SL,0.11,8,1,16,3.2,0.1,5,3,1,CaseNormal,270,,,
-102,BulletNormal2,,2_SSG,Sh,1.2,12,10,6,6,0.01,15,9,1,CaseLarge,900,,,
-103,BulletMinu,,3_HSG,Sh,1,42,32,7,7.5,0.01,15,9,1,CaseLarge,900,,,
-104,BulletLarge,,4_LRF,LL2,1.75,2,1,6,5,0.6,20,12,1,CaseLarge,2400,,,
-105,BulletLargeMinu,,5_HRF,LL,0.55,11,1,13,7.5,0.48,11,6,1,CaseLarge,1000,,,
-106,BulletMinu,,6_GTL,SS,0.08,14,1,50,2.5,0.15,5,3,1,CaseSmall,180,,,
-107,BulletExplode,,7_CAN,LS,1.75,8,1,7,9,0.5,40,75,1,CaseSmoke,1600,,,
-108,BulletExplodeMin,,CAN2,LS,2,18,11,3,7.5,0.7,40,75,1,CaseSmoke2,2400,,,
-109,BulletPierce,,1_HMG,SL2,0.25,9,1,15,3,0.1,7,3,1,CaseNormal,300,,,
-110,Thrower-Fire,,FLM,,2,0,1,3,5.5,0.1,3,0,1,,0,,,
-111,Thrower-Freeze,,FLM2,,2,0,1,3,5.5,0.1,3,0,1,,0,,,
-113,BulletBig,,MG,ML2,0.11,18,1,80,21,0.4,30,18,1,CaseLarge,500,ForceSeat,,
-114,BulletLargeMinu,,MGC,LS,0.09,25,1,80,60,0.1,135,100,1,CaseLarge,600,ForceSeat,,
-115,BulletBigFar,,0_RF,ML3,0.5,6,1,10,3.2,0.35,8,3,1,CaseNormal,600,,,
-116,BulletNormal2,,1_HMG,SL,0.12,10,1,36,4,0.15,8,3,1,CaseNormal,270,,,
-117,BulletNormal3,,1_HMG,SL,0.1,18,1,36,4,0.225,8,3,1,CaseNormal,270,,,
-118,BulletNormal2,,1_HMG,SL,0.22,11,1,8,0.75,0.1,4,0,1,CaseNormal,270,Charge:BulletGrenadeProj_1.5_4_ChargeEne0,,2692
-119,BulletNormal2,,0_SMG,SL,0.5,5,1,5,0.5,0.05,2,0,1,CaseNormal,240,,,
-120,BulletNormal2,,2_SSG,Sh,0.25,24,25,2,6,0.01,5,3,1,CaseLarge,600,,,
-121,BulletMinu,,6_GTL,SS,0.08,16,1,150,4,0.2,16,9,1,CaseSmall,192,,,
-122,BulletMinu2,,6_GTL,SS,0.11,12,1,42,2,0.1,4,2,1,CaseSmall,192,,,
-123,BulletBig2,,2_SSG,LS,2,15,7,2,7,0.01,9,6,1,CaseLarge,1600,,,
-124,BulletNormal2,,MG2,SL2,0.1,12,1,50,7.5,0.2,17,8,1,CaseLarge,300,,,
-125,BulletNormal2,,2_SSG,Sh,0.12,5,3,8,5.5,0.01,7,3,1,CaseLarge,600,,,
-126,BulletExplodeMinHigh,,CanL,LS,0.2,20,1,18,9,0.5,50,30,1,CaseSmoke,300,ForceSeat,,2694
-127,RayNormal2,,Laser 03,,1,0,1,10,3,0.01,10,0,1,,0,,,
-128,RayNormalLong2,,Laser 03,,1.6,0,1,4,5,0.01,8,0,1,,0,,,
-129,RayBurst2,,Laser 03,,1,0,1,5,2.2,0.01,4,0,1,,0,,,
-130,RayBurstLong2,,Laser 03,,2.2,0,1,1,6,0.01,8,0,1,,0,,,
-131,Lightning2,,Electric,,0.8,0,1,9,3.6,0.01,27,0,1,,0,,,
-132,LightningLong2,,Electric,,1.7,0,1,4,6,0.01,30,0,1,,0,,,
-133,LightningDamage2,,Electric,,1.25,0,1,3,6,0.01,36,0,1,,0,,,
-134,LightningBurst2,,Electric,,2,0,1,3,6.5,0.01,50,0,1,,0,,,
-136,Thrower-Oil,,WTE,,4,0,1,1,5.5,0.1,4,0,1,,0,,,
-137,Thrower-Water,,WTE,,4,0,1,4,5.5,0.1,4,0,1,,0,,,
-138,BulletWater2,,6_GTL,SS,0.05,10,1,36,2,0.1,4,3,1,CaseNormal,240,,,
-139,BulletElectrMin2,,Ele_Gtl,SS,0.075,15,1,22,3,0.2,4,0,1,CaseSmall,150,,,
-140,BulletElectrLarge2,,Ele_RF,ML3,1.2,4,1,4,4.75,0.4,6,0,1,CaseLarge,800,,,
-142,BulletExplodeMin,,CanL,LS,0.75,8,1,3,2.5,0.1,15,12,1,CaseSmoke,1600,,,
-143,BulletLargeMinu0b,,5_HRF,LL,0.75,20,1,2,3,0.35,10,10,1,CaseLarge,1000,,,
-144,BulletEner,,1_Ener2,ML2,0.12,11,1,48,8,0.15,40,30,1,CaseNormal,300,,,
-145,BulletEner2,,1_Ener2,ML2,0.5,8,1,15,3.6,0.1,10,6,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,
-146,BulletGrenadeProjMineBig,,Throw2,,3.6,5,1,3,15,0.2,75,100,1,CaseSmoke2,2400,,,
-148,BulletElectr2,,Ele_SG,Sh,0.9,17,17,5,4.75,0.01,20,10,1,CaseNormal,900,,,
-149,BulletEner2,,En_SG,Sh,0.9,14,11,5,5.2,0.01,20,10,1,CaseNormal,900,,,
-180,BulletEnerLarge2,,En_RF,LL,2.5,4,1,3,8.4,0.64,6,0,1,CaseLarge,2400,,,
-181,BulletExplodeHigh2,,CANH1,LS,4,45,1,2,22,0.75,50,100,1,CaseSmoke,1350,ForceSeat,,2694
-182,BulletExplodeMin,,CANMi,,0.5,15,1,18,10,0.5,40,75,1,CaseSmoke,640,,,1460|1461|2690
-200,BulletNormal2,,0_SMG,SL,0.16,6,1,16,1.8,0.1,4,0,1,CaseNormal,240,,,
-201,BulletNormal2,,1_HMG,SL,0.11,8,1,16,3.2,0.1,3,0,1,CaseNormal,270,,,
-202,BulletNormal3,,2_SSG,Sh,1.5,12,10,6,6,0.01,10,6,1,CaseLarge,900,,,
-203,BulletMinu2,,3_HSG,Sh,1,42,48,7,7.5,0.01,21,12,1,CaseLarge,900,,,
-204,BulletLargePierce,,0_LRF,LL2,1.75,2,1,4,6,0.6,25,80,1,CaseLarge,2400,ForceSeat,,
-205,BulletLargeMinu2,,5_HRF,LL,0.5,10,1,13,7,0.5,15,9,1,CaseLarge,1000,,,
-206,BulletMinu2,,6_GTL,SS,0.07,12,1,55,2.4,0.15,4,0,1,CaseSmall,180,,,
-209,BulletPierce,209,1_HMG2,SL2,0.4,9,1,21,3,0.1,7,3,1,CaseNormal,300,,,2690
-210,Thrower-Fire,,FLM,,1.8,0,1,4,5,0.1,3,0,1,,0,,,
-211,Thrower-Freeze,,FLM2,,1.8,0,1,4,5,0.1,3,0,1,,0,,,
-213,BulletBig,,MG,ML2,0.115,24,1,85,20,0.4,32,20,1,CaseLarge,300,ForceSeat,,
-215,BulletBigFar2,,0_RF,ML3,0.44,6,1,10,2.6,0.35,10,6,1,CaseNormal,700,,,
-216,BulletNormal2,,1_HMG,SL,0.12,10,1,36,4,0.15,5,5,1,CaseNormal,270,,,
-217,BulletNormal5,217,1_HMG3,SL,0.16,16,1,60,8,0.18,4,0,1,CaseNormal,270,ForceSeat,,
-218,BulletNormal2,,1_HMG,SL,0.25,10,1,9,0.75,0.1,4,0,1,CaseNormal,270,Charge:BulletGrenadeProj_1.5_4_ChargeEne0,,2690
-219,BulletNormalFollow,,0_SMG,SL,0.4,4,1,5,0.4,0.05,2,0,1,CaseNormal,240,,,1460|1461
-220,BulletNormal2,,2_SSG,Sh,0.35,24,25,3,9,0.01,10,6,1,CaseLarge,700,,,
-221,BulletMinu2,,6_GTL,SS,0.07,12,1,150,3.5,0.15,19,12,1,CaseSmall,192,,,
-222,BulletMinu3,,6_GTL,SS,0.1,11,1,48,1.7,0.075,3,1,1,CaseSmall,192,,,
-223,BulletBig2,,2_SSG,LS,1,12,7,2,8,0.01,9,9,1,CaseLarge,1600,,,
-224,BulletNormal2,,MG2,SL2,0.09,10,1,54,7,0.15,15,7,1,CaseLarge,300,,,
-225,BulletNormal3,,2_SSG,Sh,0.12,5,3,8,6,0.01,5,5,1,CaseLarge,600,,,
-227,RayNormalMinu,227,Laser 03,,0.75,40,5,8,3.6,0.01,12,5,1,,0,Charge:RayNormalLong2+RayBurstLong3_1.5_2_ChargeEne3,,
-228,RayNormalLong2,228,Laser 03,,1.35,0,1,6,3.6,0.01,15,5,1,,0,Charge:RayBurstLong2+RayBurstLong4_1.5_2_ChargeEne2,,
-230,RayBurstLong3,,Laser 03,,1.8,0,1,1,4.5,0.01,25,0,1,,0,,,
-232,LightningLong3,,Electric,,1.6,0,1,5,5.4,0.01,54,0,1,,0,,,
-233,LightningDamage3,,Electric,,1.25,0,1,3,6,0.01,45,0,1,,0,,,
-236,Thrower-Oil,,WTE,,3.6,0,1,1,5,0.1,4,0,1,,0,,,
-237,Thrower-Water,,WTE,,3.6,0,1,4,5,0.1,4,0,1,,0,,,
-239,BulletElectrMin2,,Ele_Gtl,SS,0.18,11,1,32,1.8,0.1,15,5,1,CaseSmall,192,,,2691
-240,BulletElectrLarge2,,Ele_RF,ML3,1.2,3,1,6,2.7,0.35,10,2,1,CaseLarge,800,,,
-244,BulletEner2,,1_Ener2,ML2,0.12,10,1,40,9,0.12,40,30,1,CaseNormal,300,,,
-245,BulletEner2,,1_Ener2,ML2,0.4,8,1,15,4.5,0.1,15,7,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,2690
-248,BulletElectr2,,Ele_SG,Sh,0.8,22,22,5,4.5,0.01,20,10,1,CaseNormal,900,,,
-249,BulletEner2,,En_SG,Sh,0.8,14,11,6,6,0.01,20,10,1,CaseNormal,900,Charge:BulletEnerBig_1_3_ChargeEne3,,
-280,BulletEnerLarge2,,En_RF,LL,2.8,4,1,4,12,0.64,6,0,1,CaseLarge,2400,Charge:BulletEnerBig2_0.5_4_ChargeEne3,,
-282,BulletExplodeMin,282,CANMi,,1.5,25,7,3,9,0.5,40,75,1,CaseSmoke,2500,,,1460|1461|2842
-300,BulletNormal2,,0_SMG,SL,0.145,5,1,17,1.6,0.1,4,5,1,CaseNormal,240,,,
-301,BulletNormal2,,1_HMG,SL,0.1,7,1,17,3,0.075,4,5,1,CaseNormal,270,,,
-303,BulletMinu3,,3_HSG,Sh,0.9,36,50,7,7,0.01,13,15,1,CaseLarge,900,,,
-304,BulletLargeKill,,0_LRF,LL2,2,2,1,2,10.5,0.6,35,120,1,CaseLarge,3200,ForceSeat,,
-305,BulletLargeMinu2,305,5_HRF,LL,0.45,9,1,14,6.4,0.45,35,30,1,CaseLarge,1500,,,
-306,BulletMinu2,,6_GTL,LL,0.06,10,1,60,2.25,0.135,5,5,1,CaseSmall,180,,,
-315,BulletBigFar2,,0_RF,ML3,0.4,5,1,10,2,0.3,10,6,1,CaseNormal,800,,,
-316,BulletNormal3,,1_HMG,SL,0.14,10,1,36,4,0.15,7,5,1,CaseNormal,270,,,
-318,BulletNormal3,,1_HMG,SL,0.24,9,1,12,0.7,0.075,4,0,1,CaseNormal,270,Charge:BulletGrenadeProj2_1_8_ChargeEne0,,2690
-319,BulletNormalFollow,,1_HMG3,SL,1.5,28,4,8,1.8,0.1,2,0,1,CaseNormal,240,,,1460|1461|2693
-320,BulletNormal3,,2_SSG,Sh,0.45,22,25,4,12,0.01,12,6,1,CaseLarge,800,,,
-321,BulletMinu2,,6_GTL,SS,0.07,10,1,150,3,0.12,14,15,1,CaseSmall,192,,,
-322,BulletMinu3,,6_GTL,SS,0.09,11,1,48,1.8,0.075,5,3,1,CaseSmall,192,,,
-324,BulletNormal3,,MG2,SL2,0.09,9,1,40,7,0.1,18,12,1,CaseLarge,300,,,
-330,RayBoss,,LaserBoss,,3.5,1,1,2,15,0.05,100,300,1,,0,,,
-333,LightningDamage4,,Electric ,,4.2,0,1,3,10,0.01,75,200,1,,0,,,
-345,BulletEner2,345,1_Ener2,ML2,0.4,8,1,32,5,0.1,15,7,1,CaseNormal,0,Charge:RayBurstEner2_1_8_ChargeEne,,2691
-400,BulletNormal3,,0_SMG,SL,0.145,5,1,17,1.6,0.1,4,5,1,CaseNormal,240,,,
-401,BulletNormal3,,1_HMG3,SL,0.09,6,1,18,2.7,0.075,6,8,1,CaseNormal,270,,,
-405,BulletLargeMinuAntiAirExplode,405,5_HRF,LL,1,8,1,15,5.5,0.2,15,9,1,CaseLarge,1000,,,2690
-406,BulletMinu3,,0_SMG2,SS,0.055,9,1,64,2,0.125,8,8,1,CaseSmall,180,,,
-415,BulletBigFar2,,0_RF,ML3,0.35,5,1,10,1.8,0.2,15,10,1,CaseNormal,1000,,,
-416,BulletNormal4,416,1_HMG3,SL,0.14,10,1,36,4,0.15,9,5,1,CaseNormal,270,,,
-418,BulletNormal3,418,1_HMG3,SL,0.3,14,1,15,1,0.08,4,1,1,CaseNormal,270,,,2691
-421,BulletMinu4,421,0_SMG2,SS,0.12,13,1,24,0.5,0.1,20,25,1,CaseSmall,192,,,2691
-422,BulletMinu3,422,0_SMG2,SS,0.18,11,1,48,1,0.1,15,5,1,CaseSmall,192,,,2691
-424,BulletBigFar,,MG2,SL2,0.1,9,1,38,8.7,0.09,15,5,1,CaseLarge,50,,,
-430,RayBossLight,430,LaserBoss,,3.5,1,1,2,18,0.05,100,500,1,,0,,,
-444,BulletEnerBig,444,1_Ener,,1,8,1,6,9,0.5,50,36,1,,2400,,,
-500,BulletNormalPin,500,6_HRF,LS,1.5,5,1,4,2,1,20,20,,CaseLarge,4500,ForceSeat,,2692
-504,BulletLargeKill2,,0_LRF2,LL3,3,1,1,1,14.5,1,35,120,1,CaseLarge,5400,ForceSeat,,
-507,BulletExplodeMegaMini,,CANH2,LS,2,28,5,2,12.5,0.5,45,60,1,CaseSmoke2,4500,ForceSeat,,2694
-510,Thrower-Melt,,FLM3,,2.25,0,1,2,5,0.1,25,50,1,,0,,,
-515,BulletLargeMinu,515,0_RF1,ML3,0.9,4,1,6,1.25,0.2,30,20,1,CaseNormal,1200,,,2690
-524,BulletExplodeMinAir,524,FLK,SL2,0.15,10,1,42,4,0.1,10,7,1,CaseLarge,450,,,
-530,RayBoss2,,LaserBoss2,,2.5,1,1,2,15,0.05,100,300,1,,0,Charge:RayBurstEnerBig_1_2_ChargeEne,,
-630,RayBossLight2,630,LaserBoss2,,2.5,1,1,1,12,0.05,100,300,1,,0,,,
-533,LightningDamage5,,Electric ,,3,0,1,6,9,0.01,100,300,1,,0,,,
-544,BulletEnerBig,544,1_Ener,,1,25,5,3,10,0.5,50,36,1,,3000,,,
-1098,BulletNormal,,1_HMG,,0.1,9,1,15,5,0.1,0,0,1,CaseNormal,40,,,
-1099,BulletExplodeMin,,7_CAN,,2,15,1,2,8,0.15,0,0,1,CaseSmoke,400,,,
-1100,BulletNormal,,E_SMG,,0.5,3,1,5,4,0.15,0,0,1,CaseNormal,25,,,
-1101,BulletLarge,,5_HRF,,2,1,1,3,12,0.15,0,0,1,CaseLarge,400,,,
-1102,BulletMinu,,6_GTL,,0.1,15,1,20,6,0.25,0,0,1,CaseSmall,40,,,
-1103,BulletLarge,,5_HRF,,0.4,8,1,3,12,0.3,0,0,1,CaseLarge,400,,,
-1104,BulletNormal,,2_SSG,,1,18,8,2,8,0.01,0,0,1,CaseLarge,200,,,
-1105,BulletNormal,,E_HMG,,0.15,8,1,30,3,0.15,0,0,1,CaseNormal,100,,,
-1106,BulletLarge,,4_LRF,,0.15,1,1,5,5,0.15,0,0,1,CaseLarge,700,,,
-1107,BulletElectrMin,,6_GTL,,0.05,7,1,20,6,0.15,0,0,1,CaseSmall,50,,,
-1108,BulletElectr,,2_SSG,,1,24,10,4,6,0.01,0,0,1,CaseLarge,200,,,
-1109,BulletElectrLarge,,4_LRF,,1,3,1,2,6,0.15,0,0,1,CaseLarge,800,,,
-1110,BulletNormal,,E_SMG,,0.5,3,1,5,4,0.15,0,0,1,CaseNormal,15,,,
-1111,RayNormal,,Laser 04,,2,0,1,1,5,0.01,0,0,1,,0,,,
-1112,RayBoss,,LaserBoss,,4,1,1,1,15,0.05,0,0,1,,0,,,
-1113,BulletFollow,,E_SMG,,0.1,40,1,40,3,0.25,0,0,1,CaseNormal,200,,,
-1114,BulletExplodeFollow,,7_CAN,,0.4,40,1,5,10,0.15,0,0,1,CaseSmoke,1600,,,
-1115,BulletFollow,,E_SMG,,0.15,30,1,10,5,0.15,0,0,1,CaseNormal,200,,,
-1116,BulletBig,,MG,,0.075,12,1,20,5,0.25,0,0,1,CaseLarge,300,,,
-1117,BulletNormal,,MG2,,0.08,18,1,20,4,0.25,0,0,1,CaseNormal,300,,,
-1118,BulletLargeKill,,4_LRF,,2,2,1,3,8,0.05,0,0,1,CaseLarge,4000,,,
-1119,BulletBig,,MG,,0.05,15,1,39,2,0.125,0,0,1,CaseLarge,300,,,
-1120,BulletNormal,,MG2,,0.1,18,1,12,2.5,0.25,0,0,1,CaseNormal,300,,,
-1121,BulletExplodeFollowDestructible,,7_CAN,,0.4,40,1,1,1,0.15,0,0,1,CaseSmoke,1600,,,
-1122,BulletExplodeDestructible,,7_CAN,,0.4,20,5,1,1,0.15,0,0,1,CaseSmoke,1600,,,
-1123,RayBurstSpecialLong,,Laser 03,,9,0,1,1,1,0.01,0,0,1,,0,,,
-1124,RayBurstLongEne,,Laser 03,,2,0,1,1,1,0.01,0,0,1,,0,,,
-1125,BulletLargeMinu,,MGC,LS,0.075,12,1,20,5,0.25,0,0,1,CaseLarge,300,,,
-1126,BulletElectrLarge,,5_HRF,LL,0.5,5,1,9,4,0.2,0,0,1,CaseNormal,2000,,,
-1127,BulletBig,,LS,,0.7,12,15,2,12,0.01,0,0,1,CaseLarge,1600,,,
-1128,RayBoss,,LaserBoss,,4,1,1,1,30,0.05,0,0,1,,0,,,
-1129,Aurablade,,Sw_1,,0.2,0,1,1,1,0.01,0,0,1,,500,,,
-1130,BulletLarge,,5_HRF,LL,0.27,8,1,15,6.4,0.2,0,0,1,CaseLarge,1000,,,
-1131,BulletExplodeFollowDestructible,,7_CAN,,0.35,20,2,3,12,0.15,0,0,1,CaseSmoke,500,,,
-1132,BulletExplodeFollowDestructible,,7_CAN,,0.35,30,3,3,10,0.15,0,0,1,CaseSmoke,0,,,
-1133,BulletExplodeHighFar,,CAN2,LS,3,15,1,4,15,0.5,0,0,1,CaseSmoke2,1600,,,2694
-1134,BulletNormal,,MG2,,0.1,20,1,12,7,0.15,0,0,1,CaseNormal,300,,,
-50,SlashSword0,,,,0.3,0,1,3,2,0.01,0,0,,,4000,Meelee:SlashSword0a&,,2839
-51,SlashSword0b,,,,0.5,0,1,4,2,0.01,2,0,,,4000,Meelee:SlashSword0c&,,2839
-52,SlashSword1,,,,0.5,0,1,3,1.2,0.01,2,0,,,2000,Meelee:SlashSword1d&,,2839
-53,SlashSword1b,,,,0.2,0,1,5,1.5,0.01,2,0,,,500,Meelee:SlashSword1c&,,2839
-54,SlashSword2,,,,0.6,0,1,4,2.5,0.01,30,30,,,4000,Meelee:SlashSword2c&,,2839
-55,SlashSword2b,,,,0.8,0,1,3,3.5,0.01,40,75,,,4000,Meelee:SlashSword2d&AuraCombo,,2839
-56,SlashSword3,,,,0.4,0,1,3,2,0.01,4,0,,,4000,Meelee:SlashSword3&DashFoward,,2839
-57,SlashSword3b,,,,0.3,0,1,4,2,0.01,4,0,,,2000,Meelee:SlashSword3b2&,,2839
-58,SlashSword3c,,,,0.65,0,1,3,2.5,0.01,4,1,,,2000,Meelee:SlashSword3c&AuraCombo,,2839
-59,SlashSword1e,,,,0.25,0,1,4,1.5,0.01,4,2,,,2000,Meelee:SlashSword1e&|AuraBlade,,2839
-65,SlashSword1,,,,0.25,0,1,3,2,0.01,0,0,1,,2000,Assassin,,
-66,SlashSwordRemapSL0,SL0,,,0.5,0,1,3,1.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SL0_Heavy&|MeleeAct:SL=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc,,2837|2840
-67,SlashSwordRemapBS0,BS0,,,1,0,1,3,1.75,0.01,0,0,,,2000,Meelee:SlashSwordCustom_BS0_Heavy&|MeleeActScale:1.1|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21,,2837|2840
-68,SlashSwordRemapSS0,SS0,,,0.5,0,1,3,1.2,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SS0_Heavy&|MeleeActScale:0.8|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2840
-69,SlashSwordRemapDS0,DS0,,,0.2,0,1,5,2.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_DS0_Heavy&|MeleeActScale:0.8|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4+SlashSwordActDS31,,2837|2840
-70,SlashSwordRemapLS0,LS0,,,1,0,1,2,4,0.01,0,0,,,2000,Meelee:SlashSwordCustom_LS0_Heavy&|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2840
-71,SlashSwordRemapAX0,AX0,,,2.5,0,1,3,7.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_AX0_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeAct:AX=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2840
-72,SlashSwordRemapSC0,SC0,,,1,0,1,3,4,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SC0_Heavy&|MeleeAct:SC=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End,,2837|2840
-73,SlashSwordActNG11,NG0,,,1.25,0,1,4,3,0.01,0,0,,,2000,MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode,,2837|2829|2840
-74,SlashSwordActHA11,HA0,,,0.5,0,1,3,1,0.01,0,0,,,2000,MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2,,2837|2829|2840
-75,SlashSwordRemapSY0,SY0,,,1.25,0,1,4,3,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SY0_Heavy&|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2840
-76,SlashSwordRemapFS0,FS0,,,1.5,0,1,3,2.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_FS0_Heavy&|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2840
-166,SlashSwordRemapSL1,SL1,,,0.4,0,1,3,1.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SL1_Heavy&|MeleeAct:SL=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc,,2837|2833|2840
-167,SlashSwordRemapBS1,BS1,,,0.9,0,1,3,1.75,0.01,0,0,,,2000,Meelee:SlashSwordCustom_BS1_Heavy&|MeleeActScale:1.1|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21,,2837|2833|2840
-168,SlashSwordRemapSS1,SS1,,,0.4,0,1,3,1.2,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SS1_Heavy&|MeleeActScale:0.8|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2833|2840
-169,SlashSwordRemapDS1,DS1,,,0.16,0,1,5,2.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_DS1_Heavy&|MeleeActScale:0.8|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4,,2837|2833|2840
-170,SlashSwordRemapLS1,LS1,,,0.9,0,1,3,4.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_LS1_Heavy&|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2833|2840
-171,SlashSwordRemapAX1,AX1,,,2.5,0,1,3,7.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_AX1_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeSpecial:Aura+Throw|MeleeAct:AX=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2833|2840
-172,SlashSwordRemapSC1,SC1,,,1,0,1,3,4,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SC1_Heavy&|MeleeAct:SC=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End,,2837|2833|2840
-173,SlashSwordActNG11,NG1,,,1.25,0,1,4,3,0.01,0,0,,,2000,MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode,,2837|2829|2833|2840
-174,SlashSwordActHA11,HA1,,,0.5,0,1,3,1,0.01,0,0,,,2000,MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2,,2837|2829|2833|2840
-175,SlashSwordRemapSY1,SY1,,,1.2,0,1,4,2.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SY1_Heavy&|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2833|2840
-176,SlashSwordRemapFS1,FS1,,,1.35,0,1,3,2.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_FS1_Heavy&|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2833|2840
-266,SlashSwordRemapSL2,SL2,,,0.4,0,1,3,1.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SL2_Heavy&|MeleeAct:SL2=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc+SlashSwordActSL51+SlashSwordActSL52_0+SlashSwordActSL52_1+SlashSwordActSL53_0+SlashSwordActSL53_1+SlashSwordActSL53_2+SlashSwordActSLDefencing+SlashSwordActSL61,,2837|2832|2840
-267,SlashSwordRemapBS2,BS2,,,0.9,0,1,3,1.75,0.01,0,0,,,2000,Meelee:SlashSwordCustom_BS2_Heavy&|MeleeActScale:1.1|MeleeSpecial:Stab|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21+SlashSwordActBS14_0+SlashSwordActBS14_1+SlashSwordActBS14_2+SlashSwordActBS14_3+SlashSwordActBS14_0Explode+SlashSwordActBS14_1Explode+SlashSwordActBS14_2Explode+SlashSwordActBS14_3Explode,,2837|2832|2840
-268,SlashSwordRemapSS2,SS2,,,0.4,0,1,3,1.2,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SS2_Heavy&|MeleeActScale:0.8|MeleeSpecial:Explode|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2832|2840
-269,SlashSwordRemapDS2,DS2,,,0.16,0,1,5,2.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_DS2_Heavy&|MeleeActScale:0.8|MeleeSpecial:FastSlash|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4+SlashSwordActDS31,,2837|2832|2840
-270,SlashSwordRemapLS2,LS2,,,0.9,0,1,3,4.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_LS2_Heavy&|MeleeSpecial:Counter|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2832|2840
-271,SlashSwordRemapAX2,AX2,,,2.5,0,1,3,7.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_AX2_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeAct:AX2=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2832|2840
-272,SlashSwordRemapSC2,SC2,,,1,0,1,3,4,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SC2_Heavy&|MeleeAct:SC2=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End+SlashSwordActSC31+SlashSwordActSC42_Start+SlashSwordActSC42+SlashSwordActSC42_End+SlashSwordActSC51,,2837|2832|2840
-273,SlashSwordActNG11,NG2,,,1.25,0,1,4,3,0.01,0,0,,,2000,MeleeSpecial:Block|MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode+SlashSwordActNG31,,2837|2829|2832|2840
-274,SlashSwordActHA11,HA2,,,0.5,0,1,3,1,0.01,0,0,,,2000,MeleeSpecial:Explode|MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2+SlashSwordActHA24,,2837|2829|2832|2840
-275,SlashSwordRemapSY2,SY2,,,1.2,0,1,4,2.5,0.01,0,0,,,2000,Meelee:SlashSwordCustom_SY2_Heavy&|MeleeSpecial:Slide|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2832|2840
-276,SlashSwordRemapFS2,FS2,,,1.35,0,1,3,2.25,0.01,0,0,,,2000,Meelee:SlashSwordCustom_FS2_Heavy&|MeleeSpecial:Charge|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2832|2840
-151,SlashSword0b2,,,,0.6,0,1,3,3,0.01,0,0,,,7500,Meelee:SlashSword0c2&,,2839
-152,SlashSword1,,,,0.4,0,1,3,1,0.01,4,0,,,2000,Meelee:SlashSword1d&AuraCombo,,2839
-153,SlashSword1b,,,,0.175,0,1,4,1.5,0.01,4,0,,,500,Meelee:SlashSword1c2&,,2839
-154,SlashSword2,,,,0.7,0,1,3,3,0.01,4,0,,,4000,Meelee:SlashSword2c&AuraCombo,,2839
-155,SlashSword2b,,,,1,0,1,3,4,0.01,35,50,,,4000,Meelee:SlashSword2d&|AuraBlade,,2839
-156,SlashSword3,,,,0.5,0,1,3,2.5,0.01,45,80,,,4000,Meelee:SlashSword3c2&DashFoward,,2839
-157,SlashSword3b,,,,0.2,0,1,4,3,0.01,8,0,,,2000,Meelee:SlashSword3b3&,,2839
-158,SlashSword3c2,,,,1.25,0,1,3,3,0.01,8,0,,,2000,Meelee:SlashSword3c2&AuraCombo|AuraBlade,,2839
-159,SlashSword1e,,,,0.25,0,1,3,1.35,0.01,8,1,,,2000,Meelee:SlashSword1f&AuraCombo|AuraBlade,,2839
-165,SlashSword1,,,,0.4,0,1,5,3,0.01,8,2,1,,2000,Assassin,,
-251,SlashSword0b3,251,,,0.6,0,1,3,3,0.01,4,0,,,7500,Meelee:SlashSword0c3&,,2839
-255,SlashSword2b,255,,,1,0,1,3,4,0.01,50,100,,,4000,Meelee:SlashSword2d2&,,2839|2837|2841
-265,SlashSword3,,,,0.2,0,1,2,3,0.01,0,0,1,,2000,Assassin,,2838
-60,SlashSwordEneBig,,,,9,0,1,2,9,0.01,6,0,,,4000,,,
-61,SlashSwordEne,,,,0.5,0,1,4,8,0.01,4,0,,,2000,,,
-62,SlashSwordEnemyBossFinal,,,,0.1,0,1,1,1,0.01,0,0,,,8000,,,
-63,SlashSwordShield,,,,0.6,0,1,1,1,0.01,0,0,,,4000,,,
-1201,SlashSwordEneMiddle,,,,0.8,0,1,3,5,0.01,0,0,,,3000,,,
-1202,SlashSwordGiant,,,,1,0,1,1,1,0.01,0,0,,,6000,,,
-1203,SlashSword3c3,,,,1,0,1,1,1,0.01,0,0,,,2000,,,
-1204,SlashSwordEneBig2,,,,1,0,1,1,1,0.01,0,0,,,8000,,,
-1205,SlashSwordShiAttack,,,,1,0,1,1,1,0.01,0,0,,,10000,,,
-1206,SlashSwordEneBig,,,,0.8,0,1,3,5,0.01,0,0,,,3000,,,
-1301,SlashSwordActMachete0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:EMa=SlashSwordActMachete0+SlashSwordActMachete1+SlashSwordActMachete2,,
-1302,SlashSwordActMacheteH0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:1.15|MeleeAct:EMa2=SlashSwordActMacheteH0+SlashSwordActMacheteH1+SlashSwordActMacheteH2+SlashSwordActMacheteH3+SlashSwordActMacheteH4,,
-1303,SlashSwordActLance0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:ELa=SlashSwordActLance0+SlashSwordActLance1+SlashSwordActLance2,,
-1304,SlashSwordActArcher0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:EAr=SlashSwordActArcher0+SlashSwordActArcher1,,
-1305,SlashSwordActArcher0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:EAr2=SlashSwordActArcher0+SlashSwordActArcher1+SlashSwordActArcherExplode,,
-1306,SlashSwordActShield0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:0.8|MeleeAct:ESh=SlashSwordActShield0+SlashSwordActShield1+SlashSwordActShield2+SlashSwordActShield3+SlashSwordActShield4,,
-1307,SlashSwordActShieldH0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:0.8|MeleeAct:ESh2=SlashSwordActShieldH0+SlashSwordActShieldH1+SlashSwordActShieldH2+SlashSwordActShieldH3+SlashSwordActShieldH4,,
-1308,SlashSwordActAssassin0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAs=SlashSwordActAssassin0+SlashSwordActAssassin1+SlashSwordActAssassin2+SlashSwordActAssassin3,,
-1309,SlashSwordActAssassinH0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAs2=SlashSwordActAssassinH0+SlashSwordActAssassinH1+SlashSwordActAssassinH2+SlashSwordActAssassinH3,,
-1310,SlashSwordActLanceH0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:ELa2=SlashSwordActLanceH0+SlashSwordActLanceH1+SlashSwordActLanceH2,,
-1351,SlashSwordActAssassinBoss0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAsB=SlashSwordActAssassinBoss0+SlashSwordActAssassinBoss1+SlashSwordActAssassinBoss2+SlashSwordActAssassinBoss3+SlashSwordActAssassinBoss4+SlashSwordActAssassinBoss5+SlashSwordActAssassinBoss6,,
-1352,SlashSwordActLanceBoss0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeActScale:1.3|MeleeAct:ELaB=SlashSwordActLanceBoss0+SlashSwordActLanceBoss1+SlashSwordActLanceBoss2+SlashSwordActLanceBoss3+SlashSwordActLanceBoss4,,
-1353,SlashSwordActShieldBoss0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:EShB=SlashSwordActShieldBoss0+SlashSwordActShieldBoss1+SlashSwordActShieldBoss2+SlashSwordActShieldBoss3+SlashSwordActShieldBoss4+SlashSwordActShieldBoss5+SlashSwordActShieldBoss6,,
-1354,SlashSwordActScorpion0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:Scorpion=SlashSwordActScorpion0+SlashSwordActScorpionLeftLight0+SlashSwordActScorpionLeftLight1+SlashSwordActScorpionLeftLight2+SlashSwordActScorpionLeftHeavy0+SlashSwordActScorpionLeftHeavy1+SlashSwordActScorpionLeftHeavy2+SlashSwordActScorpionRightLight0+SlashSwordActScorpionRightLight1+SlashSwordActScorpionRightLight2+SlashSwordActScorpionRightHeavy0+SlashSwordActScorpionRightHeavy1+SlashSwordActScorpionRightHeavy2+SlashSwordActScorpionTail+SlashSwordActScorpionEnergyBall+SlashSwordActScorpionChargeEnergyBall,,
-1355,SlashSwordAct_SaberSaberBoss0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:ESaB=SlashSwordAct_SaberSaberBoss0+SlashSwordAct_SaberSaberBoss1+SlashSwordAct_SaberSaberBoss2+SlashSwordAct_SaberSaberBoss3+SlashSwordAct_SaberAssassinBoss0+SlashSwordAct_SaberAssassinBoss1+SlashSwordAct_SaberAssassinBoss2+SlashSwordAct_SaberAssassinBoss3+SlashSwordAct_SaberAssassinBoss4+SlashSwordAct_SaberAssassinBoss5+SlashSwordAct_SaberAssassinBoss6+SlashSwordAct_SaberLanceBoss0+SlashSwordAct_SaberLanceBoss1+SlashSwordAct_SaberLanceBoss2+SlashSwordAct_SaberLanceBoss3+SlashSwordAct_SaberLanceBoss4+SlashSwordAct_SaberShieldBoss0+SlashSwordAct_SaberShieldBoss1+SlashSwordAct_SaberShieldBoss2+SlashSwordAct_SaberShieldBoss3+SlashSwordAct_SaberShieldBoss4+SlashSwordAct_SaberShieldBoss5+SlashSwordAct_SaberShieldBoss6,,
-1356,SlashSwordActScorpionPlus0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:ScorpionPlus=SlashSwordActScorpionPlus0+SlashSwordActScorpionPlusLeftLight0+SlashSwordActScorpionPlusLeftLight1+SlashSwordActScorpionPlusLeftLight2+SlashSwordActScorpionPlusLeftHeavy0+SlashSwordActScorpionPlusLeftHeavy1+SlashSwordActScorpionPlusLeftHeavy2+SlashSwordActScorpionPlusRightLight0+SlashSwordActScorpionPlusRightLight1+SlashSwordActScorpionPlusRightLight2+SlashSwordActScorpionPlusRightHeavy0+SlashSwordActScorpionPlusRightHeavy1+SlashSwordActScorpionPlusRightHeavy2+SlashSwordActScorpionPlusTail+SlashSwordActScorpionPlusEnergyBall+SlashSwordActScorpionPlusChargeEnergyBall,,
-1357,SlashSwordAct_SaberSaberBossPlus0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:ESaBP=SlashSwordAct_SaberSaberBossPlus0+SlashSwordAct_SaberSaberBossPlus1+SlashSwordAct_SaberSaberBossPlus2+SlashSwordAct_SaberSaberBossPlus3+SlashSwordAct_SaberAssassinBossPlus0+SlashSwordAct_SaberAssassinBossPlus1+SlashSwordAct_SaberAssassinBossPlus2+SlashSwordAct_SaberAssassinBossPlus3+SlashSwordAct_SaberAssassinBossPlus4+SlashSwordAct_SaberAssassinBossPlus5+SlashSwordAct_SaberAssassinBossPlus6+SlashSwordAct_SaberLanceBossPlus0+SlashSwordAct_SaberLanceBossPlus1+SlashSwordAct_SaberLanceBossPlus2+SlashSwordAct_SaberLanceBossPlus3+SlashSwordAct_SaberLanceBossPlus4+SlashSwordAct_SaberShieldBossPlus0+SlashSwordAct_SaberShieldBossPlus1+SlashSwordAct_SaberShieldBossPlus2+SlashSwordAct_SaberShieldBossPlus3+SlashSwordAct_SaberShieldBossPlus4+SlashSwordAct_SaberShieldBossPlus5+SlashSwordAct_SaberShieldBossPlus6,,
-1358,SlashSwordAct_FinalBoss0,,,,0.5,0,1,1,0,0.01,0,0,,,2000,MeleeAct:FB=SlashSwordAct_FinalBoss0+SlashSwordAct_FinalBoss1+SlashSwordAct_FinalBoss2+SlashSwordAct_FinalBoss3+SlashSwordAct_FinalBoss4+SlashSwordAct_FinalBoss5+SlashSwordAct_FinalBoss6+SlashSwordAct_FinalBoss7+SlashSwordAct_FinalBoss8+SlashSwordAct_FinalBoss9+SlashSwordAct_FinalBoss10,,
+-1,null,,,,0,0,0,0,0,0,0,0,0,,,0,,,
+0,BulletNormal,,0_SMG,SL,0.18,8,1,12,2,0.1,4,1,0,1,CaseNormal,240,,,
+1,BulletNormal,,1_HMG,SL,0.12,11,1,15,3.5,0.125,5,1,0,1,CaseNormal,270,,,
+2,BulletNormal,,2_SSG,Sh,1.25,15,12,6,6,0.01,17,1,0,1,CaseLarge,900,,,
+3,BulletMinu,,3_HSG,Sh,1,36,25,7,7,0.01,15,1,1,1,CaseLarge,900,,,
+4,BulletLarge,,4_LRF,LL2,2,5,1,5,5.6,0.6,15,1,1,1,CaseLarge,2400,,,
+5,BulletLargeMinu,,5_HRF,LL,0.6,12,1,12,8,0.36,11,1,1,1,CaseLarge,1000,,,
+6,BulletMinu,,6_GTL,SS,0.08,14,1,50,2,0.15,6,1,0,1,CaseSmall,180,,,
+7,BulletExplode,,7_CAN,LS,1.5,8,1,6,10,0.5,45,1,1,1,CaseSmoke,1600,,,
+8,BulletExplodeMin,,CAN2,LS,2,15,8,2,8,0.7,45,1,1,1,CaseSmoke2,2400,,,
+9,BulletPierce,,1_HMG,SL2,0.2,7,1,12,3,0.075,5,1,0,1,CaseNormal,300,,,
+10,Thrower-Fire,,FLM,,2,0,1,3,6,0.1,4,1,0,1,,0,,,
+11,Thrower-Freeze,,FLM2,,2,0,1,3,6,0.1,4,1,0,1,,0,,,
+12,BulletElectr,,1_HMG,SL2,0.2,9,1,10,5,0.1,7,1,0,1,CaseNormal,120,,,
+13,BulletBig,,MG,ML2,0.1,18,1,80,21,0.4,28,1,1,1,CaseLarge,500,ForceSeat,,
+14,BulletLargeMinu,,MGC,LS,0.075,22,1,90,56,0.1,96,1,1,1,CaseLarge,600,ForceSeat,,
+15,BulletBigFar,,0_RF,SL2,0.6,8,1,9,3.5,0.2,9,1,0,1,CaseNormal,600,,,
+16,BulletNormal2,,1_HMG,SL,0.12,10,1,25,4.5,0.15,7,1,0,1,CaseNormal,270,,,
+17,BulletNormal2,,1_HMG,SL,0.1,18,1,25,4.5,0.225,7,1,0,1,CaseNormal,270,,,
+18,BulletNormal,,1_HMG,SL,0.2,12,1,6,0.8,0.1,2,1,0,1,CaseNormal,270,,,2692
+19,BulletNormal2,,0_SMG,SL,0.5,5,1,5,0.5,0.05,3,1,0,1,CaseNormal,240,,,
+20,BulletNormal2,,2_SSG,Sh,0.25,24,20,2,5,0.01,6,1,0,1,CaseLarge,600,,,
+21,BulletMinu,,6_GTL,SS,0.08,16,1,100,4,0.2,12,1,0,1,CaseSmall,192,,,
+22,BulletMinu2,,6_GTL,SS,0.1,12,1,42,2,0.1,7,1,0,1,CaseSmall,192,,,
+23,BulletBig2,,2_SSG,LS,2,15,6,2,5.5,0.01,7,1,1,1,CaseLarge,1600,,,
+24,BulletNormal,,MG2,SL2,0.1,12,1,60,8,0.2,20,1,1,1,CaseNormal,300,,,
+25,BulletNormal,,2_SSG,Sh,0.2,5,3,8,4,0.01,7,1,0,1,CaseLarge,600,,,
+26,BulletExplodeMin2,,CanL,LS,0.2,20,1,15,9,0.5,40,1,1,1,CaseSmoke,300,,,
+27,RayNormal,,Laser 03,,1,0,1,9,3.5,0.01,12,1,1,1,,0,,,
+28,RayNormalLong,,Laser 03,,1.5,0,1,4,5,0.01,10,1,1,1,,0,,,
+29,RayBurst,,Laser 03,,1,0,1,4,2.5,0.01,5,1,1,1,,0,,,
+30,RayBurstLong,,Laser 03,,2,0,1,1,6,0.01,5,1,1,1,,0,,,
+31,Lightning,,Electric,,1,0,1,8,4,0.01,20,1,1,1,,0,,,
+32,LightningLong,,Electric,,1.5,0,1,4,5.5,0.01,35,1,1,1,,0,,,
+33,LightningDamage,,Electric,,1.5,0,1,2,7,0.01,42,1,1,1,,0,,,
+34,LightningBurst,,Electric,,2,0,3,2,6.5,0.01,40,1,1,1,,0,,,
+35,Lightning_Treat,,Lightning_Treat,,1,0,1,5,6,0.01,100,1,0,1,,0,,,
+36,Thrower-Oil,,WTE,,4,0,1,1,6,0.1,4,1,0,1,,0,,,
+37,Thrower-Water,,WTE,,4,0,1,4,6,0.1,4,1,0,1,,0,,,
+38,BulletWater,,6_GTL,SS,0.05,10,1,36,2,0.1,4,1,0,1,CaseNormal,240,,,
+39,BulletElectrMin,,Ele_Gtl,SS,0.09,18,1,20,3.2,0.2,4,1,0,1,CaseSmall,150,,,
+40,BulletElectrLarge,,Ele_RF,ML3,1.35,3,1,3,5.2,0.4,6,1,1,1,CaseLarge,800,,,
+41,GunShield,,,,0,0,0,0,0,0,0,1,0,,,0,,,
+42,BulletExplodeMin2,,CanL,LS,0.5,8,1,5,3,0.1,15,1,0,1,CaseSmoke,300,,,
+43,BulletLargeMinu0,,5_HRF,LL,0.5,20,1,3,4,0.35,4,1,1,1,CaseLarge,1000,,,
+44,BulletEner,,1_Ener2,ML2,0.135,12,1,48,6,0.25,30,1,1,1,CaseNormal,300,,,
+45,BulletEner,,1_Ener2,ML2,0.5,10,1,10,4,0.1,8,1,1,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,
+46,BulletGrenadeProjMine,,Throw2,,1.5,8,1,5,5.5,0.3,24,1,1,1,CaseSmoke,300,,,
+47,BulletTeleport,,Throw2,,0.5,0,1,2,10,0.01,0,1,0,1,,0,ManualReload|FixedClipNum,,
+48,BulletElectr,,Ele_SG,Sh,1,14,12,4,5,0.01,17,1,1,1,CaseNormal,900,,,
+49,BulletEner,,En_SG,Sh,1,16,10,4,5.5,0.01,17,1,1,1,CaseNormal,900,,,
+80,BulletEnerLarge,,En_RF,LL,2.4,3,1,3,9,0.64,6,1,1,1,CaseLarge,2400,,,
+81,BulletExplodeHigh,,CAN2,LS,1.5,24,1,5,11,0.5,45,1,1,1,CaseSmoke2,1600,ForceSeat,,2694
+82,BulletExplode,,CANMi,,1,12,1,5,7.5,0.5,45,1,1,1,CaseSmoke,1000,,,1460|1461
+83,BulletScrap,10183,0_SMG,SL,0.4,12,1,12,4,0.2,8,1,1,1,CaseNormal,250,Charge:BulletScrap_0.5_4_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:3|BulletSizeByDamage,,2863|2692
+84,BulletScrapBig,10084,5_HRF,LL2,0.75,11,1,7,4.5,0.36,8,1,1,1,CaseLarge,800,Charge:BulletScrapBig_0.45_2_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:1.5|BulletSizeByDamage,,2863
+100,BulletNormal,,0_SMG,SL,0.18,7,1,15,2,0.1,5,1,0,1,CaseNormal,240,,,
+101,BulletNormal,,1_HMG,SL,0.11,8,1,16,3.2,0.1,5,1,0,1,CaseNormal,270,,,
+102,BulletNormal2,,2_SSG,Sh,1.2,12,10,6,6,0.01,15,1,1,1,CaseLarge,900,,,
+103,BulletMinu,,3_HSG,Sh,1,42,32,7,7.5,0.01,15,1,1,1,CaseLarge,900,,,
+104,BulletLarge,,4_LRF,LL2,1.75,2,1,6,5,0.6,20,1,1,1,CaseLarge,2400,,,
+105,BulletLargeMinu,,5_HRF,LL,0.55,11,1,13,7.5,0.48,11,1,1,1,CaseLarge,1000,,,
+106,BulletMinu,,6_GTL,SS,0.08,14,1,50,2.5,0.15,5,1,0,1,CaseSmall,180,,,
+107,BulletExplode,,7_CAN,LS,1.75,8,1,7,9,0.5,40,1,1,1,CaseSmoke,1600,,,
+108,BulletExplodeMin,,CAN2,LS,2,18,11,3,7.5,0.7,40,1,1,1,CaseSmoke2,2400,,,
+109,BulletPierce,,1_HMG,SL2,0.25,9,1,15,3,0.1,7,1,1,1,CaseNormal,300,,,
+110,Thrower-Fire,,FLM,,2,0,1,3,5.5,0.1,3,1,0,1,,0,,,
+111,Thrower-Freeze,,FLM2,,2,0,1,3,5.5,0.1,3,1,0,1,,0,,,
+113,BulletBig,,MG,ML2,0.11,18,1,80,21,0.4,30,1,1,1,CaseLarge,500,ForceSeat,,
+114,BulletLargeMinu,,MGC,LS,0.09,25,1,80,60,0.1,135,1,1,1,CaseLarge,600,ForceSeat,,
+115,BulletBigFar,,0_RF,ML3,0.5,6,1,10,3.2,0.35,8,1,1,1,CaseNormal,600,,,
+116,BulletNormal2,,1_HMG,SL,0.12,10,1,36,4,0.15,8,1,0,1,CaseNormal,270,,,
+117,BulletNormal3,,1_HMG,SL,0.1,18,1,36,4,0.225,8,1,0,1,CaseNormal,270,,,
+118,BulletNormal2,,1_HMG,SL,0.22,11,1,8,0.75,0.1,4,1,0,1,CaseNormal,270,Charge:BulletGrenadeProj_1.5_4_ChargeEne0,,2692
+119,BulletNormal2,,0_SMG,SL,0.5,5,1,5,0.5,0.05,2,1,0,1,CaseNormal,240,,,
+120,BulletNormal2,,2_SSG,Sh,0.25,24,25,2,6,0.01,5,1,0,1,CaseLarge,600,,,
+121,BulletMinu,,6_GTL,SS,0.08,16,1,150,4,0.2,16,1,0,1,CaseSmall,192,,,
+122,BulletMinu2,,6_GTL,SS,0.11,12,1,42,2,0.1,4,1,0,1,CaseSmall,192,,,
+123,BulletBig2,,2_SSG,LS,2,15,7,2,7,0.01,9,1,1,1,CaseLarge,1600,,,
+124,BulletNormal2,,MG2,SL2,0.1,12,1,50,7.5,0.2,17,1,1,1,CaseLarge,300,,,
+125,BulletNormal2,,2_SSG,Sh,0.12,5,3,8,5.5,0.01,7,1,1,1,CaseLarge,600,,,
+126,BulletExplodeMinHigh,,CanL,LS,0.2,20,1,18,9,0.5,50,1,1,1,CaseSmoke,300,ForceSeat,,2694
+127,RayNormal2,,Laser 03,,1,0,1,10,3,0.01,10,1,1,1,,0,,,
+128,RayNormalLong2,,Laser 03,,1.6,0,1,4,5,0.01,8,1,1,1,,0,,,
+129,RayBurst2,,Laser 03,,1,0,1,5,2.2,0.01,4,1,1,1,,0,,,
+130,RayBurstLong2,,Laser 03,,2.2,0,1,1,6,0.01,8,1,1,1,,0,,,
+131,Lightning2,,Electric,,0.8,0,1,9,3.6,0.01,27,1,1,1,,0,,,
+132,LightningLong2,,Electric,,1.7,0,1,4,6,0.01,30,1,1,1,,0,,,
+133,LightningDamage2,,Electric,,1.25,0,1,3,6,0.01,36,1,1,1,,0,,,
+134,LightningBurst2,,Electric,,2,0,4,2,7,0.01,50,1,1,1,,0,,,
+136,Thrower-Oil,,WTE,,4,0,1,1,5.5,0.1,4,1,0,1,,0,,,
+137,Thrower-Water,,WTE,,4,0,1,4,5.5,0.1,4,1,0,1,,0,,,
+138,BulletWater2,,6_GTL,SS,0.05,10,1,36,2,0.1,4,1,1,1,CaseNormal,240,,,
+139,BulletElectrMin2,,Ele_Gtl,SS,0.075,15,1,22,3,0.2,4,1,0,1,CaseSmall,150,,,
+140,BulletElectrLarge2,,Ele_RF,ML3,1.2,4,1,4,4.75,0.4,6,1,0,1,CaseLarge,800,,,
+142,BulletExplodeMin,,CanL,LS,0.75,8,1,3,2.5,0.1,15,1,1,1,CaseSmoke,1600,,,
+143,BulletLargeMinu0b,,5_HRF,LL,0.75,20,1,2,3,0.35,10,1,1,1,CaseLarge,1000,,,
+144,BulletEner,,1_Ener2,ML2,0.12,11,1,48,8,0.15,40,1,1,1,CaseNormal,300,,,
+145,BulletEner2,,1_Ener2,ML2,0.5,8,1,15,3.6,0.1,10,1,1,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,
+146,BulletGrenadeProjMineBig,,Throw2,,3.6,5,1,3,15,0.2,75,1,1,1,CaseSmoke2,2400,,,
+148,BulletElectr2,,Ele_SG,Sh,0.9,17,17,5,4.75,0.01,20,1,1,1,CaseNormal,900,,,
+149,BulletEner2,,En_SG,Sh,0.9,14,11,5,5.2,0.01,20,1,1,1,CaseNormal,900,,,
+180,BulletEnerLarge2,,En_RF,LL,2.5,4,1,3,8.4,0.64,6,1,0,1,CaseLarge,2400,,,
+181,BulletExplodeHigh2,,CANH1,LS,4,45,1,2,22,0.75,50,1,1,1,CaseSmoke,1350,ForceSeat,,2694
+182,BulletExplodeMin,,CANMi,,0.5,15,1,18,10,0.5,40,1,1,1,CaseSmoke,640,,,1460|1461|2690
+183,BulletScrapSmall,10183,6_GTL,SS,0.25,18,1,32,3,0.15,8,1,1,1,CaseSmall,180,Charge:BulletScrapSmall_0.75_4_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:3|BulletSizeByDamage,,2863|2693
+184,BulletScrapBig2,10084,5_HRF,LL2,0.8,10,1,6,4,0.32,8,1,1,1,CaseLarge,750,Charge:BulletScrapBig_0.4_3_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:2|BulletSizeByDamage,,2863
+200,BulletNormal2,,0_SMG,SL,0.16,6,1,16,1.8,0.1,4,1,1,1,CaseNormal,240,,,
+201,BulletNormal2,,1_HMG,SL,0.11,8,1,16,3.2,0.1,3,1,1,1,CaseNormal,270,,,
+202,BulletNormal3,,2_SSG,Sh,1.5,12,10,6,6,0.01,10,1,1,1,CaseLarge,900,,,
+203,BulletMinu2,,3_HSG,Sh,1,42,48,7,7.5,0.01,21,1,1,1,CaseLarge,900,,,
+204,BulletLargePierce,,0_LRF,LL2,1.75,2,1,4,6,0.6,25,1,1,1,CaseLarge,2400,ForceSeat,,
+205,BulletLargeMinu2,,5_HRF,LL,0.5,10,1,13,7,0.5,15,1,1,1,CaseLarge,1000,,,
+206,BulletMinu2,,6_GTL,SS,0.07,12,1,55,2.4,0.15,4,1,1,1,CaseSmall,180,,,
+209,BulletPierce,209,1_HMG2,SL2,0.4,9,1,21,3,0.1,7,1,1,1,CaseNormal,300,,,2690
+210,Thrower-Fire,,FLM,,1.8,0,1,4,5,0.1,3,1,0,1,,0,,,
+211,Thrower-Freeze,,FLM2,,1.8,0,1,4,5,0.1,3,1,0,1,,0,,,
+213,BulletBig,,MG,ML2,0.115,24,1,85,20,0.4,32,1,1,1,CaseLarge,300,ForceSeat,,
+215,BulletBigFar2,,0_RF,ML3,0.44,6,1,10,2.6,0.35,10,1,1,1,CaseNormal,700,,,
+216,BulletNormal2,,1_HMG,SL,0.12,10,1,36,4,0.15,5,1,1,1,CaseNormal,270,,,
+217,BulletNormal5,217,1_HMG3,SL,0.16,16,1,60,8,0.18,4,1,1,1,CaseNormal,270,ForceSeat,,
+218,BulletNormal2,,1_HMG,SL,0.25,10,1,9,0.75,0.1,4,1,1,1,CaseNormal,270,Charge:BulletGrenadeProj_1.5_4_ChargeEne0,,2690
+219,BulletNormalFollow,,0_SMG,SL,0.4,4,1,5,0.4,0.05,2,1,1,1,CaseNormal,240,,,1460|1461
+220,BulletNormal2,,2_SSG,Sh,0.35,24,25,3,9,0.01,10,1,1,1,CaseLarge,700,,,
+221,BulletMinu2,,6_GTL,SS,0.07,12,1,150,3.5,0.15,19,1,1,1,CaseSmall,192,,,
+222,BulletMinu3,,6_GTL,SS,0.1,11,1,48,1.7,0.075,3,1,1,1,CaseSmall,192,,,
+223,BulletBig2,,2_SSG,LS,1,12,7,2,8,0.01,9,1,1,1,CaseLarge,1600,,,
+224,BulletNormal2,,MG2,SL2,0.09,10,1,54,7,0.15,15,1,1,1,CaseLarge,300,,,
+225,BulletNormal3,,2_SSG,Sh,0.12,5,3,8,6,0.01,5,1,1,1,CaseLarge,600,,,
+227,RayNormalMinu,227,Laser 03,,0.75,40,5,8,3.6,0.01,12,1,1,1,,0,Charge:RayNormalLong2+RayBurstLong3_1.5_2_ChargeEne3,,
+228,RayNormalLong2,228,Laser 03,,1.35,0,1,6,3.6,0.01,15,1,1,1,,0,Charge:RayBurstLong2+RayBurstLong4_1.5_2_ChargeEne2,,
+230,RayBurstLong3,,Laser 03,,1.8,0,1,1,4.5,0.01,25,1,1,1,,0,,,
+232,LightningLong3,,Electric,,1.6,0,1,5,5.4,0.01,54,1,1,1,,0,,,
+233,LightningDamage3,,Electric,,1.25,0,1,3,6,0.01,45,1,1,1,,0,,,
+236,Thrower-Oil,,WTE,,3.6,0,1,1,5,0.1,4,1,0,1,,0,,,
+237,Thrower-Water,,WTE,,3.6,0,1,4,5,0.1,4,1,0,1,,0,,,
+239,BulletElectrMin2,,Ele_Gtl,SS,0.18,11,1,32,1.8,0.1,15,1,1,1,CaseSmall,192,,,2691
+240,BulletElectrLarge2,,Ele_RF,ML3,1.2,3,1,6,2.7,0.35,10,1,1,1,CaseLarge,800,,,
+244,BulletEner2,,1_Ener2,ML2,0.12,10,1,40,9,0.12,40,1,1,1,CaseNormal,300,,,
+245,BulletEner2,,1_Ener2,ML2,0.4,8,1,15,4.5,0.1,15,1,1,1,CaseNormal,0,Charge:RayBurstEner_1_3_ChargeEne,,2690
+248,BulletElectr2,,Ele_SG,Sh,0.8,22,22,5,4.5,0.01,20,1,1,1,CaseNormal,900,,,
+249,BulletEner2,,En_SG,Sh,0.8,14,11,6,6,0.01,20,1,1,1,CaseNormal,900,Charge:BulletEnerBig_1_3_ChargeEne3,,
+280,BulletEnerLarge2,,En_RF,LL,2.8,4,1,4,12,0.64,6,1,1,1,CaseLarge,2400,Charge:BulletEnerBig2_0.5_4_ChargeEne3,,
+282,BulletExplodeMin,282,CANMi,,1.5,25,7,3,9,0.5,40,1,1,1,CaseSmoke,2500,,,1460|1461|2842
+283,BulletScrapSmall2,10183,6_GTL,SS,0.2,20,1,40,4,0.25,8,1,1,1,CaseSmall,180,Charge:BulletScrapSmall_0.6_8_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:5|BulletSizeByDamage,,2863|2691
+300,BulletNormal2,,0_SMG,SL,0.145,5,1,17,1.6,0.1,4,1,1,1,CaseNormal,240,,,
+301,BulletNormal2,,1_HMG,SL,0.1,7,1,17,3,0.075,4,1,1,1,CaseNormal,270,,,
+303,BulletMinu3,,3_HSG,Sh,0.9,36,50,7,7,0.01,13,1,1,1,CaseLarge,900,,,
+304,BulletLargeKill,,0_LRF,LL2,2,2,1,2,10.5,0.6,35,1,1,1,CaseLarge,3200,ForceSeat,,
+305,BulletLargeMinu2,305,5_HRF,LL,0.45,9,1,14,6.4,0.45,35,1,1,1,CaseLarge,1500,,,
+306,BulletMinu2,,6_GTL,LL,0.06,10,1,60,2.25,0.135,5,1,1,1,CaseSmall,180,,,
+315,BulletBigFar2,,0_RF,ML3,0.4,5,1,10,2,0.3,10,1,1,1,CaseNormal,800,,,
+316,BulletNormal3,,1_HMG,SL,0.14,10,1,36,4,0.15,7,1,1,1,CaseNormal,270,,,
+318,BulletNormal3,,1_HMG,SL,0.24,9,1,12,0.7,0.075,4,1,1,1,CaseNormal,270,Charge:BulletGrenadeProj2_1_8_ChargeEne0,,2690
+319,BulletNormalFollow,,1_HMG3,SL,1.5,28,4,8,1.8,0.1,2,1,1,1,CaseNormal,240,,,1460|1461|2693
+320,BulletNormal3,,2_SSG,Sh,0.45,22,25,4,12,0.01,12,1,1,1,CaseLarge,800,,,
+321,BulletMinu2,,6_GTL,SS,0.07,10,1,150,3,0.12,14,1,1,1,CaseSmall,192,,,
+322,BulletMinu3,,6_GTL,SS,0.09,11,1,48,1.8,0.075,5,1,1,1,CaseSmall,192,,,
+324,BulletNormal3,,MG2,SL2,0.09,9,1,40,7,0.1,18,1,1,1,CaseLarge,300,,,
+330,RayBoss,,LaserBoss,,3.5,1,1,2,15,0.05,100,1,1,1,,0,,,
+333,LightningDamage4,,Electric ,,4.2,0,1,3,10,0.01,75,1,1,1,,0,,,
+345,BulletEner2,345,1_Ener2,ML2,0.4,8,1,32,5,0.1,15,1,1,1,CaseNormal,0,Charge:RayBurstEner2_1_8_ChargeEne,,2691
+382,BulletExplodeFollowAntiAir,,CANMi,,4,75,5,6,10,0.5,40,1,1,1,CaseSmoke,640,,,1460|1461|2690
+384,BulletScrap2,10384,2_SSG,LS,1.5,20,7,6,7.5,0.01,9,1,1,1,CaseLarge,900,Charge:BulletScrap2_0.4_3_ChargeEne_0|ChargeInherit|ChargeInheritDamageRate:1.5|BulletSizeByDamage,,2863
+400,BulletNormal3,,0_SMG,SL,0.145,5,1,17,1.6,0.1,4,1,1,1,CaseNormal,240,,,
+401,BulletNormal3,,1_HMG3,SL,0.09,6,1,18,2.7,0.075,6,1,1,1,CaseNormal,270,,,
+405,BulletLargeMinuAntiAirExplode,405,5_HRF,LL,1,8,1,15,5.5,0.2,15,1,1,1,CaseLarge,1000,,,2690
+406,BulletMinu3,,0_SMG2,SS,0.055,9,1,64,2,0.125,8,1,1,1,CaseSmall,180,,,
+415,BulletBigFar2,,0_RF,ML3,0.35,5,1,10,1.8,0.2,15,1,1,1,CaseNormal,1000,,,
+416,BulletNormal4,416,1_HMG3,SL,0.14,10,1,36,4,0.15,9,1,1,1,CaseNormal,270,,,
+418,BulletNormal3,418,1_HMG3,SL,0.3,14,1,15,1,0.08,4,1,1,1,CaseNormal,270,,,2691
+421,BulletMinu4,421,0_SMG2,SS,0.12,13,1,24,0.5,0.1,20,1,1,1,CaseSmall,192,,,2691
+422,BulletMinu3,422,0_SMG2,SS,0.18,11,1,48,1,0.1,15,1,1,1,CaseSmall,192,,,2691
+424,BulletBigFar,,MG2,SL2,0.1,9,1,38,8.7,0.09,15,1,1,1,CaseLarge,50,,,
+430,RayBossLight,430,LaserBoss,,3.5,1,1,2,18,0.05,100,1,1,1,,0,,,
+444,BulletEnerBig,444,1_Ener,,1,8,1,6,9,0.5,50,1,1,1,,2400,,,
+482,BulletExplodeBig,,CANMi,,4,36,2,8,12,1,40,1,1,1,CaseSmoke,640,,,1460|2691|2864
+500,BulletNormalPin,500,6_HRF,LS,1.5,5,1,4,2,1,20,1,1,,CaseLarge,4500,ForceSeat,,2692
+504,BulletLargeKill2,,0_LRF2,LL3,3,1,1,1,14.5,1,35,1,1,1,CaseLarge,5400,ForceSeat,,
+507,BulletExplodeMegaMini,,CANH2,LS,2,28,5,2,12.5,0.5,45,1,1,1,CaseSmoke2,4500,ForceSeat,,2694
+510,Thrower-Melt,,FLM3,,2.25,0,1,2,5,0.1,25,1,1,1,,0,,,
+515,BulletLargeMinu,515,0_RF1,ML3,0.9,4,1,6,1.25,0.2,30,1,1,1,CaseNormal,1200,,,2690
+524,BulletExplodeMinAir,524,FLK,SL2,0.15,10,1,42,4,0.1,10,1,1,1,CaseLarge,450,,,
+530,RayBoss2,,LaserBoss2,,2.5,1,1,2,15,0.05,100,1,1,1,,0,Charge:RayBurstEnerBig_1_2_ChargeEne,,
+630,RayBossLight2,630,LaserBoss2,,2.5,1,1,1,12,0.05,100,1,1,1,,0,,,
+533,LightningDamage5,,Electric ,,3,0,1,6,9,0.01,100,1,1,1,,0,,,
+544,BulletEnerBig,544,1_Ener,,1,25,5,3,10,0.5,50,1,1,1,,3000,,,
+1098,BulletNormal,,1_HMG,,0.1,9,1,15,5,0.1,0,0,0,1,CaseNormal,40,,,
+1099,BulletExplodeMin,,7_CAN,,2,15,1,2,8,0.15,0,0,0,1,CaseSmoke,400,,,
+1100,BulletNormal,,E_SMG,,0.5,3,1,5,4,0.15,0,0,0,1,CaseNormal,25,,,
+1101,BulletLarge,,5_HRF,,2,1,1,3,12,0.15,0,0,0,1,CaseLarge,400,,,
+1102,BulletMinu,,6_GTL,,0.1,15,1,20,6,0.25,0,0,0,1,CaseSmall,40,,,
+1103,BulletLarge,,5_HRF,,0.4,8,1,3,12,0.3,0,0,0,1,CaseLarge,400,,,
+1104,BulletNormal,,2_SSG,,1,18,8,2,8,0.01,0,0,0,1,CaseLarge,200,,,
+1105,BulletNormal,,E_HMG,,0.15,8,1,30,3,0.15,0,0,0,1,CaseNormal,100,,,
+1106,BulletLarge,,4_LRF,,0.15,1,1,5,5,0.15,0,0,0,1,CaseLarge,700,,,
+1107,BulletElectrMin,,6_GTL,,0.05,7,1,20,6,0.15,0,0,0,1,CaseSmall,50,,,
+1108,BulletElectr,,2_SSG,,1,24,10,4,6,0.01,0,0,0,1,CaseLarge,200,,,
+1109,BulletElectrLarge,,4_LRF,,1,3,1,2,6,0.15,0,0,0,1,CaseLarge,800,,,
+1110,BulletNormal,,E_SMG,,0.5,3,1,5,4,0.15,0,0,0,1,CaseNormal,15,,,
+1111,RayNormal,,Laser 04,,2,0,1,1,5,0.01,0,0,0,1,,0,,,
+1112,RayBoss,,LaserBoss,,4,1,1,1,15,0.05,0,0,0,1,,0,,,
+1113,BulletFollow,,E_SMG,,0.1,40,1,40,3,0.25,0,0,0,1,CaseNormal,200,,,
+1114,BulletExplodeFollow,,7_CAN,,0.4,40,1,5,10,0.15,0,0,0,1,CaseSmoke,1600,,,
+1115,BulletFollow,,E_SMG,,0.15,30,1,10,5,0.15,0,0,0,1,CaseNormal,200,,,
+1116,BulletBig,,MG,,0.075,12,1,20,5,0.25,0,0,0,1,CaseLarge,300,,,
+1117,BulletNormal,,MG2,,0.08,18,1,20,4,0.25,0,0,0,1,CaseNormal,300,,,
+1118,BulletLargeKill,,4_LRF,,2,2,1,3,8,0.05,0,0,0,1,CaseLarge,4000,,,
+1119,BulletBig,,MG,,0.05,15,1,39,2,0.125,0,0,0,1,CaseLarge,300,,,
+1120,BulletNormal,,MG2,,0.1,18,1,12,2.5,0.25,0,0,0,1,CaseNormal,300,,,
+1121,BulletExplodeFollowDestructible,,7_CAN,,0.4,40,1,1,1,0.15,0,0,0,1,CaseSmoke,1600,,,
+1122,BulletExplodeDestructible,,7_CAN,,0.4,20,5,1,1,0.15,0,0,0,1,CaseSmoke,1600,,,
+1123,RayBurstSpecialLong,,Laser 03,,9,0,1,1,1,0.01,0,0,0,1,,0,,,
+1124,RayBurstLongEne,,Laser 03,,2,0,1,1,1,0.01,0,0,0,1,,0,,,
+1125,BulletLargeMinu,,MGC,LS,0.075,12,1,20,5,0.25,0,0,0,1,CaseLarge,300,,,
+1126,BulletElectrLarge,,5_HRF,LL,0.5,5,1,9,4,0.2,0,0,0,1,CaseNormal,2000,,,
+1127,BulletBig,,LS,,0.7,12,15,2,12,0.01,0,0,0,1,CaseLarge,1600,,,
+1128,RayBoss,,LaserBoss,,4,1,1,1,30,0.05,0,0,0,1,,0,,,
+1129,Aurablade,,Sw_1,,0.2,0,1,1,1,0.01,0,0,0,1,,500,,,
+1130,BulletLarge,,5_HRF,LL,0.27,8,1,15,6.4,0.2,0,0,0,1,CaseLarge,1000,,,
+1131,BulletExplodeFollowDestructible,,7_CAN,,0.35,20,2,3,12,0.15,0,0,0,1,CaseSmoke,500,,,
+1132,BulletExplodeFollowDestructible,,7_CAN,,0.35,30,3,3,10,0.15,0,0,0,1,CaseSmoke,0,,,
+1133,BulletExplodeHighFar,,CAN2,LS,3,15,1,4,15,0.5,0,0,0,1,CaseSmoke2,1600,,,2694
+1134,BulletNormal,,MG2,,0.1,20,1,12,7,0.15,0,0,0,1,CaseNormal,300,,,
+50,SlashSword0,,,,0.3,0,1,3,2,0.01,0,0,0,,,4000,Meelee:SlashSword0a&,,2839
+51,SlashSword0b,,,,0.5,0,1,4,2,0.01,2,0,0,,,4000,Meelee:SlashSword0c&,,2839
+52,SlashSword1,,,,0.5,0,1,3,1.2,0.01,2,0,0,,,2000,Meelee:SlashSword1d&,,2839
+53,SlashSword1b,,,,0.2,0,1,5,1.5,0.01,2,0,0,,,500,Meelee:SlashSword1c&,,2839
+54,SlashSword2,,,,0.6,0,1,4,2.5,0.01,50,0,1,,,4000,Meelee:SlashSword2c&,,2839
+55,SlashSword2b,,,,0.8,0,1,3,3.5,0.01,75,0,1,,,4000,Meelee:SlashSword2d&AuraCombo,,2839
+56,SlashSword3,,,,0.4,0,1,3,2,0.01,4,0,0,,,4000,Meelee:SlashSword3&DashFoward,,2839
+57,SlashSword3b,,,,0.3,0,1,4,2,0.01,4,0,0,,,2000,Meelee:SlashSword3b2&,,2839
+58,SlashSword3c,,,,0.65,0,1,3,2.5,0.01,4,0,0,,,2000,Meelee:SlashSword3c&AuraCombo,,2839
+59,SlashSword1e,,,,0.25,0,1,4,1.5,0.01,4,0,0,,,2000,Meelee:SlashSword1e&|AuraBlade,,2839
+65,SlashSword1,,,,0.25,0,1,3,2,0.01,0,0,0,1,,2000,Assassin,,
+66,SlashSwordRemapSL0,SL0,,,0.5,0,1,3,1.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SL0_Heavy&|MeleeAct:SL=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc,,2837|2840
+67,SlashSwordRemapBS0,BS0,,,1,0,1,3,1.75,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_BS0_Heavy&|MeleeActScale:1.1|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21,,2837|2840
+68,SlashSwordRemapSS0,SS0,,,0.5,0,1,3,1.2,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SS0_Heavy&|MeleeActScale:0.8|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2840
+69,SlashSwordRemapDS0,DS0,,,0.2,0,1,5,2.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_DS0_Heavy&|MeleeActScale:0.8|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4+SlashSwordActDS31,,2837|2840
+70,SlashSwordRemapLS0,LS0,,,1,0,1,2,4,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_LS0_Heavy&|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2840
+71,SlashSwordRemapAX0,AX0,,,2.5,0,1,3,7.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_AX0_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeAct:AX=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2840
+72,SlashSwordRemapSC0,SC0,,,1,0,1,3,4,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SC0_Heavy&|MeleeAct:SC=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End,,2837|2840
+73,SlashSwordActNG11,NG0,,,1.25,0,1,4,3,0.01,0,0,0,,,2000,MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode,,2837|2829|2840
+74,SlashSwordActHA11,HA0,,,0.5,0,1,3,1,0.01,0,0,0,,,2000,MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2,,2837|2829|2840
+75,SlashSwordRemapSY0,SY0,,,1.25,0,1,4,3,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SY0_Heavy&|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2840
+76,SlashSwordRemapFS0,FS0,,,1.5,0,1,3,2.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_FS0_Heavy&|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2840
+166,SlashSwordRemapSL1,SL1,,,0.4,0,1,3,1.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SL1_Heavy&|MeleeAct:SL=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc,,2837|2833|2840
+167,SlashSwordRemapBS1,BS1,,,0.9,0,1,3,1.75,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_BS1_Heavy&|MeleeActScale:1.1|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21,,2837|2833|2840
+168,SlashSwordRemapSS1,SS1,,,0.4,0,1,3,1.2,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SS1_Heavy&|MeleeActScale:0.8|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2833|2840
+169,SlashSwordRemapDS1,DS1,,,0.16,0,1,5,2.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_DS1_Heavy&|MeleeActScale:0.8|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4,,2837|2833|2840
+170,SlashSwordRemapLS1,LS1,,,0.9,0,1,3,4.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_LS1_Heavy&|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2833|2840
+171,SlashSwordRemapAX1,AX1,,,2.5,0,1,3,7.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_AX1_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeSpecial:Aura+Throw|MeleeAct:AX=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2833|2840
+172,SlashSwordRemapSC1,SC1,,,1,0,1,3,4,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SC1_Heavy&|MeleeAct:SC=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End,,2837|2833|2840
+173,SlashSwordActNG11,NG1,,,1.25,0,1,4,3,0.01,0,0,0,,,2000,MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode,,2837|2829|2833|2840
+174,SlashSwordActHA11,HA1,,,0.5,0,1,3,1,0.01,0,0,0,,,2000,MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2,,2837|2829|2833|2840
+175,SlashSwordRemapSY1,SY1,,,1.2,0,1,4,2.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SY1_Heavy&|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2833|2840
+176,SlashSwordRemapFS1,FS1,,,1.35,0,1,3,2.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_FS1_Heavy&|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2833|2840
+266,SlashSwordRemapSL2,SL2,,,0.4,0,1,3,1.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SL2_Heavy&|MeleeAct:SL2=SlashSwordActSL11+SlashSwordActSL12+SlashSwordActSL13+SlashSwordActSL21+SlashSwordActSL22+SlashSwordActSL23+SlashSwordActSL24+SlashSwordActSL25+SlashSwordActSL31+SlashSwordActSL32+SlashSwordActSL33+SlashSwordActSL41+SlashSwordActSL42+SlashSwordActSL42_Suc+SlashSwordActSL51+SlashSwordActSL52_0+SlashSwordActSL52_1+SlashSwordActSL53_0+SlashSwordActSL53_1+SlashSwordActSL53_2+SlashSwordActSLDefencing+SlashSwordActSL61,,2837|2832|2840
+267,SlashSwordRemapBS2,BS2,,,0.9,0,1,3,1.75,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_BS2_Heavy&|MeleeActScale:1.1|MeleeSpecial:Stab|MeleeAct:BS=SlashSwordActBS11_0+SlashSwordActBS11_1+SlashSwordActBS12_0+SlashSwordActBS12_1+SlashSwordActBS12_2+SlashSwordActBS13_0+SlashSwordActBS13_1+SlashSwordActBS13_2+SlashSwordActBS13_3+SlashSwordActBSDefence+SlashSwordActBSDefencing+SlashSwordActBS21+SlashSwordActBS14_0+SlashSwordActBS14_1+SlashSwordActBS14_2+SlashSwordActBS14_3+SlashSwordActBS14_0Explode+SlashSwordActBS14_1Explode+SlashSwordActBS14_2Explode+SlashSwordActBS14_3Explode,,2837|2832|2840
+268,SlashSwordRemapSS2,SS2,,,0.4,0,1,3,1.2,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SS2_Heavy&|MeleeActScale:0.8|MeleeSpecial:Explode|MeleeAct:SS=SlashSwordActSS11+SlashSwordActSS12+SlashSwordActSS13+SlashSwordActSS21+SlashSwordActSSDefence+SlashSwordActSS31+SlashSwordActSS32+SlashSwordActSSExplode,,2837|2832|2840
+269,SlashSwordRemapDS2,DS2,,,0.16,0,1,5,2.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_DS2_Heavy&|MeleeActScale:0.8|MeleeSpecial:FastSlash|MeleeAct:DS=SlashSwordActDS11_L+SlashSwordActDS11_R+SlashSwordActDS12_L+SlashSwordActDS12_R+SlashSwordActDS13+SlashSwordActDS14_L+SlashSwordActDS14_R+SlashSwordActDS21_1+SlashSwordActDS21_2+SlashSwordActDS21_3+SlashSwordActDS21_4+SlashSwordActDS31,,2837|2832|2840
+270,SlashSwordRemapLS2,LS2,,,0.9,0,1,3,4.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_LS2_Heavy&|MeleeSpecial:Counter|MeleeAct:LS=SlashSwordActLS11+SlashSwordActLS12+SlashSwordActLS13+SlashSwordActLS31_Loop+SlashSwordActLS31+SlashSwordActLSDefence+SlashSwordActLSDefencing+SlashSwordActLS41_0+SlashSwordActLS41_1,,2837|2832|2840
+271,SlashSwordRemapAX2,AX2,,,2.5,0,1,3,7.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_AX2_Heavy&AuraCombo|AuraBlade|MeleeActScale:1.15|MeleeAct:AX2=SlashSwordActAX11+SlashSwordActAX12+SlashSwordActAX13+SlashSwordActAX21+SlashSwordActAXAura+SlashSwordActAXThrow,,2837|2832|2840
+272,SlashSwordRemapSC2,SC2,,,1,0,1,3,4,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SC2_Heavy&|MeleeAct:SC2=SlashSwordActSC11+SlashSwordActSC12+SlashSwordActSC13+SlashSwordActSC21+SlashSwordActSC22_Start+SlashSwordActSC22+SlashSwordActSC22_End+SlashSwordActSC31+SlashSwordActSC42_Start+SlashSwordActSC42+SlashSwordActSC42_End+SlashSwordActSC51,,2837|2832|2840
+273,SlashSwordActNG11,NG2,,,1.25,0,1,4,3,0.01,0,0,0,,,2000,MeleeSpecial:Block|MeleeAct:NG=SlashSwordActNG11+SlashSwordActNG21+SlashSwordActNG21Explode+SlashSwordActNG22+SlashSwordActNG22Explode+SlashSwordActNG31,,2837|2829|2832|2840
+274,SlashSwordActHA11,HA2,,,0.5,0,1,3,1,0.01,0,0,0,,,2000,MeleeSpecial:Explode|MeleeAct:HA=SlashSwordActHA11+SlashSwordActHA12+SlashSwordActHA13+SlashSwordActHA21+SlashSwordActHA21_Range+ActHAExplosion1+ActHAExplosion2+SlashSwordActHA24,,2837|2829|2832|2840
+275,SlashSwordRemapSY2,SY2,,,1.2,0,1,4,2.5,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_SY2_Heavy&|MeleeSpecial:Slide|MeleeAct:SY=SlashSwordActSY1+SlashSwordActSY2+SlashSwordActSY3+SlashSwordActSY4+SlashSwordActSYSlideAtk+SlashSwordActSYSlideAtk_Suc,,2837|2832|2840
+276,SlashSwordRemapFS2,FS2,,,1.35,0,1,3,2.25,0.01,0,0,0,,,2000,Meelee:SlashSwordCustom_FS2_Heavy&|MeleeSpecial:Charge|MeleeAct:FS=SlashSwordActFS11+SlashSwordActFS11_Charge+SlashSwordActFS11_PerfectCharge+SlashSwordActFS12+SlashSwordActFS12_Charge+SlashSwordActFS12_PerfectCharge+SlashSwordActFS13_0+SlashSwordActFS13_0_Charge+SlashSwordActFS13_0_PerfectCharge+SlashSwordActFS13_1+SlashSwordActFS13_1_Charge+SlashSwordActFS13_1_PerfectCharge+SlashSwordActFS21_0+SlashSwordActFS21_0_Charge+SlashSwordActFS21_0_PerfectCharge+SlashSwordActFS21_1+SlashSwordActFS21_1_Charge+SlashSwordActFS21_1_PerfectCharge,,2837|2832|2840
+151,SlashSword0b2,,,,0.6,0,1,3,3,0.01,0,0,0,,,7500,Meelee:SlashSword0c2&,,2839
+152,SlashSword1,,,,0.4,0,1,3,1,0.01,4,0,0,,,2000,Meelee:SlashSword1d&AuraCombo,,2839
+153,SlashSword1b,,,,0.175,0,1,4,1.5,0.01,4,0,0,,,500,Meelee:SlashSword1c2&,,2839
+154,SlashSword2,,,,0.7,0,1,3,3,0.01,4,0,1,,,4000,Meelee:SlashSword2c&AuraCombo,,2839
+155,SlashSword2b,,,,1,0,1,3,4,0.01,50,0,1,,,4000,Meelee:SlashSword2d&|AuraBlade,,2839
+156,SlashSword3,,,,0.5,0,1,3,2.5,0.01,75,0,0,,,4000,Meelee:SlashSword3c2&DashFoward,,2839
+157,SlashSword3b,,,,0.2,0,1,4,3,0.01,8,0,0,,,2000,Meelee:SlashSword3b3&,,2839
+158,SlashSword3c2,,,,1.25,0,1,3,3,0.01,8,0,0,,,2000,Meelee:SlashSword3c2&AuraCombo|AuraBlade,,2839
+159,SlashSword1e,,,,0.25,0,1,3,1.35,0.01,8,0,0,,,2000,Meelee:SlashSword1f&AuraCombo|AuraBlade,,2839
+165,SlashSword1,,,,0.4,0,1,5,3,0.01,8,0,0,1,,2000,Assassin,,
+251,SlashSword0b3,251,,,0.6,0,1,3,3,0.01,4,0,0,,,7500,Meelee:SlashSword0c3&,,2839
+255,SlashSword2b,255,,,1,0,1,3,4,0.01,50,0,0,,,4000,Meelee:SlashSword2d2&,,2839|2837|2841
+265,SlashSword3,,,,0.2,0,1,2,3,0.01,0,0,0,1,,2000,Assassin,,2838
+60,SlashSwordEneBig,,,,9,0,1,2,9,0.01,6,0,0,,,4000,,,
+61,SlashSwordEne,,,,0.5,0,1,4,8,0.01,4,0,0,,,2000,,,
+62,SlashSwordEnemyBossFinal,,,,0.1,0,1,1,1,0.01,0,0,0,,,8000,,,
+63,SlashSwordShield,,,,0.6,0,1,1,1,0.01,0,0,0,,,4000,,,
+1201,SlashSwordEneMiddle,,,,0.8,0,1,3,5,0.01,0,0,0,,,3000,,,
+1202,SlashSwordGiant,,,,1,0,1,1,1,0.01,0,0,0,,,6000,,,
+1203,SlashSword3c3,,,,1,0,1,1,1,0.01,0,0,0,,,2000,,,
+1204,SlashSwordEneBig2,,,,1,0,1,1,1,0.01,0,0,0,,,8000,,,
+1205,SlashSwordShiAttack,,,,1,0,1,1,1,0.01,0,0,0,,,10000,,,
+1206,SlashSwordEneBig,,,,0.8,0,1,3,5,0.01,0,0,0,,,3000,,,
+1301,SlashSwordActMachete0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:EMa=SlashSwordActMachete0+SlashSwordActMachete1+SlashSwordActMachete2,,
+1302,SlashSwordActMacheteH0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:1.15|MeleeAct:EMa2=SlashSwordActMacheteH0+SlashSwordActMacheteH1+SlashSwordActMacheteH2+SlashSwordActMacheteH3+SlashSwordActMacheteH4,,
+1303,SlashSwordActLance0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:ELa=SlashSwordActLance0+SlashSwordActLance1+SlashSwordActLance2,,
+1304,SlashSwordActArcher0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:EAr=SlashSwordActArcher0+SlashSwordActArcher1,,
+1305,SlashSwordActArcher0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:EAr2=SlashSwordActArcher0+SlashSwordActArcher1+SlashSwordActArcherExplode,,
+1306,SlashSwordActShield0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:0.8|MeleeAct:ESh=SlashSwordActShield0+SlashSwordActShield1+SlashSwordActShield2+SlashSwordActShield3+SlashSwordActShield4,,
+1307,SlashSwordActShieldH0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:0.8|MeleeAct:ESh2=SlashSwordActShieldH0+SlashSwordActShieldH1+SlashSwordActShieldH2+SlashSwordActShieldH3+SlashSwordActShieldH4,,
+1308,SlashSwordActAssassin0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAs=SlashSwordActAssassin0+SlashSwordActAssassin1+SlashSwordActAssassin2+SlashSwordActAssassin3,,
+1309,SlashSwordActAssassinH0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAs2=SlashSwordActAssassinH0+SlashSwordActAssassinH1+SlashSwordActAssassinH2+SlashSwordActAssassinH3,,
+1310,SlashSwordActLanceH0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:ELa2=SlashSwordActLanceH0+SlashSwordActLanceH1+SlashSwordActLanceH2,,
+1351,SlashSwordActAssassinBoss0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:0.5|MeleeAct:EAsB=SlashSwordActAssassinBoss0+SlashSwordActAssassinBoss1+SlashSwordActAssassinBoss2+SlashSwordActAssassinBoss3+SlashSwordActAssassinBoss4+SlashSwordActAssassinBoss5+SlashSwordActAssassinBoss6,,
+1352,SlashSwordActLanceBoss0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeActScale:1.3|MeleeAct:ELaB=SlashSwordActLanceBoss0+SlashSwordActLanceBoss1+SlashSwordActLanceBoss2+SlashSwordActLanceBoss3+SlashSwordActLanceBoss4,,
+1353,SlashSwordActShieldBoss0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:EShB=SlashSwordActShieldBoss0+SlashSwordActShieldBoss1+SlashSwordActShieldBoss2+SlashSwordActShieldBoss3+SlashSwordActShieldBoss4+SlashSwordActShieldBoss5+SlashSwordActShieldBoss6,,
+1354,SlashSwordActScorpion0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:Scorpion=SlashSwordActScorpion0+SlashSwordActScorpionLeftLight0+SlashSwordActScorpionLeftLight1+SlashSwordActScorpionLeftLight2+SlashSwordActScorpionLeftHeavy0+SlashSwordActScorpionLeftHeavy1+SlashSwordActScorpionLeftHeavy2+SlashSwordActScorpionRightLight0+SlashSwordActScorpionRightLight1+SlashSwordActScorpionRightLight2+SlashSwordActScorpionRightHeavy0+SlashSwordActScorpionRightHeavy1+SlashSwordActScorpionRightHeavy2+SlashSwordActScorpionTail+SlashSwordActScorpionEnergyBall+SlashSwordActScorpionChargeEnergyBall,,
+1355,SlashSwordAct_SaberSaberBoss0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:ESaB=SlashSwordAct_SaberSaberBoss0+SlashSwordAct_SaberSaberBoss1+SlashSwordAct_SaberSaberBoss2+SlashSwordAct_SaberSaberBoss3+SlashSwordAct_SaberAssassinBoss0+SlashSwordAct_SaberAssassinBoss1+SlashSwordAct_SaberAssassinBoss2+SlashSwordAct_SaberAssassinBoss3+SlashSwordAct_SaberAssassinBoss4+SlashSwordAct_SaberAssassinBoss5+SlashSwordAct_SaberAssassinBoss6+SlashSwordAct_SaberLanceBoss0+SlashSwordAct_SaberLanceBoss1+SlashSwordAct_SaberLanceBoss2+SlashSwordAct_SaberLanceBoss3+SlashSwordAct_SaberLanceBoss4+SlashSwordAct_SaberShieldBoss0+SlashSwordAct_SaberShieldBoss1+SlashSwordAct_SaberShieldBoss2+SlashSwordAct_SaberShieldBoss3+SlashSwordAct_SaberShieldBoss4+SlashSwordAct_SaberShieldBoss5+SlashSwordAct_SaberShieldBoss6,,
+1356,SlashSwordActScorpionPlus0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:ScorpionPlus=SlashSwordActScorpionPlus0+SlashSwordActScorpionPlusLeftLight0+SlashSwordActScorpionPlusLeftLight1+SlashSwordActScorpionPlusLeftLight2+SlashSwordActScorpionPlusLeftHeavy0+SlashSwordActScorpionPlusLeftHeavy1+SlashSwordActScorpionPlusLeftHeavy2+SlashSwordActScorpionPlusRightLight0+SlashSwordActScorpionPlusRightLight1+SlashSwordActScorpionPlusRightLight2+SlashSwordActScorpionPlusRightHeavy0+SlashSwordActScorpionPlusRightHeavy1+SlashSwordActScorpionPlusRightHeavy2+SlashSwordActScorpionPlusTail+SlashSwordActScorpionPlusEnergyBall+SlashSwordActScorpionPlusChargeEnergyBall,,
+1357,SlashSwordAct_SaberSaberBossPlus0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:ESaBP=SlashSwordAct_SaberSaberBossPlus0+SlashSwordAct_SaberSaberBossPlus1+SlashSwordAct_SaberSaberBossPlus2+SlashSwordAct_SaberSaberBossPlus3+SlashSwordAct_SaberAssassinBossPlus0+SlashSwordAct_SaberAssassinBossPlus1+SlashSwordAct_SaberAssassinBossPlus2+SlashSwordAct_SaberAssassinBossPlus3+SlashSwordAct_SaberAssassinBossPlus4+SlashSwordAct_SaberAssassinBossPlus5+SlashSwordAct_SaberAssassinBossPlus6+SlashSwordAct_SaberLanceBossPlus0+SlashSwordAct_SaberLanceBossPlus1+SlashSwordAct_SaberLanceBossPlus2+SlashSwordAct_SaberLanceBossPlus3+SlashSwordAct_SaberLanceBossPlus4+SlashSwordAct_SaberShieldBossPlus0+SlashSwordAct_SaberShieldBossPlus1+SlashSwordAct_SaberShieldBossPlus2+SlashSwordAct_SaberShieldBossPlus3+SlashSwordAct_SaberShieldBossPlus4+SlashSwordAct_SaberShieldBossPlus5+SlashSwordAct_SaberShieldBossPlus6,,
+1358,SlashSwordAct_FinalBoss0,,,,0.5,0,1,1,0,0.01,0,0,0,,,2000,MeleeAct:FB=SlashSwordAct_FinalBoss0+SlashSwordAct_FinalBoss1+SlashSwordAct_FinalBoss2+SlashSwordAct_FinalBoss3+SlashSwordAct_FinalBoss4+SlashSwordAct_FinalBoss5+SlashSwordAct_FinalBoss6+SlashSwordAct_FinalBoss7+SlashSwordAct_FinalBoss8+SlashSwordAct_FinalBoss9+SlashSwordAct_FinalBoss10,,
 
 // 额外数据
-1252,BulletExplodeBig2,1252,7_CAN,,0.6,5,2,1,24,0,0,0,,CaseSmoke2,0,,,2694,
-1253,BulletExplodeMega,1253,CAN2,,1,10,1,1,40,0,0,0,,CaseSmoke2,0,,,2694,
-1254,BulletBigAntiair,1254,MG,,0.05,10,18,1,22,0,0,0,,CaseSmoke,0,,,,
-1255,BulletLargeMinuAntiAir,1255,5_HRF,,0.05,12,24,1,36,0,0,0,,CaseSmoke,0,,,,
-1250,BulletExplodeFollowShoulder,1250,Missile2,,0.15,120,10,1,30,0,0,0,,CaseSmoke,0,,,,
-1251,BulletExplodeFollowShoulder,1251,Missile2,,0.1,120,15,1,48,0,0,0,,CaseSmoke,0,,,,
-1256,ShoulderEMP,1256,EMP1,,0,0,0,1,45,0,0,0,,,0,,,,
-1257,ShoulderEMP2,1257,EMP2,,0,0,0,1,55,0,0,0,,,0,,,,
-1258,BulletExplodeFollowAntiAir,1258,Missile2,,0.15,120,14,1,20,0,0,0,,CaseSmoke,0,,,,
-1259,BulletExplodeFollowAntiAir,1259,Missile2,,0.1,120,20,1,30,0,0,0,,CaseSmoke,0,,,,
-1260,RayNormalLong3,1260,Laser 03,,1,0,10,1,55,0,0,0,,,0,,,,
-1261,RayNormalLong4,1261,Laser 03,,0.9,0,15,1,72,0,0,0,,,0,,,,
-1262,BulletExplodeFollowShoulder,1262,Missile2,,0.1,150,6,1,20,0,0,0,,CaseSmoke,0,,,,
+1252,BulletExplodeBig2,1252,7_CAN,,0.6,5,2,1,24,0,0,0,0,0,CaseSmoke2,0,,,2694,
+1253,BulletExplodeMega,1253,CAN2,,1,10,1,1,40,0,0,0,0,0,CaseSmoke2,0,,,2694,
+1254,BulletBigAntiair,1254,MG,,0.05,10,18,1,22,0,0,0,0,0,CaseSmoke,0,,,,
+1255,BulletLargeMinuAntiAir,1255,5_HRF,,0.05,12,24,1,36,0,0,0,0,0,CaseSmoke,0,,,,
+1250,BulletExplodeFollowShoulder,1250,Missile2,,0.15,120,10,1,30,0,0,0,0,0,CaseSmoke,0,,,,
+1251,BulletExplodeFollowShoulder,1251,Missile2,,0.1,120,15,1,48,0,0,0,0,0,CaseSmoke,0,,,,
+1256,ShoulderEMP,1256,EMP1,,0,0,0,1,45,0,0,0,0,0,,0,,,,
+1257,ShoulderEMP2,1257,EMP2,,0,0,0,1,55,0,0,0,0,0,,0,,,,
+1258,BulletExplodeFollowAntiAir,1258,Missile2,,0.15,120,14,1,20,0,0,0,0,0,CaseSmoke,0,,,,
+1259,BulletExplodeFollowAntiAir,1259,Missile2,,0.1,120,20,1,30,0,0,0,0,0,CaseSmoke,0,,,,
+1260,RayNormalLong3,1260,Laser 03,,1,0,10,1,55,0,0,0,0,0,,0,,,,
+1261,RayNormalLong4,1261,Laser 03,,0.9,0,15,1,72,0,0,0,0,0,,0,,,,
+1262,BulletExplodeFollowShoulder,1262,Missile2,,0.1,150,6,1,20,0,0,0,0,0,CaseSmoke,0,,,,
+1263,BulletExplodeFollowShoulder,1263,Missile2,,0.18,0,1,1,50,0,0,0,0,0,CaseSmoke,0,,,,
 
 // None数据
 None,None,,,,0,0,0,0,0,0,0,0,None,,0,,,,
@@ -1088,10 +1105,10 @@ BulletExplodeMin,BulletExplodeMin,24,750,0,0,0,0,0,75,8,2,1,0,5,0,0,
 BulletExplodeMin2,BulletExplodeMin2,24,600,0,0,0,0,0,75,8,2,1,0,5,0,0,
 BulletExplodeMinHigh,BulletExplodeMin2,26,300,0,0,-1,0,0,100,12,2,1,0,5,0,0,
 BulletExplodeMinAir,BulletExplodeMinAir,24,1500,270,100,-1,0,20,50,8,1,1,0,5,0,1,
-BulletExplodeMega,BulletExplodeMega,24,600,0,0,-1,0,0,50,5,2,1,0,5,0,0,
+BulletExplodeMega,BulletExplodeMega,48,400,0,0,-1,0,0,50,5,2,1,0,5,0,0,
 BulletExplodeMegaMini,BulletExplodeMegaMini,32,400,0,0,-1,0,0,50,5,2,1,0,5,0,0,
-BulletExplodeBig,BulletExplodeBig,28,750,0,0,0,0,0,50,5,2,1,0,5,0,0,
-BulletExplodeBig2,BulletExplodeBig,28,750,0,0,-1,0,0,50,5,2,1,0,5,0,0,
+BulletExplodeBig,BulletExplodeBig,32,700,0,0,0,0,0,50,5,2,1,0,5,0,0,
+BulletExplodeBig2,BulletExplodeBig,45,500,0,0,-1,0,0,50,5,2,1,0,5,0,0,
 BulletExplodeBigMinu,BulletExplodeBigMinu,28,750,0,0,0,0,0,50,5,2,1,0,5,0,0,
 BulletExplodeFlame,BulletExplodeFlame,25,500,0,0,0,0,0,0,0,2,1,0,5,0,0,
 BulletExplodeElectric,BulletExplodeElectric,25,500,0,0,0,0,0,0,0,2,1,0,5,0,0,
@@ -1099,6 +1116,7 @@ BulletExplodeIce,BulletExplodeIce,25,500,0,0,0,0,0,0,0,2,1,0,5,0,0,
 BulletExplodeHigh,BulletExplode,28,600,0,0,-1,0,0,150,15,2,1,0,15,0,0,
 BulletExplodeHighFar,BulletExplode,200,800,0,0,-1,0,0,150,15,2,1,0,22,0,0,
 BulletExplodeHigh2,BulletExplodeMegaMini,33,350,0,0,-1,0,0,150,15,2,1,0,0,0,0,
+BulletBallisticMissile,BulletBallisticMissile,100000,2000,0,100,0,0,0,0,0,2,1,0,100000,0,0,VerticalLaunch
 RayBurstEner,RayBurstEner,28,0,600,32,3,0,0,0,0,1,2,1,0,0,0,PiecingShiled
 RayBurstEner2,RayBurstEner,35,0,1500,32,5,0,0,0,0,1,2,1,0,0,0,PiecingShiled
 RayBurstEnerBig,RayBurstEnerBig,50,0,15000,50,8,0,0,0,0,1,2,1,0,0,0,PiecingShiled
@@ -1116,16 +1134,24 @@ Thrower-Freeze,Thrower-Freeze,15,300,0,100,0,0,0,0,0,1,2,1,0,0,0,
 Thrower-Melt,Thrower-Melt,15,300,0,100,0,0,0,0,0,1,3,1,0,0,0,
 BulletPara,BulletPara,12,300,0,100,0,0,0,0,0,1,2,0,0,3,0,
 BulletFreeze,BulletFreeze,12,300,0,100,0,0,0,0,0,1,2,0,0,2,0,
-BulletWater,BulletWater,16,600,45,30,0,0,64,0,0,1,2,0,0,6,0,
-BulletWater2,BulletWater2,18,600,75,50,0,0,100,0,0,1,2,0,0,6,0,
-BulletGrenadeWater,BulletGrenadeWater,12,200,50,30,0,0,200,0,0,1,2,0,1,6,0,
-BulletGrenadeOil,BulletGrenadeOil,12,200,50,30,0,0,200,0,0,1,2,0,1,5,0,
+BulletWater,BulletWater,16,600,45,30,0,0,64,0,0,1,2,0,0,6,1,
+BulletWater2,BulletWater2,18,600,75,50,0,0,100,0,0,1,2,0,0,6,1,
+BulletGrenadeWater,BulletGrenadeWater,12,200,50,30,0,0,200,0,0,1,2,0,1,6,1,
+BulletGrenadeOil,BulletGrenadeOil,12,200,50,30,0,0,200,0,0,1,2,0,1,5,1,
 BulletElectr,BulletElectr,16,800,220,50,0,0,15,100,5,1,1,0,1,3,1,
 BulletElectr2,BulletElectr,17,900,250,50,0,0,18,100,5,1,1,0,1,3,1,
 BulletElectrMin,BulletElectrMin,15,800,180,50,0,0,15,100,5,1,1,0,1,3,1,
 BulletElectrLarge,BulletElectrLarge,28,1800,700,50,0,0,50,150,10,1,1,0,3,3,1,
 BulletElectrMin2,BulletElectrMin,16,800,235,50,0,0,20,100,5,1,1,0,1,3,1,
 BulletElectrLarge2,BulletElectrLarge,30,2000,800,50,0,0,55,150,10,1,1,0,3,3,1,
+BulletScrap,BulletScrap,20,800,400,28,2,25,0,150,5,1,1,0,2,0,1,PiecingArmorDirect
+BulletScrapSmall,BulletScrap,16,800,200,40,2,25,0,150,6,1,1,0,2,0,1,PiecingArmorDirect
+BulletScrapBig,BulletScrap,28,1200,1200,20,2,25,0,150,10,1,1,0,5,0,1,PiecingArmorDirect
+BulletScrapSmall2,BulletScrap,18,800,250,40,2,25,0,150,8,1,1,0,2,0,1,PiecingArmorDirect
+BulletScrapBig2,BulletScrap,32,1350,1500,25,2,25,0,150,15,1,1,0,2,0,1,PiecingArmorDirect
+BulletScrap2,BulletScrap,20,1000,480,30,2,25,0,150,5,1,1,0,2,0,1,PiecingArmorDirect
+BulletExplodeScrap,BulletExplodeScrap,20,800,0,0,0,0,0,150,5,2,1,0,2,0,0,
+BulletEnerScrap,BulletEnerScrap,20,800,0,0,0,0,0,150,5,2,1,0,2,0,0,
 BulletGrenadeMinu,BulletGrenadeMinu,15,200,120,15,0,0,5,100,5,1,1,0,1,0,1,
 BulletGrenadePierce,BulletGrenadePierce,15,200,300,15,0,0,60,100,5,1,1,0,1,0,1,
 BulletTeleport,BulletTeleport,20,300,0,0,-1,0,0,0,0,0,0,0,0,0,0,
@@ -1157,18 +1183,18 @@ LightningDamage2,LightningDamage2,21,0,750,100,2,0,0,0,0,1,2,1,0,0,0,
 LightningDamage3,LightningDamage3,23,0,1000,100,3,0,0,0,0,1,2,1,0,0,0,
 LightningDamage4,LightningDamage4,27,0,2400,100,3,0,0,0,0,1,2,1,0,0,0,
 LightningDamage5,LightningDamage5,27,0,2400,100,5,0,0,0,0,1,2,1,0,0,0,
-LightningBurst,LightningBurst,14,0,450,100,7,0,0,0,0,1,2,1,0,0,0,
+LightningBurst,LightningBurst,12,0,450,100,7,0,0,0,0,1,2,1,0,0,0,
 LightningBurst2,LightningBurst2,14,0,600,100,9,0,0,0,0,1,2,1,0,0,0,
 Lightning_Treat,Lightning_Treat,20,0,-100,100,0,0,0,0,0,1,2,1,0,0,0,
 BulletFollow,BulletFollow,25,250,200,100,1,0,8,50,3,1,1,0,0,0,1,
-BulletExplodeFollow,BulletExplodeFollow,25,800,0,100,0,0,0,50,5,2,1,0,2,0,0,
-BulletExplodeFollowAntiAir,BulletExplodeFollowAntiAir,25,800,0,100,0,0,0,50,5,2,1,0,2,0,0,
+BulletExplodeFollow,BulletExplodeFollow,28,800,0,100,0,0,0,50,5,2,1,0,2,0,0,
+BulletExplodeFollowAntiAir,BulletExplodeFollowAntiAir,36,800,0,100,0,0,0,50,5,2,1,0,2,0,0,
 LightningSeparate,LightningSeparate,18,0,80,100,4,0,0,0,0,1,2,1,0,0,0,
 BulletExplodeFollowDestructible,BulletExplodeFollowDestructible,50,800,0,100,0,0,0,0,0,2,1,0,0,0,0,
 BulletExplodeDestructible,BulletExplodeDestructible,20,800,0,100,0,0,0,0,0,2,1,0,0,0,0,
 RayBurstSpecialLong,RayBurstSpecialLong,100,0,500000,0,0,0,0,0,0,1,2,1,0,0,0,
 RayBurstLongEne,RayBurstLongEne,50,0,10000,0,0,0,0,0,0,1,2,1,0,0,0,
-BulletExplodeFollowShoulder,BulletExplodeFollowShoulder,25,1200,0,0,0,0,0,0,0,2,1,0,3,0,0,
+BulletExplodeFollowShoulder,BulletExplodeFollowShoulder,28,1200,0,0,0,0,0,0,0,2,1,0,3,0,0,
 SlashSword0,SlashSword0,3,1500,75,0,0,0,15,0,0,-1,-1,1,0,0,0,
 SlashSword0b,SlashSword0b,5,2200,90,0,0,0,24,0,0,-1,-1,1,0,0,0,
 SlashSword0b2,SlashSword0b2,5,2500,160,0,0,0,30,0,0,-1,-1,1,0,0,0,
@@ -2244,6 +2270,7 @@ csv2.result['BulletEnerLarge'				].splice(4, 2, '640',  '10' );
 csv2.result['BulletEnerLarge2'				].splice(4, 2, '640',  '10' );
 csv2.result['BulletExplodeHigh'				].splice(4, 2, '900',  '10' );
 csv2.result['BulletExplodeHigh2'			].splice(4, 2, '2400', '10' );
+csv2.result['BulletExplodeBig'				].splice(4, 2, '4650', '10' );
 csv2.result['BulletExplodeBig2'				].splice(4, 2, '4650', '10' );
 csv2.result['BulletExplodeMega'				].splice(4, 2, '7000', '10' );
 csv2.result['BulletExplodeFollowShoulder'	].splice(4, 2, '900',  '25' );
@@ -2473,12 +2500,13 @@ csv0.forEach(function(item, index){
 			data.偏移角度 = {code:csv1Result[10], text:csv1Result[10], }; // 偏移角度		Stable,					0.1,
 			data.换弹老化 = {code:csv1Result[11], text:csv1Result[11], }; // 换弹老化		BrokePos,				4,
 			data.开火老化 = {code:csv1Result[12], text:csv1Result[12], }; // 开火老化		BrokePos2,				3,
-			data.换弹音效 = {code:csv1Result[13], text:csv1Result[13], }; // 换弹音效		Reload,					1,
-			data.弹壳类型 = {code:csv1Result[14], text:csv1Result[14], }; // 弹壳类型		Case,					CaseNormal,
-			data.后坐力值 = {code:csv1Result[15], text:csv1Result[15], }; // 后坐力值		Force,					240,
-			data.特殊效果 = {code:csv1Result[16], text:csv1Result[16], }; // 特殊效果		Func,					,
-			data.默认配件 = {code:csv1Result[17], text:csv1Result[17], }; // 默认配件		DefaultModule,			,
-			data.默认融合 = {code:csv1Result[18], text:csv1Result[18], }; // 默认融合		DefaultFusion,			,
+			data.开火升温 = {code:csv1Result[13], text:csv1Result[13], }; // 开火升温		Tempar,					3,
+			data.换弹音效 = {code:csv1Result[14], text:csv1Result[14], }; // 换弹音效		Reload,					1,
+			data.弹壳类型 = {code:csv1Result[15], text:csv1Result[15], }; // 弹壳类型		Case,					CaseNormal,
+			data.后坐力值 = {code:csv1Result[16], text:csv1Result[16], }; // 后坐力值		Force,					240,
+			data.特殊效果 = {code:csv1Result[17], text:csv1Result[17], }; // 特殊效果		Func,					,
+			data.默认配件 = {code:csv1Result[18], text:csv1Result[18], }; // 默认配件		DefaultModule,			,
+			data.默认融合 = {code:csv1Result[19], text:csv1Result[19], }; // 默认融合		DefaultFusion,			,
 			
 			//data.子弹代码={code:csv2Result[ 0], text:csv2Result[ 0], }; // 子弹代码		Bullets,				BulletNormal,
 			data.子弹预设 = {code:csv2Result[ 1], text:csv2Result[ 1], }; // 子弹预设		Prefab,					BulletNormal,
@@ -2787,12 +2815,12 @@ csv0.forEach(function(item, index){
 	
 });
 $('#powerTable01 tbody').html(powerTable01_tbody_html);
-xj2._buildPowerTable('powerTable01');
+xjwiki._buildPowerTable('powerTable01');
 $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable01);
-jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+xjwiki._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
@@ -3147,7 +3175,7 @@ let filterFunction = function(){
 	};
 	
 	// 合并同类设置高亮
-	xj2._groupedSet(jqi_powerTable01);
+	xjwiki._groupedSet(jqi_powerTable01);
 	
 };
 
@@ -3177,7 +3205,7 @@ filterFunction();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

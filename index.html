@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="./static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="./static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="./static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="./static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="./static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="./static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="./static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="./static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="./static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,15 +45,15 @@
 
 <script src="./static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="./static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="./static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="./static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="./static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 <!-- <script>document.write('<link rel="stylesheet" href="./static/cjs/_global.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="./static/cjs/_global.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
 <!-- ↑ Public | Privated ↓ -->
 
-<!-- <link rel="stylesheet" href="./static/cjs/index.css?time=2026-03-14T06:30:00UTC+8" /> -->
-<!-- <script src="./static/cjs/index.js?time=2026-03-14T06:30:00UTC+8"></script> -->
+<!-- <link rel="stylesheet" href="./static/cjs/index.css?time=2026-03-18T00:00:00UTC+8" /> -->
+<!-- <script src="./static/cjs/index.js?time=2026-03-18T00:00:00UTC+8"></script> -->
 <!-- <script>document.write('<link rel="stylesheet" href="./static/cjs/index.css?timeStamp='+ Date.now() +'" />')</script> -->
 <!-- <script>document.write('<script src="./static/cjs/index.js?timeStamp='+ Date.now() +'"><\/script>')</script> -->
 
@@ -76,10 +79,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -113,6 +116,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -178,7 +184,7 @@ $('#mainPosterBgmShift').on('change', function(){
 <p>————</p>
 
 <p>
-	本站内容基于游戏<c>V2.4.X</c>, 若对游戏有什么想法, 可加群讨论或者到官方文档反馈. <br />
+	本站内容基于游戏<c>V2.5.X</c>, 若对游戏有什么想法, 可加群讨论或者到官方文档反馈. <br />
 	一群: 636404554 <br />
 	二群: 153927029 <br />
 	特殊: 486296202(主要讨论模组技术问题) <br />
@@ -382,7 +388,7 @@ $('#mainPosterBgmShift').on('change', function(){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

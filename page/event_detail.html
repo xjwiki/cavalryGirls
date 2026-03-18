@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -474,7 +480,7 @@ window._ar = {
 	10024 :	['轻机枪',					'Light Machine Gun',						'軽機関銃',								][langCode],
 	10025 :	['速射散弹',				'Rapid Spreadshot',							'連射散弾',								][langCode],
 	10026 :	['速射榴弹',				'Rapid Grenade',							'連射榴弾',								][langCode],
-	10027 :	['切割射线',				'Slicing Ray',								'カッティングレイ',						][langCode],
+	10027 :	['切割射线',				'Slicing Ray',								'カッティング光線',						][langCode],
 	10028 :	['长焦射线',				'Telephoto Ray',							'長焦点光線',							][langCode],
 	10029 :	['聚焦射线',				'Focused Ray',								'集束光線',								][langCode],
 	10031 :	['电弧枪',					'Arc Gun',									'電弧銃',								][langCode],
@@ -971,7 +977,7 @@ Evt294_Select0: [`好`, `Okay`, `了解しました`, ][langCode],
 EventText227: [`战略面板已开放, 在战斗中按下 Tab 即可打开战略面板命令队友, 不过只有忠诚度足够的队友才会听从命令`, `The Strategy interface is unlocked, Click "Tab" key during battles to open the Strategy interface to command your crew members, But remember, only loyal enough crew members will follow your commands`, `戦略パネルが開放された, 戦闘中に Tab を押すと戦略パネルを開き, 隊員に命令を下せる, ただし, 十分な忠誠心を持った隊員のみが命令に従う, 忘れるなよ`, ][langCode],
 Evt227_Select0: [`好`, `Okay`, `了解しました`, ][langCode],
 
-EventText228: [`战略武器已授权, 可以在商店获得补给, 在城防界面进行装备, 装备后在战场中按下 Tab 按, 打开战略面板就可以使用, 使用 1~7 快捷键也可以调用它们`, `Strategic weapons authorized, You can get supplies in the shop and equip them on the City Defense interface, When equipped, click "Tab" during battles to open the Strategy interface and use the Strategic weapons`, `戦略兵器の使用許可が下りた, ショップで補給し, シティディフェンス画面で配置が可能だ, 配置後, 戦闘中に tab を押して戦略パネルを開き, 戦略兵器を使用することができる`, ][langCode],
+EventText228: [`战略武器已授权, 可以在商店获得补给, 在城防界面进行装备, 装配战略武器后, 在战场中按键盘左侧 Ctrl, 打开战略面板, 根据按键指示激活战略武器`, `Strategic weapons authorized, You can get supplies in the shop and equip them on the City Defense interface, After equipping strategic weapons, press the interaction key [Lctrl] to open the Strategic Panel and activate strategic weapons following the on-screen prompts`, `戦略兵器の使用許可が下りた, ショップで補給し, シティディフェンス画面で配置が可能だ, 戦略兵器装備後, インタラクションキー Lctrl で戦略パネルを開き, 操作指示に従って戦略兵器を起動できる`, ][langCode],
 Evt228_Select0: [`好`, `Okay`, `了解しました`, ][langCode],
 
 // --
@@ -9100,7 +9106,7 @@ document.currentScript.remove();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

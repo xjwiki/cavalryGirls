@@ -4,13 +4,13 @@
 /* xj.base 默认字体并不是等间距的，但做文档还是等间距字体更好，所以在这里重新设置一次 Iosevka */
 /* 黑白主题的内容还不完善，不少插件有待改进就暂不启用了，把文本打散换行在移动端小屏幕会好看些 */
 
-@font-face{font-family:"Iosevka";font-weight:normal;font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Regular.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:bold;  font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Bold.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:normal;font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-Oblique.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
-@font-face{font-family:"Iosevka";font-weight:bold;  font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-BoldOblique.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Regular.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:normal; src:url("../font/iosevka/34.1.0/IosevkaFixed-Bold.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:normal;font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-Oblique.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
+@font-face{font-family:"Iosevka";font-weight:bold;  font-style:oblique;src:url("../font/iosevka/34.1.0/IosevkaFixed-BoldOblique.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
 
-@font-face{font-family:"NotoSans";font-weight:normal;font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Regular.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
-@font-face{font-family:"NotoSans";font-weight:bold;  font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Bold.woff2?time=2026-03-14T06:30:00UTC+8") format('woff2');}
+@font-face{font-family:"NotoSans";font-weight:normal;font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Regular.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
+@font-face{font-family:"NotoSans";font-weight:bold;  font-style:normal; src:url("../font/notosans/2.004/NotoSansSC-Bold.woff2?time=2026-03-18T00:00:00UTC+8") format('woff2');}
 
 .xj-basic-white{
 --xj-bodyGradient:rgba(204,204,204,0.5);
@@ -53,6 +53,7 @@ top:0px;align-self:flex-start;width:240px;background-color:var(--xj-fff);}
 padding:0;color:var(--xj-999);}
 
 #pub_headCode{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:var(--xj-999);}
+#pub_headLang{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:var(--xj-999);}
 #pub_headBulb{flex:0 0 auto;margin-left:8px;padding:0;width:40px;color:var(--xj-999);}
 
 
@@ -192,11 +193,13 @@ zh-hans-it, zh-hant-it, ja-it, ko-it, en-it, ud-it{display:inline-table;}
 zh-hans-if, zh-hant-if, ja-if, ko-if, en-if, ud-if{display:inline-flex;}
 zh-hans-ig, zh-hant-ig, ja-ig, ko-ig, en-ig, ud-ig{display:inline-grid;}
 
-html:not([lang="zh-hans"]) :is(zh-hans-i, zh-hans-b, zh-hans-t, zh-hans-f, 
-zh-hans-g, zh-hans-ib, zh-hans-it, zh-hans-if, zh-hans-ig){display:none;}
+html:not([lang="zh-hans"]):not([lang="zh-cn"]):not([lang="zh-sg"]):not([lang="zh-my"]):not([lang="auto"]) 
+:is(zh-hans-i, zh-hans-b, zh-hans-t, zh-hans-f, zh-hans-g, zh-hans-ib, 
+zh-hans-it, zh-hans-if, zh-hans-ig){display:none;}
 
-html:not([lang="zh-hant"]) :is(zh-hant-i, zh-hant-b, zh-hant-t, zh-hant-f, 
-zh-hant-g, zh-hant-ib, zh-hant-it, zh-hant-if, zh-hant-ig){display:none;}
+html:not([lang="zh-hant"]):not([lang="zh-hk"]):not([lang="zh-mo"]):not([lang="zh-tw"]) 
+:is(zh-hant-i, zh-hant-b, zh-hant-t, zh-hant-f, zh-hant-g, zh-hant-ib, 
+zh-hant-it, zh-hant-if, zh-hant-ig){display:none;}
 
 html:not([lang="zh"]) :is(zh-i, zh-b, zh-t, zh-f, zh-g, zh-ib, zh-it, zh-if, zh-ig){display:none;}
 html:not([lang="ja"]) :is(ja-i, ja-b, ja-t, ja-f, ja-g, ja-ib, ja-it, ja-if, ja-ig){display:none;}
@@ -214,7 +217,6 @@ c{padding:0 0.5em;color:#f39;vertical-align:bottom;background-color:var(--xj-f0f
 
 /* 既 native bold, italic, 仅限环境有加粗或倾斜字体的情况, 不允许浏览器自动合成, 避免影响宽度 */
 /* notoSans 字体只能它们自己使用, 如果设为全局, ib 标签会出现采用多种不同字体混排而出错的情况 */
-
 ni{font-style:italic;font-synthesis:none;}
 nb{font-weight:bolder;font-synthesis:none;}
 

@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -322,9 +328,10 @@ html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:
 #powerTable01 .hideTd{display:none;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -525,46 +532,46 @@ let csv6 = (String.raw`// GlobalGainSur,Image,Title,AddValue,Limit,FirstConsume,
 // 难度选项
 let csvZ = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-501,#高效组装,501,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:3,,-1,999,1,0,0,0,0,,,,,1376,1
-502,#高效生产线,502,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:4,,-1,999,1,0,0,0,0,,,,,1377,1
-508,#自动化生产线,508,None,#敌方全属性强化,,99,EnemyStrengthen_All:6,,-1,999,1,0,0,0,0,,,,,1383,1
-516,#超高精度生产线,516,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:9,,-1,999,1,0,0,0,0,,,,,1391,1
-518,#高精度生产线,518,None,#敌方全属性强化,,99,EnemyStrengthen_All:12,,-1,999,1,0,0,0,0,,,,,1393,1
-527,#特高精度生产线,527,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:16,,-1,999,1,0,0,0,0,,,,,1402,1
+501,#高效组装,501,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:3,,-1,999,1,0,0,0,0,,,,,1424,1
+502,#高效生产线,502,None,#敌方全属性小幅强化,,99,EnemyStrengthen_All:4,,-1,999,1,0,0,0,0,,,,,1425,1
+508,#自动化生产线,508,None,#敌方全属性强化,,99,EnemyStrengthen_All:6,,-1,999,1,0,0,0,0,,,,,1431,1
+516,#超高精度生产线,516,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:9,,-1,999,1,0,0,0,0,,,,,1439,1
+518,#高精度生产线,518,None,#敌方全属性强化,,99,EnemyStrengthen_All:12,,-1,999,1,0,0,0,0,,,,,1441,1
+527,#特高精度生产线,527,None,#敌方全属性大幅强化,,99,EnemyStrengthen_All:16,,-1,999,1,0,0,0,0,,,,,1450,1
 
-512,#精英强化,512,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1387,1
-517,#强大精英,517,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:30,,-1,999,1,0,0,0,0,,,,,1392,1
-522,#精英大强化,522,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1397,1
-528,#高精密精英,528,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:60,,-1,999,1,0,0,0,0,,,,,1403,1
-531,#极强大精英,531,None,#首领单位属性大幅强化,,99,EnemyStrengthen_Boss:100,,-1,999,1,0,0,0,0,,,,,1406,1
+512,#精英强化,512,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1435,1
+517,#强大精英,517,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:30,,-1,999,1,0,0,0,0,,,,,1440,1
+522,#精英大强化,522,None,#首领单位属性小幅强化,,99,EnemyStrengthen_Boss:20,,-1,999,1,0,0,0,0,,,,,1445,1
+528,#高精密精英,528,None,#首领单位属性强化,,99,EnemyStrengthen_Boss:60,,-1,999,1,0,0,0,0,,,,,1451,1
+531,#极强大精英,531,None,#首领单位属性大幅强化,,99,EnemyStrengthen_Boss:100,,-1,999,1,0,0,0,0,,,,,1454,1
 
-503,#低温焊枪,503,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:10,,-1,999,1,0,0,0,0,,,,,1378,1
-504,#焊接升级,504,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:15,,-1,999,1,0,0,0,0,,,,,1379,1
-513,#无缝焊接,513,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:25,,-1,999,1,0,0,0,0,,,,,1388,1
-524,#高精密焊接,524,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:50,,-1,999,1,0,0,0,0,,,,,1399,1
+503,#低温焊枪,503,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:10,,-1,999,1,0,0,0,0,,,,,1426,1
+504,#焊接升级,504,None,#敌方抵抗强化,,99,EnemyStrengthen_Armor:15,,-1,999,1,0,0,0,0,,,,,1427,1
+513,#无缝焊接,513,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:25,,-1,999,1,0,0,0,0,,,,,1436,1
+524,#高精密焊接,524,None,#敌方抵抗大幅强化,,99,EnemyStrengthen_Armor:50,,-1,999,1,0,0,0,0,,,,,1447,1
 
-507,#膛线优化,507,None,#敌方射程强化,,99,EnemyStrengthen_RangePlus:4,,-1,999,1,0,0,0,0,,,,,1382,1
-515,#炮口强化,515,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:9,,-1,999,1,0,0,0,0,,,,,1390,1
-526,#高精密炮管,526,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:16,,-1,999,1,0,0,0,0,,,,,1401,1
+507,#膛线优化,507,None,#敌方射程强化,,99,EnemyStrengthen_RangePlus:4,,-1,999,1,0,0,0,0,,,,,1430,1
+515,#炮口强化,515,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:9,,-1,999,1,0,0,0,0,,,,,1438,1
+526,#高精密炮管,526,None,#敌方射程大幅强化,,99,EnemyStrengthen_RangePlus:16,,-1,999,1,0,0,0,0,,,,,1449,1
 
-509,#基建炮击,509,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1384,1
-519,#基建渗透,519,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1394,1
+509,#基建炮击,509,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1432,1
+519,#基建渗透,519,None,#基建消耗增长增加,,99,ChanllengeStrengthen_ManPPlus:1,,-1,999,1,0,0,0,0,,,,,1442,1
 
-505,#精密车工,505,None,#敌方生命值强化,,99,EnemyStrengthen_Life:15,,-1,999,1,0,0,0,0,,,,,1380,1
-506,#高速车床,506,None,#敌方生命值强化,,99,EnemyStrengthen_Life:20,,-1,999,1,0,0,0,0,,,,,1381,1
-514,#数控车工,514,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:50,,-1,999,1,0,0,0,0,,,,,1389,1
-525,#高精密车工,525,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:75,,-1,999,1,0,0,0,0,,,,,1400,1
+505,#精密车工,505,None,#敌方生命值强化,,99,EnemyStrengthen_Life:15,,-1,999,1,0,0,0,0,,,,,1428,1
+506,#高速车床,506,None,#敌方生命值强化,,99,EnemyStrengthen_Life:20,,-1,999,1,0,0,0,0,,,,,1429,1
+514,#数控车工,514,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:50,,-1,999,1,0,0,0,0,,,,,1437,1
+525,#高精密车工,525,None,#敌方生命值大幅强化,,99,EnemyStrengthen_Life:75,,-1,999,1,0,0,0,0,,,,,1448,1
 
-510,#补给线破坏,510,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-1,,-1,999,1,0,0,0,0,,,,,1385,1
-520,#补给线切断,520,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-2,,-1,999,1,0,0,0,0,,,,,1395,1
-532,#补给线毁灭,532,None,#战略武器/弹药费大幅增加,,99,ChanllengeStrengthen_ArmCost:-3,,-1,999,1,0,0,0,0,,,,,1407,1
+510,#补给线破坏,510,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-1,,-1,999,1,0,0,0,0,,,,,1433,1
+520,#补给线切断,520,None,#战略武器/弹药费小幅增加,,99,ChanllengeStrengthen_ArmCost:-2,,-1,999,1,0,0,0,0,,,,,1443,1
+532,#补给线毁灭,532,None,#战略武器/弹药费大幅增加,,99,ChanllengeStrengthen_ArmCost:-3,,-1,999,1,0,0,0,0,,,,,1455,1
 
-523,#工厂破坏,523,None,#修理费用增加,,99,ChanllengeStrengthen_FixCost:-10,,-1,999,1,0,0,0,0,,,,,1398,1
-529,#工厂毁灭,529,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-20,,-1,999,1,0,0,0,0,,,,,1404,1
-530,#工厂毁坏,530,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-30,,-1,999,1,0,0,0,0,,,,,1405,1
+523,#工厂破坏,523,None,#修理费用增加,,99,ChanllengeStrengthen_FixCost:-10,,-1,999,1,0,0,0,0,,,,,1446,1
+529,#工厂毁灭,529,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-20,,-1,999,1,0,0,0,0,,,,,1452,1
+530,#工厂毁坏,530,None,#修理费用大幅增加,,99,ChanllengeStrengthen_FixCost:-30,,-1,999,1,0,0,0,0,,,,,1453,1
 
-511,#后勤破坏,511,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:2,,-1,999,1,0,0,0,0,,,,,1386,1
-521,#后勤毁灭,521,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:3,,-1,999,1,0,0,0,0,,,,,1396,1
+511,#后勤破坏,511,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:2,,-1,999,1,0,0,0,0,,,,,1434,1
+521,#后勤毁灭,521,None,#商店刷新价格大幅增加,,99,ChanllengeStrengthen_ShopRef:3,,-1,999,1,0,0,0,0,,,,,1444,1
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
@@ -917,12 +924,12 @@ csv1.forEach(function(item, index, array){
 	
 });
 $('#powerTable01 tbody').html(powerTable01_tbody_html);
-xj2._buildPowerTable('powerTable01');
+xjwiki._buildPowerTable('powerTable01');
 // $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable01);
-jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+xjwiki._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
@@ -1031,12 +1038,12 @@ csv2.forEach(function(item, index, array){
 	
 });
 $('#powerTable02 tbody').html(powerTable02_tbody_html);
-xj2._buildPowerTable('powerTable02');
+xjwiki._buildPowerTable('powerTable02');
 // $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable02);
-jqi_powerTable02.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable02) });
+xjwiki._groupedSet(jqi_powerTable02);
+jqi_powerTable02.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable02) });
 
 // ---------------------------------------------
 
@@ -1144,12 +1151,12 @@ csv3.forEach(function(item, index, array){
 	
 });
 $('#powerTable03 tbody').html(powerTable03_tbody_html);
-xj2._buildPowerTable('powerTable03');
+xjwiki._buildPowerTable('powerTable03');
 // $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable03);
-jqi_powerTable03.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable03) });
+xjwiki._groupedSet(jqi_powerTable03);
+jqi_powerTable03.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable03) });
 
 // ---------------------------------------------
 
@@ -1238,12 +1245,12 @@ csv4.forEach(function(item, index, array){
 	
 });
 $('#powerTable04 tbody').html(powerTable04_tbody_html);
-xj2._buildPowerTable('powerTable04');
+xjwiki._buildPowerTable('powerTable04');
 // $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable04);
-jqi_powerTable04.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable04) });
+xjwiki._groupedSet(jqi_powerTable04);
+jqi_powerTable04.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable04) });
 
 // ---------------------------------------------
 
@@ -1332,12 +1339,12 @@ csv5.forEach(function(item, index, array){
 	
 });
 $('#powerTable05 tbody').html(powerTable05_tbody_html);
-xj2._buildPowerTable('powerTable05');
+xjwiki._buildPowerTable('powerTable05');
 // $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable05);
-jqi_powerTable05.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable05) });
+xjwiki._groupedSet(jqi_powerTable05);
+jqi_powerTable05.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable05) });
 
 // ---------------------------------------------
 
@@ -1426,12 +1433,12 @@ csv6.forEach(function(item, index, array){
 	
 });
 $('#powerTable06 tbody').html(powerTable06_tbody_html);
-xj2._buildPowerTable('powerTable06');
+xjwiki._buildPowerTable('powerTable06');
 $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable06);
-jqi_powerTable06.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable06) });
+xjwiki._groupedSet(jqi_powerTable06);
+jqi_powerTable06.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable06) });
 
 })();
 </script>
@@ -1444,7 +1451,7 @@ jqi_powerTable06.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTab
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

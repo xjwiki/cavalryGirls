@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -253,9 +259,10 @@ html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:
 #powerTable01 .hideTd{display:none;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -1295,7 +1302,7 @@ let textList = {
 	10124 : `轻机枪M`							+ ` # 轻机枪M2,輕機槍M2,Light Machine Gun M2,軽機関銃M2`,
 	10125 : `速射散弹枪M`						+ ` # 速射散弹M,速射散彈M,Rapid Spreadshot M,連射散弾M`,
 	10126 : `速射榴弹W1`						+ ` # 速射榴弹W,速射榴彈W,Rapid Grenade W,連射榴弾W`,
-	10127 : `切割射线M`							+ ` # 切割射线M,切割射線M,Slicing Ray M,カッティングレイM`,
+	10127 : `切割射线M`							+ ` # 切割射线M,切割射線M,Slicing Ray M,カッティング光線M`,
 	10128 : `长焦射线S`							+ ` # 长焦射线S,長焦射線S,Telephoto Ray S,長焦点光線S`,
 	10129 : `聚焦射线M`							+ ` # 聚焦射线M,聚焦射線M,Focused Ray M,集束光線M`,
 	10130 : `长距聚焦射线S`						+ ` # 长距聚焦射线S,長距聚焦射線S,Long-Range Focused Ray S,長焦点集束光線S`,
@@ -1327,7 +1334,7 @@ let textList = {
 	10203 : `泵动炮O2M2`						+ ` # 泵动炮O2M2,泵動炮O2M2,Pump-Action Shotgun O2M2,ポンプガンO2M2`,
 	10204 : `重型狙M1A`							+ ` # 重型狙M1a,重型狙M1a,Heavy Sniper M1a,重狙撃銃M1a`,
 	10205 : `速射炮W1M`							+ ` # 速射炮W1m,速射炮W1m,Rapid-Firing Gun W1m,連射砲W1m`,
-	10206 : `冲锋枪S5M`							+ ` # 冲锋枪S5m0,衝鋒槍S5m0,Submachine Gun S5m0,短機関銃S5m0`,
+	10206 : `冲锋枪S5M`							+ ` # 冲锋枪S5M,衝鋒槍S5M,Submachine Gun S5M,短機関銃S5M`,
 	10209 : `破甲步枪C6B1`						+ ` # 破甲步枪C6,破甲步槍C6,Armor-Piercing Rifle C6,徹甲ライフルC6`,
 	10210 : `高压喷火器`						+ ` # 高压喷火器M1,高壓噴火器M1,High-Pressure Flame Thrower M1,高圧火炎放射器M1`,
 	10211 : `高压冰喷雾`						+ ` # 高压寒冰喷雾M2,高壓寒冰噴霧M2,High-Pressure Frost Spray M2,高圧氷放射器M2`,
@@ -1365,7 +1372,7 @@ let textList = {
 	10303 : `泵动炮O2M12S`						+ ` # 泵动炮O2M12,泵動炮O2M12,Pump-Action Shotgun O2M12,ポンプガンO2M12`,
 	10304 : `重型狙M1AS`						+ ` # 超重型狙,超重型狙,Super Heavy Sniper,超重狙撃銃`,
 	10305 : `速射炮W1M1`						+ ` # 速射炮W1m15,速射炮W1m15,Rapid-Firing Gun W1m15,連射砲W1m15`,
-	10306 : `冲锋枪S5M1`						+ ` # 冲锋枪S5M,衝鋒槍S5M,Submachine Gun S5M,短機関銃S5M`,
+	10306 : `冲锋枪S5M1`						+ ` # 冲锋枪S5m0,衝鋒槍S5m0,Submachine Gun S5m0,短機関銃S5m0`,
 	10315 : `轻型狙M24`							+ ` # 轻型狙M24,輕型狙M24,Light Sniper M24,軽狙撃銃M24`,
 	10316 : `制式步枪B2ASW`						+ ` # 制式步枪B2ASW,制式步槍B2ASW,Service Rifle B2ASW,制式小銃B2ASW`,
 	10318 : `制式步枪A3M13`						+ ` # 制式步枪A3M13,制式步槍A3M13,Service Rifle A3M13,制式小銃A3M13`,
@@ -1477,8 +1484,8 @@ let textList = {
 	1257  : `重型肩扛式电磁脉冲`				+ ` # 肩扛式重型EMP脉冲,肩扛式重型EMP脈衝,Heavy Shoulder-mounted EMP,肩発射式重装EMPパルス`,
 	1258  : `肩扛式防空导弹`					+ ` # 肩扛式防空导弹,肩扛式防空導彈,Shoulder-mounted Anti-air missile Launcher,肩発射式防空ミサイル`,
 	1259  : `重型肩扛式防空导弹`				+ ` # 重型肩扛式防空导弹,重型肩扛式防空導彈,Heavy Shoulder-mounted Anti-air missile Launcher,重装肩発射式防空ミサイル`,
-	1260  : `肩扛式切割射线`					+ ` # 肩扛式切割射线,肩扛式切割射線,Shoulder-mounted Slicing Ray,肩発射式カッティングレイ`,
-	1261  : `肩扛式重型切割射线`				+ ` # 肩扛式重型切割射线,肩扛式重型切割射線,Heavy Shoulder-mounted Slicing Ray,重型肩発射式カッティングレイ`,
+	1260  : `肩扛式切割射线`					+ ` # 肩扛式切割射线,肩扛式切割射線,Shoulder-mounted Slicing Ray,肩発射式カッティング光線`,
+	1261  : `肩扛式重型切割射线`				+ ` # 肩扛式重型切割射线,肩扛式重型切割射線,Heavy Shoulder-mounted Slicing Ray,重型肩発射式カッティング光線`,
 	1262  : `强袭型双向飞弹`					+ ` # 强袭型双向飞弹,強襲型雙向飛彈,Strike-Type Dual Missile Launcher,強襲式ツインミサイル`,
 	1263  : `肩扛弹道破甲弹`					+ ` # 肩扛式弹道破甲弹,肩扛式彈道破甲彈,Shoulder-mounted ballistic armor piercing rocket Launcher,肩発射式弾道破甲ロケットランチャー`,
 	
@@ -2073,11 +2080,11 @@ let textList = {
 	ForceBoth		: `双手武器`		, // + ` # 强制双持,強制雙持,Force both hands,強制両手`,
 	DoubleWeapon	: `槽位通用`		, // + ` # 远程/近战槽位通用,遠程/近戰槽位通用,Remote/Melee slot universal,リモート/近接スロット共通`,
 	
-	Tanktype0		: `游骑专属`		, // + ` # 游骑兵号专属,遊騎兵號专属,Ranger Exclusive,レンジャー号専属`,
-	Tanktype1		: `骠骑专属`		, // + ` # 骠骑兵号专属,驃騎兵號专属,Hussar Exclusive,ユサール号専属`,
-	Tanktype2		: `龙骑专属`		, // + ` # 龙骑兵号专属,龍騎兵號专属,Dragoon Exclusive,ドラグーン号専属`,
-	Tanktype3		: `弓骑专属`		, // + ` # 弓骑兵号专属,弓騎兵號专属,Horse Archer Exclusive,弓騎兵号専属`,
-	Tanktype4		: `圣骑专属`		, // + ` # 圣骑兵号专属,聖騎士號专属,Paladin Exclusive,聖騎士号専属`,
+	Tanktype0		: `游骑专属`		, // + ` # 游骑兵号专属,遊騎兵號專屬,Ranger Exclusive,レンジャー号専属`,
+	Tanktype1		: `骠骑专属`		, // + ` # 骠骑兵号专属,驃騎兵號專屬,Hussar Exclusive,ユサール号専属`,
+	Tanktype2		: `龙骑专属`		, // + ` # 龙骑兵号专属,龍騎兵號專屬,Dragoon Exclusive,ドラグーン号専属`,
+	Tanktype3		: `弓骑专属`		, // + ` # 弓骑兵号专属,弓騎兵號專屬,Horse Archer Exclusive,弓騎兵号専属`,
+	Tanktype4		: `圣骑专属`		, // + ` # 圣骑兵号专属,聖騎士號專屬,Paladin Exclusive,聖騎士号専属`,
 	
 	Light			: `照明配件`		, // + ` # 照明,照明,Lighting,照明`,
 	EnergyWeapon	: `能量子弹`		, // + ` # 能量弹,能量彈,Energetic Bullet,エネルギー弾`,
@@ -2122,7 +2129,7 @@ let textList = {
 	Company_2017	: `黎明工业`					, // + ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
 	Company_2077	: `西金川工业公司`				, // + ` # 西金川工业公司,西金川工業公司,West Jinchuan Industrial Company,西金川工業公司`,
 	Company_2100	: `触手研究所`					, // + ` # 触手研究所,觸手研究所,Tentacle research institute,触手研究所`,
-	Company_2158	: `水雷部纯氧鱼类研发中心`		, // + ` # 水雷部纯氧鱼类研发中心,水雷部純氧魚類研發中心,Pure Oxygen Fish Research and Development Center of the Mine Department,機雷部純酸素魚類研究開発センター`,
+	Company_2158	: `水雷部纯氧鱼雷研发中心`		, // + ` # 水雷部纯氧鱼雷研发中心,水雷部純氧魚雷研發中心,Pure Oxygen Torpedo Research and Development Center of the Mine Department,機雷部純酸素魚雷研究開発センター`,
 	
 	},
 	
@@ -2423,12 +2430,12 @@ csv0.forEach(function(item, index){
 	
 });
 $('#powerTable01 tbody').html(powerTable01_tbody_html);
-xj2._buildPowerTable('powerTable01');
+xjwiki._buildPowerTable('powerTable01');
 $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable01);
-jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+xjwiki._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable01) });
 
 // ---------------------------------------------
 
@@ -2519,7 +2526,7 @@ let attrSelect04_Option = [
 	['Company_2017',	`黎明工业`,					],
 	['Company_2077',	`西金川工业公司`,			],
 	['Company_2100',	`触手研究所`,				],
-	['Company_2158',	`水雷部纯氧鱼类研发中心`,	],
+	['Company_2158',	`水雷部纯氧鱼雷研发中心`,	],
 ];
 
 // 获取对象
@@ -2600,7 +2607,7 @@ let filterFunction = function(){
 	};
 	
 	// 合并同类设置高亮
-	xj2._groupedSet(jqi_powerTable01);
+	xjwiki._groupedSet(jqi_powerTable01);
 	
 };
 
@@ -2630,7 +2637,7 @@ filterFunction();
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

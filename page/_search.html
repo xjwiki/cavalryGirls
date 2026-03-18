@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -167,7 +173,7 @@ display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;max-width:9
 
 
 
-<script>if(location.protocol.includes('file') === true){ document.write(`<script src="../static/cjs/_searchLibary.js?time=2026-03-14T06:30:00UTC+8"><\/script>`) }</script>
+<script>if(location.protocol.includes('file') === true){ document.write(`<script src="../static/cjs/_searchLibary.js?time=2026-03-18T00:00:00UTC+8"><\/script>`) }</script>
 <script src="../static/plugin/jszip/3.10.1/dist/jszip.min.js"></script>
 <script>
 (function(){
@@ -207,13 +213,16 @@ let jqi_wrapper = $('#wrapper');
 
 // 获取数据后首次操作得追加标题路径
 let firstSetting = function(){
-window.xj2._searchLibary.forEach(function(item){ 
+window.xjwiki._searchLibary.forEach(function(item){ 
 item.text = item.head +': '+ item.text +' :'+ item.path }); searchAction(); };
 
 // 获取 url 的 query 并填到输入框里
 let ele_headFormText = document.getElementById('pub_headFormText');
-let query = new URLSearchParams(location.search).get('query').trim().replace(/ {2,}/g, ' ');
-if(query !== '' && query !== null && query !== undefined){ ele_headFormText.setAttribute('value', query), ele_headFormText.value = query };
+let query = new URLSearchParams(location.search).get('query');
+if(query !== null){ query = query.trim().replace(/ {2,}/ig, ' ') };
+if(query !== '' && query !== null && query !== undefined){ 
+ele_headFormText.setAttribute('value', query), 
+ele_headFormText.value = query };
 
 // --------------------------------
 
@@ -241,7 +250,7 @@ let searchAction = function(){
 	
 	// 遍历所有数据匹配
 	let matchCount = 0, htmlText = '';
-	window.xj2._searchLibary.forEach(function(item){
+	window.xjwiki._searchLibary.forEach(function(item){
 		
 		// 必须匹配上所有关键词
 		let matchLength = 0;
@@ -279,7 +288,7 @@ let searchAction = function(){
 		};
 		
 		// 去掉累加多出来的空格
-		string = string.replace(/ {2,}/g, ' ').trim();
+		string = string.replace(/ {2,}/ig, ' ').trim();
 		
 		let matchList = new RegExp('^(.*?)(' +
 		queryJoin+')(.*?)$','i').exec(string);
@@ -330,12 +339,12 @@ let searchAction = function(){
 // http 模式才使用 fetch 读取压缩包
 if(location.protocol.includes(
 'file') === true){ firstSetting('file') }else{
-	fetch('../static/cjs/_searchLibary.7z?time=2026-03-14T06:30:00UTC+8')
+	fetch('../static/cjs/_searchLibary.7z?time=2026-03-18T00:00:00UTC+8')
 	.then(function(value){ return value.blob() })
 	.then(function(value){
 		JSZip.loadAsync(value).then(function(zip){
 			zip.file('_searchLibary.js').async('string').then(function
-			(value){ window.xj2._searchLibary = JSON.parse(value), firstSetting('http') });
+			(value){ window.xjwiki._searchLibary = JSON.parse(value), firstSetting('http') });
 		});
 	});
 };
@@ -346,7 +355,7 @@ if(location.protocol.includes(
 document.getElementById('pub_headForm').addEventListener('submit', function(e){
 	
 	e.preventDefault();
-	if(window.xj2._searchLibary === undefined){ return };
+	if(window.xjwiki._searchLibary === undefined){ return };
 	history.pushState({}, '', location.origin + location.pathname + '?query=' + 
 	ele_headFormText.value.trim().replace(/(\s)+/g,'+'));
 	searchAction('找');
@@ -356,9 +365,9 @@ document.getElementById('pub_headForm').addEventListener('submit', function(e){
 // 监听 popstate 同步输入和搜索结果
 window.addEventListener('popstate', function(e){
 	
-	if(window.xj2._searchLibary === undefined){ return };
-	let query = new URLSearchParams(location.search)
-	.get('query').trim().replace(/ {2,}/g, ' ');
+	if(window.xjwiki._searchLibary === undefined){ return };
+	let query = new URLSearchParams(location.search).get('query');
+	if(query !== null){ query = query.trim().replace(/ {2,}/ig, ' ') };
 	
 	ele_headFormText.setAttribute('value', query);
 	ele_headFormText.value = query;
@@ -377,7 +386,7 @@ window.addEventListener('popstate', function(e){
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

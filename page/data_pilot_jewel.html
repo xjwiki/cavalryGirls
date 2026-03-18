@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../static/icon/favicon.ico" />
 <meta property="og:image" content="https://xjwiki.github.io/cavalryGirls/static/icon/xjwiki.png" />
 
-<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-14T06:30:00UTC+8"></script>
+<script src="../static/cjs/_xj.plugins.setting.js?time=2026-03-18T00:00:00UTC+8"></script>
 <meta name="viewport" xj-viewport="{minWidth:1280}" content="width=device-width,initial-scale=1" />
 
 <meta name="msvalidate.01" content="96E5D43DAA4C3AC0C4186C4842C1863F" />
@@ -28,6 +28,9 @@
 <link id="prism-theme-black" rel="alternate stylesheet" href="../static/plugin/prismjs/1.25.0/themes/okaidia.min.css" />
 <script data-manual="prevent prism auto highlight pre or code" src="../static/plugin/prismjs/1.25.0/prism.min.js"></script>
 
+<link rel="stylesheet" href="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.css" />
+<script src="../static/plugin/xjPopups/0.5.0/dist/xjPopups.min.js"></script>
+
 <link rel="stylesheet" href="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.css" />
 <script src="../static/plugin/xjScroll/0.4.1/dist/xjScroll.min.js"></script>
 
@@ -42,8 +45,8 @@
 
 <script src="../static/plugin/xjArrive/0.3.2/dist/xjArrive.min.js"></script>
 
-<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-14T06:30:00UTC+8" />
-<script src="../static/cjs/_global.js?time=2026-03-14T06:30:00UTC+8"></script>
+<link rel="stylesheet" href="../static/cjs/_global.css?time=2026-03-18T00:00:00UTC+8" />
+<script src="../static/cjs/_global.js?time=2026-03-18T00:00:00UTC+8"></script>
 
 <meta name="description" content="这是铁骑少女这款机战游戏的攻略百科, 包含了游戏玩法和各种数据, 无论你是新手玩家或资深大佬, 在这里都应该能够有所收获" />
 <meta name="kyewords" content="铁骑少女, 攻略, 百科, Cavalry Girls, encyclopedia, guide, wiki, xjwiki" />
@@ -67,10 +70,10 @@
 				<script>
 				// jQuery's :contains 筛选是模糊匹配的, 所以它会匹配到包目标含文本参数的其他节点
 				// 为了更精准, 所以这里改用 filter( ) 方法进行过滤, 以实现全匹配才选中节点的效果
-				// document.title = xj2.i18n[document.title];
-				xj2._dirLinksContent.find('.xjDir-text').filter(function(e){
+				// document.title = xjwiki.i18n[document.title];
+				xjwiki._dirLinksContent.find('.xjDir-text').filter(function(e){
 				return (this.textContent.trim() === document.title) }).parents('li').addClass('xjDir-active');
-				$(document.currentScript).replaceWith(xj2._dirLinksContent);
+				$(document.currentScript).replaceWith(xjwiki._dirLinksContent);
 				</script>
 			</ul>
 		</div>
@@ -104,6 +107,9 @@
 	
 	<a id="pub_headCode" class="button" title="Get Source From GitHub" target="_blank" href=
 	"https://github.com/xjwiki/cavalryGirls/"><i class="fab fa-github"></i></a>
+	
+	<button id="pub_headLang" title="Pick You Familiar Lang" 
+	type="button"> <i class="fas fa-language"></i> </button>
 	
 	<button id="pub_headBulb" type="button" title="Toggled Wihte Or Black" onclick=
 	"xj.basic.changeTheme('cycle')"><i class="fas fa-lightbulb"></i></button>
@@ -195,9 +201,10 @@ html:not([lang|="zh"]) #heading01 ~ p > label + span{font-size:12px;line-height:
 #powerTable01 .hideTd{display:none;}
 
 /* 内容省略 */
-#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;white-space:nowrap;}
+#powerTable01 .ellipsis-1{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:14px;white-space:nowrap;}
 #powerTable01 .ellipsis-2{text-overflow:ellipsis;overflow:hidden;text-decoration:underline;height:28px;
-word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
+-webkit-line-clamp:2;}
 
 /* 悬停展示 */
 #powerTable01 .hoverEllipsis > div{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
@@ -235,69 +242,69 @@ Cluster 属性是物品的群组信息, 只有武器&融合配件才有这个属
 
 let csv0 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-251,#玉稳定框架-原石,251,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1265,
-252,#玉增幅框架-原石,252,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:25|GlobalPressureUp:2,Sub_2,50,50,2,0,0,0,0,,,,,1266,
-253,#玉过载框架-原石,253,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:40|GlobalPressureUp:5,Sub_3,85,78,-1,0,0,0,0,,,,,1267,
+251,#玉稳定框架-原石,251,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1313,
+252,#玉增幅框架-原石,252,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:25|GlobalPressureUp:2,Sub_2,50,50,2,0,0,0,0,,,,,1314,
+253,#玉过载框架-原石,253,Equip,#子弹时间时长增加<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimePlus:40|GlobalPressureUp:5,Sub_3,85,78,-1,0,0,0,0,,,,,1315,
 
-254,#玉稳定框架-原矿,254,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1268,
-255,#玉增幅框架-原矿,255,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:20|GlobalPressureUp:2,Sub_2,50,68,2,0,0,0,0,,,,,1269,
-256,#玉过载框架-原矿,256,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:30|GlobalPressureUp:5,Sub_3,85,80,-1,0,0,0,0,,,,,1270,
+254,#玉稳定框架-原矿,254,Equip,#压力增长<Description>,Equip,1,GlobalPressureUp:-2,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1316,
+255,#玉增幅框架-原矿,255,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:20|GlobalPressureUp:2,Sub_2,50,68,2,0,0,0,0,,,,,1317,
+256,#玉过载框架-原矿,256,Equip,#子弹时间内换弹时间与射击间隔<Description:0>%，压力增长+<Description:1>,Equip,1,BulletTimeEffectPlus:30|GlobalPressureUp:5,Sub_3,85,80,-1,0,0,0,0,,,,,1318,
 
-257,#玉稳定框架-精矿,257,Equip,#受伤压力增长<Description>%,Equip,1,HarmPressureUp:-50,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1271,
-258,#玉增幅框架-精矿,258,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-4|HarmPressureUp:10,Sub_2,50,70,2,0,0,0,0,,,,,1272,
-259,#玉过载框架-精矿,259,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-6|HarmPressureUp:15,Sub_3,85,80,-1,0,0,0,0,,,,,1273,
+257,#玉稳定框架-精矿,257,Equip,#受伤压力增长<Description>%,Equip,1,HarmPressureUp:-50,Sub_1,30,$EquipOpenDay,1,0,0,0,0,,40005_2|40006_2|40007_6,,,1319,
+258,#玉增幅框架-精矿,258,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-4|HarmPressureUp:10,Sub_2,50,70,2,0,0,0,0,,,,,1320,
+259,#玉过载框架-精矿,259,Equip,#换弹时间<Description:0>%，受伤压力增长+<Description:1>%,Equip,1,AddWeaponReload:-6|HarmPressureUp:15,Sub_3,85,80,-1,0,0,0,0,,,,,1321,
 
-260,#玉稳定框架-摆件,260,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:15,Sub_1,30,40,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1274,
-261,#玉增幅框架-摆件,261,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:25,Sub_2,50,71,2,0,0,0,0,,,,,1275,
-262,#玉过载框架-摆件,262,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:40,Sub_3,85,81,-1,0,0,0,0,,,,,1276,
+260,#玉稳定框架-摆件,260,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:15,Sub_1,30,40,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1322,
+261,#玉增幅框架-摆件,261,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:25,Sub_2,50,71,2,0,0,0,0,,,,,1323,
+262,#玉过载框架-摆件,262,Equip,#礼物回复压力+<Description>%,Equip,1,GiftEffect:40,Sub_3,85,81,-1,0,0,0,0,,,,,1324,
 
-266,#玉稳定框架-挂饰,266,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:15,Sub_1,30,44,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1280,
-267,#玉增幅框架-挂饰,267,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:25,Sub_2,50,62,2,0,0,0,0,,,,,1281,
-268,#玉过载框架-挂饰,268,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:40,Sub_3,85,85,-1,0,0,0,0,,,,,1282,
+266,#玉稳定框架-挂饰,266,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:15,Sub_1,30,44,1,0,0,0,0,,40005_3|40006_3|40007_4,,,1328,
+267,#玉增幅框架-挂饰,267,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:25,Sub_2,50,62,2,0,0,0,0,,,,,1329,
+268,#玉过载框架-挂饰,268,Equip,#休息回复压力+<Description>%,Equip,1,RestEffect:40,Sub_3,85,85,-1,0,0,0,0,,,,,1330,
 
-263,#玉稳定框架-挂画,263,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:20|RestEffect:-15,Sub_1,30,42,1,0,0,0,0,,40005_1|40006_1|40007_5|40026_3,,,1277,
-264,#玉增幅框架-挂画,264,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:35|RestEffect:-25,Sub_2,50,73,2,0,0,0,0,,,,,1278,
-265,#玉过载框架-挂画,265,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:60|RestEffect:-40,Sub_3,85,83,-1,0,0,0,0,,,,,1279,
+263,#玉稳定框架-挂画,263,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:20|RestEffect:-15,Sub_1,30,42,1,0,0,0,0,,40005_1|40006_1|40007_5|40026_3,,,1325,
+264,#玉增幅框架-挂画,264,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:35|RestEffect:-25,Sub_2,50,73,2,0,0,0,0,,,,,1326,
+265,#玉过载框架-挂画,265,Equip,#护盾基础生命值+<Description:0>%，休息回复压力<Description:1>%,Equip,1,AddShiledLife:60|RestEffect:-40,Sub_3,85,83,-1,0,0,0,0,,,,,1327,
 
-601,#玉刀刃-原矿,601,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:5,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1431,
-602,#玉刀刃-原石,602,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:9,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1432,
-603,#玉刀刃-粗制品,603,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:15,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1433,
-604,#玉刀刃-精制品,604,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:25,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1434,
+601,#玉刀刃-原矿,601,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:5,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1479,
+602,#玉刀刃-原石,602,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:9,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1480,
+603,#玉刀刃-粗制品,603,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:15,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1481,
+604,#玉刀刃-精制品,604,Equip,#背刺效率+<Description>%,CantRecycle|Equip1,1,AsssinEffective:25,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1482,
 
-605,#玉刀把-原矿,605,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:15,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1435,
-606,#玉刀把-原石,606,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:24,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1436,
-607,#玉刀把-粗制品,607,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1437,
-608,#玉刀把-精制品,608,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:45,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1438,
+605,#玉刀把-原矿,605,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:15,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1483,
+606,#玉刀把-原石,606,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:24,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1484,
+607,#玉刀把-粗制品,607,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinEffective:30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1485,
+608,#玉刀把-精制品,608,Equip,#背刺判定角度+<Description>°,CantRecycle|Equip1,1,AsssinAngDis:45,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1486,
 
-613,#玉刀镡-原矿,613,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-6,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1443,
-614,#玉刀镡-原石,614,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-15,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1444,
-615,#玉刀镡-粗制品,615,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1445,
-616,#玉刀镡-精制品,616,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-50,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1446,
+613,#玉刀镡-原矿,613,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-6,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1491,
+614,#玉刀镡-原石,614,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-15,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1492,
+615,#玉刀镡-粗制品,615,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-30,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1493,
+616,#玉刀镡-精制品,616,Equip,#敌军背后感知距离<Description>%（从背后接近敌人时敌人的感知距离）,CantRecycle|Equip1,1,AsssinFeelDis:-50,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1494,
 
-609,#玉刀鞘-原矿,609,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:20,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1439,
-610,#玉刀鞘-原石,610,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:35,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1440,
-611,#玉刀鞘-粗制品,611,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:60,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1441,
-612,#玉刀鞘-精制品,612,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:100,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1442,
+609,#玉刀鞘-原矿,609,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:20,TankType_PlayerName_1,-1,999,1,0,0,0,0,,,,,1487,
+610,#玉刀鞘-原石,610,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:35,TankType_PlayerName_1,-1,999,2,0,0,0,0,,,,,1488,
+611,#玉刀鞘-粗制品,611,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:60,TankType_PlayerName_1,-1,999,3,0,0,0,0,,,,,1489,
+612,#玉刀鞘-精制品,612,Equip,#敌军警觉后搜索精度-<Description>%（降低敌军搜索时的精度）,CantRecycle|Equip1,1,AsssinSearchRange:100,TankType_PlayerName_1,-1,999,-1,0,0,0,0,,,,,1490,
 
-635,#玉长矛-原矿,635,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:25,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1452,
-636,#玉长矛-原石,636,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:40,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1453,
-637,#玉长矛-粗制品,637,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:54,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1454,
-638,#玉长矛-精制品,638,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:64,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1455,
+635,#玉长矛-原矿,635,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:25,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1500,
+636,#玉长矛-原石,636,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:40,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1501,
+637,#玉长矛-粗制品,637,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:54,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1502,
+638,#玉长矛-精制品,638,Equip,#完美闪避后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfDodgedTime:8|AddDamageIfDodged:64,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1503,
 
-631,#玉盾牌-原矿,631,Equip,#完美闪避判定时间增加,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1448,
-632,#玉盾牌-原石,632,Equip,#完美闪避判定时间增加（小幅）,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1449,
-633,#玉盾牌-粗制品,633,Equip,#完美闪避判定时间增加（中幅）,CantRecycle|Equip2,1,DodgeFrameAdd:2,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1450,
-634,#玉盾牌-精制品,634,Equip,#完美闪避判定时间增加（大幅）,CantRecycle|Equip2,1,DodgeFrameAdd:3,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1451,
+631,#玉盾牌-原矿,631,Equip,#完美闪避判定时间增加,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1496,
+632,#玉盾牌-原石,632,Equip,#完美闪避判定时间增加（小幅）,CantRecycle|Equip2,1,DodgeFrameAdd:1,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1497,
+633,#玉盾牌-粗制品,633,Equip,#完美闪避判定时间增加（中幅）,CantRecycle|Equip2,1,DodgeFrameAdd:2,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1498,
+634,#玉盾牌-精制品,634,Equip,#完美闪避判定时间增加（大幅）,CantRecycle|Equip2,1,DodgeFrameAdd:3,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1499,
 
-643,#玉头盔-原矿,643,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:6,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1460,
-644,#玉头盔-原石,644,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:10,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1461,
-645,#玉头盔-粗制品,645,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:15,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1462,
-646,#玉头盔-精制品,646,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:21,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1463,
+643,#玉头盔-原矿,643,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:6,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1508,
+644,#玉头盔-原石,644,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:10,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1509,
+645,#玉头盔-粗制品,645,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:15,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1510,
+646,#玉头盔-精制品,646,Equip,#受到伤害后<Description:0>s内下一次攻击攻击力增加<Description:1>%,CantRecycle|Equip2,1,SetAddDamageIfHarmedTime:5|AddDamageIfHarmed:21,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1511,
 
-639,#玉胸甲-原矿,639,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:12,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1456,
-640,#玉胸甲-原石,640,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:20,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1457,
-641,#玉胸甲-粗制品,641,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:28,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1458,
-642,#玉胸甲-精制品,642,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:33,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1459,
+639,#玉胸甲-原矿,639,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:12,TankType_PlayerName_2,-1,999,1,0,0,0,0,,,,,1504,
+640,#玉胸甲-原石,640,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:20,TankType_PlayerName_2,-1,999,2,0,0,0,0,,,,,1505,
+641,#玉胸甲-粗制品,641,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:28,TankType_PlayerName_2,-1,999,3,0,0,0,0,,,,,1506,
+642,#玉胸甲-精制品,642,Equip,#霸体状态下受到伤害减少<Description>%,CantRecycle|Equip2,1,ReduceDamageIfArmor:33,TankType_PlayerName_2,-1,999,-1,0,0,0,0,,,,,1507,
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) });
 
@@ -827,12 +834,12 @@ csv0.forEach(function(item, index){
 	
 });
 $('#powerTable01 tbody').html(powerTable01_tbody_html);
-xj2._buildPowerTable('powerTable01');
+xjwiki._buildPowerTable('powerTable01');
 $('.followTip').xjTip();
 
 // 动态高亮
-xj2._groupedSet(jqi_powerTable01);
-jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTable01) });
+xjwiki._groupedSet(jqi_powerTable01);
+jqi_powerTable01.find('thead th').click(function(){ xjwiki._groupedSet(jqi_powerTable01) });
 
 })();
 </script>
@@ -845,7 +852,7 @@ jqi_powerTable01.find('thead th').click(function(){ xj2._groupedSet(jqi_powerTab
 
 <div id="pub_foot">
 	<div>Licence: <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a></div>
-	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.6</div>
+	<div>Copyright © 2024-<script>document.write(new Date().getFullYear())</script> XJ.Chen | V0.2.7</div>
 </div>
 </div>
 </div>

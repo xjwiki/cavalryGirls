@@ -53,6 +53,8 @@ $('#pub_main, #pub_tool').on('click', 'a', function(e){
 $('#pub_toolBackToTop').on('click', function(e){
 $(document.scrollingElement).stop().animate({scrollTop:0}, 250) });
 
+
+
 // 点击右下角按钮来切换导航的小菜单
 // 用 sessionStorage 实现跨页面记录
 let jqi_pub_toolAnchorTip = $('#pub_toolAnchorTip');
@@ -114,16 +116,96 @@ new MutationObserver(function(records, observer){
 
 
 
+// 点击以按钮切换 html 的 lang 属性
+// 按钮在 body 中, 所以需要等 ready
+let isIndex = /\/page\//i.test(location.pathname) === false ? true : false;
+$('#pub_headLang').click(function(){
+	$.xjDialog({
+		
+		headShow : false,
+		footShow : false,
+		
+		content : /*html*/`
+			<div style="width:960px;height:414px;margin-bottom:16px;">
+				<zh-hans-b lang="zh-hans" translate="no"><img style="width:960px;height:414px;" src="${isIndex?'./':'../'}static/image/index/zh-hans.png" /></zh-hans-b>
+				<zh-hant-b lang="zh-hant" translate="no"><img style="width:960px;height:414px;" src="${isIndex?'./':'../'}static/image/index/zh-hant.png" /></zh-hant-b>
+				<en-b      lang="en"      translate="no"><img style="width:960px;height:414px;" src="${isIndex?'./':'../'}static/image/index/en.png"      /></en-b>
+				<ja-b      lang="ja"      translate="no"><img style="width:960px;height:414px;" src="${isIndex?'./':'../'}static/image/index/ja.png"      /></ja-b>
+				<ud-b                                   ><img style="width:960px;height:414px;" src="${isIndex?'./':'../'}static/image/index/ud.png"      /></ud-b>
+			</div>
+			
+			<div style="width:720px;display:inline-flex;margin-bottom:16px;">
+				<label translate="no" style="flex:1 1 auto;cursor:pointer;">简体中文 : <input style="margin:0;vertical-align:top;" name="radio-language" type="radio" value="zh-hans" /></label>
+				<label translate="no" style="flex:1 1 auto;cursor:pointer;">繁体中文 : <input style="margin:0;vertical-align:top;" name="radio-language" type="radio" value="zh-hant" /></label>
+				<label translate="no" style="flex:1 1 auto;cursor:pointer;">English  : <input style="margin:0;vertical-align:top;" name="radio-language" type="radio" value="en"      /></label>
+				<label translate="no" style="flex:1 1 auto;cursor:pointer;">日本語   : <input style="margin:0;vertical-align:top;" name="radio-language" type="radio" value="ja"      /></label>
+				<label translate="no" style="flex:1 1 auto;cursor:pointer;">Other    : <input style="margin:0;vertical-align:top;" name="radio-language" type="radio" value="ud"      /></label>
+			</div>
+			
+			<div style="width:960px;font-size:16px;opacity:0.75;margin-bottom:16px;">
+				<zh-hans-b lang="zh-hans" translate="no"><i style="color:var(--xj-999)" class="fas fa-bell"></i>: 百科只对数据表格中的"项目名称"和"文本描述"进行了多语言处理, 这部分的文本均来自于游戏源码, 因此保持了高度的一致性, 如果你需要更多翻译, 请右键网页的空白处, 然后使用浏览器自带的翻译功能<br />(Chrome 和 Edge 等浏览器均自带网页翻译的功能)</zh-hans-b>
+				<zh-hant-b lang="zh-hant" translate="no"><i style="color:var(--xj-999)" class="fas fa-bell"></i>: 百科只對數據表格中的"項目名稱"和"文本描述"進行了多語言處理, 這部分的文本均來自於遊戲源碼, 因此保持了高度的一致性, 如果你需要更多翻譯, 請右鍵網頁的空白處, 然後使用瀏覽器自帶的翻譯功能<br />(Chrome 和 Edge 等瀏覽器均自帶網頁翻譯的功能)</zh-hant-b>
+				<en-b      lang="en"      translate="no"><i style="color:var(--xj-999)" class="fas fa-bell"></i>: The wiki currently supports multilingual translations only for "Item Name" and "Text Description" — Both sourced directly from the game, So they're highly consistent. For other content, Right click page -> Translate to English<br />(Browsers like Chrome and Edge have built-in webpage translation features)</en-b>
+				<ja-b      lang="ja"      translate="no"><i style="color:var(--xj-999)" class="fas fa-bell"></i>: 百科はデータ表の"プロジェクト名"と"テキスト説明"のみ多言語化(ゲームソース由来, 高い一貫性を保つ)しています, その他の翻訳が必要な場合は, ウェブページの空白部分を右クリックし, ブラウザに内蔵されている翻訳機能をご利用ください<br />(Chrome や Edge などのブラウザにはウェブページ翻訳機能が標準搭載されている)</ja-b>
+				<ud-b                                   ><i style="color:var(--xj-999)" class="fas fa-bell"></i>: 百科只对数据表格中的"项目名称"和"文本描述"进行了多语言处理, 这部分的文本均来自于游戏源码, 因此保持了高度的一致性, 如果你需要更多翻译, 请右键网页的空白处, 然后使用浏览器自带的翻译功能<br />(Chrome 和 Edge 等浏览器均自带网页翻译的功能)</ud-b>
+			</div>
+			
+			<button style="border-radius:2px;width:128px;" class="xjDialog-foot-yes" type="button"><i style="color:var(--xj-999);margin-right:8px;" class="far fa-circle-check"></i>
+				<zh-hans-b lang="zh-hans" translate="no">确定</zh-hans-b>
+				<zh-hant-b lang="zh-hant" translate="no">確定</zh-hant-b>
+				<en-b      lang="en"      translate="no">ＯＫ</en-b>
+				<ja-b      lang="ja"      translate="no">はい</ja-b>
+				<ud-b                                   >确定</ud-b>
+			</button>
+		`,
+		
+		before : function(xjDialog){
+			
+			// 解决 scale 缩放后图片模糊问题
+			setTimeout(function(){ xjDialog.self.find('img').css('transform', 'translateZ(0)') }, 300);
+			setTimeout(function(){ xjDialog.self.find('img').css('transform', '')              }, 400);
+			setTimeout(function(){ xjDialog.self.find('img').css('transform', 'translateZ(0)') }, 500);
+			
+			// 设置初始 radio 按钮的 checked
+			let langType = xjls.get('xj-wiki-lang');
+			if(langType === null || ['zh-hans','zh-hant','en','ja']
+			.includes(langType) === false){ langType = 'zh-hans' };
+			xjDialog.self.find('input[type="radio"][value="'+langType+'"]').prop('checked',true).attr('checked','checked');
+			
+			// 点击 radio, 更改 html 的 lang
+			xjDialog.self.find('input[name="radio-language"]')
+			.on('change', function(event){
+				
+				let radio = $(this);
+				let value = radio.attr('value');
+				$(document.documentElement).attr('lang', value);
+				xjls.set('xj-wiki-lang', value);
+				xjDialog.resize('');
+				
+				// let urlsp = new URLSearchParams(location.search);
+				// urlsp.set('lang', value), urlsp = '?' + urlsp.toString();
+				// history.pushState({}, '', location.origin+location.pathname+urlsp);
+				history.pushState({}, '', location.origin + location.pathname + '?lang=' + value);
+				
+			});
+			
+		},
+		
+	});
+});
+
+
+
 });
 
 
 
 // ---------------------------------------------------------------------------------------------
 // 全局方法所在对象
-window.xj2 = {};
+window.xjwiki = {};
 
 // 表格排序功能函数
-window.xj2._buildPowerTable = function(tableID){
+window.xjwiki._buildPowerTable = function(tableID){
 	
 	// 获取相关节点
 	let ele_table = document.getElementById(tableID);
@@ -210,7 +292,7 @@ window.xj2._buildPowerTable = function(tableID){
 };
 
 // 表格原始文本处理
-window.xj2._hideText = function(text, encode){
+window.xjwiki._hideText = function(text, encode){
 	
 	if(typeof(text) !== 'string'){ return text };
 	if(encode !== true){ return (text.replace(/ # /, '<h>') + '</h>') };
@@ -221,7 +303,7 @@ window.xj2._hideText = function(text, encode){
 };
 
 // 动态高亮表格背景
-window.xj2._groupedSet = function(jqi_powerTable){
+window.xjwiki._groupedSet = function(jqi_powerTable){
 	
 	// 获取行并移除高亮
 	let jqi_tr = jqi_powerTable
@@ -266,7 +348,7 @@ window.xj2._groupedSet = function(jqi_powerTable){
 };
 
 // 合并表格同类的行
-window.xj2._rowSpanSet = function(jqi_powerTable, nthValue, flag){
+window.xjwiki._rowSpanSet = function(jqi_powerTable, nthValue, flag){
 	
 	// 项目表格行和节点
 	let jqi_tr = jqi_powerTable.find('tbody tr');
@@ -320,23 +402,60 @@ window.xj2._rowSpanSet = function(jqi_powerTable, nthValue, flag){
 
 
 // 创建常用变量合集
-let istIndex = /\/page\//i.test(location.pathname) === false;
+let isIndex = /\/page\//i.test(location.pathname) === false ? true : false;
+let xjls = xj.storage.localStorage;
+let urlspLang = '';
+
+
+
+// 获取 search 的值
+if(location.search !== ''){
+	urlspLang = new URLSearchParams(location.search).get('lang');
+	if(urlspLang === null || ['zh-hans','zh-hant','en','ja',].includes(urlspLang) === false){ urlspLang = '' };
+};
+
+// html 初始的 lang
+if(urlspLang !== ''){
+	xjls.set('xj-wiki-lang', urlspLang);
+	document.documentElement.setAttribute('lang', urlspLang); 
+}else{
+	urlspLang = xjls.get('xj-wiki-lang');
+	if(urlspLang === null){ urlspLang = 'zh-hans' };
+	if(['zh-hans','zh-hant','en','ja',].includes(urlspLang)){
+	document.documentElement.setAttribute('lang',urlspLang)};
+};
+
+// 响应 search 变化
+window.addEventListener('popstate', function(){
+	
+	urlspLang = new URLSearchParams(location.search).get('lang');
+	
+	if(urlspLang === null){ return }
+	else if(['zh-hans', 'zh-hant', 'en', 'ja', ]
+	.includes(urlspLang) === false){ urlspLang = 'zh-hans' };
+	
+	xjls.set('xj-wiki-lang', urlspLang);
+	document.documentElement.setAttribute('lang', urlspLang);
+	
+});
+
+
 
 // 子页左侧导航数据
-xj2._dirLinksContent = $(/*html*/`
+xjwiki._dirLinksContent = $(/*html*/`
 	
-	<li><a href="${istIndex?'.':'..'}/index.html"><i class="xjDir-icon">
-		<img class="xj-black-hide" style="height:54px;" src="${istIndex ? '.' : '..'}/static/icon/logo-white.png" />
-		<img class="xj-white-hide" style="height:54px;" src="${istIndex ? '.' : '..'}/static/icon/logo-black.png" />
+	<li><a href="${isIndex?'.':'..'}/index.html"><i class="xjDir-icon">
+		<img class="xj-black-hide" style="height:54px;" src="${isIndex ? '.' : '..'}/static/icon/logo-white.png" />
+		<img class="xj-white-hide" style="height:54px;" src="${isIndex ? '.' : '..'}/static/icon/logo-black.png" />
 	</i></a></li>
 	
 	<li class="xjDir-divide"></li>
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-compass"></i>		<i class="xjDir-text">新手指南</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./${istIndex?'page/':''}guide_introduce.html">									<i class="xjDir-icon fas fa-1">.</i>					<i class="xjDir-text"><span>选择模式</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}guide_operation.html">									<i class="xjDir-icon fas fa-2">.</i>					<i class="xjDir-text"><span>内勤运营</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}guide_construct.html">									<i class="xjDir-icon fas fa-3">.</i>					<i class="xjDir-text"><span>装备配置</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}guide_introduce.html">									<i class="xjDir-icon fas fa-1">.</i>					<i class="xjDir-text"><span>选择模式</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}guide_operation.html">									<i class="xjDir-icon fas fa-2">.</i>					<i class="xjDir-text"><span>内勤运营</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}guide_construct.html">									<i class="xjDir-icon fas fa-3">.</i>					<i class="xjDir-text"><span>装备配置</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -344,53 +463,53 @@ xj2._dirLinksContent = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-circle-info"></i>	<i class="xjDir-text">游戏数据</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./${istIndex?'page/':''}data_weapon_list.html">								<i class="xjDir-icon fas fa-gun"></i>					<i class="xjDir-text"><span>武器列表</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_weapon_model.html">								<i class="xjDir-icon fas fa-gears"></i>					<i class="xjDir-text"><span>武器配件</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_weapon_fusion.html">								<i class="xjDir-icon fas fa-circle-nodes"></i>			<i class="xjDir-text"><span>武器融合</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_weapon_list.html">									<i class="xjDir-icon fas fa-gun"></i>					<i class="xjDir-text"><span>武器列表</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_weapon_model.html">								<i class="xjDir-icon fas fa-gears"></i>					<i class="xjDir-text"><span>武器配件</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_weapon_fusion.html">								<i class="xjDir-icon fas fa-circle-nodes"></i>			<i class="xjDir-text"><span>武器融合</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li><a href="./${istIndex?'page/':''}data_mecha_list.html">									<i class="xjDir-icon fas fa-robot"></i>					<i class="xjDir-text"><span>机体详情</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_mecha_main.html">									<i class="xjDir-icon fas fa-user-gear"></i>				<i class="xjDir-text"><span>主体强化</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_mecha_foot.html">									<i class="xjDir-icon fas fa-gauge-high"></i>			<i class="xjDir-text"><span>足部强化</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_mecha_hang.html">									<i class="xjDir-icon fas fa-shield-halved"></i>			<i class="xjDir-text"><span>机身挂件</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_mecha_mend.html">									<i class="xjDir-icon fas fa-screwdriver-wrench"></i>	<i class="xjDir-text"><span>机体改造</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_mecha_frag.html">									<i class="xjDir-icon fas fa-bomb"></i>					<i class="xjDir-text"><span>投掷物品</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_list.html">									<i class="xjDir-icon fas fa-robot"></i>					<i class="xjDir-text"><span>机体详情</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_main.html">									<i class="xjDir-icon fas fa-user-gear"></i>				<i class="xjDir-text"><span>主体强化</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_foot.html">									<i class="xjDir-icon fas fa-gauge-high"></i>			<i class="xjDir-text"><span>足部强化</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_hang.html">									<i class="xjDir-icon fas fa-shield-halved"></i>			<i class="xjDir-text"><span>机身挂件</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_mend.html">									<i class="xjDir-icon fas fa-screwdriver-wrench"></i>	<i class="xjDir-text"><span>机体改造</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_mecha_frag.html">									<i class="xjDir-icon fas fa-bomb"></i>					<i class="xjDir-text"><span>投掷物品</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li><a href="./${istIndex?'page/':''}data_pilot_intro.html">								<i class="xjDir-icon fas fa-people-group"></i>			<i class="xjDir-text"><span>主角小队</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_pilot_think.html">								<i class="xjDir-icon fas fa-book-open-reader"></i>		<i class="xjDir-text"><span>思潮影响</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_pilot_loyal.html">								<i class="xjDir-icon fas fa-heart"></i>					<i class="xjDir-text"><span>忠诚好感</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_pilot_jewel.html">								<i class="xjDir-icon fas fa-gem"></i>					<i class="xjDir-text"><span>饰品装备</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_pilot_skill.html">								<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_pilot_level.html">								<i class="xjDir-icon fas fa-medal"></i>					<i class="xjDir-text"><span>军衔等级</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_intro.html">									<i class="xjDir-icon fas fa-people-group"></i>			<i class="xjDir-text"><span>主角小队</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_think.html">									<i class="xjDir-icon fas fa-book-open-reader"></i>		<i class="xjDir-text"><span>思潮影响</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_loyal.html">									<i class="xjDir-icon fas fa-heart"></i>					<i class="xjDir-text"><span>忠诚好感</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_jewel.html">									<i class="xjDir-icon fas fa-gem"></i>					<i class="xjDir-text"><span>饰品装备</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_skill.html">									<i class="xjDir-icon fas fa-star"></i>					<i class="xjDir-text"><span>战场技能</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_pilot_level.html">									<i class="xjDir-icon fas fa-medal"></i>					<i class="xjDir-text"><span>军衔等级</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li><a href="./${istIndex?'page/':''}data_enemy_info.html">									<i class="xjDir-icon fas fa-skull"></i>					<i class="xjDir-text"><span>敌军情报</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_enemy_group.html">								<i class="xjDir-icon fas fa-users-line"></i>			<i class="xjDir-text"><span>编队建制</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_enemy_plot.html">									<i class="xjDir-icon fas fa-list-ol"></i>				<i class="xjDir-text"><span>剧情模式</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_enemy_mode.html">									<i class="xjDir-icon fas fa-list-check"></i>			<i class="xjDir-text"><span>特殊遭遇</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_enemy_outer.html">								<i class="xjDir-icon fas fa-clipboard-check"></i>		<i class="xjDir-text"><span>外勤任务</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_enemy_rest.html">									<i class="xjDir-icon fas fa-calendar-days"></i>			<i class="xjDir-text"><span>假日安排</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_info.html">									<i class="xjDir-icon fas fa-skull"></i>					<i class="xjDir-text"><span>敌军情报</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_group.html">									<i class="xjDir-icon fas fa-users-line"></i>			<i class="xjDir-text"><span>编队建制</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_plot.html">									<i class="xjDir-icon fas fa-list-ol"></i>				<i class="xjDir-text"><span>剧情模式</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_mode.html">									<i class="xjDir-icon fas fa-list-check"></i>			<i class="xjDir-text"><span>特殊遭遇</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_outer.html">									<i class="xjDir-icon fas fa-clipboard-check"></i>		<i class="xjDir-text"><span>外勤任务</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_enemy_rest.html">									<i class="xjDir-icon fas fa-calendar-days"></i>			<i class="xjDir-text"><span>假日安排</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li><a href="./${istIndex?'page/':''}data_manage_defenses.html">							<i class="xjDir-icon fas fa-chess-rook"></i>			<i class="xjDir-text"><span>城防设施</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_manage_strategy.html">							<i class="xjDir-icon fas fa-plane-up"></i>				<i class="xjDir-text"><span>战略支援</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_manage_renovate.html">							<i class="xjDir-icon fas fa-chair"></i>					<i class="xjDir-text"><span>家具清单</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_manage_material.html">							<i class="xjDir-icon fas fa-recycle"></i>				<i class="xjDir-text"><span>回收废料</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_manage_expenses.html">							<i class="xjDir-icon fas fa-money-bill"></i>			<i class="xjDir-text"><span>费用计算</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_manage_building.html">							<i class="xjDir-icon fas fa-warehouse"></i>				<i class="xjDir-text"><span>基地部门</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_defenses.html">								<i class="xjDir-icon fas fa-chess-rook"></i>			<i class="xjDir-text"><span>城防设施</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_strategy.html">								<i class="xjDir-icon fas fa-plane-up"></i>				<i class="xjDir-text"><span>战略支援</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_renovate.html">								<i class="xjDir-icon fas fa-chair"></i>					<i class="xjDir-text"><span>家具清单</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_material.html">								<i class="xjDir-icon fas fa-recycle"></i>				<i class="xjDir-text"><span>回收废料</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_expenses.html">								<i class="xjDir-icon fas fa-money-bill"></i>			<i class="xjDir-text"><span>费用计算</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_manage_building.html">								<i class="xjDir-icon fas fa-warehouse"></i>				<i class="xjDir-text"><span>基地部门</span></i></a></li>
 			<li class="xjDir-divide"></li>
 			
-			<li><a href="./${istIndex?'page/':''}data_others_priority.html">							<i class="xjDir-icon fas fa-scale-balanced"></i>		<i class="xjDir-text"><span>商品权重</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_achieved.html">							<i class="xjDir-icon fas fa-trophy"></i>				<i class="xjDir-text"><span>成就系统</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_advanced.html">							<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_sponsors.html">							<i class="xjDir-icon fas fa-trademark"></i>				<i class="xjDir-text"><span>厂商冠名</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_clothing.html">							<i class="xjDir-icon fas fa-shirt"></i>					<i class="xjDir-text"><span>换装造型</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_dialogue.html">							<i class="xjDir-icon fas fa-comment-dots"></i>			<i class="xjDir-text"><span>台词对白</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_parlance.html">							<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>名词解析</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_tutorial.html">							<i class="xjDir-icon fas fa-bell"></i>					<i class="xjDir-text"><span>教程提示</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_announce.html">							<i class="xjDir-icon fas fa-newspaper"></i>				<i class="xjDir-text"><span>时政新闻</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}data_others_question.html">							<i class="xjDir-icon fas fa-circle-question"></i>		<i class="xjDir-text"><span>问题合集</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_priority.html">								<i class="xjDir-icon fas fa-scale-balanced"></i>		<i class="xjDir-text"><span>商品权重</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_achieved.html">								<i class="xjDir-icon fas fa-trophy"></i>				<i class="xjDir-text"><span>成就系统</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_advanced.html">								<i class="xjDir-icon fas fa-sliders"></i>				<i class="xjDir-text"><span>奖惩机制</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_sponsors.html">								<i class="xjDir-icon fas fa-trademark"></i>				<i class="xjDir-text"><span>厂商冠名</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_clothing.html">								<i class="xjDir-icon fas fa-shirt"></i>					<i class="xjDir-text"><span>换装造型</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_dialogue.html">								<i class="xjDir-icon fas fa-comment-dots"></i>			<i class="xjDir-text"><span>台词对白</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_parlance.html">								<i class="xjDir-icon fas fa-tags"></i>					<i class="xjDir-text"><span>名词解析</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_tutorial.html">								<i class="xjDir-icon fas fa-bell"></i>					<i class="xjDir-text"><span>教程提示</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_announce.html">								<i class="xjDir-icon fas fa-newspaper"></i>				<i class="xjDir-text"><span>时政新闻</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}data_others_question.html">								<i class="xjDir-icon fas fa-circle-question"></i>		<i class="xjDir-text"><span>问题合集</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -398,9 +517,9 @@ xj2._dirLinksContent = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-square-pen"></i>		<i class="xjDir-text">事件剧情</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./${istIndex?'page/':''}event_plot.html">										<i class="xjDir-icon fas fa-file"></i>					<i class="xjDir-text"><span>剧情环境</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}event_other.html">										<i class="xjDir-icon fas fa-file-lines"></i>			<i class="xjDir-text"><span>特殊场景</span></i></a></li>
-			<li><a href="./${istIndex?'page/':''}event_detail.html">									<i class="xjDir-icon fas fa-book"></i>					<i class="xjDir-text"><span>事件详情</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}event_plot.html">										<i class="xjDir-icon fas fa-file"></i>					<i class="xjDir-text"><span>剧情环境</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}event_other.html">										<i class="xjDir-icon fas fa-file-lines"></i>			<i class="xjDir-text"><span>特殊场景</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}event_detail.html">										<i class="xjDir-icon fas fa-book"></i>					<i class="xjDir-text"><span>事件详情</span></i></a></li>
 		</ul>
 	</li>
 	
@@ -408,7 +527,7 @@ xj2._dirLinksContent = $(/*html*/`
 	<li class="xjDir-spread">
 		<a class="xj-ripple" href="javascript:void(0)"><i class="xjDir-icon fas fa-square-plus"></i>	<i class="xjDir-text">衍生内容</i><i class="xjDir-sign"></i></a>
 		<ul>
-			<li><a href="./${istIndex?'page/':''}extra_wiki_update.html">								<i class="xjDir-icon fas fa-rotate"></i>				<i class="xjDir-text"><span>网站更新</span></i></a></li>
+			<li><a href="./${isIndex?'page/':''}extra_wiki_update.html">								<i class="xjDir-icon fas fa-rotate"></i>				<i class="xjDir-text"><span>网站更新</span></i></a></li>
 			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/images/">				<i class="xjDir-icon fas fa-paintbrush"></i>			<i class="xjDir-text"><span>艺术作品</span></i></a></li>
 			<li><a target="_blank" href="https://steamcommunity.com/app/2055050/workshop/">				<i class="xjDir-icon fas fa-puzzle-piece"></i>			<i class="xjDir-text"><span>创意工坊</span></i></a></li>
 		</ul>
