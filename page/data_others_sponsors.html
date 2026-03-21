@@ -199,6 +199,9 @@ word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
 使用其他页面整理过的 items 数据, 免去重新整理的麻烦
 最后再配合 ItemsCount.csv, 就能得到所有需要的数据了
 
+657,#龙骑兵原型机+,700,Remodel,#所有强制双持近战武器槽位+<Description>,CantDemo|CantGen|Tanktype2,1,WeaponPlusBattery:DoubleWeapon_4|Time:4,MainAct,200,-1,-2,0,0,0,0,,,,,1311,
+2838,#割喉刃,2837,CloseWeaponDemo,#在隐匿状态下（隐身/烟雾中）发动攻击，可以造成<Description>倍伤害\n（对建筑没有效果）,CantDemo|CantGen,1,HideAssassin:5|WeaponForMechFunc:FightingFuncsFriendsCnt:InvisibleRate:25|Time:25,,20,999,-2,0,0,0,0,2838,,,,1057,1
+
 */
 
 // 武器列表
@@ -209,12 +212,12 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10200,#老式步枪B2M1,10200,Weapon,#老式步枪B2的进一步强化型，全属性进行了增加，但是耐久略有下降\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:200|AddSpeed:-10|AddRotSpeed:-10,Company_10000,32,0,3,4,6,3,6,10300|10301,,,,110,
 10300,#老式步枪B2M11,10300,Weapon,#老式步枪B2M1的进一步强化型，全属性进行了增加，但是耐久略有下降\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:300|AddSpeed:-10|AddRotSpeed:-10,Company_10000,44,0,4,6,8,4,8,10400,,,,149,
 10400,#老式步枪B2M11s,10400,Weapon,#老式步枪B2M11的进一步强化型，较大提高了耐用性，略微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:400|AddSpeed:-15|AddRotSpeed:-15,Company_10000,80,0,-1,8,12,5,8,10500,,,,169,
-10500,#霸德皇威,10500,Weapon,#由皇帝陛下下令，皇家设计局设计并建造的最新步枪，被誉为帝国打赢战争的关键，虽然因为产能不足，只能装备给皇家卫队。\n高穿甲无视护盾，两段伤害，击中后0.1s爆炸\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon,1,Weapon:500|AddSpeed:-20|AddRotSpeed:-50,Main_1,800,0,-2,5,12,5,8,,10400_1|10401_1|10416_1|10418_1,10504|10400|10401|10416|10418,,183,
+10500,#霸德皇威,10500,Weapon,#由皇帝陛下下令，皇家设计局设计并建造的最新步枪，被誉为帝国打赢战争的关键，虽然因为产能不足，只能装备给皇家卫队。\n高穿甲无视护盾，两段伤害，击中后0.1s爆炸\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon,1,Weapon:500|AddSpeed:-20|AddRotSpeed:-50,Company_10500,800,0,-2,5,12,5,8,,10400_1|10401_1|10416_1|10418_1,10504|10400|10401|10416|10418,,183,
 
 10019,#老式步枪A1,1019,Weapon,#只能单发的武器，不过这也意味着不会有开火空挡\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:19|AddSpeed:-10|AddRotSpeed:-10,Main_3,25,17,1,2,4,1,3,10100|10101|10109|10119,40001_2|40002_3|40008_2,10009,,21,
 10119,#老式步枪A1S,10119,Weapon,#老式步枪A1的强化型号，进一步降低了枪身损耗\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:119|AddSpeed:-10|AddRotSpeed:-10,Main_3,40,23,2,4,6,2,5,10200|10209|10219,,10019,,76,
 10219,#老式步枪A1Sm,10219,Weapon,#老式步枪A1S的强化型号，进行了进一步全属性强化\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:219|AddSpeed:-10|AddRotSpeed:-10,Main_5,80,0,-1,6,8,4,7,10319|10218,,,,125,
-10319,#笛卡尔智能枪,10319,Weapon,#一种同时射击多发子弹的智能枪械，会从多个角度追踪敌人，以确保命中,NormalWeapon|Rail|Riffle,1,Weapon:319|AddSpeed:-44|AddRotSpeed:-15,Main_2,200,0,-2,6,8,4,8,,10219_1|10216_1|40032_4,10219|10216,,158,
+10319,#笛卡尔智能枪,10319,Weapon,#一种同时射击多发子弹的智能枪械，会从多个角度追踪敌人，以确保命中,NormalWeapon|Rail|Riffle,1,Weapon:319|AddSpeed:-44|AddRotSpeed:-15,Company_10319,200,0,-2,6,8,4,8,,10219_1|10216_1|40032_4,10219|10216,,158,
 
 // --
 
@@ -252,7 +255,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10116,#制式步枪B2a,10116,Weapon,#制式步枪B2的强化型号，进一步增重并获得了堪比冲锋枪的装弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:116|AddSpeed:-40|AddRotSpeed:-25,Main_3,40,23,2,3,7,2,6,10216|10218,,10016,,73,
 10216,#制式步枪B2as,10216,Weapon,#制式步枪B2a的强化型号，进一步增重并获得了使用寿命强化\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:216|AddSpeed:-40|AddRotSpeed:-25,Main_5,80,0,3,4,9,4,8,10316|10318,,,,122,
 10316,#制式步枪B2ASW,10316,Weapon,#制式步枪B2as的强化型号，进行了适当的减重但是增加了发射间隔\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:316|AddSpeed:-35|AddRotSpeed:-12,Main_2,125,0,4,5,10,5,10,10416|10318,,,,156,
-10416,#制式步枪B2ASW-X,10416,Weapon,#制式步枪B2as的强化型号，进行了适当的减重但是增加了发射间隔\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:416|AddSpeed:-40|AddRotSpeed:-17,Main_2,160,0,-1,6,12,5,10,,,,,174,
+10416,#制式步枪B2ASW-X,10416,Weapon,#制式步枪B2as的强化型号，进行了适当的减重但是增加了发射间隔\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:416|AddSpeed:-40|AddRotSpeed:-17,Company_10416,160,0,-1,6,12,5,10,,,,,174,
 
 10018,#制式步枪A3,1018,Weapon,#虽然装弹量少，但是可以保持持续输出火力，稳定性也较高\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:18|AddSpeed:-10|AddRotSpeed:-10,Company_10018,25,16,1,2,4,1,3,10100|10101|10109|10116|10117|10118,40001_2|40002_3|40008_2,10009,,20,
 10118,#制式步枪A3M,10118,Weapon,#对制式步枪A3进行的强化型号，全属性有所加强，略微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:118|AddSpeed:-15|AddRotSpeed:-15,Company_10118,40,23,2,3,6,2,5,10216|10218,,10018,,75,
@@ -264,7 +267,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10017,#制式步枪B1,1017,Weapon,#正规军列装的武器，牺牲了稳定性换来了较大的装弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:17|AddSpeed:-10|AddRotSpeed:-10,Main_3,25,15,1,2,6,1,4,10100|10101|10109|10116|10117|10118,40001_2|40002_3|40008_2|40005_1,10009,,19,
 10117,#制式步枪B1a,10117,Weapon,#制式步枪B1的强化型号，通过牺牲使用年限获得了堪比冲锋枪的装弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:117|AddSpeed:-10|AddRotSpeed:-10,Main_3,40,23,-1,3,7,3,7,10217,,10017,,74,
 
-10217,#重型突击步枪,10217,Weapon,#一款高伤害重型步枪，但是相对来说机动性较差。由于质量检查更严格，所用材料公差更大，因此耐用性高，磨损率低。,NormalWeapon|MG|Rail,1,Weapon:217|AddSpeed:-25|AddRotSpeed:-25,Main_3,120,0,-2,4,9,4,8,10209|10228,10101_1|10117_1|10118_1,10117|10118,,123,
+10217,#重型突击步枪,10217,Weapon,#一款高伤害重型步枪，但是相对来说机动性较差。由于质量检查更严格，所用材料公差更大，因此耐用性高，磨损率低。,NormalWeapon|MG|Rail,1,Weapon:217|AddSpeed:-25|AddRotSpeed:-25,Company_10217,120,0,-2,4,9,4,8,10209|10228,10101_1|10117_1|10118_1,10117|10118,,123,
 
 // --
 
@@ -278,13 +281,13 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10121,#冲锋枪B12,10121,Weapon,#冲锋枪B2的进一步强化型号，通过牺牲非常多的重量获得了叹为观止的装弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:121|AddSpeed:-35|AddRotSpeed:-25,Company_10321,40,23,2,4,6,3,5,10206|10221|10222,,10021,,78,
 10221,#冲锋枪B12M,10221,Weapon,#冲锋枪B12的强化型号，进行了全属性强化，但是牺牲了部分寿命\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:221|AddSpeed:-35|AddRotSpeed:-25,Company_10321,80,0,3,5,8,4,8,10321|10322,,,,127,
 10321,#冲锋枪c,10321,Weapon,#冲锋枪B12的强化型号，进行了全属性强化\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:321|AddSpeed:-35|AddRotSpeed:-25,Company_10321,125,0,-1,6,10,5,10,10421,,,,160,
-10421,#矢量冲锋枪,10421,Weapon,#,NormalWeapon|Rail,1,Weapon:421|AddSpeed:-10|AddRotSpeed:-10,Main_2,350,0,-2,6,14,5,11,,10222_1|10221_1|10206_1,10322|10321|10306,,176,
+10421,#矢量冲锋枪,10421,Weapon,#,NormalWeapon|Rail,1,Weapon:421|AddSpeed:-10|AddRotSpeed:-10,Company_10421,350,0,-2,6,14,5,11,,10222_1|10221_1|10206_1,10322|10321|10306,,176,
 
 10022,#冲锋枪A2,1022,Weapon,#增加了弹头威力且降低了散射，但是牺牲了装弹量和射速\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:22|AddSpeed:-8|AddRotSpeed:-8,Main_3,25,0,1,3,5,1,3,10106|10121|10122|10025,40001_5|40002_5|40008_2,10006,,24,
 10122,#冲锋枪A2S,10122,Weapon,#冲锋枪A2的强化型号，略微降低了射速以确保枪械寿命\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:122|AddSpeed:-8|AddRotSpeed:-8,Main_3,40,27,2,4,6,3,5,10206|10221|10222,,10022,,79,
 10222,#冲锋枪A2S,10222,Weapon,#冲锋枪A2S的强化型号，进行了小幅度的全属性强化\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:222|AddSpeed:-8|AddRotSpeed:-8,Main_5,80,0,3,5,8,4,8,10321|10322,,,,128,
 10322,#冲锋枪A2S12,10322,Weapon,#冲锋枪A2S的强化型号，进一步提升了耐久\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:322|AddSpeed:-8|AddRotSpeed:-8,Main_1,100,0,-1,6,10,5,10,10422,,,,161,
-10422,#,10422,Weapon,#,NormalWeapon|Rail,1,Weapon:422|AddSpeed:-10|AddRotSpeed:-10,Main_1,200,0,-2,3,9,3,7,,10222_1|10221_1|10206_1,10222|10221|10206,,177,
+10422,#突击手枪,10422,Weapon,#,NormalWeapon|Rail,1,Weapon:422|AddSpeed:-10|AddRotSpeed:-10,Company_10422,200,0,-2,3,9,3,7,,10222_1|10221_1|10206_1,10222|10221|10206,,177,
 
 // --
 
@@ -294,7 +297,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10315,#轻型狙M24,10315,Weapon,#对轻型狙M10进行进一步全属性得到了加强，略微增重并缩短了使用寿命\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:315|AddSpeed:-25|AddRotSpeed:-25,Company_10415,80,0,4,5,6,4,8,10415,,,,155,
 10415,#轻型狙M45,10415,Weapon,#对轻型狙M24进行进一步全属性较小加强\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:415|AddSpeed:-25|AddRotSpeed:-25,Company_10415,125,0,-1,6,9,4,8,10515|10405,,,,173,
 
-10515,#电磁三眼铳,10515,Weapon,#自他国走私的高精尖武器。轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发。价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但她仍然是一款强大的武器。,NormalWeapon|Riffle,1,Weapon:515|AddSpeed:-25|AddRotSpeed:-25,Main_2,300,0,-2,6,8,4,8,,10415_2|40032_4,,,187,
+10515,#电磁三眼铳,10515,Weapon,#自他国走私的高精尖武器。轻型电磁炮，动能武器，有三个枪管，射击方式为高精度三连发。价格昂贵，武器性能强大，但过于精密的设计导致其难以维护，维护成本高，老化概率高，但她仍然是一款强大的武器。,NormalWeapon|Riffle,1,Weapon:515|AddSpeed:-25|AddRotSpeed:-25,Company_10515,300,0,-2,6,8,4,8,,10415_2|40032_4,,,187,
 
 10004,#重型狙,1004,Weapon,#强大的单发武器，射程伤害都很高，但是射速很感人\n较重，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:4|AddSpeed:-10|AddRotSpeed:-50,Company_10004,70,16,1,4,7,1,2,10104|10305|10040|10080,40008_5|40009_5|40004_8,10004|10005|10015|10104|10105|10115|10204|10205|10215|10304|10315|10415,,7,
 10104,#重型狙M1,10104,Weapon,#对重型狙进行了全属性强化，各属性都有所增强。进一步增加了重量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle,1,Weapon:104|AddSpeed:-25|AddRotSpeed:-60,Company_10004,350,25,2,6,11,1,3,10204|10500,,10004,,62,
@@ -322,12 +325,12 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10081,#迫击炮,10081,Weapon,#可以进行抛射的炮击武器，能直接命中目标\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:81|AddSpeed:-20|AddRotSpeed:-40,Main_5,48,14,1,4,7,1,2,10181|10007|10126|10082,40008_5|40010_5|40005_1,,,53,
 10181,#迫击炮W1,10181,Weapon,#可以进行抛射的炮击武器，能直接命中目标，通过降低射速进行了较大幅度减重\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:181|AddSpeed:-15|AddRotSpeed:-32,Main_5,200,25,-1,5,12,2,3,10108|10146|10182|10126,,10081,,105,
 
-10046,#地雷发射器,10046,Weapon,#,ExploWeapon,1,Weapon:46|AddSpeed:-15|AddRotSpeed:-15,Main_3,35,15,1,2,3,0,0,10146|10142|10007|10026,40008_2|40010_2|40005_1,,,48,
-10146,#重型地雷发射器,10146,Weapon,#,ExploWeapon,1,Weapon:146|AddSpeed:-25|AddRotSpeed:-50,Main_3,135,35,-1,2,6,0,0,,,10146,,101,
+10046,#地雷发射器,10046,Weapon,#,ExploWeapon,1,Weapon:46|AddSpeed:-15|AddRotSpeed:-15,Company_10046,35,15,1,2,3,0,0,10146|10142|10007|10026,40008_2|40010_2|40005_1,,,48,
+10146,#重型地雷发射器,10146,Weapon,#,ExploWeapon,1,Weapon:146|AddSpeed:-25|AddRotSpeed:-50,Company_10046,135,35,-1,2,6,0,0,,,10146,,101,
 
 10082,#手持火箭弹,10082,Weapon,#可以射击带有跟踪效果火箭弹的炮击武器\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:82|AddSpeed:-15|AddRotSpeed:-28,Company_10321,48,14,1,3,5,2,3,10182|10007|10026|10081,40008_5|40010_5|40005_1,10007|10008|10026|10107|10108|10126|10081|10082|10081|10082|10181|10182,,54,
 10182,#手持火箭弹B1,10182,Weapon,#可以射击带有跟踪效果火箭弹的炮击武器，增加了发射弹药量，并切换了连发机关\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:182|AddSpeed:-20|AddRotSpeed:-30,Company_10321,100,25,-1,5,7,3,5,10282|10108|10146|10181|10482|10382,,10082,,106,
-10282,#飞龙飞弹,10282,Weapon,#可以射击带有跟踪效果火箭弹的炮击武器，增加了发射弹药量，并切换了连发机关\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:282|AddSpeed:-30|AddRotSpeed:-45,Main_5,180,40,3,5,8,3,6,10382|10482,40008_10|40010_10|40005_5|40032_2,10182,,146,
+10282,#飞龙飞弹,10282,Weapon,#可以射击带有跟踪效果火箭弹的炮击武器，增加了发射弹药量，并切换了连发机关\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:282|AddSpeed:-30|AddRotSpeed:-45,Company_10282,180,40,3,5,8,3,6,10382|10482,40008_10|40010_10|40005_5|40032_2,10182,,146,
 10382,#颠茄多管防空火箭弹,10382,Weapon,#龙飞弹的改造型号，特化对空防御，可以射出覆盖广大空域的大量对空导弹\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:382|AddSpeed:-5|AddRotSpeed:-5,Company_10321,250,0,-1,5,9,3,6,10482,40020_6|40010_10|10282_1,10282,,166,
 10482,#小美人多管温压弹,10482,Weapon,#龙飞弹的改造型号，可以射出大量温压弹，用以打击大范围的区域，威力极其强大\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:482|AddSpeed:-5|AddRotSpeed:-5,Company_10321,500,0,-2,5,9,4,7,,40032_2|40020_6|40010_10|10282_2,10282,,181,
 
@@ -351,7 +354,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10113,#重机枪W3,10113,Weapon,#对重机枪进行减重，但是略微牺牲了射速\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|MG,1,Weapon:113|AddSpeed:-45|AddRotSpeed:-30,Company_10113,300,30,2,6,12,1,3,10213|10245,,10013,,70,
 10213,#重机枪W3M,10213,Weapon,#对重机枪S3进行全面性能提升，但是使用寿命极大的缩短了\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|MG,1,Weapon:213|AddSpeed:-45|AddRotSpeed:-30,Company_10213,500,0,-1,6,15,1,4,,,,,120,
 
-10524,#高射炮,10524,Weapon,#轻机枪M10的强化版本，增加射击精度和稳定性，但是降低了载弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ExploWeapon|MG,1,Weapon:524|AddSpeed:-30|AddRotSpeed:-25,Main_1,600,0,-2,6,12,3,6,,10224_2|2368_2|10042_2,10224|2368,,188,
+10524,#高射炮,10524,Weapon,#轻机枪M10的强化版本，增加射击精度和稳定性，但是降低了载弹量\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ExploWeapon|MG,1,Weapon:524|AddSpeed:-30|AddRotSpeed:-25,Company_10524,600,0,-2,6,12,3,6,,10224_2|2368_2|10042_2,10224|2368,,188,
 
 10024,#轻机枪,1024,Weapon,#装弹量较大的速射武器，但是装弹时间很长\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|MG,1,Weapon:24|AddSpeed:-30|AddRotSpeed:-30,Company_10324,60,25,1,3,6,1,2,10124|10013|10144,40008_3|40009_3|40012_4|40005_1,,,26,
 10124,#轻机枪M2,10124,Weapon,#轻机枪的强化版本，通过降低一定装弹量使得装弹时间得到提升\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|MG,1,Weapon:124|AddSpeed:-30|AddRotSpeed:-30,Company_10324,96,27,2,4,8,1,3,10224|10013|10144,,10024,,81,
@@ -361,8 +364,8 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 // --
 
-10227,#灯台守,10227,Weapon,#一种轻量化多功能射线武器\n普通攻击为散射激光，蓄力攻击为聚集射线，长时间蓄力会射出聚焦射线\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,Weapon:227|AddSpeed:-5|AddRotSpeed:-5,Main_5,125,18,-2,2,6,4,7,10230,10025_1|10127_1|10029_1,10025|10127|10029,,132,
-10228,#光线步枪,10228,Weapon,#可发射单次精确的光束，可以按住充电更长时间以发射更强的光束。可以进行二段蓄力以发射更强的光束。每段蓄力会消耗3发子弹。,LaserWeapon,1,Weapon:228|AddSpeed:-40|AddRotSpeed:-60,Main_2,180,18,-2,2,9,4,7,10217|10230|10244,10128_1|10027_1|10029_1,10128|10127|10129,,133,
+10227,#灯台守,10227,Weapon,#一种轻量化多功能射线武器\n普通攻击为散射激光，蓄力攻击为聚集射线，长时间蓄力会射出聚焦射线\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,Weapon:227|AddSpeed:-5|AddRotSpeed:-5,Company_10227,125,18,-2,2,6,4,7,10230,10025_1|10127_1|10029_1,10025|10127|10029,,132,
+10228,#光线步枪,10228,Weapon,#可发射单次精确的光束，可以按住充电更长时间以发射更强的光束。可以进行二段蓄力以发射更强的光束。每段蓄力会消耗3发子弹。,LaserWeapon,1,Weapon:228|AddSpeed:-40|AddRotSpeed:-60,Company_10228,180,18,-2,2,9,4,7,10217|10230|10244,10128_1|10027_1|10029_1,10128|10127|10129,,133,
 
 10027,#切割射线,1027,Weapon,#可以发射能持续对目标进行切割的射线的武器。攻击不高但是持久，可以无视护甲，但是面对常规敌人和护盾效果较弱\n（射线武器有概率造成非常短暂的高温伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:27|AddSpeed:-25|AddRotSpeed:-25,Company_10127,45,0,1,2,4,3,6,10127|10128|10029|10030|10044|10045,40008_4|40013_8|40005_1,,,29,
 10127,#切割射线M,10127,Weapon,#对切割射线进行了小幅度的全属性强化，略微降低了寿命\n（射线武器有概率造成非常短暂的高温伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:127|AddSpeed:-25|AddRotSpeed:-25,Company_10127,80,17,-1,2,6,3,7,10227|10228,,10027,,84,
@@ -379,7 +382,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10330,#阳电子炮,10330,Weapon,#在长距聚焦射线基础上改造的终极武器，前摇极其长，但可以释放出无比夸张的能量。\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:330|AddSpeed:-50|AddRotSpeed:-120,Company_10330,500,0,-1,4,18,5,9,10430|10530,,,,163,
 
 10430,#速子长矛,10430,Weapon,#阳电子炮的强化型号，当射中目标时会释放出强大的电弧风暴。\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:430|AddSpeed:-60|AddRotSpeed:-135,Company_10430,1100,0,-2,4,18,5,9,10630,10330_1|10333_1|40032_8,10330|10333,,179,
-10530,#炼狱射线,10530,Weapon,#射线武器的终极形态，解决了阳电子炮的冷却问题使得速射成为可能。\n增加了蓄力机关，可以消耗2发弹药射击出一发蓄力阳电子炮，具有穿透护盾的效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:530|AddSpeed:-75|AddRotSpeed:-150,Main_1,900,0,-2,10,21,5,10,,10330_1|10127_1|10128_1|10129_1|40032_2,10330,,189,
+10530,#炼狱射线,10530,Weapon,#射线武器的终极形态，解决了阳电子炮的冷却问题使得速射成为可能。\n增加了蓄力机关，可以消耗2发弹药射击出一发蓄力阳电子炮，具有穿透护盾的效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,LaserWeapon,1,Weapon:530|AddSpeed:-75|AddRotSpeed:-150,Company_218,900,0,-2,10,21,5,10,,10330_1|10127_1|10128_1|10129_1|40032_2,10330,,189,
 
 10630,#辉进炮ZM12A1+I54,10630,Weapon,#将射线武器和电弧武器的终极型号进行融合得到的产物\n能射出夸张的高能粒子流，而被粒子流击中的武器则会迸发出焚天电弧，留下滚滚烈焰\n重量非常的夸张\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,Weapon:630|AddSpeed:-90|AddRotSpeed:-160,Company_10530,2400,0,-2,10,21,5,10,,10430_1|10533_1|40032_10,10430|10530,,190,
 
@@ -474,7 +477,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10209,#穿甲步枪C6,10209,Weapon,#具有较高穿甲能力的制式步枪，将射击模式进行了更改，使得爆发能力更强\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:209|AddSpeed:-10|AddRotSpeed:-10,Company_10109,200,0,-1,5,10,3,6,10217,,,,117,
 
 10035,#治疗枪,10035,Weapon,#能够发射治疗光束的武器（ai也能使用）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon|CantGen,1,Weapon:35|AddSpeed:-25|AddRotSpeed:-25,TankType_PlayerName_1,45,14,-2,2,5,0,0,,,10035,,37,
-10047,#传送枪,10047,Weapon,#,TechWeapon,1,Weapon:47|AddSpeed:-5|AddRotSpeed:-5,TankType_PlayerName_3,50,999,-2,0,0,0,0,,,,,49,
+10047,#传送枪,10047,Weapon,#,TechWeapon,1,Weapon:47|AddSpeed:-5|AddRotSpeed:-5,Company_10047,50,999,-2,0,0,0,0,,,,,49,
 10041,#防爆盾,10141,Weapon,#使用射击操作举起，举起后可以遮住身前绝大部分的区域，但是同时也无法进行攻击了,RiotShiled,1,Weapon:41|AddSpeed:-30|AddRotSpeed:-45,Company_10041,40,45,-2,0,0,0,0,,40005_1|40006_1|40024_5|40025_6,,,43,
 
 // --
@@ -482,7 +485,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10050,#动力拳套,1050,CloseWeapon,#没什么杀伤力，但是可以击退敌人\n【连段攻击】数次轻击后进行一次范围较大的重击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|FistWeapon|SingleHand,1,Weapon:50|AddSpeed:-1|AddRotSpeed:-1,MainAct,10,0,-2,3,4,2,3,10051,,,,194,
 10051,#高能拳套,1051,CloseWeapon,#击退力量和范围都更大的拳套，牺牲了重量\n【连段攻击】数次轻击后砸击地面，对敌人造成强制短暂眩晕\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|FistWeapon|SingleHand,1,Weapon:51|AddSpeed:-10|AddRotSpeed:-10,MainAct,30,0,1,2,4,2,4,10151,40030_2|40008_2|40002_2,,,195,
 10151,#超高能拳套,10151,CloseWeapon,#对高能拳套进行了强化，力量攻击力攻击范围及耐久都得到了强化\n【连段攻击】数次轻击后猛烈砸击地面，对敌人造成强制眩晕\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|FistWeapon|SingleHand,1,Weapon:151|AddSpeed:-16|AddRotSpeed:-16,MainAct,60,0,-1,3,7,3,6,10251,,10051,,219,
-10251,#SWK拳套,10251,CloseWeapon,#对高能拳套进行进一步强化，普通攻击将带有潮湿效果\n【连段攻击】数次轻击后猛烈砸击地面，对敌人造成强制眩晕，兵附加寒冷效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|FistWeapon|SingleHand,1,Weapon:251|AddSpeed:-32|AddRotSpeed:-32,Main_3,200,0,-2,4,9,3,7,,10151_2|40032_2|40016_10,10151,,242,
+10251,#SWK拳套,10251,CloseWeapon,#对高能拳套进行进一步强化，普通攻击将带有潮湿效果\n【连段攻击】数次轻击后猛烈砸击地面，对敌人造成强制眩晕，兵附加寒冷效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|FistWeapon|SingleHand,1,Weapon:251|AddSpeed:-32|AddRotSpeed:-32,Company_10251,200,0,-2,4,9,3,7,,10151_2|40032_2|40016_10,10151,,242,
 
 // --
 
@@ -516,14 +519,14 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10055,#高能电光斧,1055,CloseWeapon,#可以进行大范围斩击的武器，力量伤害及范围都很高\n【连段攻击】最后一段斩击可以释放强力剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:55|AddSpeed:-32|AddRotSpeed:-32,Company_10155,120,60,1,4,8,2,4,10155,10054_1|40029_2|40008_1|40002_2|40032_1,10054|10055|10154|10155,,199,
 10155,#高能电光斧M,10155,CloseWeapon,#对高能电光斧进行了强化\n【连段攻击】普通攻击和连段攻击均可以释放剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:155|AddSpeed:-36|AddRotSpeed:-36,Company_10155,300,18,-1,4,10,4,6,10255,,10055,,223,
 
-10255,#帝国正式采用电光斧,10255,CloseWeapon,#对高能电光斧M进行了强化，攻击将自带火焰伤害\n【连段攻击】将会对敌军造成装甲融化的效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:255|AddSpeed:-45|AddRotSpeed:-45,Main_3,400,0,-2,6,13,4,7,,10155_1|10154_1|40032_2,10155|10154,,243,
+10255,#帝国正式采用电光斧,10255,CloseWeapon,#对高能电光斧M进行了强化，攻击将自带火焰伤害\n【连段攻击】将会对敌军造成装甲融化的效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:255|AddSpeed:-45|AddRotSpeed:-45,Company_10255,400,0,-2,6,13,4,7,,10155_1|10154_1|40032_2,10155|10154,,243,
 
 // --
 
 10065,#电子匕首,1065,CloseWeapon,#,MeeleeWeapon|Dagger|SingleHand,1,Weapon:65|AddSpeed:-5|AddRotSpeed:-5,Company_100,50,0,1,2,4,0,0,10165,,10065,,205,
 10165,#高能电子匕首,10165,CloseWeapon,#,MeeleeWeapon|Dagger|SingleHand,1,Weapon:165|AddSpeed:-5|AddRotSpeed:-5,Company_100,160,0,-1,3,6,0,0,,,10065,,228,
 
-10265,#割喉电子匕首,10165,CloseWeapon,#可以进行暗杀操作的武器，能攻击几乎所有类型的敌人\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|Dagger|SingleHand|Tanktype1,1,Weapon:265|AddSpeed:-5|AddRotSpeed:-5,Company_100,200,0,-2,3,6,1,1,,,,,244,
+10265,#割喉电子匕首,10165,CloseWeapon,#可以进行暗杀操作的武器，能攻击几乎所有类型的敌人\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|Dagger|SingleHand|Tanktype1,1,Weapon:265|AddSpeed:-5|AddRotSpeed:-5,MainAct,200,0,-2,3,6,1,1,,,,,244,
 
 10063,#尖锐盾,1063,CloseWeapon,#装备后可以遮住身前较小部分的区域，射击操作为进行盾反。若对敌人近战盾反成功，可以对敌人造成眩晕效果\n机体速度<Description:1>%，转向速度<Description:2>%\n,RiotShiled|SingleHand,1,Weapon:63|AddSpeed:-15|AddRotSpeed:-25,Main_3,40,40,-2,2,6,0,0,,40005_1|40006_1|40024_5|40025_6,,,204,
 
@@ -559,29 +562,29 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 // --
 
-10075,#小镰刀,1075,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:75|AddSpeed:-12|AddRotSpeed:-24,MainAct,60,0,1,2,6,2,4,10175|10275|10074|10076,10059_1|40032_1,10066_10076,,216,
-10175,#强化小镰刀,1175,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:175|AddSpeed:-12|AddRotSpeed:-24,MainAct,120,0,-2,2,7,3,5,,,,,239,
-10275,#试做小镰刀,1275,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:275|AddSpeed:-12|AddRotSpeed:-24,MainAct,180,0,-2,2,8,3,5,,,,,255,
+10075,#小镰刀,1075,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:75|AddSpeed:-12|AddRotSpeed:-24,Company_10075,60,0,1,2,6,2,4,10175|10275|10074|10076,10059_1|40032_1,10066_10076,,216,
+10175,#强化小镰刀,1175,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:175|AddSpeed:-12|AddRotSpeed:-24,Company_10075,120,0,-2,2,7,3,5,,,,,239,
+10275,#试做小镰刀,1275,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:275|AddSpeed:-12|AddRotSpeed:-24,Company_10075,180,0,-2,2,8,3,5,,,,,255,
 
-10072,#镰刀,1072,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:72|AddSpeed:-45|AddRotSpeed:-25,MainAct,150,0,1,2,8,2,2,10172|10272|10071|10067,10055_1|40032_1,10066_10076,,213,
-10172,#强化型镰刀,1172,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:172|AddSpeed:-45|AddRotSpeed:-25,MainAct,300,0,-2,2,11,3,3,,,,,236,
-10272,#试做型镰刀,1272,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:272|AddSpeed:-45|AddRotSpeed:-25,MainAct,280,0,-2,2,11,3,3,,,,,252,
+10072,#镰刀,1072,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:72|AddSpeed:-45|AddRotSpeed:-25,Company_10072,150,0,1,2,8,2,2,10172|10272|10071|10067,10055_1|40032_1,10066_10076,,213,
+10172,#强化型镰刀,1172,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:172|AddSpeed:-45|AddRotSpeed:-25,Company_10072,300,0,-2,2,11,3,3,,,,,236,
+10272,#试做型镰刀,1272,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:272|AddSpeed:-45|AddRotSpeed:-25,Company_10072,280,0,-2,2,11,3,3,,,,,252,
 
 // --
 
-10073,#钉枪,1073,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:73|AddSpeed:-25|AddRotSpeed:-36,MainAct,100,0,1,2,8,3,4,10173|10273|10074|10070|10076,10156_2|40032_2,10066_10076,,214,
+10073,#钉枪,1073,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:73|AddSpeed:-25|AddRotSpeed:-36,Company_10073,100,0,1,2,8,3,4,10173|10273|10074|10070|10076,10156_2|40032_2,10066_10076,,214,
 10173,#强化型钉枪,1173,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:173|AddSpeed:-25|AddRotSpeed:-36,MainAct,300,0,-2,2,11,4,5,,,,,237,
 10273,#试做型钉枪,1273,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:273|AddSpeed:-25|AddRotSpeed:-36,MainAct,250,0,-2,2,10,4,5,,,,,253,
 
-10074,#鱼叉,1074,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:74|AddSpeed:-15|AddRotSpeed:-25,MainAct,60,0,1,2,7,3,5,10174|10274|10073|10075,10059_1|40032_1,10066_10076,,215,
-10174,#强化型鱼叉,1174,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:174|AddSpeed:-15|AddRotSpeed:-25,MainAct,120,0,-2,2,8,4,6,,,,,238,
-10274,#试做型鱼叉,1274,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:274|AddSpeed:-15|AddRotSpeed:-25,MainAct,180,0,-2,2,9,4,6,,,,,254,
+10074,#鱼叉,1074,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:74|AddSpeed:-15|AddRotSpeed:-25,Company_10074,60,0,1,2,7,3,5,10174|10274|10073|10075,10059_1|40032_1,10066_10076,,215,
+10174,#强化型鱼叉,1174,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:174|AddSpeed:-15|AddRotSpeed:-25,Company_10074,120,0,-2,2,8,4,6,,,,,238,
+10274,#试做型鱼叉,1274,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:274|AddSpeed:-15|AddRotSpeed:-25,Company_10074,180,0,-2,2,9,4,6,,,,,254,
 
 // --
 
-10076,#刺拳,1076,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:76|AddSpeedLimit:20|AddRotSpeedLimit:20,MainAct,60,0,1,2,5,2,3,10176|10276|10074|10075,10059_1|40032_1,10066_10076,,217,
-10176,#强化刺拳,1176,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:176|AddSpeedLimit:25|AddRotSpeedLimit:25,MainAct,120,0,-2,2,7,3,4,,,,,240,
-10276,#试做刺拳,1276,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:276|AddSpeedLimit:25|AddRotSpeedLimit:25,MainAct,180,0,-2,2,6,3,4,,,,,256,
+10076,#刺拳,1076,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:76|AddSpeedLimit:20|AddRotSpeedLimit:20,Company_10076,60,0,1,2,5,2,3,10176|10276|10074|10075,10059_1|40032_1,10066_10076,,217,
+10176,#强化刺拳,1176,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:176|AddSpeedLimit:25|AddRotSpeedLimit:25,Company_10076,120,0,-2,2,7,3,4,,,,,240,
+10276,#试做刺拳,1276,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:276|AddSpeedLimit:25|AddRotSpeedLimit:25,Company_10076,180,0,-2,2,6,3,4,,,,,256,
 
 // --
 
@@ -600,8 +603,8 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1258,#肩扛式防空炮,1258,HangShoulder,#在肩部挂载一台防空炮，可以发射火箭弹，火箭弹对空能力极强，会优先攻击飞行单位，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket5=20|Time:20|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_40_8_1000,Main_2,35,$AirOpenDay,-2,4,6,1,2,,40008_2|40009_1|40011_3|40010_2,1250|1251|1258|1259,,322,
 1259,#肩扛式重型防空炮,1259,HangShoulder,#在肩部挂载一台重型防空炮，可以发射火箭弹，适合用来压制远处集群，会优先攻击飞行单位冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket6=28|Time:30|AddSpeed:-18|AddRotSpeed:-18|AiShoulderLogic:Normal_40_10_1500,Main_2,100,55,-2,6,8,1,2,,,1250|1251|1258|1259,,323,
 
-1260,#肩扛切割射线,1260,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay=50|Time:55|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_15_3_1200,Main_2,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,324,
-1261,#肩扛切割射线,1261,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay2=72|Time:72|AddSpeed:-25|AddRotSpeed:-25|AiShoulderLogic:Normal_15_3_1200,Main_2,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,325,
+1260,#肩扛切割射线,1260,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay=50|Time:55|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_15_3_1200,Company_1260,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,324,
+1261,#肩扛切割射线,1261,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay2=72|Time:72|AddSpeed:-25|AddRotSpeed:-25|AiShoulderLogic:Normal_15_3_1200,Company_1260,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,325,
 
 1262,#强袭型双向飞弹,1262,HangShoulder,#在肩部挂载一台火箭炮，可以发射双联装火箭弹，这种火箭弹冷却非常快，可以持续压制敌人，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon,1,ArmorStrategy:ShoulderRocket7=20|Time:20|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_20_4_1200,Company_1262,70,39,-2,6,8,1,2,,40008_4|40009_2|40011_6|40010_4,1250|1251,,326,
 1263,#弹道导弹,1263,HangShoulder,#在肩部挂载一台火箭炮，可以发射弹道破甲导弹，无视地形攻击目标点，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,BallistiWeapon,1,ArmorStrategy:ShoulderBallisticMissile=50|Time:50|AddSpeed:-15|AddRotSpeed:-15|AiShoulderLogic:Normal_20_4_1200|ShoulderAirStrike:AirStrikeSnipeMelt,Company_1262,45,39,-2,3,5,0,0,,40008_4|40009_3|40011_3|40010_2,1250|1251,,326,
@@ -666,9 +669,9 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2040,#冰冻模块+,2040,WeaponModel,#附加冰冻伤害概率+<Description>%\n（冷冻时间与子弹伤害相关）（被冷冻单位会变慢且抵抗概率减半）\n,NormalWeapon,1,AddFreeze:15,Main2_5,60,30,2,0,0,0,0,,,2039_2041,,391,
 2041,#冰冻模块++,2041,WeaponModel,#附加冰冻伤害概率+<Description>%\n（冷冻时间与子弹伤害相关）（被冷冻单位会变慢且抵抗概率减半）\n,NormalWeapon,1,AddFreeze:25,Main2_5,120,60,-1,0,0,0,0,,,2039_2041,,392,
 
-2106,#暴击分裂模块,2106,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon|FlakeWeapon|ExploWeapon,1,CriticSeparatePoss:2,Main2_11,20,18,1,0,0,0,0,,40001_1|40003_1|40004_2|40020_2,2106_2109|2096|2066|2070,,427,
-2107,#暴击分裂模块+,2107,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon|FlakeWeapon|ExploWeapon,1,CriticSeparatePoss:3,Main2_11,50,18,2,0,0,0,0,,,2106_2109,,428,
-2108,#暴击分裂模块++,2108,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon|FlakeWeapon|ExploWeapon,1,CriticSeparatePoss:4,Main2_11,160,18,-1,0,0,0,0,,,2106_2109,,429,
+2106,#暴击分裂模块,2106,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon,1,CriticSeparatePoss:2,Main2_11,20,18,1,0,0,0,0,,40001_1|40003_1|40004_2|40020_2,2106_2109|2096|2066|2070,,427,
+2107,#暴击分裂模块+,2107,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon,1,CriticSeparatePoss:3,Main2_11,50,18,2,0,0,0,0,,,2106_2109,,428,
+2108,#暴击分裂模块++,2108,WeaponModel,#若成功暴击则额外分裂出<Description>颗子弹\n,NormalWeapon,1,CriticSeparatePoss:4,Main2_11,160,18,-1,0,0,0,0,,,2106_2109,,429,
 2109,#暴击爆炸模块,2109,WeaponModel,#若成功暴击则子弹爆炸\n\n（仅对暴击后最终伤害大于500的子弹有效）,NormalWeapon,1,CriticExploPoss:1,Main2_3,50,18,-2,0,0,0,0,,40001_3|40003_2|40004_5|40010_5,2092|2066|2070,,430,
 
 2066,#暴击模块,2066,WeaponModel,#暴击率+<Description>\n,NormalWeapon|FlakeWeapon|ExploWeapon,1,CriticPossibility:4,Main2_2,10,0,1,0,0,0,0,,40001_1|40003_1|40004_2,10004|10005|10015|10104|10105|10115|10204|10205|10215|10304|10315|10415,,393,
@@ -1668,7 +1671,7 @@ let csv07 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 221,#机载音响,221,Remodel,#前往外围阵地路程中增加脑负荷减半,CantGen,1,AddMechaEffect:6,Main2_5,60,-1,-2,0,0,0,0,,,,,1235,
 
 217,#武器扩展槽A,217,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:1,Main2_3,80,-1,-2,0,0,0,0,,40006_5|40007_10|40005_2|40032_1,,,1231,
-218,#武器扩展槽B,218,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:2,Main2_3,150,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_2|40008_3,217|218,,1232,
+218,#武器扩展槽B,218,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:2,Company_218,150,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_2|40008_3,217|218,,1280,
 
 226,#快速供弹匣,226,Remodel,#换弹时间<Description:0>%，老化概率+<Description:1>%,,1,AddWeaponReload:-10|AddBrokePos:40,Main2_5,80,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_1|40008_5,,,1240,
 227,#膛压过载器,227,Remodel,#武器开火间隔<Description:0>%，老化概率+<Description:1>%,,1,AddFireRate:-15|AddBrokePos:40,Main2_5,80,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_1|40008_5,,,1241,
@@ -1779,7 +1782,7 @@ let csv09 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 73,#现代艺术集（初版）,73,Book,#艺术画集，充满了大量新潮抽象艺术，很多东西你感觉完全看不懂【警告：禁书】,Danger,99,ChangeThought:2_0_2_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1133,
 77,#帝国全史（第15版）,77,Book,#描写帝国辉煌历史的书籍，不过里面有疑似先代王篡位的内容因此被列为了禁书。说真的，谁当皇帝和你有关系吗【警告：禁书】,Danger,99,ChangeThought:1_2_1_0|ChangePressureByReason,Book_2,12,-1,1,0,0,0,0,,,,,1137,
 
-66,#所见所闻,66,Book,#一位记者的传记，讲述了记者所见闻的帝国偏远地区的艰苦生活【警告：禁书】,Danger,99,ChangeThought:1_1_2_1|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1126,
+66,#所见所闻,66,Book,#一位记者的传记，讲述了记者所见闻的帝国偏远地区的艰苦生活【警告：禁书】,Danger,99,ChangeThought:1_1_2_1|ChangePressureByReason,Company_66,12,-1,1,0,0,0,0,,,,,1174,
 67,#娱乐至死,67,Book,#一本描述了享乐主义是如何毁掉一个人，娱乐至死主义是如何毁掉一个时代的书籍【警告：禁书】,Danger,99,ChangeThought:1_2_1_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1127,
 65,#最终审判日,65,Book,#一本宣扬末世到来的书，非常危言耸听，虽然其中描写的很多现象都是真实存在的【警告：禁书】,Danger,99,ChangeThought:1_-2_2_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1125,
 71,#批判性思维,71,Book,#一本哲学书籍，宣扬批判精神，鼓励人们去怀疑去思考【警告：禁书】,Danger,99,ChangeThought:2_2_0_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1131,
@@ -1812,7 +1815,7 @@ let csv09 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // 忠诚好感
 let csv10 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-18,#可乐,18,Present,#谁又能拒绝快乐水呢，虽然他真的没什么热量\n成员脑负荷<Description>,,99,DownPressure:-1,Sub_8,15,26,1,0,0,0,0,,,,,1081,
+18,#可乐,18,Present,#谁又能拒绝快乐水呢，虽然他真的没什么热量\n成员脑负荷<Description>,,99,DownPressure:-1,Company_18,15,26,1,0,0,0,0,,,,,1129,
 7,#咖啡,7,Present,#不知道从哪里搞到的咖啡豆磨成的粉，味道不算好，但是不招人讨厌\n成员脑负荷<Description>,,99,DownPressure:-36,Company_7,36,31,1,0,0,0,0,,,,,1070,
 
 15,#干粮,15,Present,#合成有机营养块，他可能不好吃也不健康，但是真的很便宜\n成员脑负荷<Description>,,99,DownPressure:-7,Company_15,5,10,1,0,0,0,0,,,,,1078,
@@ -1822,7 +1825,7 @@ let csv10 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 20,#压缩饼干,20,Present,#量大管饱，有咸味所以也不是特别难吃,,99,DownPressure:-25,Sub_8,25,11,1,0,0,0,0,,,,,1083,
 
 1,#玩偶,1,Present,#用战场上的弹片拼成的玩具，有童心的人一定会喜欢的\n成员脑负荷<Description>,Pres1,99,DownPressure:-12,Company_1,12,15,1,0,0,0,0,,,,,1064,
-2,#甜品,2,Present,#虽然是从煤焦油里提炼的甜味剂，吃多了可能会致癌，但是他是甜的！深受年轻人喜爱\n成员脑负荷<Description>,Pres1,99,DownPressure:-36,Sub_8,36,21,1,0,0,0,0,,,,,1065,
+2,#甜品,2,Present,#虽然是从煤焦油里提炼的甜味剂，吃多了可能会致癌，但是他是甜的！深受年轻人喜爱\n成员脑负荷<Description>,Pres1,99,DownPressure:-36,Company_18,36,21,1,0,0,0,0,,,,,1113,
 
 8,#时尚杂志,8,Present,#描绘上流人奢靡生活的杂志。不过听说真正的上流生活可比这个劲大多了\n成员脑负荷<Description>,Pres2|Pres3,99,DownPressure:-12,Sub_2,12,18,1,0,0,0,0,,,,,1071,
 9,#漂亮衣服,9,Present,#应该是百货商场被轰炸后被人找到的，毕竟军队可已经生产不了新衣服了\n成员脑负荷<Description>,Pres2,99,DownPressure:-20,Sub_2,20,21,1,0,0,0,0,,,,,1072,
@@ -5306,6 +5309,31 @@ let textList = {
 	Company_10510			: `铁骑第三技术研究中心`			+ ` # 铁骑第三技术研究中心,鐵騎第三技術研究中心,Cavalry the 3rd Research,鉄騎第03技研`,
 	Company_10530			: `嘉登星流实验室`					+ ` # 嘉登星流实验室,嘉登星流實驗室,Imperial Nova Forge,a.k.a Dealight`,
 	Company_10533			: `世界蛇工业`						+ ` # 世界蛇工业,世界蛇工業,Seraph 30-G， Doro Division,世界の蛇産業`,
+	
+	Company_10046			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10047			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10072			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10073			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10074			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10075			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10076			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10217			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10227			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10228			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10251			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10255			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10282			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10319			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10416			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10421			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10422			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10500			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10515			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_10524			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_1260			: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_18				: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_66				: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
+	Company_218				: `Unknow(已被使用)`				+ ` # Unknow(已被使用),Unknow(已被使用),Unknow(Used),Unknow(使用済み)`,
 	
 	},
 	
