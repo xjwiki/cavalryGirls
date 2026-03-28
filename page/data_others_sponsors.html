@@ -312,7 +312,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 10007,#加农炮,1007,Weapon,#射击炮弹的武器，小心误伤到自己\n较重，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:7|AddSpeed:-20|AddRotSpeed:-40,Company_10007,48,0,1,4,8,1,3,10107|10008|10142|10081|10082,40008_5|40010_5|40005_1,,,10,
 10107,#加农炮W1,10107,Weapon,#对加农炮进行了强化，通过降低射速进行了较大幅度减重\n机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon,1,Weapon:107|AddSpeed:-15|AddRotSpeed:-35,Company_10007,120,25,-1,5,10,3,6,10108|10146|10507,,10007,,65,
-10008,#榴散炮,1008,Weapon,#射击大量炮弹的武器，非常容易误伤到自己。装填时间极长\n极重，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:8|AddSpeed:-35|AddRotSpeed:-65,Main_5,70,0,1,4,8,1,3,10107|10108|10146,40008_4|40009_2|40011_5|40010_4,,,11,
+10008,#榴散炮,1008,Weapon,#射击大量炮弹的武器，非常容易误伤到自己。装填时间极长\n极重，机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:8|AddSpeed:-35|AddRotSpeed:-65,Company_10008,70,0,1,4,8,1,3,10107|10108|10146,40008_4|40009_2|40011_5|40010_4,,,11,
 10108,#榴散炮B1,10108,Weapon,#对榴散炮进行的强化型号，通过减少了发射数量增加了弹容量\n机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:108|AddSpeed:-40|AddRotSpeed:-60,Main_2,200,25,-1,5,10,3,6,10507,,10008,,66,
 10507,#磁轨炮,10507,Weapon,#口径即是正义，超大装药量的云爆弹只能强大的依靠电磁感应才能射出，单发即有着惊人的破坏力。\n机体速度<Description:1>%，转向速度<Description:2>%\n,ExploWeapon|ShotWeapon,1,Weapon:507|AddSpeed:-80|AddRotSpeed:-135,Company_10507,900,0,-2,7,15,4,8,,10107_2|10108_2|40032_2,10107|10108,,185,
 
@@ -644,7 +644,7 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2023,#高级尖头弹,2023,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:10|TempaBulletRange:1,Main2_2,40,31,3,0,0,0,0,,,2021_2024,,374,
 2024,#制式尖头弹,2024,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:12|TempaBulletRange:2,Main2_2,80,62,-1,0,0,0,0,,,2021_2024,,375,
 
-2025,#杀伤模块,2025,WeaponModel,#子弹伤害+<Description>%\n,NormalWeapon,1,Damage:10,Main2_11,25,0,1,0,0,0,0,,40001_5|40003_2|40007_3|40004_2|40005_3,,,376,
+2025,#杀伤模块,2025,WeaponModel,#子弹伤害+<Description>%\n,NormalWeapon,1,Damage:10,Company_2025,25,0,1,0,0,0,0,,40001_5|40003_2|40007_3|40004_2|40005_3,,,376,
 2026,#杀伤模块+,2026,WeaponModel,#子弹伤害+<Description:0>%\n对护盾伤害<Description:1>%\n,NormalWeapon,1,Damage:25|ShiledDamage:-25,Main2_11,50,11,2,0,0,0,0,,,2025_2028,,377,
 2027,#高级杀伤模块,2027,WeaponModel,#子弹伤害+<Description:0>%\n对护盾伤害<Description:1>%\n,NormalWeapon,1,Damage:40|ShiledDamage:-35,Main2_11,100,31,3,0,0,0,0,,,2025_2028,,378,
 2028,#制式杀伤模块,2028,WeaponModel,#子弹伤害+<Description:0>%\n对护盾伤害<Description:1>%\n,NormalWeapon,1,Damage:60|ShiledDamage:-50,Main2_11,200,62,-1,0,0,0,0,,,2025_2028,,379,
@@ -742,7 +742,7 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 2259,#线圈模块,2259,WeaponModel,#电弧弹射次数+<Description>（仅对电弧武器有效）,ElectricWeapon,1,AddLightningMaxHit:1,Main2_7,50,17,1,0,0,0,0,,40026_2|40019_3|40018_3,10031_10035|10131_10134,,467,
 2260,#线圈模块+,2260,WeaponModel,#电弧弹射次数+<Description>（仅对电弧武器有效）,ElectricWeapon,1,AddLightningMaxHit:2,Main2_7,100,35,2,0,0,0,0,,,10031_10035|10131_10134,,468,
-2261,#线圈模块++,2261,WeaponModel,#电弧弹射次数+<Description>（仅对电弧武器有效）,ElectricWeapon,1,AddLightningMaxHit:3,Main2_7,150,55,-1,0,0,0,0,,,10031_10035|10131_10134,,469,
+2261,#线圈模块++,2261,WeaponModel,#电弧弹射次数+<Description>（仅对电弧武器有效）,ElectricWeapon,1,AddLightningMaxHit:3,Company_218,150,55,-1,0,0,0,0,,,10031_10035|10131_10134,,469,
 
 2265,#战术刺刀,2265,WeaponModel,#准心位于最小射程内时，攻击改为近战（该技能有<Description>s冷却，模块效果不叠加）\n（仅能装备在导轨武器）,Rail,1,ShootSword:5,Main2_10,30,0,1,0,0,0,0,,40029_2|40030_2|40008_1,,,473,
 2266,#战术刺刀+,2266,WeaponModel,#准心位于最小射程内时，攻击改为近战（该技能有<Description>s冷却，模块效果不叠加）\n（仅能装备在导轨武器）,Rail,1,ShootSword:3.5,Main2_10,60,25,2,0,0,0,0,,,,,474,
@@ -871,7 +871,7 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2380,#高爆对空模块3,2380,WeaponModel,#炮弹爆炸对空+<Desription>%,ExploWeapon|AntiAir,1,AddExplodeAntiAir:240,Main2_2,50,80,-1,0,0,0,0,,,10007|10008|10026|10107|10108|10126|10081|10082|10081|10082|10181|10182,,554,
 
 2376,#电弧衰减补正模块,2376,WeaponModel,#电弧弹射后攻击衰减<Desription>,ElectricWeapon,1,AddFadeMinus:-60,Main2_7,65,30,1,0,0,0,0,,40013_1|40001_1|40002_1|40017_5|40006_3,10031_10035|10131_10134,,550,
-2377,#电弧衰减补正模块+,2377,WeaponModel,#电弧弹射后攻击衰减<Desription>,ElectricWeapon,1,AddFadeMinus:-100,Main2_7,120,50,-1,0,0,0,0,,,10031_10035|10131_10134,,551,
+2377,#电弧衰减补正模块+,2377,WeaponModel,#电弧弹射后攻击衰减<Desription>,ElectricWeapon,1,AddFadeMinus:-100,Company_218,120,50,-1,0,0,0,0,,,10031_10035|10131_10134,,551,
 
 2374,#射线衰减补正模块,2374,WeaponModel,#射线穿透后攻击衰减<Desription>,LaserWeapon,1,AddFadeMinus:-50,Main2_7,50,30,1,0,0,0,0,,40013_5|40014_4|40026_1,10027_10030|10127_10130,,548,
 2375,#射线衰减补正模块+,2375,WeaponModel,#射线穿透后攻击衰减<Desription>,LaserWeapon,1,AddFadeMinus:-100,Main2_7,90,50,-1,0,0,0,0,,,10027_10030|10127_10130,,549,
@@ -1637,11 +1637,11 @@ let csv06 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1225,#抗震头盔,1225,Hang,#机体被眩晕时间-<Description>%,Head,1,StunResist:33,Main2_3,50,40,1,0,0,0,0,,40001_10|40002_10|40006_10,2146_2150|1224_1226,,301,
 1226,#坚固抗震头盔,1226,Hang,#机体被眩晕时间-<Description>%,Head,1,StunResist:66,Main2_3,90,70,-1,0,0,0,0,,,1225,,302,
 
-1224,#防暴头盔,1224,Hang,#机体被击中时不会产生暴击,Head,1,CriticImmune,Main2_3,20,35,-2,0,0,0,0,,40001_2|40002_6|40006_4,2146_2150|1224_1226,,300,
+1224,#防暴头盔,1224,Hang,#机体被击中时不会产生暴击,Head,1,CriticImmune,Company_1224,20,35,-2,0,0,0,0,,40001_2|40002_6|40006_4,2146_2150|1224_1226,,308,
 
 1228,#辅助瞄准镜,1228,Hang,#机体武器偏移度<Description>%,Head,1,UpStableMech:-12,Main2_3,20,25,-2,0,0,0,0,,40001_5|40002_2|40007_2|40005_2,2005_2008|2250_2252,,304,
 
-1227,#战术夜视仪,1227,Hang,#夜晚会常开夜视仪,Head,1,NightVisionAlwaysOn,Main2_3,160,70,-2,0,0,0,0,,40006_12|40007_12|40005_5|40032_3,1221|1222,,303,
+1227,#战术夜视仪,1227,Hang,#夜晚会常开夜视仪,Head,1,NightVisionAlwaysOn,Company_1227,160,70,-2,0,0,0,0,,40006_12|40007_12|40005_5|40032_3,1221|1222,,311,
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) })
 .map(function(e){ if(e !== 'blankRow'){ e.push('07_mecha_hang') }; return e; });
@@ -1865,7 +1865,7 @@ let csv10 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 41,#帅气军装,41,Present,#一件非常修身的帅气衣服，设计目的是激发年轻人的参军欲望,Pres0|Pres2|Pres4,99,DownPressure:-15,Company_9,20,28,1,0,0,0,0,,,,,1147,
 42,#士兵杂志,42,Present,#军队内的月刊，曾经主要描写基层士兵的日常，现在主要描写长官的荣誉故事。,Pres0|Pres3,99,DownPressure:-20,Book_1,20,25,1,0,0,0,0,,,,,1100,
-40,#玩具枪,40,Present,#一把做工粗糙的玩具枪，很难会被误认为真枪。,Pres0|Pres1,99,DownPressure:-12,Sub_3,12,21,1,0,0,0,0,,,,,1098,
+40,#玩具枪,40,Present,#一把做工粗糙的玩具枪，很难会被误认为真枪。,Pres0|Pres1,99,DownPressure:-12,Company_40,12,21,1,0,0,0,0,,,,,1146,
 43,#生锈军功章,43,Present,#一个已经生锈的军功章，上面似乎写了不认识的人的名字。,Pres0|Pres4,99,AddPoint:1,Sub_4,20,27,1,0,0,0,0,,,,,1101,
 
 46,#玩具兵,46,Present,#一个兵人模型，可以用来玩战争游戏。,Pres1|Pres4,99,DownPressure:-12,Sub_3,12,22,1,0,0,0,0,,,,,1104,
@@ -2127,7 +2127,7 @@ let csv15 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 4044,#窗户,4044,Furniture,#能看到外面的世界\n舒适度<Description>,,1,AddComfort:12,Sub_7,80,42,-2,0,0,0,0,,40201_40|40202_4,,,1206,
 4045,#窗户,4045,Furniture,#能看到外面的世界\n舒适度<Description>,,1,AddComfort:12,Sub_7,80,44,-2,0,0,0,0,,40201_40|40202_4,,,1207,
-4025,#落地大窗,4025,Furniture,#巨大的落地窗，风景非常好\n舒适度<Description>,,1,AddComfort:20,Sub_5,200,50,-2,0,0,0,0,,40202_16|40201_40,,,1187,
+4025,#落地大窗,4025,Furniture,#巨大的落地窗，风景非常好\n舒适度<Description>,,1,AddComfort:20,Company_4025,200,50,-2,0,0,0,0,,40202_16|40201_40,,,1235,
 
 4009,#固定炮台,4009,Furniture,#从战场上缴获的武器，很帅气\n舒适度<Description>,,1,AddComfort:4,Sub_8,14,$RoomOpenDay,-2,0,0,0,0,,40201_14,,,1171,
 4038,#战术电台,4038,Furniture,#之前还能用来听音乐，现在只有杂音了\n舒适度<Description>,,1,AddComfort:12,Sub_7,80,64,-2,0,0,0,0,,40202_8,,,1200,
@@ -5188,7 +5188,7 @@ let textList = {
 	Company_7				: `虚空食品有限公司`				+ ` # 虚空食品有限公司,虛空食品有限公司,Void Food Co. Ltd,虚空食品有限公司`,
 	Company_9				: `月千时尚工坊`					+ ` # 月千时尚工坊,月千時尚工坊,Tsukisen Atelier,月千アトリエ`,
 	
-	Company_11				: `Sauce heart年代`					+ ` # Sauce heart年代,Sauce heart年代,The Sauce Heart Era,Sauce heart年代`,
+	Company_11				: `Sauce heart 年代`				+ ` # Sauce heart年代,Sauce heart年代,The Sauce Heart Era,Sauce heart年代`,
 	Company_14				: `大王GG宣传部`					+ ` # 大王GG宣传部,大王GG宣傳部,GG Publicity Department,GG広報部`,
 	Company_15				: `蕨菜研究中心`					+ ` # 蕨菜研究中心,蕨菜研究中心,Fern Research Center,シズ餅技研`,
 	Company_16				: `MOCHIMOCHI.Inc`					+ ` # MOCHIMOCHI.Inc,MOCHIMOCHI.Inc,MOCHIMOCHI.Inc,MOCHIMOCHI.Inc`,
@@ -5196,6 +5196,7 @@ let textList = {
 	Company_18				: `月千点心屋`						+ ` # 月千点心屋,月千點心屋,June cake shop,月千菓子屋`,
 	Company_19				: `欧罗巴海之星罐头食品工厂`		+ ` # 欧罗巴海之星罐头食品工厂,歐羅巴海之星罐頭食品工廠,Europa Sea Star Canned Food Factory,エウロパ海の星缶詰食品工場`,
 	Company_30				: `乌拉索夫商会`					+ ` # 乌拉索夫商会,烏拉索夫商會,Urasov Corporation,ウラソフ商会`,
+	Company_40				: `黄河制造厂`						+ ` # 黄河制造厂,黃河製造廠,Yellow River Mfg,黄河製作所`,
 	Company_50				: `熔铁之礼物`						+ ` # 熔铁之礼物,熔鐵之禮物,Sentinel Girls' Gift,センティネルガールズギフト`,
 	Company_66				: `月见·八千代`						+ ` # 月见·八千代,月見·八千代,Tsukimi Yachiyo,月見・八千代`,
 	
@@ -5215,6 +5216,8 @@ let textList = {
 	Company_1205			: `巴尔德科技`						+ ` # 巴尔德科技,巴爾德科技,BALDR Tech,BALDR テク`,
 	Company_1206			: `独立钢铁公司`					+ ` # 独立钢铁公司,獨立鋼鐵公司,Steel Works Independent Co.,鋼鉄工場独立株式会社`,
 	Company_1211			: `劳恩综合制造`					+ ` # 劳恩综合制造,勞恩綜合製造,Lawn Integrated Manufacturing,ラウン総合製造`,
+	Company_1224			: `克隆集团`						+ ` # 克隆集团,克隆集團,Clone Corp,クローングループ`,
+	Company_1227			: `旧管理局`						+ ` # 旧管理局,舊管理局,Old Admin,旧管理局`,
 	Company_1250			: `铁甲有限公司`					+ ` # 铁甲有限公司,鐵甲有限公司,Iron Armor Co.,鉄の甲株式会社`,
 	Company_1256			: `Ash&Sentinel电子实验室`			+ ` # Ash&Sentinel电子实验室,Ash&Sentinel電子實驗室,Ash&Sentinel Electronics Lab,Ash&Sentinel 電子研究所`,
 	Company_1260			: `Benjamin.inc`					+ ` # Benjamin.inc,Benjamin.inc,Benjamin.inc,Benjamin.inc`,
@@ -5223,6 +5226,7 @@ let textList = {
 	Company_1320			: `纳斯德工业`						+ ` # 纳斯德工业,納斯德工業,Nasod Industries,ナソッド工業`,
 	
 	Company_2017			: `黎明工业`						+ ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
+	Company_2025			: `六翼`							+ ` # 六翼,六翼,Six Wings,六翼`,
 	Company_2042			: `Valesworn. Inc`					+ ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
 	Company_2049			: `堡垒防务集团`					+ ` # 堡垒防务集团,堡壘防務集團,Bastion Defence Group,砦防衛グループ`,
 	Company_2053			: `滞后产品制造`					+ ` # 滞后产品制造,滯後產品製造,Lagging Products,ラッギング製品`,
@@ -5240,6 +5244,7 @@ let textList = {
 	
 	Company_3008			: `人性化安全解决方案`				+ ` # 人性化安全解决方案,人性化安全解決方案,Humane Security Solutions,ヒューマンセキュリティソリューション`,
 	Company_4015			: `考斯沃斯制作公司`				+ ` # 考斯沃斯制作公司,考斯沃斯製作公司,Kosworth Friendly Production Co.,コスワース·フレンドリー·プロダクション`,
+	Company_4025			: `地平线金融`						+ ` # 地平线金融,地平線金融,Horizon Finance,ホライゾン金融`,
 	
 	Company_10000			: `英雄咕哒有限公司`				+ ` # 英雄咕哒有限公司,英雄咕噠有限公司,House Gladius Arsenal,ハウス グラディウス アーセナル`,
 	Company_10001			: `星火重工`						+ ` # 星火重工,星火重工,Armed Forces Munitions Department,軍弾薬省`,
@@ -5249,6 +5254,7 @@ let textList = {
 	Company_10005			: `天狼北方军事工业`				+ ` # 天狼北方军事工业,天狼北方軍事工業,Sirius Northern Military Industry,シリウス北方軍事工業`,
 	Company_10006			: `夜空肆零肆玩具重工集团`			+ ` # 夜空肆零肆玩具重工集团,夜空肆零肆玩具重工集團,Night Sky 404 Toy Heavy Industry Group,夜空404玩具重工グループ`,
 	Company_10007			: `莱茵金属`						+ ` # 莱茵金属,萊茵金屬,Rheinmetall,ラインメタル`,
+	Company_10008			: `Amazonian Crimson Works`			+ ` # Amazonian Crimson Works,Amazonian Crimson Works,Amazonian Crimson Works,Amazonian Crimson Works`,
 	Company_10009			: `努恩枪炮学校`					+ ` # 努恩枪炮学校,努恩槍炮學校,Nuln Gunnery School,ヌーン銃砲学校`,
 	Company_10010			: `癫火公司`						+ ` # 癫火公司,癲火公司,Crazy Fire Company,テンカン会社`,
 	Company_10011			: `PROMETHEUS军装管理局`			+ ` # PROMETHEUS军装管理局,PROMETHEUS軍裝管理局,PROMETHEUS Bureau of arms control,PROMETHEUS兵装管理局`,
