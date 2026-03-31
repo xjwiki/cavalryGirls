@@ -473,7 +473,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10109,#破甲步枪B1,10109,Weapon,#具有较高穿甲能力的制式步枪，增加了弹量及发射间隔，略微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:109|AddSpeed:-10|AddRotSpeed:-10,Company_10109,54,30,2,4,8,2,5,10209|10219|10215,,10009,,67,
 10209,#穿甲步枪C6,10209,Weapon,#具有较高穿甲能力的制式步枪，将射击模式进行了更改，使得爆发能力更强\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Rail,1,Weapon:209|AddSpeed:-10|AddRotSpeed:-10,Company_10109,200,0,-1,5,10,3,6,10217,,,,117,
 
-10035,#治疗枪,10035,Weapon,#能够发射治疗光束的武器（ai也能使用）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon|CantGen,1,Weapon:35|AddSpeed:-25|AddRotSpeed:-25,TankType_PlayerName_1,45,14,-2,2,5,0,0,,,10035,,37,
+10035,#治疗枪,10035,Weapon,#能够发射治疗光束的武器（ai也能使用）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon|CantGen,1,Weapon:35|AddSpeed:-25|AddRotSpeed:-25,Company_10035,45,14,-2,2,5,0,0,,,10035,,37,
 10047,#传送枪,10047,Weapon,#,TechWeapon,1,Weapon:47|AddSpeed:-5|AddRotSpeed:-5,Company_10047,50,999,-2,0,0,0,0,,,,,49,
 10041,#防爆盾,10141,Weapon,#使用射击操作举起，举起后可以遮住身前绝大部分的区域，但是同时也无法进行攻击了,RiotShiled,1,Weapon:41|AddSpeed:-30|AddRotSpeed:-45,Company_10041,40,45,-2,0,0,0,0,,40005_1|40006_1|40024_5|40025_6,,,43,
 
@@ -1721,7 +1721,7 @@ let csv08 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1103,#高级集束炸弹,1103,Throw,#投掷后可以产生极多爆炸的武器\n（冷却：<Description:1>）,,1,Throw:GrenadeBig|ThrowCD:40,Company_1103,125,33,-1,0,0,0,0,,,1101_1104,,252,
 
 1105,#寒冰炸弹,1105,Throw,#投掷后可以产生冷冻爆炸的武器，冷冻时间很长（被冷冻单位会变慢且抵抗概率减半）\n（冷却：<Description:1>）,,1,Throw:GrenadeIce|ThrowCD:25,Main_3,30,9,1,0,0,0,0,,40008_1|40010_3|40016_1,,,254,
-1106,#集束寒冰炸弹,1108,Throw,#投掷后可以产生大量冷冻爆炸的武器，冷冻时间很长（被冷冻单位会变慢且抵抗概率减半）\n（冷却：<Description:1>）,,1,Throw:GrenadeIceBig|ThrowCD:35,Main_4,65,31,-1,0,0,0,0,,,1105_1106,,255,
+1106,#集束寒冰炸弹,1108,Throw,#投掷后可以产生大量冷冻爆炸的武器，冷冻时间很长（被冷冻单位会变慢且抵抗概率减半）\n（冷却：<Description:1>）,,1,Throw:GrenadeIceBig|ThrowCD:35,Company_1103,65,31,-1,0,0,0,0,,,1105_1106,,263,
 
 1107,#燃烧炸弹,1106,Throw,#投掷后可以产生燃烧爆炸的武器，燃烧时间很长\n（冷却：<Description:1>）,,1,Throw:GrenadeFlame|ThrowCD:40,Main_3,30,11,1,0,0,0,0,,40008_1|40010_3|40015_1,,,256,
 1108,#集束燃烧炸弹,1109,Throw,#投掷后可以产生大量燃烧爆炸的武器，燃烧时间很长\n（冷却：<Description:1>）,,1,Throw:GrenadeFlameBig|ThrowCD:55,Main_4,65,35,-1,0,0,0,0,,,1107_1108,,257,
@@ -2045,7 +2045,7 @@ let csv13 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // 战略支援
 let csv14 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-1300,#空袭重机枪扫射,1300,Strategy,#召唤一台战机向目标区域进行重机枪扫射\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRect|CD:36|Code:011,TankType_PlayerName_4,45,999,-2,1,2,0,0,1301,,1317,,320,
+1300,#空袭重机枪扫射,1300,Strategy,#召唤一台战机向目标区域进行重机枪扫射\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRect|CD:36|Code:011,Company_1300,45,999,-2,1,2,0,0,1301,,1317,,328,
 
 1301,#空袭轰炸,1301,Strategy,#召唤一台战机向目标区域进行空袭轰炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExplo|CD:64|Code:0213,Main2_2,60,$StrategyOpenDay,1,1,2,0,0,1302|1303,40008_4|40010_15|40005_10|40033_9,1301,,321,
 1302,#空袭集束轰炸,1302,Strategy,#召唤一台战机向目标区域进行空袭集束轰炸，能够跟踪瞄准的单位\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExplo2|CD:75|Code:01023,TankType_PlayerName_1,90,$StrategyOpenDay,-1,1,3,0,0,,,1301_1303,,322,
@@ -2064,16 +2064,16 @@ let csv14 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1313,#空投机枪塔,1313,Strategy,#,,1,Strategy:AirStrikeCannon|CD:150|Code:3012312,Main2_2,200,$StrategyOpenDay,-2,1,3,0,0,,3011_1|40033_25|40034_5,1307|1308|1309,,336,
 
 1303,#空袭精确轰炸,1303,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，带有破甲效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipeMelt_Lock|CD:40|Code:123,TankType_PlayerName_1,60,$StrategyOpenDay,-2,1,2,0,0,1301|1322|1317,40008_10|40010_10|40005_10|40033_5,1301_1303,,323,
-1306,#500kg重磅制导轰炸,1306,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，威力巨大\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeExplo_Lock|CD:54|Code:022213,TankType_PlayerName_4,120,$StrategyOpenDay,-2,1,3,0,0,1303|1318,40008_16|40009_10|40011_15|40010_15|40034_2,1301_1303,,329,
+1306,#500kg重磅制导轰炸,1306,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，威力巨大\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeExplo_Lock|CD:54|Code:022213,Company_1300,120,$StrategyOpenDay,-2,1,3,0,0,1303|1318,40008_16|40009_10|40011_15|40010_15|40034_2,1301_1303,,337,
 
 1314,#轨道空爆破片炸弹,1314,Strategy,#可以向目标地点发射数枚轨道破片炸弹\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSeparate|CD:48|Code:0011,Main2_2,50,$StrategyOpenDay,-2,1,2,0,0,1315,40001_30|40002_30|40008_12|40005_5|40034_2,1301_1303|1314_1319,,337,
-1315,#轨道饱和弹幕轰炸,1315,Strategy,#可以向目标地点发射数枚轨道炸弹，火力覆盖时间长但是延迟较高\n缩短了发射到瞄准的间隔时间及冷却时间\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint|CD:70|Code:3312,Main2_2,75,$StrategyOpenDay,-2,1,3,0,0,1314,40001_40|40002_40|40008_16|40005_7|40034_2,1301_1303|1314_1319,,338,
+1315,#轨道饱和弹幕轰炸,1315,Strategy,#可以向目标地点发射数枚轨道炸弹，火力覆盖时间长但是延迟较高\n缩短了发射到瞄准的间隔时间及冷却时间\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint|CD:70|Code:3312,Company_1300,75,$StrategyOpenDay,-2,1,3,0,0,1314,40001_40|40002_40|40008_16|40005_7|40034_2,1301_1303|1314_1319,,346,
 
 1316,#轨道元素炸弹轰炸,1316,Strategy,#可以向目标地点发射数枚轨道炸弹，带有随机元素效果\n进一步缩短了发射到瞄准的间隔时间及冷却时间，并增加了精度\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeElement|CD:60|Code:2333,Main2_2,70,$StrategyOpenDay,-2,1,2,0,0,,40008_10|40010_15|40015_3|40016_3|40034_3,1307|1308|1309,,339,
-1317,#轨道连续精确轰炸,1317,Strategy,#可以向目标地点发射数枚制导炸弹，尽管延迟很长但是带有跟踪效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipe_Lock|CD:110|Code:02213,Main2_2,100,$StrategyOpenDay,-2,1,3,0,0,1303,40008_15|40010_15|40005_15|40034_2,1314_1319,,340,
+1317,#轨道连续精确轰炸,1317,Strategy,#可以向目标地点发射数枚制导炸弹，尽管延迟很长但是带有跟踪效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipe_Lock|CD:110|Code:02213,Company_1300,100,$StrategyOpenDay,-2,1,3,0,0,1303,40008_15|40010_15|40005_15|40034_2,1314_1319,,348,
 
 1318,#122mm炮击火力网,1318,Strategy,#使用122mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint2|CD:135|Code:2311033,Main2_2,150,$StrategyOpenDay,1,1,3,0,0,1319|1306,40008_20|40010_20|40005_20|40034_2|40032_2,1314_1319,,341,
-1319,#155mm炮击火力网,1319,Strategy,#使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint3|CD:160|Code:2312032,Main2_2,240,$StrategyOpenDay,-1,1,4,0,0,,,1318,,342,
+1319,#155mm炮击火力网,1319,Strategy,#使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint3|CD:160|Code:2312032,Company_1319,240,$StrategyOpenDay,-1,1,4,0,0,,,1318,,350,
 
 1321,#空投聚变反应堆,1321,Strategy,#可以向目标地点空投一座微型剧变反应堆\n需要手动激活，激活后会产生巨大爆炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeNukeBox|CD:100|Code:3023103,Company_1320,120,$StrategyOpenDay,-2,1,2,0,0,1320,40008_12|40010_12|40005_12|40034_2,1301_1303,,335,
 1320,#空投护盾生成器,1320,Strategy,#可以向目标地点空投一座护盾生成器，护盾值会缓慢减少，当护盾值归零时装置会失效\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeShiled|CD:75|Code:21100,Company_1320,75,$StrategyOpenDay,-2,1,2,0,0,1321,40006_5|40007_10|40026_10|40027_15|40034_2,1301_1303,,334,
@@ -5222,7 +5222,9 @@ let textList = {
 	Company_1256			: `Ash&Sentinel电子实验室`			+ ` # Ash&Sentinel电子实验室,Ash&Sentinel電子實驗室,Ash&Sentinel Electronics Lab,Ash&Sentinel 電子研究所`,
 	Company_1260			: `Benjamin.inc`					+ ` # Benjamin.inc,Benjamin.inc,Benjamin.inc,Benjamin.inc`,
 	Company_1262			: `风雪航空航天制造所`				+ ` # 风雪航空航天制造所,風雪航空航太製造所,Wind&Snow Aerospace Manufacturing Institute,風雪航空製造所`,
+	Company_1300			: `超级驱逐舰SES解放圣女`			+ ` # 超级驱逐舰SES解放圣女,超級驅逐艦SES解放聖女,Super destroyer SES,超駆逐艦SES`,
 	Company_1310			: `苍岁纳米医学所`					+ ` # 苍岁纳米医学所,蒼歲納米醫學所,Cangsui Nanomedicine Institute,蒼歳ナノ医学所`,
+	Company_1319			: `超级地球武装部队大炮`			+ ` # 超级地球武装部队大炮,超級地球武裝部隊大炮,Super Armed Cannon,スーパー武装部隊大砲`,
 	Company_1320			: `纳斯德工业`						+ ` # 纳斯德工业,納斯德工業,Nasod Industries,ナソッド工業`,
 	
 	Company_2017			: `黎明工业`						+ ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
@@ -5268,6 +5270,7 @@ let textList = {
 	Company_10029			: `熔火重工`						+ ` # 熔火重工,熔火重工,Molten Heavy Industries,ようゆうじゅうこう`,
 	Company_10030			: `纳言重工`						+ ` # 纳言重工,納言重工,Dawnstar Corporation,ドウンスター 株式会社`,
 	Company_10031			: `公输·鲲鹏公司`					+ ` # 公输·鲲鹏公司,公輸·鯤鵬公司,Kunpeng Company,コン鵬株式会社`,
+	Company_10035			: `Kuroku's B.astion L.illy`		+ ` # Kuroku's B.astion L.illy,Kuroku's B.astion L.illy,Kuroku's B.astion L.illy,Kuroku's B.astion L.illy`,
 	Company_10036			: `鱼游戏机电有限责任公司`			+ ` # 鱼游戏机电有限责任公司,魚遊戲機電有限責任公司,Fish Gaming Electromechanical LLC,フィッシュ ゲーム エレクトロメカニカル LLC`,
 	Company_10038			: `勒鲁革流体动力学`				+ ` # 勒鲁革流体动力学,勒魯革流體動力學,Lerouge HydroDynamics,レルゴ流体力学`,
 	Company_10039			: `灵鹊研究所`						+ ` # 灵鹊研究所,靈鵲研究所,Elster,エルスター`,
