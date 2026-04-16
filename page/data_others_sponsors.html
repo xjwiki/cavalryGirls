@@ -428,13 +428,13 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 // --
 
-10083,#废料枪,10083,Weapon,#射击废料弹的武器，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:83|AddSpeed:-15|AddRotSpeed:-15,Main_3,50,21,1,3,5,2,3,10183|10084|10009,40001_7|40002_8|40008_5|40005_3,10009|10109|10209,,55,
-10183,#废料冲锋枪,10183,Weapon,#废料枪的冲锋枪化改造，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:183|AddSpeed:-15|AddRotSpeed:-15,Main_3,100,28,2,4,6,2,5,10283,,10083,,107,
-10283,#废料冲锋枪B1,10283,Weapon,#废冲锋枪化的强化型号，可以一次爆发射出更多子弹，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:283|AddSpeed:-15|AddRotSpeed:-20,Main_3,200,0,-1,5,8,3,6,10384,,10183,,147,
+10083,#废料枪,10083,Weapon,#射击废料弹的武器，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:83|AddSpeed:-15|AddRotSpeed:-15,Company_10083,50,21,1,3,5,2,3,10183|10084|10009,40001_7|40002_8|40008_5|40005_3,10009|10109|10209,,55,
+10183,#废料冲锋枪,10183,Weapon,#废料枪的冲锋枪化改造，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:183|AddSpeed:-15|AddRotSpeed:-15,Company_10083,100,28,2,4,6,2,5,10283,,10083,,107,
+10283,#废料冲锋枪B1,10283,Weapon,#废冲锋枪化的强化型号，可以一次爆发射出更多子弹，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Rail,1,Weapon:283|AddSpeed:-15|AddRotSpeed:-20,Company_10083,200,0,-1,5,8,3,6,10384,,10183,,147,
 
 10084,#重型废料枪,10084,Weapon,#射击大型废料弹的武器，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Riffle,1,Weapon:84|AddSpeed:-15|AddRotSpeed:-50,Main_5,60,35,1,4,7,2,3,10184|10083,40008_4|40009_4|40004_7,10083|10084|10183|10184|10283|10384,,56,
-10184,#重型废料枪M1,10184,Weapon,#重型废料枪的强化型号，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Riffle,1,Weapon:184|AddSpeed:-20|AddRotSpeed:-70,Main_5,270,45,-1,6,11,2,4,10384,,10084,,108,
-10384,#废料散弹炮,10384,Weapon,#废料枪的散弹化改造，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|ShotWeapon,1,Weapon:384|AddSpeed:-25|AddRotSpeed:-45,Main_5,550,0,-2,6,11,3,5,,10184_1|10283_1|10202_1,10184|10283,,167,
+10184,#重型废料枪M1,10184,Weapon,#重型废料枪的强化型号，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|Riffle,1,Weapon:184|AddSpeed:-20|AddRotSpeed:-70,Company_10083,270,45,-1,6,11,2,4,10384,,10084,,108,
+10384,#废料散弹炮,10384,Weapon,#废料枪的散弹化改造，可以蓄力以射出更大的废料弹丸。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ScrapWeapon|ShotWeapon,1,Weapon:384|AddSpeed:-25|AddRotSpeed:-45,Company_10083,550,0,-2,6,11,3,5,,10184_1|10283_1|10202_1,10184|10283,,167,
 
 // --
 
@@ -451,7 +451,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10244,#等离子机枪MK1,10244,Weapon,#重火力能量武器，高速发射可无视物理护甲的绿色电浆团,FlakeWeapon|MG,1,Weapon:244|AddSpeed:-15|AddRotSpeed:-25,Company_10044,200,0,-1,4,7,1,3,10245|10444,,,,141,
 
 10444,#等离子投射器,10444,Weapon,#重火力能量武器，发射可无视物理护甲的绿色电浆团，电浆团速度很慢但威力很高\n机体速度<Description:1>%，转向速度<Description:2>%\n,FlakeWeapon,1,Weapon:444|AddSpeed:-35|AddRotSpeed:-50,Company_10044,350,0,-2,5,11,1,6,10544|10330,,,,180,
-10544,#等离子聚能炮,10544,Weapon,#等离子武器的终极形态，可以一次性投射出多个等离子源，造成巨量伤害。\n机体速度<Description:1>%，转向速度<Description:2>%\n,FlakeWeapon|Riffle|ShotWeapon,1,Weapon:544|AddSpeed:-75|AddRotSpeed:-90,Main_1,900,0,-2,6,13,2,9,,10249_1|10280_1|10444_1,10249|10280|10444,,192,
+10544,#等离子聚能炮,10544,Weapon,#等离子武器的终极形态，可以一次性投射出多个等离子源，造成巨量伤害。\n机体速度<Description:1>%，转向速度<Description:2>%\n,FlakeWeapon|Riffle|ShotWeapon,1,Weapon:544|AddSpeed:-75|AddRotSpeed:-90,Company_10544,900,0,-2,6,13,2,9,,10249_1|10280_1|10444_1,10249|10280|10444,,192,
 
 10045,#B·H马格南手枪,10045,Weapon,#,FlakeWeapon,1,Weapon:45|AddSpeed:-5|AddRotSpeed:-5,Company_10045,45,19,1,2,4,1,1,10145|10044|10128|10130,40008_4|40013_8|40005_1,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145,,47,
 10145,#B·H马格南手枪,10145,Weapon,#,FlakeWeapon,1,Weapon:145|AddSpeed:-10|AddRotSpeed:-10,Company_10045,120,15,2,2,6,1,2,10245|10230|10228,,10045,,100,
@@ -543,7 +543,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10171,#强化型斧,1171,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:171|AddSpeed:-40|AddRotSpeed:-25,Company_10071,300,0,-2,2,11,3,5,,,,,235,
 10271,#试做型斧,1271,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:271|AddSpeed:-40|AddRotSpeed:-25,Company_10071,250,0,-2,2,12,3,5,,,,,251,
 
-10069,#双剑,1069,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:69|AddSpeed:-12|AddRotSpeed:-30,MainAct,120,0,1,2,5,2,2,10169|10269|10068,10153_2|40032_2,10066_10076,,210,
+10069,#双剑,1069,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:69|AddSpeed:-12|AddRotSpeed:-30,Company_10069,120,0,1,2,5,2,2,10169|10269|10068,10153_2|40032_2,10066_10076,,210,
 10169,#强化型双剑,1169,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:169|AddSpeed:-12|AddRotSpeed:-30,MainAct,250,0,-2,2,7,3,3,,,,,233,
 10269,#试做型双剑,1269,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:269|AddSpeed:-12|AddRotSpeed:-30,MainAct,300,0,-2,2,7,3,3,,,,,249,
 
@@ -586,7 +586,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // --
 
 1254,#肩扛式航炮,1254,HangShoulder,#在肩部挂载一台航炮，可以发射机炮，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,NormalWeapon,1,ArmorStrategy:ShoulderGun=22|Time:22|AddSpeed:-5|AddRotSpeed:-5|AiShoulderLogic:Normal_20_5_1200,Main2_3,25,35,-2,4,5,1,2,,40008_1|40009_1|40012_2|40005_1,,,318,
-1255,#肩扛式密集阵,1255,HangShoulder,#在肩部挂载一台密集阵，可以发射机炮，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,NormalWeapon,1,ArmorStrategy:ShoulderGun2=36|Time:36|AddSpeed:-12|AddRotSpeed:-12|AiShoulderLogic:Normal_20_8_1800,Main2_3,70,44,-2,6,7,1,2,,,1254|1255,,319,
+1255,#肩扛式密集阵,1255,HangShoulder,#在肩部挂载一台密集阵，可以发射机炮，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,NormalWeapon,1,ArmorStrategy:ShoulderGun2=36|Time:36|AddSpeed:-12|AddRotSpeed:-12|AiShoulderLogic:Normal_20_8_1800,Company_1255,70,44,-2,6,7,1,2,,,1254|1255,,319,
 
 1252,#肩扛式火炮,1252,HangShoulder,#在肩部挂载一台火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon=24|Time:24|AddSpeed:-8|AddRotSpeed:-8|AiShoulderLogic:Normal_20_8_2000,TankType_PlayerName_2,40,49,-2,4,6,1,2,,40008_3|40009_2|40011_3|40010_2,,,316,
 1253,#肩扛式重型火炮,1253,HangShoulder,#在肩部挂载一台重型火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon2=40|Time:40|AddSpeed:-15|AddRotSpeed:-15|AiShoulderLogic:Normal_20_12_3000,TankType_PlayerName_3,80,70,-2,6,7,1,2,,,1252|1253,,317,
@@ -776,7 +776,7 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2276,#战术脚架,2276,WeaponModel,#蹲踞后射击，散射<Description>%\n（仅能装备在机枪）,MG,1,SeatAngleFloat:-20,Main2_10,40,0,1,0,0,0,0,,40001_10|40002_4|40007_6|40005_2,10013|10014|10024|10113|10114|10124|10213|10224|10324|10424,,484,
 2277,#战术脚架+,2277,WeaponModel,#蹲踞后射击，散射<Description>%\n（仅能装备在机枪）,MG,1,SeatAngleFloat:-40,Main2_10,80,36,-1,0,0,0,0,,,10013|10014|10024|10113|10114|10124|10213|10224|10324|10424,,485,
 
-2278,#战术手电,2278,WeaponModel,#夜战时，机体自带的灯光距离增加<Description>%\n（仅能装备在导轨武器）,Rail|Light,1,AddLightLength:75,Main2_10,15,68,1,0,0,0,0,,40013_1|40014_1|40007_1|40008_1,,,486,
+2278,#战术手电,2278,WeaponModel,#夜战时，机体自带的灯光距离增加<Description>%\n（仅能装备在导轨武器）,Rail|Light,1,AddLightLength:75,Company_2278,15,68,1,0,0,0,0,,40013_1|40014_1|40007_1|40008_1,,,486,
 2279,#战术手电+,2279,WeaponModel,#夜战时，机体自带的灯光距离增加<Description>%\n（仅能装备在导轨武器）,Rail|Light,1,AddLightLength:150,Main2_10,30,$NightOpenDay,-1,0,0,0,0,,,,,487,
 
 2280,#战术照明灯,2280,WeaponModel,#夜战时，机体自带的灯光照明宽度增加<Description>%\n（仅能装备在导轨武器）,Rail|Light,1,AddLightWidth:40,Main2_12,10,$NightOpenDay,1,0,0,0,0,,40013_1|40014_1|40007_1|40008_1,,,488,
@@ -1547,7 +1547,7 @@ let csv04 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // 足部强化
 let csv05 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-2050,#速度模块,2050,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:20,Main2_4,15,0,1,0,0,0,0,,40002_3|40006_2|40022_2,,,580,
+2050,#速度模块,2050,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:20,Company_2050,15,0,1,0,0,0,0,,40002_3|40006_2|40022_2,,,606,
 2051,#速度模块+,2051,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:35,Main2_4,40,0,2,0,0,0,0,,,2050_2053,,581,
 2052,#高级速度模块,2052,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:55,Company_2053,120,36,3,0,0,0,0,,,2050_2053,,582,
 2053,#制式速度模块,2053,BuffModelFoot,#移动速度+<Description>%\n（仅抵消惩罚）,BuffModel,1,AddSpeed:75,Company_2053,200,64,-1,0,0,0,0,,,2050_2053,,583,
@@ -1639,7 +1639,7 @@ let csv06 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 1224,#防暴头盔,1224,Hang,#机体被击中时不会产生暴击,Head,1,CriticImmune,Company_1224,20,35,-2,0,0,0,0,,40001_2|40002_6|40006_4,2146_2150|1224_1226,,308,
 
-1228,#辅助瞄准镜,1228,Hang,#机体武器偏移度<Description>%,Head,1,UpStableMech:-12,Main2_3,20,25,-2,0,0,0,0,,40001_5|40002_2|40007_2|40005_2,2005_2008|2250_2252,,304,
+1228,#辅助瞄准镜,1228,Hang,#机体武器偏移度<Description>%,Head,1,UpStableMech:-12,Company_10118,20,25,-2,0,0,0,0,,40001_5|40002_2|40007_2|40005_2,2005_2008|2250_2252,,312,
 
 1227,#战术夜视仪,1227,Hang,#夜晚会常开夜视仪,Head,1,NightVisionAlwaysOn,Company_1227,160,70,-2,0,0,0,0,,40006_12|40007_12|40005_5|40032_3,1221|1222,,311,
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
@@ -1650,7 +1650,7 @@ let csv06 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 let csv07 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
 200,#弹力足,200,Remodel,#奔跑时可以越过障碍物不受影响,CantDemo,1,AddMechaEffect:0,Main2_4,100,-1,-2,0,0,0,0,,,,,1221,
-201,#轮滑,201,Remodel,#奔跑时为使用轮滑，不过续航较弱,CantDemo,1,AddMechaEffect:1,Main2_4,100,-1,-2,0,0,0,0,,,,,1222,
+201,#轮滑,201,Remodel,#奔跑时为使用轮滑，不过续航较弱,CantDemo,1,AddMechaEffect:1,Company_201,100,-1,-2,0,0,0,0,,,,,1270,
 
 202,#跳跃足,202,Remodel,#可以跳跃进入敌群，并对敌产生击退眩晕,Tanktype2,1,AddMechaEffect:2,Main2_4,100,-1,-2,0,0,0,0,,,,,1223,
 203,#履带,203,Remodel,#奔跑为使用履带，续航能力强，但是会被障碍物卡住,CantDemo,1,AddMechaEffect:3,Main2_4,100,-1,-2,0,0,0,0,,,,,1224,
@@ -5206,6 +5206,7 @@ let textList = {
 	Company_103				: `W.C.R.机械制造`					+ ` # W.C.R.机械制造,W.C.R.機械製造,W.C.R. Mecha Manufacturing,W.C.R. メカ製造`,
 	Company_104				: `阿斯加德合金的研究与开发`		+ ` # 阿斯加德合金的研究与开发,阿斯加德合金的研究與開發,Asgard Alloys Research and Development,アスガード 合金研究開発`,
 	
+	Company_201				: `AvtoVAZ Industries`				+ ` # AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries`,
 	Company_218				: `酒寄研究院`						+ ` # 酒寄研究院,酒寄研究院,Sakayori Institute,酒寄研究院`,
 	
 	Company_101A			: `惠斯曼机械公司`					+ ` # 惠斯曼机械公司,惠斯曼機械公司,Wizman Mechatronics Corporation,ワイズマン·メカトロニクス社`,
@@ -5219,6 +5220,7 @@ let textList = {
 	Company_1224			: `克隆集团`						+ ` # 克隆集团,克隆集團,Clone Corp,クローングループ`,
 	Company_1227			: `旧管理局`						+ ` # 旧管理局,舊管理局,Old Admin,旧管理局`,
 	Company_1250			: `铁甲有限公司`					+ ` # 铁甲有限公司,鐵甲有限公司,Iron Armor Co.,鉄の甲株式会社`,
+	Company_1255			: `Bastion Armament & Ordnance`		+ ` # Bastion Armament & Ordnance,Bastion Armament & Ordnance,Bastion Armament & Ordnance,Bastion Armament & Ordnance`,
 	Company_1256			: `Ash&Sentinel电子实验室`			+ ` # Ash&Sentinel电子实验室,Ash&Sentinel電子實驗室,Ash&Sentinel Electronics Lab,Ash&Sentinel 電子研究所`,
 	Company_1260			: `Benjamin.inc`					+ ` # Benjamin.inc,Benjamin.inc,Benjamin.inc,Benjamin.inc`,
 	Company_1262			: `风雪航空航天制造所`				+ ` # 风雪航空航天制造所,風雪航空航太製造所,Wind&Snow Aerospace Manufacturing Institute,風雪航空製造所`,
@@ -5231,6 +5233,7 @@ let textList = {
 	Company_2025			: `六翼`							+ ` # 六翼,六翼,Six Wings,六翼`,
 	Company_2042			: `Valesworn. Inc`					+ ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
 	Company_2049			: `堡垒防务集团`					+ ` # 堡垒防务集团,堡壘防務集團,Bastion Defence Group,砦防衛グループ`,
+	Company_2050			: `J.B. BattleMechs Inc`			+ ` # J.B. BattleMechs Inc,J.B. BattleMechs Inc,J.B. BattleMechs Inc,J.B. BattleMechs Inc`,
 	Company_2053			: `滞后产品制造`					+ ` # 滞后产品制造,滯後產品製造,Lagging Products,ラッギング製品`,
 	Company_2057			: `ASH特殊装备研发部`				+ ` # ASH特殊装备研发部,ASH特殊裝備研發部,ASH Special Gear R&D,ASH 特殊装備開発部`,
 	Company_2077			: `西金川工业公司`					+ ` # 西金川工业公司,西金川工業公司,West Jinchuan Industrial Company,西金川工業公司`,
@@ -5240,6 +5243,7 @@ let textList = {
 	Company_2124			: `提西亚电子公司`					+ ` # 提西亚电子公司,提西亞電子公司,Tecia Electronics Company,ティシア電子`,
 	Company_2126			: `CMF护盾技术`						+ ` # CMF护盾技术,CMF護盾技術,CMF's Shield TECH,CMFシールド技術`,
 	Company_2158			: `水雷部纯氧鱼雷研发中心`			+ ` # 水雷部纯氧鱼雷研发中心,水雷部純氧魚雷研發中心,Pure Oxygen Torpedo Research and Development Center of the Mine Department,機雷部純酸素魚雷研究開発センター`,
+	Company_2278			: `The Black Company Inc.`			+ ` # The Black Company Inc.,The Black Company Inc.,The Black Company Inc.,The Black Company Inc.`,
 	Company_2398			: `箱崎重工`						+ ` # 箱崎重工,箱崎重工,Hakozaki heavy industry,箱崎重工`,
 	Company_2399			: `施罗斯防务兵工厂`				+ ` # 施罗斯防务兵工厂,施羅斯防務兵工廠,Defense weapons arsenal,シュロース防衛兵器工廠`,
 	Company_2904			: `AvtoVAZ Industries`				+ ` # AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries`,
@@ -5283,12 +5287,14 @@ let textList = {
 	Company_10047			: `Kudo.inc`						+ ` # Kudo.inc,Kudo.inc,Kudo.inc,Kudo.inc`,
 	Company_10050			: `ZD隐杀科技`						+ ` # ZD隐杀科技,ZD隱殺科技,Lobotomy Corp,ZD隠殺技術`,
 	Company_10058			: `永恒蓝工业`						+ ` # 永恒蓝工业,永恆藍工業,Eternal Blue Industries,エターナル ブルー 産業`,
+	Company_10069			: `T. Torsion Corp`					+ ` # T. Torsion Corp,T. Torsion Corp,T. Torsion Corp,T. Torsion Corp`,
 	Company_10071			: `Sequitur.inc`					+ ` # Sequitur.inc,Sequitur.inc,Sequitur.inc,Sequitur.inc`,
 	Company_10072			: `i2um1.inc`						+ ` # i2um1.inc,i2um1.inc,i2um1.inc,i2um1.inc`,
 	Company_10073			: `朗基努斯`						+ ` # 朗基努斯,朗基努斯,Longinus,ロンギヌス`,
 	Company_10074			: `Kristen Mens-Pegail.inc`			+ ` # Kristen Mens-Pegail.inc,Kristen Mens-Pegail.inc,Kristen Mens-Pegail.inc,Kristen Mens-Pegail.inc`,
 	Company_10075			: `Black Rock Industries`			+ ` # Black Rock Industries,Black Rock Industries,Black Rock Industries,Black Rock Industries`,
 	Company_10076			: `Xary.inc`						+ ` # Xary.inc,Xary.inc,Xary.inc,Xary.inc`,
+	Company_10083			: `叛军科研部`						+ ` # 叛军科研部,叛軍科研部,Rebel Research .Dep,反乱軍科学研究所`,
 	
 	Company_10105			: `天蝎七号改进军工`				+ ` # 天蝎七号改进军工,天蠍七號改進軍工,Scorpio 7 improves military industry,サソリ7号軍需産業`,
 	Company_10106			: `H/K Freedom`						+ ` # H/K Freedom,H/K Freedom,H/K Freedom,H/K Freedom`,
@@ -5348,6 +5354,7 @@ let textList = {
 	Company_10524			: `Siegfried Andre Pinzer`			+ ` # Siegfried Andre Pinzer,Siegfried Andre Pinzer,Siegfried Andre Pinzer,Siegfried Andre Pinzer`,
 	Company_10530			: `嘉登星流实验室`					+ ` # 嘉登星流实验室,嘉登星流實驗室,Imperial Nova Forge,a.k.a Dealight`,
 	Company_10533			: `世界蛇工业`						+ ` # 世界蛇工业,世界蛇工業,Seraph 30-G， Doro Division,世界の蛇産業`,
+	Company_10544			: `火星重工`						+ ` # 火星重工,火星重工,Mars Heavy Industries,火星重工`,
 	
 	},
 	
