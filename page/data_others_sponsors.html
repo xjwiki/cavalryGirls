@@ -455,7 +455,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 10045,#B·H马格南手枪,10045,Weapon,#,FlakeWeapon,1,Weapon:45|AddSpeed:-5|AddRotSpeed:-5,Company_10045,45,19,1,2,4,1,1,10145|10044|10128|10130,40008_4|40013_8|40005_1,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145,,47,
 10145,#B·H马格南手枪,10145,Weapon,#,FlakeWeapon,1,Weapon:145|AddSpeed:-10|AddRotSpeed:-10,Company_10045,120,15,2,2,6,1,2,10245|10230|10228,,10045,,100,
-10245,#B·H马格南手枪,10245,Weapon,#,FlakeWeapon,1,Weapon:245|AddSpeed:-15|AddRotSpeed:-15,Main_4,180,0,3,3,8,1,3,10244|10345|10215,,,,142,
+10245,#B·H马格南手枪,10245,Weapon,#,FlakeWeapon,1,Weapon:245|AddSpeed:-15|AddRotSpeed:-15,Company_10045,180,0,3,3,8,1,3,10244|10345|10215,,,,142,
 10345,#B·H马格南手枪,10345,Weapon,#,FlakeWeapon,1,Weapon:345|AddSpeed:-20|AddRotSpeed:-35,Company_10045,320,0,-1,5,10,2,4,10330,,,,165,
 
 // --
@@ -588,8 +588,8 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1254,#肩扛式航炮,1254,HangShoulder,#在肩部挂载一台航炮，可以发射机炮，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,NormalWeapon,1,ArmorStrategy:ShoulderGun=22|Time:22|AddSpeed:-5|AddRotSpeed:-5|AiShoulderLogic:Normal_20_5_1200,Main2_3,25,35,-2,4,5,1,2,,40008_1|40009_1|40012_2|40005_1,,,318,
 1255,#肩扛式密集阵,1255,HangShoulder,#在肩部挂载一台密集阵，可以发射机炮，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,NormalWeapon,1,ArmorStrategy:ShoulderGun2=36|Time:36|AddSpeed:-12|AddRotSpeed:-12|AiShoulderLogic:Normal_20_8_1800,Company_1255,70,44,-2,6,7,1,2,,,1254|1255,,319,
 
-1252,#肩扛式火炮,1252,HangShoulder,#在肩部挂载一台火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon=24|Time:24|AddSpeed:-8|AddRotSpeed:-8|AiShoulderLogic:Normal_20_8_2000,TankType_PlayerName_2,40,49,-2,4,6,1,2,,40008_3|40009_2|40011_3|40010_2,,,316,
-1253,#肩扛式重型火炮,1253,HangShoulder,#在肩部挂载一台重型火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon2=40|Time:40|AddSpeed:-15|AddRotSpeed:-15|AiShoulderLogic:Normal_20_12_3000,TankType_PlayerName_3,80,70,-2,6,7,1,2,,,1252|1253,,317,
+1252,#肩扛式火炮,1252,HangShoulder,#在肩部挂载一台火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon=24|Time:24|AddSpeed:-8|AddRotSpeed:-8|AiShoulderLogic:Normal_20_8_2000,Company_1252,40,49,-2,4,6,1,2,,40008_3|40009_2|40011_3|40010_2,,,316,
+1253,#肩扛式重型火炮,1253,HangShoulder,#在肩部挂载一台重型火炮，可以发射集束炸弹，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon,1,ArmorStrategy:ShoulderCannon2=40|Time:40|AddSpeed:-15|AddRotSpeed:-15|AiShoulderLogic:Normal_20_12_3000,Company_1253,80,70,-2,6,7,1,2,,,1252|1253,,317,
 
 1250,#肩扛式火箭炮,1250,HangShoulder,#在肩部挂载一台火箭炮，可以发射火箭弹，适合用来压制远处集群，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon,1,ArmorStrategy:ShoulderRocket3=30|Time:30|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_20_8_2000,Company_1250,35,35,-2,4,6,1,2,,40008_2|40009_1|40011_3|40010_2,,,314,
 1251,#重型肩扛式火箭炮,1251,HangShoulder,#在肩部挂载一台重型火箭炮，可以发射火箭弹，适合用来压制远处集群，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon,1,ArmorStrategy:ShoulderRocket4=48|Time:48|AddSpeed:-18|AddRotSpeed:-18|AiShoulderLogic:Normal_20_12_3000,Company_1250,100,39,-2,6,8,1,2,,,1250|1251|1262,,315,
@@ -597,8 +597,8 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1256,#肩扛式EMP脉冲,1256,HangShoulder,#在肩部挂载一台EMP，可以瘫痪一定范围内敌军，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,EMP,1,ArmorStrategy:ShoulderEMP=45|Time:45|AddSpeed:-15|AddRotSpeed:-15|AiShoulderLogic:EMP_8|ShoulderNoTargetPos,Company_1256,30,70,-2,1,3,1,2,,40008_3|40018_4|40005_1,,,320,
 1257,#肩扛式重型EMP脉冲,1257,HangShoulder,#在肩部挂载一台EMP，可以瘫痪大范围内敌军，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,EMP,1,ArmorStrategy:ShoulderEMP2=55|Time:55|AddSpeed:-25|AddRotSpeed:-25|AiShoulderLogic:EMP_12|ShoulderNoTargetPos,TankType_PlayerName_4,60,90,-2,2,4,1,2,,,1256|1257,,321,
 
-1258,#肩扛式防空炮,1258,HangShoulder,#在肩部挂载一台防空炮，可以发射火箭弹，火箭弹对空能力极强，会优先攻击飞行单位，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket5=20|Time:20|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_40_8_1000,Main_2,35,$AirOpenDay,-2,4,6,1,2,,40008_2|40009_1|40011_3|40010_2,1250|1251|1258|1259,,322,
-1259,#肩扛式重型防空炮,1259,HangShoulder,#在肩部挂载一台重型防空炮，可以发射火箭弹，适合用来压制远处集群，会优先攻击飞行单位冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket6=28|Time:30|AddSpeed:-18|AddRotSpeed:-18|AiShoulderLogic:Normal_40_10_1500,Main_2,100,55,-2,6,8,1,2,,,1250|1251|1258|1259,,323,
+1258,#肩扛式防空炮,1258,HangShoulder,#在肩部挂载一台防空炮，可以发射火箭弹，火箭弹对空能力极强，会优先攻击飞行单位，冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket5=20|Time:20|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_40_8_1000,Company_1258,35,$AirOpenDay,-2,4,6,1,2,,40008_2|40009_1|40011_3|40010_2,1250|1251|1258|1259,,322,
+1259,#肩扛式重型防空炮,1259,HangShoulder,#在肩部挂载一台重型防空炮，可以发射火箭弹，适合用来压制远处集群，会优先攻击飞行单位冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,ExploWeapon|RocketWeapon|AntiAir,1,ArmorStrategy:ShoulderRocket6=28|Time:30|AddSpeed:-18|AddRotSpeed:-18|AiShoulderLogic:Normal_40_10_1500,Company_1258,100,55,-2,6,8,1,2,,,1250|1251|1258|1259,,323,
 
 1260,#肩扛切割射线,1260,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay=50|Time:55|AddSpeed:-10|AddRotSpeed:-10|AiShoulderLogic:Normal_15_3_1200,Company_1260,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,324,
 1261,#肩扛切割射线,1261,HangShoulder,#在肩部挂载一台切割射线，比起手持式切割射线威力更大更持久\n冷却时间:<Description:1>秒\n（在战略面板启用）\n机体速度<Description:2>%，转向速度<Description:3>%\n,LaserWeapon,1,ArmorStrategy:ShoulderRay2=72|Time:72|AddSpeed:-25|AddRotSpeed:-25|AiShoulderLogic:Normal_15_3_1200,Company_1260,80,42,-2,4,6,1,2,,40008_8|40013_15|40005_2,10027_10035|10127_10134|10031_10035|10131_10134|10044|10045|10144|10145|2162_2169,,325,
@@ -627,7 +627,7 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2009,#弹仓,2009,WeaponModel,#武器发射子弹数+<Description>%\n,ShotWeapon,1,FireNum:10,Main2_3,10,0,1,0,0,0,0,,40001_2|40002_1|40006_1|40011_1|40005_1,10002|10003|10008|10020|10023|10025|10102|10103|10108|10120|10123|10125|10202|10203|10220|10223|10225|10303|10320,,360,
 2010,#弹仓+,2010,WeaponModel,#武器发射子弹数+<Description>%\n武器温度将额外带来发射子弹数加成,ShotWeapon,1,FireNum:15|TempaFireNum:1,Main2_3,20,0,2,0,0,0,0,,,2009_2012,,361,
 2011,#高级弹仓,2011,WeaponModel,#武器发射子弹数+<Description>%\n武器温度将额外带来发射子弹数加成,ShotWeapon,1,FireNum:20|TempaFireNum:2,Main2_3,40,31,3,0,0,0,0,,,2009_2012,,362,
-2012,#制式弹仓,2012,WeaponModel,#武器发射子弹数+<Description>%\n武器温度将额外带来发射子弹数加成,ShotWeapon,1,FireNum:30|TempaFireNum:3,Main2_3,80,62,-1,0,0,0,0,,,2009_2012,,363,
+2012,#制式弹仓,2012,WeaponModel,#武器发射子弹数+<Description>%\n武器温度将额外带来发射子弹数加成,ShotWeapon,1,FireNum:30|TempaFireNum:3,Company_2012,80,62,-1,0,0,0,0,,,2009_2012,,363,
 
 2013,#大弹鼓,2013,WeaponModel,#弹夹子弹数+<Description>%,,1,ClipNum:20,Company_2017,10,0,1,0,0,0,0,,40001_1|40002_3|40006_2|40005_1,,,364,
 2014,#大弹鼓+,2014,WeaponModel,#弹夹子弹数+<Description>%,,1,ClipNum:30,Company_2017,20,0,2,0,0,0,0,,,2013_2016,,365,
@@ -1489,7 +1489,7 @@ let csv04 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2142,#机体肾上腺素,2142,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:10,Main2_5,10,30,1,0,0,0,0,,40001_1|40002_3|40006_2,,,616,
 2143,#机体肾上腺素+,2143,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:25,Main2_5,25,35,2,0,0,0,0,,,2142_2145,,617,
 2144,#高级机体肾上腺素,2144,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:40,Main2_5,80,40,3,0,0,0,0,,,2142_2145,,618,
-2145,#制式机体肾上腺素,2145,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:50,Main2_5,150,60,-1,0,0,0,0,,,2142_2145,,619,
+2145,#制式机体肾上腺素,2145,BuffModel,#当机体生命值低于50%，射速和移动速度+<Description>%,BuffModel,1,LowLifePlusRate:50,Company_2145,150,60,-1,0,0,0,0,,,2142_2145,,645,
 
 2151,#防爆模块,2151,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:10,Main2_3,20,18,1,0,0,0,0,,40010_1|40031_1,,,625,
 2152,#防爆模块+,2152,BuffModel,#爆炸抗性+<Description>,BuffModel|Door|Cannon,1,ExploResist:15,Main2_3,40,36,2,0,0,0,0,,,2151_2154,,626,
@@ -2072,7 +2072,7 @@ let csv14 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1316,#轨道元素炸弹轰炸,1316,Strategy,#可以向目标地点发射数枚轨道炸弹，带有随机元素效果\n进一步缩短了发射到瞄准的间隔时间及冷却时间，并增加了精度\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeElement|CD:60|Code:2333,Main2_2,70,$StrategyOpenDay,-2,1,2,0,0,,40008_10|40010_15|40015_3|40016_3|40034_3,1307|1308|1309,,339,
 1317,#轨道连续精确轰炸,1317,Strategy,#可以向目标地点发射数枚制导炸弹，尽管延迟很长但是带有跟踪效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipe_Lock|CD:110|Code:02213,Company_1300,100,$StrategyOpenDay,-2,1,3,0,0,1303,40008_15|40010_15|40005_15|40034_2,1314_1319,,348,
 
-1318,#122mm炮击火力网,1318,Strategy,#使用122mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint2|CD:135|Code:2311033,Main2_2,150,$StrategyOpenDay,1,1,3,0,0,1319|1306,40008_20|40010_20|40005_20|40034_2|40032_2,1314_1319,,341,
+1318,#122mm炮击火力网,1318,Strategy,#使用122mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint2|CD:135|Code:2311033,Company_1318,150,$StrategyOpenDay,1,1,3,0,0,1319|1306,40008_20|40010_20|40005_20|40034_2|40032_2,1314_1319,,349,
 1319,#155mm炮击火力网,1319,Strategy,#使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint3|CD:160|Code:2312032,Company_1319,240,$StrategyOpenDay,-1,1,4,0,0,,,1318,,350,
 
 1321,#空投聚变反应堆,1321,Strategy,#可以向目标地点空投一座微型剧变反应堆\n需要手动激活，激活后会产生巨大爆炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeNukeBox|CD:100|Code:3023103,Company_1320,120,$StrategyOpenDay,-2,1,2,0,0,1320,40008_12|40010_12|40005_12|40034_2,1301_1303,,335,
@@ -2095,7 +2095,7 @@ let csv15 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 4014,#很多绿植,4014,Furniture,#虽然是塑料叶子，但是是难得的绿色\n舒适度<Description>,,1,AddComfort:6,Sub_8,24,$RoomOpenDay,-2,0,0,0,0,,40201_24,,,1176,
 
 4003,#行军床,4003,Furniture,#可以睡觉的地方，不是很舒服\n舒适度<Description>,,1,AddComfort:4,Sub_8,16,$RoomOpenDay,-2,0,0,0,0,,40201_16,,,1165,
-4011,#很舒服的床,4011,Furniture,#软软的床，躺上去一定很舒服\n舒适度<Description>,,1,AddComfort:8,Sub_8,32,$RoomOpenDay,-2,0,0,0,0,,40201_12|40202_2,,,1173,
+4011,#很舒服的床,4011,Furniture,#软软的床，躺上去一定很舒服\n舒适度<Description>,,1,AddComfort:8,Company_4011,32,$RoomOpenDay,0,0,0,0,,40201_12|40202_2,,,1221,
 
 4020,#顶灯,4020,Furniture,#可以照亮墙面的灯饰\n舒适度<Description>,,1,AddComfort:4,Sub_7,40,20,-2,0,0,0,0,,40202_3|40201_10,,,1182,
 4013,#台灯,4013,Furniture,#没有灯泡的台灯\n舒适度<Description>,,1,AddComfort:5,Sub_8,20,$RoomOpenDay,-2,0,0,0,0,,40202_2,,,1175,
@@ -5220,15 +5220,20 @@ let textList = {
 	Company_1224			: `克隆集团`						+ ` # 克隆集团,克隆集團,Clone Corp,クローングループ`,
 	Company_1227			: `旧管理局`						+ ` # 旧管理局,舊管理局,Old Admin,旧管理局`,
 	Company_1250			: `铁甲有限公司`					+ ` # 铁甲有限公司,鐵甲有限公司,Iron Armor Co.,鉄の甲株式会社`,
+	Company_1252			: `桃香与猫有限公司`				+ ` # 桃香与猫有限公司,桃香與貓有限公司,Peach Fragrance and Cat Co. Ltd,桃香と猫かぶしきがいしゃ`,
+	Company_1253			: `?`								+ ` # ?,?,?,?`,
 	Company_1255			: `Bastion Armament & Ordnance`		+ ` # Bastion Armament & Ordnance,Bastion Armament & Ordnance,Bastion Armament & Ordnance,Bastion Armament & Ordnance`,
 	Company_1256			: `Ash&Sentinel电子实验室`			+ ` # Ash&Sentinel电子实验室,Ash&Sentinel電子實驗室,Ash&Sentinel Electronics Lab,Ash&Sentinel 電子研究所`,
+	Company_1258			: `牵牛星科技`						+ ` # 牵牛星科技,牽牛星科技,Altair Technology,牽牛星科技`,
 	Company_1260			: `Benjamin.inc`					+ ` # Benjamin.inc,Benjamin.inc,Benjamin.inc,Benjamin.inc`,
 	Company_1262			: `风雪航空航天制造所`				+ ` # 风雪航空航天制造所,風雪航空航太製造所,Wind&Snow Aerospace Manufacturing Institute,風雪航空製造所`,
 	Company_1300			: `超级驱逐舰SES解放圣女`			+ ` # 超级驱逐舰SES解放圣女,超級驅逐艦SES解放聖女,Super destroyer SES,超駆逐艦SES`,
 	Company_1310			: `苍岁纳米医学所`					+ ` # 苍岁纳米医学所,蒼歲納米醫學所,Cangsui Nanomedicine Institute,蒼歳ナノ医学所`,
+	Company_1318			: `S.E.D 驅逐艦`					+ ` # S.E.D 驅逐艦,S.E.D 驅逐艦,S.E.D destroyer,S.E.D`,
 	Company_1319			: `超级地球武装部队大炮`			+ ` # 超级地球武装部队大炮,超級地球武裝部隊大炮,Super Armed Cannon,スーパー武装部隊大砲`,
 	Company_1320			: `纳斯德工业`						+ ` # 纳斯德工业,納斯德工業,Nasod Industries,ナソッド工業`,
 	
+	Company_2012			: `铁雨弹幕兵工厂`					+ ` # 铁雨弹幕兵工厂,鐵雨彈幕兵工廠,Iron Rain Barrage Arsenal,鉄雨弾幕兵器工場`,
 	Company_2017			: `黎明工业`						+ ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
 	Company_2025			: `六翼`							+ ` # 六翼,六翼,Six Wings,六翼`,
 	Company_2042			: `Valesworn. Inc`					+ ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
@@ -5242,6 +5247,7 @@ let textList = {
 	Company_2117			: `中微子科技`						+ ` # 中微子科技,中微子科技,Neutrino technology,ニュートリノテクノロジー`,
 	Company_2124			: `提西亚电子公司`					+ ` # 提西亚电子公司,提西亞電子公司,Tecia Electronics Company,ティシア電子`,
 	Company_2126			: `CMF护盾技术`						+ ` # CMF护盾技术,CMF護盾技術,CMF's Shield TECH,CMFシールド技術`,
+	Company_2145			: `仿生学者-奇奤`					+ ` # 仿生学者-奇奤,仿生學者-奇奤,Biomimicry scholar,バイオニック学者`,
 	Company_2158			: `水雷部纯氧鱼雷研发中心`			+ ` # 水雷部纯氧鱼雷研发中心,水雷部純氧魚雷研發中心,Pure Oxygen Torpedo Research and Development Center of the Mine Department,機雷部純酸素魚雷研究開発センター`,
 	Company_2278			: `The Black Company Inc.`			+ ` # The Black Company Inc.,The Black Company Inc.,The Black Company Inc.,The Black Company Inc.`,
 	Company_2398			: `箱崎重工`						+ ` # 箱崎重工,箱崎重工,Hakozaki heavy industry,箱崎重工`,
@@ -5249,6 +5255,7 @@ let textList = {
 	Company_2904			: `AvtoVAZ Industries`				+ ` # AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries,AvtoVAZ Industries`,
 	
 	Company_3008			: `人性化安全解决方案`				+ ` # 人性化安全解决方案,人性化安全解決方案,Humane Security Solutions,ヒューマンセキュリティソリューション`,
+	Company_4011			: `菲莉赛特&克拉萨夫卡`				+ ` # 菲莉赛特&克拉萨夫卡,菲莉賽特&克拉薩夫卡,Filiset & Krasavka,フィリセット＆クラサフカ`,
 	Company_4015			: `考斯沃斯制作公司`				+ ` # 考斯沃斯制作公司,考斯沃斯製作公司,Kosworth Friendly Production Co.,コスワース·フレンドリー·プロダクション`,
 	Company_4025			: `地平线金融`						+ ` # 地平线金融,地平線金融,Horizon Finance,ホライゾン金融`,
 	
