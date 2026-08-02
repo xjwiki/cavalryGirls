@@ -333,7 +333,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 // --
 
-10010,#喷火器,1010,Weapon,#可以喷射火焰并造成燃烧效果的武器\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,SplitWeapon,1,Weapon:10|AddSpeed:-15|AddRotSpeed:-15,Main_3,40,16,1,2,4,2,3,10110|10111|10036|10037,40001_8|40002_8|40008_3|40005_1|40015_2,,,13,
+10010,#喷火器,1010,Weapon,#可以喷射火焰并造成燃烧效果的武器\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,SplitWeapon,1,Weapon:10|AddSpeed:-15|AddRotSpeed:-15,Company_10010,40,16,1,2,4,2,3,10110|10111|10036|10037,40001_8|40002_8|40008_3|40005_1|40015_2,,,13,
 10110,#喷火器M1,10110,Weapon,#对喷火器进行了强化，全属性增加，略微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,SplitWeapon,1,Weapon:110|AddSpeed:-25|AddRotSpeed:-15,Company_10110,80,30,2,4,6,2,5,10210|10211|10136|10137,,10010,,68,
 10210,#高压喷火器,10210,Weapon,#对喷火器M1进行了强化，全属性增加，略微增重\n机体速度<Description:1>%，转向速度<Description:2>%\n,SplitWeapon,1,Weapon:210|AddSpeed:-30|AddRotSpeed:-20,Main_2,150,0,-1,4,9,4,8,10236|10510,,,,118,
 
@@ -396,7 +396,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 10232,#长距电弧枪SM2,10232,Weapon,#对长距电弧枪S进行了全属性的强化，使用寿命极大缩短了\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:232|AddSpeed:-40|AddRotSpeed:-40,Main_2,200,0,-1,4,12,4,9,10233,,,,135,
 
 10033,#聚焦电弧枪,10033,Weapon,#可以发射聚焦电弧的武器，威力非常强大\n（电磁武器有概率造成非常短暂的麻痹伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:33|AddSpeed:-20|AddRotSpeed:-30,Main_5,80,23,1,2,7,2,4,10131|10132|10133|10134|10044|10045,40008_1|40009_4|40019_5,10027|10028|10029|10030|10031|10032|10033|10034|10035,,35,
-10133,#聚焦电弧枪S,10133,Weapon,#对聚焦电弧枪进行了使用寿命的强化，使得重量增加了\n（电磁武器有概率造成非常短暂的麻痹伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:133|AddSpeed:-40|AddRotSpeed:-50,Main_2,125,23,2,2,9,2,5,10233,,10033,,90,
+10133,#聚焦电弧枪S,10133,Weapon,#对聚焦电弧枪进行了使用寿命的强化，使得重量增加了\n（电磁武器有概率造成非常短暂的麻痹伤害）\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:133|AddSpeed:-40|AddRotSpeed:-50,Company_10133,125,23,2,2,9,2,5,10233,,10033,,90,
 10233,#聚焦电弧枪SX,10233,Weapon,#对聚焦电弧枪S进行了进一步强化，变得更强大了\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:233|AddSpeed:-60|AddRotSpeed:-75,Company_10233,180,23,3,2,12,4,7,10333,,,,136,
 10333,#雷神炮,10333,Weapon,#对聚焦电弧枪SX进行的大型化改造，可以释放破坏力极其惊人的特高压电弧，伤害非常惊人，缺点是极重，且再装填长\n机体速度<Description:1>%，转向速度<Description:2>%\n,ElectricWeapon,1,Weapon:333|AddSpeed:-75|AddRotSpeed:-90,Company_10333,500,23,-1,2,15,4,8,10533|10430,,,,164,
 
@@ -640,9 +640,9 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2020,#制式换弹模块,2020,WeaponModel,#换弹时间<Description:0>%\n老化度+<Description:1>%,,1,ReloadSpeed:-15|BrokePos:16,Company_2017,80,0,-1,0,0,0,0,,,2017_2020,,371,
 
 2021,#尖头弹,2021,WeaponModel,#子弹射程+<Description>%,NormalWeapon,1,BulletRange:4,Main2_2,10,0,1,0,0,0,0,,40001_2|40002_3|40003_1|40007_1|40005_1,,,372,
-2022,#尖头弹+,2022,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:8|TempaBulletRange:1,Main2_2,20,0,2,0,0,0,0,,,2021_2024,,373,
-2023,#高级尖头弹,2023,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:10|TempaBulletRange:1,Main2_2,40,31,3,0,0,0,0,,,2021_2024,,374,
-2024,#制式尖头弹,2024,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:12|TempaBulletRange:2,Main2_2,80,62,-1,0,0,0,0,,,2021_2024,,375,
+2022,#尖头弹+,2022,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:8|TempaBulletRange:1,Company_2022,20,0,2,0,0,0,0,,,2021_2024,,373,
+2023,#高级尖头弹,2023,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:10|TempaBulletRange:1,Company_2022,40,31,3,0,0,0,0,,,2021_2024,,374,
+2024,#制式尖头弹,2024,WeaponModel,#子弹射程+<Description>%\n武器温度将额外带来子弹射程加成,NormalWeapon,1,BulletRange:12|TempaBulletRange:2,Company_2024,80,62,-1,0,0,0,0,,,2021_2024,,375,
 
 2025,#杀伤模块,2025,WeaponModel,#子弹伤害+<Description>%\n,NormalWeapon,1,Damage:10,Company_2025,25,0,1,0,0,0,0,,40001_5|40003_2|40007_3|40004_2|40005_3,,,376,
 2026,#杀伤模块+,2026,WeaponModel,#子弹伤害+<Description:0>%\n对护盾伤害<Description:1>%\n,NormalWeapon,1,Damage:25|ShiledDamage:-25,Main2_11,50,11,2,0,0,0,0,,,2025_2028,,377,
@@ -1617,11 +1617,11 @@ let csv06 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1212,#坚固外挂弹舱,1212,Hang,#在挂载处安装一台换弹时间-8%的挂件（注：该效果不可叠加）。耐久3000，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorReload2_MechaReloadSpeed=-7|AddSpeed:-5|AddRotSpeed:-5,Company_1211,50,50,-2,0,0,0,0,,,1210_1212,,288,
 
 1213,#外挂液压机,1213,Hang,#在挂载处安装一台移动速度+30%的挂件。耐久1000，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorSpeed0_AddSpeedLimit=30|AddSpeed:-0|AddRotSpeed:-5,Main2_4,30,15,-2,0,0,0,0,,,2050_2053,,289,
-1214,#高级外挂液压机,1214,Hang,#在挂载处安装一台移动速度+45%的挂件。耐久500，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorSpeed1_AddSpeedLimit=45|AddSpeed:-0|AddRotSpeed:-5,Main2_4,60,30,-2,0,0,0,0,,40001_2|40002_2|40006_2|40007_2|40021_5,2050_2053,,290,
+1214,#高级外挂液压机,1214,Hang,#在挂载处安装一台移动速度+45%的挂件。耐久500，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorSpeed1_AddSpeedLimit=45|AddSpeed:-0|AddRotSpeed:-5,Company_1214,60,30,-2,0,0,0,0,,40001_2|40002_2|40006_2|40007_2|40021_5,2050_2053,,298,
 1215,#坚固外挂液压机,1215,Hang,#在挂载处安装一台移动速度+25%的挂件。耐久3000，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorSpeed2_AddSpeedLimit=25|AddSpeed:-0|AddRotSpeed:-5,Main2_4,60,50,-2,0,0,0,0,,,2050_2053,,291,
 
 1216,#外挂传动器,1216,Hang,#在挂载处安装一台炮塔旋转速度+30%的挂件。耐久1000，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorRot0_AddRotSpeedLimit=30|AddSpeed:-5|AddRotSpeed:-0,Main2_2,30,15,-2,0,0,0,0,,,2054_2057,,292,
-1217,#高级外挂传动器,1217,Hang,#在挂载处安装一台炮塔旋转速度+45%的挂件。耐久500，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorRot1_AddRotSpeedLimit=45|AddSpeed:-5|AddRotSpeed:-0,Main2_2,60,30,-2,0,0,0,0,,40001_2|40002_2|40006_2|40007_2|40021_5,2054_2057,,293,
+1217,#高级外挂传动器,1217,Hang,#在挂载处安装一台炮塔旋转速度+45%的挂件。耐久500，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorRot1_AddRotSpeedLimit=45|AddSpeed:-5|AddRotSpeed:-0,Company_1217,60,30,-2,0,0,0,0,,40001_2|40002_2|40006_2|40007_2|40021_5,2054_2057,,301,
 1218,#坚固外挂传动器,1218,Hang,#在挂载处安装一台炮塔旋转速度+25%的挂件。耐久3000，被摧毁后效果会消失。（次日修复）\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|BackBody,1,Armor:ArmorRot2_AddRotSpeedLimit=25|AddSpeed:-5|AddRotSpeed:-0,Main2_2,60,50,-2,0,0,0,0,,,2054_2057,,294,
 
 1221,#外挂照明灯,1221,Hang,#在挂载处安装一个照亮周围的灯。照明角度大但是距离短\n机体速度<Description:1>%，转向速度<Description:2>%\n,Body|Head|Light,1,Armor:ArmorLightWide|AddSpeed:-1|AddRotSpeed:-1,Main2_3,20,65,-2,0,0,0,0,,40013_1|40014_1|40007_2|40008_2,,,297,
@@ -1781,7 +1781,7 @@ let csv09 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 77,#帝国全史（第15版）,77,Book,#描写帝国辉煌历史的书籍，不过里面有疑似先代王篡位的内容因此被列为了禁书。说真的，谁当皇帝和你有关系吗【警告：禁书】,Danger,99,ChangeThought:1_2_1_0|ChangePressureByReason,Book_2,12,-1,1,0,0,0,0,,,,,1137,
 
 66,#所见所闻,66,Book,#一位记者的传记，讲述了记者所见闻的帝国偏远地区的艰苦生活【警告：禁书】,Danger,99,ChangeThought:1_1_2_1|ChangePressureByReason,Company_66,12,-1,1,0,0,0,0,,,,,1174,
-67,#娱乐至死,67,Book,#一本描述了享乐主义是如何毁掉一个人，娱乐至死主义是如何毁掉一个时代的书籍【警告：禁书】,Danger,99,ChangeThought:1_2_1_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1127,
+67,#娱乐至死,67,Book,#一本描述了享乐主义是如何毁掉一个人，娱乐至死主义是如何毁掉一个时代的书籍【警告：禁书】,Danger,99,ChangeThought:1_2_1_0|ChangePressureByReason,Company_67,12,-1,-2,0,0,0,0,,,,,1175,
 65,#最终审判日,65,Book,#一本宣扬末世到来的书，非常危言耸听，虽然其中描写的很多现象都是真实存在的【警告：禁书】,Danger,99,ChangeThought:1_-2_2_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1125,
 71,#批判性思维,71,Book,#一本哲学书籍，宣扬批判精神，鼓励人们去怀疑去思考【警告：禁书】,Danger,99,ChangeThought:2_2_0_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1131,
 68,#帝国终将灭亡,68,Book,#一本宣传叛军极端思想的书籍，但是内容相当露骨，文字都透露着危险【警告：禁书】,Danger,99,ChangeThought:3_-2_1_0|ChangePressureByReason,Book_3,12,-1,1,0,0,0,0,,,,,1128,
@@ -2095,7 +2095,7 @@ let csv15 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 4014,#很多绿植,4014,Furniture,#虽然是塑料叶子，但是是难得的绿色\n舒适度<Description>,,1,AddComfort:6,Sub_8,24,$RoomOpenDay,-2,0,0,0,0,,40201_24,,,1176,
 
 4003,#行军床,4003,Furniture,#可以睡觉的地方，不是很舒服\n舒适度<Description>,,1,AddComfort:4,Sub_8,16,$RoomOpenDay,-2,0,0,0,0,,40201_16,,,1165,
-4011,#很舒服的床,4011,Furniture,#软软的床，躺上去一定很舒服\n舒适度<Description>,,1,AddComfort:8,Company_4011,32,$RoomOpenDay,0,0,0,0,,40201_12|40202_2,,,1221,
+4011,#很舒服的床,4011,Furniture,#软软的床，躺上去一定很舒服\n舒适度<Description>,,1,AddComfort:8,Company_4011,32,$RoomOpenDay,-2,0,0,0,0,,40201_12|40202_2,,,1221,
 
 4020,#顶灯,4020,Furniture,#可以照亮墙面的灯饰\n舒适度<Description>,,1,AddComfort:4,Sub_7,40,20,-2,0,0,0,0,,40202_3|40201_10,,,1182,
 4013,#台灯,4013,Furniture,#没有灯泡的台灯\n舒适度<Description>,,1,AddComfort:5,Sub_8,20,$RoomOpenDay,-2,0,0,0,0,,40202_2,,,1175,
@@ -5199,6 +5199,7 @@ let textList = {
 	Company_40				: `黄河制造厂`						+ ` # 黄河制造厂,黃河製造廠,Yellow River Mfg,黄河製作所`,
 	Company_50				: `熔铁之礼物`						+ ` # 熔铁之礼物,熔鐵之禮物,Sentinel Girls' Gift,センティネルガールズギフト`,
 	Company_66				: `月见·八千代`						+ ` # 月见·八千代,月見·八千代,Tsukimi Yachiyo,月見・八千代`,
+	Company_67				: `JMComic2`						+ ` # JMComic2,JMComic2,JMComic2,JMComic2`,
 	
 	Company_100				: `翼骑兵工业`						+ ` # 翼骑兵工业,翼騎兵工業,Winged Hussars Industries,ウィングドフサーズ·インダストリーズ`,
 	Company_101				: `艾吉斯系統`						+ ` # 艾吉斯系統,艾吉斯系統,Aigis System,アイギスシステム`,
@@ -5217,6 +5218,8 @@ let textList = {
 	Company_1205			: `巴尔德科技`						+ ` # 巴尔德科技,巴爾德科技,BALDR Tech,BALDR テク`,
 	Company_1206			: `独立钢铁公司`					+ ` # 独立钢铁公司,獨立鋼鐵公司,Steel Works Independent Co.,鋼鉄工場独立株式会社`,
 	Company_1211			: `劳恩综合制造`					+ ` # 劳恩综合制造,勞恩綜合製造,Lawn Integrated Manufacturing,ラウン総合製造`,
+	Company_1214			: `纹声动力公司`					+ ` # 纹声动力公司,紋聲動力公司,W.S Power .Inc,W.S Power .Inc.`,
+	Company_1217			: `哈蒙德机器人公司`				+ ` # 哈蒙德机器人公司,哈蒙德機器人公司,Hammond Robotics,ハムンド・ロボティクス`,
 	Company_1224			: `克隆集团`						+ ` # 克隆集团,克隆集團,Clone Corp,クローングループ`,
 	Company_1227			: `旧管理局`						+ ` # 旧管理局,舊管理局,Old Admin,旧管理局`,
 	Company_1250			: `铁甲有限公司`					+ ` # 铁甲有限公司,鐵甲有限公司,Iron Armor Co.,鉄の甲株式会社`,
@@ -5235,6 +5238,8 @@ let textList = {
 	
 	Company_2012			: `铁雨弹幕兵工厂`					+ ` # 铁雨弹幕兵工厂,鐵雨彈幕兵工廠,Iron Rain Barrage Arsenal,鉄雨弾幕兵器工場`,
 	Company_2017			: `黎明工业`						+ ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
+	Company_2022			: `HuaS战场应对组·研发部`			+ ` # HuaS战场应对组·研发部,HuaS戰場應對組·研發部,HuaS R&D Department,HuaS R&D 部門`,
+	Company_2024			: `?`								+ ` # ?,?,?,?`,
 	Company_2025			: `六翼`							+ ` # 六翼,六翼,Six Wings,六翼`,
 	Company_2042			: `Valesworn. Inc`					+ ` # Valesworn. Inc,Valesworn. Inc,Valesworn,Valesworn. Inc`,
 	Company_2049			: `堡垒防务集团`					+ ` # 堡垒防务集团,堡壘防務集團,Bastion Defence Group,砦防衛グループ`,
@@ -5269,7 +5274,8 @@ let textList = {
 	Company_10007			: `莱茵金属`						+ ` # 莱茵金属,萊茵金屬,Rheinmetall,ラインメタル`,
 	Company_10008			: `Amazonian Crimson Works`			+ ` # Amazonian Crimson Works,Amazonian Crimson Works,Amazonian Crimson Works,Amazonian Crimson Works`,
 	Company_10009			: `努恩枪炮学校`					+ ` # 努恩枪炮学校,努恩槍炮學校,Nuln Gunnery School,ヌーン銃砲学校`,
-	Company_10010			: `癫火公司`						+ ` # 癫火公司,癲火公司,Crazy Fire Company,テンカン会社`,
+	Company_10010			: `烙印工坊`						+ ` # 烙印工坊,烙印工坊,Imprint Workshop,インプリントワークショップ`,
+	// Company_10010		: `癫火公司`						+ ` # 癫火公司,癲火公司,Crazy Fire Company,テンカン会社`,
 	Company_10011			: `PROMETHEUS军装管理局`			+ ` # PROMETHEUS军装管理局,PROMETHEUS軍裝管理局,PROMETHEUS Bureau of arms control,PROMETHEUS兵装管理局`,
 	Company_10013			: `修猫重工&阿纳海姆电子`			+ ` # 修猫重工&阿纳海姆电子,修貓重工&阿納海姆電子,CAT Repair Heavy Industries&Anaheim Electronics,CAT重工&アナハイム電子`,
 	Company_10014			: `洙溟工业`						+ ` # 洙溟工业,洙溟工業,Zhuming Industry,Zhuming工業`,
@@ -5312,6 +5318,7 @@ let textList = {
 	Company_10118			: `阿布雷克&比昂有限责任公司`		+ ` # 阿布雷克&比昂有限责任公司,阿佈雷克&比昂有限責任公司,Abrek&Bion.Inc,アブレック&ビオン株式会社`,
 	Company_10127			: `星光爆裂工业`					+ ` # 星光爆裂工业,星光爆裂工業,Starburst Industry,スターライトバースト工業`,
 	Company_10129			: `垂钓者轻工业`					+ ` # 垂钓者轻工业,垂釣者輕工業,Angler's Light-Tech,釣り人軽工業`,
+	Company_10133			: `海啸防御系统`					+ ` # 海啸防御系统,海嘯防禦系統,Tsunami Defense,津波防御`,
 	Company_10140			: `拉沃契金设计局`					+ ` # 拉沃契金设计局,拉沃契金設計局,Dragon Industries,珍獣電工`,
 	Company_10142			: `Gyrocket-Prod`					+ ` # Gyrocket-Prod,Gyrocket-Prod,Gyrocket Prod,ジャイロケット Prod`,
 	Company_10155			: `鲸灯科技`						+ ` # 鲸灯科技,鯨燈科技,Whale Lamp Technology,鯨灯技術`,
@@ -5373,7 +5380,7 @@ let textList = {
 let csv0 = [];
 [csv01, csv02, csv03, csv04, csv05, csv06, csv07, csv08, 
  csv09, csv10, csv11, csv12, csv13, csv14, csv15, csv16, 
- csv17, csv18, ] // csv19, csv20,
+ csv17, csv18,] // csv19, csv20,
 .forEach(function(list){
 	csv0 = csv0.concat(list) });
 
