@@ -199,6 +199,8 @@ word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;
 使用其他页面整理过的 items 数据, 免去重新整理的麻烦
 最后再配合 ItemsCount.csv, 就能得到所有需要的数据了
 
+Comapany_WM 的拼写出错了, 多了个 a, 但它也是属于可冠名的内容出错导致不会被打勾, 反而是好事, 总之先保持当前的状态
+
 */
 
 // 武器列表
@@ -416,7 +418,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 10048,#磁电散弹枪,10048,Weapon,#可以射击能造成麻痹效果的电磁弹的散弹枪（子弹必须击穿才能触发该效果）\n武器的破盾效果极佳\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ShotWeapon|MagWeapon,1,Weapon:48|AddSpeed:-15|AddRotSpeed:-15,Main_3,42,16,1,3,6,1,3,10148|10049|10002|10003,40008_2|40011_4|40005_2|40018_3,10002|10003|10008|10020|10023|10025|10102|10103|10108|10120|10123|10125|10202|10203|10220|10223|10225|10303|10320|10039|10040,,50,
 10148,#磁电散弹枪M1,10148,Weapon,#可以射击能造成麻痹效果的电磁弹的散弹枪（子弹必须击穿才能触发该效果）\n武器的破盾效果极佳\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ShotWeapon|MagWeapon,1,Weapon:148|AddSpeed:-15|AddRotSpeed:-15,Main_3,150,21,2,4,8,3,5,10248|10102|10123|10120|10149,,10048,,102,
-10248,#磁电重型散弹枪,10248,Weapon,#磁电散弹枪的重型型号，重量被极大的增加了，取而代之的是全属性增强。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ShotWeapon|MagWeapon,1,Weapon:248|AddSpeed:-25|AddRotSpeed:-30,Main_3,225,0,-1,4,10,3,7,,,,,143,
+10248,#磁电重型散弹枪,10248,Weapon,#磁电散弹枪的重型型号，重量被极大的增加了，取而代之的是全属性增强。\n机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|ShotWeapon|MagWeapon,1,Weapon:248|AddSpeed:-25|AddRotSpeed:-30,Company_10248,225,0,-1,4,10,3,7,,,,,143,
 
 10040,#磁电狙击步枪,10040,Weapon,#可以射击能造成麻痹效果的电磁弹的狙击枪（子弹必须击穿才能触发该效果）\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle|MagWeapon,1,Weapon:40|AddSpeed:-10|AddRotSpeed:-20,Company_10040,50,31,1,2,7,1,2,10140|10005|10115|10031|10080,40008_1|40004_5|40005_2|40018_3|40019_2,,,42,
 10140,#磁电狙击步枪M2,10140,Weapon,#可以射击能造成麻痹效果的电磁弹的狙击枪的强化型（子弹必须击穿才能触发该效果）\n重量适中，机体速度<Description:1>%，转向速度<Description:2>%\n,NormalWeapon|Riffle|MagWeapon,1,Weapon:140|AddSpeed:-10|AddRotSpeed:-20,Company_10140,135,69,2,2,9,2,4,10240|10105|10115|10133|10180,,10040,,96,
@@ -486,11 +488,11 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 // --
 
-10052,#光剑,1052,CloseWeapon,#可以进行斩击的武器\n【连段攻击】数次轻击后进行一次范围较大的重击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:52|AddSpeed:-7|AddRotSpeed:-7,Main_4,15,0,1,2,5,2,4,10053|10152,40029_2|40008_1|40002_4,,,196,
+10052,#光剑,1052,CloseWeapon,#可以进行斩击的武器\n【连段攻击】数次轻击后进行一次范围较大的重击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:52|AddSpeed:-7|AddRotSpeed:-7,Company_2380,15,0,1,2,5,2,4,10053|10152,40029_2|40008_1|40002_4,,,196,
 10152,#光剑S2,10152,CloseWeapon,#对光剑进行了强化，增加了耐久同时也更重了\n【连段攻击】最后一段斩击可以释放强力剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:152|AddSpeed:-8|AddRotSpeed:-8,Company_10152,28,0,-1,3,5,3,5,10153,,10052,,220,
 
 10053,#光子薙刀,1053,CloseWeapon,#较光剑攻击更弱，但斩击速度更快\n【连段攻击】数次轻击后对前方进行多段斩击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:53|AddSpeed:-4|AddRotSpeed:-4,Main_3,18,18,1,1,3,2,4,10153|10052,40029_2|40008_1|40002_2,10052,,197,
-10153,#光子薙刀M3,10153,CloseWeapon,#对光子薙刀进行了强化\n【连段攻击】数次轻击后对前方进行多段强力斩击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:153|AddSpeed:-6|AddRotSpeed:-6,Main_3,35,18,-1,3,5,3,5,10152,,10053,,221,
+10153,#光子薙刀M3,10153,CloseWeapon,#对光子薙刀进行了强化\n【连段攻击】数次轻击后对前方进行多段强力斩击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|SaberWeapon|SingleHand,1,Weapon:153|AddSpeed:-6|AddRotSpeed:-6,Company_10153,35,18,-1,3,5,3,5,10152,,10053,,221,
 
 // --
 
@@ -511,7 +513,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // --
 
 10054,#电光斧,1054,CloseWeapon,#可以进行大范围斩击的武器，力量伤害及范围都很可观\n【连段攻击】数次轻击后进行一次范围较大的重击\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:54|AddSpeed:-21|AddRotSpeed:-21,TankType_PlayerName_2,80,35,1,4,8,2,4,10055|10154,40029_7|40008_4|40002_10,10054,,198,
-10154,#电光斧M,10154,CloseWeapon,#对电光斧进行了强化\n【连段攻击】最后一段斩击可以释放强力剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:154|AddSpeed:-24|AddRotSpeed:-24,TankType_PlayerName_2,200,6,-1,4,10,4,5,10055,,10054,,222,
+10154,#电光斧M,10154,CloseWeapon,#对电光斧进行了强化\n【连段攻击】最后一段斩击可以释放强力剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:154|AddSpeed:-24|AddRotSpeed:-24,Company_10154,200,6,-1,4,10,4,5,10055,,10054,,222,
 
 10055,#高能电光斧,1055,CloseWeapon,#可以进行大范围斩击的武器，力量伤害及范围都很高\n【连段攻击】最后一段斩击可以释放强力剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:55|AddSpeed:-32|AddRotSpeed:-32,Company_10155,120,60,1,4,8,2,4,10155,10054_1|40029_2|40008_1|40002_2|40032_1,10054|10055|10154|10155,,199,
 10155,#高能电光斧M,10155,CloseWeapon,#对高能电光斧进行了强化\n【连段攻击】普通攻击和连段攻击均可以释放剑气\n机体速度<Description:1>%，转向速度<Description:2>%\n,MeeleeWeapon|AxeWeapon|SingleHand,1,Weapon:155|AddSpeed:-36|AddRotSpeed:-36,Company_10155,300,18,-1,4,10,4,6,10255,,10055,,223,
@@ -545,17 +547,17 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 10069,#双剑,1069,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:69|AddSpeed:-12|AddRotSpeed:-30,Company_10069,120,0,1,2,5,2,2,10169|10269|10068,10153_2|40032_2,10066_10076,,210,
 10169,#强化型双剑,1169,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:169|AddSpeed:-12|AddRotSpeed:-30,MainAct,250,0,-2,2,7,3,3,,,,,233,
-10269,#试做型双剑,1269,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:269|AddSpeed:-12|AddRotSpeed:-30,MainAct,300,0,-2,2,7,3,3,,,,,249,
+10269,#试做型双剑,1269,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:269|AddSpeed:-12|AddRotSpeed:-30,Company_10269,300,0,-2,2,7,3,3,,,,,249,
 
 // --
 
 10068,#剑盾,1068,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:68|AddSpeed:-28|AddRotSpeed:-15,MainAct,100,0,1,2,7,2,2,10168|10268|10069|10070,10152_1|40032_3,10066_10076,,209,
 10168,#强化型剑盾,1168,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:168|AddSpeed:-28|AddRotSpeed:-15,MainAct,200,0,-2,2,10,3,3,,,,,232,
-10268,#试做型剑盾,1268,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:268|AddSpeed:-28|AddRotSpeed:-15,MainAct,175,0,-2,2,9,3,3,,,,,248,
+10268,#试做型剑盾,1268,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:268|AddSpeed:-28|AddRotSpeed:-15,Company_10154,175,0,-2,2,9,3,3,,,,,248,
 
 10070,#枪盾,1070,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:70|AddSpeed:-28|AddRotSpeed:-15,MainAct,120,0,1,2,7,2,2,10170|10270|10068|10073|10066,10158_1|40032_2,10066_10076,,211,
 10170,#强化型枪盾,1170,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:170|AddSpeed:-28|AddRotSpeed:-15,MainAct,250,0,-2,2,10,3,3,,,,,234,
-10270,#试做型枪盾,1270,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:270|AddSpeed:-28|AddRotSpeed:-15,MainAct,300,0,-2,2,10,3,3,,,,,250,
+10270,#试做型枪盾,1270,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:270|AddSpeed:-28|AddRotSpeed:-15,Company_10154,300,0,-2,2,10,3,3,,,,,250,
 
 // --
 
@@ -571,7 +573,7 @@ let csv01 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 10073,#钉枪,1073,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:73|AddSpeed:-25|AddRotSpeed:-36,Company_10073,100,0,1,2,8,3,4,10173|10273|10074|10070|10076,10156_2|40032_2,10066_10076,,214,
 10173,#强化型钉枪,1173,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:173|AddSpeed:-25|AddRotSpeed:-36,MainAct,300,0,-2,2,11,4,5,,,,,237,
-10273,#试做型钉枪,1273,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:273|AddSpeed:-25|AddRotSpeed:-36,MainAct,250,0,-2,2,10,4,5,,,,,253,
+10273,#试做型钉枪,1273,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:273|AddSpeed:-25|AddRotSpeed:-36,Company_10273,250,0,-2,2,10,4,5,,,,,253,
 
 10074,#鱼叉,1074,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:74|AddSpeed:-15|AddRotSpeed:-25,Company_10074,60,0,1,2,7,3,5,10174|10274|10073|10075,10059_1|40032_1,10066_10076,,215,
 10174,#强化型鱼叉,1174,CloseWeapon,#,MeeleeWeapon|DoubleWeapon|ForceBoth,1,Weapon:174|AddSpeed:-15|AddRotSpeed:-25,Company_10074,120,0,-2,2,8,4,6,,,,,238,
@@ -930,6 +932,8 @@ let csv02 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 2903,#过载器++,2903,WeaponModel,#武器全属性大幅度上升\n武器耐久下降+<Description>%,,1,BrokePos:135|BulletRange:20|AngleFloat:-20|UpStable:-16|SplitRange:16|AddLaserRange:16|AddExplodeDamage:25|AddLaserDamage:25|Damage:25,Main2_3,50,55,-1,0,0,0,0,,,,,582,
 
 2904,#解限模块,2904,WeaponModel,#武器耐久越低，各项属性提升越高（最多100%）\n无法再修复武器,CantDemo,1,LimitOff:50,Company_2904,60,30,-2,0,0,0,0,,40001_12|40002_12|40006_6|40007_6,,,583,
+
+2916,#狙杀镜头,2916,WeaponModel,#使用装配此配件的武器时，将准心持续瞄准敌人，可以进行狙杀瞄准,Riffle,1,WeaponForMechFunc:AddMechaEffect:201,Comapany_WM,50,0,-2,0,0,0,0,,40001_10|40002_15|40003_6|40007_6|40005_4,2916,,582,
 
 // 近战
 
@@ -1642,6 +1646,10 @@ let csv06 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1228,#辅助瞄准镜,1228,Hang,#机体武器偏移度<Description>%,Head,1,UpStableMech:-12,Company_10118,20,25,-2,0,0,0,0,,40001_5|40002_2|40007_2|40005_2,2005_2008|2250_2252,,312,
 
 1227,#战术夜视仪,1227,Hang,#夜晚会常开夜视仪,Head,1,NightVisionAlwaysOn,Company_1227,160,70,-2,0,0,0,0,,40006_12|40007_12|40005_5|40032_3,1221|1222,,311,
+
+1229,#能量电池,1229,Hang,#带回基地后（可以通过回收舱发射，亦可背回基地）们可以获得电力奖励,Body|CantDrop|CantSyns,1,Armor:EnergyBattery|AddSpeed:-10|AddRotSpeed:-15,Comapany_WM,75,999,-2,0,0,0,0,,40001_20|40002_20|40005_10|40008_7|40007_7,,,1520,2
+1231,#黑匣子,1231,Hang,#,Body|BigMapTransportItem|CantDrop|CantSyns,1,Armor:TransportItem|AddSpeed:-10|AddRotSpeed:-35,Comapany_WM,15,999,-2,0,0,0,0,,40024_5|40025_1,,,1521,2
+1232,#炮弹,1232,Hang,#,Body|BigMapBigCannonItem|CantDrop|CantSyns,1,Armor:BigCannonItem|AddSpeed:-20|AddRotSpeed:-5,Comapany_WM,15,999,-2,0,0,0,0,,40010_5,,,1521,2
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) })
 .map(function(e){ if(e !== 'blankRow'){ e.push('07_mecha_hang') }; return e; });
@@ -1667,7 +1675,7 @@ let csv07 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 220,#改良驾驶舱,220,Remodel,#驾驶员因为机体受损增加脑负荷减半,CantGen,1,AddMechaEffect:5,Main2_4,60,-1,-2,0,0,0,0,,,,,1234,
 221,#机载音响,221,Remodel,#前往外围阵地路程中增加脑负荷减半,CantGen,1,AddMechaEffect:6,Main2_5,60,-1,-2,0,0,0,0,,,,,1235,
 
-217,#武器扩展槽A,217,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:1,Main2_3,80,-1,-2,0,0,0,0,,40006_5|40007_10|40005_2|40032_1,,,1231,
+217,#武器扩展槽A,217,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:1,Company_10153,80,-1,-2,0,0,0,0,,40006_5|40007_10|40005_2|40032_1,,,1279,
 218,#武器扩展槽B,218,Remodel,#机体武器插槽 可装备武器 槽位上限+<Description>,CantDemo,1,ExtraWeaponSlot:2,Company_218,150,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_2|40008_3,217|218,,1280,
 
 226,#快速供弹匣,226,Remodel,#换弹时间<Description:0>%，老化概率+<Description:1>%,,1,AddWeaponReload:-10|AddBrokePos:40,Main2_5,80,-1,-2,0,0,0,0,,40006_5|40007_5|40005_2|40032_1|40008_5,,,1240,
@@ -1751,6 +1759,9 @@ let csv08 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 
 1117,#水炸弹,1117,Throw,#投掷后可以产生大量水滴的手雷，破甲能力较低，如果未被敌方抵抗可以造成潮湿效果\n（冷却：<Description:1>）,,1,Throw:GrenadeSeparateWater|ThrowCD:25,Main_3,20,15,-2,0,0,0,0,,40008_1|40010_2|40005_1,,,266,
 1119,#油炸弹,1119,Throw,#投掷后可以产生大量油滴的手雷，破甲能力较低，如果未被敌方抵抗可以造成油腻效果\n（冷却：<Description:1>）,,1,Throw:GrenadeSeparateOil|ThrowCD:30,Main_3,20,19,-2,0,0,0,0,,40008_1|40010_2|40005_1,,,267,
+
+1127,#投掷式防空火力巢,1127,Throw,#投掷后可以产生爆炸一瞬间散布大量防空导弹,,1,Throw:GrenadeAnitiAir|ThrowCD:50,Comapany_WM,55,$AirOpenDay,1,0,0,0,0,,40008_2|40010_4|40005_2|40034_1|40033_2,,,271,
+1128,#投掷式重型防空火力巢,1128,Throw,#投掷后可以产生爆炸一瞬间散布极多防空导弹,,1,Throw:GrenadeAnitiAirHeavy|ThrowCD:75,Comapany_WM,100,$AirOpenDay,-1,0,0,0,0,,,1127_1128,,272,
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) })
 .map(function(e){ if(e !== 'blankRow'){ e.push('09_mecha_frag') }; return e; });
@@ -1954,9 +1965,10 @@ let csv11 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 let csv12 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
 400,#专注力透支,400,Skill,#立刻触发一次子弹时间|\n冷却时间:<Description:1>秒\n脑负荷增加:<Description:2>\n\n\n\n\n\n\n,CantRecycle|Skill,1,Skill:400|SkillCD:25|SkillPressure:4,,0,999,1,0,0,0,0,,,,,1298,1
-401,#护盾过载,401,Skill,#立刻生成护盾并充能|（需要装备护盾模块）\n冷却时间:<Description:1>秒\n脑负荷增加:<Description:2>\n\n\n\n\n\n\n,CantRecycle|Skill,1,Skill:401|SkillCD:30|SkillPressure:6,,0,999,1,0,0,0,0,,,,,1299,1
 418,#心灵震爆-聚集,418,Skill,#,CantRecycle|Skill,1,Skill:418|SkillCD:18|SkillPressure:5,,0,999,1,0,0,0,0,,,,,1301,1
+401,#护盾过载,401,Skill,#立刻生成护盾并充能|（需要装备护盾模块）\n冷却时间:<Description:1>秒\n脑负荷增加:<Description:2>\n\n\n\n\n\n\n,CantRecycle|Skill,1,Skill:401|SkillCD:30|SkillPressure:6,,0,999,1,0,0,0,0,,,,,1299,1
 417,#心灵震爆-显形,417,Skill,#,CantRecycle|Skill,1,Skill:417|SkillCD:30|SkillPressure:10,,0,999,1,0,0,0,0,,,,,1300,1
+429,#精神过载,429,Skill,#立刻生成一个短暂的无敌护盾并回复所有体力与马力,CantRecycle|Skill,1,Skill:429|SkillCD:60|SkillPressure:15,,0,999,-2,0,0,0,0,,,,,1542,1
 
 405,#心灵震爆-高温,405,Skill,#,CantRecycle|Skill0,1,Skill:405|SkillCD:40|SkillPressure:12,,0,999,1,0,0,0,0,,,,,1302,1
 406,#心灵震爆-寒流,406,Skill,#,CantRecycle|Skill0,1,Skill:406|SkillCD:40|SkillPressure:10,,0,999,1,0,0,0,0,,,,,1303,1
@@ -2060,8 +2072,8 @@ let csv14 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1311,#空投烟雾弹,1311,Strategy,#可以向目标地点空投许多烟雾弹\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSmoke|CD:45|Code:000,TankType_PlayerName_4,60,999,-2,1,2,0,0,1312,,,,334,
 1312,#空投照明弹,1312,Strategy,#可以向目标地点空投许多照明弹（夜晚可以照明，白天可以降低敌人的开火距离）\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,Light,1,Strategy:AirStrikeFlash|CD:36|Code:111,Main2_2,40,$NightOpenDay,-2,1,2,0,0,1311,,,,335,
 
-1322,#空投掩体,1322,Strategy,#可以向目标地点空投一座掩体碉堡\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBlockHouse|CD:42|Code:13021,Main2_2,30,$StrategyOpenDay,-2,1,2,0,0,,40025_7|40005_5|40033_2,1301_1303,,328,
-1313,#空投机枪塔,1313,Strategy,#,,1,Strategy:AirStrikeCannon|CD:150|Code:3012312,Main2_2,200,$StrategyOpenDay,-2,1,3,0,0,,3011_1|40033_25|40034_5,1307|1308|1309,,336,
+1322,#空投掩体,1322,Strategy,#可以向目标地点空投一座掩体碉堡\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBlockHouse|CD:42|Code:303231,Company_1322,30,$StrategyOpenDay,-2,1,2,0,0,,40025_7|40005_5|40033_2,1301_1303,,336,
+1313,#空投机枪塔,1313,Strategy,#,,1,Strategy:AirStrikeCannon|CD:150|Code:301120,Company_1322,200,$StrategyOpenDay,-2,1,3,0,0,,3011_1|40033_25|40034_5,1307|1308|1309,,344,
 
 1303,#空袭精确轰炸,1303,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，带有破甲效果\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeSnipeMelt_Lock|CD:40|Code:123,TankType_PlayerName_1,60,$StrategyOpenDay,-2,1,2,0,0,1301|1322|1317,40008_10|40010_10|40005_10|40033_5,1301_1303,,323,
 1306,#500kg重磅制导轰炸,1306,Strategy,#召唤一台战机跟踪瞄准单位并进行精确轰炸，威力巨大\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeExplo_Lock|CD:54|Code:022213,Company_1300,120,$StrategyOpenDay,-2,1,3,0,0,1303|1318,40008_16|40009_10|40011_15|40010_15|40034_2,1301_1303,,337,
@@ -2078,6 +2090,60 @@ let csv14 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 1321,#空投聚变反应堆,1321,Strategy,#可以向目标地点空投一座微型剧变反应堆\n需要手动激活，激活后会产生巨大爆炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeNukeBox|CD:100|Code:3023103,Company_1320,120,$StrategyOpenDay,-2,1,2,0,0,1320,40008_12|40010_12|40005_12|40034_2,1301_1303,,335,
 1320,#空投护盾生成器,1320,Strategy,#可以向目标地点空投一座护盾生成器，护盾值会缓慢减少，当护盾值归零时装置会失效\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeShiled|CD:75|Code:21100,Company_1320,75,$StrategyOpenDay,-2,1,2,0,0,1321,40006_5|40007_10|40026_10|40027_15|40034_2,1301_1303,,334,
 1310,#纳米修复机器人,1310,Strategy,#可以向目标地点发射一枚生命回复炸弹【警告：对敌人有效】\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeHeal_Lock|CD:120|Code:11223,Company_1310,100,999,-2,1,2,0,0,,,,,333,
+
+1323,#“飞龙”机枪扫射,1323,Strategy,#召唤“飞龙”向目标区域进行机枪扫射，威力不大但冷却很短\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRect2|CD:20|Code:030,Comapany_WM,45,$StrategyOpenDay,1,1,2,0,0,1324,40008_4|40010_15|40005_10|40033_9,1323_1349,,1491,
+1324,#“飞龙”火神炮扫射,1324,Strategy,#召唤“飞龙”向目标区域进行火神炮扫射\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectBig|CD:36|Code:0310,Comapany_WM,90,999,-1,1,3,0,0,1325,,1323_1349,,1492,
+
+1325,#“飞龙”飞弹轰炸,1325,Strategy,#召唤“飞龙”向目标区域进行飞弹轰炸\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExplo3|CD:45|Code:0312,Comapany_WM,125,$StrategyOpenDay,-2,1,4,0,0,1326|1327,40008_4|40010_15|40005_10|40033_9,1323_1349,,1493,
+1326,#“飞龙”等离子爆轰,1326,Strategy,#召唤“飞龙”向目标区域进行等离子爆轰\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectExploEner|CD:36|Code:03112,Comapany_WM,125,$StrategyOpenDay,-2,1,4,0,0,1325|1327,40008_4|40010_15|40005_10|40033_9,1323_1349,,1494,
+1327,#“飞龙”重磅制导炸弹,1327,Strategy,#召唤“飞龙”向目标投掷一枚重磅制导炸弹\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeExplo_Lock|CD:60|Code:0322,Comapany_WM,160,$StrategyOpenDay,-2,1,5,0,0,1325|1326,40008_4|40010_15|40005_10|40033_9,1323_1349,,1495,
+
+1328,#天基电针炮,1328,Strategy,#使用电针炮轰击目标，可以在极小范围产生惊人的伤害n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeKinetic_Lock|CD:60|Code:02212,Comapany_WM,80,$StrategyOpenDay,-2,1,2,0,0,1324,40008_4|40010_15|40005_10|40033_9,1323_1349,,1496,
+1331,#天基炮击封锁,1331,Strategy,#使用天基火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint122|CD:80|Code:0220112,Comapany_WM,120,$StrategyOpenDay,-2,1,2,0,0,,40008_4|40010_15|40005_10|40033_9,1323_1349,,1501,
+
+1329,#天基155mm炮击,1329,Strategy,#使用155mm火炮轰炸目标区域\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint155b|CD:42|Code:02232,Comapany_WM,90,$StrategyOpenDay,1,1,2,0,0,1330,40008_4|40010_15|40005_10|40033_9,1323_1349,,1499,
+1332,#天基155mm炮击火力覆盖,1332,Strategy,#使用155mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint155|CD:100|Code:0220122,Comapany_WM,240,$StrategyOpenDay,1,1,2,0,0,1333,40008_32|40010_32|40005_32|40034_4|40032_4,1323_1349,,1502,
+
+1330,#天基380mm炮击,1330,Strategy,#使用380mm火炮轰炸目标区域\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint380b|CD:60|Code:022312,Comapany_WM,160,999,-1,1,3,0,0,,,1323_1349,,1500,
+1333,#天基380mm炮击火力覆盖,1333,Strategy,#使用380mm火炮火力覆盖目标区域，注意不要误伤友军\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikePoint380|CD:135|Code:02201022,Company_1300,500,999,-1,1,4,0,0,,,1323_1349,,1503,
+
+1339,#[冰河]高级液氮炸弹,1337,Strategy,#召唤“飞龙”向目标区域投掷数枚液氮炸弹以制造一片低温区域，比普通的液氦炸弹持续时间更久\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectIce2|CD:60|Code:0333,Comapany_WM,125,$StrategyOpenDay,1,1,2,0,0,1340,40008_15|40010_18|40016_15|40033_8,1323_1349,,1509,
+1340,#[红莲地狱]寒冰场投射,1338,Strategy,#召唤“飞龙”向目标区域投投射寒冰场以制造一片低温区域，温度极低以至于会直接触发冰冻\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectIceFreeze|CD:77|Code:03323,Comapany_WM,240,999,-1,1,3,0,0,1336|1338,,1323_1349,,1510,
+
+1335,#[龙息]高级凝固汽油弹,1335,Strategy,#召唤“飞龙”向目标区域投掷数枚凝固汽油弹以形成一道火墙，比普通的凝固汽油弹燃烧更久\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectFire2|CD:75|Code:0331,Comapany_WM,125,$StrategyOpenDay,1,1,2,0,0,1336,40008_15|40010_18|40015_15|40033_8,1323_1349,,1505,
+1336,#[地狱火墙]白磷弹轰炸,1336,Strategy,#召唤“飞龙”向目标区域投掷数枚白磷炸弹以形成一道火墙，白磷炸弹温度极高以至于敌人无法通过\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectFire3|CD:75|Code:03321,Company_1300,240,999,-1,1,3,0,0,1338|1340,,1323_1349,,1506,
+
+1337,#[轰鸣]高级静电场炸弹,1339,Strategy,#召唤“飞龙”向目标区域投掷数枚静电场炸弹以制造一片静电场区域，比普通的静电场持续更久\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeRectElec2|CD:65|Code:0330,Comapany_WM,125,$StrategyOpenDay,1,1,2,0,0,1338,40008_15|40010_18|40017_15|40033_8,1323_1349,,1507,
+1338,#[闪电风暴]电弧场投射,1340,Strategy,#召唤“飞龙”向目标区域投射电场扰乱装置以直接在目标区域大量触发感电\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeElecLighting|CD:75|Code:03320,Company_1300,240,999,-1,1,3,0,0,1336|1340,,1323_1349,,1508,
+
+1341,#空投超频护盾生成器,1341,Strategy,#向目标地点空投一座护盾生成器，护盾值会缓慢减少，当护盾值归零时装置会失效。比常规的护盾场耐久更高\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeShiled2|CD:75|Code:3030031,Comapany_WM,120,$StrategyOpenDay,1,1,2,0,0,1342,40006_7|40007_13|40026_13|40027_22|40034_4,1323_1349,,1511,
+1342,#空投无敌护盾生成器,1342,Strategy,#向目标地点空投一座无敌护盾生成器，一段时间后装置会失效。护盾无法被破坏\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeShiledInvinsible|CD:75|Code:30300231,Comapany_WM,200,999,-1,1,3,0,0,,,1323_1349,,1512,
+
+1343,#空投急冻地雷场,1343,Strategy,#可以向目标地点空投一些急冻地雷，急冻爆炸温度极低以至于会直接触发冰冻\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeMineFreeze|CD:75|Code:301203,Comapany_WM,40,$StrategyOpenDay,-2,1,3,0,0,1344|1345|1346,40008_5|40010_6|40016_5|40033_3,1323_1349,,1513,
+1344,#空投白磷炸弹地雷场,1344,Strategy,#可以向目标地点空投一些白磷弹地雷，白磷炸弹温度极高以至于敌人无法通过\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeMineBurn|CD:75|Code:301201,Comapany_WM,40,$StrategyOpenDay,-2,1,3,0,0,1343|1345|1346,40008_5|40010_6|40015_5|40033_3,1323_1349,,1514,
+1345,#空投等离子地雷场,1345,Strategy,#可以向目标地点空投一些等离子炸弹地雷\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeMineEner|CD:75|Code:3012002,Comapany_WM,40,$StrategyOpenDay,-2,1,3,0,0,1343|1344|1346,40008_5|40010_6|40017_5|40033_3,1323_1349,,1515,
+1346,#空投腐蚀地雷场,1346,Strategy,#可以向目标地点空投一些腐蚀地雷，被爆炸波及的单位会造成装甲融化\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeMineAcid|CD:75|Code:3012003,Comapany_WM,40,$StrategyOpenDay,-2,1,3,0,0,1343|1344|1345,40008_1|40010_5|40005_3|40033_3,1323_1349,,1516,
+
+1348,#空投重型掩体,1348,Strategy,#可以向目标地点空投一座重型掩体碉堡\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBlockHouseMiddle|CD:80|Code:3032231,Comapany_WM,55,$StrategyOpenDay,1,1,2,0,0,1349,40025_12|40005_9|40033_3,1323_1349,,1518,
+1349,#空投超重型掩体,1349,Strategy,#可以向目标地点空投一座超重型掩体碉堡\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeBlockHouseHigh|CD:120|Code:30322031,Comapany_WM,100,999,-1,1,3,0,0,,,1323_1349,,1519,
+
+1350,#空投防空导弹巢,1350,Strategy,#可以向目标地点空投一座导弹巢，产生爆炸一瞬间散布大量防空导弹,,1,Strategy:AirStrikeAntiAirGre|CD:45|Code:301001,Comapany_WM,75,$StrategyOpenDay,1,1,3,0,0,1351,40008_3|40010_5|40005_3|40034_1|40033_4,1323_1349,,1497,
+1351,#空投防空导弹巢火力网,1351,Strategy,#可以向目标地点空投数座导弹巢，产生爆炸一瞬间散布大量防空导弹,,1,Strategy:AirStrikeAntiAirGre2|CD:60|Code:3010001,Comapany_WM,200,999,-1,1,5,0,0,,,1323_1349,,1498,
+
+1347,#空投EMP发射装置,1347,Strategy,#可以向目标地点空投一座EMP发射装置，会持续发射EMP射线\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeEMP|CD:50|Code:301121,Comapany_WM,70,$StrategyOpenDay,-2,1,2,0,0,1324,40008_7|40010_9|40017_8|40033_4,1323_1349,,1517,
+
+1334,#轨道空投战术核弹,1334,Strategy,#从轨道空投一枚战术核弹，前摇极长，威力也极大\n（冷却时间:<Description:1>秒）\n（在城防界面装配）,,1,Strategy:AirStrikeNuke|CD:250|Code:3210231022,Company_1300,960,$StrategyOpenDay,-2,1,2,0,0,1324,1333_1|1327_3,1323_1349,,1504,
+
+1391,#空投武器,1391,Strategy,,,1,Strategy:SupportWeapon|Code:220|StrategyGroupParent:1391,Comapany_WM,0,999,-2,1,2,0,0,,,,,1479,1
+1394,#空投装甲,1394,Strategy,,,1,Strategy:SupportWeapon|Code:223|StrategyGroupParent:1394,Comapany_WM,0,999,-2,1,2,0,0,,,,,1479,1
+
+1397,#空投弹药,1397,Strategy,,,1,Strategy:SupportBullet|CD:300|Code:222301,Comapany_WM,0,999,-2,1,2,0,0,,,,,1489,1
+1398,#空投修复设备,1398,Strategy,,,1,Strategy:SupportFix|CD:300|Code:2221030,Comapany_WM,0,999,-2,1,2,0,0,,,,,1490,1
+
+1393,#空投炮塔,1393,Strategy,,,1,Strategy:SupportCannon|Code:2212|StrategyGroupParent:1393,Comapany_WM,0,999,-2,1,2,0,0,,,,,1481,1
+1392,#空投作战单元,1392,Strategy,,,1,Strategy:SupportUnit|Code:2210|StrategyGroupParent:1392,Comapany_WM,0,999,-2,1,2,0,0,,,,,1479,1
+
+1396,#空投回收仓,1396,Strategy,,,1,Strategy:SupportWeapon|CD:150|Code:222130,Comapany_WM,0,999,-2,1,2,0,0,,,,,1488,1
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) })
 .map(function(e){ if(e !== 'blankRow'){ e.push('23_manage_strategy') }; return e; });
@@ -2286,8 +2352,6 @@ let csv17 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 // 其他内容
 let csv18 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Company,Price,Day,Level,CargoPiles,CargoPilesMax,CargoPilesFusion,CargoPilesFusionMax,Cluster,Syns,NeedWeapon,ColorPlus,ResolveID,DebugHide
 
-50,#城市通行卡,50,None,#用于进出城市场所的通行卡,,99,,Company_50,15,30,1,0,0,0,0,,,,,1157,
-
 550,,550,None,#资金+<Description>,,99,AddMoney:150,,-1,999,1,0,0,0,0,,,,,1457,1
 551,,551,None,#荣誉点+<Description>,,99,AddHonor:200,,-1,999,1,0,0,0,0,,,,,1458,1
 552,,552,None,#获得勋章,,99,AddItems:14_3,,-1,999,1,0,0,0,0,,,,,1459,1
@@ -2297,6 +2361,33 @@ let csv18 = (String.raw`// Items,Name,Image,Type,Description,Tag,MaxPile,Func,Co
 555,,555,None,#荣誉点+<Description>,,99,AddHonor:500,,-1,999,1,0,0,0,0,,,,,1462,1
 556,,556,None,#获得勋章（已废弃）,,99,,,-1,999,1,0,0,0,0,,,,,1463,1
 557,,557,None,#维修机体<Description>%,,99,RePairMech:80,,-1,999,1,0,0,0,0,,,,,1464,1
+
+50,#城市通行卡,50,None,#用于进出城市场所的通行卡,,99,,Company_50,15,30,1,0,0,0,0,,,,,1157,
+
+583,#装满勋章箱子,583,None,#获得荣誉:<Description>,AddFunc,1,AddHonor:150,Comapany_WM,200,999,-2,0,0,0,0,,,,,1525,2
+584,#一大箱勋章,584,None,#获得荣誉:<Description>,AddFunc,1,AddHonor:400,Comapany_WM,400,999,-2,0,0,0,0,,,,,1526,2
+
+580,#资金补给箱（小）,580,None,#获得资金:<Description>,AddFunc,1,AddMoney:150,Comapany_WM,200,999,-2,0,0,0,0,,,,,1522,2
+581,#资金补给箱（中）,581,None,#获得资金:<Description>,AddFunc,1,AddMoney:350,Comapany_WM,400,999,-2,0,0,0,0,,,,,1523,2
+582,#资金补给箱（大）,582,None,#获得资金:<Description>,AddFunc,1,AddMoney:800,Comapany_WM,600,999,-2,0,0,0,0,,,,,1524,2
+
+585,#电力罐（小）,585,None,#获得电力:<Description>,AddFunc,1,AddElectricPower:120,Comapany_WM,100,999,-2,0,0,0,0,,,,,1527,2
+586,#电力罐（中）,586,None,#获得电力:<Description>,AddFunc,1,AddElectricPower:250,Comapany_WM,200,999,-2,0,0,0,0,,,,,1528,2
+587,#电力罐（大）,587,None,#获得电力:<Description>,AddFunc,1,AddElectricPower:400,Comapany_WM,300,999,-2,0,0,0,0,,,,,1529,2
+
+590,#配件箱（高爆）,590,None,#获得随机高爆武器配件,AddFunc,1,AddRandomItem:WeaponModel+ExploWeapon+40_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1532,2
+592,#配件箱（射线）,592,None,#获得随机射线武器配件,AddFunc,1,AddRandomItem:WeaponModel+LaserWeapon+40_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1534,2
+594,#配件箱（电弧）,594,None,#获得随机电弧武器配件,AddFunc,1,AddRandomItem:WeaponModel+ElectricWeapon+100_400,Comapany_WM,400,999,-2,0,0,0,0,,,,,1536,2
+596,#配件箱（散射）,596,None,#获得随机散射武器配件,AddFunc,1,AddRandomItem:WeaponModel+Riffle+30_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1538,2
+598,#配件箱（等离子）,598,None,#获得随机等离子武器配件,AddFunc,1,AddRandomItem:WeaponModel+FlakeWeapon+30_160,Comapany_WM,200,999,-2,0,0,0,0,,,,,1540,2
+
+588,#武器箱（狙击）,588,None,#获得随机狙击武器,AddFunc,1,AddRandomItem:Weapon+Riffle+100_400,Comapany_WM,400,999,-2,0,0,0,0,,,,,1530,2
+589,#武器箱（高爆）,589,None,#获得随机高爆武器,AddFunc,1,AddRandomItem:Weapon+ExploWeapon+40_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1531,2
+591,#武器箱（射线）,591,None,#获得随机射线武器,AddFunc,1,AddRandomItem:Weapon+LaserWeapon+60_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1533,2
+593,#武器箱（电弧）,593,None,#获得随机电弧武器,AddFunc,1,AddRandomItem:Weapon+ElectricWeapon+60_250,Comapany_WM,200,999,-2,0,0,0,0,,,,,1535,2
+595,#武器箱（散射）,595,None,#获得随机散射武器,AddFunc,1,AddRandomItem:Weapon+ShotWeapon+60_200,Comapany_WM,200,999,-2,0,0,0,0,,,,,1537,2
+597,#武器箱（等离子）,597,None,#获得随机等离子武器,AddFunc,1,AddRandomItem:Weapon+FlakeWeapon+120_400,Comapany_WM,400,999,-2,0,0,0,0,,,,,1539,2
+599,#高阶武器箱（动能）,599,None,#获得随机高阶动能武器,AddFunc,1,AddRandomItem:WeaponModel+NormalWeapon+300_700,Comapany_WM,1000,999,-2,0,0,0,0,,,,,1541,2
 `).replace(/\\n/g, '; ') // 使用 String.raw 将明文的 \n 转为 \\n, 这样就能直接删掉它们了, 避免感染到 split
 .split(/\n/).map(function(e){ return ((e === '' || e.indexOf('//') === 0) ? 'blankRow' : e.split(',')) })
 .map(function(e){ if(e !== 'blankRow'){ e.push('28_others_priority') }; return e; });
@@ -3405,6 +3496,8 @@ let textList = {
 	
 	2904 : `解限模块`					+ ` # 解限模块,解限模組,Limit Break Module,制限解除モジュール`,
 	
+	2916 : `狙杀镜头`					+ ` # 狙杀镜头,狙殺鏡頭,Sniping Lens,狙撃レンズ`,
+	
 	// 近战
 	
 	2202 : `近战能量模块01`				+ ` # 近战能量模块1,近戰能量模組1,Melee Energy Module 1,近接エネルギーモジュール1`,
@@ -4107,6 +4200,10 @@ let textList = {
 	1227 : `战术夜视仪`			+ ` # 战术夜视仪,戰術夜視儀,Tactical night vision device,戦術ナイトスコープ`,
 	1228 : `辅助瞄准镜`			+ ` # 辅助瞄准镜,輔助瞄準鏡,Auxiliary sight,補助照準器`,
 	
+	1229 : `能量电池`			+ ` # 能量电池,能量電池,Energy Cell,エネルギーセル`,
+	1231 : `黑匣子`				+ ` # 黑匣子,黑匣子,Black Box,ブラックボックス`,
+	1232 : `炮弹`				+ ` # 炮弹,炮彈,Cannon Shell,砲弾`,
+	
 	},
 	
 	机体改造 : {
@@ -4211,6 +4308,9 @@ let textList = {
 	
 	1117 : `水炸弹`				+ ` # 水炸弹,水炸彈,Water Bomb,水爆弾`,
 	1119 : `油炸弹`				+ ` # 油炸弹,油炸彈,Oil Bomb,オイル爆弾`,
+	
+	1127 : `防空火力巢`			+ ` # 投掷式防空火力巢,投擲式防空火力巢,Throwable Anti-air Nest,投擲式対空火力巣`,
+	1128 : `重型防空火力巢`		+ ` # 投掷式重型防空火力巢,投擲式重型防空火力巢,Throwable Heavy Anti-air Nest,投擲式重対空火力巣`,
 	
 	},
 	
@@ -4405,9 +4505,10 @@ let textList = {
 	战场技能 : {
 	
 	400 : `专注透支`			+ ` # 专注力透支,專注力透支,Concentration overdraft,集中力過消耗`,
-	401 : `护盾过载`			+ ` # 护盾过载,護盾超載,Shield overload,シールド過負荷`,
 	418 : `心灵震爆-聚集`		+ ` # 心灵震爆-聚集,心靈震爆-聚集,Soul Shock - Assembly,マインドショック-集束`,
+	401 : `护盾过载`			+ ` # 护盾过载,護盾超載,Shield overload,シールド過負荷`,
 	417 : `心灵震爆-显形`		+ ` # 心灵震爆-显形,心靈震爆-顯形,Soul Shock - Revelation,マインドショック-顕形`,
+	429 : `精神过载`			+ ` # 精神过载,精神過載,Mind Overload,精神オーバーロード`,
 	
 	405 : `心灵震爆-高温`		+ ` # 心灵震爆-高温,心靈震爆-高溫,Soul Shock - Heat,マインドショック-高温`,
 	406 : `心灵震爆-寒流`		+ ` # 心灵震爆-寒流,心靈震爆-寒流,Soul Shock - Cold Surge,マインドショック-寒流`,
@@ -4492,39 +4593,93 @@ let textList = {
 	
 	战略支援 : {
 	
-	1300	: `空袭重机枪扫射`		+ ` # 空袭重机枪扫射,空襲重機槍掃射,Air Raid: Heavy Machine Gun,空襲重機関銃掃射`,
+	1300	: `空袭重机枪扫射`			+ ` # 空袭重机枪扫射,空襲重機槍掃射,Air Raid: Heavy Machine Gun,空襲重機関銃掃射`,
 	
-	1301	: `空袭轰炸`			+ ` # 空袭轰炸,空襲轟炸,Aerial Bombardment,空襲爆撃`,
-	1302	: `集束空袭轰炸`		+ ` # 空袭集束轰炸,空襲集束轟炸,Air Raid: Cluster Bombing,空襲クラスター爆撃`,
+	1301	: `空袭轰炸`				+ ` # 空袭轰炸,空襲轟炸,Aerial Bombardment,空襲爆撃`,
+	1302	: `集束空袭轰炸`			+ ` # 空袭集束轰炸,空襲集束轟炸,Air Raid: Cluster Bombing,空襲クラスター爆撃`,
 	
-	1307	: `[业火]凝固油弹`		+ ` # [业火]凝固汽油弹,[業火]凝固汽油彈,[Inferno] Napalm Bomb,[業火] 凝固ガソリン爆弾`,
-	1309	: `[寒霜]液氮炸弹`		+ ` # [寒霜]液氮炸弹,[寒霜]液氮炸彈,[Frost] Liquid Nitrogen Bomb,[寒霜] 液体窒素爆弾`,
-	1308	: `[雷鸣]静电炸弹`		+ ` # [雷鸣]静电场炸弹,[雷鳴]靜電場炸彈,[Thunder] Electrostatic Field Bomb,[雷鳴] 静電場爆弾`,
+	1307	: `[业火]凝固油弹`			+ ` # [业火]凝固汽油弹,[業火]凝固汽油彈,[Inferno] Napalm Bomb,[業火] 凝固ガソリン爆弾`,
+	1309	: `[寒霜]液氮炸弹`			+ ` # [寒霜]液氮炸弹,[寒霜]液氮炸彈,[Frost] Liquid Nitrogen Bomb,[寒霜] 液体窒素爆弾`,
+	1308	: `[雷鸣]静电炸弹`			+ ` # [雷鸣]静电场炸弹,[雷鳴]靜電場炸彈,[Thunder] Electrostatic Field Bomb,[雷鳴] 静電場爆弾`,
 	
-	1305	: `空投跳雷`			+ ` # 空投跳雷,空投跳雷,Airdropped Jump Mine,エアドロップジャンプ地雷`,
-	1304	: `空投路障`			+ ` # 空投路障,空投路障,Airdropped Roadblock,エアドロップバリケード`,
+	1305	: `空投跳雷`				+ ` # 空投跳雷,空投跳雷,Airdropped Jump Mine,エアドロップジャンプ地雷`,
+	1304	: `空投路障`				+ ` # 空投路障,空投路障,Airdropped Roadblock,エアドロップバリケード`,
 	
-	1311	: `空投烟雾弹`			+ ` # 空投烟雾弹,空投煙霧彈,Airdropped Smoke Bomb,エアドロップ煙幕弾`,
-	1312	: `空投照明弹`			+ ` # 空投照明弹,空投照明彈,Airdropped Flare,エアドロップフレア`,
+	1311	: `空投烟雾弹`				+ ` # 空投烟雾弹,空投煙霧彈,Airdropped Smoke Bomb,エアドロップ煙幕弾`,
+	1312	: `空投照明弹`				+ ` # 空投照明弹,空投照明彈,Airdropped Flare,エアドロップフレア`,
 	
-	1322	: `空投掩体碉堡`		+ ` # 空投掩体,空投掩體,Airdrop Bunker,エアドロップバンカー`,
-	1313	: `空投机枪炮塔`		+ ` # 空投机枪塔,空投機槍塔,Airdropped Machine Gun Turret,エアドロップ機関銃砲塔`,
+	1322	: `空投掩体碉堡`			+ ` # 空投掩体,空投掩體,Airdrop Bunker,エアドロップバンカー`,
+	1313	: `空投机枪炮塔`			+ ` # 空投机枪塔,空投機槍塔,Airdropped Machine Gun Turret,エアドロップ機関銃砲塔`,
 	
-	1303	: `精确空袭轰炸`		+ ` # 空袭精确轰炸,空襲精確轟炸,Air Raid: Precision Bombing,空襲精密爆撃`,
-	1306	: `半吨制导轰炸`		+ ` # 500kg重磅制导轰炸,500kg重磅制導轟炸,500kg Guided Bombing,500kg大型誘導爆撃`,
+	1303	: `精确空袭轰炸`			+ ` # 空袭精确轰炸,空襲精確轟炸,Air Raid: Precision Bombing,空襲精密爆撃`,
+	1306	: `半吨制导轰炸`			+ ` # 500kg重磅制导轰炸,500kg重磅制導轟炸,500kg Guided Bombing,500kg大型誘導爆撃`,
 	
-	1314	: `轨道破片弹轰炸`		+ ` # 轨道空爆破片炸弹,軌道空爆破片炸彈,Orbital Airburst Shrapnel Bomb,軌道空中破片爆弾`,
-	1315	: `轨道饱和式轰炸`		+ ` # 轨道饱和弹幕轰炸,軌道飽和彈幕轟炸,Orbital Saturation Barrage Bombing,軌道飽和弾幕爆撃`,
+	1314	: `轨道破片弹轰炸`			+ ` # 轨道空爆破片炸弹,軌道空爆破片炸彈,Orbital Airburst Shrapnel Bomb,軌道空中破片爆弾`,
+	1315	: `轨道饱和式轰炸`			+ ` # 轨道饱和弹幕轰炸,軌道飽和彈幕轟炸,Orbital Saturation Barrage Bombing,軌道飽和弾幕爆撃`,
 	
-	1316	: `轨道元素弹轰炸`		+ ` # 轨道元素炸弹轰炸,軌道元素炸彈轟炸,Orbital Elemental Bombing,軌道元素爆弾爆撃`,
-	1317	: `轨道连续性轰炸`		+ ` # 轨道连续精确轰炸,軌道連續精確轟炸,Orbital Continuous Precision Bombing,軌道連続精密爆撃`,
+	1316	: `轨道元素弹轰炸`			+ ` # 轨道元素炸弹轰炸,軌道元素炸彈轟炸,Orbital Elemental Bombing,軌道元素爆弾爆撃`,
+	1317	: `轨道连续性轰炸`			+ ` # 轨道连续精确轰炸,軌道連續精確轟炸,Orbital Continuous Precision Bombing,軌道連続精密爆撃`,
 	
-	1318	: `122mm 炮击网`		+ ` # 122mm炮击火力网,122mm炮擊火力網,122mm Artillery Fire Grid,122mm砲撃火力網`,
-	1319	: `155mm 炮击网`		+ ` # 155mm炮击火力网,155mm炮擊火力網,155mm Artillery Fire Grid,155mm砲撃火力網`,
+	1318	: `122mm 炮击网`			+ ` # 122mm炮击火力网,122mm炮擊火力網,122mm Artillery Fire Grid,122mm砲撃火力網`,
+	1319	: `155mm 炮击网`			+ ` # 155mm炮击火力网,155mm炮擊火力網,155mm Artillery Fire Grid,155mm砲撃火力網`,
 	
-	1321	: `空投聚变反应堆`		+ ` # 空投聚变反应堆,空投聚變反應堆,Airdrop Fusion Reactor,エアドロップ核融合炉`,
-	1320	: `空投护盾生成器`		+ ` # 空投护盾生成器,空投護盾生成器,Airdrop Shield Generator,エアドロップシールド発生装置`,
-	1310	: `纳米修复机器人`		+ ` # 纳米修复机器人,納米修復機器人,Nano Repair Bot,ナノリペアロボット`,
+	1321	: `空投聚变反应堆`			+ ` # 空投聚变反应堆,空投聚變反應堆,Airdrop Fusion Reactor,エアドロップ核融合炉`,
+	1320	: `空投护盾生成器`			+ ` # 空投护盾生成器,空投護盾生成器,Airdrop Shield Generator,エアドロップシールド発生装置`,
+	1310	: `纳米修复机器人`			+ ` # 纳米修复机器人,納米修復機器人,Nano Repair Bot,ナノリペアロボット`,
+	
+	1323	: `小天使机枪扫射`			+ ` # “小天使”机枪扫射,「小天使」機槍掃射,'Cherub' Machine Gun Strafe,「チェラブ」機銃掃射`,
+	1324	: `小天使火神炮扫射`		+ ` # “小天使”火神炮扫射,「小天使」火神砲掃射,'Cherub' Vulcan Strafe,「チェラブ」バルカン掃射`,
+	
+	1325	: `小天使飞弹轰炸`			+ ` # “小天使”飞弹轰炸,「小天使」飛彈轟炸,'Cherub' Missile Bombardment,「チェラブ」ミサイル爆撃`,
+	1326	: `小天使等离子爆轰`		+ ` # “小天使”等离子爆轰,「小天使」等離子爆轟,'Cherub' Plasma Blast,「チェラブ」プラズマ爆砕`,
+	1327	: `小天使重磅制导炸弹`		+ ` # “小天使”重磅制导炸弹,「小天使」重磅制導炸彈,'Cherub' Heavy Guided Bomb,「チェラブ」大型誘導爆弾`,
+	
+	1328	: `天基电针炮轰`			+ ` # 天基电针炮,天基電針砲,Orbital Needle Cannon,軌道ニードル砲`,
+	1331	: `天基炮击封锁`			+ ` # 天基炮击封锁,天基炮擊封鎖,Orbital Barrage Blockade,軌道砲撃封鎖`,
+	
+	1329	: `天基 155mm 炮击轰炸`		+ ` # 天基155mm炮击,天基155mm炮擊,Orbital 155mm Barrage,軌道155mm砲撃`,
+	1332	: `天基 155mm 炮击覆盖`		+ ` # 天基155mm炮击火力覆盖,天基155mm炮擊火力覆蓋,Orbital 155mm Saturation Fire,軌道155mm火力制圧`,
+	
+	1330	: `天基 380mm 炮击轰炸`		+ ` # 天基380mm炮击,天基380mm炮擊,Orbital 380mm Barrage,軌道380mm砲撃`,
+	1333	: `天基 380mm 炮击覆盖`		+ ` # 天基380mm炮击火力覆盖,天基380mm炮擊火力覆蓋,Orbital 380mm Saturation Fire,軌道380mm火力制圧`,
+	
+	1339	: `冰河:高级液态氮炸弹`		+ ` # [冰河]高级液氮炸弹,[冰河]高級液氮炸彈,[Glacier] Advanced Liquid Nitrogen Bomb,[氷河] 改良型液体窒素爆弾`,
+	1340	: `红莲地狱:寒冰场投射`		+ ` # [红莲地狱]寒冰场投射,[紅蓮地獄]寒冰場投射,[Crimson Hell] Cryo Field Projection,[紅蓮地獄] 氷結場投射`,
+	
+	1335	: `龙息:高级凝固汽油弹`		+ ` # [龙息]高级凝固汽油弹,[龍息]高級凝固汽油彈,[Dragon Breath] Advanced Napalm Bomb,[竜の息吹] 改良型凝固ガソリン爆弾`,
+	1336	: `地狱火墙:白磷弹轰炸`		+ ` # [地狱火墙]白磷弹轰炸,[地獄火牆]白磷彈轟炸,[Hellfire Wall] White Phosphorus Bombing,[地獄の火壁] 白リン爆撃`,
+	
+	1337	: `轰鸣:高级静电场炸弹`		+ ` # [轰鸣]高级静电场炸弹,[轟鳴]高級靜電場炸彈,[Roar] Advanced Electrostatic Field Bomb,[轟音] 改良型静電場爆弾`,
+	1338	: `闪电风暴:电弧场投射`		+ ` # [闪电风暴]电弧场投射,[閃電風暴]電弧場投射,[Lightning Storm] Arc Field Projection,[稲妻嵐] 電弧場投射`,
+	
+	1341	: `空投超频护盾生成器`		+ ` # 空投超频护盾生成器,空投超頻護盾生成器,Airdrop Overclock Shield Generator,空挺オーバークロックシールド発生装置`,
+	1342	: `空投无敌护盾生成器`		+ ` # 空投无敌护盾生成器,空投無敵護盾生成器,Airdrop Invincible Shield Generator,空挺無敵シールド発生装置`,
+	
+	1343	: `空投急冻地雷场`			+ ` # 空投急冻地雷场,空投急凍地雷場,Airdrop Cryo Minefield,空挺冷凍地雷原`,
+	1344	: `空投白磷炸弹地雷场`		+ ` # 空投白磷炸弹地雷场,空投白磷炸彈地雷場,Airdrop White Phosphorus Minefield,空挺白リン地雷原`,
+	1345	: `空投等离子地雷场`		+ ` # 空投等离子地雷场,空投等離子地雷場,Airdrop Plasma Minefield,空挺プラズマ地雷原`,
+	1346	: `空投腐蚀地雷场`			+ ` # 空投腐蚀地雷场,空投腐蝕地雷場,Airdrop Corrosion Minefield,空挺腐食地雷原`,
+	
+	1348	: `空投重型掩体`			+ ` # 空投重型掩体,空投重型掩體,Airdrop Heavy Bunker,空挺重掩体`,
+	1349	: `空投超重型掩体`			+ ` # 空投超重型掩体,空投超重型掩體,Airdrop Super Heavy Bunker,空挺超重掩体`,
+	
+	1350	: `空投防空导弹巢`			+ ` # 空投防空导弹巢,空投防空導彈巢,Airdrop Anti-air Missile Nest,空挺対空ミサイル巣`,
+	1351	: `空投超防空导弹巢`		+ ` # 空投防空导弹巢火力网,空投防空導彈巢火力網,Airdrop Anti-air Missile Nest Net,空挺対空ミサイル巣火力網`,
+	
+	1347	: `空投电磁脉冲装置`		+ ` # 空投EMP发射装置,空投EMP發射裝置,Airdrop EMP Emitter,空挺EMP射出装置`,
+	
+	1334	: `轨道空投战术核弹`		+ ` # 轨道空投战术核弹,軌道空投戰術核彈,Orbital Tactical Nuke,軌道戦術核投下`,
+	
+	1391	: `空投武器`				+ ` # 空投武器,空投武器,Airdrop Weapon,空挺武器`,
+	1394	: `空投装甲`				+ ` # 空投装甲,空投裝甲,Airdrop Armor,空挺アーマー`,
+	
+	1397	: `空投武器弹药`			+ ` # 空投弹药,空投彈藥,Airdrop Ammo,空挺弾薬`,
+	1398	: `空投修复设备`			+ ` # 空投修复设备,空投修復設備,Airdrop Repair Equipment,空挺修理設備`,
+	
+	1393	: `空投机枪炮塔`			+ ` # 空投炮塔,空投砲塔,Airdrop Turret,空挺砲塔`,
+	1392	: `空投作战单元`			+ ` # 空投作战单元,空投作戰單元,Airdrop CSU,空挺戦闘ユニット`,
+	
+	1396	: `空投回收仓`				+ ` # 空投回收仓,空投回收倉,Airdrop Recovery Pod,空挺回収ポッド`,
 	
 	},
 	
@@ -4722,8 +4877,6 @@ let textList = {
 	
 	其他内容 : {
 	
-	50	: `城市通行卡`				+ ` # 城市通行卡,城市通行卡,City Pass,シティパス`,
-	
 	550	: `资金 +150`				+ ` # 资金 +150,資金 +150,Funding +150,資金 +150`,
 	551	: `荣誉点 +200`				+ ` # 荣誉点 +200,榮譽點 +200,Honor points +200,名誉ポイント +200`,
 	552	: `获得英雄勋章 × 3`		+ ` # 获得英雄勋章 × 3,獲得英雄勳章 × 3,Receive Hero Medal × 3,英雄勲章を受ける × 3`,
@@ -4733,6 +4886,33 @@ let textList = {
 	555	: `荣誉点 +500`				+ ` # 荣誉点 +500,榮譽點 +500,Honor points +500,名誉ポイント +500`,
 	556	: `获得英雄勋章 × 6`		+ ` # 获得英雄勋章 × 6,獲得英雄勳章 × 6,Receive Hero Medal × 6,英雄勲章を受ける × 6`,
 	557	: `维修机体(HP+80%)`		+ ` # 维修机体(HP+80%),維修機體(HP+80%),Repair the mache body by (HP+80%),ボディメンテナンス(HP+80%)`,
+	
+	50	: `城市通行卡`				+ ` # 城市通行卡,城市通行卡,City Pass,シティパス`,
+	
+	583 : `装满勋章的箱子`			+ ` # 装满勋章箱子,裝滿勳章箱子,Crate Full of Medals,勲章いっぱいの箱`,
+	584 : `装满勋章的大箱子`		+ ` # 一大箱勋章,一大箱勳章,Large Crate of Medals,勲章の大箱`,
+	
+	580 : `资金补给箱(小)`			+ ` # 资金补给箱（小）,資金補給箱（小）,Fund Supply Crate (S),資金補給箱（小）`,
+	581 : `资金补给箱(中)`			+ ` # 资金补给箱（中）,資金補給箱（中）,Fund Supply Crate (M),資金補給箱（中）`,
+	582 : `资金补给箱(大)`			+ ` # 资金补给箱（大）,資金補給箱（大）,Fund Supply Crate (L),資金補給箱（大）`,
+	
+	585 : `电力罐(小)`				+ ` # 电力罐（小）,電力罐（小）,Electric Canister (S),電力タンク（小）`,
+	586 : `电力罐(中)`				+ ` # 电力罐（中）,電力罐（中）,Electric Canister (M),電力タンク（中）`,
+	587 : `电力罐(大)`				+ ` # 电力罐（大）,電力罐（大）,Electric Canister (L),電力タンク（大）`,
+	
+	590 : `配件箱(高爆)`			+ ` # 配件箱（高爆）,配件箱（高爆）,Part Crate (High-explosive),パーツ箱（高爆）`,
+	592 : `配件箱(射线)`			+ ` # 配件箱（射线）,配件箱（射線）,Part Crate (Ray),パーツ箱（ビーム）`,
+	594 : `配件箱(电弧)`			+ ` # 配件箱（电弧）,配件箱（電弧）,Part Crate (Arc),パーツ箱（電弧）`,
+	596 : `配件箱(散射)`			+ ` # 配件箱（散射）,配件箱（散射）,Part Crate (Scatter),パーツ箱（散弾）`,
+	598 : `配件箱(离子)`			+ ` # 配件箱（等离子）,配件箱（等離子）,Part Crate (Plasma),パーツ箱（プラズマ）`,
+	
+	588 : `武器箱(狙击)`			+ ` # 武器箱（狙击）,武器箱（狙擊）,Weapon Crate (Sniper),武器箱（狙撃）`,
+	589 : `武器箱(高爆)`			+ ` # 武器箱（高爆）,武器箱（高爆）,Weapon Crate (High-explosive),武器箱（高爆）`,
+	591 : `武器箱(射线)`			+ ` # 武器箱（射线）,武器箱（射線）,Weapon Crate (Ray),武器箱（ビーム）`,
+	593 : `武器箱(电弧)`			+ ` # 武器箱（电弧）,武器箱（電弧）,Weapon Crate (Arc),武器箱（電弧）`,
+	595 : `武器箱(散射)`			+ ` # 武器箱（散射）,武器箱（散射）,Weapon Crate (Scatter),武器箱（散弾）`,
+	597 : `武器箱(等离子)`			+ ` # 武器箱（等离子）,武器箱（等離子）,Weapon Crate (Plasma),武器箱（プラズマ）`,
+	599 : `高阶武器箱(动能)`		+ ` # 高阶武器箱（动能）,高階武器箱（動能）,High-tier Weapon Crate (Kinetic),上位武器箱（運動エネルギー）`,
 	
 	},
 	
@@ -5115,6 +5295,8 @@ let textList = {
 	
 	Company_TankType1		: `大河重工`						+ ` # 大河重工,大河重工,Taiga Heavy Industry,大河重工`,
 	
+	Comapany_WM				: `白山安保有限公司`				+ ` # 白山安保有限公司,白山安保有限公司,White Mountain Security Co. Ltd.,白山警備株式会社`,
+	
 	Book_1					: `帝国出版总局`					+ ` # 帝国出版总局,帝國出版總局,Imperial Publishing Bureau,帝国出版局`,
 	Book_2					: `共和国出版社`					+ ` # 共和国出版社,共和國出版社,Republic Publishing House,共和国出版社`,
 	Book_3					: `自由军出版社`					+ ` # 自由军出版社,自由軍出版社,Free Army Press,自由軍出版社`,
@@ -5236,6 +5418,7 @@ let textList = {
 	Company_1318			: `S.E.D 驅逐艦`					+ ` # S.E.D 驅逐艦,S.E.D 驅逐艦,S.E.D destroyer,S.E.D`,
 	Company_1319			: `超级地球武装部队大炮`			+ ` # 超级地球武装部队大炮,超級地球武裝部隊大炮,Super Armed Cannon,スーパー武装部隊大砲`,
 	Company_1320			: `纳斯德工业`						+ ` # 纳斯德工业,納斯德工業,Nasod Industries,ナソッド工業`,
+	Company_1322			: `O.M.V`							+ ` # O.M.V,O.M.V,O.M.V,O.M.V`,
 	
 	Company_2012			: `铁雨弹幕兵工厂`					+ ` # 铁雨弹幕兵工厂,鐵雨彈幕兵工廠,Iron Rain Barrage Arsenal,鉄雨弾幕兵器工場`,
 	Company_2017			: `黎明工业`						+ ` # 黎明工业,黎明工業,Dawn Industry,黎明工業`,
@@ -5328,6 +5511,8 @@ let textList = {
 	Company_10140			: `拉沃契金设计局`					+ ` # 拉沃契金设计局,拉沃契金設計局,Dragon Industries,珍獣電工`,
 	Company_10142			: `Gyrocket-Prod`					+ ` # Gyrocket-Prod,Gyrocket-Prod,Gyrocket Prod,ジャイロケット Prod`,
 	Company_10152			: `高能器械`						+ ` # 高能器械,高能器械,High-energy instrument,高エネルギー機器`,
+	Company_10153			: `RCDS R&D Department`				+ ` # RCDS R&D Department,RCDS R&D Department,RCDS R&D Department,RCDS R&D Department`,
+	Company_10154			: `弗林特工坊`						+ ` # 弗林特工坊,弗林特工坊,Flint Workshop,フリントワークショップ`,
 	Company_10155			: `鲸灯科技`						+ ` # 鲸灯科技,鯨燈科技,Whale Lamp Technology,鯨灯技術`,
 	Company_10156			: `灭龙者有限公司`					+ ` # 灭龙者有限公司,滅龍者有限公司,Dragonslayers Ltd,滅竜者株式会社`,
 	Company_10157			: `安宁光能`						+ ` # 安宁光能,安寧光能,Anning Solar Energy,安寧光エネルギー`,
@@ -5343,8 +5528,11 @@ let textList = {
 	Company_10228			: `Nightstar.inc`					+ ` # Nightstar.inc,Nightstar.inc,Nightstar.inc,Nightstar.inc`,
 	Company_10232			: `笑天科技公司`					+ ` # 笑天科技公司,笑天科技公司,Laughingsky Technology Company,Laughingsky Technology Company`,
 	Company_10233			: `机械神教`						+ ` # 机械神教,機械神教,Arbiter’s Trace,機械神教`,
+	Company_10248			: `法兰西轻工业联合集团`			+ ` # 法兰西轻工业联合集团,法蘭西輕工業聯合集團,French Light Industry United Group,ネネカンパニー`,
 	Company_10251			: `ash008.inc`						+ ` # ash008.inc,ash008.inc,ash008.inc,ash008.inc`,
 	Company_10255			: `帝国兵器集团`					+ ` # 帝国兵器集团,帝國兵器集團,Imperial Weapon Group,帝国兵器集団`,
+	Company_10269			: `SoftMicro_PeKiUniv`				+ ` # SoftMicro_PeKiUniv,SoftMicro_PeKiUniv,SoftMicro_PeKiUniv,SoftMicro_PeKiUniv`,
+	Company_10273			: `CIP R&D Department`				+ ` # CIP R&D Department,CIP R&D Department,CIP R&D Department,CIP R&D Department`,
 	Company_10282			: `Ruben.inc`						+ ` # Ruben.inc,Ruben.inc,Ruben.inc,Ruben.inc`,
 	
 	Company_10304			: `八坂核子工业`					+ ` # 八坂核子工业,八阪核子工業,Bahram Arsenal,八坂原子力工業`,
